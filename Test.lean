@@ -1,12 +1,17 @@
-import Mathlib
+module
 
-#check Real.pi
-#check Int.fract
-#check Nat.floor
-#check Set.Icc
+import PiDisjunctivity
 
-example : Irrational Real.pi := by
-  exact irrational_pi
+/-! Axiom audit. Run `lake env lean Test.lean` after `lake build`. -/
 
-example : (Real.pi : ℝ) > 3 := by
-  exact Real.pi_gt_three
+/--
+info: 'PiDisjunctivity.hexadecimal_disjunctive_iff_orbit_closure' depends on axioms: [propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms PiDisjunctivity.hexadecimal_disjunctive_iff_orbit_closure
+
+/--
+info: 'PiDisjunctivity.pi_hexadecimal_disjunctivity_iff_orbit_closure' depends on axioms: [propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms PiDisjunctivity.pi_hexadecimal_disjunctivity_iff_orbit_closure

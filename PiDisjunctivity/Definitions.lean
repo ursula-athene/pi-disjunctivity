@@ -3,7 +3,7 @@ module
 public import Mathlib.Algebra.Order.Archimedean.Real.Basic
 public import Mathlib.Topology.Instances.Real.Lemmas
 
-/-! Decimal disjunctivity, with zero-based digits and trailing-zero expansions. -/
+/-! Hexadecimal disjunctivity, with zero-based digits and trailing-zero expansions. -/
 
 @[expose] public section
 
@@ -19,8 +19,8 @@ def IsDisjunctive (b : ℕ) (x : ℝ) : Prop :=
     ∃ n : ℕ, ∀ i : Fin k,
       baseDigit b x (n + i.val) = (s i).val
 
-/-- Fractional parts obtained by repeatedly shifting the decimal point. -/
-noncomputable def decimalOrbit (x : ℝ) : Set ℝ :=
-  Set.range (fun n : ℕ => Int.fract ((10 : ℝ) ^ n * x))
+/-- Fractional parts obtained by repeatedly shifting the hexadecimal point. -/
+noncomputable def hexadecimalOrbit (x : ℝ) : Set ℝ :=
+  Set.range (fun n : ℕ => Int.fract ((16 : ℝ) ^ n * x))
 
 end PiDisjunctivity
