@@ -23,4 +23,9 @@ def IsDisjunctive (b : ℕ) (x : ℝ) : Prop :=
 noncomputable def hexadecimalOrbit (x : ℝ) : Set ℝ :=
   Set.range (fun n : ℕ => Int.fract ((16 : ℝ) ^ n * x))
 
+/-- Big-endian value of a hexadecimal word. Its length is retained separately. -/
+def blockValue : (k : ℕ) → (Fin k → Fin 16) → ℕ
+  | 0, _ => 0
+  | k + 1, s => 16 * blockValue k (fun i => s i.castSucc) + (s (Fin.last k)).val
+
 end PiDisjunctivity

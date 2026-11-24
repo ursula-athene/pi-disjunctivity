@@ -1,6 +1,6 @@
 module
 
-import PiDisjunctivity.Equivalences
+import PiDisjunctivity.Definitions
 import Mathlib.Algebra.Order.Floor.Semifield
 import Mathlib.Tactic
 

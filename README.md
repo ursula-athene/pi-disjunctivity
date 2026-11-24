@@ -16,8 +16,16 @@ links to the BBP paper, and specifies the mathematical statement.
 
 ## Scope and current status
 
-The Lean library proves the correspondence between hexadecimal digit blocks and
-base-16 intervals, and the equivalence of disjunctivity with
+The current branch contains the problem definitions and exact rational examples.
+The earlier cylinder and orbit-equivalence proofs have been removed so that the
+foundations can be developed against reviewed theorem statements.
+
+The next milestone is the [foundational theorem plan](docs/foundations-plan.md):
+connect the recursive word value to its finite sum, prove that words cover every
+value below $16^k$, and validate digit reconstruction in an arbitrary base.
+
+A later milestone is to connect hexadecimal digit blocks to base-16 intervals
+and prove the equivalence of disjunctivity with
 
 $$
 \overline{\{\operatorname{fract}(16^n x):n\in\mathbb N\}}=[0,1]
@@ -30,15 +38,9 @@ for the proof strategy, audit criteria, and remaining validation tasks. Whether
 not establish it.
 
 The digit and disjunctivity definitions remain parameterized by the base. The
-orbit, equivalence theorems, conjecture definitions, and examples use base 16.
-The main theorem is `PiDisjunctivity.hexadecimal_disjunctive_iff_orbit_closure`;
-`PiDisjunctivity.pi_hexadecimal_disjunctivity_iff_orbit_closure` specializes it to
-the two open statements about π.
-
-The default build includes every project library module and the hexadecimal
-examples. The axiom audit checks that both equivalence theorems depend only on
-`propext`, `Classical.choice`, and `Quot.sound`, with no `sorryAx` or
-project-specific axioms.
+word value, orbit, conjecture definitions, and examples use base 16. Neither the
+foundational theorems in the new plan nor the orbit equivalence are currently
+implemented. The default build checks all definitions and examples.
 
 ## Installation
 
@@ -100,20 +102,11 @@ Build the library, including the hexadecimal examples:
 lake build
 ```
 
-Run the axiom audit:
-
-```sh
-lake env lean Test.lean
-```
-
-The audit uses `#guard_msgs` to check the output of `#print axioms`; an unexpected
-axiom makes the command fail. CI runs this check after the build.
-
 To build selected modules explicitly:
 
 ```sh
-lake build PiDisjunctivity.Definitions PiDisjunctivity.Equivalences \
-  PiDisjunctivity.Conjectures PiDisjunctivity.Examples
+lake build PiDisjunctivity.Definitions PiDisjunctivity.Conjectures \
+  PiDisjunctivity.Examples
 ```
 
 For a quick check of one source file, or to inspect the selected Lean version:
@@ -124,22 +117,23 @@ lake env lean --version
 ```
 
 Open the repository root in VS Code to work with Lean's interactive proof state.
-A successful build and axiom audit verify the included declarations; the
-[validation plan](docs/problem-formulation.md#implementation-status) records which
-parts of the broader formulation review are complete and which remain planned.
+A successful build checks the definitions and examples currently included. The
+[implementation status](docs/problem-formulation.md#implementation-status)
+records the remaining proof work. An axiom audit will be added with the new
+theorems; the audit of the discarded proof has also been removed.
 
 ## Repository guide
 
 - [docs/problem-formulation.md](docs/problem-formulation.md): the hexadecimal
   problem statement and plan for validating its formalization.
+- [docs/foundations-plan.md](docs/foundations-plan.md): proposed theorem
+  statements and proof methods for the three foundational gaps.
 - [PiDisjunctivity/Definitions.lean](PiDisjunctivity/Definitions.lean): digit and
-  disjunctivity definitions parameterized by the base, plus the hexadecimal orbit.
-- [PiDisjunctivity/Equivalences.lean](PiDisjunctivity/Equivalences.lean): hexadecimal
-  word, interval, and orbit-closure results.
+  disjunctivity definitions parameterized by the base, plus the hexadecimal orbit
+  and recursive word value.
 - [PiDisjunctivity/Conjectures.lean](PiDisjunctivity/Conjectures.lean): proposition
-  definitions naming the hexadecimal conjectures and a theorem equating them.
+  definitions naming the hexadecimal digit-block and orbit-closure conjectures.
 - [PiDisjunctivity/Examples.lean](PiDisjunctivity/Examples.lean): exact rational
   examples for hexadecimal indexing, digits `A`–`F`, leading zeros, terminating
   expansions, and interval boundaries.
 - [PiDisjunctivity.lean](PiDisjunctivity.lean): the library's root imports.
-- [Test.lean](Test.lean): a checked axiom audit of the two equivalence theorems.

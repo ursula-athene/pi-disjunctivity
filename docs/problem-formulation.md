@@ -1,8 +1,9 @@
 # Problem formulation and validation plan
 
 This document states the problem and outlines how to validate its formalization.
-The [implementation status](#implementation-status) records the Lean results
-completed so far. The conjecture about π remains open.
+The [implementation status](#implementation-status) records the current scope.
+The [foundational theorem plan](foundations-plan.md) gives the proposed statements
+and proof methods for the next work. The conjecture about π remains open.
 
 ## Problem formulation
 
@@ -143,34 +144,28 @@ separate research problem.
 
 ## Implementation status
 
-The library now uses hexadecimal expansions throughout its orbit definitions,
-equivalence theorems, conjecture definitions, and examples. The canonical
-`baseDigit` and `IsDisjunctive` definitions remain parameterized by the base.
+The earlier cylinder and orbit-equivalence proofs have been discarded from the
+current branch, including the specialization to π and their axiom audit. They
+were written before the formulation and validation approach were discussed.
 
-The following declarations are compiled in the default `lake build`, in the
-`PiDisjunctivity` namespace:
-
-| Declaration | Verified statement |
-| --- | --- |
-| `blockValue_lt` | A length-$k$ hexadecimal word has value below $16^k$. |
-| `digits_iff_prefix` | A word is the prefix of a point in $[0,1)$ exactly when the scaled natural floor equals its value. |
-| `baseDigit_hexadecimal_shift` | Taking the fractional part of $16^n x$ shifts the digits by $n$ places, for $x\ge 0$. |
-| `block_iff_mem_cylinder` | Occurrence at offset $n$ is equivalent to membership of the orbit point in the corresponding half-open interval. |
-| `hexadecimal_disjunctive_iff_orbit_closure` | Disjunctivity in base 16 is equivalent to orbit closure $[0,1]$, for $x\ge 0$. |
-| `pi_hexadecimal_disjunctivity_iff_orbit_closure` | The two named conjectures about π are equivalent. |
-
-`blockValue` implements the big-endian value recursively. A separate theorem
-equating this recursive definition to the displayed finite sum, the standalone
-coverage theorem for all integers below $16^k$, and the arbitrary-base digit
-reconstruction results remain follow-up items from the validation plan. The
-proved base-16 orbit equivalence does not assume those pending results.
+The library retains the agreed definitions: `baseDigit`, `IsDisjunctive`,
+`hexadecimalOrbit`, `blockValue`, `PiHexadecimalDisjunctivity`, and
+`PiHexadecimalOrbitClosure`. The first two remain parameterized by the base;
+`blockValue` implements the hexadecimal word value recursively in
+`Definitions.lean`.
 
 Exact rational examples check the integer part, zero-based indexing, leading
 zeros, all digits `A`–`F`, nonzero offsets, terminating expansions, half-open
-interval boundaries, and the empty word.
+interval boundaries, and the empty word. They are sanity checks, not general
+proofs of the validation requirements.
 
-After `lake build`, run `lake env lean Test.lean` to audit the two equivalence
-theorems. The audit checks that their only axioms are `propext`, `Classical.choice`,
-and `Quot.sound`; it fails if the printed axiom lists change. Neither theorem
-depends on `sorryAx` or a project-specific axiom. These results establish the
-equivalence of the two formulations, without proving either conjecture about π.
+The next work is specified in [the foundational theorem plan](foundations-plan.md):
+
+1. Prove that recursive `blockValue` equals the displayed finite sum.
+2. Prove its upper bound and coverage of every integer below $16^k$.
+3. Prove arbitrary-base digit bounds, prefix reconstruction, and truncation error.
+
+These are proposed statements and methods only; their proofs have not yet been
+implemented. The cylinder correspondence and orbit equivalence will be addressed
+after those foundations. The default `lake build` currently checks the retained
+definitions and examples.

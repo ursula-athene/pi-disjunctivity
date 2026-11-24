@@ -3,8 +3,8 @@
 > **Historical handoff.** This document preserves the original base-10 plan and
 > its status at the time of handoff. The project now targets hexadecimal (base 16)
 > expansions. See [the current formulation](problem-formulation.md) and
-> [README](../README.md) for the implemented equivalences, build commands, and
-> remaining work. The base-10 snippets and next steps below are historical.
+> [README](../README.md) for the current implementation scope, build commands,
+> and planned work. The base-10 snippets and next steps below are historical.
 
 **First deliverable.** Set up or locate a reproducible Lean 4 + Mathlib project, compile the definitions below, and prove that the digit-block statement is equivalent to density of the decimal orbit in the unit interval. The conjecture about π itself remains open and is not a requirement for this milestone.
 
