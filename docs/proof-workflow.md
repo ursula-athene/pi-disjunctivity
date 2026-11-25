@@ -29,6 +29,31 @@ pilot verifies that the selected workflow works for an elementary reduction;
 it measures neither comparative proving performance nor progress on the open
 visitation argument.
 
+## Records and project memory
+
+| Record | Responsibility |
+| --- | --- |
+| [Meta-plan](meta-proof-plan.md) | Evidence-based lessons, process decisions, and their evaluation. |
+| [Proof plan](proof-plan.md) | Sole mathematical roadmap and exact milestone contracts. |
+| [Blueprint](proof-blueprint.md) | Declaration/dependency/status index retaining every unproved hypothesis. |
+| This workflow | Operational implementation and verification sequence. |
+| [Research log](research-log.md) | Concise dated outcomes linked to validation/review evidence. |
+| [Handoffs](handoff-template.md) | Restart baseline, contracts, pitfalls, and acceptance evidence as dated snapshots. |
+| [README](../README.md) and [session entry point](proof-attempt-session-prompt.md) | Short orientation and authoritative links. |
+| [Session prompts](session-prompts.md) | One current execution prompt; archived prompts remain historical. |
+
+Use the existing log and handoffs as project memory; do not create a competing
+status ledger. Any agent-managed memory should hold stable preferences and
+pointers only. Verify branch state, audit counts, and next tasks from the actual
+checkout. Memory never overrides explicit user instructions. No global memory
+or configuration is changed by this convention.
+
+Keep dated snapshots intact, including their then-current next-task proposals.
+Update authoritative records when facts change, and link from orientation pages
+instead of repeating mutable status prose. Retain all hypotheses when shortening
+conditional-result summaries. New handoffs use the linked template; process-only
+milestones explicitly say that theorem contracts and indices are unchanged.
+
 ## Minimal working feedback loop
 
 Locate and enter the repository root containing both `lakefile.toml` and
@@ -48,9 +73,12 @@ lake build
 lake env lean Test.lean
 ```
 
-1. Select a single endpoint within the authorized scope and record the exact
-   statement and dependencies before implementation. Read current declarations,
-   rather than relying on names remembered from an earlier session.
+1. Inspect branch, HEAD, index, and working tree; preserve unrelated work.
+   State the complete authorized endpoint, exclusions, exact contracts, and
+   dependencies before implementation. Complete that milestone through internal
+   checkpoints without asking again between authorized steps. Scope extensions
+   need authorization. Read current declarations, not remembered names. Follow
+   any prompt requirement to update the proof plan before implementation.
 2. Search the project, then the pinned Mathlib checkout. For this pilot:
 
    ```sh
@@ -85,7 +113,14 @@ lake env lean Test.lean
    the reverse implication's goal with `trace_state`. The scratch file is a
    disposable experiment, not a required artifact; the checked proof lives in
    [OrbitCriteria.lean](../PiDisjunctivity/OrbitCriteria.lean).
-5. Compile an edited module with `lake env lean PiDisjunctivity/OrbitCriteria.lean`.
+5. Probe the intended downstream interface through `import PiDisjunctivity`
+   early, including definition bodies/equations and full quantified theorem
+   types. Build the export chain before the probe; fix visibility or elaboration
+   before building dependent layers. Boundary checks must explicitly instantiate
+   the theorem being tested; a simplification that bypasses it is not evidence
+   for that contract. Prefer explicit types and targeted normalization before
+   increasing tactic resource limits.
+   Compile an edited module with `lake env lean PiDisjunctivity/OrbitCriteria.lean`.
    A direct Lean invocation checks that file but does not rebuild its imported
    dependencies. Use `lake build PiDisjunctivity.OrbitCriteria` after changing
    prerequisites, and `lake build` before auditing through the root import.
@@ -96,7 +131,20 @@ lake env lean Test.lean
    regression checks, rather than requiring an example for every module or
    freezing the file. Universal proofs, exported-type checks, axiom guards,
    and mathematical statement review remain the core validation.
-7. Finish with `lake build`, `lake env lean Test.lean`, and `git diff --check`.
+7. For Lean changes, finish with `lake build` and `lake env lean Test.lean`.
+   Run `uv run --locked --offline python -m unittest discover -s tests -v` and
+   `uv run --locked --offline python tools/check_docs.py` for process-tool or
+   documentation changes. Check `git diff --check`, then selected newly added
+   files and staged whitespace (`git diff --cached --check`). The documentation
+   checker uses tracked files, including staged additions; stage only owned
+   paths before the final check. Inspect exit codes: stop finalization on any
+   required failure or incomplete review, repair within scope, then rerun
+   affected checks.
+   When relying on a saved Git command rule, run Git mutations as standalone
+   execution calls. Mixing Git and another program in one shell command may
+   prevent the approved path from matching. On denial, inspect the applicable
+   repository and host rules before concluding permissions changed; do not
+   broaden them. Run validation separately and check each result.
    Review definition/signature preservation and dependency/import diffs
    separately. Before committing, inspect the pinned files and reviewed
    definitions explicitly:
@@ -110,67 +158,28 @@ lake env lean Test.lean
    Obtain the required Gemini Carbon High review of the task-owned milestone
    diff, triage its findings, and rerun affected checks after fixes, following
    the review procedure below.
-   Record actual commands, outputs, semantic review, remaining
-   obligations, and the next bounded task in the log and blueprint.
+   Record concise actual outcomes and evidence links in the log, declaration
+   status/hypotheses in the blueprint, and restart/acceptance evidence in a
+   handoff. Commit only task-owned paths. Inspect the committed result for
+   necessity and duplication; validate and review substantive fixes before a
+   follow-up commit. Report completed substeps, remaining obligations, commit
+   IDs, and publication state. Stop at the authorized endpoint.
 
 Compiler errors and `trace_state` supply file-based feedback. The original pilot
 used no independent review agent; the later user instruction adds Gemini Carbon
 High reviews through `agy`. No live editor goal service, semantic search endpoint,
 automated dependency-graph validator, or clean-environment proof comparator is
-established by this workflow. The existing CI build and audit remain unchanged.
+established by this workflow. CI retains the Lean build and axiom audit alongside offline process checks.
 
 ## Milestone and intermediate changed-file reviews
 
-Follow the [proof-plan policy](proof-plan.md#changed-file-reviews-with-gemini-carbon)
-and the exact CLI procedure in
-[AGENTS.md](../AGENTS.md#gemini-carbon-code-reviews-with-agy).
-
-1. Prepare a bounded review of the task-owned changed files, their surrounding
-   code, and the intended mathematical statements. Specify the baseline and
-   file list. Include documentation changes; for a documentation-only milestone,
-   review the argument and source assessment without adding implementation work.
-   Generate the scoped diff in the calling session and supply it in the review
-   prompt or an accessible file; current-file inspection alone cannot verify
-   deletions or exact changes against the baseline.
-2. Use `agy --model gemini-4-carbon-high --mode plan` from the repository root.
-   Default to `--output-format stream-json --print-timeout 20m` for reviews and
-   follow-ups; twenty minutes is an operational limit, not a completion guarantee.
-   Follow [the persistent-approval procedure](../AGENTS.md#persistent-approval-for-unattended-review-runs):
-   invoke that literal prefix directly, capture output through the execution
-   tool, and save it separately. Shell redirection or wrappers can prevent the
-   saved approval rule from matching and cause unnecessary prompts.
-   Request no file changes or mutating commands, plus actionable findings with
-   severity, file/line references, reasoning, and limitations. Review before the
-   milestone commit; request intermediate reviews when they can catch a problem
-   before later work depends on it.
-   In headless mode, ask for read-only file tools only and no shell/Bash calls;
-   even a read-only shell action can be denied by the reviewer's permissions.
-3. Capture streaming events and their timestamps, inspect the exit code and final
-   result payload, and retain the explicit `conversation_id`. Follow
-   [the progress and bounded-retry procedure](../AGENTS.md#progress-timeouts-and-bounded-retries):
-   monitor meaningful step changes, distinguish a deadline from evidence of a
-   hang, inspect logs before retrying, and allow at most one focused recovery
-   attempt without overlapping runs. Record per-invocation wall time separately
-   from potentially cumulative conversation counters. A timeout or error is
-   incomplete even if a partial response exists. Record an unavailable reviewer as a tooling obstacle,
-   not a clean review; follow the host approval procedure for sandbox restrictions.
-   An empty `response` with exit code zero and `status: SUCCESS` is also
-   incomplete. Require substantive findings or an explicit no-findings response,
-   inspect `denied_actions`, and resolve scope-blocking denials or record incomplete
-   coverage. Do not assume the host's execution approval grants the reviewer's
-   internal tools permission.
-4. Triage findings against the actual source and specifications. Fix verified
-   issues within scope, record reasons for rejected suggestions or unresolved
-   issues, and rerun affected checks. Do not weaken a statement to satisfy a review.
-5. Preserve Viewpoint's post-commit proof-necessity review. Use the saved explicit
-   conversation for a focused follow-up on substantive changes, then validate
-   and commit actual follow-up work. Record the reviewed range/model/status and
-   findings disposition in the log or a linked review report.
-
-Reviewer feedback never replaces the Lean build, exact type/axiom audits, or
-mathematical scrutiny. No other model or permission-bypass mode is an implicit
-fallback. This review requirement leaves the existing milestone bounds and
-B1/B3 ordering intact.
+The [proof-plan policy](proof-plan.md#changed-file-reviews-with-gemini-carbon)
+defines milestone/intermediate review cadence and post-commit necessity review.
+Follow the mandatory [Gemini procedure](gemini-review.md) for preparation,
+literal invocation, capture, terminal inspection, and bounded recovery. Use
+[process tools](process-tools.md) to prepare evidence and detect incomplete runs;
+they do not invoke `agy`, retry, assess mathematical correctness, or replace
+human findings triage. Reviewer feedback supplements Lean and statement checks.
 
 ## Handling a failed attempt
 
@@ -188,7 +197,7 @@ or placeholder proofs. Almost-everywhere density, finite digit checks, BBP
 extraction, and shrinking errors cannot be promoted to π-specific visitation.
 Conditional claims keep their hypotheses in the graph.
 
-## Automation decision after the pilot
+## Automation decision after the pilot — 2026-11-24 snapshot
 
 Local search found the complete supporting API and one scratch compilation
 closed the reduction. No diagnostic or search bottleneck justified optional
@@ -196,3 +205,7 @@ tooling. Keep this manual loop. Reconsider LSP only for a concrete live-goal
 need, and verify it on the unchanged project pins before relying on it.
 This pilot did not execute BBP work or Step 5 research. Future work needs its
 own bounded scope; the meta-plan's completion does not extend this session.
+
+The [2026-11-25 adoption](meta-proof-plan.md#b1-process-adoption--2026-11-25)
+adds only offline checks and evidence utilities for observed documentation and
+capture failures. It does not add proof orchestration or change the Lean loop.

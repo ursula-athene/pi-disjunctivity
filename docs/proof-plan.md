@@ -3,28 +3,16 @@
 **Planning baseline:** 2026-11-24, commit
 `56ca22e1a9776ee7a5d7b4e36103f932d3b45646` on `feature/attempt-01`.
 
-**Latest implementation update: 2026-11-25.** B1 is checked on
-`feature/attempt-04`; see [the B1 completion handoff](b1-handoff.md). On `feature/attempt-02`, Step 2's
-interval-hitting reduction and the bounded B4 + P3 milestone are checked:
-conditional interior-margin transfer and open-interval-to-cell conversion.
-See the [blueprint](proof-blueprint.md) for dependencies, [research log](research-log.md)
-for checks and review, and [workflow](proof-workflow.md) for the executed
-meta-plan. The full BBP `HasSum ... Real.pi` identity is checked. Recurrence and
-tail results remain unimplemented; universal visitation remains open.
+This is the mathematical roadmap and the owner of exact milestone contracts.
+The [blueprint](proof-blueprint.md) indexes checked declarations, dependencies,
+and unproved hypotheses; dated validation and publication evidence live in the
+[research log](research-log.md) and linked handoffs. Follow the
+[workflow](proof-workflow.md) for execution.
 
-The B4/P3 implementation and audits are in `203e16c`; post-commit proof
-simplification and the [handoff](b4-p3-handoff.md) are in `a8c693e`. The audit
-now includes B1a: `bbpCoeff` and the unconditional `integral_bbpTerm` in
-`BBP/Series.lean`, independently implemented from the reviewed argument.
-B1b adds `hasSum_bbpTerm` and `norm_bbpTerm_le` on the closed unit interval.
-B1c adds the unconditional `hasSum_bbpCoeff_integral` bridge to the unevaluated
-rational integral. The combined B1 completion adds rational decomposition,
-the primitive's derivative, integral evaluation, and `hasSum_bbpCoeff`, proving
-`HasSum (fun j : ℕ => bbpCoeff j / (16 : ℝ)^j) Real.pi` unconditionally.
-Twenty-seven theorem type/axiom audits pass, alongside all earlier checks.
-See the [B1 handoff](b1-handoff.md) for validation and finalization status.
-The next proposed slice is B2a's finite-prefix/tail split, requiring separate
-authorization; this milestone stops before Step 4's BBP bridge work.
+Next session: <!-- current-prompt --> [Current prompt](session-prompts.md#current-prompt-b2-complete-orbit-bridge)
+contains the next saved authorization boundary; saving it does not begin work.
+B1 is checked. B2/B3 and universal visitation remain unproved; the conditional
+B4/P3 results retain their hypotheses below and in the blueprint.
 
 The goal is to prove `PiDisjunctivity.PiHexadecimalDisjunctivity`: every finite
 hexadecimal word occurs contiguously after the radix point of `Real.pi`,
@@ -89,45 +77,20 @@ Make sure each functional block of Lean code is thoroughly tested. Use Lean and 
 
 ### Changed-file reviews with Gemini Carbon
 
-At each milestone, review the task-owned changed files and relevant surrounding
-code with **Gemini Carbon on High effort**, using `agy` as described in
-[AGENTS.md](../AGENTS.md#gemini-carbon-code-reviews-with-agy). Select
-`--model gemini-4-carbon-high` explicitly and use `--mode plan`; instruct the
-reviewer to read `AGENTS.md`, make no file changes, and run no mutating commands.
-For headless reviews, request read-only file tools and no shell/Bash calls.
-The calling session should prepare and supply the exact task-owned diff against
-the stated baseline (in the prompt or an accessible review file), so the reviewer
-can assess deletions and changes without needing to run `git diff` itself.
-For documentation-only milestones, review the changed arguments, plans, and
-source assessments for correctness and consistency instead of inventing code work.
+At each milestone, review the complete task-owned diff before its initial
+commit with **Gemini Carbon on High effort** through `agy`. The
+[Gemini review procedure](gemini-review.md) is mandatory, including exact scope,
+read-only tools, result inspection, capture, and bounded recovery. Include
+relevant surrounding code and documentation; for documentation-only milestones,
+review changed arguments, plans, and source assessments without inventing proof work.
 
 Request intermediate reviews when useful, especially after a substantial proof
-block, a change to a theorem contract or dependency, or before building on an
-uncertain argument. Specify the milestone baseline, changed file list, and exact
-diff or commit range, excluding unrelated user work. Ask for actionable findings
-with severity, file/line references, reasoning, and review limitations.
-
-Review the complete milestone diff before its initial commit. Preserve the
-existing post-commit proof-necessity review above; obtain a focused Gemini
-follow-up for substantive fixes or simplifications before committing them.
-Evaluate each finding independently, record fixes or reasons for declining it,
-and rerun affected checks. No empty follow-up commit is required.
-
-Record the model, reviewed baseline/range, returned `conversation_id`, completion
-status, findings, and their disposition in the research log or a linked report.
-Follow `AGENTS.md` for result/error inspection, explicit-conversation follow-ups,
-and scoped sandbox approval. Use streaming output with a twenty-minute deadline,
-monitor meaningful progress, and follow its
-[bounded-retry procedure](../AGENTS.md#progress-timeouts-and-bounded-retries)
-before making at most one focused recovery attempt. A deadline alone does not
-prove a hang. A timeout, interruption, or service error is an
-incomplete review; record it and do not claim review completion. An empty
-`response` remains incomplete even with exit code zero and `status: SUCCESS`.
-Require substantive findings or an explicit no-findings response; inspect
-`denied_actions` and resolve any denied action that prevents coverage of the
-requested scope, or record that limitation as incomplete coverage. Do not silently
-substitute another model or use `--dangerously-skip-permissions`. Gemini review
-supplements kernel checking, axiom audits, and mathematical statement review.
+block, a theorem-contract/dependency change, or before building on an uncertain
+argument. Preserve the Viewpoint post-commit necessity review above. Obtain a
+focused Gemini follow-up for substantive fixes or simplifications before
+committing them. Evaluate findings independently, record fixes or reasons for
+declining them, and rerun affected checks. No empty follow-up commit is required.
+Record evidence and limitations in the research log or a linked report.
 
 ## 1. Start from the verified formulation
 
@@ -470,10 +433,25 @@ unused factorization lemma, general analytic API, or new import was introduced.
 See [the handoff](b1-handoff.md) for the validation and required review evidence.
 B2/B3, V, Hπ, T, and π disjunctivity remain open. B4/P3 keep every hypothesis.
 
-### Next bounded task: B2a finite-prefix and tail split
+<a id="next-bounded-task-b2a-finite-prefix-and-tail-split"></a>
 
-**Proposed only; separate authorization required.** Use the full B1 `HasSum`
-to establish, for every `n : ℕ`, the convergent scaled tail identity
+### Next bounded task: B2 complete orbit bridge
+
+**Prepared for a future session; not implemented.** The user requested a
+[saved prompt for all of B2](session-prompts.md#current-prompt-b2-complete-orbit-bridge),
+superseding the earlier B2a-only stopping point. Invoking the prompt authorizes
+the following steps together, ending before B3 or visitation work:
+
+1. **B2a: finite-prefix/tail split.** Use the full B1 `HasSum` to establish,
+   for every `n : ℕ`, the convergent scaled tail identity below and identify
+   the tail `R_n` with its convergent sum, giving `16^n*pi = S_n + R_n`.
+2. **Recurrence and range.** Define `y_0 = 0`,
+   `y_(n+1) = fract(16*y_n + A(n))`; prove `0 ≤ y_n < 1` and
+   `y_(n+1) = fract(S_n)` using the finite-sum recurrence.
+3. **Exact orbit bridge.** Prove
+   `fract((16 : ℝ)^n * Real.pi) = fract(y_(n+1) + R_n)` unconditionally.
+
+The B2a contract is unchanged:
 
 ```text
 HasSum (fun r : ℕ => bbpCoeff (n+r+1) / (16 : ℝ)^(r+1))
@@ -483,9 +461,12 @@ HasSum (fun r : ℕ => bbpCoeff (n+r+1) / (16 : ℝ)^(r+1))
 
 Check the inclusive prefix `0..n`, tail starting at `n+1`, natural-exponent
 subtraction only under `j ≤ n`, and `n = 0`. Keep convergence in the result;
-no tail estimate or visitation hypothesis is a premise. Export/audit, validate,
-review, and hand off this single bridge, stopping before recurrence/fractional-
-part identities, B3 bounds, or V. Do not begin B2a in the B1 completion session.
+no tail estimate or visitation hypothesis is a premise. Check the recurrence
+initialization, the coefficient `A(n+1)` in `S_(n+1) = 16*S_n + A(n+1)`,
+and the orbit/recurrence index offset. Export/audit, validate, review, commit,
+perform the necessity review, and hand off all of B2 together. Stop before
+B3 tail bounds/decay, optional modular computation support, or V. B2 alone
+does not complete M3/Step 4. No B2 implementation begins during prompt preparation.
 
 ## 5. Prove the missing universal visitation theorem
 
@@ -607,7 +588,8 @@ existing word/interval and orbit equivalences ------+-> pi disjunctivity
 
 The pilot makes the exact missing interval-hitting hypothesis explicit. B4's
 conditional transfer and P3's cell conversion complete M1. The full checked
-B1 identity completes M2. The next proposed bounded task is B2a, the scaled
-finite-prefix/tail split, requiring separate authorization. Step 5 research
+B1 identity completes M2. The next saved bounded task covers all of B2,
+starting with B2a and ending at the exact orbit identity; invoking the prompt
+starts implementation. B3 remains a separate task. Step 5 research
 can be scoped separately; completing more infrastructure is not evidence that the
 open visitation problem is solved.

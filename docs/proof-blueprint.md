@@ -46,13 +46,10 @@ interval arithmetic uses reals. Each occurrence index may depend on `k,m`.
 | P2: π reduction | `H(Real.pi) → PiHexadecimalDisjunctivity`. | `piHexadecimalDisjunctivity_of_hitsHexadecimalIntervals` in the same module; P1 and Mathlib's `Real.pi_pos.le`; new type/axiom guard. | **Checked conditional theorem.** Step 2 complete. Its premise is still open. |
 | F4: late occurrences | For `b : ℕ`, `2 ≤ b`, `x : ℝ`, **assuming** `IsDisjunctive b x`, every `k : ℕ`, `s : Fin k → Fin b`, `N : ℕ` admits `n ≥ N` with `∀ i : Fin k, baseDigit b x (n + i.val) = (s i).val`. | `isDisjunctive_occurs_ge` in [Disjunctivity.lean](../PiDisjunctivity/Disjunctivity.lean); zero-padding a word; guarded. | **Checked conditional theorem.** A consequence after solving the target, never an independent premise for it. |
 
-The full fifteen-theorem foundation, including positional reconstruction,
-termination, and `HasSum`, is indexed by [the follow-up](review-follow-up.md)
-and [Test.lean](../Test.lean). The pilot adds two and B4/P3 add two more,
-bringing that subtotal to nineteen; B1a adds the twentieth theorem audit,
-B1b adds two more, B1c adds one, and B1 completion adds four, for twenty-seven.
-Every current theorem list is exactly
-`propext`, `Classical.choice`, `Quot.sound`; no claim here is an added axiom.
+[Test.lean](../Test.lean) is the executable audit inventory. The
+[formulation follow-up](review-follow-up.md) and dated handoffs retain historical
+counts and validation evidence. Each checked theorem keeps its actual guarded
+axiom list; no claim here is an added axiom.
 
 ## Remaining BBP route
 
@@ -124,8 +121,8 @@ irrationality alone does not rule out infinite proper limit sets. A global bound
 B1, B4, and P3 are checked. B2/B3, V, Hπ, T, and π disjunctivity remain
 unproved. The [source review](b1-source-proof-review.md) supplies the classical
 route; [the B1 handoff](b1-handoff.md) records completion and finalization.
-The next bounded task, only if separately authorized, is
-[B2a finite-prefix and tail split](proof-plan.md#next-bounded-task-b2a-finite-prefix-and-tail-split).
-Stop that slice before recurrence/fractional-part identities, B3 bounds, or V.
-No conditional visitation premise has been discharged. The B1-before-B3 order
-and Viewpoint commit policy remain unchanged.
+Next session: <!-- current-prompt --> [Current prompt](session-prompts.md#current-prompt-b2-complete-orbit-bridge)
+selects the next bounded task; its exact contract is owned by the
+[proof plan](proof-plan.md#next-bounded-task-b2-complete-orbit-bridge).
+Saving instructions adds no proofs or authorization to execute them.
+No conditional visitation premise has been discharged.

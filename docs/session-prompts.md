@@ -6,7 +6,197 @@ even where an archived prompt contains imperative instructions or a different
 policy. A completed milestone must not be repeated or automatically extended.
 Saving this prompt does not begin the milestone; invoking it does.
 
-## Current prompt: paused after B1
+## Current prompt: B2 complete orbit bridge
+
+Resume work in `/Users/adam/personal/proj/pi-disjunctivity/pi-disjunctivity`
+on `feature/attempt-05-b2`.
+
+Read `AGENTS.md` and [the B1 handoff](b1-handoff.md) first, then the relevant [proof plan](proof-plan.md#4-connect-bbp-arithmetic-to-the-actual-hexadecimal-orbit),
+[blueprint](proof-blueprint.md#remaining-bbp-route), [meta-plan](meta-proof-plan.md),
+[research log](research-log.md), [workflow](proof-workflow.md), and
+[process handoff](process-improvements-handoff.md). Ignore **Old prompts - do not use**.
+
+Invoking this prompt authorizes **all of B2**, step by step, as one bounded
+milestone. Saving it does not start implementation. This replaces the earlier
+B2a-only proposed stopping point: finish the split, recurrence/range proofs,
+and actual orbit identity without asking for fresh authorization between these
+steps. B3 tail estimates and Step 5 visitation research remain outside scope.
+
+### 1. Inspect the checkout, announce the endpoint, and update the proof plan.
+
+PR #4 is merged. At prompt preparation, `main` was fast-forwarded to
+`53ae688f3c56becdb3ca562d75e6eb3c95fe9dd7`, and
+`feature/attempt-05-b2` was created from it. Verify the actual local/remote
+state; do not recreate the prepared branch or discard this prompt. Preserve
+unrelated staged, modified, and untracked work, including Obsidian, notes,
+and papers. Check effective permissions without changing permission settings.
+
+B1 is complete and unconditional; B4/P3 are checked conditional results.
+Read the actual declarations in `PiDisjunctivity/BBP/Series.lean`,
+`PiDisjunctivity/OrbitCriteria.lean`, the library root, and `Test.lean`. Preserve the existing
+BBP coefficient, all B1 proofs/exports, original problem definitions, and
+all 27 existing theorem audits and other checks. Do not repeat B1.
+
+Before editing, state the endpoint: a kernel-checked B2 bridge relating the
+BBP recurrence and convergent tail to `Int.fract ((16 : ℝ)^n * Real.pi)`,
+with definitions, root exports, full type/axiom audits, validation, required
+Gemini review, local commit and necessity review, and a durable B2 handoff.
+
+Then update the `docs/proof-plan.md` with the following steps.
+
+After doing so, execute the following steps.
+
+### 2. Establish the minimal definitions and B2a series split
+
+Use a focused project module, preferably `PiDisjunctivity/BBP/Orbit.lean`,
+depending only on existing project modules and the permitted Mathlib stack.
+Choose consistent names such as `bbpPartialSum`, `bbpTail`, and
+`bbpRecurrence`. The following mathematical notation specifies their values;
+it is not an instruction to add duplicate definitions:
+
+```text
+A(j) = bbpCoeff j
+S(n) = ∑ j ∈ Finset.range (n+1), (16 : ℝ)^(n-j) * A(j)
+R(n) = ∑' r : ℕ, A(n+r+1) / (16 : ℝ)^(r+1)
+y(0) = 0
+y(n+1) = Int.fract (16 * y(n) + A(n))
+```
+
+All indices are natural and values/divisions are real. Define the recurrence
+recursively with exactly this initialization and coefficient index; do not
+define it directly as the fractional part of the finite sum. Expose the
+definitions/equations through the root as needed by existing module conventions.
+
+First use `hasSum_bbpCoeff` to prove, for every `n : ℕ`, the exact B2a claim:
+
+```lean
+HasSum (fun r : ℕ => bbpCoeff (n + r + 1) / (16 : ℝ) ^ (r + 1))
+  ((16 : ℝ) ^ n * Real.pi -
+    ∑ j ∈ Finset.range (n + 1), (16 : ℝ) ^ (n - j) * bbpCoeff j)
+```
+
+Search the local pinned Mathlib sources and inspect actual finite-prefix
+splitting and scaling signatures. Split at `n+1`, scale the original series
+by `(16 : ℝ)^n`, and normalize the prefix and tail coefficients. Use
+`j ≤ n` from prefix membership before manipulating natural subtraction.
+Keep convergence in `HasSum`; do not replace this endpoint with a `tsum`
+equality alone or assume summability.
+
+Use this checked convergence to identify the defined `R(n)` with the tail
+sum and prove, unconditionally for every `n`:
+
+```text
+(16 : ℝ)^n * Real.pi = S(n) + R(n)
+```
+
+A `tsum` definition is total in Lean, so its definition alone supplies no
+convergence evidence. Retain an exported `HasSum` theorem connecting the
+specified tail terms to their value. No separate tail-bound layer is needed.
+
+### 3. Prove the recurrence, range, and finite-sum identity
+
+Prove the finite-prefix recurrence needed for induction:
+
+```text
+S(0) = A(0)
+S(n+1) = 16 * S(n) + A(n+1)
+```
+
+Keep helper facts local unless a concrete proof or audit consumer needs them.
+For the recursively defined `y`, establish its initial/step equations,
+`0 ≤ y(n)` and `y(n) < 1` for every `n`, and the universal identity:
+
+```text
+y(n+1) = Int.fract (S(n))
+```
+
+Use induction and the pinned integer/fractional-part arithmetic APIs.
+Multiplication by the integer 16 preserves equality modulo integers; justify
+that fact explicitly rather than treating fractional part as a linear map.
+Check the difference between the recurrence coefficient `A(n)` at step
+`y(n+1)` and the finite-sum coefficient `A(n+1)` at step `S(n+1)`.
+
+### 4. Assemble the exact π-orbit bridge
+
+Combine the scaled series split and recurrence identity to prove exactly,
+for every `n : ℕ`, with no convergence, density, or visitation hypotheses:
+
+```text
+Int.fract ((16 : ℝ)^n * Real.pi)
+  = Int.fract (y(n+1) + R(n))
+```
+
+The recurrence index is `n+1` and the actual hexadecimal orbit index is `n`.
+Keep `Real.pi`, the established BBP coefficients, and the original orbit
+convention. The endpoint is an exact identity, not a numerical approximation.
+
+Review `n = 0`, the inclusive prefix `0..n`, the tail starting at `n+1`,
+`y(0)=0`, and the first recurrence step explicitly. Add meaningful root-import
+definition/equation or boundary checks where they catch indexing mistakes.
+Do not assume a global inequality
+`|Int.fract u - Int.fract v| ≤ |u-v|`; it is false across an integer.
+
+### 5. Validate and obtain the required review
+
+Follow [AGENTS.md](../AGENTS.md), the [implementation sequence](proof-workflow.md#minimal-working-feedback-loop),
+and the mandatory [Gemini procedure](gemini-review.md). Establish the pinned
+baseline and probe root-import definitions/equations and full downstream theorem
+interfaces early. Compile the dependency chain incrementally, export through
+`PiDisjunctivity.lean`, and preserve every prior audit/check. For each reviewed
+theorem, inspect the actual `#print axioms` output and add full quantified type
+checks and guards in `Test.lean`. Boundary checks must instantiate the intended
+theorem, including the indices and convergence checks in steps 2–4 above.
+
+Run `lake build`, `lake env lean Test.lean`, the offline documentation/utility
+checks, and working-tree/staged whitespace checks as specified in the workflow.
+Review definitions, indices, hypotheses, and mathematical meaning separately.
+Inspect imports, pins, manifest, and preservation of existing statements.
+Distinguish compiler/library/environment failures from missing mathematics;
+record exact obstructions without weakening the endpoint. Stop finalization
+if any required check fails or review is incomplete.
+
+Obtain Carbon High review of the exact task-owned diff and baseline before the
+milestone commit, plus intermediate review where uncertainty warrants it and
+focused follow-up for substantive fixes. Use [evidence utilities](process-tools.md)
+for scope and capture checks; follow the mandatory procedure for literal `agy`
+invocation, read-only tools, adequate capture budgets, terminal-result inspection,
+explicit conversation IDs, and bounded recovery. Evaluate findings and coverage
+independently; tool success and no-findings text are not proof of correctness.
+
+### 6. Finalize the complete B2 milestone and stop
+
+Update records according to the [responsibility split](proof-workflow.md#records-and-project-memory):
+proof-plan contracts, blueprint declarations/status/hypotheses, concise log and
+current session instructions, meta-plan lessons where supported by evidence,
+and a new `docs/b2-handoff.md` using the [handoff template](handoff-template.md).
+Link orientation summaries to those records rather than duplicate audit counts.
+Mark B2 complete only when all the split,
+convergence, recurrence/range, and exact orbit-identity obligations above are
+proved, exported, audited, and reviewed. Partial work must be recorded as partial.
+
+After validation and review, commit only task-owned changes locally. Perform
+the proof plan's post-commit necessity review, removing or simplifying genuinely
+unneeded pieces; validate/review substantive changes and commit actual follow-up
+work without an empty commit. Leave a concise durable handoff of theorem
+contracts, dependencies, checks, reviewer findings/limitations, and commit IDs.
+
+Stop before B3 coefficient/tail estimates or `R(n) → 0`, optional modular
+digit-extraction/computation support, V/Step 5 visitation research, or final
+conjecture assembly. B2 is only part of M3/Step 4; completing it does not complete
+all of M3. B3, V, Hπ, T, and π disjunctivity remain open. B4 still assumes
+vanishing error and arbitrarily late visits; P3 still assumes open-interval
+visits. This bridge discharges none of those remaining hypotheses.
+
+Report the exact results, validation, review status/limitations, local commit
+IDs, and handoff path. Propose B3 as the next bounded task without starting it.
+Do not push or open a PR unless separately requested; use `gh pr create` when
+PR creation is authorized. Pause at the B2 endpoint.
+
+## Old prompts - do not use
+
+<a id="current-prompt-paused-after-b1"></a>
+
+### Session instructions: paused after B1
 
 The full B1 `HasSum (fun j : ℕ => bbpCoeff j / (16 : ℝ)^j) Real.pi` theorem
 is checked. Read [the B1 handoff](b1-handoff.md) for the actual validation,
@@ -25,7 +215,6 @@ requiring separate authorization. B2/B3, V, Hπ, T, and π disjunctivity remain
 open. B4 assumes vanishing errors and arbitrarily late visits; P3 assumes
 open-interval visits. No Step 4 BBP bridge or Step 5 work has begun.
 
-## Old prompts - do not use
 
 <a id="current-prompt-b1c-sumintegral-interchange"></a>
 

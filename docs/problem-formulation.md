@@ -1,21 +1,24 @@
 # Problem formulation and validation plan
 
 This document states the problem and outlines how to validate its formalization.
-The [implementation status](#implementation-status) records the current scope.
+The [implementation status](#implementation-status) records completed formulation
+verification. For subsequent research, use the [proof plan](proof-plan.md) for
+the mathematical roadmap and exact milestone contracts, and the
+[blueprint](proof-blueprint.md) for declarations and unproved hypotheses.
 The [foundational theorem plan](foundations-plan.md) gives the reviewed statements,
 proof methods, and completion status for the foundations. The conjecture about π
 remains open.
 
-**Current scope: formalize and validate the problem statement in Lean.** The
+**Completed formulation scope: formalize and validate the problem statement in Lean.** The
 conjecture has a Lean statement, and the planned correctness and equivalence
 theorems are implemented and audited. The
 [final consolidated review](formulation-review.md) is complete: formulation
-verification meets the criteria of milestones A, B, and C. Work on proving π's
-hexadecimal disjunctivity or formalizing BBP requires separate authorization.
+verification meets the criteria of milestones A, B, and C. That formulation
+milestone did not authorize subsequent BBP or π-disjunctivity research.
 The correctness and equivalence proofs below belong to formulation verification;
 they do not assert that π is disjunctive.
 
-**Later bounded research update (2026-11-25):** separately authorized cycles
+**Later bounded research update (2026-11-25 snapshot):** separately authorized cycles
 completed [proof-plan Step 2](proof-plan.md#2-isolate-exactly-what-must-be-proved-about-pi)
 and B4/P3, the conditional interior-margin transfer and open-interval-to-cell
 conversion. These general results preserve this reviewed formulation and their
@@ -405,7 +408,8 @@ inherited dependencies unchanged. The report records the detailed evidence.
 Formulation verification is complete. Lean checks the formal proofs relative to
 the definitions; the comparison with the intended English statement remains a
 mathematical review. The pi disjunctivity conjecture remains unproved. Work on
-proving it or formalizing BBP requires separate authorization.
+proving it or formalizing BBP was outside the completed formulation milestone;
+later separately authorized cycles are recorded in the [research log](research-log.md).
 
 ## Implementation status
 
@@ -465,12 +469,10 @@ fractional hexadecimal digits of `Real.pi` as `243F` from Mathlib's proved
 rational bounds. These results are included in the default build.
 The separate `lake env lean Test.lean` check preserves all thirteen milestone C
 theorem types and adds the two new theorem types through the library root.
-The later bounded interval pilot adds two more types and the B4/P3 milestone
-adds two, then B1a adds the unconditional BBP single-term integral and B1b
-adds pointwise summation/domination. B1c adds the coefficient-series/integral
-bridge; rational decomposition, the primitive derivative, integral evaluation,
-and the full BBP series add four more, for twenty-seven in total, without changing
-the fifteen formulation/follow-up theorems. B4 assumes
+Subsequent research preserves these fifteen formulation/follow-up theorems.
+Use [Test.lean](../Test.lean) for the complete executable audit inventory and
+the [blueprint](proof-blueprint.md) for later declarations and dependencies.
+B4 assumes
 vanishing errors and arbitrarily late open-interval visits;
 P3 assumes open-interval visits and yields hexadecimal-cell visits. Both are
 general conditional results, with no BBP or global range hypothesis.

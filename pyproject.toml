@@ -1,0 +1,13 @@
+[project]
+name = "pi-disjunctivity"
+version = "0.1.0"
+description = "Offline documentation and review evidence tools for pi-disjunctivity"
+readme = "README.md"
+authors = [
+    { name = "Ursula Athene", email = "ursula-athene@gmail.com" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "markdown-it-py>=4.3.0",
+    "pyyaml>=6.0.4",
+]

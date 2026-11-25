@@ -1159,3 +1159,94 @@ The final two-file documentation commit records this retrospective and the
 checks. The reviewed source/audits remain unchanged after passing validation.
 Its ID is reported after committing. Step 3/M2 is complete; stop before B2a,
 B2/B3, or V. No visitation or disjunctivity hypothesis has been discharged.
+
+## 2026-11-25 — Prepare the complete B2 session
+
+The user reported PR #4 merged and requested preparation of a new branch and
+a step-by-step prompt for all of B2, without beginning proof work. GitHub
+confirmed the merge at `53ae688f3c56becdb3ca562d75e6eb3c95fe9dd7`.
+Switched to `main`, ran `git pull --ff-only origin main`, and created/switched
+to `feature/attempt-05-b2` from that commit. Unrelated local work was retained.
+
+The first current section of [session-prompts.md](session-prompts.md#current-prompt-b2-complete-orbit-bridge)
+now specifies the convergent B2a split, independently defined recurrence and
+range, finite-sum identity, exact π-orbit bridge, audits, review, local commits,
+necessity review, and handoff. It ends before B3, optional modular computation,
+or visitation. The previous paused-after-B1 instructions were moved to the old
+section with their anchor retained; the older archive was preserved. Entry-point
+and next-task references in both plans and the blueprint agree with the new scope.
+
+This is prompt preparation only. B2/B3, V, Hπ, T, and π disjunctivity remain
+unproved; B4/P3 retain every hypothesis. No Lean source, test, dependency, or
+pin changed, so no new Lean build/audit is claimed. Whitespace, all 11 unrelated
+file hashes, exact previous-prompt/archive preservation, and 115 local links
+in the review scope passed; final records receive the same checks.
+
+Gemini Carbon High returned explicit no findings for the six-file preparation
+diff against merged main. Conversation: `da7f8d40-3204-4276-b930-9ed1c7da2421`.
+Exit zero, nonempty `SUCCESS` response, no terminal error or denied actions;
+the single invocation took 309.920 seconds by caller timestamps. See the
+[review record](agy-reports/b2-prompt-review.md) for capture, progress, findings,
+and limitations. No proof change or substantive prompt fix was needed.
+The preparation is finalized in a local documentation commit; no push or PR
+is part of this request. The next session must invoke the first Current prompt
+to begin B2, then stop at its specified endpoint.
+
+## 2026-11-25 — Adopt B1 process improvements
+
+Authorized as one process-only milestone from `563ffed` on the existing
+`feature/attempt-05-b2`, preserving unrelated work and both existing local
+commits. Consolidated durable rules and mandatory Gemini operations, established
+record ownership and handoff conventions, added offline documentation/review
+evidence tools and CI checks, and shortened the current B2 prompt by linking
+procedures. Its exact mathematical contracts and archive remain unchanged; B2
+was not executed. The original retrospective remains a dated proposal record.
+
+The [meta-plan adoption](meta-proof-plan.md#b1-process-adoption--2026-11-25)
+connects decisions to evidence and specifies future measurements without
+inventing historical gains. The [process handoff](process-improvements-handoff.md)
+records checks, required review, limitations, finalization, and restart details.
+B2/B3, V, Hπ, T, and π disjunctivity remain unproved; B4/P3 retain their hypotheses.
+
+Initial Carbon High review completed with explicit no findings. A caller-found
+path-traversal edge in the historical-link exception was tightened and sent for
+focused follow-up. The apparent Git blocker was resolved by using the existing
+Git allow rule with a standalone command, without permission/configuration changes.
+See the [review record](agy-reports/process-improvements-review.md) for outcomes.
+
+Full and focused Carbon High reviews both returned explicit no findings; both
+captures are complete. Final validation passes 23 utility/CI tests, 41 Markdown
+files, whitespace, exact staged scope, and preservation checks. No Lean check
+was rerun because no Lean source or dependency changed. Review limitations and
+per-invocation elapsed times are in the linked report. Local finalization follows.
+
+Committed the 24 owned paths locally as `3ef470c6aced848edd7675e28fc9b5f99d92f3c0`
+on the original branch, preserving its prior commits and unrelated work.
+Post-commit inspection found each tool/check and consolidated guidance layer
+necessary; no further substantive simplification was justified. A final handoff/
+log receipt records completion with fresh link, whitespace, scope, and preservation
+checks. No push, PR, permission change, Lean change, or B2 execution occurred.
+
+## 2026-11-25 — Documentation alignment and publication follow-up
+
+After the process milestone, the user authorized deleting the unused untracked
+`src/` scaffold and opening [PR #5](https://github.com/ursula-athene/pi-disjunctivity/pull/5).
+The PR includes B2 prompt preparation, the retrospective, and its process
+improvements; it does not implement B2. Build and process CI passed at `4e5bc2f`.
+
+A follow-up audit found a historical nineteen-theorem count still labeled
+current in the foundations overview. Corrected that framing, directed subsequent
+research from AGENTS to the proof plan, and replaced duplicated mutable audit
+inventories with links to `Test.lean` and the blueprint. The formulation retains
+its dated B1 snapshot. No theorem contract, proof, pin, current/archived prompt,
+or unproved hypothesis changed. See the
+[handoff follow-up](process-improvements-handoff.md#documentation-alignment-and-publication-follow-up--2026-11-25)
+and [review record](agy-reports/process-improvements-review.md) for acceptance
+evidence and limitations. B2/B3, V, Hπ, T, and π disjunctivity remain unproved;
+B4/P3 retain their hypotheses.
+
+Documentation follow-up acceptance: 23 tests and the 41-file documentation
+check passed, with whitespace and preservation checks. Carbon High returned
+explicit no findings in one invocation (284.916 seconds by caller timestamps),
+with complete capture; see the linked report for limitations. Final factual
+receipts are caller checked before committing and updating PR #5.

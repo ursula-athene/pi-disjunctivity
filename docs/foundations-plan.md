@@ -15,8 +15,10 @@ The subsequent [review follow-up](review-follow-up.md) adds
 foundation statements below remain unchanged. At follow-up completion, the root
 audit covered fifteen theorems including these additions. The subsequent
 [Step 2 interval pilot](research-log.md) added two and the B4/P3 milestone added
-two general conditional lemmas, bringing the current audit in
-[Test.lean](../Test.lean) to nineteen.
+two general conditional lemmas, bringing the audit to nineteen at B4/P3
+completion on 2026-11-25. These are historical counts. Use
+[Test.lean](../Test.lean) for the executable audit inventory and the
+[blueprint](proof-blueprint.md) for subsequent declarations and hypotheses.
 
 The Lean snippets below are the reviewed signatures in the `PiDisjunctivity`
 namespace. They intentionally have no proof bodies and are not source files to
