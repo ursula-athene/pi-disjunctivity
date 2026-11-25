@@ -5,6 +5,8 @@ The mathematical roadmap remains [proof-plan.md](proof-plan.md); the
 [blueprint](proof-blueprint.md) indexes its dependencies and the
 [research log](research-log.md) records actual attempts and validation.
 This workflow authorizes no additional research, services, or workers.
+The user-directed Gemini Carbon review requirement below is the specified review
+exception; it does not authorize broader orchestration or additional services.
 
 ## Source adaptations
 
@@ -63,9 +65,10 @@ lake env lean Test.lean
    Record conclusions and objections, not a transcript of internal reasoning.
    Before substantial Step 5 formalization, a fresh-session criticism pass is
    recommended, using the statement, candidate proof, and cited sources. This
-   is advisory, does not gate exploratory work, and authorizes no sub-agents
-   or external services. The mechanism suggested by Aletheia is not a measured
-   guarantee for this project's review process.
+   is advisory and does not gate exploratory work. It is distinct from the
+   required changed-file reviews below and authorizes no additional agents or
+   services. The mechanism suggested by Aletheia is not a measured guarantee
+   for this project's review process.
 4. Use a uniquely named scratch `.lean` file under `/tmp` when an isolated
    experiment helps. Import built project modules; use `#check` for signatures,
    `#print` for declarations, and `trace_state` inside a proof for the actual
@@ -104,13 +107,59 @@ lake env lean Test.lean
    ```
 
    Also review changed theorem signatures and imports outside this file list.
+   Obtain the required Gemini Carbon High review of the task-owned milestone
+   diff, triage its findings, and rerun affected checks after fixes, following
+   the review procedure below.
    Record actual commands, outputs, semantic review, remaining
    obligations, and the next bounded task in the log and blueprint.
 
-Compiler errors and `trace_state` supply file-based feedback. There is no live
-editor goal service, semantic search endpoint, automated dependency-graph
-validator, independent review agent, or clean-environment proof comparator in
-this setup. The existing CI build and audit remain unchanged.
+Compiler errors and `trace_state` supply file-based feedback. The original pilot
+used no independent review agent; the later user instruction adds Gemini Carbon
+High reviews through `agy`. No live editor goal service, semantic search endpoint,
+automated dependency-graph validator, or clean-environment proof comparator is
+established by this workflow. The existing CI build and audit remain unchanged.
+
+## Milestone and intermediate changed-file reviews
+
+Follow the [proof-plan policy](proof-plan.md#changed-file-reviews-with-gemini-carbon)
+and the exact CLI procedure in
+[AGENTS.md](../AGENTS.md#gemini-carbon-code-reviews-with-agy).
+
+1. Prepare a bounded review of the task-owned changed files, their surrounding
+   code, and the intended mathematical statements. Specify the baseline and
+   file list. Include documentation changes; for a documentation-only milestone,
+   review the argument and source assessment without adding implementation work.
+   Generate the scoped diff in the calling session and supply it in the review
+   prompt or an accessible file; current-file inspection alone cannot verify
+   deletions or exact changes against the baseline.
+2. Use `agy --model gemini-4-carbon-high --mode plan` from the repository root.
+   Request no file changes or mutating commands, plus actionable findings with
+   severity, file/line references, reasoning, and limitations. Review before the
+   milestone commit; request intermediate reviews when they can catch a problem
+   before later work depends on it.
+   In headless mode, ask for read-only file tools only and no shell/Bash calls;
+   even a read-only shell action can be denied by the reviewer's permissions.
+3. Capture the output, inspect the exit code and final result fields, and retain
+   the explicit `conversation_id`. A timeout or error is incomplete even if a
+   partial response exists. Record an unavailable reviewer as a tooling obstacle,
+   not a clean review; follow the host approval procedure for sandbox restrictions.
+   An empty `response` with exit code zero and `status: SUCCESS` is also
+   incomplete. Require substantive findings or an explicit no-findings response,
+   inspect `denied_actions`, and resolve scope-blocking denials or record incomplete
+   coverage. Do not assume the host's execution approval grants the reviewer's
+   internal tools permission.
+4. Triage findings against the actual source and specifications. Fix verified
+   issues within scope, record reasons for rejected suggestions or unresolved
+   issues, and rerun affected checks. Do not weaken a statement to satisfy a review.
+5. Preserve Viewpoint's post-commit proof-necessity review. Use the saved explicit
+   conversation for a focused follow-up on substantive changes, then validate
+   and commit actual follow-up work. Record the reviewed range/model/status and
+   findings disposition in the log or a linked review report.
+
+Reviewer feedback never replaces the Lean build, exact type/axiom audits, or
+mathematical scrutiny. No other model or permission-bypass mode is an implicit
+fallback. This review requirement leaves the existing milestone bounds and
+B1/B3 ordering intact.
 
 ## Handling a failed attempt
 

@@ -11,6 +11,13 @@ for checks and review, and [workflow](proof-workflow.md) for the executed
 meta-plan. BBP series, recurrence, and tail results remain unimplemented;
 universal visitation remains open.
 
+The B4/P3 implementation and audits are in `203e16c`; post-commit proof
+simplification and the [handoff](b4-p3-handoff.md) are in `a8c693e`. The audit
+passes with nineteen theorem checks and two expanded-definition checks. The
+next proposed milestone is the bounded B1 source and proof review below;
+its [current session prompt](session-prompts.md#current-prompt-b1-source-and-proof-review)
+authorizes execution only when invoked in a new session.
+
 The goal is to prove `PiDisjunctivity.PiHexadecimalDisjunctivity`: every finite
 hexadecimal word occurs contiguously after the radix point of `Real.pi`,
 including words with leading zeros. The repository has completed the
@@ -72,6 +79,43 @@ In proving, try to keep the proof as simple as possible, proving no unneeded lem
 
 Make sure each functional block of Lean code is thoroughly tested. Use Lean and mathematical best practices to do that.
 
+### Changed-file reviews with Gemini Carbon
+
+At each milestone, review the task-owned changed files and relevant surrounding
+code with **Gemini Carbon on High effort**, using `agy` as described in
+[AGENTS.md](../AGENTS.md#gemini-carbon-code-reviews-with-agy). Select
+`--model gemini-4-carbon-high` explicitly and use `--mode plan`; instruct the
+reviewer to read `AGENTS.md`, make no file changes, and run no mutating commands.
+For headless reviews, request read-only file tools and no shell/Bash calls.
+The calling session should prepare and supply the exact task-owned diff against
+the stated baseline (in the prompt or an accessible review file), so the reviewer
+can assess deletions and changes without needing to run `git diff` itself.
+For documentation-only milestones, review the changed arguments, plans, and
+source assessments for correctness and consistency instead of inventing code work.
+
+Request intermediate reviews when useful, especially after a substantial proof
+block, a change to a theorem contract or dependency, or before building on an
+uncertain argument. Specify the milestone baseline, changed file list, and exact
+diff or commit range, excluding unrelated user work. Ask for actionable findings
+with severity, file/line references, reasoning, and review limitations.
+
+Review the complete milestone diff before its initial commit. Preserve the
+existing post-commit proof-necessity review above; obtain a focused Gemini
+follow-up for substantive fixes or simplifications before committing them.
+Evaluate each finding independently, record fixes or reasons for declining it,
+and rerun affected checks. No empty follow-up commit is required.
+
+Record the model, reviewed baseline/range, returned `conversation_id`, completion
+status, findings, and their disposition in the research log or a linked report.
+Follow `AGENTS.md` for result/error inspection, explicit-conversation follow-ups,
+and scoped sandbox approval. A timeout, interruption, or service error is an
+incomplete review; record it and do not claim review completion. An empty
+`response` remains incomplete even with exit code zero and `status: SUCCESS`.
+Require substantive findings or an explicit no-findings response; inspect
+`denied_actions` and resolve any denied action that prevents coverage of the
+requested scope, or record that limitation as incomplete coverage. Do not silently
+substitute another model or use `--dangerously-skip-permissions`. Gemini review
+supplements kernel checking, axiom audits, and mathematical statement review.
 
 ## 1. Start from the verified formulation
 
@@ -302,6 +346,11 @@ record that precise obstruction. Stop after the written review, before adding
 BBP Lean declarations, adapting external code, changing dependencies, working
 on B2/B3, or attempting V. This bounds the next decision without presuming
 that the whole BBP identity is a small implementation task.
+
+Have Gemini Carbon High review the source assessment, candidate argument,
+dependency map, and changed plans through `agy` before the milestone commit,
+following the changed-file review policy above. Resolve or explicitly record
+findings without extending the authorized mathematical scope.
 
 The B4/P3 cycle found no mathematical or tooling obstacle that warrants a route
 change. Weighted-series/tail summability and B3 before B1 remain a possible

@@ -398,3 +398,65 @@ validation, remaining gaps, and proposed next bounded task. It accompanies the
 simplification commit; its introducing commit records that follow-up without
 an empty commit or history rewrite. Nothing was pushed. Pause here for the
 user's questions and next-milestone decision.
+
+
+## 2026-11-25 — Review policy and next-session prompt preparation
+
+The user requested the B4/P3 completion information in the proof plan,
+Gemini Carbon High code reviews through `agy` at milestones and useful
+intermediate points, and a current next-session prompt before an explicitly
+inactive archive. This is a documentation follow-up, not execution of B1.
+
+Starting checkout: `feature/attempt-02`, HEAD `76f6e40`. Read the current
+`AGENTS.md`, including the user-added `agy` instructions, and retained that
+file unchanged. The proof plan already marked B4/P3 checked; added the exact
+implementation/follow-up commit references and linked the active B1 prompt.
+Added the required review policy to Viewpoint and aligned the meta-plan and
+workflow, retaining the existing post-commit necessity review and B1/B3 order.
+The completed B4/P3 cycle is not retroactively labeled externally reviewed.
+
+`docs/session-prompts.md` now starts with the bounded B1 source-and-proof-review
+prompt. Both the B4/P3 and formulation-review prompts are retained under
+`Old prompts - do not use`, unchanged apart from heading depth.
+`docs/proof-attempt-session-prompt.md` redirects to the current prompt, and the
+README points to the current prompt/archive arrangement. Invocation in a future
+session authorizes the B1 review and local milestone commits, followed by a pause;
+it does not authorize BBP implementation or universal-visitation work.
+
+Local validation: changed Markdown file/heading links and `git diff --check`
+passed; direct comparisons confirmed both archived prompts were preserved.
+SHA-256 comparisons confirmed that `AGENTS.md`, all project Lean source and
+`Test.lean`, and all three dependency/pin files were untouched. No Lean build
+was rerun for this documentation-only change; the B4/P3 validation remains
+recorded above. Unrelated Obsidian and notes changes were left untouched.
+
+
+Gemini review used `agy --model gemini-4-carbon-high --mode plan` and explicit
+conversation `4a903f42-ee6d-4555-9609-9b6a401614bd`, scoped to the six plan/prompt/
+README files against baseline `76f6e40`, excluding Obsidian and notes. The host
+sandbox initially blocked runtime log writes and localhost binding; the approved
+scoped retry ran without a permission-bypass flag. Its first result exited zero
+with `status: SUCCESS`, an empty `response`, and a denied Bash action. That result
+was treated as incomplete. A follow-up restricted to read-only file tools
+returned a substantive `SUCCESS` response and one Medium finding: the new review
+instructions needed explicit empty-success/denied-action handling and a supplied
+diff to avoid headless shell denial.
+
+Accepted that finding after comparison with the actual returned JSON. Updated
+the proof plan, workflow, and active prompt to require substantive findings or
+an explicit no-findings response, inspect `denied_actions`, and record unresolved
+coverage. Headless reviewers should use file tools, with the exact task-owned
+diff supplied by the caller. Host execution approval is explicitly distinct
+from permissions of the reviewer's internal tools. Gemini reported no other
+actionable issues. Its broad pass inspected current files and surrounding
+repository context, not the Git baseline diff; local diff, archival, and link
+checks were performed separately. The reviewer did not run Lean checks, verify
+external BBP sources, or begin B1 work.
+
+
+A final focused follow-up in the same Gemini Carbon High conversation reviewed
+the supplied fix diff without tools and returned `status: SUCCESS` with a
+substantive response: resolved, with no remaining actionable issues. This was
+a supplied-patch recheck, not a fresh repository/build audit. Final preservation,
+archive, Markdown link/anchor, and whitespace checks passed. The documentation
+follow-up is committed locally; no next-milestone work or push is included.

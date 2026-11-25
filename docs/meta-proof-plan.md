@@ -10,6 +10,13 @@ with nineteen theorem audits passing. BBP formalization and universal visitation
 were not attempted. The stages below remain the procedure for future separately
 scoped work.
 
+**Review-policy update, 2026-11-25:** the user requires Gemini Carbon High
+changed-file reviews through `agy` at milestones and at useful intermediate
+points. Follow the [proof-plan review policy](proof-plan.md#changed-file-reviews-with-gemini-carbon)
+and [AGENTS.md](../AGENTS.md#gemini-carbon-code-reviews-with-agy). This is a new
+user-directed process requirement; it does not retroactively claim an external
+review of the completed B4/P3 cycle.
+
 ## Next bounded task
 
 The recommended next cycle is the
@@ -24,6 +31,9 @@ dependency map, license/attribution assessment, and a bounded implementation
 slice. Stop at that written handoff, or a precise source/argument obstruction,
 before adding BBP Lean declarations or adapting external code. This proposal
 authorizes no execution; the completed B4/P3 session pauses for a user decision.
+The [current session prompt](session-prompts.md#current-prompt-b1-source-and-proof-review)
+gives the bounded authorization, review procedure, validation, and stopping point
+for the next session when the user invokes it.
 
 ## B4/P3 workflow retrospective
 
@@ -154,8 +164,10 @@ initial task or select one and state it before proceeding.
    formalizing an extensive route before checking its central implication.
 4. **Criticize separately:** check quantifiers, hypotheses, boundary cases,
    cited results, circular dependencies, and potential counterexamples. A fresh
-   context or separate session can help. Use a separate agent only when the
-   executing session authorizes delegation; it is not required by this plan.
+   context or separate session can help. Perform the required Gemini Carbon High
+   changed-file reviews through `agy` at milestones and at useful intermediate
+   points, following the proof-plan policy. Other delegation or proof-generation
+   agents require separate authorization.
 5. **Formalize incrementally:** inspect actual Lean goals, try a small proof,
    run the compiler, and revise based on its output. Respect the repository's
    prohibition on `sorry`, `admit`, extra axioms, and unsafe proof shortcuts.
