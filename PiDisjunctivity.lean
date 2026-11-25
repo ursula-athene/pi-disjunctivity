@@ -16,4 +16,4 @@ public import PiDisjunctivity.OrbitCriteria
 public import PiDisjunctivity.BBP.Series
 import PiDisjunctivity.Examples
 
-/-! Hexadecimal disjunctivity: foundations, orbit criteria, BBP term integral, and examples. -/
+/-! Hexadecimal disjunctivity: foundations, orbit criteria, BBP analytic lemmas, and examples. -/

@@ -10,6 +10,13 @@ Saving this prompt does not begin the milestone; invoking it does.
 
 <a id="current-prompt-b1-source-and-proof-review"></a>
 
+**Implementation record (2026-11-25): B1b is checked.** Read
+[the B1b handoff](b1b-handoff.md) for validation, Gemini review status, local
+commits, and the post-commit necessity review. The prompt below records the
+executed scope; do not repeat it or automatically begin another milestone.
+B1c sum/integral interchange is only a proposal in the plans and requires a
+new user instruction. The full B1 identity and π disjunctivity remain unproved.
+
 Resume work in `/Users/adam/personal/proj/pi-disjunctivity/pi-disjunctivity`.
 
 Read `AGENTS.md` and `docs/b1a-handoff.md` first, then the relevant proof plan,
