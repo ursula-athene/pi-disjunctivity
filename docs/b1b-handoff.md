@@ -3,8 +3,7 @@
 Implementation checked 2026-11-25 on `feature/attempt03`, in
 `/Users/adam/personal/proj/pi-disjunctivity/pi-disjunctivity`.
 
-**B1b's two proofs and audits are checked and reviewed.** Local commit and
-post-commit necessity records are finalized below as those events occur.
+**B1b is complete: checked, reviewed, committed, and reviewed for necessity.**
 The full B1 identity and π disjunctivity conjecture remain unproved.
 
 ## Checked results and mathematical review
@@ -95,8 +94,29 @@ prompt bytes. Pre-review local Markdown links/anchors passed (171). The
 post-review record and final staging receive fresh link/whitespace/preservation
 checks. The reviewed Lean source and audits are unchanged after passing checks.
 
-The initial milestone commit and post-commit proof-necessity assessment follow;
-the final factual handoff records their actual outcome, without an empty commit.
+The reviewed milestone was committed locally as
+`0f5d5da16c51e805294f32aec8f633ee462d1582`, selecting only the fourteen task-owned
+paths with `git commit --only`. Its parent is the saved prompt commit `32e0974`.
+Staged whitespace passed; final links/anchors passed (206), alongside all
+preservation checks. Only the unrelated Obsidian/notes/papers work remained.
+
+After committing, reread the committed `Series.lean`, root export, and audit
+additions. `hq0` supplies geometric-series applicability and norm/power signs;
+`hqle` supplies strict convergence/denominator positivity and the exponent
+bound; `hden` makes the denominator condition explicit. `hp` supplies both
+sides of the polynomial absolute bound, and `mul_le_mul` combines it with the
+ratio-power bound under the required signs. Final algebra matches the exact
+requested sum/majorant expressions. The existing public root import exports
+the two declarations; type, axiom, and boundary checks meet the acceptance
+criteria. No unused proof layer or unnecessary public helper was found. No
+substantive simplification or fix was justified, so no focused Gemini follow-up
+or empty code commit was needed.
+
+The final documentation commit changes only this handoff and the research log
+to record that completed necessity review. Retrieve its ID with
+`git log -1 --format=%H -- docs/b1b-handoff.md`; both commit IDs are also reported
+in the session's final response. These factual records do not change the
+reviewed proofs or their passing validation inputs.
 
 ## Remaining obligations and proposed next task
 
@@ -117,5 +137,7 @@ before integral evaluation. No B1c proof was begun. The integral route, direct
 Local library search and the compiler loop sufficed; no optional tooling or
 process expansion is justified.
 
-Stop at B1b after review, local commits, and necessity review. No push or PR;
-pause before another milestone.
+**Paused at the B1b endpoint, before interchange or any other milestone.**
+No push, PR, history rewrite, or permission change was made. The final two-file
+documentation diff, whitespace, links, and preservation are checked before its
+commit; unrelated work remains untouched.
