@@ -97,6 +97,21 @@ example (b : ℕ) (hb : 2 ≤ b) (x : ℝ) (h : PiDisjunctivity.IsDisjunctive b 
     ∃ n, N ≤ n ∧ ∀ i : Fin k, PiDisjunctivity.baseDigit b x (n + i.val) = (s i).val :=
   PiDisjunctivity.isDisjunctive_occurs_ge b hb x h k s N
 
+-- The pilot exposes interval hitting as a hypothesis, including all lengths and cell values.
+example (x : ℝ) (hx : 0 ≤ x) :
+    PiDisjunctivity.IsDisjunctive 16 x ↔
+      ∀ (k m : ℕ), m < 16 ^ k → ∃ n : ℕ,
+        Int.fract ((16 : ℝ) ^ n * x) ∈
+          Set.Ico ((m : ℝ) / (16 : ℝ) ^ k) (((m : ℝ) + 1) / (16 : ℝ) ^ k) :=
+  PiDisjunctivity.isDisjunctive_iff_hitsHexadecimalIntervals x hx
+
+example
+    (h : ∀ (k m : ℕ), m < 16 ^ k → ∃ n : ℕ,
+      Int.fract ((16 : ℝ) ^ n * Real.pi) ∈
+        Set.Ico ((m : ℝ) / (16 : ℝ) ^ k) (((m : ℝ) + 1) / (16 : ℝ) ^ k)) :
+    PiDisjunctivity.PiHexadecimalDisjunctivity :=
+  PiDisjunctivity.piHexadecimalDisjunctivity_of_hitsHexadecimalIntervals h
+
 /--
 info: 'PiDisjunctivity.blockValue_eq_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
 -/
@@ -190,3 +205,17 @@ info: 'PiDisjunctivity.isDisjunctive_occurs_ge' depends on axioms:
 -/
 #guard_msgs (whitespace := lax) in
 #print axioms PiDisjunctivity.isDisjunctive_occurs_ge
+
+/--
+info: 'PiDisjunctivity.isDisjunctive_iff_hitsHexadecimalIntervals' depends on axioms:
+[propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms PiDisjunctivity.isDisjunctive_iff_hitsHexadecimalIntervals
+
+/--
+info: 'PiDisjunctivity.piHexadecimalDisjunctivity_of_hitsHexadecimalIntervals' depends on axioms:
+[propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms PiDisjunctivity.piHexadecimalDisjunctivity_of_hitsHexadecimalIntervals

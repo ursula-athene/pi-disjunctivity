@@ -12,6 +12,7 @@ public import PiDisjunctivity.Disjunctivity
 public import PiDisjunctivity.Cylinders
 public import PiDisjunctivity.Conjectures
 public import PiDisjunctivity.OrbitEquivalence
+public import PiDisjunctivity.OrbitCriteria
 import PiDisjunctivity.Examples
 
 /-! Hexadecimal disjunctivity: foundations, interval and orbit equivalences, and examples. -/

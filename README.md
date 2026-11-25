@@ -65,6 +65,14 @@ Formulation verification is complete. Work on proving the π conjecture or
 formalizing BBP requires separate authorization. Whether π satisfies this
 property remains the research question; this repository does not establish it.
 
+A separately authorized bounded pilot completed
+[proof-plan Step 2](docs/proof-plan.md#2-isolate-exactly-what-must-be-proved-about-pi):
+`OrbitCriteria.lean` proves the explicit interval-hitting equivalence and a
+conditional implication for π. The interval-hitting hypothesis remains unproved.
+The [workflow](docs/proof-workflow.md), [blueprint](docs/proof-blueprint.md), and
+[research log](docs/research-log.md) record the executed meta-plan. The pilot
+did not begin BBP formalization or universal visitation research.
+
 The digit and disjunctivity definitions remain parameterized by the base. The
 word value, orbit, and conjecture definitions use base 16. Reconstruction examples
 cover bases 2, 10, and 16. The default build checks the definitions, all three
@@ -140,7 +148,8 @@ lake env lean Test.lean
 ```
 
 This check preserves the thirteen milestone C theorem-type audits and adds
-infinite reconstruction and recurrence, for fifteen reviewed theorems. It uses
+infinite reconstruction, recurrence, and the two interval-pilot results, for
+seventeen reviewed theorems. It uses
 `#guard_msgs` to verify each theorem's exact axiom list: `propext`, `Classical.choice`, and
 `Quot.sound`. An unexpected axiom such as `sorryAx` makes the check fail. CI runs
 it after the library build. Two further checks expand the named π propositions
@@ -151,7 +160,7 @@ To build selected modules explicitly:
 ```sh
 lake build PiDisjunctivity.Definitions PiDisjunctivity.BlockValue \
   PiDisjunctivity.Digits PiDisjunctivity.Disjunctivity PiDisjunctivity.Cylinders \
-  PiDisjunctivity.Conjectures PiDisjunctivity.OrbitEquivalence \
+  PiDisjunctivity.Conjectures PiDisjunctivity.OrbitEquivalence PiDisjunctivity.OrbitCriteria \
   PiDisjunctivity.Examples
 ```
 
@@ -171,6 +180,13 @@ axiom lists, dependency inspection, validation results, and remaining limitation
 
 ## Repository guide
 
+- [docs/proof-plan.md](docs/proof-plan.md): the mathematical roadmap; Step 2 is
+  complete and universal visitation remains the open research gap.
+- [docs/proof-workflow.md](docs/proof-workflow.md): source-method adaptations and
+  the minimal shell feedback loop established by [the meta-plan](docs/meta-proof-plan.md).
+- [docs/proof-blueprint.md](docs/proof-blueprint.md) and
+  [docs/research-log.md](docs/research-log.md): dependency/status index and dated
+  attempts, reviews, actual checks, and handoff.
 - [docs/review-follow-up.md](docs/review-follow-up.md): improvements prompted by
   the external review, proof methods, validation, and current audit coverage.
 - [docs/formulation-review.md](docs/formulation-review.md): the completed milestone C
@@ -214,8 +230,10 @@ axiom lists, dependency inspection, validation results, and remaining limitation
   and the empty word. Orbit examples check both closure endpoints, word recovery,
   and the failure of disjunctivity for zero.
 - [PiDisjunctivity.lean](PiDisjunctivity.lean): the library's root imports.
-- [Test.lean](Test.lean): fifteen foundational, equivalence, termination,
-  reconstruction, and recurrence statements with guarded axiom checks, and
+- [PiDisjunctivity/OrbitCriteria.lean](PiDisjunctivity/OrbitCriteria.lean): the
+  explicit interval-hitting equivalence and conditional π reduction.
+- [Test.lean](Test.lean): seventeen foundational, equivalence, termination,
+  reconstruction, recurrence, and reduction statements with guarded axiom checks, and
   two direct conjecture-definition checks.
 
 ## License

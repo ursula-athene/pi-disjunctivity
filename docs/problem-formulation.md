@@ -15,6 +15,14 @@ hexadecimal disjunctivity or formalizing BBP requires separate authorization.
 The correctness and equivalence proofs below belong to formulation verification;
 they do not assert that π is disjunctive.
 
+**Later bounded research update (2026-11-24):** separately authorized execution
+of [the meta-plan](meta-proof-plan.md) completed only
+[proof-plan Step 2](proof-plan.md#2-isolate-exactly-what-must-be-proved-about-pi).
+The new interval-hitting criterion and conditional π reduction preserve this
+reviewed formulation. [The research log](research-log.md) records the scope,
+review, and expanded seventeen-theorem audit. Further research, including BBP
+and universal visitation, remains outside that completed pilot.
+
 ## Problem formulation
 
 > Every finite string of hexadecimal digits occurs contiguously after the radix
@@ -453,6 +461,8 @@ fractional hexadecimal digits of `Real.pi` as `243F` from Mathlib's proved
 rational bounds. These results are included in the default build.
 The separate `lake env lean Test.lean` check preserves all thirteen milestone C
 theorem types and adds the two new theorem types through the library root.
+The later bounded interval pilot adds two more types, for seventeen in total,
+without changing the fifteen formulation/follow-up theorems.
 Two further checks expand the π proposition definitions. Guarded `#print axioms` results
 require exactly `propext`, `Classical.choice`, and `Quot.sound` for each theorem. The audit rejects
 a changed axiom list, including any introduction of `sorryAx` or a project-specific

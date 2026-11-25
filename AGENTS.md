@@ -34,3 +34,15 @@ For Lean changes, run `lake build`, `lake env lean Test.lean`, and
 `PATH`. Preserve the existing `module`, import, and public-section conventions,
 MIT SPDX headers, and enabled linters. Copyright and author attribution must
 use only Ursula Athene.
+
+## Bounded proof research
+
+Use [the proof plan](docs/proof-plan.md) as the mathematical roadmap and
+[the proof workflow](docs/proof-workflow.md) for the local feedback loop.
+Keep [the blueprint](docs/proof-blueprint.md) and
+[research log](docs/research-log.md) aligned with checked declarations and
+actual outcomes. State a bounded endpoint before a research cycle, distinguish
+compiler failures from missing mathematics, and retain every unproved
+hypothesis in status records. A conditional reduction is not a proof of the
+π conjecture. Optional tooling must address a demonstrated need and preserve
+the dependency and trust policies above.

@@ -1,5 +1,29 @@
 # Meta-plan for AI-assisted proof research
 
+**Executed 2026-11-24 within one authorized pilot.** The
+[adapted workflow](proof-workflow.md), [dependency index](proof-blueprint.md),
+and [research log](research-log.md) record the baseline, original-source
+inspection, source adaptations, and Step 2 interval-hitting reduction.
+The pilot is complete; the conditional π theorem retains its unproved hitting
+hypothesis. BBP formalization and universal visitation were not attempted.
+The stages below remain the procedure for future separately scoped work.
+
+## Next bounded task
+
+The recommended next cycle is the
+[conditional interior-margin transfer lemma](proof-plan.md#next-bounded-task-conditional-interior-margin-transfer)
+from proof-plan Step 4 (blueprint node B4), together with the elementary
+conversion from open-interval visits to hexadecimal-cell visits. The proof plan
+specifies the hypotheses, conclusion, and acceptance checks; it remains the
+mathematical roadmap.
+
+Apply Stage 3's specify/search/sketch/criticize/formalize/verify cycle to that
+endpoint only. Keep arbitrarily late visitation as an explicit hypothesis and
+stop after the general transfer and cell conversion are checked and recorded,
+or after documenting a precise obstruction. Do not extend this cycle into BBP
+formalization or an attempt to prove universal visitation. Recording this next
+task does not begin its execution or extend the completed pilot's authorization.
+
 ## Purpose and scope
 
 Adapt demonstrated theorem-proving methods into a practical research workflow

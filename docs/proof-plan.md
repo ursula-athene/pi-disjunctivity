@@ -3,6 +3,12 @@
 **Planning baseline:** 2026-11-24, commit
 `56ca22e1a9776ee7a5d7b4e36103f932d3b45646` on `feature/attempt-01`.
 
+**Latest implementation update: 2026-11-24.** A bounded pilot on
+`feature/attempt-02` completed Step 2's interval-hitting reduction. See the
+[blueprint](proof-blueprint.md) for dependencies, [research log](research-log.md)
+for checks and review, and [workflow](proof-workflow.md) for the executed
+meta-plan. The margin transfer lemma and all BBP work remain unimplemented.
+
 The goal is to prove `PiDisjunctivity.PiHexadecimalDisjunctivity`: every finite
 hexadecimal word occurs contiguously after the radix point of `Real.pi`,
 including words with leading zeros. The repository has completed the
@@ -17,8 +23,9 @@ mathematical step. The other steps prepare, connect, or check that argument.
 
 This document plans the proof attempt requested for this branch. The scope
 restrictions in the older formulation documents describe the previous phase;
-the formulation review is already complete. This planning change adds no Lean
-proofs or assumptions.
+the formulation review is already complete. The original planning change added
+no Lean proofs or assumptions; the later pilot adds only the conditional
+reduction recorded below.
 
 ## Overview: mathematical status and formalization work
 
@@ -29,7 +36,7 @@ still take substantial work to implement and check in Lean.
 | Step | Mathematical status | Status in this repository |
 | --- | --- | --- |
 | **1. Verified foundation** | Solved. | Already proved and checked in Lean, including the digit–interval and orbit equivalences. |
-| **2. Isolate interval hitting** | An elementary consequence of the existing equivalences that expresses exactly what remains to prove. | The underlying results exist. A convenient standalone reduction requires a small amount of additional Lean code. |
+| **2. Isolate interval hitting** | An elementary consequence of the existing equivalences that expresses exactly what remains to prove. | Completed by the bounded pilot in `OrbitCriteria.lean`: a general equivalence and a conditional π reduction, both audited. |
 | **3. Prove the BBP identity** | A classical, established theorem with published proofs. | Not implemented here. Formalizing convergence, exchanging sums and integrals, and evaluating the integral could be substantial work. Existing external Lean work may help after checking it and respecting this project's dependency policy. |
 | **4. Connect BBP to the orbit** | The identities, tail estimates, and conditional transfer argument have standard proof methods. This plan supplies the mathematical outline. | Not implemented here. Likely moderate formalization work, potentially substantial around series manipulation and fractional-part boundaries. |
 | **5. Prove universal visitation** | Open mathematical research; no complete proof method is supplied. | The decisive missing argument about this particular recurrence. |
@@ -46,7 +53,7 @@ producing them is Step 5.
 
 ```text
 1       Completed and checked.
-2       Straightforward packaging of existing results.
+2       Completed and checked; the π hitting hypothesis is still open.
 3       Known theorem; potentially substantial formalization.
 4       Standard arguments; additional formalization required.
 5       Open mathematical research; no complete proof method supplied.
@@ -82,7 +89,8 @@ The checked `243F` example confirms the initial digits, but proves no assertion
 about arbitrary words.
 
 The implementation is in [the Lean modules](../PiDisjunctivity.lean), with
-fifteen theorem-type and axiom audits in [Test.lean](../Test.lean). The
+seventeen theorem-type and axiom audits in [Test.lean](../Test.lean), including
+the two Step 2 additions. The
 [formulation review](formulation-review.md) and [follow-up](review-follow-up.md)
 record the completed mathematical review. Arbitrary-base generalization and a
 normal-number API are not prerequisites for this attempt.
@@ -90,6 +98,13 @@ normal-number API are not prerequisites for this attempt.
 **Deliverable:** retain this foundation and its checks throughout the proof work.
 
 ## 2. Isolate exactly what must be proved about pi
+
+**Status: implemented and audited by the bounded pilot.**
+[`OrbitCriteria.lean`](../PiDisjunctivity/OrbitCriteria.lean) exports
+`isDisjunctive_iff_hitsHexadecimalIntervals` for every nonnegative real and
+`piHexadecimalDisjunctivity_of_hitsHexadecimalIntervals` for π. The latter
+requires the full interval-hitting assertion below as an explicit hypothesis.
+No new proposition definition or unconditional π claim was added.
 
 Write `t_n = fract(16^n*pi)`. For a word of length `k` and integer value `m`,
 its interval is
@@ -204,6 +219,48 @@ if the later proof benefits from them.
 conditional transfer theorem. These expose the remaining arithmetic question
 without assuming its answer.
 
+### Next bounded task: conditional interior-margin transfer
+
+**Status: planned, not implemented.** This is the next bounded cycle after the
+completed Step 2 pilot, and corresponds to B4 in
+[the blueprint](proof-blueprint.md#remaining-bbp-route).
+
+For general sequences `u r : ℕ → ℝ`, assume:
+
+1. `∀ n, 0 ≤ u n ∧ u n < 1`.
+2. `Filter.Tendsto r Filter.atTop (nhds 0)`.
+3. For every `a b : ℝ` with `0 ≤ a < b ≤ 1` and every `N : ℕ`, there exists
+   `n ≥ N` with `a < u n ∧ u n < b`.
+
+Prove that for every `a b : ℝ` with `0 ≤ a < b ≤ 1`, there exists `n : ℕ`
+such that
+
+```text
+a < Int.fract (u n + r n) ∧ Int.fract (u n + r n) < b.
+```
+
+Choose a smaller interval strictly inside `(a,b)`, use convergence to bound
+`|r n|` by its margin for all sufficiently large `n`, and then use a late
+visit to that smaller interval. The perturbed value lies in `(a,b) ⊆ (0,1)`,
+so taking its fractional part does not change it. Check targets with `a = 0`
+or `b = 1`, either sign of `r n`, and all convergence/visitation quantifiers.
+
+Complete the task with the elementary conversion: if a sequence `t : ℕ → ℝ`
+visits every such open interval, then for every `k m : ℕ` with `m < 16^k`,
+some `t n` lies in `[m/16^k, (m+1)/16^k)`. Apply open-interval visitation to
+the cell's interior, including `k = 0`. This supplies the shape of the premise
+used by the existing Step 2 criterion; applying it to π still requires the
+later orbit identity and independent visitation proof.
+
+**Endpoint:** checked general transfer and cell-conversion lemmas, exported
+from `OrbitCriteria.lean` if that remains the smallest suitable location,
+with explicit type checks and guarded axiom audits in `Test.lean`. Run
+`lake build`, `lake env lean Test.lean`, and `git diff --check`, then update the
+blueprint and research log. If blocked, record the exact obstruction without
+weakening the statements. Stop before defining or proving BBP series,
+recurrences, or tail estimates, and before attempting Step 5. The late-visitation
+hypothesis remains unproved for the particular BBP recurrence.
+
 ## 5. Prove the missing universal visitation theorem
 
 **Status: open research; no complete argument is currently supplied.**
@@ -301,11 +358,12 @@ proved supporting results and any remaining conjectural input.
 
 ## Suggested implementation order
 
-Proposed module names below are organizational suggestions, not existing files.
+`OrbitCriteria.lean` now exists for the interval reduction. The other module
+names below remain organizational suggestions, not existing files.
 
 | Step Number | Order                        | Work                                                                            | Suggested location                                                 |
 | ----------- | ---------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------ |
-| 1           | First small milestone        | Explicit interval-hitting reduction and the generic margin-based transfer lemma | `PiDisjunctivity/OrbitCriteria.lean`                               |
+| 1           | First small milestone        | Interval-hitting reduction complete; generic margin-based transfer lemma remains | `PiDisjunctivity/OrbitCriteria.lean`                               |
 | 2           | Next established mathematics | BBP convergence and equality with `Real.pi`                                     | `PiDisjunctivity/BBP/Series.lean`                                  |
 | 3           | Next bridge                  | Finite sums, recurrence, modular reduction, and tail estimates                  | `PiDisjunctivity/BBP/Orbit.lean`                                   |
 | 4           | Research milestone           | Develop and prove Step 5's missing visitation argument                          | Mathematical notes first; a Lean module once the argument is sound |
@@ -321,7 +379,8 @@ NEW: universal visitation of that recurrence --+-> pi orbit visits all cells
 existing word/interval and orbit equivalences ------+-> pi disjunctivity
 ```
 
-The first implementation milestone should make the exact missing hypothesis
-and its sufficient error margins explicit. Work on the Step 5 argument can
+The pilot makes the exact missing interval-hitting hypothesis explicit. The
+remaining part of the first suggested milestone is the conditional transfer
+with sufficient error margins. Work on the Step 5 argument can
 proceed while the established BBP mathematics is being formalized; completing
 more infrastructure is not evidence that the open visitation problem is solved.

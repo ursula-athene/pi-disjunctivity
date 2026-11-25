@@ -44,11 +44,14 @@ mathematical axioms. See the official
 
 The current [Test.lean](../Test.lean) preserves all thirteen milestone C theorem-type
 checks and adds infinite-series reconstruction and arbitrarily late occurrence,
-for fifteen audited theorems through the root library import. It guards their
+for fifteen foundational audited theorems. The bounded interval pilot adds a
+general interval-hitting equivalence and a conditional π reduction, bringing
+the total to seventeen through the root library import. It guards their
 `#print axioms` results and also checks both named π definitions against their
 expanded statements. The
 [consolidated review](formulation-review.md#axiom-audit) records the original lists;
-the [follow-up review](review-follow-up.md) records the two additions.
+the [follow-up review](review-follow-up.md) records its two additions, and the
+[research log](research-log.md) records the two interval-pilot additions.
 Every audited theorem currently reports exactly these three axioms:
 
 | Axiom | Meaning |
