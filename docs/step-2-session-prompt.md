@@ -1,5 +1,8 @@
 # Prompt for a new session: Step 2 of the Lean foundations
 
+**Historical prompt: Step 2 is complete.** Use the current
+[session prompts](session-prompts.md) for the next milestone.
+
 Implement and validate **Step 2 of `docs/foundations-plan.md`** in this repository:
 prove that hexadecimal words of length `k` have values below `16 ^ k`, and that
 every natural number below `16 ^ k` is represented by such a word.

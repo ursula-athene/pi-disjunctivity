@@ -155,6 +155,11 @@ and milestones A and B. Milestone C's final formulation review remains pending.
 
 ## Repository guide
 
+- [docs/session-prompts.md](docs/session-prompts.md): the current new-session
+  handoff for milestone C's final formulation audit and review.
+- [docs/dependencies-and-trust.md](docs/dependencies-and-trust.md): the Mathlib-only
+  external-library policy, dependency stack, axiom audit, and limits of proof
+  checking. [AGENTS.md](AGENTS.md) records the policy for future repository work.
 - [docs/problem-formulation.md](docs/problem-formulation.md): the hexadecimal
   problem statement and plan for validating its formalization.
 - [docs/foundations-plan.md](docs/foundations-plan.md): reviewed theorem
