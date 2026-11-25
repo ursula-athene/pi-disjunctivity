@@ -35,6 +35,13 @@ For Lean changes, run `lake build`, `lake env lean Test.lean`, and
 MIT SPDX headers, and enabled linters. Copyright and author attribution must
 use only Ursula Athene.
 
+## Pull request creation
+
+Always use the GitHub CLI (`gh pr create`) to create pull requests for this
+repository. Do not use GitHub connector or MCP tools to create PRs. For
+multiline descriptions, write the body to a temporary file and pass it with
+`--body-file` to preserve Markdown formatting.
+
 ## Pull request format
 
 Use this format whenever the user requests PR text, including terminal output,
