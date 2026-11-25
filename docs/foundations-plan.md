@@ -2,8 +2,8 @@
 
 This plan fills the three gaps identified when comparing the Lean definitions
 with the [problem formulation](problem-formulation.md). The earlier equivalence
-proof has been removed. Steps 1 and 2 are now implemented and validated as
-described below; Step 3 remains planned.
+proof has been removed. All three foundational steps are now implemented and
+validated as described below. The later equivalences remain pending.
 
 The Lean snippets below are the reviewed signatures in the `PiDisjunctivity`
 namespace. They intentionally have no proof bodies and are not source files to
@@ -104,12 +104,14 @@ New examples exercise the bound at lengths zero and one, coverage of zero at
 every length, all single digits, value 10 at length three (`00A`), value 255 at
 length two (`FF`), and `16 ^ k - 1` at every length. The existing exact word-value
 and Step 1 regression examples remain. These results establish precisely the
-range of fixed-length word values; digit reconstruction and the word–interval
-and orbit equivalences remain pending.
+range of fixed-length word values. The word–interval and orbit equivalences
+remain pending.
 
 ## 3. Validate digit reconstruction for arbitrary bases
 
-**Status: planned.**
+**Status: implemented and validated.** All four proofs are in
+[`PiDisjunctivity/Digits.lean`](../PiDisjunctivity/Digits.lean) and exported through
+`PiDisjunctivity.lean`.
 
 Use the existing `baseDigit b x n` definition. Assume `2 ≤ b` throughout;
 reconstruction and approximation additionally require `0 ≤ x` because the
@@ -173,24 +175,51 @@ When $x = m / b^k$ for a natural number $m$, the scaled value is an integer;
 the recurrence then gives zero subsequent digits, agreeing with the chosen
 trailing-zero convention.
 
+The recurrence proof bounds the larger floor between `q * b` and `(q + 1) * b`,
+where `q` is the previous scaled floor, and applies `Nat.div_eq_of_lt_le` to
+identify its quotient. `Nat.floor_le`, `Nat.floor_lt`, and `Nat.lt_floor_add_one`
+provide the bounds; casts and nonnegativity of the scaled input are checked
+explicitly. `Nat.div_add_mod` then supplies the recurrence. Reconstruction uses
+`Fin.sum_univ_castSucc` and the index bound to justify the exponent subtraction,
+preserving the integer-part term `b ^ k * Nat.floor x`.
+
+The error proof checks that `(b : ℝ) ^ k` is positive, applies the two real floor
+bounds, and divides by that positive power. It covers `k = 0`, where truncation
+retains just the integer part, and `x = 0`.
+
+**Validation:** `lake build`, `lake env lean Test.lean`, and `git diff --check`
+pass without warnings with the unchanged Lean and Mathlib `v4.37.0-rc1` pins.
+The audit checks the four reviewed types above through the root import and
+preserves the three earlier checks. All seven guarded `#print axioms` results
+require exactly `propext`, `Classical.choice`, and `Quot.sound`; an unexpected
+dependency fails the audit. CI runs the full audit after the build.
+
+Examples exercise binary digit bounds, decimal one-digit reconstruction, binary
+`1.101`, decimal `0.35`, hexadecimal `0.00A` and `3.A0F`, zero at every prefix
+length, and the length-zero error bound. Exact checks verify trailing zeros and
+zero truncation error for terminating inputs in bases 2, 10, and 16, plus the
+error bound for the nonterminating decimal input `1/3`. The earlier word-value
+and hexadecimal examples remain unchanged.
+
 ## Implementation order and acceptance
 
 1. **Complete:** `PiDisjunctivity/BlockValue.lean` proves the sum formula, the
    bound, and coverage.
-2. Put the arbitrary-base results in a new `PiDisjunctivity/Digits.lean` module.
-   Prove the digit bound, floor recurrence, reconstruction, and error bound.
-3. Import each completed module from the library root and build it with the pinned
-   Lean and Mathlib versions. Add no `sorry`, `admit`, or project-specific axioms.
-4. Add an axiom audit for the new results and wire it into CI. Check the transitive
-   dependencies, permitting only the standard Lean axioms used by Mathlib.
-5. Extend exact examples to cover lengths zero and one, leading zeros, all-zero
-   and all-`F` words, and bases 2, 10, and 16 for reconstruction. Include both
-   fractional values and values greater than one. Examples supplement the
+2. **Complete:** `PiDisjunctivity/Digits.lean` proves the arbitrary-base digit
+   bound, floor recurrence, reconstruction, and error bound.
+3. **Complete:** both modules are exported from the library root and build with
+   the pinned Lean and Mathlib versions, with no `sorry`, `admit`, or
+   project-specific axioms.
+4. **Complete:** CI runs guarded audits of all seven theorems' transitive axiom
+   dependencies after building.
+5. **Complete:** exact examples cover lengths zero and one, leading zeros,
+   all-zero and all-`F` words, and bases 2, 10, and 16 for reconstruction,
+   including fractional values and values greater than one. Examples supplement the
    universally quantified theorems.
-6. Update the implementation-status documentation only after the corresponding
-   statements have been compiled and audited.
+6. **Complete:** implementation-status documentation records the compiled and
+   audited results.
 
-These foundations are the immediate scope. The word–interval correspondence,
+These foundations are complete. The word–interval correspondence,
 shift lemma, and orbit-closure equivalence require a subsequent proof plan using
 the reviewed foundations. Proving hexadecimal disjunctivity of π, and formalizing
 the BBP digit-extraction algorithm, are separate research tasks.

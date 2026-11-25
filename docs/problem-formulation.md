@@ -69,9 +69,11 @@ milestone.
 
 ### 1. Validate the digit definition
 
-Show that $d_b(x,n)$ lies between $0$ and $b-1$, and that the digits reconstruct the
-usual finite base-$b$ truncations of $x$. This establishes the indexing, treatment
-of the integer part, and trailing-zero convention.
+The digit bound, scaled-floor recurrence, finite-prefix reconstruction, and
+truncation error are now proved for arbitrary bases $b\ge 2$ in
+[`Digits.lean`](../PiDisjunctivity/Digits.lean), following Step 3 of the foundations
+plan. Reconstruction and error bounds assume $x\ge 0$ and retain the integer
+part. Exact examples also check the trailing-zero convention at termination.
 
 ### 2. Connect finite words to hexadecimal intervals
 
@@ -169,22 +171,28 @@ Progress against [the foundational theorem plan](foundations-plan.md):
 2. **Complete:** `blockValue_lt` and `exists_blockValue_eq` in the same module
    prove the upper bound and coverage of every natural number below $16^k$,
    including length zero and leading-zero padding.
-3. **Planned:** prove arbitrary-base digit bounds, prefix reconstruction, and
-   truncation error.
+3. **Complete:** `baseDigit_lt`, `floor_pow_succ`, `floor_pow_eq_digits`, and
+   `truncation_error` in [`Digits.lean`](../PiDisjunctivity/Digits.lean) prove
+   arbitrary-base digit bounds, the scaled-floor recurrence, prefix reconstruction
+   including the integer part, and truncation error in $[0,1/b^k)$.
 
-The default `lake build` checks the definitions, theorems from Steps 1 and 2,
+The default `lake build` checks the definitions, all three foundational steps,
 and examples.
 Additional word-value examples cover the empty word, any single digit, all-zero
 words, leading zeros, `FF`, and positional order (`12` versus `21`). Range examples
 exercise the bound at lengths zero and one, coverage of zero at every length,
 all single digits, `00A`, `FF`, and the maximum value `16 ^ k - 1` at every length.
-The separate `lake env lean Test.lean` check verifies all three reviewed theorem
+Reconstruction examples cover bases 2, 10, and 16, fractional inputs, nonzero
+integer parts, leading zeros, zero at every length, and the length-zero error
+bound. Terminating inputs have zero error and a zero next digit; the
+nonterminating decimal input `1/3` exercises a nonzero truncation error.
+The separate `lake env lean Test.lean` check verifies all seven reviewed theorem
 types through the library root. Guarded `#print axioms` results require exactly
 `propext`, `Classical.choice`, and `Quot.sound` for each theorem. The audit rejects
 a changed axiom list, including any introduction of `sorryAx` or a project-specific
 axiom. CI runs this check after building. These checks and `git diff --check` pass
 with the pinned Lean and Mathlib versions.
 
-The cylinder correspondence and orbit equivalence remain unimplemented and will
-be addressed after the foundations. Steps 1 and 2 make no claim about the
-occurrence of words in π.
+The foundations are complete. The cylinder correspondence, digit-shift lemma,
+and orbit equivalence remain unimplemented and require a subsequent proof plan.
+These results make no claim about the occurrence of words in π.

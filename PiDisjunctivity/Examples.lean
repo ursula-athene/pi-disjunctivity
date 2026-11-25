@@ -6,10 +6,11 @@ Authors: Ursula Athene
 module
 
 import PiDisjunctivity.BlockValue
+import PiDisjunctivity.Digits
 import Mathlib.Algebra.Order.Floor.Semifield
 import Mathlib.Tactic
 
-/-! Checks for hexadecimal digits, offsets, interval boundaries, and word values. -/
+/-! Checks for hexadecimal words and arbitrary-base digit reconstruction and truncation. -/
 
 namespace PiDisjunctivity
 
@@ -102,5 +103,70 @@ example (k : ℕ) : ∃ s : Fin k → Fin 16, blockValue k s = 16 ^ k - 1 :=
 example (x : ℝ) : ∃ n : ℕ, ∀ i : Fin 0,
     baseDigit 16 x (n + i.val) = (Fin.elim0 i : Fin 16).val := by
   exact ⟨0, fun i => Fin.elim0 i⟩
+
+-- Binary digits have exactly the two allowed values, without a sign hypothesis.
+example (x : ℝ) (n : ℕ) : baseDigit 2 x n = 0 ∨ baseDigit 2 x n = 1 := by
+  have h := baseDigit_lt 2 (by norm_num) x n
+  omega
+
+-- The one-digit recurrence retains the integer part: 2.7 in decimal.
+example : baseDigit 10 (27 / 10 : ℝ) 0 = 7 := by
+  have h := floor_pow_succ 10 (by norm_num) (27 / 10) (by norm_num) 0
+  norm_num [Nat.floor_div_ofNat] at h ⊢
+  omega
+
+-- Binary 1.101 reconstructs its fractional prefix as 5, with integer part 1.
+example : (∑ i : Fin 3, baseDigit 2 (13 / 8 : ℝ) i.val * 2 ^ (2 - i.val)) = 5 := by
+  have h := floor_pow_eq_digits 2 (by norm_num) (13 / 8) (by norm_num) 3
+  norm_num [Nat.floor_div_ofNat] at h ⊢
+  omega
+
+-- Decimal 0.35 exercises a fractional input with integer part zero.
+example : (∑ i : Fin 2, baseDigit 10 (7 / 20 : ℝ) i.val * 10 ^ (1 - i.val)) = 35 := by
+  have h := floor_pow_eq_digits 10 (by norm_num) (7 / 20) (by norm_num) 2
+  norm_num [Nat.floor_div_ofNat] at h ⊢
+  omega
+
+-- Hexadecimal reconstruction preserves 00A's leading zeros and 3.A0F's integer part.
+example : (∑ i : Fin 3, baseDigit 16 (10 / 4096 : ℝ) i.val * 16 ^ (2 - i.val)) = 10 := by
+  have h := floor_pow_eq_digits 16 (by norm_num) (10 / 4096) (by norm_num) 3
+  norm_num [Nat.floor_div_ofNat] at h ⊢
+  exact h.symm
+
+example : (∑ i : Fin 3, baseDigit 16 (0x3A0F / 16 ^ 3 : ℝ) i.val *
+    16 ^ (2 - i.val)) = 0xA0F := by
+  have h := floor_pow_eq_digits 16 (by norm_num) (0x3A0F / 16 ^ 3) (by norm_num) 3
+  norm_num [Nat.floor_div_ofNat] at h ⊢
+  omega
+
+-- Zero reconstructs to an all-zero prefix in every base and at every length.
+example (b : ℕ) (hb : 2 ≤ b) (k : ℕ) :
+    (∑ i : Fin k, baseDigit b 0 i.val * b ^ (k - 1 - i.val)) = 0 := by
+  simpa only [mul_zero, Nat.floor_zero, zero_add] using
+    (floor_pow_eq_digits b hb 0 le_rfl k).symm
+
+-- At length zero, the truncation is just the integer part.
+example (b : ℕ) (hb : 2 ≤ b) (x : ℝ) (hx : 0 ≤ x) :
+    0 ≤ x - Nat.floor x ∧ x - Nat.floor x < 1 := by
+  simpa only [pow_zero, one_mul, div_one] using truncation_error b hb x hx 0
+
+-- A nonterminating input satisfies the decimal truncation bound.
+example : 0 ≤ (1 / 3 : ℝ) - 33 / 100 ∧
+    (1 / 3 : ℝ) - 33 / 100 < 1 / 100 := by
+  convert truncation_error 10 (by norm_num) (1 / 3) (by norm_num) 2 using 1 <;>
+    norm_num [Nat.floor_div_ofNat]
+
+-- Terminating prefixes select zero for the next digit in each tested base.
+example : baseDigit 2 (13 / 8 : ℝ) 3 = 0 ∧
+    baseDigit 10 (7 / 20 : ℝ) 2 = 0 ∧
+    baseDigit 16 (0x3A0F / 16 ^ 3 : ℝ) 3 = 0 := by
+  norm_num [baseDigit, Nat.floor_div_ofNat]
+
+-- The corresponding truncations have exactly zero error at termination.
+example : (13 / 8 : ℝ) - Nat.floor ((2 : ℝ) ^ 3 * (13 / 8)) / 2 ^ 3 = 0 ∧
+    (7 / 20 : ℝ) - Nat.floor ((10 : ℝ) ^ 2 * (7 / 20)) / 10 ^ 2 = 0 ∧
+    (0x3A0F / 16 ^ 3 : ℝ) -
+      Nat.floor ((16 : ℝ) ^ 3 * (0x3A0F / 16 ^ 3)) / 16 ^ 3 = 0 := by
+  norm_num [Nat.floor_div_ofNat]
 
 end PiDisjunctivity

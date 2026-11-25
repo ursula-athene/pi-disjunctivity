@@ -7,7 +7,8 @@ module
 
 public import PiDisjunctivity.Definitions
 public import PiDisjunctivity.BlockValue
+public import PiDisjunctivity.Digits
 public import PiDisjunctivity.Conjectures
 import PiDisjunctivity.Examples
 
-/-! Hexadecimal disjunctivity: definitions, word-value sum and range theorems, and examples. -/
+/-! Hexadecimal disjunctivity: definitions, word-value and digit foundations, and examples. -/

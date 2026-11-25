@@ -16,17 +16,19 @@ links to the BBP paper, and specifies the mathematical statement.
 
 ## Scope and current status
 
-Steps 1 and 2 of the [foundational theorem plan](docs/foundations-plan.md) are
+All three steps of the [foundational theorem plan](docs/foundations-plan.md) are
 implemented:
 `PiDisjunctivity.blockValue_eq_sum` proves that the recursive hexadecimal word
 value equals the specified big-endian finite sum, for every length and word.
 `PiDisjunctivity.blockValue_lt` and `PiDisjunctivity.exists_blockValue_eq` prove
 that length-`k` words represent exactly the natural numbers below `16 ^ k`,
 including the empty word and leading-zero padding.
-The library also contains the problem definitions and exact examples.
-
-The next foundational step is to validate digit reconstruction in an arbitrary
-base. The earlier cylinder and orbit-equivalence proofs remain removed.
+`PiDisjunctivity.baseDigit_lt`, `PiDisjunctivity.floor_pow_succ`,
+`PiDisjunctivity.floor_pow_eq_digits`, and `PiDisjunctivity.truncation_error`
+validate digits and finite truncations in every base $b\ge 2$. For nonnegative
+inputs, reconstruction includes the integer part and truncation error lies in
+$[0,1/b^k)$. The library also contains the problem definitions and exact examples.
+The earlier cylinder and orbit-equivalence proofs remain removed.
 
 A later milestone is to connect hexadecimal digit blocks to base-16 intervals
 and prove the equivalence of disjunctivity with
@@ -42,9 +44,10 @@ for the proof strategy, audit criteria, and remaining validation tasks. Whether
 not establish it.
 
 The digit and disjunctivity definitions remain parameterized by the base. The
-word value, orbit, conjecture definitions, and examples use base 16. The default
-build checks the definitions, theorems from Steps 1 and 2, and examples. Step 3, the
-word–interval correspondence, and the orbit equivalence are not yet implemented.
+word value, orbit, and conjecture definitions use base 16. Reconstruction examples
+cover bases 2, 10, and 16. The default build checks the definitions, all three
+foundational steps, and examples. The word–interval correspondence and the orbit
+equivalence are not yet implemented.
 
 ## Installation
 
@@ -106,13 +109,13 @@ Build the library, including the hexadecimal examples:
 lake build
 ```
 
-Check the exported statements and axiom dependencies for Steps 1 and 2:
+Check the exported statements and axiom dependencies for all three foundations:
 
 ```sh
 lake env lean Test.lean
 ```
 
-This check requires all three reviewed theorem types and uses `#guard_msgs` to
+This check requires all seven reviewed theorem types and uses `#guard_msgs` to
 verify each theorem's exact axiom list: `propext`, `Classical.choice`, and
 `Quot.sound`. An unexpected axiom such as `sorryAx` makes the check fail. CI runs
 it after the library build.
@@ -121,7 +124,7 @@ To build selected modules explicitly:
 
 ```sh
 lake build PiDisjunctivity.Definitions PiDisjunctivity.BlockValue \
-  PiDisjunctivity.Conjectures PiDisjunctivity.Examples
+  PiDisjunctivity.Digits PiDisjunctivity.Conjectures PiDisjunctivity.Examples
 ```
 
 For a quick check of one source file, or to inspect the selected Lean version:
@@ -134,7 +137,7 @@ lake env lean --version
 Open the repository root in VS Code to work with Lean's interactive proof state.
 A successful build checks the definitions, theorems, and examples included. The
 [implementation status](docs/problem-formulation.md#implementation-status)
-records the remaining proof work. The current audit covers Steps 1 and 2; the
+records the remaining proof work. The current audit covers all three foundations; the
 discarded equivalence proof remains unimplemented.
 
 ## Repository guide
@@ -148,15 +151,19 @@ discarded equivalence proof remains unimplemented.
   and recursive word value.
 - [PiDisjunctivity/BlockValue.lean](PiDisjunctivity/BlockValue.lean): the Steps 1
   and 2 proofs of the finite-sum formula, word-value bound, and coverage.
+- [PiDisjunctivity/Digits.lean](PiDisjunctivity/Digits.lean): the Step 3 proofs of
+  arbitrary-base digit bounds, the scaled-floor recurrence, prefix reconstruction,
+  and truncation error.
 - [PiDisjunctivity/Conjectures.lean](PiDisjunctivity/Conjectures.lean): proposition
   definitions naming the hexadecimal digit-block and orbit-closure conjectures.
 - [PiDisjunctivity/Examples.lean](PiDisjunctivity/Examples.lean): exact rational
   examples for hexadecimal indexing, digits `A`–`F`, leading zeros, terminating
   expansions, interval boundaries, and the word-value sum formula; range examples
   cover lengths zero and one, zero values, `00A`, `FF`, and the maximum value at
-  every length.
+  every length. Reconstruction and error examples cover bases 2, 10, and 16,
+  integer parts, zero, empty prefixes, and terminating and nonterminating inputs.
 - [PiDisjunctivity.lean](PiDisjunctivity.lean): the library's root imports.
-- [Test.lean](Test.lean): the Steps 1 and 2 statement and guarded axiom checks.
+- [Test.lean](Test.lean): all seven foundational statements and guarded axiom checks.
 
 ## License
 
