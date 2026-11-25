@@ -11,10 +11,8 @@ Saving this prompt does not begin the milestone; invoking it does.
 Resume work in `/Users/adam/personal/proj/pi-disjunctivity/pi-disjunctivity`
 on `feature/attempt-05-b2`.
 
-Read `AGENTS.md` and [the B1 handoff](b1-handoff.md) first, then the relevant
-[proof plan](proof-plan.md#4-connect-bbp-arithmetic-to-the-actual-hexadecimal-orbit),
-[blueprint](proof-blueprint.md#remaining-bbp-route), meta-plan, research log,
-and proof workflow. Ignore **Old prompts - do not use**.
+Read `AGENTS.md` and [the B1 handoff](b1-handoff.md) first, then the relevant [proof plan](proof-plan.md#4-connect-bbp-arithmetic-to-the-actual-hexadecimal-orbit),
+[blueprint](proof-blueprint.md#remaining-bbp-route), meta-plan, research log, and proof workflow. Ignore **Old prompts - do not use**.
 
 Invoking this prompt authorizes **all of B2**, step by step, as one bounded
 milestone. Saving it does not start implementation. This replaces the earlier
@@ -22,7 +20,7 @@ B2a-only proposed stopping point: finish the split, recurrence/range proofs,
 and actual orbit identity without asking for fresh authorization between these
 steps. B3 tail estimates and Step 5 visitation research remain outside scope.
 
-### 1. Inspect the checkout and announce the endpoint
+### 1. Inspect the checkout, announce the endpoint, and update the proof plan.
 
 PR #4 is merged. At prompt preparation, `main` was fast-forwarded to
 `53ae688f3c56becdb3ca562d75e6eb3c95fe9dd7`, and
@@ -41,6 +39,10 @@ Before editing, state the endpoint: a kernel-checked B2 bridge relating the
 BBP recurrence and convergent tail to `Int.fract ((16 : ℝ)^n * Real.pi)`,
 with definitions, root exports, full type/axiom audits, validation, required
 Gemini review, local commit and necessity review, and a durable B2 handoff.
+
+Then update the `docs/proof-plan.md` with the following steps.
+
+After doing so, execute the following steps.
 
 ### 2. Establish the minimal definitions and B2a series split
 
