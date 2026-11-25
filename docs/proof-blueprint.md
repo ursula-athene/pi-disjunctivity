@@ -53,8 +53,8 @@ axiom list; no claim here is an added axiom.
 
 ## Remaining BBP route
 
-B1 below is fully checked, including its B1a–B1c prerequisites. B2/B3 and V
-remain mathematical specifications from roadmap Steps 4–5, not importable declarations.
+B1 below is fully checked, including its B1a–B1c prerequisites. B2 is partially
+implemented; B3 and V remain specifications from roadmap Steps 4–5.
 The general B4 and P3 lemmas are now checked and
 exported; they contain no BBP-specific definitions. For the remaining nodes,
 define, in real arithmetic,
@@ -68,8 +68,8 @@ R_n=\sum_{r=0}^{\infty}\frac{A(n+r+1)}{16^{r+1}},
 y_0=0,\qquad y_{n+1}=\operatorname{fract}(16y_n+A(n)).
 \]
 
-Here `A(j)` is the implemented `bbpCoeff j`; the other expressions remain
-mathematical specifications. All indices are natural numbers. The tail is reindexed from
+Here `A(j)`, `S_n`, `R_n`, and `y_n` are implemented as `bbpCoeff`,
+`bbpPartialSum`, `bbpTail`, and `bbpRecurrence`. All indices are natural numbers. The tail is reindexed from
 the roadmap's `r ≥ 1` sum to start at zero. Convergence must be proved before
 using the series as an analytic tail.
 
@@ -82,7 +82,7 @@ using the series as an analytic tail.
 | B1e: primitive derivative | For `x ∈ Icc (0 : ℝ) 1`, `HasDerivAt (fun y => 2*log(2-y^2)-2*log(y^2-2*y+2)+4*arctan(y-1)) ((4-2*x^3-x^4-x^5)/(1-x^8/16)) x`. | `hasDerivAt_bbpPrimitive`; positive log arguments, chain rules, T4; full type/axiom guard. | **Checked.** Ordinary derivative at every point including endpoints; no unproved analytic premise. |
 | B1f: integral evaluation | `(∫ x in (0 : ℝ)..1, (4-2*x^3-x^4-x^5)/(1-x^8/16)) = Real.pi`. No hypotheses. | `integral_bbpKernel`; kernel continuity/integrability, B1e, FTC, exact log/arctangent endpoint values; full type/axiom guard. | **Checked.** Identifies the B1c integral with Mathlib's π. |
 | B1: BBP series | `HasSum (fun j : ℕ => A(j) / (16 : ℝ) ^ j) Real.pi`, for the fixed `A` above. | `hasSum_bbpCoeff` in [Series.lean](../PiDisjunctivity/BBP/Series.lean); B1c rewritten with B1f. Full root-import type/axiom guard; [handoff](b1-handoff.md). | **Checked, unconditional.** Supplies the π-specific analytic identity and convergence. No density hypothesis, external adaptation, or visitation conclusion. |
-| B2: orbit bridge | For every `n : ℕ`, `16^n * Real.pi = S_n + R_n`, `y_(n+1) = fract(S_n)`, and `t_n(Real.pi) = fract(y_(n+1) + R_n)`. Also `0 ≤ y_n < 1`. | B1, convergent-series splitting, recurrence induction, fractional-part arithmetic; [Step 4](proof-plan.md#4-connect-bbp-arithmetic-to-the-actual-hexadecimal-orbit). | **Known / unformalized.** Relates recurrence index `n+1` to actual orbit index `n`. |
+| B2: orbit bridge | For every `n : ℕ`, `16^n * Real.pi = S_n + R_n`, `y_(n+1) = fract(S_n)`, and `t_n(Real.pi) = fract(y_(n+1) + R_n)`. Also `0 ≤ y_n < 1`. | `hasSum_bbpTail_sub`, `hasSum_bbpTail`, and `pow_mul_pi_eq_bbpPartialSum_add_bbpTail` in [Orbit.lean](../PiDisjunctivity/BBP/Orbit.lean) establish the convergent split using B1; root type/axiom and zero-index checks pass. Recurrence induction and fractional-part arithmetic remain pending; [Step 4](proof-plan.md#4-connect-bbp-arithmetic-to-the-actual-hexadecimal-orbit). | **Partial, B2a checked and reviewed.** Recurrence/range and orbit identity remain unproved. Relates recurrence index `n+1` to actual orbit index `n`. |
 | B3: tail control | For all `j,n : ℕ`, `abs(A(j)) ≤ 8/(8*j+1)` and `abs(R_n) ≤ 8/(15*(8*n+9))`; consequently `R_n → 0` as `n → ∞`. | Candidate bounds in Step 4; triangle inequality, denominator monotonicity, geometric sum, convergence. | **Proposed bounds / unformalized.** Must verify constants and series estimates; gives no visits. |
 | B4: general transfer | For `u r : ℕ → ℝ`, assume `Filter.Tendsto r Filter.atTop (nhds 0)` and `∀ a b : ℝ, 0 ≤ a → a < b → b ≤ 1 → ∀ N : ℕ, ∃ n ≥ N, u n ∈ Set.Ioo a b`. Then `∀ a b : ℝ, 0 ≤ a → a < b → b ≤ 1 → ∃ n : ℕ, Int.fract (u n + r n) ∈ Set.Ioo a b`. | `hitsOpenIntervals_fract_add_of_tendsto_zero` in [OrbitCriteria.lean](../PiDisjunctivity/OrbitCriteria.lean); `Metric.tendsto_atTop`, quarter-width margin, `Int.fract_eq_self`. Root-exported; complete type/axiom guards in `Test.lean`. | **Checked, conditional.** No global range hypothesis; signed errors and targets touching 0 or 1 included. Late visitation and vanishing error remain premises. |
 | P3: open intervals to cells | For `t : ℕ → ℝ`, assume `∀ a b : ℝ, 0 ≤ a → a < b → b ≤ 1 → ∃ n : ℕ, t n ∈ Set.Ioo a b`. Then `∀ k m : ℕ, m < 16 ^ k → ∃ n : ℕ, t n ∈ Set.Ico ((m : ℝ) / (16 : ℝ) ^ k) (((m : ℝ) + 1) / (16 : ℝ) ^ k)`. | `hitsHexadecimalIntervals_of_hitsOpenIntervals` in the same module; positive cell width, natural-to-real endpoint bounds, weakening the strict lower inequality. Root-exported; complete type/axiom guards. | **Checked, conditional.** Independent of B4 and BBP, with no range hypothesis. Includes `k = 0`, the first cell, and the last cell. Open-interval visitation remains a premise. |

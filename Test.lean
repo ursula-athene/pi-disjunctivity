@@ -379,3 +379,61 @@ info: 'PiDisjunctivity.hasSum_bbpCoeff' depends on axioms:
 -/
 #guard_msgs (whitespace := lax) in
 #print axioms PiDisjunctivity.hasSum_bbpCoeff
+
+-- B2 definitions and convergent split retain the inclusive prefix and tail offset.
+example (n : ℕ) : PiDisjunctivity.bbpPartialSum n =
+    ∑ j ∈ Finset.range (n + 1), (16 : ℝ) ^ (n - j) * PiDisjunctivity.bbpCoeff j := rfl
+
+example (n : ℕ) : PiDisjunctivity.bbpTail n =
+    ∑' r : ℕ, PiDisjunctivity.bbpCoeff (n + r + 1) / (16 : ℝ) ^ (r + 1) := rfl
+
+example : PiDisjunctivity.bbpRecurrence 0 = 0 := rfl
+
+example (n : ℕ) : PiDisjunctivity.bbpRecurrence (n + 1) =
+    Int.fract (16 * PiDisjunctivity.bbpRecurrence n + PiDisjunctivity.bbpCoeff n) := rfl
+
+example (n : ℕ) :
+    HasSum (fun r : ℕ => PiDisjunctivity.bbpCoeff (n + r + 1) / (16 : ℝ) ^ (r + 1))
+      ((16 : ℝ) ^ n * Real.pi -
+        ∑ j ∈ Finset.range (n + 1), (16 : ℝ) ^ (n - j) * PiDisjunctivity.bbpCoeff j) :=
+  PiDisjunctivity.hasSum_bbpTail_sub n
+
+example (n : ℕ) :
+    HasSum (fun r : ℕ => PiDisjunctivity.bbpCoeff (n + r + 1) / (16 : ℝ) ^ (r + 1))
+      (PiDisjunctivity.bbpTail n) :=
+  PiDisjunctivity.hasSum_bbpTail n
+
+example (n : ℕ) :
+    (16 : ℝ) ^ n * Real.pi = PiDisjunctivity.bbpPartialSum n + PiDisjunctivity.bbpTail n :=
+  PiDisjunctivity.pow_mul_pi_eq_bbpPartialSum_add_bbpTail n
+
+example : HasSum (fun r : ℕ => PiDisjunctivity.bbpCoeff (r + 1) / (16 : ℝ) ^ (r + 1))
+    (Real.pi - PiDisjunctivity.bbpCoeff 0) := by
+  simpa only [Nat.zero_add, pow_zero, one_mul, Finset.sum_range_one, Nat.sub_self] using
+    PiDisjunctivity.hasSum_bbpTail_sub 0
+
+example : Real.pi = PiDisjunctivity.bbpCoeff 0 + PiDisjunctivity.bbpTail 0 := by
+  simpa only [PiDisjunctivity.bbpPartialSum, Nat.zero_add, pow_zero, one_mul,
+    Finset.sum_range_one, Nat.sub_self] using
+    PiDisjunctivity.pow_mul_pi_eq_bbpPartialSum_add_bbpTail 0
+
+/--
+info: 'PiDisjunctivity.hasSum_bbpTail_sub' depends on axioms:
+[propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms PiDisjunctivity.hasSum_bbpTail_sub
+
+/--
+info: 'PiDisjunctivity.hasSum_bbpTail' depends on axioms:
+[propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms PiDisjunctivity.hasSum_bbpTail
+
+/--
+info: 'PiDisjunctivity.pow_mul_pi_eq_bbpPartialSum_add_bbpTail' depends on axioms:
+[propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms PiDisjunctivity.pow_mul_pi_eq_bbpPartialSum_add_bbpTail

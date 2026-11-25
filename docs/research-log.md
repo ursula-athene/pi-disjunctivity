@@ -1250,3 +1250,36 @@ check passed, with whitespace and preservation checks. Carbon High returned
 explicit no findings in one invocation (284.916 seconds by caller timestamps),
 with complete capture; see the linked report for limitations. Final factual
 receipts are caller checked before committing and updating PR #5.
+
+## 2026-11-25 — B2 implementation: convergent split checkpoint
+
+Verified PR #5 merged at `c3b3bd1dff4f975a93a1530e4daeaf9273a0176d` and
+created `feature/attempt-07-b2-orbit` from updated `main`. Existing branches and
+unrelated Obsidian, notes, and papers work are preserved. The invoked current
+prompt authorizes all B2, with regular pushes and no PR; updated the proof plan
+before implementation. B3 and visitation remain outside scope.
+
+Baseline Lean `4.37.0-rc1`, `lake build` (7201 jobs), all 27 prior audits, and
+whitespace passed. Added exposed prefix/tail/recursive definitions in
+`BBP/Orbit.lean`; early root-import equation probes passed. Pinned Mathlib's
+`hasSum_nat_add_iff'`, `HasSum.mul_left`, and `pow_sub₀` supply the convergent
+split. Prefix normalization first proves `j ≤ n`; tail normalization preserves
+the `n+r+1` coefficient and `r+1` denominator. The defined tail's `HasSum` and
+scaled π equality follow without convergence hypotheses.
+
+Integrated build (7203 jobs), 30 full type/axiom guards, definition and zero-index
+checks, and 23 offline utility tests pass. All three new axiom lists are exactly
+`propext`, `Classical.choice`, `Quot.sound`. Scratch repairs concerned an API
+argument and exponent normalization; a boundary simplification needed explicit
+`Nat.zero_add`. No mathematical gap or changed contract was involved. B2a is
+checked; checkpoint review/commit and recurrence/range/orbit work follow within
+the same authorization. B3, V, Hπ, T, and π disjunctivity remain unproved;
+B4 retains vanishing error and late visits, P3 retains open-interval visits.
+
+Carbon High completed the exact six-file B2a review: no proof/audit/trust
+findings, one low-severity stale Step 4 status and audit-count finding in the
+proof-plan overview. Corrected the status and replaced the duplicated count
+with the executable inventory link. These are factual documentation repairs;
+no mathematical statement or code changed. The complete B2 review will include
+them. [Review evidence](agy-reports/b2-review.md) records full capture, terminal
+fields, coverage, and limitations. Checkpoint commit/push follows validation.

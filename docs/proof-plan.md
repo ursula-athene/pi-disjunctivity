@@ -43,7 +43,7 @@ still take substantial work to implement and check in Lean.
 | **1. Verified foundation** | Solved. | Already proved and checked in Lean, including the digit–interval and orbit equivalences. |
 | **2. Isolate interval hitting** | An elementary consequence of the existing equivalences that expresses exactly what remains to prove. | Completed by the bounded pilot in `OrbitCriteria.lean`: a general equivalence and a conditional π reduction, both audited. |
 | **3. Prove the BBP identity** | A classical, established theorem with published proofs. | Complete: `hasSum_bbpCoeff` proves the full `HasSum ... Real.pi` identity, using the checked term integral, pointwise series/domination, interchange, rational algebra, derivative, and FTC evaluation. Independent local proofs preserve the external-code attribution boundary. |
-| **4. Connect BBP to the orbit** | The identities, tail estimates, and conditional transfer argument have standard proof methods. This plan supplies the mathematical outline. | B4, the general conditional transfer, is checked. BBP series splitting, recurrence, and tail estimates remain unimplemented. |
+| **4. Connect BBP to the orbit** | The identities, tail estimates, and conditional transfer argument have standard proof methods. This plan supplies the mathematical outline. | B4, the general conditional transfer, is checked. B2a series splitting is checked; recurrence/orbit proofs and B3 tail estimates remain pending. |
 | **5. Prove universal visitation** | Open mathematical research; no complete proof method is supplied. | The decisive missing argument about this particular recurrence. |
 
 The qualification for Step 4 is that it proves an implication:
@@ -60,7 +60,7 @@ producing them is Step 5.
 1       Completed and checked.
 2       Completed and checked; the π hitting hypothesis is still open.
 3       Completed and checked: the full BBP HasSum identity.
-4       General transfer checked; BBP bridges and tails remain unformalized.
+4       General transfer and B2a split checked; recurrence/orbit and tails remain pending.
 5       Open mathematical research; no complete proof method supplied.
 ```
 
@@ -110,9 +110,8 @@ The checked `243F` example confirms the initial digits, but proves no assertion
 about arbitrary words.
 
 The implementation is in [the Lean modules](../PiDisjunctivity.lean), with
-twenty-seven theorem-type and axiom audits in [Test.lean](../Test.lean), including
-the two Step 2 additions, B4/P3, and all eight BBP results through the complete
-series theorem. The
+full theorem-type and guarded axiom audits in [Test.lean](../Test.lean), the
+executable inventory for the foundations and subsequent BBP results. The
 [formulation review](formulation-review.md) and [follow-up](review-follow-up.md)
 record the completed mathematical review. Arbitrary-base generalization and a
 normal-number API are not prerequisites for this attempt.
@@ -437,10 +436,13 @@ B2/B3, V, Hπ, T, and π disjunctivity remain open. B4/P3 keep every hypothesis.
 
 ### Next bounded task: B2 complete orbit bridge
 
-**Prepared for a future session; not implemented.** The user requested a
-[saved prompt for all of B2](session-prompts.md#current-prompt-b2-complete-orbit-bridge),
-superseding the earlier B2a-only stopping point. Invoking the prompt authorizes
-the following steps together, ending before B3 or visitation work:
+**Authorized implementation in progress, 2026-11-25.** The user invoked the
+[complete B2 prompt](session-prompts.md#current-prompt-b2-complete-orbit-bridge),
+superseding its pre-merge branch instructions: PR #5 is verified merged, and
+`feature/attempt-07-b2-orbit` starts from updated `main` at `c3b3bd1`.
+Existing branches and unrelated work are preserved. This plan update precedes
+implementation. All steps below form one authorized milestone, ending before
+B3 or visitation work; push completed commits regularly and open no PR.
 
 1. **B2a: finite-prefix/tail split.** Use the full B1 `HasSum` to establish,
    for every `n : ℕ`, the convergent scaled tail identity below and identify
@@ -450,6 +452,14 @@ the following steps together, ending before B3 or visitation work:
    `y_(n+1) = fract(S_n)` using the finite-sum recurrence.
 3. **Exact orbit bridge.** Prove
    `fract((16 : ℝ)^n * Real.pi) = fract(y_(n+1) + R_n)` unconditionally.
+4. **Acceptance and finalization.** Probe definitions/equations and full theorem
+   interfaces through the root before dependent layers; preserve prior audits,
+   add actual axiom guards and theorem-instantiating boundary checks. Validate
+   Lean, offline process/docs checks, preservation, and staged scope. Obtain
+   Carbon High review at useful internal checkpoints and of the complete owned
+   milestone diff before its commit. Commit and push reviewed work, inspect
+   proof necessity after committing, and record a durable B2 handoff. Review
+   and validate substantive follow-up fixes; do not make an empty commit.
 
 The B2a contract is unchanged:
 
@@ -466,7 +476,22 @@ initialization, the coefficient `A(n+1)` in `S_(n+1) = 16*S_n + A(n+1)`,
 and the orbit/recurrence index offset. Export/audit, validate, review, commit,
 perform the necessity review, and hand off all of B2 together. Stop before
 B3 tail bounds/decay, optional modular computation support, or V. B2 alone
-does not complete M3/Step 4. No B2 implementation begins during prompt preparation.
+does not complete M3/Step 4. Use a focused `BBP/Orbit.lean` module with exposed
+`bbpPartialSum`, `bbpTail`, and independently recursive `bbpRecurrence`.
+Retain both the exact B2a `HasSum` and a `HasSum` identifying the defined tail;
+the total `tsum` definition alone is not convergence evidence. Keep finite-sum
+helpers local unless a proof or audit consumer requires them. Multiplication
+by integer 16 preserves fractional parts modulo integers; do not use linearity
+or a global Lipschitz assertion for `Int.fract`.
+
+**B2a internal checkpoint:** `BBP/Orbit.lean` now defines all three objects and
+proves `hasSum_bbpTail_sub`, `hasSum_bbpTail`, and
+`pow_mul_pi_eq_bbpPartialSum_add_bbpTail`. Root-import definitions, complete
+quantified types, actual axiom lists, and zero-index theorem instantiations
+are checked. Recurrence/range and the final orbit identity remain pending;
+B2 is not yet complete. Carbon High found no proof/audit issues; its low-severity stale-status/count
+finding was corrected in the overview above. The complete B2 review still
+follows at the endpoint; see [the review record](agy-reports/b2-review.md).
 
 ## 5. Prove the missing universal visitation theorem
 
