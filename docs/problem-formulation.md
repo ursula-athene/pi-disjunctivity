@@ -15,6 +15,16 @@ hexadecimal disjunctivity or formalizing BBP requires separate authorization.
 The correctness and equivalence proofs below belong to formulation verification;
 they do not assert that π is disjunctive.
 
+**Later bounded research update (2026-11-25):** separately authorized cycles
+completed [proof-plan Step 2](proof-plan.md#2-isolate-exactly-what-must-be-proved-about-pi)
+and B4/P3, the conditional interior-margin transfer and open-interval-to-cell
+conversion. These general results preserve this reviewed formulation and their
+explicit visitation hypotheses. [The research log](research-log.md) records the
+scope, review, and expanded audit. A later separately authorized B1a cycle
+checked the BBP coefficient and single-term integral, with twenty theorem
+audits in total; see [the handoff](b1a-handoff.md). The full BBP series and
+universal visitation remain unproved.
+
 ## Problem formulation
 
 > Every finite string of hexadecimal digits occurs contiguously after the radix
@@ -453,7 +463,14 @@ fractional hexadecimal digits of `Real.pi` as `243F` from Mathlib's proved
 rational bounds. These results are included in the default build.
 The separate `lake env lean Test.lean` check preserves all thirteen milestone C
 theorem types and adds the two new theorem types through the library root.
-Two further checks expand the π proposition definitions. Guarded `#print axioms` results
+The later bounded interval pilot adds two more types and the B4/P3 milestone
+adds two, then B1a adds the unconditional BBP single-term integral, for twenty
+in total, without changing the fifteen formulation/follow-up theorems. B4 assumes
+vanishing errors and arbitrarily late open-interval visits;
+P3 assumes open-interval visits and yields hexadecimal-cell visits. Both are
+general conditional results, with no BBP or global range hypothesis.
+Two further checks expand the π proposition definitions; the BBP coefficient
+expansion and zero-index value are also checked. Guarded `#print axioms` results
 require exactly `propext`, `Classical.choice`, and `Quot.sound` for each theorem. The audit rejects
 a changed axiom list, including any introduction of `sorryAx` or a project-specific
 axiom. CI runs this check after building. These checks and `git diff --check` pass

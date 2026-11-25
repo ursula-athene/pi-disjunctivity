@@ -1,0 +1,10 @@
+# allow all git commands - destructive ones are prohibited on Github using a ruleset
+prefix_rule(
+    pattern=["git"],
+    decision="allow",
+)
+prefix_rule(
+    pattern=["gh"],
+    decision="allow",
+)
+

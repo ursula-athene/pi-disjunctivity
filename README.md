@@ -65,12 +65,31 @@ Formulation verification is complete. Work on proving the π conjecture or
 formalizing BBP requires separate authorization. Whether π satisfies this
 property remains the research question; this repository does not establish it.
 
+A separately authorized bounded pilot completed
+[proof-plan Step 2](docs/proof-plan.md#2-isolate-exactly-what-must-be-proved-about-pi):
+`OrbitCriteria.lean` proves the explicit interval-hitting equivalence and a
+conditional implication for π. The interval-hitting hypothesis remains unproved.
+The [workflow](docs/proof-workflow.md), [blueprint](docs/proof-blueprint.md), and
+[research log](docs/research-log.md) record the executed meta-plan. A subsequent
+bounded milestone checked B4 (transfer under vanishing errors and arbitrarily
+late visits) and P3 (open-interval visits imply hexadecimal-cell visits).
+Neither cycle began BBP formalization or universal visitation research;
+the conjecture remains unproved.
+
+The documentation-only [B1 source and proof assessment](docs/b1-source-proof-review.md)
+records the analytic route, external-source license constraints, and pinned
+Mathlib API. The subsequent [B1a milestone](docs/b1a-handoff.md) independently
+checks `bbpCoeff` and `integral_bbpTerm`. The full B1 series identity remains
+unproved. Pointwise summation and domination are the next proposed slice,
+subject to separate authorization.
+
 The digit and disjunctivity definitions remain parameterized by the base. The
 word value, orbit, and conjecture definitions use base 16. Reconstruction examples
 cover bases 2, 10, and 16. The default build checks the definitions, all three
 foundational steps, both formulation equivalences, termination, infinite
-reconstruction, recurrence, and examples. The review distinguishes these results
-from the mathematical comparison with the intended problem.
+reconstruction, recurrence, the interval-hitting equivalence, conditional π
+reduction, general transfer and cell conversion, the BBP term integral, and
+examples. The review distinguishes these results from the mathematical comparison with the intended problem.
 
 ## Installation
 
@@ -140,19 +159,21 @@ lake env lean Test.lean
 ```
 
 This check preserves the thirteen milestone C theorem-type audits and adds
-infinite reconstruction and recurrence, for fifteen reviewed theorems. It uses
+infinite reconstruction, recurrence, the two interval-pilot results, B4/P3,
+and the B1a term integral, for twenty reviewed theorems. It uses
 `#guard_msgs` to verify each theorem's exact axiom list: `propext`, `Classical.choice`, and
 `Quot.sound`. An unexpected axiom such as `sorryAx` makes the check fail. CI runs
 it after the library build. Two further checks expand the named π propositions
-to the explicit quantified digit and orbit statements.
+to the explicit quantified digit and orbit statements. The BBP coefficient
+expansion and `bbpCoeff 0 = 47/15` are also checked through the root import.
 
 To build selected modules explicitly:
 
 ```sh
 lake build PiDisjunctivity.Definitions PiDisjunctivity.BlockValue \
   PiDisjunctivity.Digits PiDisjunctivity.Disjunctivity PiDisjunctivity.Cylinders \
-  PiDisjunctivity.Conjectures PiDisjunctivity.OrbitEquivalence \
-  PiDisjunctivity.Examples
+  PiDisjunctivity.Conjectures PiDisjunctivity.OrbitEquivalence PiDisjunctivity.OrbitCriteria \
+  PiDisjunctivity.BBP.Series PiDisjunctivity.Examples
 ```
 
 For a quick check of one source file, or to inspect the selected Lean version:
@@ -171,12 +192,20 @@ axiom lists, dependency inspection, validation results, and remaining limitation
 
 ## Repository guide
 
+- [docs/proof-plan.md](docs/proof-plan.md): the mathematical roadmap; Step 2 is
+  complete, B4/P3 are checked, and universal visitation remains the open research gap.
+- [docs/proof-workflow.md](docs/proof-workflow.md): source-method adaptations and
+  the minimal shell feedback loop established by [the meta-plan](docs/meta-proof-plan.md).
+- [docs/proof-blueprint.md](docs/proof-blueprint.md) and
+  [docs/research-log.md](docs/research-log.md): dependency/status index and dated
+  attempts, reviews, actual checks, and handoff.
 - [docs/review-follow-up.md](docs/review-follow-up.md): improvements prompted by
   the external review, proof methods, validation, and current audit coverage.
 - [docs/formulation-review.md](docs/formulation-review.md): the completed milestone C
   review, with requirements mapped to definitions, universal proofs, and examples.
-- [docs/session-prompts.md](docs/session-prompts.md): the completed milestone C
-  prompt and the boundary for future work.
+- [docs/session-prompts.md](docs/session-prompts.md): the completed bounded B1a
+  session record first, followed by archived prompts marked
+  "Old prompts - do not use".
 - [docs/dependencies-and-trust.md](docs/dependencies-and-trust.md): the Mathlib-only
   external-library policy, dependency stack, axiom audit, and limits of proof
   checking. [AGENTS.md](AGENTS.md) records the policy for future repository work.
@@ -214,9 +243,13 @@ axiom lists, dependency inspection, validation results, and remaining limitation
   and the empty word. Orbit examples check both closure endpoints, word recovery,
   and the failure of disjunctivity for zero.
 - [PiDisjunctivity.lean](PiDisjunctivity.lean): the library's root imports.
-- [Test.lean](Test.lean): fifteen foundational, equivalence, termination,
-  reconstruction, and recurrence statements with guarded axiom checks, and
-  two direct conjecture-definition checks.
+- [PiDisjunctivity/OrbitCriteria.lean](PiDisjunctivity/OrbitCriteria.lean): the
+  explicit interval-hitting equivalence, conditional π reduction, interior-margin
+  transfer, and open-interval-to-cell conversion.
+- [PiDisjunctivity/BBP/Series.lean](PiDisjunctivity/BBP/Series.lean): the BBP
+  coefficient and unconditional single-term integral; no π series theorem yet.
+- [Test.lean](Test.lean): twenty theorem statements with guarded axiom checks,
+  two direct conjecture-definition checks, and coefficient expansion/value checks.
 
 ## License
 

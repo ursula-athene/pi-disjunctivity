@@ -7,7 +7,7 @@ module
 
 import PiDisjunctivity
 
-/-! Audit the problem definitions, foundations, and formulation equivalences after `lake build`. -/
+/-! Audit definitions, foundations, orbit criteria, and the BBP term integral after `lake build`. -/
 
 -- Compare the named π statements directly with the reviewed quantified problem and orbit.
 example : PiDisjunctivity.PiHexadecimalDisjunctivity ↔
@@ -96,6 +96,53 @@ example (b : ℕ) (hb : 2 ≤ b) (x : ℝ) (h : PiDisjunctivity.IsDisjunctive b 
     (k : ℕ) (s : Fin k → Fin b) (N : ℕ) :
     ∃ n, N ≤ n ∧ ∀ i : Fin k, PiDisjunctivity.baseDigit b x (n + i.val) = (s i).val :=
   PiDisjunctivity.isDisjunctive_occurs_ge b hb x h k s N
+
+-- The pilot exposes interval hitting as a hypothesis, including all lengths and cell values.
+example (x : ℝ) (hx : 0 ≤ x) :
+    PiDisjunctivity.IsDisjunctive 16 x ↔
+      ∀ (k m : ℕ), m < 16 ^ k → ∃ n : ℕ,
+        Int.fract ((16 : ℝ) ^ n * x) ∈
+          Set.Ico ((m : ℝ) / (16 : ℝ) ^ k) (((m : ℝ) + 1) / (16 : ℝ) ^ k) :=
+  PiDisjunctivity.isDisjunctive_iff_hitsHexadecimalIntervals x hx
+
+example
+    (h : ∀ (k m : ℕ), m < 16 ^ k → ∃ n : ℕ,
+      Int.fract ((16 : ℝ) ^ n * Real.pi) ∈
+        Set.Ico ((m : ℝ) / (16 : ℝ) ^ k) (((m : ℝ) + 1) / (16 : ℝ) ^ k)) :
+    PiDisjunctivity.PiHexadecimalDisjunctivity :=
+  PiDisjunctivity.piHexadecimalDisjunctivity_of_hitsHexadecimalIntervals h
+
+-- Transfer needs both vanishing errors and late visits, but no global range hypothesis.
+example (u r : ℕ → ℝ) (hr : Filter.Tendsto r Filter.atTop (nhds 0))
+    (hu : ∀ a b : ℝ, 0 ≤ a → a < b → b ≤ 1 →
+      ∀ N : ℕ, ∃ n ≥ N, u n ∈ Set.Ioo a b) :
+    ∀ a b : ℝ, 0 ≤ a → a < b → b ≤ 1 →
+      ∃ n : ℕ, Int.fract (u n + r n) ∈ Set.Ioo a b :=
+  PiDisjunctivity.hitsOpenIntervals_fract_add_of_tendsto_zero u r hr hu
+
+-- Open-interval visits imply cell visits independently of transfer, BBP, or a range premise.
+example (t : ℕ → ℝ)
+    (ht : ∀ a b : ℝ, 0 ≤ a → a < b → b ≤ 1 →
+      ∃ n : ℕ, t n ∈ Set.Ioo a b) :
+    ∀ k m : ℕ, m < 16 ^ k → ∃ n : ℕ,
+      t n ∈ Set.Ico ((m : ℝ) / (16 : ℝ) ^ k)
+        (((m : ℝ) + 1) / (16 : ℝ) ^ k) :=
+  PiDisjunctivity.hitsHexadecimalIntervals_of_hitsOpenIntervals t ht
+
+-- The BBP coefficient uses real division, the four reviewed signs, and zero-based indexing.
+example (j : ℕ) : PiDisjunctivity.bbpCoeff j =
+    4 / (8 * (j : ℝ) + 1) - 2 / (8 * (j : ℝ) + 4)
+      - 1 / (8 * (j : ℝ) + 5) - 1 / (8 * (j : ℝ) + 6) := rfl
+
+example : PiDisjunctivity.bbpCoeff 0 = (47 : ℝ) / 15 := by
+  norm_num [PiDisjunctivity.bbpCoeff]
+
+-- This is unconditional and includes j = 0; it makes no infinite-sum or π assertion.
+example (j : ℕ) :
+    (∫ x in (0 : ℝ)..1,
+      (x ^ 8 / 16) ^ j * (4 - 2 * x ^ 3 - x ^ 4 - x ^ 5)) =
+      PiDisjunctivity.bbpCoeff j / (16 : ℝ) ^ j :=
+  PiDisjunctivity.integral_bbpTerm j
 
 /--
 info: 'PiDisjunctivity.blockValue_eq_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
@@ -190,3 +237,38 @@ info: 'PiDisjunctivity.isDisjunctive_occurs_ge' depends on axioms:
 -/
 #guard_msgs (whitespace := lax) in
 #print axioms PiDisjunctivity.isDisjunctive_occurs_ge
+
+/--
+info: 'PiDisjunctivity.isDisjunctive_iff_hitsHexadecimalIntervals' depends on axioms:
+[propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms PiDisjunctivity.isDisjunctive_iff_hitsHexadecimalIntervals
+
+/--
+info: 'PiDisjunctivity.piHexadecimalDisjunctivity_of_hitsHexadecimalIntervals' depends on axioms:
+[propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms PiDisjunctivity.piHexadecimalDisjunctivity_of_hitsHexadecimalIntervals
+
+/--
+info: 'PiDisjunctivity.hitsOpenIntervals_fract_add_of_tendsto_zero' depends on axioms:
+[propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms PiDisjunctivity.hitsOpenIntervals_fract_add_of_tendsto_zero
+
+/--
+info: 'PiDisjunctivity.hitsHexadecimalIntervals_of_hitsOpenIntervals' depends on axioms:
+[propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms PiDisjunctivity.hitsHexadecimalIntervals_of_hitsOpenIntervals
+
+/--
+info: 'PiDisjunctivity.integral_bbpTerm' depends on axioms:
+[propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms PiDisjunctivity.integral_bbpTerm

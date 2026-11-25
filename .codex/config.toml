@@ -1,0 +1,15 @@
+# Keep file writes confined to the workspace and permitted temporary folders.
+sandbox_mode = "workspace-write"
+
+# Allow normal work automatically; ask when additional permissions are needed.
+#approval_policy = "on-request"
+# semi yolo so the proof can run unattended.
+approval_policy = "never"
+
+# Enable live web research.
+web_search = "live"
+
+# Allow commands to download papers and articles without network approvals.
+[sandbox_workspace_write]
+network_access = true
+
