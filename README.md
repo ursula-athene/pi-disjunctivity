@@ -77,8 +77,9 @@ The digit and disjunctivity definitions remain parameterized by the base. The
 word value, orbit, and conjecture definitions use base 16. Reconstruction examples
 cover bases 2, 10, and 16. The default build checks the definitions, all three
 foundational steps, both formulation equivalences, termination, infinite
-reconstruction, recurrence, and examples. The review distinguishes these results
-from the mathematical comparison with the intended problem.
+reconstruction, recurrence, the interval-hitting equivalence and conditional π
+reduction, and examples. The review distinguishes these results from the
+mathematical comparison with the intended problem.
 
 ## Installation
 

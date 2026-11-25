@@ -187,3 +187,57 @@ late visitation as a hypothesis, the interior-margin conclusion, conversion
 to hexadecimal-cell visits, and the required validation. This records the
 next task without starting it. The commit includes the completed pilot and
 its documentation; unrelated Obsidian and notes changes are excluded.
+
+## 2026-11-24 — Independent review triage and approved documentation follow-up
+
+Independently assessed the [external review](agy-reports/meta-proof-plan-review-report.md)
+at `0a59212` on `feature/attempt-02`. The user first authorized read-only triage,
+then approved the targeted documentation patch, commit, and push, followed by
+a pause. No proof milestone, tooling installation, or delegation was authorized.
+
+The preceding triage located the nested repository root, read the cited source
+and documentation, and checked the original papers and three pinned GitHub
+documents. With `$HOME/.elan/bin` on `PATH`, Lean reported `4.37.0-rc1`;
+`lake build` passed with 6655 jobs and no warnings, `lake env lean Test.lean`
+passed silently with seventeen type/axiom audits, and `git diff --check` passed.
+All nine dependency checkouts matched the manifests and were clean. Elan's
+parent-directory selection was `4.36.0`; the reported wrong-toolchain cache
+overwrite was not reproduced. Disposable `/tmp` probes, with the exact
+`lakefile.toml` options passed to Lean, confirmed an `unusedVariables` warning
+for an unused named `Prop` hypothesis and availability of the three search
+tactics. No B4 or cell-conversion proof was implemented.
+
+Adopted D1–D3 and R2: remove B4's redundant range premise, track independent
+cell conversion as P3, correct the status summaries, and add root/version and
+preservation-diff checks. The margin argument works at both boundary endpoints
+and for signed errors: with `δ = (b-a)/4`, a late visit to `(a+δ,b-δ)` and
+`|r n| < δ` keep the perturbed value in `(a,b) ⊆ (0,1)`. B2's range fact
+remains valid independently.
+Recurrence indexing, cell boundaries including `k = 0`, and both tail constants
+were also checked mathematically; visitation V remains open.
+
+Adapted R1, R3, and R4: retain the user-owned Viewpoint policies and requested
+next-task entries in both plans; distinguish implementation milestones M1–M5
+from roadmap Steps 1–7; use `Set.Ioo` consistently for B4/P3; and recommend
+optional scratch tactic search and advisory fresh-session criticism. Aletheia's
+suggested reasoning-trace mechanism is not a demonstrated guarantee here.
+The report's Lean-size estimate is unverified, its source count should be eleven
+files including `Test.lean`, and negative inputs need not have nontrivial
+fractional-part orbits (for example, `x = -1`). D1 strengthens a valid statement;
+it does not repair a false theorem.
+
+For OQ1, examples remain selective semantic/boundary checks, supplementing
+universal proofs and audits. For OQ2, weighted-series/tail summability and B3
+could precede B1, but changing that order awaits a separate user decision.
+The existing order and commit cadence are preserved. Late-output strengthening
+and an extra composition theorem are deferred. B4 and P3 remain unformalized;
+Hπ and T remain blocked. The external report and historical log entries are
+preserved, as are unrelated Obsidian and notes files.
+
+Documentation validation: `git diff --check` and relative Markdown file/heading
+link checks passed. File hashes confirmed that only the seven approved Markdown
+files changed; Viewpoint policy text was also compared directly with HEAD.
+The preservation diff for all project Lean sources and dependency pins was empty.
+The Lean build/audit results above are from the preceding triage; no rerun was
+needed for this documentation-only change. Stop after the requested commit and
+push, before beginning B4/P3.

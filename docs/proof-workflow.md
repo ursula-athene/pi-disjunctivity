@@ -29,12 +29,18 @@ visitation argument.
 
 ## Minimal working feedback loop
 
-Run from the repository root. Existing Elan, Lake, Lean, and `rg` suffice:
+Locate and enter the repository root containing both `lakefile.toml` and
+`lean-toolchain`; it may be a subdirectory of a multi-directory workspace.
+Elan selects the toolchain before Lake processes `--dir`, so that option alone
+does not protect against a parent directory's different default. Stop before
+building unless `lean --version` reports `4.37.0-rc1`.
+Existing Elan, Lake, Lean, and `rg` suffice:
 
 ```sh
 export PATH="$HOME/.elan/bin:$PATH"
+test -f lakefile.toml && test -f lean-toolchain || exit 1
 git status --short
-lean --version
+lean --version | rg '^Lean \(version 4\.37\.0-rc1,' || exit 1
 lake --version
 lake build
 lake env lean Test.lean
@@ -55,10 +61,18 @@ lake env lean Test.lean
 3. Sketch the argument and review it separately for quantifiers, hypotheses,
    boundary cases, circularity, and whether it supplies any new π-specific fact.
    Record conclusions and objections, not a transcript of internal reasoning.
+   Before substantial Step 5 formalization, a fresh-session criticism pass is
+   recommended, using the statement, candidate proof, and cited sources. This
+   is advisory, does not gate exploratory work, and authorizes no sub-agents
+   or external services. The mechanism suggested by Aletheia is not a measured
+   guarantee for this project's review process.
 4. Use a uniquely named scratch `.lean` file under `/tmp` when an isolated
    experiment helps. Import built project modules; use `#check` for signatures,
    `#print` for declarations, and `trace_state` inside a proof for the actual
-   goal/context. Complete the proof without placeholders. Run:
+   goal/context. Optionally try `exact?`, `apply?`, or `rw?` as local,
+   type-directed complements to `rg`; these need no new dependency. Replace
+   successful suggestions with explicit proof steps and close every goal
+   without placeholders. Run:
 
    ```sh
    lake env lean /tmp/pi-disjunctivity-interval-pilot.lean
@@ -75,9 +89,22 @@ lake env lean Test.lean
 6. Remove diagnostic commands from production proofs. Export the result, add
    an exact type check, inspect `#print axioms`, and then guard its actual list
    in `Test.lean`. Never change an expected list merely to make an audit pass.
+   Add examples in `Examples.lean` when they provide useful semantic or boundary
+   regression checks, rather than requiring an example for every module or
+   freezing the file. Universal proofs, exported-type checks, axiom guards,
+   and mathematical statement review remain the core validation.
 7. Finish with `lake build`, `lake env lean Test.lean`, and `git diff --check`.
    Review definition/signature preservation and dependency/import diffs
-   separately. Record actual commands, outputs, semantic review, remaining
+   separately. Before committing, inspect the pinned files and reviewed
+   definitions explicitly:
+
+   ```sh
+   git diff HEAD -- lean-toolchain lakefile.toml lake-manifest.json \
+     PiDisjunctivity/Definitions.lean PiDisjunctivity/Conjectures.lean
+   ```
+
+   Also review changed theorem signatures and imports outside this file list.
+   Record actual commands, outputs, semantic review, remaining
    obligations, and the next bounded task in the log and blueprint.
 
 Compiler errors and `trace_state` supply file-based feedback. There is no live

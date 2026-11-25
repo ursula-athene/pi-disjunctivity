@@ -1,6 +1,6 @@
 # Proof dependency and status index
 
-Updated 2026-11-24 after the bounded Step 2 pilot. This indexes
+Updated 2026-11-24 after the Step 2 pilot and review triage. This indexes
 [proof-plan.md](proof-plan.md), the sole mathematical roadmap. Validation and
 review evidence are in [research-log.md](research-log.md). All Lean names below
 are in namespace `PiDisjunctivity` and exported by the library root.
@@ -73,9 +73,10 @@ using the series as an analytic tail.
 | B1: BBP series | `HasSum (fun j : ℕ => A(j) / (16 : ℝ) ^ j) Real.pi`, for the fixed `A` above. | Original BBP identity cited in [Step 3](proof-plan.md#3-establish-the-bbp-identity-in-the-permitted-lean-stack). Integral/geometric-series argument; no hypothesis of density. | **Known / unformalized.** Supplies the π-specific analytic identity. Original proof and external Lean adaptation still require their own formalization review. |
 | B2: orbit bridge | For every `n : ℕ`, `16^n * Real.pi = S_n + R_n`, `y_(n+1) = fract(S_n)`, and `t_n(Real.pi) = fract(y_(n+1) + R_n)`. Also `0 ≤ y_n < 1`. | B1, convergent-series splitting, recurrence induction, fractional-part arithmetic; [Step 4](proof-plan.md#4-connect-bbp-arithmetic-to-the-actual-hexadecimal-orbit). | **Known / unformalized.** Relates recurrence index `n+1` to actual orbit index `n`. |
 | B3: tail control | For all `j,n : ℕ`, `abs(A(j)) ≤ 8/(8*j+1)` and `abs(R_n) ≤ 8/(15*(8*n+9))`; consequently `R_n → 0` as `n → ∞`. | Candidate bounds in Step 4; triangle inequality, denominator monotonicity, geometric sum, convergence. | **Proposed bounds / unformalized.** Must verify constants and series estimates; gives no visits. |
-| B4: general transfer | For `u r : ℕ → ℝ`, assume `∀ n, 0 ≤ u n ∧ u n < 1`, `r n → 0`, and `∀ a b : ℝ, 0 ≤ a → a < b → b ≤ 1 → ∀ N : ℕ, ∃ n ≥ N, a < u n ∧ u n < b`. Then `∀ a b : ℝ, 0 ≤ a → a < b → b ≤ 1 → ∃ n : ℕ, a < fract(u n + r n) ∧ fract(u n + r n) < b`. | General real analysis; choose a smaller interval and an error margin, then a late visit. Step 4 gives the sketch. No π-specific premise. | **Known argument / unformalized.** Conditional transfer only; visitation premise remains. |
+| B4: general transfer | For `u r : ℕ → ℝ`, assume `Filter.Tendsto r Filter.atTop (nhds 0)` and `∀ a b : ℝ, 0 ≤ a → a < b → b ≤ 1 → ∀ N : ℕ, ∃ n ≥ N, u n ∈ Set.Ioo a b`. Then `∀ a b : ℝ, 0 ≤ a → a < b → b ≤ 1 → ∃ n : ℕ, Int.fract (u n + r n) ∈ Set.Ioo a b`. | General real analysis; choose a smaller interval and an error margin, then a late visit. Step 4 gives the sketch. No global range assumption on `u` or π-specific premise. | **Known argument / unformalized.** Conditional transfer only; visitation premise remains. |
+| P3: open intervals to cells | For `t : ℕ → ℝ`, assume `∀ a b : ℝ, 0 ≤ a → a < b → b ≤ 1 → ∃ n : ℕ, t n ∈ Set.Ioo a b`. Then `∀ k m : ℕ, m < 16 ^ k → ∃ n : ℕ, t n ∈ Set.Ico ((m : ℝ) / (16 : ℝ) ^ k) (((m : ℝ) + 1) / (16 : ℝ) ^ k)`. | Positive cell width and endpoint bounds; `Set.Ioo a b ⊆ Set.Ico a b`. Independent of B4 and BBP. Includes `k = 0`, the first cell, and the last cell. | **Known argument / unformalized.** General conditional conversion; can be checked independently of Hπ. |
 | V: universal visitation | For the fixed recurrence above, `∀ a b : ℝ, 0 ≤ a → a < b → b ≤ 1 → ∀ N : ℕ, ∃ n ≥ N, a < y_(n+1) ∧ y_(n+1) < b`. | Particular BBP coefficients, initialization, and indexing; [Step 5](proof-plan.md#5-prove-the-missing-universal-visitation-theorem) contains possible approaches, no complete proof. | **Open mathematical gap.** Supplies visits; neither B1 nor B3 discharges it. |
-| Hπ: actual cell visits | `H(Real.pi)` with no unproved premise. | B2 + B3 + B4 + V give visits to every open interval in `[0,1]`; apply this to the open interior of each `I(k,m)`. Positive width and `m < 16^k` place its endpoints in `[0,1]`. | **Blocked.** Known final conversion, missing visitation and unformalized bridges. This is equivalent to the target, not independent progress. |
+| Hπ: actual cell visits | `H(Real.pi)` with no unproved premise. | B2 + B3 + B4 + V give visits to every open interval in `[0,1]`; P3 converts these to visits to each `I(k,m)`. | **Blocked.** Missing visitation and unformalized bridges/conversion. This is equivalent to the target, not independent progress. |
 | T: final theorem | `PiHexadecimalDisjunctivity` with no distribution hypothesis. | P2 applied to an unconditional proof of Hπ; alternative F3 route also possible. | **Blocked.** No exported unconditional proof exists. |
 
 Modular reduction of finite sums is optional computation support in Step 4;
@@ -86,7 +87,8 @@ orbit generalization, and numerical word searches are not prerequisites.
 B1 (BBP) ──> B2 (orbit identity) ──────────────────────┐
 B3 (tail control) ──> vanishing error ─────────────────┤
 V  (OPEN: late visits of the fixed recurrence) ────────┤
-B4 (general conditional transfer) ────────────────────┴─> Hπ (OPEN)
+B4 (general conditional transfer) ────────────────────┤
+P3 (general open-interval-to-cell conversion) ─────────┴─> Hπ (OPEN)
 F1 + F2 ──> P1 ──> P2 (checked, conditional) ─────────────> T (OPEN)
                                                          ^
                          Hπ supplies P2's premise ────────┘
@@ -107,7 +109,7 @@ irrationality alone does not rule out infinite proper limit sets. A global bound
 
 Recommended next bounded task, if authorized: follow the
 [explicit transfer task](proof-plan.md#next-bounded-task-conditional-interior-margin-transfer)
-to prove B4 together with the elementary conversion from open-interval visits
-to cell visits.
+to prove B4 together with P3, the elementary conversion from open-interval
+visits to cell visits.
 Keep its late-visitation hypothesis explicit and stop before B1 or V. Nothing
 beyond P1/P2 was attempted in this pilot.

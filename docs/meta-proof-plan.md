@@ -13,9 +13,9 @@ The stages below remain the procedure for future separately scoped work.
 The recommended next cycle is the
 [conditional interior-margin transfer lemma](proof-plan.md#next-bounded-task-conditional-interior-margin-transfer)
 from proof-plan Step 4 (blueprint node B4), together with the elementary
-conversion from open-interval visits to hexadecimal-cell visits. The proof plan
-specifies the hypotheses, conclusion, and acceptance checks; it remains the
-mathematical roadmap.
+conversion from open-interval visits to hexadecimal-cell visits (node P3).
+The proof plan specifies the hypotheses, conclusion, and acceptance checks;
+it remains the mathematical roadmap.
 
 Apply Stage 3's specify/search/sketch/criticize/formalize/verify cycle to that
 endpoint only. Keep arbitrarily late visitation as an explicit hypothesis and

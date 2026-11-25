@@ -64,7 +64,7 @@ not necessarily quick. Completing them supplies useful, verified infrastructure
 without necessarily bringing us closer to the discovery needed for Step 5.
 Steps 6–7 then assemble and audit the result once that missing argument exists.
 
-# Viewpoint
+## Viewpoint
 
 In proving, try to keep the proof as simple as possible, proving no unneeded lemmas or theorems. When finishing a step or milestone, commit code and documentation, then go through the proof and verify that each piece is needed for the proof. Remove unnecessary pieces that don't matter to the proof's line of reasoning. Commit the results.
 
@@ -222,21 +222,24 @@ without assuming its answer.
 ### Next bounded task: conditional interior-margin transfer
 
 **Status: planned, not implemented.** This is the next bounded cycle after the
-completed Step 2 pilot, and corresponds to B4 in
+completed Step 2 pilot, and corresponds to B4 and P3 in
 [the blueprint](proof-blueprint.md#remaining-bbp-route).
 
 For general sequences `u r : ℕ → ℝ`, assume:
 
-1. `∀ n, 0 ≤ u n ∧ u n < 1`.
-2. `Filter.Tendsto r Filter.atTop (nhds 0)`.
-3. For every `a b : ℝ` with `0 ≤ a < b ≤ 1` and every `N : ℕ`, there exists
-   `n ≥ N` with `a < u n ∧ u n < b`.
+1. `Filter.Tendsto r Filter.atTop (nhds 0)`.
+2. For every `a b : ℝ` with `0 ≤ a < b ≤ 1` and every `N : ℕ`, there exists
+   `n ≥ N` with `u n ∈ Set.Ioo a b`.
+
+No global range assumption on `u` is needed: the selected late visit supplies
+the bounds used in the proof. The later BBP instance `u n = y_(n+1)` does lie
+in `[0,1)`, but that fact is not a premise of this general transfer.
 
 Prove that for every `a b : ℝ` with `0 ≤ a < b ≤ 1`, there exists `n : ℕ`
 such that
 
 ```text
-a < Int.fract (u n + r n) ∧ Int.fract (u n + r n) < b.
+Int.fract (u n + r n) ∈ Set.Ioo a b.
 ```
 
 Choose a smaller interval strictly inside `(a,b)`, use convergence to bound
@@ -245,12 +248,26 @@ visit to that smaller interval. The perturbed value lies in `(a,b) ⊆ (0,1)`,
 so taking its fractional part does not change it. Check targets with `a = 0`
 or `b = 1`, either sign of `r n`, and all convergence/visitation quantifiers.
 
-Complete the task with the elementary conversion: if a sequence `t : ℕ → ℝ`
-visits every such open interval, then for every `k m : ℕ` with `m < 16^k`,
-some `t n` lies in `[m/16^k, (m+1)/16^k)`. Apply open-interval visitation to
-the cell's interior, including `k = 0`. This supplies the shape of the premise
-used by the existing Step 2 criterion; applying it to π still requires the
-later orbit identity and independent visitation proof.
+Complete the task with the independent elementary conversion P3. For a sequence
+`t : ℕ → ℝ`, assume
+
+```text
+∀ a b : ℝ, 0 ≤ a → a < b → b ≤ 1 → ∃ n : ℕ, t n ∈ Set.Ioo a b.
+```
+
+Prove
+
+```text
+∀ k m : ℕ, m < 16 ^ k → ∃ n : ℕ,
+  t n ∈ Set.Ico ((m : ℝ) / (16 : ℝ) ^ k) (((m : ℝ) + 1) / (16 : ℝ) ^ k).
+```
+
+Apply open-interval visitation to the cell's interior, including `k = 0`.
+This supplies the shape of the premise used by the existing Step 2 criterion;
+applying it to π still requires the later orbit identity and independent
+visitation proof. Keep the single-visit conclusion and these two modular lemmas;
+late-output strengthening and an additional composition theorem are deferred
+until needed.
 
 **Endpoint:** checked general transfer and cell-conversion lemmas, exported
 from `OrbitCriteria.lean` if that remains the smallest suitable location,
@@ -361,13 +378,13 @@ proved supporting results and any remaining conjectural input.
 `OrbitCriteria.lean` now exists for the interval reduction. The other module
 names below remain organizational suggestions, not existing files.
 
-| Step Number | Order                        | Work                                                                            | Suggested location                                                 |
+| Milestone   | Order                        | Work                                                                            | Suggested location                                                 |
 | ----------- | ---------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------ |
-| 1           | First small milestone        | Interval-hitting reduction complete; generic margin-based transfer lemma remains | `PiDisjunctivity/OrbitCriteria.lean`                               |
-| 2           | Next established mathematics | BBP convergence and equality with `Real.pi`                                     | `PiDisjunctivity/BBP/Series.lean`                                  |
-| 3           | Next bridge                  | Finite sums, recurrence, modular reduction, and tail estimates                  | `PiDisjunctivity/BBP/Orbit.lean`                                   |
-| 4           | Research milestone           | Develop and prove Step 5's missing visitation argument                          | Mathematical notes first; a Lean module once the argument is sound |
-| 5           | Final assembly               | The unconditional pi theorem and its audit                                      | `PiDisjunctivity/PiProof.lean` and `Test.lean`                     |
+| M1          | First small milestone        | Interval-hitting reduction complete; general transfer B4 and cell conversion P3 remain | `PiDisjunctivity/OrbitCriteria.lean`                          |
+| M2          | Next established mathematics | BBP convergence and equality with `Real.pi`                                     | `PiDisjunctivity/BBP/Series.lean`                                  |
+| M3          | Next bridge                  | Finite sums, recurrence, modular reduction, and tail estimates                  | `PiDisjunctivity/BBP/Orbit.lean`                                   |
+| M4          | Research milestone           | Develop and prove Step 5's missing visitation argument                          | Mathematical notes first; a Lean module once the argument is sound |
+| M5          | Final assembly               | The unconditional pi theorem and its audit                                      | `PiDisjunctivity/PiProof.lean` and `Test.lean`                     |
 
 The mathematical dependency chain is:
 
@@ -380,7 +397,7 @@ existing word/interval and orbit equivalences ------+-> pi disjunctivity
 ```
 
 The pilot makes the exact missing interval-hitting hypothesis explicit. The
-remaining part of the first suggested milestone is the conditional transfer
-with sufficient error margins. Work on the Step 5 argument can
+remaining part of the first suggested milestone is B4's conditional transfer
+with sufficient error margins and P3's cell conversion. Work on the Step 5 argument can
 proceed while the established BBP mathematics is being formalized; completing
 more infrastructure is not evidence that the open visitation problem is solved.
