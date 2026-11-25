@@ -7,11 +7,12 @@ proof methods, and completion status for the foundations. The conjecture about �
 remains open.
 
 **Current scope: formalize and validate the problem statement in Lean.** The
-conjecture already has a Lean statement, but the full verification that the
-definitions and alternate formulation express the intended problem is still
-pending. Complete and review that verification before beginning work on a proof
-of π's hexadecimal disjunctivity. The correctness and equivalence proofs below
-belong to formulation verification; they do not assert that π is disjunctive.
+conjecture has a Lean statement, and the planned correctness and equivalence
+theorems are implemented and audited. A final consolidated review against the
+intended problem remains pending. Complete and review that verification before
+beginning work on a proof of π's hexadecimal disjunctivity. The correctness and
+equivalence proofs below belong to formulation verification; they do not assert
+that π is disjunctive.
 
 ## Problem formulation
 
@@ -119,7 +120,9 @@ $$
 O_{16}(x)=\{\operatorname{fract}(16^n x):n\in\mathbb N\}.
 $$
 
-Then establish, for $x\ge 0$,
+The theorem `isDisjunctive_iff_orbitClosure` in
+[`OrbitEquivalence.lean`](../PiDisjunctivity/OrbitEquivalence.lean) now establishes,
+for $x\ge 0$,
 
 $$
 \operatorname{Disjunctive}_{16}(x)
@@ -129,7 +132,7 @@ $$
 
 with closure taken in $\mathbb R$.
 
-The planned argument has two directions:
+The proof has two directions:
 
 - From disjunctivity, obtain orbit points in hexadecimal intervals of arbitrarily
   small width, establishing approximation throughout $[0,1]$, including its
@@ -156,17 +159,17 @@ separate research problem.
 
 ## Remaining Lean verification roadmap
 
-**Status: milestone A implemented and validated; milestones B and C pending.**
+**Status: milestones A and B implemented and validated; milestone C's final review pending.**
 All three steps of [the foundations plan](foundations-plan.md) are complete. The
 work is organized below in dependency order. This roadmap extends the broader
 validation plan above; it does not add another foundational step or change the
 conjecture.
 
 The Lean snippets omit proof bodies and use the `PiDisjunctivity` namespace.
-Milestone A's signatures are implemented and audited; milestone B's remain
-proposed interfaces to check during implementation. Preserve the existing
-definitions and reviewed statements, and build new proofs from the current
-foundations rather than restoring the discarded proofs from history.
+The signatures in milestones A and B are implemented and audited. The existing
+definitions and reviewed statements have been preserved, and the proofs were
+built from the current foundations without restoring the discarded proofs from
+history.
 
 ### A. Establish the word–interval correspondence
 
@@ -234,8 +237,8 @@ with a private helper proving invariance under removal of the integer part.
 **Validation:** `lake build`, `lake env lean Test.lean`, and `git diff --check`
 pass without warnings on the unchanged Lean and Mathlib `v4.37.0-rc1` pins. The
 seven foundational statements and checks are preserved. Three new exported-type
-checks and guarded `#print axioms` results cover the signatures above; all ten
-audited theorems use exactly `propext`, `Classical.choice`, and `Quot.sound`.
+checks and guarded `#print axioms` results cover the signatures above; these ten
+theorems use exactly `propext`, `Classical.choice`, and `Quot.sound`.
 The audit rejects unexpected dependencies, and CI runs it after building.
 
 New examples recover `00A` from its length and value, specialize the correspondence
@@ -245,8 +248,9 @@ They also check both boundaries of `00A` and `FF`, the word `0F` at offset one i
 
 ### B. Establish the orbit-closure equivalence
 
-**Status: pending. This is the next implementation milestone; its dependency on
-milestone A is complete.**
+**Status: implemented and validated.** Both theorems are in
+[`OrbitEquivalence.lean`](../PiDisjunctivity/OrbitEquivalence.lean) and exported
+through the library root.
 
 ```lean
 theorem isDisjunctive_iff_orbitClosure (x : ℝ) (hx : 0 ≤ x) :
@@ -254,7 +258,7 @@ theorem isDisjunctive_iff_orbitClosure (x : ℝ) (hx : 0 ≤ x) :
       closure (hexadecimalOrbit x) = Set.Icc (0 : ℝ) 1
 ```
 
-Prove both directions for arbitrary nonnegative `x`:
+Both directions hold for arbitrary nonnegative `x`:
 
 - **Disjunctivity implies full closure.** Every orbit point is in `[0,1)`, so its
   closure is contained in the closed set `[0,1]`. To approximate any `t ∈ [0,1]`,
@@ -271,8 +275,8 @@ Prove both directions for arbitrary nonnegative `x`:
   the word. Use the open interior here: closure membership alone does not supply
   an orbit point at a specified boundary. Include the empty word.
 
-Use a new `OrbitEquivalence.lean` module depending on the correspondence. Then
-specialize the equivalence using `0 ≤ Real.pi` and the existing proposition names:
+The module depends on the correspondence and imports `Conjectures.lean` for its
+unchanged proposition definitions. The specialization uses `Real.pi_pos.le`:
 
 ```lean
 theorem piHexadecimalDisjunctivity_iff_orbitClosure :
@@ -280,23 +284,45 @@ theorem piHexadecimalDisjunctivity_iff_orbitClosure :
 ```
 
 This specialization establishes that the two conjecture statements agree. It
-proves neither conjecture. Import `Conjectures.lean` for the existing names without
-changing their definitions.
+proves neither conjecture.
+
+The private cell-selection helper handles `t = 1` by choosing `16 ^ k - 1`;
+for `t < 1`, it uses the natural floor of the scaled point. Thus the forward
+proof includes both 0 and 1. `exists_pow_lt_of_lt_one` supplies arbitrarily small
+cell widths, and `Metric.mem_closure_iff` turns the resulting approximations into
+closure membership. The reverse proof uses `mem_closure_iff` with the open
+interval containing the midpoint; it includes `k = 0` without excluding the
+empty word.
+
+**Validation:** `lake build`, `lake env lean Test.lean`, and `git diff --check`
+pass without warnings on the unchanged Lean and Mathlib `v4.37.0-rc1` pins. The
+ten earlier checks remain, and the general equivalence and its π specialization
+have exported-type checks and guarded axiom audits. All twelve audited theorems
+use exactly `propext`, `Classical.choice`, and `Quot.sound`. CI runs the expanded
+audit after building.
+
+New examples derive membership of both endpoints in the closure from
+disjunctivity, recover empty and one-digit words, `00A`, and `FF` from full orbit
+closure, and use zero's singleton orbit to check that zero is not disjunctive.
 
 ### C. Complete the formulation audit and review
 
-**Status: pending; depends on milestones A and B.**
+**Status: final consolidated review pending; milestones A and B are complete.**
+The exported-type checks, guarded axiom audits, examples, and local build checks
+are in place and pass. This milestone still requires a consolidated review of
+the formal statements against the intended problem, including all boundary
+conventions and the scope of the π specialization.
 
 Completion requires all of the following:
 
 - Compare the exported statements with the intended English formulation: every
   finite hexadecimal word, length retained, zero-based positions, nonnegative
   real inputs where required, and the chosen trailing-zero convention.
-- Preserve the existing ten theorem checks. Extend `Test.lean` with checks of
-  all new public theorem types and guarded `#print axioms` results, including the
-  general orbit equivalence and the specialization to π. Record each actual
-  axiom list, allowing only `propext`, `Classical.choice`, and `Quot.sound`; a
-  theorem may use fewer. Unexpected dependencies must fail the audit.
+- Verify and preserve `Test.lean`'s twelve exported-type checks and guarded
+  `#print axioms` results: seven foundational results, three from milestone A,
+  and the general orbit equivalence and π specialization from milestone B.
+  Record each actual axiom list, allowing only `propext`, `Classical.choice`, and
+  `Quot.sound`; a theorem may use fewer. Unexpected dependencies must fail the audit.
 - Extend exact examples for empty and one-digit words, zero, `00A`, `FF`,
   nonzero offsets, numbers with an integer part, terminating expansions, and
   both interval boundaries. Verify the closure argument at both 0 and 1 in the
@@ -320,9 +346,9 @@ as a separately authorized task. BBP formalization is also outside this phase.
 
 The earlier cylinder and orbit-equivalence proofs were discarded, including the
 specialization to π and their axiom audit. They were written before the formulation
-and validation approach were discussed. Milestone A now supplies a new
-word–interval proof built from the reviewed foundations; the orbit equivalence
-and its specialization remain unimplemented.
+and validation approach were discussed. Milestones A and B now supply new
+word–interval and orbit-equivalence proofs, including the specialization to π,
+built from the reviewed foundations.
 
 The library retains the agreed definitions: `baseDigit`, `IsDisjunctive`,
 `hexadecimalOrbit`, `blockValue`, `PiHexadecimalDisjunctivity`, and
@@ -350,8 +376,10 @@ Progress against [the foundational theorem plan](foundations-plan.md):
 
 Milestone A is also complete: `blockValue_injective`, `baseDigit_fract_pow`, and
 `block_iff_mem_interval` prove fixed-length uniqueness, digit shifting, and the
-word–interval correspondence. The default `lake build` checks the definitions,
-all three foundational steps, milestone A, and examples.
+word–interval correspondence. Milestone B's `isDisjunctive_iff_orbitClosure` and
+`piHexadecimalDisjunctivity_iff_orbitClosure` establish the general orbit equivalence
+and its specialization. The default `lake build` checks the definitions, all
+three foundational steps, milestones A and B, and examples.
 Additional word-value examples cover the empty word, any single digit, all-zero
 words, leading zeros, `FF`, and positional order (`12` versus `21`). Range examples
 exercise the bound at lengths zero and one, coverage of zero at every length,
@@ -363,16 +391,18 @@ nonterminating decimal input `1/3` exercises a nonzero truncation error.
 Correspondence examples additionally check empty words, arbitrary single digits,
 zero at all lengths and offsets, leading zeros, both interval boundaries, a
 nonzero offset in a number with an integer part, and terminating expansions.
-The separate `lake env lean Test.lean` check verifies all ten reviewed theorem
+Orbit examples additionally check both closure endpoints, word recovery under
+the closure hypothesis, and the zero-input counterexample.
+The separate `lake env lean Test.lean` check verifies all twelve reviewed theorem
 types through the library root. Guarded `#print axioms` results require exactly
 `propext`, `Classical.choice`, and `Quot.sound` for each theorem. The audit rejects
 a changed axiom list, including any introduction of `sorryAx` or a project-specific
 axiom. CI runs this check after building. These checks and `git diff --check` pass
 with the pinned Lean and Mathlib versions.
 
-The foundations and word–interval correspondence are complete. The orbit
-equivalence, its specialization to π, and the final formulation review remain
-pending. The
+The foundations, word–interval correspondence, orbit equivalence, and its
+specialization to π are complete. The final consolidated formulation review is
+the remaining milestone. The
 [remaining verification roadmap](#remaining-lean-verification-roadmap) records
-their implementation order, proposed statements, and completion criteria.
+the proof sequence, implemented statements, and final review criteria.
 These results make no claim about the occurrence of words in π.

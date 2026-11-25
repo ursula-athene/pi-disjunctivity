@@ -7,7 +7,7 @@ module
 
 import PiDisjunctivity
 
-/-! Check the foundations and word–interval correspondence after running `lake build`. -/
+/-! Check the foundations and both formulation equivalences after running `lake build`. -/
 
 -- This is the reviewed statement, including its full quantification and digit order.
 example (k : ℕ) (s : Fin k → Fin 16) :
@@ -60,6 +60,15 @@ example (x : ℝ) (hx : 0 ≤ x) (n k : ℕ) (s : Fin k → Fin 16) :
         Set.Ico ((PiDisjunctivity.blockValue k s : ℝ) / (16 : ℝ) ^ k)
           (((PiDisjunctivity.blockValue k s : ℝ) + 1) / (16 : ℝ) ^ k) :=
   PiDisjunctivity.block_iff_mem_interval x hx n k s
+
+-- The orbit equivalence covers every nonnegative real; its π instance asserts only equivalence.
+example (x : ℝ) (hx : 0 ≤ x) :
+    PiDisjunctivity.IsDisjunctive 16 x ↔
+      closure (PiDisjunctivity.hexadecimalOrbit x) = Set.Icc (0 : ℝ) 1 :=
+  PiDisjunctivity.isDisjunctive_iff_orbitClosure x hx
+
+example : PiDisjunctivity.PiHexadecimalDisjunctivity ↔ PiDisjunctivity.PiHexadecimalOrbitClosure :=
+  PiDisjunctivity.piHexadecimalDisjunctivity_iff_orbitClosure
 
 /--
 info: 'PiDisjunctivity.blockValue_eq_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
@@ -120,3 +129,17 @@ info: 'PiDisjunctivity.block_iff_mem_interval' depends on axioms: [propext, Clas
 -/
 #guard_msgs (whitespace := lax) in
 #print axioms PiDisjunctivity.block_iff_mem_interval
+
+/--
+info: 'PiDisjunctivity.isDisjunctive_iff_orbitClosure' depends on axioms:
+[propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms PiDisjunctivity.isDisjunctive_iff_orbitClosure
+
+/--
+info: 'PiDisjunctivity.piHexadecimalDisjunctivity_iff_orbitClosure' depends on axioms:
+[propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms PiDisjunctivity.piHexadecimalDisjunctivity_iff_orbitClosure

@@ -3,9 +3,9 @@
 This plan fills the three gaps identified when comparing the Lean definitions
 with the [problem formulation](problem-formulation.md). The earlier equivalence
 proof has been removed. All three foundational steps are now implemented and
-validated as described below. The word–interval correspondence is also complete
-in [milestone A](problem-formulation.md#a-establish-the-wordinterval-correspondence);
-the orbit equivalence remains pending.
+validated as described below. The word–interval and orbit-closure equivalences
+are also complete in [milestones A and B](problem-formulation.md#remaining-lean-verification-roadmap).
+The final consolidated formulation review remains pending.
 
 The Lean snippets below are the reviewed signatures in the `PiDisjunctivity`
 namespace. They intentionally have no proof bodies and are not source files to
@@ -213,8 +213,8 @@ and hexadecimal examples remain unchanged.
    the pinned Lean and Mathlib versions, with no `sorry`, `admit`, or
    project-specific axioms.
 4. **Complete:** CI runs guarded audits of the seven foundational theorems'
-   transitive axiom dependencies after building, alongside milestone A's three
-   additional theorem checks.
+   transitive axiom dependencies after building, alongside the five additional
+   theorem checks from milestones A and B.
 5. **Complete:** exact examples cover lengths zero and one, leading zeros,
    all-zero and all-`F` words, and bases 2, 10, and 16 for reconstruction,
    including fractional values and values greater than one. Examples supplement the
@@ -222,8 +222,9 @@ and hexadecimal examples remain unchanged.
 6. **Complete:** implementation-status documentation records the compiled and
    audited results.
 
-These foundations and milestone A's word–interval correspondence and shift lemma
-are complete. The orbit-closure equivalence and final review remain pending in the
+These foundations, the word–interval correspondence, the shift lemma, and the
+orbit-closure equivalence (including its π specialization) are complete. The final
+consolidated review remains pending in the
 [remaining Lean verification roadmap](problem-formulation.md#remaining-lean-verification-roadmap),
 using the reviewed foundations. Complete and review that formulation verification
 before beginning work on proving hexadecimal disjunctivity of π. The conjecture

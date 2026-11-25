@@ -8,10 +8,11 @@ module
 import PiDisjunctivity.BlockValue
 import PiDisjunctivity.Digits
 import PiDisjunctivity.Cylinders
+import PiDisjunctivity.OrbitEquivalence
 import Mathlib.Algebra.Order.Floor.Semifield
 import Mathlib.Tactic
 
-/-! Checks for words, digit reconstruction, truncation, and the word–interval correspondence. -/
+/-! Checks for words, digit reconstruction, truncation, and the interval and orbit equivalences. -/
 
 namespace PiDisjunctivity
 
@@ -229,5 +230,41 @@ example : ∀ i : Fin 2, baseDigit 16 (1 / 2) (1 + i.val) =
     ((![0, 0] : Fin 2 → Fin 16) i).val := by
   apply (block_iff_mem_interval (1 / 2) (by norm_num) 1 2 ![0, 0]).mpr
   norm_num [blockValue_eq_sum, Fin.sum_univ_succ]
+
+-- Disjunctivity puts both endpoints in the closure, including 1 outside the orbit's range.
+example (x : ℝ) (hx : 0 ≤ x) (h : IsDisjunctive 16 x) :
+    (0 : ℝ) ∈ closure (hexadecimalOrbit x) ∧ (1 : ℝ) ∈ closure (hexadecimalOrbit x) := by
+  rw [(isDisjunctive_iff_orbitClosure x hx).mp h]
+  norm_num
+
+-- Full orbit closure supplies the empty word and an arbitrary single digit.
+example (x : ℝ) (hx : 0 ≤ x) (h : closure (hexadecimalOrbit x) = Set.Icc (0 : ℝ) 1)
+    (s : Fin 0 → Fin 16) :
+    ∃ n : ℕ, ∀ i : Fin 0, baseDigit 16 x (n + i.val) = (s i).val :=
+  (isDisjunctive_iff_orbitClosure x hx).mpr h 0 s
+
+example (x : ℝ) (hx : 0 ≤ x) (h : closure (hexadecimalOrbit x) = Set.Icc (0 : ℝ) 1)
+    (d : Fin 16) : ∃ n : ℕ, baseDigit 16 x n = d.val := by
+  simpa using (isDisjunctive_iff_orbitClosure x hx).mpr h 1 ![d]
+
+-- Leading zeros and the final cell remain covered in the reverse implication.
+example (x : ℝ) (hx : 0 ≤ x) (h : closure (hexadecimalOrbit x) = Set.Icc (0 : ℝ) 1) :
+    ∃ n : ℕ, ∀ i : Fin 3, baseDigit 16 x (n + i.val) =
+      ((![0, 0, 10] : Fin 3 → Fin 16) i).val :=
+  (isDisjunctive_iff_orbitClosure x hx).mpr h 3 ![0, 0, 10]
+
+example (x : ℝ) (hx : 0 ≤ x) (h : closure (hexadecimalOrbit x) = Set.Icc (0 : ℝ) 1) :
+    ∃ n : ℕ, ∀ i : Fin 2, baseDigit 16 x (n + i.val) =
+      ((![15, 15] : Fin 2 → Fin 16) i).val :=
+  (isDisjunctive_iff_orbitClosure x hx).mpr h 2 ![15, 15]
+
+-- Zero's singleton orbit cannot have full closure, so zero is not disjunctive.
+example : ¬ IsDisjunctive 16 0 := by
+  rw [isDisjunctive_iff_orbitClosure 0 le_rfl]
+  intro h
+  have h1 : (1 : ℝ) ∈ closure (hexadecimalOrbit 0) := by
+    rw [h]
+    norm_num
+  simp [hexadecimalOrbit] at h1
 
 end PiDisjunctivity

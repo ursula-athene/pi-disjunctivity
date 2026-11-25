@@ -34,16 +34,21 @@ Milestone A of the remaining verification roadmap is also complete:
 shifting, and the word–interval correspondence, including empty words and leading
 zeros. These proofs were built from the reviewed foundations.
 
-The next milestone is to prove the equivalence of disjunctivity with
+Milestone B is complete as well: `PiDisjunctivity.isDisjunctive_iff_orbitClosure`
+proves that disjunctivity is equivalent to
 
 $$
 \overline{\{\operatorname{fract}(16^n x):n\in\mathbb N\}}=[0,1]
 \qquad (x\ge 0).
 $$
 
+`PiDisjunctivity.piHexadecimalDisjunctivity_iff_orbitClosure` specializes that
+equivalence to the two existing conjecture statements about π. Neither statement
+is asserted. The remaining milestone is the final consolidated formulation review.
+
 See the [validation plan](docs/problem-formulation.md#plan-for-validating-the-formulation)
 and its [remaining Lean verification roadmap](docs/problem-formulation.md#remaining-lean-verification-roadmap)
-for the proposed theorem statements, proof sequence, and completion criteria.
+for the theorem statements, proof sequence, and completion criteria.
 Complete and review the formulation verification before beginning work on the
 π conjecture itself. Whether π satisfies this property remains the research
 question; this repository does not establish it.
@@ -51,8 +56,8 @@ question; this repository does not establish it.
 The digit and disjunctivity definitions remain parameterized by the base. The
 word value, orbit, and conjecture definitions use base 16. Reconstruction examples
 cover bases 2, 10, and 16. The default build checks the definitions, all three
-foundational steps, the word–interval correspondence, and examples. The orbit
-equivalence and final formulation review remain pending.
+foundational steps, both formulation equivalences, and examples. The final
+formulation review remains pending.
 
 ## Installation
 
@@ -115,13 +120,13 @@ lake build
 ```
 
 Check the exported statements and axiom dependencies for the foundations and
-word–interval correspondence:
+both formulation equivalences:
 
 ```sh
 lake env lean Test.lean
 ```
 
-This check requires all ten reviewed theorem types and uses `#guard_msgs` to
+This check requires all twelve reviewed theorem types and uses `#guard_msgs` to
 verify each theorem's exact axiom list: `propext`, `Classical.choice`, and
 `Quot.sound`. An unexpected axiom such as `sorryAx` makes the check fail. CI runs
 it after the library build.
@@ -131,7 +136,8 @@ To build selected modules explicitly:
 ```sh
 lake build PiDisjunctivity.Definitions PiDisjunctivity.BlockValue \
   PiDisjunctivity.Digits PiDisjunctivity.Cylinders \
-  PiDisjunctivity.Conjectures PiDisjunctivity.Examples
+  PiDisjunctivity.Conjectures PiDisjunctivity.OrbitEquivalence \
+  PiDisjunctivity.Examples
 ```
 
 For a quick check of one source file, or to inspect the selected Lean version:
@@ -144,8 +150,8 @@ lake env lean --version
 Open the repository root in VS Code to work with Lean's interactive proof state.
 A successful build checks the definitions, theorems, and examples included. The
 [implementation status](docs/problem-formulation.md#implementation-status)
-records the remaining proof work. The current audit covers all three foundations
-and milestone A. The orbit equivalence remains unimplemented.
+records the remaining review work. The current audit covers all three foundations
+and milestones A and B. Milestone C's final formulation review remains pending.
 
 ## Repository guide
 
@@ -166,6 +172,9 @@ and milestone A. The orbit equivalence remains unimplemented.
   digit shifting and the word–interval correspondence.
 - [PiDisjunctivity/Conjectures.lean](PiDisjunctivity/Conjectures.lean): proposition
   definitions naming the hexadecimal digit-block and orbit-closure conjectures.
+- [PiDisjunctivity/OrbitEquivalence.lean](PiDisjunctivity/OrbitEquivalence.lean):
+  the orbit-closure equivalence for every nonnegative real and its specialization
+  to the two conjecture statements about π.
 - [PiDisjunctivity/Examples.lean](PiDisjunctivity/Examples.lean): exact rational
   examples for hexadecimal indexing, digits `A`–`F`, leading zeros, terminating
   expansions, interval boundaries, and the word-value sum formula; range examples
@@ -173,9 +182,10 @@ and milestone A. The orbit equivalence remains unimplemented.
   every length. Reconstruction and error examples cover bases 2, 10, and 16,
   integer parts, zero, empty prefixes, and terminating and nonterminating inputs.
   Correspondence examples cover both interval boundaries, offsets, leading zeros,
-  and the empty word.
+  and the empty word. Orbit examples check both closure endpoints, word recovery,
+  and the failure of disjunctivity for zero.
 - [PiDisjunctivity.lean](PiDisjunctivity.lean): the library's root imports.
-- [Test.lean](Test.lean): all ten foundational and correspondence statements and
+- [Test.lean](Test.lean): all twelve foundational and equivalence statements and
   guarded axiom checks.
 
 ## License

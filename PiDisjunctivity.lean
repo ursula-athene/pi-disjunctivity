@@ -10,6 +10,7 @@ public import PiDisjunctivity.BlockValue
 public import PiDisjunctivity.Digits
 public import PiDisjunctivity.Cylinders
 public import PiDisjunctivity.Conjectures
+public import PiDisjunctivity.OrbitEquivalence
 import PiDisjunctivity.Examples
 
-/-! Hexadecimal disjunctivity: foundations, word–interval correspondence, and examples. -/
+/-! Hexadecimal disjunctivity: foundations, interval and orbit equivalences, and examples. -/
