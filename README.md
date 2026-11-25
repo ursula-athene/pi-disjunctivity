@@ -28,10 +28,13 @@ including the empty word and leading-zero padding.
 validate digits and finite truncations in every base $b\ge 2$. For nonnegative
 inputs, reconstruction includes the integer part and truncation error lies in
 $[0,1/b^k)$. The library also contains the problem definitions and exact examples.
-The earlier cylinder and orbit-equivalence proofs remain removed.
+Milestone A of the remaining verification roadmap is also complete:
+`PiDisjunctivity.blockValue_injective`, `PiDisjunctivity.baseDigit_fract_pow`, and
+`PiDisjunctivity.block_iff_mem_interval` establish fixed-length uniqueness, digit
+shifting, and the word–interval correspondence, including empty words and leading
+zeros. These proofs were built from the reviewed foundations.
 
-A later milestone is to connect hexadecimal digit blocks to base-16 intervals
-and prove the equivalence of disjunctivity with
+The next milestone is to prove the equivalence of disjunctivity with
 
 $$
 \overline{\{\operatorname{fract}(16^n x):n\in\mathbb N\}}=[0,1]
@@ -48,8 +51,8 @@ question; this repository does not establish it.
 The digit and disjunctivity definitions remain parameterized by the base. The
 word value, orbit, and conjecture definitions use base 16. Reconstruction examples
 cover bases 2, 10, and 16. The default build checks the definitions, all three
-foundational steps, and examples. The word–interval correspondence and the orbit
-equivalence are not yet implemented.
+foundational steps, the word–interval correspondence, and examples. The orbit
+equivalence and final formulation review remain pending.
 
 ## Installation
 
@@ -111,13 +114,14 @@ Build the library, including the hexadecimal examples:
 lake build
 ```
 
-Check the exported statements and axiom dependencies for all three foundations:
+Check the exported statements and axiom dependencies for the foundations and
+word–interval correspondence:
 
 ```sh
 lake env lean Test.lean
 ```
 
-This check requires all seven reviewed theorem types and uses `#guard_msgs` to
+This check requires all ten reviewed theorem types and uses `#guard_msgs` to
 verify each theorem's exact axiom list: `propext`, `Classical.choice`, and
 `Quot.sound`. An unexpected axiom such as `sorryAx` makes the check fail. CI runs
 it after the library build.
@@ -126,7 +130,8 @@ To build selected modules explicitly:
 
 ```sh
 lake build PiDisjunctivity.Definitions PiDisjunctivity.BlockValue \
-  PiDisjunctivity.Digits PiDisjunctivity.Conjectures PiDisjunctivity.Examples
+  PiDisjunctivity.Digits PiDisjunctivity.Cylinders \
+  PiDisjunctivity.Conjectures PiDisjunctivity.Examples
 ```
 
 For a quick check of one source file, or to inspect the selected Lean version:
@@ -139,8 +144,8 @@ lake env lean --version
 Open the repository root in VS Code to work with Lean's interactive proof state.
 A successful build checks the definitions, theorems, and examples included. The
 [implementation status](docs/problem-formulation.md#implementation-status)
-records the remaining proof work. The current audit covers all three foundations; the
-discarded equivalence proof remains unimplemented.
+records the remaining proof work. The current audit covers all three foundations
+and milestone A. The orbit equivalence remains unimplemented.
 
 ## Repository guide
 
@@ -152,10 +157,13 @@ discarded equivalence proof remains unimplemented.
   disjunctivity definitions parameterized by the base, plus the hexadecimal orbit
   and recursive word value.
 - [PiDisjunctivity/BlockValue.lean](PiDisjunctivity/BlockValue.lean): the Steps 1
-  and 2 proofs of the finite-sum formula, word-value bound, and coverage.
+  and 2 proofs of the finite-sum formula, word-value bound, and coverage, plus
+  milestone A's fixed-length injectivity theorem.
 - [PiDisjunctivity/Digits.lean](PiDisjunctivity/Digits.lean): the Step 3 proofs of
   arbitrary-base digit bounds, the scaled-floor recurrence, prefix reconstruction,
   and truncation error.
+- [PiDisjunctivity/Cylinders.lean](PiDisjunctivity/Cylinders.lean): hexadecimal
+  digit shifting and the word–interval correspondence.
 - [PiDisjunctivity/Conjectures.lean](PiDisjunctivity/Conjectures.lean): proposition
   definitions naming the hexadecimal digit-block and orbit-closure conjectures.
 - [PiDisjunctivity/Examples.lean](PiDisjunctivity/Examples.lean): exact rational
@@ -164,8 +172,11 @@ discarded equivalence proof remains unimplemented.
   cover lengths zero and one, zero values, `00A`, `FF`, and the maximum value at
   every length. Reconstruction and error examples cover bases 2, 10, and 16,
   integer parts, zero, empty prefixes, and terminating and nonterminating inputs.
+  Correspondence examples cover both interval boundaries, offsets, leading zeros,
+  and the empty word.
 - [PiDisjunctivity.lean](PiDisjunctivity.lean): the library's root imports.
-- [Test.lean](Test.lean): all seven foundational statements and guarded axiom checks.
+- [Test.lean](Test.lean): all ten foundational and correspondence statements and
+  guarded axiom checks.
 
 ## License
 

@@ -7,7 +7,7 @@ module
 
 import PiDisjunctivity
 
-/-! Check all three foundations' exported statements and axioms after running `lake build`. -/
+/-! Check the foundations and word–interval correspondence after running `lake build`. -/
 
 -- This is the reviewed statement, including its full quantification and digit order.
 example (k : ℕ) (s : Fin k → Fin 16) :
@@ -44,6 +44,22 @@ example (b : ℕ) (hb : 2 ≤ b) (x : ℝ) (hx : 0 ≤ x) (k : ℕ) :
     let t : ℝ := (Nat.floor ((b : ℝ) ^ k * x) : ℝ) / (b : ℝ) ^ k
     0 ≤ x - t ∧ x - t < 1 / (b : ℝ) ^ k :=
   PiDisjunctivity.truncation_error b hb x hx k
+
+-- Fixed-length uniqueness and shifting support both directions of the correspondence.
+example (k : ℕ) : Function.Injective (PiDisjunctivity.blockValue k) :=
+  PiDisjunctivity.blockValue_injective k
+
+example (x : ℝ) (hx : 0 ≤ x) (n i : ℕ) :
+    PiDisjunctivity.baseDigit 16 (Int.fract ((16 : ℝ) ^ n * x)) i =
+      PiDisjunctivity.baseDigit 16 x (n + i) :=
+  PiDisjunctivity.baseDigit_fract_pow x hx n i
+
+example (x : ℝ) (hx : 0 ≤ x) (n k : ℕ) (s : Fin k → Fin 16) :
+    (∀ i : Fin k, PiDisjunctivity.baseDigit 16 x (n + i.val) = (s i).val) ↔
+      Int.fract ((16 : ℝ) ^ n * x) ∈
+        Set.Ico ((PiDisjunctivity.blockValue k s : ℝ) / (16 : ℝ) ^ k)
+          (((PiDisjunctivity.blockValue k s : ℝ) + 1) / (16 : ℝ) ^ k) :=
+  PiDisjunctivity.block_iff_mem_interval x hx n k s
 
 /--
 info: 'PiDisjunctivity.blockValue_eq_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
@@ -86,3 +102,21 @@ info: 'PiDisjunctivity.truncation_error' depends on axioms: [propext, Classical.
 -/
 #guard_msgs (whitespace := lax) in
 #print axioms PiDisjunctivity.truncation_error
+
+/--
+info: 'PiDisjunctivity.blockValue_injective' depends on axioms: [propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms PiDisjunctivity.blockValue_injective
+
+/--
+info: 'PiDisjunctivity.baseDigit_fract_pow' depends on axioms: [propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms PiDisjunctivity.baseDigit_fract_pow
+
+/--
+info: 'PiDisjunctivity.block_iff_mem_interval' depends on axioms: [propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms PiDisjunctivity.block_iff_mem_interval

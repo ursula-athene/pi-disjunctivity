@@ -7,10 +7,11 @@ module
 
 import PiDisjunctivity.BlockValue
 import PiDisjunctivity.Digits
+import PiDisjunctivity.Cylinders
 import Mathlib.Algebra.Order.Floor.Semifield
 import Mathlib.Tactic
 
-/-! Checks for hexadecimal words and arbitrary-base digit reconstruction and truncation. -/
+/-! Checks for words, digit reconstruction, truncation, and the word–interval correspondence. -/
 
 namespace PiDisjunctivity
 
@@ -168,5 +169,65 @@ example : (13 / 8 : ℝ) - Nat.floor ((2 : ℝ) ^ 3 * (13 / 8)) / 2 ^ 3 = 0 ∧
     (0x3A0F / 16 ^ 3 : ℝ) -
       Nat.floor ((16 : ℝ) ^ 3 * (0x3A0F / 16 ^ 3)) / 16 ^ 3 = 0 := by
   norm_num [Nat.floor_div_ofNat]
+
+-- At length three, value 10 determines precisely the padded word 00A.
+example (s : Fin 3 → Fin 16) (h : blockValue 3 s = 10) : s = ![0, 0, 10] := by
+  apply blockValue_injective 3
+  rw [h]
+  norm_num [blockValue_eq_sum, Fin.sum_univ_succ]
+
+-- The empty word corresponds to all of [0,1), at any offset.
+example (x : ℝ) (hx : 0 ≤ x) (n : ℕ) (s : Fin 0 → Fin 16) :
+    Int.fract ((16 : ℝ) ^ n * x) ∈ Set.Ico (0 : ℝ) 1 := by
+  simpa only [blockValue, pow_zero, Nat.cast_zero, zero_div, zero_add, div_one] using
+    (block_iff_mem_interval x hx n 0 s).mp (fun i => Fin.elim0 i)
+
+-- For one digit, the interval endpoints are d/16 and (d+1)/16.
+example (x : ℝ) (hx : 0 ≤ x) (n : ℕ) (d : Fin 16) :
+    baseDigit 16 x n = d.val ↔
+      Int.fract ((16 : ℝ) ^ n * x) ∈ Set.Ico ((d.val : ℝ) / 16) ((d.val + 1) / 16) := by
+  simpa [blockValue_eq_sum] using block_iff_mem_interval x hx n 1 ![d]
+
+-- Zero belongs to the all-zero word's interval at every length and offset.
+example (n k : ℕ) : ∀ i : Fin k, baseDigit 16 0 (n + i.val) = 0 := by
+  apply (block_iff_mem_interval 0 le_rfl n k (fun _ => 0)).mpr
+  simp only [mul_zero, Int.fract_zero, blockValue_eq_sum, Fin.val_zero,
+    zero_mul, Finset.sum_const_zero, Nat.cast_zero, zero_div, zero_add, Set.mem_Ico]
+  exact ⟨le_rfl, by positivity⟩
+
+-- The left endpoint gives the entire word 00A, including its leading zeros.
+example : ∀ i : Fin 3, baseDigit 16 (10 / 4096) (0 + i.val) =
+    ((![0, 0, 10] : Fin 3 → Fin 16) i).val := by
+  apply (block_iff_mem_interval (10 / 4096) (by norm_num) 0 3 ![0, 0, 10]).mpr
+  norm_num [blockValue_eq_sum, Fin.sum_univ_succ, Int.fract]
+
+-- The right endpoint is excluded: 00B does not start with the length-three word 00A.
+example : ¬ (∀ i : Fin 3, baseDigit 16 (11 / 4096) (0 + i.val) =
+    ((![0, 0, 10] : Fin 3 → Fin 16) i).val) := by
+  rw [block_iff_mem_interval (11 / 4096) (by norm_num) 0 3 ![0, 0, 10]]
+  norm_num [blockValue_eq_sum, Fin.sum_univ_succ, Int.fract]
+
+-- FF uses the final interval; its right endpoint 1 has trailing-zero digits.
+example : ∀ i : Fin 2, baseDigit 16 (255 / 256) (0 + i.val) =
+    ((![15, 15] : Fin 2 → Fin 16) i).val := by
+  apply (block_iff_mem_interval (255 / 256) (by norm_num) 0 2 ![15, 15]).mpr
+  norm_num [blockValue_eq_sum, Fin.sum_univ_succ, Int.fract]
+
+example : ¬ (∀ i : Fin 2, baseDigit 16 1 (0 + i.val) =
+    ((![15, 15] : Fin 2 → Fin 16) i).val) := by
+  rw [block_iff_mem_interval 1 (by norm_num) 0 2 ![15, 15]]
+  norm_num [blockValue_eq_sum, Fin.sum_univ_succ]
+
+-- The correspondence finds 0F at offset one in 3.A0F, retaining the integer part.
+example : ∀ i : Fin 2, baseDigit 16 (0x3A0F / 16 ^ 3) (1 + i.val) =
+    ((![0, 15] : Fin 2 → Fin 16) i).val := by
+  apply (block_iff_mem_interval (0x3A0F / 16 ^ 3) (by norm_num) 1 2 ![0, 15]).mpr
+  norm_num [blockValue_eq_sum, Fin.sum_univ_succ, Int.fract]
+
+-- After the first digit of 0.8000..., the interval for 00 contains the shifted point.
+example : ∀ i : Fin 2, baseDigit 16 (1 / 2) (1 + i.val) =
+    ((![0, 0] : Fin 2 → Fin 16) i).val := by
+  apply (block_iff_mem_interval (1 / 2) (by norm_num) 1 2 ![0, 0]).mpr
+  norm_num [blockValue_eq_sum, Fin.sum_univ_succ]
 
 end PiDisjunctivity

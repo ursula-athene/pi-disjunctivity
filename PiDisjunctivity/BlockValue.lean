@@ -10,7 +10,7 @@ public import Mathlib.Algebra.BigOperators.Fin
 import Mathlib.Data.Fin.Tuple.Basic
 import Mathlib.Tactic
 
-/-! Hexadecimal word values agree with the positional sum and range over `[0, 16 ^ k)`. -/
+/-! Positional values, bounds, coverage, and uniqueness for fixed-length hexadecimal words. -/
 
 public section
 
@@ -65,5 +65,32 @@ theorem exists_blockValue_eq (k m : ℕ) (hm : m < 16 ^ k) :
     -- The first `k` positions recover `s`; the last position is the remainder digit.
     simp only [Fin.snoc_castSucc, Fin.snoc_last, hs]
     exact Nat.div_add_mod m 16
+
+/-- A hexadecimal word is determined by its value when its length is fixed. -/
+theorem blockValue_injective (k : ℕ) :
+    Function.Injective (blockValue k) := by
+  induction k with
+  | zero =>
+    intro s t _
+    funext i
+    exact Fin.elim0 i
+  | succ k ih =>
+    intro s t h
+    change 16 * blockValue k (fun i => s i.castSucc) + (s (Fin.last k)).val =
+      16 * blockValue k (fun i => t i.castSucc) + (t (Fin.last k)).val at h
+    have hlast : (s (Fin.last k)).val = (t (Fin.last k)).val := by
+      have hmod := congrArg (fun m : ℕ => m % 16) h
+      simpa only [Nat.add_mod, Nat.mul_mod_right, Nat.zero_add, Nat.mod_mod,
+        Nat.mod_eq_of_lt (s (Fin.last k)).isLt,
+        Nat.mod_eq_of_lt (t (Fin.last k)).isLt] using hmod
+    have hp : blockValue k (fun i => s i.castSucc) =
+        blockValue k (fun i => t i.castSucc) := by
+      have hdiv := congrArg (fun m : ℕ => m / 16) h
+      simpa only [Nat.mul_add_div (by decide : 0 < 16), Nat.add_zero,
+        Nat.div_eq_of_lt (s (Fin.last k)).isLt,
+        Nat.div_eq_of_lt (t (Fin.last k)).isLt] using hdiv
+    have hprefix := ih hp
+    funext i
+    exact Fin.lastCases (Fin.ext hlast) (fun j => congrFun hprefix j) i
 
 end PiDisjunctivity

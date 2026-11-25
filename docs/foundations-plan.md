@@ -3,7 +3,9 @@
 This plan fills the three gaps identified when comparing the Lean definitions
 with the [problem formulation](problem-formulation.md). The earlier equivalence
 proof has been removed. All three foundational steps are now implemented and
-validated as described below. The later equivalences remain pending.
+validated as described below. The word–interval correspondence is also complete
+in [milestone A](problem-formulation.md#a-establish-the-wordinterval-correspondence);
+the orbit equivalence remains pending.
 
 The Lean snippets below are the reviewed signatures in the `PiDisjunctivity`
 namespace. They intentionally have no proof bodies and are not source files to
@@ -104,8 +106,8 @@ New examples exercise the bound at lengths zero and one, coverage of zero at
 every length, all single digits, value 10 at length three (`00A`), value 255 at
 length two (`FF`), and `16 ^ k - 1` at every length. The existing exact word-value
 and Step 1 regression examples remain. These results establish precisely the
-range of fixed-length word values. The word–interval and orbit equivalences
-remain pending.
+range of fixed-length word values. Further formulation verification is tracked
+in the [remaining roadmap](problem-formulation.md#remaining-lean-verification-roadmap).
 
 ## 3. Validate digit reconstruction for arbitrary bases
 
@@ -190,7 +192,7 @@ retains just the integer part, and `x = 0`.
 **Validation:** `lake build`, `lake env lean Test.lean`, and `git diff --check`
 pass without warnings with the unchanged Lean and Mathlib `v4.37.0-rc1` pins.
 The audit checks the four reviewed types above through the root import and
-preserves the three earlier checks. All seven guarded `#print axioms` results
+preserves the three earlier checks. All seven foundational `#print axioms` results
 require exactly `propext`, `Classical.choice`, and `Quot.sound`; an unexpected
 dependency fails the audit. CI runs the full audit after the build.
 
@@ -210,8 +212,9 @@ and hexadecimal examples remain unchanged.
 3. **Complete:** both modules are exported from the library root and build with
    the pinned Lean and Mathlib versions, with no `sorry`, `admit`, or
    project-specific axioms.
-4. **Complete:** CI runs guarded audits of all seven theorems' transitive axiom
-   dependencies after building.
+4. **Complete:** CI runs guarded audits of the seven foundational theorems'
+   transitive axiom dependencies after building, alongside milestone A's three
+   additional theorem checks.
 5. **Complete:** exact examples cover lengths zero and one, leading zeros,
    all-zero and all-`F` words, and bases 2, 10, and 16 for reconstruction,
    including fractional values and values greater than one. Examples supplement the
@@ -219,8 +222,8 @@ and hexadecimal examples remain unchanged.
 6. **Complete:** implementation-status documentation records the compiled and
    audited results.
 
-These foundations are complete. The word–interval correspondence,
-shift lemma, orbit-closure equivalence, and final audit are planned in the
+These foundations and milestone A's word–interval correspondence and shift lemma
+are complete. The orbit-closure equivalence and final review remain pending in the
 [remaining Lean verification roadmap](problem-formulation.md#remaining-lean-verification-roadmap),
 using the reviewed foundations. Complete and review that formulation verification
 before beginning work on proving hexadecimal disjunctivity of π. The conjecture

@@ -8,7 +8,8 @@ module
 public import PiDisjunctivity.Definitions
 public import PiDisjunctivity.BlockValue
 public import PiDisjunctivity.Digits
+public import PiDisjunctivity.Cylinders
 public import PiDisjunctivity.Conjectures
 import PiDisjunctivity.Examples
 
-/-! Hexadecimal disjunctivity: definitions, word-value and digit foundations, and examples. -/
+/-! Hexadecimal disjunctivity: foundations, word–interval correspondence, and examples. -/

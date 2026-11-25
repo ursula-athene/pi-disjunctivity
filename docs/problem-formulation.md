@@ -90,7 +90,8 @@ $$
 m_s=\sum_{i=0}^{k-1}s(i)\,16^{k-1-i}.
 $$
 
-The central correctness lemma would state, for $x\ge 0$,
+The central correctness lemma, now proved as `block_iff_mem_interval` in
+[`Cylinders.lean`](../PiDisjunctivity/Cylinders.lean), states that for $x\ge 0$,
 
 $$
 \bigl(\forall i<k,\ d_{16}(x,n+i)=s(i)\bigr)
@@ -100,11 +101,11 @@ $$
 \left[\frac{m_s}{16^k},\frac{m_s+1}{16^k}\right).
 $$
 
-We would establish this using floor arithmetic, quotient and remainder, and a
-lemma explaining how multiplication by $16^n$ shifts the digits. The word-value
-part is now proved: length-$k$ words encode exactly the integers $0\le m<16^k$,
-with leading-zero padding where needed. The word–interval correspondence itself
-remains pending.
+The proof uses floor arithmetic, fixed-length word-value injectivity, digit
+reconstruction, and `baseDigit_fract_pow`, which identifies the later digits after
+multiplication by $16^n$ and removal of the integer part. Length-$k$ words encode
+exactly the integers $0\le m<16^k$, with leading-zero padding where needed.
+Both directions of the correspondence include the empty word.
 
 Keeping $k$ explicit preserves leading zeros: `007` corresponds to
 $[7/16^3,8/16^3)$. The word `00A` similarly corresponds to
@@ -155,22 +156,24 @@ separate research problem.
 
 ## Remaining Lean verification roadmap
 
-**Status: planned; not yet implemented.** All three steps of
-[the foundations plan](foundations-plan.md) are complete. The remaining work is
-organized below in dependency order. This roadmap extends the broader validation
-plan above; it does not add another foundational step or change the conjecture.
+**Status: milestone A implemented and validated; milestones B and C pending.**
+All three steps of [the foundations plan](foundations-plan.md) are complete. The
+work is organized below in dependency order. This roadmap extends the broader
+validation plan above; it does not add another foundational step or change the
+conjecture.
 
-The Lean snippets are proposed interfaces in the `PiDisjunctivity` namespace,
-without proof bodies. Check their elaboration and mathematical meaning during
-implementation. Preserve the existing definitions and seven reviewed foundational
-statements, and build new proofs from the current foundations rather than
-restoring the discarded interval and orbit proofs from history.
+The Lean snippets omit proof bodies and use the `PiDisjunctivity` namespace.
+Milestone A's signatures are implemented and audited; milestone B's remain
+proposed interfaces to check during implementation. Preserve the existing
+definitions and reviewed statements, and build new proofs from the current
+foundations rather than restoring the discarded proofs from history.
 
 ### A. Establish the word–interval correspondence
 
-**Status: pending. This is the next implementation milestone.**
+**Status: implemented and validated.** The results are exported through
+`PiDisjunctivity.lean`.
 
-First prove that a word's value determines the word when its length is fixed:
+A word's value determines the word when its length is fixed:
 
 ```lean
 theorem blockValue_injective (k : ℕ) :
@@ -184,7 +187,7 @@ with `Fin.castSucc` and `Fin.last`. Length zero uses equality of functions on
 `Fin 0`. This is uniqueness at a fixed length; leading-zero words of different
 lengths can still have the same value.
 
-Next prove the digit shift, including removal of the integer part:
+The digit-shift theorem includes removal of the integer part:
 
 ```lean
 theorem baseDigit_fract_pow (x : ℝ) (hx : 0 ≤ x) (n i : ℕ) :
@@ -199,7 +202,7 @@ part for a nonnegative input: scaling the integer part contributes a multiple of
 16 to the next floor, which disappears modulo 16. Check the relationship between
 `Nat.floor`, `Int.floor`, and `Int.fract`, including nonnegativity and casts.
 
-Then prove the central correspondence:
+The central correspondence is:
 
 ```lean
 theorem block_iff_mem_interval (x : ℝ) (hx : 0 ≤ x)
@@ -219,18 +222,31 @@ when `y` belongs to the displayed half-open interval; division is valid because
 digits in the reverse direction. The shift lemma transfers them to position `n`
 of `x`.
 
-Keep `k = 0` in the theorem: the digit condition is vacuous and the interval is
-`[0,1)`. Check nonzero offsets, leading-zero padding, inclusion of the left
-endpoint, and exclusion of the right endpoint, including terminating expansions.
+The theorem includes `k = 0`: the digit condition is vacuous and the interval is
+`[0,1)`. Examples check nonzero offsets, leading-zero padding, inclusion of the
+left endpoint, and exclusion of the right endpoint, including terminating
+expansions.
 
-Extend `BlockValue.lean` for injectivity and use a new `Cylinders.lean` module for
-the shift and correspondence, with any necessary helpers. Export the results
-through the library root and extend the statement and axiom audit before moving
-to the next milestone.
+Injectivity is in [`BlockValue.lean`](../PiDisjunctivity/BlockValue.lean). The shift
+and correspondence are in [`Cylinders.lean`](../PiDisjunctivity/Cylinders.lean),
+with a private helper proving invariance under removal of the integer part.
+
+**Validation:** `lake build`, `lake env lean Test.lean`, and `git diff --check`
+pass without warnings on the unchanged Lean and Mathlib `v4.37.0-rc1` pins. The
+seven foundational statements and checks are preserved. Three new exported-type
+checks and guarded `#print axioms` results cover the signatures above; all ten
+audited theorems use exactly `propext`, `Classical.choice`, and `Quot.sound`.
+The audit rejects unexpected dependencies, and CI runs it after building.
+
+New examples recover `00A` from its length and value, specialize the correspondence
+to empty and one-digit words, and check all-zero words at every length and offset.
+They also check both boundaries of `00A` and `FF`, the word `0F` at offset one in
+`3.A0F`, and the trailing-zero word after the first digit of `0.8000...`.
 
 ### B. Establish the orbit-closure equivalence
 
-**Status: pending; depends on milestone A.**
+**Status: pending. This is the next implementation milestone; its dependency on
+milestone A is complete.**
 
 ```lean
 theorem isDisjunctive_iff_orbitClosure (x : ℝ) (hx : 0 ≤ x) :
@@ -276,7 +292,7 @@ Completion requires all of the following:
 - Compare the exported statements with the intended English formulation: every
   finite hexadecimal word, length retained, zero-based positions, nonnegative
   real inputs where required, and the chosen trailing-zero convention.
-- Preserve the existing seven theorem checks. Extend `Test.lean` with checks of
+- Preserve the existing ten theorem checks. Extend `Test.lean` with checks of
   all new public theorem types and guarded `#print axioms` results, including the
   general orbit equivalence and the specialization to π. Record each actual
   axiom list, allowing only `propext`, `Classical.choice`, and `Quot.sound`; a
@@ -302,9 +318,11 @@ as a separately authorized task. BBP formalization is also outside this phase.
 
 ## Implementation status
 
-The earlier cylinder and orbit-equivalence proofs have been discarded from the
-current branch, including the specialization to π and their axiom audit. They
-were written before the formulation and validation approach were discussed.
+The earlier cylinder and orbit-equivalence proofs were discarded, including the
+specialization to π and their axiom audit. They were written before the formulation
+and validation approach were discussed. Milestone A now supplies a new
+word–interval proof built from the reviewed foundations; the orbit equivalence
+and its specialization remain unimplemented.
 
 The library retains the agreed definitions: `baseDigit`, `IsDisjunctive`,
 `hexadecimalOrbit`, `blockValue`, `PiHexadecimalDisjunctivity`, and
@@ -330,8 +348,10 @@ Progress against [the foundational theorem plan](foundations-plan.md):
    arbitrary-base digit bounds, the scaled-floor recurrence, prefix reconstruction
    including the integer part, and truncation error in $[0,1/b^k)$.
 
-The default `lake build` checks the definitions, all three foundational steps,
-and examples.
+Milestone A is also complete: `blockValue_injective`, `baseDigit_fract_pow`, and
+`block_iff_mem_interval` prove fixed-length uniqueness, digit shifting, and the
+word–interval correspondence. The default `lake build` checks the definitions,
+all three foundational steps, milestone A, and examples.
 Additional word-value examples cover the empty word, any single digit, all-zero
 words, leading zeros, `FF`, and positional order (`12` versus `21`). Range examples
 exercise the bound at lengths zero and one, coverage of zero at every length,
@@ -340,15 +360,19 @@ Reconstruction examples cover bases 2, 10, and 16, fractional inputs, nonzero
 integer parts, leading zeros, zero at every length, and the length-zero error
 bound. Terminating inputs have zero error and a zero next digit; the
 nonterminating decimal input `1/3` exercises a nonzero truncation error.
-The separate `lake env lean Test.lean` check verifies all seven reviewed theorem
+Correspondence examples additionally check empty words, arbitrary single digits,
+zero at all lengths and offsets, leading zeros, both interval boundaries, a
+nonzero offset in a number with an integer part, and terminating expansions.
+The separate `lake env lean Test.lean` check verifies all ten reviewed theorem
 types through the library root. Guarded `#print axioms` results require exactly
 `propext`, `Classical.choice`, and `Quot.sound` for each theorem. The audit rejects
 a changed axiom list, including any introduction of `sorryAx` or a project-specific
 axiom. CI runs this check after building. These checks and `git diff --check` pass
 with the pinned Lean and Mathlib versions.
 
-The foundations are complete. The cylinder correspondence, digit-shift lemma,
-and orbit equivalence remain unimplemented. The
+The foundations and word–interval correspondence are complete. The orbit
+equivalence, its specialization to π, and the final formulation review remain
+pending. The
 [remaining verification roadmap](#remaining-lean-verification-roadmap) records
 their implementation order, proposed statements, and completion criteria.
 These results make no claim about the occurrence of words in π.
