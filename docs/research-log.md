@@ -994,3 +994,30 @@ entries. Manifest/dependency pins, project imports, and trust tokens passed;
 pre-review local links/anchors passed (184). Final factual review records and
 staging receive fresh preservation/link/whitespace checks before committing.
 The passing Lean proof/audits are unchanged. No later milestone was begun.
+
+
+### Post-commit necessity review and final handoff
+
+Committed the reviewed B1c milestone as
+`f4184d8d5ccb112f9449e6e9148d8cbcc50b35e9` on `feature/attempt-04`, parent
+`57a0b0a`, using `git commit --only` for thirteen task-owned files. Staged
+whitespace, 235 local Markdown links/anchors, and preservation checks passed.
+Only the unrelated Obsidian, notes, and papers work remained. No push, PR,
+history rewrite, or permission change occurred.
+
+Then reread the committed `Series.lean`, root import, and audit additions.
+The shared interval inclusion supplies B1b's domain in two premises. The
+explicit term-integral `HasSum` selects the required API and kernel; continuity,
+domination, geometric summability, constant integrability, and pointwise sum
+each discharge a necessary premise. The final B1a rewrite gives the exact
+coefficient sequence. The root import and full type/axiom guards meet export
+and trust requirements. No proof layer or helper was removable with a justified
+simplification; no substantive fix, focused review, or empty code commit was
+needed.
+
+The final two-file documentation commit records this retrospective and the
+[completed B1c handoff](b1c-handoff.md), after fresh whitespace/link/preservation
+checks. The reviewed proof and audits are unchanged after successful Lean
+validation. Its ID is reported after committing. B1d is proposed only; stop
+before rational kernel algebra, antiderivative/FTC, integral evaluation,
+full B1, B2/B3, or V. All open obligations and conditional premises are retained.

@@ -3,8 +3,8 @@
 Implementation checked 2026-11-25 on `feature/attempt-04`, in
 `/Users/adam/personal/proj/pi-disjunctivity/pi-disjunctivity`.
 
-**The B1c proof, audits, and required review pass.** Local commit and post-commit
-necessity review follow below; the full B1 identity and π disjunctivity remain open.
+**B1c is complete: checked, reviewed, committed, and reviewed for necessity.**
+The full B1 identity and π disjunctivity remain open.
 
 ## Checked result and mathematical meaning
 
@@ -102,7 +102,7 @@ The reviewer read repository files only; Lean execution, the manifest, Git
 preservation/hashes, and the pinned Mathlib signature relied on caller checks.
 Recovery CLI persistence was sandbox-denied but the review completed. Full raw
 execution chunks were saved before any abbreviated diagnostic display; the
-complete terminal response was separately inspected. No capture loss is claimed.
+complete terminal response was separately inspected. The saved execution capture is complete.
 
 Pre-review checks passed for 25 unrelated/protected file hashes, all earlier
 Lean declarations/audits/checks, archived prompt bytes, manifest/package pins,
@@ -110,8 +110,29 @@ imports/trust, and 184 local Markdown links/anchors. Final review records and
 staging receive fresh preservation/link/whitespace checks. The reviewed Lean
 source and audits are unchanged after their passing validation.
 
-The local milestone commit and post-commit proof-necessity assessment are
-recorded below when completed.
+Committed the reviewed milestone locally as
+`f4184d8d5ccb112f9449e6e9148d8cbcc50b35e9`, with parent `57a0b0a`, using
+`git commit --only` for the thirteen task-owned files (the twelve reviewed
+files plus the review report). Staged whitespace, 235 local Markdown links/
+anchors, and all preservation checks passed. The remaining working-tree
+changes were only the original Obsidian, notes, and papers files.
+
+After committing, reread the committed module, root export, and audit additions.
+The local `hsub` is reused for both bound and pointwise sum; it explicitly fixes
+the interval orientation and inclusion. `hsum` instantiates the required
+integral-series API at the precise terms and kernel. Its five proof branches
+supply exactly the five required premises; the final rewrite connects B1a's
+term integrals to the required coefficients. The existing root import and
+new complete type/axiom guards provide export and trust coverage. No unused
+layer, public helper, or substantive simplification was justified, so no
+focused fix review or empty code commit was needed.
+
+The final two-file documentation commit records this completed necessity
+review in this handoff and the research log. Retrieve its ID with
+`git log -1 --format=%H -- docs/b1c-handoff.md`; both local commit IDs are
+reported in the session's final response. Its diff, whitespace, links, and
+preservation are checked before committing. The reviewed Lean inputs remain
+identical to the passing build and audit.
 
 ## Remaining obligations and proposed next task
 
