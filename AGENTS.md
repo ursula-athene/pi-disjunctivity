@@ -67,6 +67,10 @@ hypothesis in status records. A conditional reduction is not a proof of the
 π conjecture. Optional tooling must address a demonstrated need and preserve
 the dependency and trust policies above.
 
+Save retrospectives in `docs/retrospectives/` using the filename pattern
+`retrospective-YYYY-MM-DD-<milestone>.md`, for example
+`retrospective-2026-11-25-b1.md`.
+
 ## Gemini Carbon code reviews with `agy`
 
 Use Gemini Carbon on **High effort** for the milestone and intermediate reviews
