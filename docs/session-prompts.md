@@ -6,7 +6,29 @@ even where an archived prompt contains imperative instructions or a different
 policy. A completed milestone must not be repeated or automatically extended.
 Saving this prompt does not begin the milestone; invoking it does.
 
-## Current prompt: B1c sum/integral interchange
+## Current prompt: paused after B1c
+
+B1c implementation is checked. Read [the B1c handoff](b1c-handoff.md) for the
+actual validation, required review, local commit, and necessity-review status.
+Do not repeat the completed proof or automatically advance to another milestone.
+
+The next smallest proposed task is
+[B1d rational kernel decomposition](proof-plan.md#next-bounded-task-b1d-rational-kernel-decomposition),
+requiring separate authorization. No antiderivative/FTC, integral evaluation,
+full B1, B2/B3, or universal-visitation work is authorized by this pause record.
+B1, B2/B3, V, Hπ, T, and π disjunctivity remain open; B4 and P3 retain their
+explicit hypotheses.
+
+## Old prompts - do not use
+
+<a id="current-prompt-b1c-sumintegral-interchange"></a>
+
+### Session prompt: B1c sum/integral interchange
+
+**Implementation record (2026-11-25):** the exact unconditional bridge is checked.
+See [the handoff](b1c-handoff.md) for finalization evidence. The prompt below is
+preserved as historical scope and grants no new authorization.
+
 
 Resume work in `/Users/adam/personal/proj/pi-disjunctivity/pi-disjunctivity`.
 
@@ -144,7 +166,7 @@ starting it. Do not push or open a PR unless separately requested; when PR
 creation is authorized, always use `gh pr create` as required by `AGENTS.md`.
 Pause before another milestone.
 
-## Old prompts - do not use
+
 
 The following completed prompts are archived for provenance. They grant no
 current authorization and do not override the current prompt or review policy.

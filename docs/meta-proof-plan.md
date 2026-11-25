@@ -11,7 +11,9 @@ were not attempted. A subsequent B1 source/argument review is recorded below,
 without new Lean declarations. The separately authorized B1a cycle subsequently
 checked the coefficient and one-term integral, bringing the theorem audit count
 to twenty. B1b now checks pointwise summation and domination, bringing that
-count to twenty-two. The stages below remain the procedure for future separately scoped work.
+count to twenty-two. B1c adds the unconditional coefficient-series/integral
+bridge, bringing the total to twenty-three. The stages below remain the
+procedure for future separately scoped work.
 
 **Review-policy update, 2026-11-25:** the user requires Gemini Carbon High
 changed-file reviews through `agy` at milestones and at useful intermediate
@@ -20,7 +22,7 @@ and [AGENTS.md](../AGENTS.md#gemini-carbon-code-reviews-with-agy). This is a new
 user-directed process requirement; it does not retroactively claim an external
 review of the completed B4/P3 cycle.
 
-## B1a/B1b outcomes and next bounded task
+## B1a/B1b/B1c outcomes and next bounded task
 
 The [B1 source and proof assessment](b1-source-proof-review.md) was already
 complete at `2b7a745`/`ab43f71` and was not repeated. The authorized B1a cycle
@@ -31,12 +33,22 @@ B4/P3 retain every hypothesis.
 
 The separately authorized B1b cycle independently proved `hasSum_bbpTerm` and
 `norm_bbpTerm_le`, with root-import type/axiom guards and endpoint/zero-index
-checks. See [the B1b handoff](b1b-handoff.md). The next proposed cycle is
-[B1c: sum/integral interchange](proof-plan.md#next-bounded-task-b1c-sumintegral-interchange),
-subject to separate authorization. It stops before integral evaluation and
-identification with `Real.pi`. The [current session prompt](session-prompts.md#current-prompt-b1c-sumintegral-interchange)
-prepares B1c for explicit invocation; saving it does not start the milestone.
-B1b's completed prompt is archived in the same file.
+checks. See [the B1b handoff](b1b-handoff.md). The separately authorized B1c
+cycle now proves `hasSum_bbpCoeff_integral`, with all dominated-convergence
+premises discharged locally and a full root-import type/axiom audit. The
+[handoff](b1c-handoff.md) records validation and finalization status. The next
+proposed cycle is [B1d: rational kernel decomposition](proof-plan.md#next-bounded-task-b1d-rational-kernel-decomposition),
+subject to separate authorization. It stops before antiderivative/FTC work or
+integral evaluation. The [session instructions](session-prompts.md) pause after
+B1c; completed prompts remain archival.
+
+B1c's proof compiled on its first module check. The pinned API takes measurable
+terms under restricted volume, but its bound/summability/limit premises are
+almost-everywhere implications under unrestricted volume. Pointwise proofs
+via `ae_of_all` match those signatures directly. Constant-majorant integrability
+needs no explicit evaluation of its sum. The direct `HasSum` route avoided an
+unneeded tail or `tsum` layer; no additional helpers, tools, or process changes
+were justified. All remaining B1 evaluation and visitation obligations stay open.
 
 B1b needed only the pinned geometric-series and order APIs. A broad commutative
 simplification initially failed to match the series target; a targeted `convert`

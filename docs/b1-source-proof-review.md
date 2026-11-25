@@ -5,8 +5,9 @@ source-review record. The separately authorized [B1a milestone](b1a-handoff.md)
 now checks T1 (`integral_bbpTerm`) and `bbpCoeff`. [B1b](b1b-handoff.md) checks
 T2 (`hasSum_bbpTerm`) and the pointwise majorant (`norm_bbpTerm_le`). References
 below to these as unproved or proposed describe the source-review baseline.
-T3's measurability, summability/integrability premises and interchange, T4,
-the integral evaluation, and the final B1 `HasSum` theorem remain unproved.
+[B1c](b1c-handoff.md) now checks T3 and its measurability, summability, and
+integrability premises, yielding the coefficient-series/integral bridge. T4,
+antiderivative/FTC conditions, integral evaluation, and final B1 remain unproved.
 
 Review date: 2026-11-25. Baseline: `a3feb6bf02cea0aafdba29331e551d9e8173477d`
 on `feature/attempt-02`. Completion of this documentation-only milestone is

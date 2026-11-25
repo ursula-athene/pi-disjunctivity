@@ -3,8 +3,8 @@
 **Planning baseline:** 2026-11-24, commit
 `56ca22e1a9776ee7a5d7b4e36103f932d3b45646` on `feature/attempt-01`.
 
-**Latest implementation update: 2026-11-25.** B1b is checked on
-`feature/attempt03`; see [the B1b handoff](b1b-handoff.md). On `feature/attempt-02`, Step 2's
+**Latest implementation update: 2026-11-25.** B1c is checked on
+`feature/attempt-04`; see [the B1c handoff](b1c-handoff.md). On `feature/attempt-02`, Step 2's
 interval-hitting reduction and the bounded B4 + P3 milestone are checked:
 conditional interior-margin transfer and open-interval-to-cell conversion.
 See the [blueprint](proof-blueprint.md) for dependencies, [research log](research-log.md)
@@ -17,12 +17,13 @@ simplification and the [handoff](b4-p3-handoff.md) are in `a8c693e`. The audit
 now includes B1a: `bbpCoeff` and the unconditional `integral_bbpTerm` in
 `BBP/Series.lean`, independently implemented from the reviewed argument.
 B1b adds `hasSum_bbpTerm` and `norm_bbpTerm_le` on the closed unit interval.
-Twenty-two theorem type/axiom audits pass, alongside the two π definition checks,
+B1c adds the unconditional `hasSum_bbpCoeff_integral` bridge to the unevaluated
+rational integral. Twenty-three theorem type/axiom audits pass, alongside the two π definition checks,
 coefficient expansion/value checks, and B1b endpoint/zero-index checks. The full
-B1 `HasSum` identity remains unproved. See the [B1b handoff](b1b-handoff.md) for
-validation and review status, and the [archived B1b session record](session-prompts.md#current-prompt-b1b-pointwise-series-and-domination)
-for the completed scope. The next proposed slice is B1c's sum/integral
-interchange, requiring separate authorization.
+B1 `HasSum` identity remains unproved. See the [B1c handoff](b1c-handoff.md) for
+validation and finalization status, and the [B1c session record](session-prompts.md#current-prompt-b1c-sumintegral-interchange)
+for the completed implementation scope. The next proposed slice is B1d's rational
+kernel decomposition, requiring separate authorization.
 
 The goal is to prove `PiDisjunctivity.PiHexadecimalDisjunctivity`: every finite
 hexadecimal word occurs contiguously after the radix point of `Real.pi`,
@@ -52,7 +53,7 @@ still take substantial work to implement and check in Lean.
 | --- | --- | --- |
 | **1. Verified foundation** | Solved. | Already proved and checked in Lean, including the digit–interval and orbit equivalences. |
 | **2. Isolate interval hitting** | An elementary consequence of the existing equivalences that expresses exactly what remains to prove. | Completed by the bounded pilot in `OrbitCriteria.lean`: a general equivalence and a conditional π reduction, both audited. |
-| **3. Prove the BBP identity** | A classical, established theorem with published proofs. | B1a coefficient/single-term integral and B1b pointwise series/domination are checked. Measurability and summable-majorant instances, infinite interchange, rational integral evaluation, and final `HasSum` assembly remain unformalized. Independent local proofs preserve the external-code attribution boundary. |
+| **3. Prove the BBP identity** | A classical, established theorem with published proofs. | B1a coefficient/single-term integral, B1b pointwise series/domination, and B1c sum/integral interchange are checked. Rational kernel algebra, integral evaluation, and final `HasSum ... Real.pi` assembly remain unformalized. Independent local proofs preserve the external-code attribution boundary. |
 | **4. Connect BBP to the orbit** | The identities, tail estimates, and conditional transfer argument have standard proof methods. This plan supplies the mathematical outline. | B4, the general conditional transfer, is checked. BBP series splitting, recurrence, and tail estimates remain unimplemented. |
 | **5. Prove universal visitation** | Open mathematical research; no complete proof method is supplied. | The decisive missing argument about this particular recurrence. |
 
@@ -145,8 +146,8 @@ The checked `243F` example confirms the initial digits, but proves no assertion
 about arbitrary words.
 
 The implementation is in [the Lean modules](../PiDisjunctivity.lean), with
-twenty-two theorem-type and axiom audits in [Test.lean](../Test.lean), including
-the two Step 2 additions, B4/P3, the B1a term integral, and both B1b results. The
+twenty-three theorem-type and axiom audits in [Test.lean](../Test.lean), including
+the two Step 2 additions, B4/P3, the B1a term integral, both B1b results, and the B1c bridge. The
 [formulation review](formulation-review.md) and [follow-up](review-follow-up.md)
 record the completed mathematical review. Arbitrary-base generalization and a
 normal-number API are not prerequisites for this attempt.
@@ -407,26 +408,47 @@ and adds the complete types, actual guarded axiom lists, both endpoints,
 and `j = 0`. Validation and review evidence are in [the handoff](b1b-handoff.md).
 This milestone stops before interchange and integral evaluation.
 
-### Next bounded task: B1c sum/integral interchange
+<a id="next-bounded-task-b1c-sumintegral-interchange"></a>
 
-**Proposed only; separate authorization required.** Prove exactly the bridge
+### Completed bounded task: B1c sum/integral interchange
+
+**Checked and audited, 2026-11-25.** `hasSum_bbpCoeff_integral` proves exactly
 
 ```text
 HasSum (fun j : ℕ => bbpCoeff j / (16 : ℝ)^j)
   (∫ x in (0 : ℝ)..1, (4 - 2*x^3 - x^4 - x^5) / (1 - x^8/16))
 ```
 
-Use B1a and B1b with Mathlib's dominated-convergence `HasSum` theorem. The
-remaining premises include almost-everywhere measurability, summability of
-the constant-in-`x` geometric majorant, its interval integrability, and the
-required almost-everywhere bounds/sums. Keep these as obligations until checked.
-The endpoint is this audited bridge, not evaluation of the integral or a
-`HasSum ... Real.pi` theorem. Stop before rational integral evaluation, B2/B3,
-and V. B1b did not begin this slice.
+B1a and B1b supply the term integral, pointwise series, and domination. The
+proof uses pinned Mathlib's `intervalIntegral.hasSum_integral_of_dominated_convergence`:
+polynomial continuity supplies strong measurability for volume restricted to
+`Set.uIoc 0 1`; the explicit inclusion in `Set.Icc 0 1` supplies the bounds and
+pointwise sums. The geometric majorant `8*(1/16)^j` is summable, and its sum is
+constant in `x`, hence interval integrable. All five premises are discharged
+locally, then `integral_bbpTerm` rewrites the summands while retaining `HasSum`.
+No extra analytic hypotheses or public helper API are introduced. The root
+import and complete type/axiom audit cover the new declaration. See the
+[handoff](b1c-handoff.md) for validation, required review, and commit status.
 
-The evidence supports retaining the integral route and B1-before-B3 order.
-Retain `HasSum` directly in the later dominated-convergence step, without a
-preliminary tail layer. Neither B1a nor B1b supplies visits.
+The integral is unevaluated. No antiderivative/FTC, full B1, B2/B3, or V work
+was begun. The direct `HasSum` route and B1-before-B3 order remain appropriate.
+
+### Next bounded task: B1d rational kernel decomposition
+
+**Proposed only; separate authorization required.** Independently prove T4
+from [the assessed argument](b1-source-proof-review.md#3-evaluate-the-rational-integral):
+for `x ∈ Set.Icc (0 : ℝ) 1`,
+
+```text
+(4 - 2*x^3 - x^4 - x^5)/(1-x^8/16)
+  = (-4*x)/(2-x^2) - 4*(x-2)/(x^2-2*x+2).
+```
+
+Discharge denominator conditions locally, preserve endpoints, and add the
+root-import type/axiom audit, required validation/review, and handoff. Do not
+add unused factorization lemmas or a general rational-function API. Stop before
+antiderivative/FTC development, integral evaluation, full B1 assembly, B2/B3,
+or V. This proposal does not start B1d or discharge any visitation hypothesis.
 
 ## 5. Prove the missing universal visitation theorem
 
@@ -547,8 +569,8 @@ existing word/interval and orbit equivalences ------+-> pi disjunctivity
 ```
 
 The pilot makes the exact missing interval-hitting hypothesis explicit. B4's
-conditional transfer and P3's cell conversion complete M1. B1a and B1b are
-checked parts of M2. The next proposed bounded task is B1c, sum/integral
-interchange, requiring separate authorization. Step 5 research
+conditional transfer and P3's cell conversion complete M1. B1a, B1b, and B1c are
+checked parts of M2. The next proposed bounded task is B1d, rational kernel
+decomposition, requiring separate authorization. Step 5 research
 can be scoped separately; completing more infrastructure is not evidence that the
 open visitation problem is solved.

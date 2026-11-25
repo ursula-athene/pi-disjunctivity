@@ -22,8 +22,8 @@ conversion. These general results preserve this reviewed formulation and their
 explicit visitation hypotheses. [The research log](research-log.md) records the
 scope, review, and expanded audit. A later separately authorized B1a cycle
 checked the BBP coefficient and single-term integral; B1b now checks pointwise
-summation and domination, with twenty-two theorem audits in total; see
-[the B1b handoff](b1b-handoff.md). The full BBP series and
+summation and domination. B1c checks sum/integral interchange, with twenty-three
+theorem audits in total; see [the B1c handoff](b1c-handoff.md). The full BBP series and
 universal visitation remain unproved.
 
 ## Problem formulation
@@ -466,7 +466,8 @@ The separate `lake env lean Test.lean` check preserves all thirteen milestone C
 theorem types and adds the two new theorem types through the library root.
 The later bounded interval pilot adds two more types and the B4/P3 milestone
 adds two, then B1a adds the unconditional BBP single-term integral and B1b
-adds pointwise summation/domination, for twenty-two in total, without changing
+adds pointwise summation/domination. B1c adds the coefficient-series/integral
+bridge, for twenty-three in total, without changing
 the fifteen formulation/follow-up theorems. B4 assumes
 vanishing errors and arbitrarily late open-interval visits;
 P3 assumes open-interval visits and yields hexadecimal-cell visits. Both are

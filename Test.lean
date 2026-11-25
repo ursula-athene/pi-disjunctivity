@@ -173,6 +173,13 @@ example (x : ℝ) (hx : x ∈ Set.Icc (0 : ℝ) 1) :
     ‖4 - 2 * x ^ 3 - x ^ 4 - x ^ 5‖ ≤ 8 := by
   simpa using PiDisjunctivity.norm_bbpTerm_le 0 x hx
 
+-- The coefficient series converges to the unevaluated integral without analytic hypotheses.
+example :
+    HasSum (fun j : ℕ => PiDisjunctivity.bbpCoeff j / (16 : ℝ) ^ j)
+      (∫ x in (0 : ℝ)..1,
+        (4 - 2 * x ^ 3 - x ^ 4 - x ^ 5) / (1 - x ^ 8 / 16)) :=
+  PiDisjunctivity.hasSum_bbpCoeff_integral
+
 /--
 info: 'PiDisjunctivity.blockValue_eq_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
 -/
@@ -315,3 +322,10 @@ info: 'PiDisjunctivity.norm_bbpTerm_le' depends on axioms:
 -/
 #guard_msgs (whitespace := lax) in
 #print axioms PiDisjunctivity.norm_bbpTerm_le
+
+/--
+info: 'PiDisjunctivity.hasSum_bbpCoeff_integral' depends on axioms:
+[propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms PiDisjunctivity.hasSum_bbpCoeff_integral

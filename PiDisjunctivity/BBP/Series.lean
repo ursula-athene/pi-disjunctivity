@@ -7,10 +7,11 @@ module
 
 public import Mathlib.Analysis.SpecialFunctions.Integrals.Basic
 import Mathlib.Analysis.SpecificLimits.Basic
+import Mathlib.MeasureTheory.Integral.DominatedConvergence
 import Mathlib.Tactic
 
 /-!
-The BBP coefficient, single-term integral, pointwise series, and domination on `[0,1]`.
+The BBP coefficient series sums to an unevaluated rational integral on `[0,1]`.
 The argument and source references are recorded in `docs/b1-source-proof-review.md`.
 This independent proof does not establish the infinite series identity for π.
 -/
@@ -83,5 +84,32 @@ theorem norm_bbpTerm_le (j : ℕ) (x : ℝ) (hx : x ∈ Set.Icc (0 : ℝ) 1) :
         (1 / (16 : ℝ)) ^ j * 8 :=
       mul_le_mul (pow_le_pow_left₀ hq0 hqle j) hp (norm_nonneg _) (by positivity)
     _ = 8 * (1 / (16 : ℝ)) ^ j := mul_comm _ _
+
+/-- The BBP coefficient series sums to the rational integral, without evaluating it as π. -/
+theorem hasSum_bbpCoeff_integral :
+    HasSum (fun j : ℕ => bbpCoeff j / (16 : ℝ) ^ j)
+      (∫ x in (0 : ℝ)..1,
+        (4 - 2 * x ^ 3 - x ^ 4 - x ^ 5) / (1 - x ^ 8 / 16)) := by
+  have hsub : Set.uIoc (0 : ℝ) 1 ⊆ Set.Icc 0 1 := by
+    rw [Set.uIoc_of_le (by norm_num)]
+    exact Set.Ioc_subset_Icc_self
+  have hsum :
+      HasSum (fun j : ℕ => ∫ x in (0 : ℝ)..1,
+        (x ^ 8 / 16) ^ j * (4 - 2 * x ^ 3 - x ^ 4 - x ^ 5))
+        (∫ x in (0 : ℝ)..1,
+          (4 - 2 * x ^ 3 - x ^ 4 - x ^ 5) / (1 - x ^ 8 / 16)) := by
+    apply intervalIntegral.hasSum_integral_of_dominated_convergence
+      (fun j (_ : ℝ) => 8 * (1 / (16 : ℝ)) ^ j)
+    · intro j
+      exact (by fun_prop : Continuous (fun x : ℝ =>
+        (x ^ 8 / 16) ^ j * (4 - 2 * x ^ 3 - x ^ 4 - x ^ 5))).aestronglyMeasurable
+    · intro j
+      exact MeasureTheory.ae_of_all _ fun x hx => norm_bbpTerm_le j x (hsub hx)
+    · exact MeasureTheory.ae_of_all _ fun _ _ =>
+        (summable_geometric_of_lt_one (by norm_num : 0 ≤ 1 / (16 : ℝ))
+          (by norm_num)).mul_left 8
+    · exact intervalIntegrable_const
+    · exact MeasureTheory.ae_of_all _ fun x hx => hasSum_bbpTerm x (hsub hx)
+  simpa only [integral_bbpTerm] using hsum
 
 end PiDisjunctivity

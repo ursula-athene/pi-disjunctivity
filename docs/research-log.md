@@ -901,3 +901,96 @@ The reviewed source and audits are unchanged after their successful validation.
 Its commit ID is reported after committing. Stop at B1b: no interchange,
 integral evaluation, full BBP identity, B2/B3, or universal visitation proof
 has been begun. Pause for the user's next decision.
+
+
+## 2026-11-25 — B1c sum/integral interchange
+
+### Authorized endpoint and checkout
+
+Executed only the first Current prompt, after `AGENTS.md`, the B1b handoff,
+current plans, blueprint, workflow, source, audits, and trust/status records.
+Announced the endpoint before editing: one unconditional coefficient-series
+`HasSum` to the unevaluated rational integral, its export/audit, validation,
+required review, local commit/necessity review, and durable handoff. Archived
+prompts were not executed; completed B1 source review/B1a/B1b were not repeated.
+
+Actual HEAD was `57a0b0a6f6fbd078bc90073e627de37b26eef63d` on prepared branch
+`feature/attempt-04`; remote main was `4eb973b0c3521a962a90f3d0aacafc2a4d5d7d50`,
+matching local main/origin/main and HEAD's parent (merged PR #3). Preserved
+unrelated Obsidian, notes, and papers work. The exact saved `agy` prefix check
+returned `decision: allow`; workspace/temporary write limits and no escalation
+remain in effect, without permission changes.
+
+### Checked argument, compiler feedback, and validation
+
+Pinned source inspection found the requested interval dominated-convergence
+`HasSum` API at `Mathlib/MeasureTheory/Integral/DominatedConvergence.lean:218`.
+The measurable-term premise uses restricted volume; the bound, summability,
+and limit premises use almost-everywhere implications under unrestricted
+volume. The local inclusion `uIoc 0 1 ⊆ Icc 0 1` and `ae_of_all` match these
+precisely. Polynomial continuity, B1b domination/pointwise sum, geometric
+summability, and constant interval integrability discharge all five premises.
+B1a then rewrites each term integral, preserving `HasSum` directly.
+
+`hasSum_bbpCoeff_integral` has exactly the requested unconditional statement;
+its existing public root import suffices. The proof compiled on its first
+module check, with no compiler/library/mathematical failure. No external code,
+extra library, proof bypass, public helper, or tail layer was used. Meaning
+review confirmed volume, forward interval orientation, both endpoints,
+zero-based natural indices, real division, and no hidden analytic hypotheses.
+
+Lean is `4.37.0-rc1`; baseline and integrated `lake build` pass (7201 jobs).
+The root-import audit passes with twenty-three full type/axiom guards and all
+previous definition/value/boundary checks. The new actual axiom list was
+inspected before guarding it: `propext`, `Classical.choice`, `Quot.sound`.
+`git diff --check` passes; pins, manifest, reviewed definitions, and existing
+root imports are unchanged. The only added import is Mathlib dominated
+convergence. No clean-environment or remote CI result is claimed.
+
+### Status, retrospective, and review preparation
+
+B1a/T1, B1b/T2, and B1c/T3 are checked. T4, antiderivative/FTC conditions,
+integral evaluation, and final B1 assembly remain unproved. B2/B3, V, Hπ, T,
+and π disjunctivity stay open; B4 retains vanishing error and arbitrarily late
+visits, and P3 retains open-interval visits. No later milestone was begun.
+Both plans and the blueprint now propose B1d rational kernel decomposition
+only for separate authorization; session instructions pause after B1c.
+
+The pinned API and local compiler loop sufficed without new infrastructure.
+Retain the direct `HasSum` integral route, B1-before-B3 order, and existing
+review/commit cadence. The [B1c handoff](b1c-handoff.md) records the full result,
+validation, and stopping point. Required Gemini review and commit/necessity
+outcomes follow when actually completed.
+
+
+### Gemini review and final validation
+
+Gemini Carbon High returned **explicit no findings** on the complete twelve-file
+supplied diff against `57a0b0a`. Conversation:
+`4a662fa5-c864-445d-bd2c-9e10168f1c93`. The [saved report](agy-reports/b1c-review.md)
+records the full response, diff hash, timestamps, both attempts, and limitations.
+
+The initial invocation (13.070 seconds) ended with exit zero / `SUCCESS`,
+empty response, and denied temporary-input `read_file`: incomplete. Captured
+events/stderr and the CLI log identified the internal headless file permission
+failure and terminal stream exit. The process-list check was sandbox-denied,
+but execution completion and recovery's `active=false` established no overlap.
+The single focused recovery supplied the full diff inline, prohibited retrying
+the denied read, and retained the explicit conversation and all twelve files.
+It completed in 209.461 seconds, exit zero, `SUCCESS`, nonempty no-findings
+response, and absent terminal error/finished-reason/denied-action fields.
+No scope was omitted, permissions changed, or substantive follow-up needed.
+
+All observed reviewer tool calls were read-only file reads. Gemini did not
+rerun Lean or inspect the Mathlib checkout/manifest; those depend on the caller's
+validation. Recovery CLI persistence was sandbox-denied, but review completed.
+Each execution chunk was captured with 50,000 tokens and saved separately before
+summarization; none was truncated. A combined-event diagnostic display was
+abbreviated, and the terminal response was then separately read in full.
+
+Preservation passed for 25 unrelated/protected hashes, existing B1a/B1b code,
+all twenty-two prior guards and other checks, old prompt bytes, and earlier log
+entries. Manifest/dependency pins, project imports, and trust tokens passed;
+pre-review local links/anchors passed (184). Final factual review records and
+staging receive fresh preservation/link/whitespace checks before committing.
+The passing Lean proof/audits are unchanged. No later milestone was begun.
