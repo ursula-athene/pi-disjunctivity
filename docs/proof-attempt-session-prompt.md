@@ -1,11 +1,11 @@
 # Proof-attempt session prompt entry point
 
-The active prompt is now the first section of
-[session-prompts.md: Current prompt — B1 source and proof review](session-prompts.md#current-prompt-b1-source-and-proof-review).
-When the user asks to execute this file, execute only that current prompt and
-its bounded endpoint, then pause.
+The current session instructions are in the first section of
+[session-prompts.md: paused after B1](session-prompts.md#current-prompt-paused-after-b1).
+When the user asks to execute this file, follow only those current instructions.
+B1 is complete; another milestone requires separate authorization.
 
-The completed B4/P3 prompt is preserved under
+The completed B1c, B1b, B1a, and B4/P3 prompts are preserved under
 [Old prompts - do not use](session-prompts.md#old-prompts---do-not-use), followed
 by the older formulation-review prompt. Archived prompts are historical and
 must not be executed or used to override the current instructions.

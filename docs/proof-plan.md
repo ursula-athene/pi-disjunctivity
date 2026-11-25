@@ -3,26 +3,28 @@
 **Planning baseline:** 2026-11-24, commit
 `56ca22e1a9776ee7a5d7b4e36103f932d3b45646` on `feature/attempt-01`.
 
-**Latest implementation update: 2026-11-25.** B1b is checked on
-`feature/attempt03`; see [the B1b handoff](b1b-handoff.md). On `feature/attempt-02`, Step 2's
+**Latest implementation update: 2026-11-25.** B1 is checked on
+`feature/attempt-04`; see [the B1 completion handoff](b1-handoff.md). On `feature/attempt-02`, Step 2's
 interval-hitting reduction and the bounded B4 + P3 milestone are checked:
 conditional interior-margin transfer and open-interval-to-cell conversion.
 See the [blueprint](proof-blueprint.md) for dependencies, [research log](research-log.md)
 for checks and review, and [workflow](proof-workflow.md) for the executed
-meta-plan. The full BBP identity, recurrence, and tail results remain unimplemented;
-universal visitation remains open.
+meta-plan. The full BBP `HasSum ... Real.pi` identity is checked. Recurrence and
+tail results remain unimplemented; universal visitation remains open.
 
 The B4/P3 implementation and audits are in `203e16c`; post-commit proof
 simplification and the [handoff](b4-p3-handoff.md) are in `a8c693e`. The audit
 now includes B1a: `bbpCoeff` and the unconditional `integral_bbpTerm` in
 `BBP/Series.lean`, independently implemented from the reviewed argument.
 B1b adds `hasSum_bbpTerm` and `norm_bbpTerm_le` on the closed unit interval.
-Twenty-two theorem type/axiom audits pass, alongside the two π definition checks,
-coefficient expansion/value checks, and B1b endpoint/zero-index checks. The full
-B1 `HasSum` identity remains unproved. See the [B1b handoff](b1b-handoff.md) for
-validation and review status, and the [current session record](session-prompts.md)
-for the completed scope. The next proposed slice is B1c's sum/integral
-interchange, requiring separate authorization.
+B1c adds the unconditional `hasSum_bbpCoeff_integral` bridge to the unevaluated
+rational integral. The combined B1 completion adds rational decomposition,
+the primitive's derivative, integral evaluation, and `hasSum_bbpCoeff`, proving
+`HasSum (fun j : ℕ => bbpCoeff j / (16 : ℝ)^j) Real.pi` unconditionally.
+Twenty-seven theorem type/axiom audits pass, alongside all earlier checks.
+See the [B1 handoff](b1-handoff.md) for validation and finalization status.
+The next proposed slice is B2a's finite-prefix/tail split, requiring separate
+authorization; this milestone stops before Step 4's BBP bridge work.
 
 The goal is to prove `PiDisjunctivity.PiHexadecimalDisjunctivity`: every finite
 hexadecimal word occurs contiguously after the radix point of `Real.pi`,
@@ -39,8 +41,8 @@ mathematical step. The other steps prepare, connect, or check that argument.
 This document plans the proof attempt requested for this branch. The scope
 restrictions in the older formulation documents describe the previous phase;
 the formulation review is already complete. The original planning change added
-no Lean proofs or assumptions; the later bounded milestones add only the
-reductions and conditional general lemmas recorded below.
+no Lean proofs or assumptions; later bounded milestones add the checked
+reductions, conditional general lemmas, and unconditional BBP identity below.
 
 ## Overview: mathematical status and formalization work
 
@@ -52,7 +54,7 @@ still take substantial work to implement and check in Lean.
 | --- | --- | --- |
 | **1. Verified foundation** | Solved. | Already proved and checked in Lean, including the digit–interval and orbit equivalences. |
 | **2. Isolate interval hitting** | An elementary consequence of the existing equivalences that expresses exactly what remains to prove. | Completed by the bounded pilot in `OrbitCriteria.lean`: a general equivalence and a conditional π reduction, both audited. |
-| **3. Prove the BBP identity** | A classical, established theorem with published proofs. | B1a coefficient/single-term integral and B1b pointwise series/domination are checked. Measurability and summable-majorant instances, infinite interchange, rational integral evaluation, and final `HasSum` assembly remain unformalized. Independent local proofs preserve the external-code attribution boundary. |
+| **3. Prove the BBP identity** | A classical, established theorem with published proofs. | Complete: `hasSum_bbpCoeff` proves the full `HasSum ... Real.pi` identity, using the checked term integral, pointwise series/domination, interchange, rational algebra, derivative, and FTC evaluation. Independent local proofs preserve the external-code attribution boundary. |
 | **4. Connect BBP to the orbit** | The identities, tail estimates, and conditional transfer argument have standard proof methods. This plan supplies the mathematical outline. | B4, the general conditional transfer, is checked. BBP series splitting, recurrence, and tail estimates remain unimplemented. |
 | **5. Prove universal visitation** | Open mathematical research; no complete proof method is supplied. | The decisive missing argument about this particular recurrence. |
 
@@ -69,7 +71,7 @@ producing them is Step 5.
 ```text
 1       Completed and checked.
 2       Completed and checked; the π hitting hypothesis is still open.
-3       Known theorem; potentially substantial formalization.
+3       Completed and checked: the full BBP HasSum identity.
 4       General transfer checked; BBP bridges and tails remain unformalized.
 5       Open mathematical research; no complete proof method supplied.
 ```
@@ -145,8 +147,9 @@ The checked `243F` example confirms the initial digits, but proves no assertion
 about arbitrary words.
 
 The implementation is in [the Lean modules](../PiDisjunctivity.lean), with
-twenty-two theorem-type and axiom audits in [Test.lean](../Test.lean), including
-the two Step 2 additions, B4/P3, the B1a term integral, and both B1b results. The
+twenty-seven theorem-type and axiom audits in [Test.lean](../Test.lean), including
+the two Step 2 additions, B4/P3, and all eight BBP results through the complete
+series theorem. The
 [formulation review](formulation-review.md) and [follow-up](review-follow-up.md)
 record the completed mathematical review. Arbitrary-base generalization and a
 normal-number API are not prerequisites for this attempt.
@@ -192,6 +195,12 @@ hypothesis to the existing conjecture, keeping that hypothesis visible until
 it has an independent proof.
 
 ## 3. Establish the BBP identity in the permitted Lean stack
+
+**Status: implemented and audited, 2026-11-25.** `hasSum_bbpCoeff` proves the
+unconditional BBP identity in `BBP/Series.lean`, exported through the root and
+guarded in `Test.lean`. The specification below records the route now completed;
+see [the handoff](b1-handoff.md) for validation, review, and local commit status.
+No disjunctivity or visitation claim follows from this analytic identity alone.
 
 Define the rational coefficient
 
@@ -352,7 +361,7 @@ license/attribution decision, a complete classical argument, pinned-Mathlib API
 premises, and a minimal implementation slice. Its final section records the
 required Gemini Carbon High review and limitations. No BBP declaration or code
 adaptation was added, and no external build or axiom audit is claimed.
-B1 remains **known / unformalized**, not checked. See the
+At that source-review baseline B1 remained **known / unformalized**. See the
 [research log](research-log.md) for validation and the final handoff record.
 
 <a id="next-bounded-task-b1a-coefficient-and-one-term-integral"></a>
@@ -378,9 +387,9 @@ and `bbpCoeff 0 = 47/15` as well as the exact universal theorem type.
 
 `lake build`, `lake env lean Test.lean`, and `git diff --check` pass. Review and
 commit/necessity evidence are recorded in [the B1a handoff](b1a-handoff.md) and
-[research log](research-log.md). B1 as a whole is still **known / unformalized**:
-no infinite interchange, rational integral evaluation, or π series theorem has
-been proved. This milestone stops before those tasks and B2/B3/V.
+[research log](research-log.md). At the B1a endpoint, B1 as a whole was still
+**known / unformalized**: no infinite interchange, integral evaluation, or π
+series theorem had been proved. This milestone stops before those tasks and B2/B3/V.
 
 <a id="next-bounded-task-b1b-pointwise-series-and-domination"></a>
 
@@ -407,26 +416,76 @@ and adds the complete types, actual guarded axiom lists, both endpoints,
 and `j = 0`. Validation and review evidence are in [the handoff](b1b-handoff.md).
 This milestone stops before interchange and integral evaluation.
 
-### Next bounded task: B1c sum/integral interchange
+<a id="next-bounded-task-b1c-sumintegral-interchange"></a>
 
-**Proposed only; separate authorization required.** Prove exactly the bridge
+### Completed bounded task: B1c sum/integral interchange
+
+**Checked and audited, 2026-11-25.** `hasSum_bbpCoeff_integral` proves exactly
 
 ```text
 HasSum (fun j : ℕ => bbpCoeff j / (16 : ℝ)^j)
   (∫ x in (0 : ℝ)..1, (4 - 2*x^3 - x^4 - x^5) / (1 - x^8/16))
 ```
 
-Use B1a and B1b with Mathlib's dominated-convergence `HasSum` theorem. The
-remaining premises include almost-everywhere measurability, summability of
-the constant-in-`x` geometric majorant, its interval integrability, and the
-required almost-everywhere bounds/sums. Keep these as obligations until checked.
-The endpoint is this audited bridge, not evaluation of the integral or a
-`HasSum ... Real.pi` theorem. Stop before rational integral evaluation, B2/B3,
-and V. B1b did not begin this slice.
+B1a and B1b supply the term integral, pointwise series, and domination. The
+proof uses pinned Mathlib's `intervalIntegral.hasSum_integral_of_dominated_convergence`:
+polynomial continuity supplies strong measurability for volume restricted to
+`Set.uIoc 0 1`; the explicit inclusion in `Set.Icc 0 1` supplies the bounds and
+pointwise sums. The geometric majorant `8*(1/16)^j` is summable, and its sum is
+constant in `x`, hence interval integrable. All five premises are discharged
+locally, then `integral_bbpTerm` rewrites the summands while retaining `HasSum`.
+No extra analytic hypotheses or public helper API are introduced. The root
+import and complete type/axiom audit cover the new declaration. See the
+[handoff](b1c-handoff.md) for validation, required review, and commit status.
 
-The evidence supports retaining the integral route and B1-before-B3 order.
-Retain `HasSum` directly in the later dominated-convergence step, without a
-preliminary tail layer. Neither B1a nor B1b supplies visits.
+At the B1c endpoint the integral was unevaluated, and no antiderivative/FTC,
+full B1, B2/B3, or V work had been begun. The direct `HasSum` route and B1-before-B3 order remain appropriate.
+
+<a id="next-bounded-task-b1d-rational-kernel-decomposition"></a>
+
+### Completed bounded task: B1d and full B1 completion
+
+**Checked and audited, 2026-11-25.** After B1c, the user authorized completing
+B1 in one combined cycle. `bbpKernel_eq_partialFractions` establishes T4 from
+[the assessed argument](b1-source-proof-review.md#3-evaluate-the-rational-integral):
+for `x ∈ Set.Icc (0 : ℝ) 1`,
+
+```text
+(4 - 2*x^3 - x^4 - x^5)/(1-x^8/16)
+  = (-4*x)/(2-x^2) - 4*(x-2)/(x^2-2*x+2).
+```
+
+Denominator conditions are discharged locally from `x^2 ≤ 1`, `x^8 ≤ 1`,
+and `(x-1)^2 ≥ 0`. `hasDerivAt_bbpPrimitive` proves, on the entire closed interval,
+that `2*log(2-x^2) - 2*log(x^2-2*x+2) + 4*arctan(x-1)` has derivative equal
+to the original kernel. Positive log arguments supply the chain-rule premises.
+The kernel is continuous on `[0,1]`, hence interval integrable. FTC and exact
+log/arctangent endpoint values give `integral_bbpKernel`, the unconditional
+integral equality with `Real.pi`. `hasSum_bbpCoeff` rewrites the existing B1c
+bridge with that equality, completing B1 and M2 without changing B1c.
+
+All four results have complete root-import type/axiom guards; the prior 23
+checks and boundary regressions remain intact. No primitive/kernel definition,
+unused factorization lemma, general analytic API, or new import was introduced.
+See [the handoff](b1-handoff.md) for the validation and required review evidence.
+B2/B3, V, Hπ, T, and π disjunctivity remain open. B4/P3 keep every hypothesis.
+
+### Next bounded task: B2a finite-prefix and tail split
+
+**Proposed only; separate authorization required.** Use the full B1 `HasSum`
+to establish, for every `n : ℕ`, the convergent scaled tail identity
+
+```text
+HasSum (fun r : ℕ => bbpCoeff (n+r+1) / (16 : ℝ)^(r+1))
+  ((16 : ℝ)^n * Real.pi -
+    ∑ j ∈ Finset.range (n+1), (16 : ℝ)^(n-j) * bbpCoeff j)
+```
+
+Check the inclusive prefix `0..n`, tail starting at `n+1`, natural-exponent
+subtraction only under `j ≤ n`, and `n = 0`. Keep convergence in the result;
+no tail estimate or visitation hypothesis is a premise. Export/audit, validate,
+review, and hand off this single bridge, stopping before recurrence/fractional-
+part identities, B3 bounds, or V. Do not begin B2a in the B1 completion session.
 
 ## 5. Prove the missing universal visitation theorem
 
@@ -525,13 +584,13 @@ proved supporting results and any remaining conjectural input.
 
 ## Suggested implementation order
 
-`OrbitCriteria.lean` now exists for the interval reduction. The other module
-names below remain organizational suggestions, not existing files.
+`OrbitCriteria.lean` and `BBP/Series.lean` now exist for the completed M1/M2
+work. The remaining module names are organizational suggestions.
 
 | Milestone   | Order                        | Work                                                                            | Suggested location                                                 |
 | ----------- | ---------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------ |
 | M1          | First small milestone        | Complete: interval-hitting reduction, general transfer B4, and cell conversion P3 | `PiDisjunctivity/OrbitCriteria.lean`                          |
-| M2          | Next established mathematics | BBP convergence and equality with `Real.pi`                                     | `PiDisjunctivity/BBP/Series.lean`                                  |
+| M2          | Completed supporting theorem | Complete: BBP convergence and equality with `Real.pi`                                     | `PiDisjunctivity/BBP/Series.lean`                                  |
 | M3          | Next bridge                  | Finite sums, recurrence, modular reduction, and tail estimates                  | `PiDisjunctivity/BBP/Orbit.lean`                                   |
 | M4          | Research milestone           | Develop and prove Step 5's missing visitation argument                          | Mathematical notes first; a Lean module once the argument is sound |
 | M5          | Final assembly               | The unconditional pi theorem and its audit                                      | `PiDisjunctivity/PiProof.lean` and `Test.lean`                     |
@@ -547,8 +606,8 @@ existing word/interval and orbit equivalences ------+-> pi disjunctivity
 ```
 
 The pilot makes the exact missing interval-hitting hypothesis explicit. B4's
-conditional transfer and P3's cell conversion complete M1. B1a and B1b are
-checked parts of M2. The next proposed bounded task is B1c, sum/integral
-interchange, requiring separate authorization. Step 5 research
+conditional transfer and P3's cell conversion complete M1. The full checked
+B1 identity completes M2. The next proposed bounded task is B2a, the scaled
+finite-prefix/tail split, requiring separate authorization. Step 5 research
 can be scoped separately; completing more infrastructure is not evidence that the
 open visitation problem is solved.
