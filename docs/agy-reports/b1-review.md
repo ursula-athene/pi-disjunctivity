@@ -145,3 +145,52 @@ response with its original links is retained in the captured terminal result.
 - Per repository review instructions, only read-only repository file tools (`read_file`) were used; no shell/Bash commands (`lake build`, `lake env lean Test.lean`, `git diff --check`, or git baseline/unrelated-file hash checks) were executed in this session, so Lean elaboration, kernel checking, `#print axioms` output verification, and unrelated-file hash preservation rely on the caller's reported validation.
 - Pinned Mathlib signatures (`HasDerivAt.log`, `HasDerivAt.arctan`, `ContinuousOn.intervalIntegrable_of_Icc`, `intervalIntegral.integral_eq_sub_of_hasDerivAt`, `Real.arctan_one`, `Real.arctan_neg`) were verified against the local proof terms and the documented dependency map in [b1-source-proof-review.md](../../docs/b1-source-proof-review.md) rather than reading `.lake/packages/` checkouts directly.
 - Final review, local commit, and post-commit necessity-review fields in [b1-handoff.md](../../docs/b1-handoff.md) and [research-log.md](../../docs/research-log.md) are intentionally pending at this pre-review snapshot.
+
+## PR preparation: session entry-point follow-up
+
+Preparing the user-requested PR exposed one stale entry-point link to the
+archived B1c prompt. The exact one-file diff to
+[proof-attempt-session-prompt.md](../proof-attempt-session-prompt.md), against
+`9fd33bbda7963f57776966dfbc20e0b478c751dd`, was supplied inline together with
+the first 30 lines of the current session instructions. The fix selects
+`#current-prompt-paused-after-b1`, records B1 completion, and adds B1c to the
+archived-prompt inventory. No Lean proof, audit, or milestone scope changed.
+
+One focused invocation used the same literal Carbon High/plan command prefix,
+stream JSON, a twenty-minute deadline, and read-only repository file tools.
+It requested the original conversation explicitly. The CLI reported that
+`a5edb71a-c1be-402f-b627-8c8e1939edd2` was not found and initialized a new
+conversation within that invocation; the complete focused diff and context
+were already in its prompt. No second invocation or recovery was needed.
+
+| Field | Value |
+| --- | --- |
+| New conversation ID | `289a295e-5cc6-42ea-9f31-3c4759ae8886` |
+| Init model / permission mode | `gemini-4-carbon-high` / `request-review` |
+| Caller start / completion UTC | `2026-11-25T21:32:49.897Z` / `2026-11-25T21:34:49.364Z` |
+| Caller wall time / reported duration | 119.467 / 118.122053 seconds |
+| Process exit / terminal status | 0 / `SUCCESS` |
+| Terminal response | Nonempty, explicit no findings |
+| `error`, `finished_reason`, `denied_actions` | All absent |
+| Reported usage | Input 60032; output 9482; thinking 7044; cache-read 122437; total 69514 |
+
+By `21:34:34.452Z`, nine repository reads had completed and response text
+deltas were arriving. By `21:34:49.364Z`, the substantive terminal response
+and process exit were collected. Only `read_file` tools were observed, with
+no tool denials. The sole captured diagnostic was the missing-conversation
+warning. Output chunks, terminal result, and exact prompt were saved
+separately under `/tmp/pi-b1-pr-review-*`; no output chunk was truncated.
+These capture files are local execution artifacts, not repository dependencies.
+
+The reviewer concluded: **“Review outcome: Explicit no findings.”** It verified
+the working-tree post-image, the current rather than archived target, archive
+ordering, downstream links, and the separate-authorization boundary for
+another milestone. The caller accepted that conclusion after checking the
+diff and target heading.
+
+Coverage was limited to this documentation correction and relevant surrounding
+instructions. The reviewer did not run Git, Lean, or whitespace checks, and
+did not repeat the earlier proof/audit review. It relied on the supplied diff
+for the baseline and inspected selected inbound references rather than
+performing a repository-wide search. The earlier full B1 review remains the
+proof-review record; this follow-up does not broaden its coverage.
