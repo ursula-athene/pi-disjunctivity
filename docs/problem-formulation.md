@@ -8,11 +8,12 @@ remains open.
 
 **Current scope: formalize and validate the problem statement in Lean.** The
 conjecture has a Lean statement, and the planned correctness and equivalence
-theorems are implemented and audited. A final consolidated review against the
-intended problem remains pending. Complete and review that verification before
-beginning work on a proof of π's hexadecimal disjunctivity. The correctness and
-equivalence proofs below belong to formulation verification; they do not assert
-that π is disjunctive.
+theorems are implemented and audited. The
+[final consolidated review](formulation-review.md) is complete: formulation
+verification meets the criteria of milestones A, B, and C. Work on proving π's
+hexadecimal disjunctivity or formalizing BBP requires separate authorization.
+The correctness and equivalence proofs below belong to formulation verification;
+they do not assert that π is disjunctive.
 
 ## Problem formulation
 
@@ -70,10 +71,10 @@ are explicit. The hexadecimal specialization uses `Fin k → Fin 16`.
 ## Plan for validating the formulation
 
 “Correctness of the formulation” means establishing that these definitions
-capture the intended hexadecimal-digit property. We would validate that through
-the following steps. The digit definition remains parameterized by the base; the
-word–interval and orbit equivalences below are scoped to base 16 for the first
-milestone.
+capture the intended hexadecimal-digit property. The completed review validates
+that comparison through the following steps. The digit definition remains
+parameterized by the base; the word–interval and orbit equivalences below are
+scoped to base 16.
 
 ### 1. Validate the digit definition
 
@@ -81,7 +82,10 @@ The digit bound, scaled-floor recurrence, finite-prefix reconstruction, and
 truncation error are now proved for arbitrary bases $b\ge 2$ in
 [`Digits.lean`](../PiDisjunctivity/Digits.lean), following Step 3 of the foundations
 plan. Reconstruction and error bounds assume $x\ge 0$ and retain the integer
-part. Exact examples also check the trailing-zero convention at termination.
+part. Milestone C's supporting `baseDigit_div_pow_eq_zero` theorem explicitly
+proves the trailing-zero convention at every position after a terminating
+prefix, for all inputs $m/b^k$ with natural $m$ and $b\ge 2$. Exact examples
+supplement these general results.
 
 ### 2. Connect finite words to hexadecimal intervals
 
@@ -143,27 +147,25 @@ The proof has two directions:
 
 ### 4. Audit the Lean formalization
 
-Compare its quantified statement directly against the formulation above;
-compile the supporting results; inspect their axiom dependencies for unfinished
-proofs or added assumptions; and check exact examples covering indexing, leading
-zeros, digits `A`–`F`, terminating hexadecimal expansions, and the empty word.
-Examples provide sanity checks alongside the general correctness results.
+The [consolidated review](formulation-review.md) compares the quantified statement
+directly against the formulation above, reviews the universal proofs, and maps
+the exact examples to the requirements. It records a successful build with the
+pinned Lean and Mathlib versions, all thirteen actual axiom lists, and a separate
+configuration, manifest, and source-import review. The original twelve theorem
+types and guards are preserved; the termination theorem has its own type and
+axiom guard, and both named π propositions have expanded-definition checks.
 
-The validation should include a reproducible build using the pinned Lean and
-Mathlib versions, and an inspection of `#print axioms` for the equivalence theorem
-to ensure that it depends on neither `sorryAx` nor any project-specific axiom.
-
-Completing this validation would establish the correspondence between the digit
-and orbit formulations. Whether π satisfies either formulation would remain the
+This completes formulation verification, including the correspondence between the
+digit and orbit statements. Whether π satisfies either formulation remains the
 separate research problem.
 
 ## Remaining Lean verification roadmap
 
-**Status: milestones A and B implemented and validated; milestone C's final review pending.**
+**Status: milestones A, B, and C complete.**
 All three steps of [the foundations plan](foundations-plan.md) are complete. The
-work is organized below in dependency order. This roadmap extends the broader
-validation plan above; it does not add another foundational step or change the
-conjecture.
+completed work is recorded below in dependency order. This roadmap extends the
+broader validation plan above; it does not add another foundational step or
+change the conjecture. The heading and link are retained for existing references.
 
 The Lean snippets omit proof bodies and use the `PiDisjunctivity` namespace.
 The signatures in milestones A and B are implemented and audited. The existing
@@ -307,13 +309,13 @@ closure, and use zero's singleton orbit to check that zero is not disjunctive.
 
 ### C. Complete the formulation audit and review
 
-**Status: final consolidated review pending; milestones A and B are complete.**
-The exported-type checks, guarded axiom audits, examples, and local build checks
-are in place and pass. This milestone still requires a consolidated review of
-the formal statements against the intended problem, including all boundary
-conventions and the scope of the π specialization.
+**Status: complete.** The [consolidated review](formulation-review.md) maps the
+intended problem to the actual definitions, universal theorems, and examples.
+It reviews both interval boundaries, both closure endpoints, nonnegativity,
+integer parts, and the scope of the π specialization. No definition or original
+theorem statement required correction.
 
-Completion requires all of the following:
+The completion criteria, now met, are:
 
 - Compare the exported statements with the intended English formulation: every
   finite hexadecimal word, length retained, zero-based positions, nonnegative
@@ -336,11 +338,25 @@ Completion requires all of the following:
 - Update implementation status only after compilation and audit, and review the
   correspondence between the formal statements and the intended problem.
 
-The formulation verification is complete when these criteria are met. Lean
-checks the formal proofs relative to the definitions; the comparison with the
-intended English statement remains a mathematical review. Work on proving π's
-hexadecimal disjunctivity begins only after this phase is complete and reviewed,
-as a separately authorized task. BBP formalization is also outside this phase.
+The review added `baseDigit_div_pow_eq_zero`, proving all digits after a
+terminating prefix are zero for every base $b\ge 2$, natural numerator, prefix
+length, and later position. New examples cover arbitrary later positions in
+bases 2, 10, and 16 and all fractional digits of natural integers. This makes a
+consequence of the existing foundations explicit, without changing their meaning.
+
+**Validation:** `lake build`, `lake env lean Test.lean`, and `git diff --check`
+pass without final warnings. The twelve original exported types and exact axiom
+guards remain; the new theorem brings the total to thirteen, each with actual
+dependencies `propext`, `Classical.choice`, and `Quot.sound`. Two additional
+checks expand the named π statements to the reviewed digit and orbit formulas.
+Configuration, manifest, package checkouts, source imports, and CI were reviewed
+separately. Mathlib remains the sole direct external library, with all pins and
+inherited dependencies unchanged. The report records the detailed evidence.
+
+Formulation verification is complete. Lean checks the formal proofs relative to
+the definitions; the comparison with the intended English statement remains a
+mathematical review. The pi disjunctivity conjecture remains unproved. Work on
+proving it or formalizing BBP requires separate authorization.
 
 ## Implementation status
 
@@ -378,31 +394,34 @@ Milestone A is also complete: `blockValue_injective`, `baseDigit_fract_pow`, and
 `block_iff_mem_interval` prove fixed-length uniqueness, digit shifting, and the
 word–interval correspondence. Milestone B's `isDisjunctive_iff_orbitClosure` and
 `piHexadecimalDisjunctivity_iff_orbitClosure` establish the general orbit equivalence
-and its specialization. The default `lake build` checks the definitions, all
-three foundational steps, milestones A and B, and examples.
+and its specialization. Milestone C's consolidated review is complete. The
+default `lake build` checks the definitions, all three foundational steps,
+milestones A and B, the supporting termination theorem, and examples.
 Additional word-value examples cover the empty word, any single digit, all-zero
 words, leading zeros, `FF`, and positional order (`12` versus `21`). Range examples
 exercise the bound at lengths zero and one, coverage of zero at every length,
 all single digits, `00A`, `FF`, and the maximum value `16 ^ k - 1` at every length.
 Reconstruction examples cover bases 2, 10, and 16, fractional inputs, nonzero
 integer parts, leading zeros, zero at every length, and the length-zero error
-bound. Terminating inputs have zero error and a zero next digit; the
+bound. Terminating inputs have zero error and zero at every later digit; the
 nonterminating decimal input `1/3` exercises a nonzero truncation error.
 Correspondence examples additionally check empty words, arbitrary single digits,
 zero at all lengths and offsets, leading zeros, both interval boundaries, a
 nonzero offset in a number with an integer part, and terminating expansions.
 Orbit examples additionally check both closure endpoints, word recovery under
 the closure hypothesis, and the zero-input counterexample.
-The separate `lake env lean Test.lean` check verifies all twelve reviewed theorem
-types through the library root. Guarded `#print axioms` results require exactly
-`propext`, `Classical.choice`, and `Quot.sound` for each theorem. The audit rejects
+The separate `lake env lean Test.lean` check preserves all twelve original theorem
+types and adds the termination theorem through the library root. Two further
+checks expand the π proposition definitions. Guarded `#print axioms` results
+require exactly `propext`, `Classical.choice`, and `Quot.sound` for each theorem. The audit rejects
 a changed axiom list, including any introduction of `sorryAx` or a project-specific
 axiom. CI runs this check after building. These checks and `git diff --check` pass
 with the pinned Lean and Mathlib versions.
 
-The foundations, word–interval correspondence, orbit equivalence, and its
-specialization to π are complete. The final consolidated formulation review is
-the remaining milestone. The
-[remaining verification roadmap](#remaining-lean-verification-roadmap) records
-the proof sequence, implemented statements, and final review criteria.
-These results make no claim about the occurrence of words in π.
+The foundations, word–interval correspondence, orbit equivalence, its
+specialization to π, and the final formulation review are complete. The
+[verification roadmap](#remaining-lean-verification-roadmap) records the proof
+sequence, implemented statements, and completed review criteria. The
+[review report](formulation-review.md) records findings, actual axiom lists,
+dependency checks, commands and results, and limitations. These results make no
+claim about the occurrence of words in π.

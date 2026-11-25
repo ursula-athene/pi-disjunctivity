@@ -171,6 +171,20 @@ example : (13 / 8 : ℝ) - Nat.floor ((2 : ℝ) ^ 3 * (13 / 8)) / 2 ^ 3 = 0 ∧
       Nat.floor ((16 : ℝ) ^ 3 * (0x3A0F / 16 ^ 3)) / 16 ^ 3 = 0 := by
   norm_num [Nat.floor_div_ofNat]
 
+-- Every later digit is zero, not just the first digit after termination.
+example (n : ℕ) : baseDigit 2 (13 / 8 : ℝ) (3 + n) = 0 ∧
+    baseDigit 10 (7 / 20 : ℝ) (2 + n) = 0 ∧
+    baseDigit 16 (0x3A0F / 16 ^ 3 : ℝ) (3 + n) = 0 := by
+  refine ⟨?_, ?_, baseDigit_div_pow_eq_zero 16 (by norm_num) 0x3A0F 3 n⟩
+  · convert baseDigit_div_pow_eq_zero 2 (by norm_num) 13 3 n using 1
+    norm_num
+  · convert baseDigit_div_pow_eq_zero 10 (by norm_num) 35 2 n using 1
+    norm_num
+
+-- A length-zero terminating prefix is a natural integer, with all fractional digits zero.
+example (b : ℕ) (hb : 2 ≤ b) (m n : ℕ) : baseDigit b (m : ℝ) n = 0 := by
+  simpa using baseDigit_div_pow_eq_zero b hb m 0 n
+
 -- At length three, value 10 determines precisely the padded word 00A.
 example (s : Fin 3 → Fin 16) (h : blockValue 3 s = 10) : s = ![0, 0, 10] := by
   apply blockValue_injective 3

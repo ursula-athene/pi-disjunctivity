@@ -5,7 +5,9 @@ with the [problem formulation](problem-formulation.md). The earlier equivalence
 proof has been removed. All three foundational steps are now implemented and
 validated as described below. The word–interval and orbit-closure equivalences
 are also complete in [milestones A and B](problem-formulation.md#remaining-lean-verification-roadmap).
-The final consolidated formulation review remains pending.
+The [final consolidated formulation review](formulation-review.md) is complete
+as milestone C. It preserves these foundations and adds an explicit general
+trailing-zero theorem without changing any reviewed definition or statement.
 
 The Lean snippets below are the reviewed signatures in the `PiDisjunctivity`
 namespace. They intentionally have no proof bodies and are not source files to
@@ -174,8 +176,8 @@ of `(b : ℝ) ^ k * x`, then divide by the positive number `(b : ℝ) ^ k`.
 Combined with `floor_pow_eq_digits`, this identifies the digit sum as the usual
 finite base-`b` truncation and gives an explicit error bound at every length.
 When $x = m / b^k$ for a natural number $m$, the scaled value is an integer;
-the recurrence then gives zero subsequent digits, agreeing with the chosen
-trailing-zero convention.
+all subsequent digits are zero. Milestone C now also checks this convention
+directly for every later position in the supporting theorem below.
 
 The recurrence proof bounds the larger floor between `q * b` and `(q + 1) * b`,
 where `q` is the previous scaled floor, and applies `Nat.div_eq_of_lt_le` to
@@ -203,6 +205,26 @@ zero truncation error for terminating inputs in bases 2, 10, and 16, plus the
 error bound for the nonterminating decimal input `1/3`. The earlier word-value
 and hexadecimal examples remain unchanged.
 
+### Supporting termination theorem from the final review
+
+The original four Step 3 statements are unchanged. Milestone C adds this result
+in `Digits.lean`, exported through the library root:
+
+```lean
+theorem baseDigit_div_pow_eq_zero (b : ℕ) (hb : 2 ≤ b) (m k n : ℕ) :
+    baseDigit b ((m : ℝ) / (b : ℝ) ^ k) (k + n) = 0
+```
+
+Scaling cancels the positive denominator to give the natural integer
+`b ^ (n + 1) * m`. Its floor is itself and its remainder modulo `b` is zero.
+There is no bound on `m`, so this includes integer parts and, when `k = 0`,
+all fractional digits of natural integers. New examples check arbitrary later
+positions in the binary, decimal, and hexadecimal terminating inputs above.
+The theorem's exported-type check and guarded axiom list were added to
+`Test.lean`; its actual axioms are `propext`, `Classical.choice`, and `Quot.sound`.
+The final build and audit pass without warnings. This makes the trailing-zero
+consequence explicit without adding a fourth foundational step.
+
 ## Implementation order and acceptance
 
 1. **Complete:** `PiDisjunctivity/BlockValue.lean` proves the sum formula, the
@@ -214,7 +236,7 @@ and hexadecimal examples remain unchanged.
    project-specific axioms.
 4. **Complete:** CI runs guarded audits of the seven foundational theorems'
    transitive axiom dependencies after building, alongside the five additional
-   theorem checks from milestones A and B.
+   theorem checks from milestones A and B and the termination check from C.
 5. **Complete:** exact examples cover lengths zero and one, leading zeros,
    all-zero and all-`F` words, and bases 2, 10, and 16 for reconstruction,
    including fractional values and values greater than one. Examples supplement the
@@ -223,9 +245,10 @@ and hexadecimal examples remain unchanged.
    audited results.
 
 These foundations, the word–interval correspondence, the shift lemma, and the
-orbit-closure equivalence (including its π specialization) are complete. The final
-consolidated review remains pending in the
-[remaining Lean verification roadmap](problem-formulation.md#remaining-lean-verification-roadmap),
-using the reviewed foundations. Complete and review that formulation verification
-before beginning work on proving hexadecimal disjunctivity of π. The conjecture
-proof and the BBP digit-extraction algorithm are separate research tasks.
+orbit-closure equivalence (including its π specialization) are complete. The
+[consolidated review](formulation-review.md) completes milestone C of the
+[verification roadmap](problem-formulation.md#remaining-lean-verification-roadmap).
+It records all thirteen actual axiom lists and the comparison with the intended
+problem. Formulation verification is complete; the pi disjunctivity conjecture
+remains unproved. Work on that proof or BBP formalization requires separate
+authorization.

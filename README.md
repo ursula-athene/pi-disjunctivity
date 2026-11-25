@@ -44,20 +44,28 @@ $$
 
 `PiDisjunctivity.piHexadecimalDisjunctivity_iff_orbitClosure` specializes that
 equivalence to the two existing conjecture statements about π. Neither statement
-is asserted. The remaining milestone is the final consolidated formulation review.
+is asserted.
+
+Milestone C is complete: the [consolidated formulation review](docs/formulation-review.md)
+checks the quantified problem, leading zeros, indexing, integer parts, terminating
+expansions, interval boundaries, and both closure endpoints against the general
+proofs. No definition or previously reviewed theorem statement needed correction.
+`PiDisjunctivity.baseDigit_div_pow_eq_zero` now explicitly proves that every digit
+after a terminating prefix is zero, in every base $b\ge 2$.
 
 See the [validation plan](docs/problem-formulation.md#plan-for-validating-the-formulation)
 and its [remaining Lean verification roadmap](docs/problem-formulation.md#remaining-lean-verification-roadmap)
-for the theorem statements, proof sequence, and completion criteria.
-Complete and review the formulation verification before beginning work on the
-π conjecture itself. Whether π satisfies this property remains the research
-question; this repository does not establish it.
+for the theorem statements, proof sequence, and completed review criteria.
+Formulation verification is complete. Work on proving the π conjecture or
+formalizing BBP requires separate authorization. Whether π satisfies this
+property remains the research question; this repository does not establish it.
 
 The digit and disjunctivity definitions remain parameterized by the base. The
 word value, orbit, and conjecture definitions use base 16. Reconstruction examples
 cover bases 2, 10, and 16. The default build checks the definitions, all three
-foundational steps, both formulation equivalences, and examples. The final
-formulation review remains pending.
+foundational steps, both formulation equivalences, the termination theorem, and
+examples. The review distinguishes these kernel-checked results from the
+mathematical comparison with the intended problem.
 
 ## Installation
 
@@ -126,10 +134,12 @@ both formulation equivalences:
 lake env lean Test.lean
 ```
 
-This check requires all twelve reviewed theorem types and uses `#guard_msgs` to
+This check preserves the twelve original theorem-type audits and adds the
+termination theorem, for thirteen reviewed theorems. It uses `#guard_msgs` to
 verify each theorem's exact axiom list: `propext`, `Classical.choice`, and
 `Quot.sound`. An unexpected axiom such as `sorryAx` makes the check fail. CI runs
-it after the library build.
+it after the library build. Two further checks expand the named π propositions
+to the explicit quantified digit and orbit statements.
 
 To build selected modules explicitly:
 
@@ -150,13 +160,16 @@ lake env lean --version
 Open the repository root in VS Code to work with Lean's interactive proof state.
 A successful build checks the definitions, theorems, and examples included. The
 [implementation status](docs/problem-formulation.md#implementation-status)
-records the remaining review work. The current audit covers all three foundations
-and milestones A and B. Milestone C's final formulation review remains pending.
+records the completed foundations and milestones A, B, and C. The
+[review report](docs/formulation-review.md) records the semantic review, actual
+axiom lists, dependency inspection, validation results, and remaining limitations.
 
 ## Repository guide
 
-- [docs/session-prompts.md](docs/session-prompts.md): the current new-session
-  handoff for milestone C's final formulation audit and review.
+- [docs/formulation-review.md](docs/formulation-review.md): the completed milestone C
+  review, with requirements mapped to definitions, universal proofs, and examples.
+- [docs/session-prompts.md](docs/session-prompts.md): the completed milestone C
+  prompt and the boundary for future work.
 - [docs/dependencies-and-trust.md](docs/dependencies-and-trust.md): the Mathlib-only
   external-library policy, dependency stack, axiom audit, and limits of proof
   checking. [AGENTS.md](AGENTS.md) records the policy for future repository work.
@@ -172,7 +185,7 @@ and milestones A and B. Milestone C's final formulation review remains pending.
   milestone A's fixed-length injectivity theorem.
 - [PiDisjunctivity/Digits.lean](PiDisjunctivity/Digits.lean): the Step 3 proofs of
   arbitrary-base digit bounds, the scaled-floor recurrence, prefix reconstruction,
-  and truncation error.
+  and truncation error, plus the general trailing-zero theorem added during review.
 - [PiDisjunctivity/Cylinders.lean](PiDisjunctivity/Cylinders.lean): hexadecimal
   digit shifting and the word–interval correspondence.
 - [PiDisjunctivity/Conjectures.lean](PiDisjunctivity/Conjectures.lean): proposition
@@ -186,12 +199,14 @@ and milestones A and B. Milestone C's final formulation review remains pending.
   cover lengths zero and one, zero values, `00A`, `FF`, and the maximum value at
   every length. Reconstruction and error examples cover bases 2, 10, and 16,
   integer parts, zero, empty prefixes, and terminating and nonterminating inputs.
+  Termination checks include arbitrary later positions and natural integer inputs.
   Correspondence examples cover both interval boundaries, offsets, leading zeros,
   and the empty word. Orbit examples check both closure endpoints, word recovery,
   and the failure of disjunctivity for zero.
 - [PiDisjunctivity.lean](PiDisjunctivity.lean): the library's root imports.
-- [Test.lean](Test.lean): all twelve foundational and equivalence statements and
-  guarded axiom checks.
+- [Test.lean](Test.lean): the twelve original foundational and equivalence
+  statements plus the termination theorem, all with guarded axiom checks, and
+  two direct conjecture-definition checks.
 
 ## License
 

@@ -1,10 +1,16 @@
 # Session prompts
 
-The current handoff is milestone C below. The older
+Milestone C is complete; see the [consolidated review](formulation-review.md).
+The prompt below is retained as the record of the authorized review scope, not
+as a pending task. Formulation verification is complete, and the pi disjunctivity
+conjecture remains unproved. A proof attempt or BBP formalization requires
+separate authorization. The older
 [Step 2 prompt](step-2-session-prompt.md) is retained as historical context;
 that foundational step is already complete.
 
 ## Next session: final formulation audit and review (milestone C)
+
+**Completed 2026-11-24. Historical prompt follows.**
 
 Complete **milestone C, "Complete the formulation audit and review,"** in
 `docs/problem-formulation.md`. This authorizes the review, necessary corrections,

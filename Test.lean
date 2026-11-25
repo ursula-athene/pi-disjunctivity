@@ -7,7 +7,18 @@ module
 
 import PiDisjunctivity
 
-/-! Check the foundations and both formulation equivalences after running `lake build`. -/
+/-! Audit the problem definitions, foundations, and formulation equivalences after `lake build`. -/
+
+-- Compare the named π statements directly with the reviewed quantified problem and orbit.
+example : PiDisjunctivity.PiHexadecimalDisjunctivity ↔
+    ∀ (k : ℕ) (s : Fin k → Fin 16), ∃ n : ℕ, ∀ i : Fin k,
+      Nat.floor ((16 : ℝ) ^ (n + i.val + 1) * Real.pi) % 16 = (s i).val :=
+  Iff.rfl
+
+example : PiDisjunctivity.PiHexadecimalOrbitClosure ↔
+    closure (Set.range (fun n : ℕ => Int.fract ((16 : ℝ) ^ n * Real.pi))) =
+      Set.Icc (0 : ℝ) 1 :=
+  Iff.rfl
 
 -- This is the reviewed statement, including its full quantification and digit order.
 example (k : ℕ) (s : Fin k → Fin 16) :
@@ -69,6 +80,11 @@ example (x : ℝ) (hx : 0 ≤ x) :
 
 example : PiDisjunctivity.PiHexadecimalDisjunctivity ↔ PiDisjunctivity.PiHexadecimalOrbitClosure :=
   PiDisjunctivity.piHexadecimalDisjunctivity_iff_orbitClosure
+
+-- The final review makes the trailing-zero convention explicit at every later position.
+example (b : ℕ) (hb : 2 ≤ b) (m k n : ℕ) :
+    PiDisjunctivity.baseDigit b ((m : ℝ) / (b : ℝ) ^ k) (k + n) = 0 :=
+  PiDisjunctivity.baseDigit_div_pow_eq_zero b hb m k n
 
 /--
 info: 'PiDisjunctivity.blockValue_eq_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
@@ -143,3 +159,10 @@ info: 'PiDisjunctivity.piHexadecimalDisjunctivity_iff_orbitClosure' depends on a
 -/
 #guard_msgs (whitespace := lax) in
 #print axioms PiDisjunctivity.piHexadecimalDisjunctivity_iff_orbitClosure
+
+/--
+info: 'PiDisjunctivity.baseDigit_div_pow_eq_zero' depends on axioms:
+[propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms PiDisjunctivity.baseDigit_div_pow_eq_zero

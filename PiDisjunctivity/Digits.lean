@@ -10,7 +10,7 @@ public import Mathlib.Algebra.BigOperators.Fin
 import Mathlib.Algebra.Order.Floor.Semiring
 import Mathlib.Tactic
 
-/-! Digit bounds, finite-prefix reconstruction, and truncation error in arbitrary bases. -/
+/-! Digit bounds, reconstruction, truncation error, and termination in arbitrary bases. -/
 
 public section
 
@@ -83,5 +83,17 @@ theorem truncation_error (b : ℕ) (hb : 2 ≤ b)
   · apply (lt_div_iff₀ hp).2
     rw [sub_mul, div_mul_cancel₀ _ hp.ne']
     linarith [Nat.lt_floor_add_one ((b : ℝ) ^ k * x)]
+
+/-- A terminating base-`b` expansion has zero at every position after its length-`k` prefix. -/
+theorem baseDigit_div_pow_eq_zero (b : ℕ) (hb : 2 ≤ b) (m k n : ℕ) :
+    baseDigit b ((m : ℝ) / (b : ℝ) ^ k) (k + n) = 0 := by
+  have hb0 : (b : ℝ) ≠ 0 := by exact_mod_cast (show b ≠ 0 by omega)
+  have hscaled : (b : ℝ) ^ (k + n + 1) * ((m : ℝ) / (b : ℝ) ^ k) =
+      ((b ^ (n + 1) * m : ℕ) : ℝ) := by
+    push_cast
+    rw [show k + n + 1 = k + (n + 1) by omega, pow_add]
+    field_simp
+  rw [baseDigit, hscaled, Nat.floor_natCast]
+  simp [pow_succ, Nat.mul_mod]
 
 end PiDisjunctivity

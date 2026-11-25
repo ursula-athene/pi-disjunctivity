@@ -42,9 +42,12 @@ terms that the kernel checks, so their use does not by itself introduce new
 mathematical axioms. See the official
 [Lean explanation of tactic proofs](https://lean-lang.org/doc/reference/latest/Tactic-Proofs/).
 
-The current [Test.lean](../Test.lean) checks all twelve reviewed theorem types
-through the root library import and guards their `#print axioms` results. Each
-currently reports exactly these three axioms:
+The current [Test.lean](../Test.lean) preserves all twelve original theorem-type
+checks and adds the general termination theorem, for thirteen audited theorems
+through the root library import. It guards their `#print axioms` results and
+also checks both named π definitions against their expanded statements. The
+[consolidated review](formulation-review.md#axiom-audit) records each actual list.
+Every audited theorem currently reports exactly these three axioms:
 
 | Axiom | Meaning |
 | --- | --- |
@@ -78,7 +81,7 @@ CI runs the theorem-type and axiom audit after the build. These checks do not
 automatically enforce the external-library policy; configuration and import
 review remain necessary.
 
-## What still requires formulation review
+## Completed formulation review and trust boundary
 
 Kernel checking establishes that formal proofs follow from their formal
 statements and assumptions. It cannot establish that our definitions and
@@ -86,9 +89,20 @@ statements accurately express the intended English problem. That comparison
 requires mathematical review, especially for digit indexing, leading zeros,
 terminating expansions, interval boundaries, and quantification.
 
-The foundational theorems and the word–interval and orbit-closure equivalences
-are implemented. Milestone C, the final consolidated formulation review in the
-[verification roadmap](problem-formulation.md#remaining-lean-verification-roadmap),
-remains pending. Documenting the dependency policy does not complete that review.
-The pi disjunctivity conjecture itself remains unproved; work on proving it is a
-separate phase after the formulation has been completed and reviewed.
+Milestone C of the
+[verification roadmap](problem-formulation.md#remaining-lean-verification-roadmap)
+is complete. The [review report](formulation-review.md) compares the definitions
+and both equivalences with the intended problem, including the general arguments
+for termination and closure endpoints. It records successful compilation and
+audits as distinct from the mathematical review of meaning.
+
+The separate dependency inspection confirmed one direct Mathlib dependency,
+unchanged Lean/Mathlib `v4.37.0-rc1` pins, eight inherited entries matching the
+pinned Mathlib manifest, and nine package checkouts at the recorded revisions
+with no tracked changes. Every explicit project import is from Mathlib or this
+project; no vendored or additional library was introduced. CI retains its
+build-then-audit sequence. See the report for commands, results, and limitations.
+
+Formulation verification is complete. The pi disjunctivity conjecture itself
+remains unproved; work on proving it or formalizing BBP requires separate
+authorization.
