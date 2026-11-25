@@ -6,6 +6,13 @@ The [foundational theorem plan](foundations-plan.md) gives the reviewed statemen
 proof methods, and completion status for the foundations. The conjecture about π
 remains open.
 
+**Current scope: formalize and validate the problem statement in Lean.** The
+conjecture already has a Lean statement, but the full verification that the
+definitions and alternate formulation express the intended problem is still
+pending. Complete and review that verification before beginning work on a proof
+of π's hexadecimal disjunctivity. The correctness and equivalence proofs below
+belong to formulation verification; they do not assert that π is disjunctive.
+
 ## Problem formulation
 
 > Every finite string of hexadecimal digits occurs contiguously after the radix
@@ -146,6 +153,153 @@ Completing this validation would establish the correspondence between the digit
 and orbit formulations. Whether π satisfies either formulation would remain the
 separate research problem.
 
+## Remaining Lean verification roadmap
+
+**Status: planned; not yet implemented.** All three steps of
+[the foundations plan](foundations-plan.md) are complete. The remaining work is
+organized below in dependency order. This roadmap extends the broader validation
+plan above; it does not add another foundational step or change the conjecture.
+
+The Lean snippets are proposed interfaces in the `PiDisjunctivity` namespace,
+without proof bodies. Check their elaboration and mathematical meaning during
+implementation. Preserve the existing definitions and seven reviewed foundational
+statements, and build new proofs from the current foundations rather than
+restoring the discarded interval and orbit proofs from history.
+
+### A. Establish the word–interval correspondence
+
+**Status: pending. This is the next implementation milestone.**
+
+First prove that a word's value determines the word when its length is fixed:
+
+```lean
+theorem blockValue_injective (k : ℕ) :
+    Function.Injective (blockValue k)
+```
+
+Induct on `k`. For successor length, reduce equal values modulo 16 to recover
+the last digit, and divide by 16 to recover the prefix value. The digit bounds
+justify both operations. Apply induction to the prefixes and check all positions
+with `Fin.castSucc` and `Fin.last`. Length zero uses equality of functions on
+`Fin 0`. This is uniqueness at a fixed length; leading-zero words of different
+lengths can still have the same value.
+
+Next prove the digit shift, including removal of the integer part:
+
+```lean
+theorem baseDigit_fract_pow (x : ℝ) (hx : 0 ≤ x) (n i : ℕ) :
+    baseDigit 16 (Int.fract ((16 : ℝ) ^ n * x)) i =
+      baseDigit 16 x (n + i)
+```
+
+Split the argument into multiplication by `16 ^ n` and invariance of fractional
+digits under removal of the integer part. Power arithmetic handles the first
+part. For the second, use the decomposition into natural floor plus fractional
+part for a nonnegative input: scaling the integer part contributes a multiple of
+16 to the next floor, which disappears modulo 16. Check the relationship between
+`Nat.floor`, `Int.floor`, and `Int.fract`, including nonnegativity and casts.
+
+Then prove the central correspondence:
+
+```lean
+theorem block_iff_mem_interval (x : ℝ) (hx : 0 ≤ x)
+    (n k : ℕ) (s : Fin k → Fin 16) :
+    (∀ i : Fin k, baseDigit 16 x (n + i.val) = (s i).val) ↔
+      Int.fract ((16 : ℝ) ^ n * x) ∈
+        Set.Ico ((blockValue k s : ℝ) / (16 : ℝ) ^ k)
+          (((blockValue k s : ℝ) + 1) / (16 : ℝ) ^ k)
+```
+
+Set `y = Int.fract ((16 : ℝ) ^ n * x)`, so `0 ≤ y < 1` and `Nat.floor y = 0`.
+Use `baseDigit_lt` to form its actual length-`k` word with digits in `Fin 16`.
+The reconstruction theorem and `blockValue_eq_sum` identify that word's value
+with `Nat.floor ((16 : ℝ) ^ k * y)`. The floor equals `blockValue k s` exactly
+when `y` belongs to the displayed half-open interval; division is valid because
+`(16 : ℝ) ^ k` is positive. Fixed-length injectivity recovers the individual
+digits in the reverse direction. The shift lemma transfers them to position `n`
+of `x`.
+
+Keep `k = 0` in the theorem: the digit condition is vacuous and the interval is
+`[0,1)`. Check nonzero offsets, leading-zero padding, inclusion of the left
+endpoint, and exclusion of the right endpoint, including terminating expansions.
+
+Extend `BlockValue.lean` for injectivity and use a new `Cylinders.lean` module for
+the shift and correspondence, with any necessary helpers. Export the results
+through the library root and extend the statement and axiom audit before moving
+to the next milestone.
+
+### B. Establish the orbit-closure equivalence
+
+**Status: pending; depends on milestone A.**
+
+```lean
+theorem isDisjunctive_iff_orbitClosure (x : ℝ) (hx : 0 ≤ x) :
+    IsDisjunctive 16 x ↔
+      closure (hexadecimalOrbit x) = Set.Icc (0 : ℝ) 1
+```
+
+Prove both directions for arbitrary nonnegative `x`:
+
+- **Disjunctivity implies full closure.** Every orbit point is in `[0,1)`, so its
+  closure is contained in the closed set `[0,1]`. To approximate any `t ∈ [0,1]`,
+  choose `k` with `1 / 16 ^ k` smaller than the desired positive error. For
+  `t < 1`, take the cell indexed by `Nat.floor ((16 : ℝ) ^ k * t)`; for `t = 1`,
+  take the final cell, indexed by `16 ^ k - 1`. Check that each index is below
+  `16 ^ k`, use `exists_blockValue_eq` to obtain a word, and use its occurrence
+  and milestone A to obtain an orbit point. Its distance from `t` is at most
+  the cell width. This also handles `t = 0` and proves the other inclusion.
+- **Full closure implies disjunctivity.** Given a word, its interval has positive
+  width and endpoints in `[0,1]`, by `blockValue_lt`. Its midpoint lies in the
+  orbit closure. The interval's open interior is a neighborhood of that midpoint,
+  so it contains an orbit point. Apply milestone A to obtain an occurrence of
+  the word. Use the open interior here: closure membership alone does not supply
+  an orbit point at a specified boundary. Include the empty word.
+
+Use a new `OrbitEquivalence.lean` module depending on the correspondence. Then
+specialize the equivalence using `0 ≤ Real.pi` and the existing proposition names:
+
+```lean
+theorem piHexadecimalDisjunctivity_iff_orbitClosure :
+    PiHexadecimalDisjunctivity ↔ PiHexadecimalOrbitClosure
+```
+
+This specialization establishes that the two conjecture statements agree. It
+proves neither conjecture. Import `Conjectures.lean` for the existing names without
+changing their definitions.
+
+### C. Complete the formulation audit and review
+
+**Status: pending; depends on milestones A and B.**
+
+Completion requires all of the following:
+
+- Compare the exported statements with the intended English formulation: every
+  finite hexadecimal word, length retained, zero-based positions, nonnegative
+  real inputs where required, and the chosen trailing-zero convention.
+- Preserve the existing seven theorem checks. Extend `Test.lean` with checks of
+  all new public theorem types and guarded `#print axioms` results, including the
+  general orbit equivalence and the specialization to π. Record each actual
+  axiom list, allowing only `propext`, `Classical.choice`, and `Quot.sound`; a
+  theorem may use fewer. Unexpected dependencies must fail the audit.
+- Extend exact examples for empty and one-digit words, zero, `00A`, `FF`,
+  nonzero offsets, numbers with an integer part, terminating expansions, and
+  both interval boundaries. Verify the closure argument at both 0 and 1 in the
+  universal proof. Examples supplement that proof.
+- Run `lake build`, `lake env lean Test.lean`, and `git diff --check`. Keep CI
+  running the expanded audit after the build. Resolve warnings with the checks
+  enabled; use the pinned Lean and Mathlib `v4.37.0-rc1` versions.
+- Add no `sorry`, `admit`, project-specific axioms, `native_decide` proof bypasses,
+  or unsafe proof shortcuts. Preserve `module` and public-export conventions,
+  MIT SPDX headers, the header linter, and Ursula Athene attribution.
+- Update implementation status only after compilation and audit, and review the
+  correspondence between the formal statements and the intended problem.
+
+The formulation verification is complete when these criteria are met. Lean
+checks the formal proofs relative to the definitions; the comparison with the
+intended English statement remains a mathematical review. Work on proving π's
+hexadecimal disjunctivity begins only after this phase is complete and reviewed,
+as a separately authorized task. BBP formalization is also outside this phase.
+
 ## Implementation status
 
 The earlier cylinder and orbit-equivalence proofs have been discarded from the
@@ -194,5 +348,7 @@ axiom. CI runs this check after building. These checks and `git diff --check` pa
 with the pinned Lean and Mathlib versions.
 
 The foundations are complete. The cylinder correspondence, digit-shift lemma,
-and orbit equivalence remain unimplemented and require a subsequent proof plan.
+and orbit equivalence remain unimplemented. The
+[remaining verification roadmap](#remaining-lean-verification-roadmap) records
+their implementation order, proposed statements, and completion criteria.
 These results make no claim about the occurrence of words in π.

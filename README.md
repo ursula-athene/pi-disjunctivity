@@ -39,9 +39,11 @@ $$
 $$
 
 See the [validation plan](docs/problem-formulation.md#plan-for-validating-the-formulation)
-for the proof strategy, audit criteria, and remaining validation tasks. Whether
-π satisfies this property remains the research question; this repository does
-not establish it.
+and its [remaining Lean verification roadmap](docs/problem-formulation.md#remaining-lean-verification-roadmap)
+for the proposed theorem statements, proof sequence, and completion criteria.
+Complete and review the formulation verification before beginning work on the
+π conjecture itself. Whether π satisfies this property remains the research
+question; this repository does not establish it.
 
 The digit and disjunctivity definitions remain parameterized by the base. The
 word value, orbit, and conjecture definitions use base 16. Reconstruction examples

@@ -220,6 +220,8 @@ and hexadecimal examples remain unchanged.
    audited results.
 
 These foundations are complete. The word–interval correspondence,
-shift lemma, and orbit-closure equivalence require a subsequent proof plan using
-the reviewed foundations. Proving hexadecimal disjunctivity of π, and formalizing
-the BBP digit-extraction algorithm, are separate research tasks.
+shift lemma, orbit-closure equivalence, and final audit are planned in the
+[remaining Lean verification roadmap](problem-formulation.md#remaining-lean-verification-roadmap),
+using the reviewed foundations. Complete and review that formulation verification
+before beginning work on proving hexadecimal disjunctivity of π. The conjecture
+proof and the BBP digit-extraction algorithm are separate research tasks.
