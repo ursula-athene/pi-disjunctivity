@@ -35,6 +35,19 @@ For Lean changes, run `lake build`, `lake env lean Test.lean`, and
 MIT SPDX headers, and enabled linters. Copyright and author attribution must
 use only Ursula Athene.
 
+## Pull request format
+
+Use this format whenever the user requests PR text, including terminal output,
+or asks to open a pull request:
+
+- Give the PR a concise, plain-English title describing its subject. When
+  printing PR text to the terminal, put the title on the first line, followed
+  by a blank line.
+- Write the body in GitHub Markdown. Explain at a high level why the changes
+  were made and summarize the set of changes. Avoid excessive detail and
+  laundry lists of features or commits.
+- If concerns remain for future work, list them with concise descriptions.
+
 ## Bounded proof research
 
 Use [the proof plan](docs/proof-plan.md) as the mathematical roadmap and
