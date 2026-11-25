@@ -1,5 +1,6 @@
 name = "pi-disjunctivity"
 version = "0.1.0"
+license = "MIT"
 keywords = ["math"]
 defaultTargets = ["PiDisjunctivity"]
 
@@ -7,6 +8,8 @@ defaultTargets = ["PiDisjunctivity"]
 pp.unicode.fun = true # pretty-prints `fun a ↦ b`
 relaxedAutoImplicit = false
 weak.linter.mathlibStandardSet = true
+# The standard set enables the header check; require our SPDX license line.
+weak.linter.style.header.license = "SPDX-License-Identifier: MIT"
 maxSynthPendingDepth = 3
 
 [[require]]

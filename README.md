@@ -16,29 +16,61 @@ links to the BBP paper, and specifies the mathematical statement.
 
 ## Scope and current status
 
-The Lean library proves the correspondence between hexadecimal digit blocks and
-base-16 intervals, and the equivalence of disjunctivity with
+All three steps of the [foundational theorem plan](docs/foundations-plan.md) are
+implemented:
+`PiDisjunctivity.blockValue_eq_sum` proves that the recursive hexadecimal word
+value equals the specified big-endian finite sum, for every length and word.
+`PiDisjunctivity.blockValue_lt` and `PiDisjunctivity.exists_blockValue_eq` prove
+that length-`k` words represent exactly the natural numbers below `16 ^ k`,
+including the empty word and leading-zero padding.
+`PiDisjunctivity.baseDigit_lt`, `PiDisjunctivity.floor_pow_succ`,
+`PiDisjunctivity.floor_pow_eq_digits`, and `PiDisjunctivity.truncation_error`
+validate digits and finite truncations in every base $b\ge 2$. For nonnegative
+inputs, reconstruction includes the integer part and truncation error lies in
+$[0,1/b^k)$. The library also contains the problem definitions and exact examples.
+Milestone A of the remaining verification roadmap is also complete:
+`PiDisjunctivity.blockValue_injective`, `PiDisjunctivity.baseDigit_fract_pow`, and
+`PiDisjunctivity.block_iff_mem_interval` establish fixed-length uniqueness, digit
+shifting, and the word–interval correspondence, including empty words and leading
+zeros. These proofs were built from the reviewed foundations.
+
+Milestone B is complete as well: `PiDisjunctivity.isDisjunctive_iff_orbitClosure`
+proves that disjunctivity is equivalent to
 
 $$
 \overline{\{\operatorname{fract}(16^n x):n\in\mathbb N\}}=[0,1]
 \qquad (x\ge 0).
 $$
 
+`PiDisjunctivity.piHexadecimalDisjunctivity_iff_orbitClosure` specializes that
+equivalence to the two existing conjecture statements about π. Neither statement
+is asserted.
+
+Milestone C is complete: the [consolidated formulation review](docs/formulation-review.md)
+checks the quantified problem, leading zeros, indexing, integer parts, terminating
+expansions, interval boundaries, and both closure endpoints against the general
+proofs. No definition or previously reviewed theorem statement needed correction.
+`PiDisjunctivity.baseDigit_div_pow_eq_zero` now explicitly proves that every digit
+after a terminating prefix is zero, in every base $b\ge 2$.
+
+The [review follow-up](docs/review-follow-up.md) adds infinite-series
+reconstruction, arbitrarily late word occurrences under disjunctivity, and a
+check of π's first four hexadecimal fractional digits, `243F`, using Mathlib's
+proved bounds. It also clarifies the input domain and empty-word notation.
+
 See the [validation plan](docs/problem-formulation.md#plan-for-validating-the-formulation)
-for the proof strategy, audit criteria, and remaining validation tasks. Whether
-π satisfies this property remains the research question; this repository does
-not establish it.
+and its [remaining Lean verification roadmap](docs/problem-formulation.md#remaining-lean-verification-roadmap)
+for the theorem statements, proof sequence, and completed review criteria.
+Formulation verification is complete. Work on proving the π conjecture or
+formalizing BBP requires separate authorization. Whether π satisfies this
+property remains the research question; this repository does not establish it.
 
 The digit and disjunctivity definitions remain parameterized by the base. The
-orbit, equivalence theorems, conjecture definitions, and examples use base 16.
-The main theorem is `PiDisjunctivity.hexadecimal_disjunctive_iff_orbit_closure`;
-`PiDisjunctivity.pi_hexadecimal_disjunctivity_iff_orbit_closure` specializes it to
-the two open statements about π.
-
-The default build includes every project library module and the hexadecimal
-examples. The axiom audit checks that both equivalence theorems depend only on
-`propext`, `Classical.choice`, and `Quot.sound`, with no `sorryAx` or
-project-specific axioms.
+word value, orbit, and conjecture definitions use base 16. Reconstruction examples
+cover bases 2, 10, and 16. The default build checks the definitions, all three
+foundational steps, both formulation equivalences, termination, infinite
+reconstruction, recurrence, and examples. The review distinguishes these results
+from the mathematical comparison with the intended problem.
 
 ## Installation
 
@@ -100,20 +132,27 @@ Build the library, including the hexadecimal examples:
 lake build
 ```
 
-Run the axiom audit:
+Check the exported statements and axiom dependencies for the foundations and
+both formulation equivalences:
 
 ```sh
 lake env lean Test.lean
 ```
 
-The audit uses `#guard_msgs` to check the output of `#print axioms`; an unexpected
-axiom makes the command fail. CI runs this check after the build.
+This check preserves the thirteen milestone C theorem-type audits and adds
+infinite reconstruction and recurrence, for fifteen reviewed theorems. It uses
+`#guard_msgs` to verify each theorem's exact axiom list: `propext`, `Classical.choice`, and
+`Quot.sound`. An unexpected axiom such as `sorryAx` makes the check fail. CI runs
+it after the library build. Two further checks expand the named π propositions
+to the explicit quantified digit and orbit statements.
 
 To build selected modules explicitly:
 
 ```sh
-lake build PiDisjunctivity.Definitions PiDisjunctivity.Equivalences \
-  PiDisjunctivity.Conjectures PiDisjunctivity.Examples
+lake build PiDisjunctivity.Definitions PiDisjunctivity.BlockValue \
+  PiDisjunctivity.Digits PiDisjunctivity.Disjunctivity PiDisjunctivity.Cylinders \
+  PiDisjunctivity.Conjectures PiDisjunctivity.OrbitEquivalence \
+  PiDisjunctivity.Examples
 ```
 
 For a quick check of one source file, or to inspect the selected Lean version:
@@ -124,22 +163,64 @@ lake env lean --version
 ```
 
 Open the repository root in VS Code to work with Lean's interactive proof state.
-A successful build and axiom audit verify the included declarations; the
-[validation plan](docs/problem-formulation.md#implementation-status) records which
-parts of the broader formulation review are complete and which remain planned.
+A successful build checks the definitions, theorems, and examples included. The
+[implementation status](docs/problem-formulation.md#implementation-status)
+records the completed foundations and milestones A, B, and C. The
+[review report](docs/formulation-review.md) records the semantic review, actual
+axiom lists, dependency inspection, validation results, and remaining limitations.
 
 ## Repository guide
 
+- [docs/review-follow-up.md](docs/review-follow-up.md): improvements prompted by
+  the external review, proof methods, validation, and current audit coverage.
+- [docs/formulation-review.md](docs/formulation-review.md): the completed milestone C
+  review, with requirements mapped to definitions, universal proofs, and examples.
+- [docs/session-prompts.md](docs/session-prompts.md): the completed milestone C
+  prompt and the boundary for future work.
+- [docs/dependencies-and-trust.md](docs/dependencies-and-trust.md): the Mathlib-only
+  external-library policy, dependency stack, axiom audit, and limits of proof
+  checking. [AGENTS.md](AGENTS.md) records the policy for future repository work.
 - [docs/problem-formulation.md](docs/problem-formulation.md): the hexadecimal
   problem statement and plan for validating its formalization.
+- [docs/foundations-plan.md](docs/foundations-plan.md): reviewed theorem
+  statements, proof methods, and completion status for the three foundations.
 - [PiDisjunctivity/Definitions.lean](PiDisjunctivity/Definitions.lean): digit and
-  disjunctivity definitions parameterized by the base, plus the hexadecimal orbit.
-- [PiDisjunctivity/Equivalences.lean](PiDisjunctivity/Equivalences.lean): hexadecimal
-  word, interval, and orbit-closure results.
+  disjunctivity definitions parameterized by the base, plus the hexadecimal orbit
+  and recursive word value.
+- [PiDisjunctivity/BlockValue.lean](PiDisjunctivity/BlockValue.lean): the Steps 1
+  and 2 proofs of the finite-sum formula, word-value bound, and coverage, plus
+  milestone A's fixed-length injectivity theorem.
+- [PiDisjunctivity/Digits.lean](PiDisjunctivity/Digits.lean): the Step 3 proofs of
+  arbitrary-base digit bounds, the scaled-floor recurrence, prefix reconstruction,
+  and truncation error, plus general termination and infinite-series reconstruction.
+- [PiDisjunctivity/Disjunctivity.lean](PiDisjunctivity/Disjunctivity.lean): every
+  finite word occurs arbitrarily far out under the disjunctivity hypothesis.
+- [PiDisjunctivity/Cylinders.lean](PiDisjunctivity/Cylinders.lean): hexadecimal
+  digit shifting and the word–interval correspondence.
 - [PiDisjunctivity/Conjectures.lean](PiDisjunctivity/Conjectures.lean): proposition
-  definitions naming the hexadecimal conjectures and a theorem equating them.
-- [PiDisjunctivity/Examples.lean](PiDisjunctivity/Examples.lean): exact rational
+  definitions naming the hexadecimal digit-block and orbit-closure conjectures.
+- [PiDisjunctivity/OrbitEquivalence.lean](PiDisjunctivity/OrbitEquivalence.lean):
+  the orbit-closure equivalence for every nonnegative real and its specialization
+  to the two conjecture statements about π.
+- [PiDisjunctivity/Examples.lean](PiDisjunctivity/Examples.lean): π's first four
+  fractional hexadecimal digits from proved bounds, and exact rational
   examples for hexadecimal indexing, digits `A`–`F`, leading zeros, terminating
-  expansions, and interval boundaries.
+  expansions, interval boundaries, and the word-value sum formula; range examples
+  cover lengths zero and one, zero values, `00A`, `FF`, and the maximum value at
+  every length. Reconstruction and error examples cover bases 2, 10, and 16,
+  integer parts, zero, empty prefixes, and terminating and nonterminating inputs.
+  Termination checks include arbitrary later positions and natural integer inputs.
+  Correspondence examples cover both interval boundaries, offsets, leading zeros,
+  and the empty word. Orbit examples check both closure endpoints, word recovery,
+  and the failure of disjunctivity for zero.
 - [PiDisjunctivity.lean](PiDisjunctivity.lean): the library's root imports.
-- [Test.lean](Test.lean): a checked axiom audit of the two equivalence theorems.
+- [Test.lean](Test.lean): fifteen foundational, equivalence, termination,
+  reconstruction, and recurrence statements with guarded axiom checks, and
+  two direct conjecture-definition checks.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
+Lean source files use `SPDX-License-Identifier: MIT` with copyright and author
+headers. The header style linter is enabled and configured to check that license
+line.
