@@ -112,6 +112,23 @@ example
     PiDisjunctivity.PiHexadecimalDisjunctivity :=
   PiDisjunctivity.piHexadecimalDisjunctivity_of_hitsHexadecimalIntervals h
 
+-- Transfer needs both vanishing errors and late visits, but no global range hypothesis.
+example (u r : ℕ → ℝ) (hr : Filter.Tendsto r Filter.atTop (nhds 0))
+    (hu : ∀ a b : ℝ, 0 ≤ a → a < b → b ≤ 1 →
+      ∀ N : ℕ, ∃ n ≥ N, u n ∈ Set.Ioo a b) :
+    ∀ a b : ℝ, 0 ≤ a → a < b → b ≤ 1 →
+      ∃ n : ℕ, Int.fract (u n + r n) ∈ Set.Ioo a b :=
+  PiDisjunctivity.hitsOpenIntervals_fract_add_of_tendsto_zero u r hr hu
+
+-- Open-interval visits imply cell visits independently of transfer, BBP, or a range premise.
+example (t : ℕ → ℝ)
+    (ht : ∀ a b : ℝ, 0 ≤ a → a < b → b ≤ 1 →
+      ∃ n : ℕ, t n ∈ Set.Ioo a b) :
+    ∀ k m : ℕ, m < 16 ^ k → ∃ n : ℕ,
+      t n ∈ Set.Ico ((m : ℝ) / (16 : ℝ) ^ k)
+        (((m : ℝ) + 1) / (16 : ℝ) ^ k) :=
+  PiDisjunctivity.hitsHexadecimalIntervals_of_hitsOpenIntervals t ht
+
 /--
 info: 'PiDisjunctivity.blockValue_eq_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
 -/
@@ -219,3 +236,17 @@ info: 'PiDisjunctivity.piHexadecimalDisjunctivity_of_hitsHexadecimalIntervals' d
 -/
 #guard_msgs (whitespace := lax) in
 #print axioms PiDisjunctivity.piHexadecimalDisjunctivity_of_hitsHexadecimalIntervals
+
+/--
+info: 'PiDisjunctivity.hitsOpenIntervals_fract_add_of_tendsto_zero' depends on axioms:
+[propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms PiDisjunctivity.hitsOpenIntervals_fract_add_of_tendsto_zero
+
+/--
+info: 'PiDisjunctivity.hitsHexadecimalIntervals_of_hitsOpenIntervals' depends on axioms:
+[propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms PiDisjunctivity.hitsHexadecimalIntervals_of_hitsOpenIntervals

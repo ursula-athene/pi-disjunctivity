@@ -3,11 +3,13 @@
 **Planning baseline:** 2026-11-24, commit
 `56ca22e1a9776ee7a5d7b4e36103f932d3b45646` on `feature/attempt-01`.
 
-**Latest implementation update: 2026-11-24.** A bounded pilot on
-`feature/attempt-02` completed Step 2's interval-hitting reduction. See the
-[blueprint](proof-blueprint.md) for dependencies, [research log](research-log.md)
+**Latest implementation update: 2026-11-25.** On `feature/attempt-02`, Step 2's
+interval-hitting reduction and the bounded B4 + P3 milestone are checked:
+conditional interior-margin transfer and open-interval-to-cell conversion.
+See the [blueprint](proof-blueprint.md) for dependencies, [research log](research-log.md)
 for checks and review, and [workflow](proof-workflow.md) for the executed
-meta-plan. The margin transfer lemma and all BBP work remain unimplemented.
+meta-plan. BBP series, recurrence, and tail results remain unimplemented;
+universal visitation remains open.
 
 The goal is to prove `PiDisjunctivity.PiHexadecimalDisjunctivity`: every finite
 hexadecimal word occurs contiguously after the radix point of `Real.pi`,
@@ -24,8 +26,8 @@ mathematical step. The other steps prepare, connect, or check that argument.
 This document plans the proof attempt requested for this branch. The scope
 restrictions in the older formulation documents describe the previous phase;
 the formulation review is already complete. The original planning change added
-no Lean proofs or assumptions; the later pilot adds only the conditional
-reduction recorded below.
+no Lean proofs or assumptions; the later bounded milestones add only the
+reductions and conditional general lemmas recorded below.
 
 ## Overview: mathematical status and formalization work
 
@@ -38,7 +40,7 @@ still take substantial work to implement and check in Lean.
 | **1. Verified foundation** | Solved. | Already proved and checked in Lean, including the digit–interval and orbit equivalences. |
 | **2. Isolate interval hitting** | An elementary consequence of the existing equivalences that expresses exactly what remains to prove. | Completed by the bounded pilot in `OrbitCriteria.lean`: a general equivalence and a conditional π reduction, both audited. |
 | **3. Prove the BBP identity** | A classical, established theorem with published proofs. | Not implemented here. Formalizing convergence, exchanging sums and integrals, and evaluating the integral could be substantial work. Existing external Lean work may help after checking it and respecting this project's dependency policy. |
-| **4. Connect BBP to the orbit** | The identities, tail estimates, and conditional transfer argument have standard proof methods. This plan supplies the mathematical outline. | Not implemented here. Likely moderate formalization work, potentially substantial around series manipulation and fractional-part boundaries. |
+| **4. Connect BBP to the orbit** | The identities, tail estimates, and conditional transfer argument have standard proof methods. This plan supplies the mathematical outline. | B4, the general conditional transfer, is checked. BBP series splitting, recurrence, and tail estimates remain unimplemented. |
 | **5. Prove universal visitation** | Open mathematical research; no complete proof method is supplied. | The decisive missing argument about this particular recurrence. |
 
 The qualification for Step 4 is that it proves an implication:
@@ -55,7 +57,7 @@ producing them is Step 5.
 1       Completed and checked.
 2       Completed and checked; the π hitting hypothesis is still open.
 3       Known theorem; potentially substantial formalization.
-4       Standard arguments; additional formalization required.
+4       General transfer checked; BBP bridges and tails remain unformalized.
 5       Open mathematical research; no complete proof method supplied.
 ```
 
@@ -89,8 +91,8 @@ The checked `243F` example confirms the initial digits, but proves no assertion
 about arbitrary words.
 
 The implementation is in [the Lean modules](../PiDisjunctivity.lean), with
-seventeen theorem-type and axiom audits in [Test.lean](../Test.lean), including
-the two Step 2 additions. The
+nineteen theorem-type and axiom audits in [Test.lean](../Test.lean), including
+the two Step 2 additions and B4/P3. The
 [formulation review](formulation-review.md) and [follow-up](review-follow-up.md)
 record the completed mathematical review. Arbitrary-base generalization and a
 normal-number API are not prerequisites for this attempt.
@@ -219,11 +221,16 @@ if the later proof benefits from them.
 conditional transfer theorem. These expose the remaining arithmetic question
 without assuming its answer.
 
-### Next bounded task: conditional interior-margin transfer
+<a id="next-bounded-task-conditional-interior-margin-transfer"></a>
 
-**Status: planned, not implemented.** This is the next bounded cycle after the
-completed Step 2 pilot, and corresponds to B4 and P3 in
-[the blueprint](proof-blueprint.md#remaining-bbp-route).
+### Completed bounded task: conditional interior-margin transfer
+
+**Status: checked and audited, 2026-11-25.** B4 and P3 in
+[the blueprint](proof-blueprint.md#remaining-bbp-route) are implemented as
+`hitsOpenIntervals_fract_add_of_tendsto_zero` and
+`hitsHexadecimalIntervals_of_hitsOpenIntervals` in `OrbitCriteria.lean`,
+exported through the existing root import. The specification below is retained
+for review; its earlier next-task anchor preserves the session-prompt link.
 
 For general sequences `u r : ℕ → ℝ`, assume:
 
@@ -269,14 +276,37 @@ visitation proof. Keep the single-visit conclusion and these two modular lemmas;
 late-output strengthening and an additional composition theorem are deferred
 until needed.
 
-**Endpoint:** checked general transfer and cell-conversion lemmas, exported
-from `OrbitCriteria.lean` if that remains the smallest suitable location,
-with explicit type checks and guarded axiom audits in `Test.lean`. Run
-`lake build`, `lake env lean Test.lean`, and `git diff --check`, then update the
-blueprint and research log. If blocked, record the exact obstruction without
-weakening the statements. Stop before defining or proving BBP series,
-recurrences, or tail estimates, and before attempting Step 5. The late-visitation
-hypothesis remains unproved for the particular BBP recurrence.
+**Endpoint met:** both general lemmas are in `OrbitCriteria.lean`, with complete
+exported-type checks and guarded axiom audits in `Test.lean`. `lake build`,
+`lake env lean Test.lean`, and `git diff --check` passed. The two observed axiom
+lists are exactly `propext`, `Classical.choice`, and `Quot.sound`. The universal
+proofs cover both endpoint targets, errors of either sign, and zero/first/last
+cells; no extra helper theorem or example was needed. The late-visitation
+hypothesis remains unproved for the particular BBP recurrence. This milestone
+stops before BBP definitions, series, recurrences, tails, and Step 5.
+
+### Next bounded task: B1 source and proof review
+
+**Proposed only; separate authorization required.** Preserve the existing
+M2/B1-before-M3/B3 order. Before substantial BBP formalization, inspect the
+original BBP identity proof and the external Lean development identified in
+Step 3, including its source revision, license, assumptions, imports, and
+version differences. Map a proof of
+`HasSum (fun j : ℕ => A(j) / (16 : ℝ) ^ j) Real.pi` to the pinned Mathlib API.
+Keep source inspection distinct from a local rebuild or axiom audit.
+
+**Endpoint:** a reviewed argument and dependency map, a license/attribution
+assessment, and the smallest concrete B1 implementation slice with exact
+statements and acceptance checks. If a source or argument is unavailable,
+record that precise obstruction. Stop after the written review, before adding
+BBP Lean declarations, adapting external code, changing dependencies, working
+on B2/B3, or attempting V. This bounds the next decision without presuming
+that the whole BBP identity is a small implementation task.
+
+The B4/P3 cycle found no mathematical or tooling obstacle that warrants a route
+change. Weighted-series/tail summability and B3 before B1 remain a possible
+alternative for a separate user decision, not an adopted reorder. The existing
+Viewpoint commit cadence also remains unchanged.
 
 ## 5. Prove the missing universal visitation theorem
 
@@ -380,7 +410,7 @@ names below remain organizational suggestions, not existing files.
 
 | Milestone   | Order                        | Work                                                                            | Suggested location                                                 |
 | ----------- | ---------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------ |
-| M1          | First small milestone        | Interval-hitting reduction complete; general transfer B4 and cell conversion P3 remain | `PiDisjunctivity/OrbitCriteria.lean`                          |
+| M1          | First small milestone        | Complete: interval-hitting reduction, general transfer B4, and cell conversion P3 | `PiDisjunctivity/OrbitCriteria.lean`                          |
 | M2          | Next established mathematics | BBP convergence and equality with `Real.pi`                                     | `PiDisjunctivity/BBP/Series.lean`                                  |
 | M3          | Next bridge                  | Finite sums, recurrence, modular reduction, and tail estimates                  | `PiDisjunctivity/BBP/Orbit.lean`                                   |
 | M4          | Research milestone           | Develop and prove Step 5's missing visitation argument                          | Mathematical notes first; a Lean module once the argument is sound |
@@ -396,8 +426,8 @@ NEW: universal visitation of that recurrence --+-> pi orbit visits all cells
 existing word/interval and orbit equivalences ------+-> pi disjunctivity
 ```
 
-The pilot makes the exact missing interval-hitting hypothesis explicit. The
-remaining part of the first suggested milestone is B4's conditional transfer
-with sufficient error margins and P3's cell conversion. Work on the Step 5 argument can
-proceed while the established BBP mathematics is being formalized; completing
-more infrastructure is not evidence that the open visitation problem is solved.
+The pilot makes the exact missing interval-hitting hypothesis explicit. B4's
+conditional transfer and P3's cell conversion complete M1. The next proposed
+bounded task is the B1 source and proof review above. Step 5 research can be
+scoped separately; completing more infrastructure is not evidence that the
+open visitation problem is solved.

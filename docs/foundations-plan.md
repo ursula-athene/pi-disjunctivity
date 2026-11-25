@@ -14,8 +14,9 @@ The subsequent [review follow-up](review-follow-up.md) adds
 `isDisjunctive_occurs_ge`, proving arbitrarily late occurrences. The original
 foundation statements below remain unchanged. At follow-up completion, the root
 audit covered fifteen theorems including these additions. The subsequent
-[Step 2 interval pilot](research-log.md) added two, bringing the current audit
-in [Test.lean](../Test.lean) to seventeen.
+[Step 2 interval pilot](research-log.md) added two and the B4/P3 milestone added
+two general conditional lemmas, bringing the current audit in
+[Test.lean](../Test.lean) to nineteen.
 
 The Lean snippets below are the reviewed signatures in the `PiDisjunctivity`
 namespace. They intentionally have no proof bodies and are not source files to

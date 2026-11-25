@@ -5,24 +5,40 @@
 and [research log](research-log.md) record the baseline, original-source
 inspection, source adaptations, and Step 2 interval-hitting reduction.
 The pilot is complete; the conditional π theorem retains its unproved hitting
-hypothesis. BBP formalization and universal visitation were not attempted.
-The stages below remain the procedure for future separately scoped work.
+hypothesis. A second authorized cycle completed B4 and P3 on 2026-11-25,
+with nineteen theorem audits passing. BBP formalization and universal visitation
+were not attempted. The stages below remain the procedure for future separately
+scoped work.
 
 ## Next bounded task
 
 The recommended next cycle is the
-[conditional interior-margin transfer lemma](proof-plan.md#next-bounded-task-conditional-interior-margin-transfer)
-from proof-plan Step 4 (blueprint node B4), together with the elementary
-conversion from open-interval visits to hexadecimal-cell visits (node P3).
-The proof plan specifies the hypotheses, conclusion, and acceptance checks;
-it remains the mathematical roadmap.
+[B1 source and proof review](proof-plan.md#next-bounded-task-b1-source-and-proof-review).
+B4 and P3 are checked; their convergence and visitation premises remain explicit.
+The next review preserves the current B1-before-B3 order and prepares the
+mathematical argument before substantial formalization.
 
-Apply Stage 3's specify/search/sketch/criticize/formalize/verify cycle to that
-endpoint only. Keep arbitrarily late visitation as an explicit hypothesis and
-stop after the general transfer and cell conversion are checked and recorded,
-or after documenting a precise obstruction. Do not extend this cycle into BBP
-formalization or an attempt to prove universal visitation. Recording this next
-task does not begin its execution or extend the completed pilot's authorization.
+Apply Stage 3's specify/search/sketch/criticize process to the B1 identity and
+its existing proof sources. Deliver a reviewed argument, pinned-library
+dependency map, license/attribution assessment, and a bounded implementation
+slice. Stop at that written handoff, or a precise source/argument obstruction,
+before adding BBP Lean declarations or adapting external code. This proposal
+authorizes no execution; the completed B4/P3 session pauses for a user decision.
+
+## B4/P3 workflow retrospective
+
+Project and pinned-library search, a disposable scratch file, and the shell
+compiler loop sufficed. Both candidate proofs compiled on the first attempt;
+the integrated build and exact type/axiom guards passed without warnings.
+Boundary and quantifier review confirmed the intended statements without new
+hypotheses. No optional tooling, additional helper API, or separate agent was
+needed. This is evidence that the loop sufficed for these two elementary
+lemmas, not a performance comparison or evidence about universal visitation.
+
+Keep the existing workflow and Viewpoint commit/review cadence. No process
+rewrite or B1/B3 reorder is warranted by this cycle. The next task adds a bounded
+source/argument review because B1 needs analytic identities and possible source
+adaptation, unlike B4/P3. See the [research log](research-log.md) for actual checks.
 
 ## Purpose and scope
 

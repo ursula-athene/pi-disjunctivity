@@ -7,12 +7,55 @@ module
 
 public import PiDisjunctivity.Cylinders
 public import PiDisjunctivity.Conjectures
+import Mathlib.Tactic
 
-/-! An explicit interval-hitting criterion, leaving the missing hypothesis about π visible. -/
+/-! Interval-hitting criteria and conditional transfer, leaving the missing π hypothesis visible. -/
 
 public section
 
 namespace PiDisjunctivity
+
+/-- Vanishing signed errors preserve interval hitting when the original visits occur arbitrarily
+late. Only the chosen visit needs to lie in `[0,1)`; no global range hypothesis is required. -/
+theorem hitsOpenIntervals_fract_add_of_tendsto_zero (u r : ℕ → ℝ)
+    (hr : Filter.Tendsto r Filter.atTop (nhds 0))
+    (hu : ∀ a b : ℝ, 0 ≤ a → a < b → b ≤ 1 →
+      ∀ N : ℕ, ∃ n ≥ N, u n ∈ Set.Ioo a b) :
+    ∀ a b : ℝ, 0 ≤ a → a < b → b ≤ 1 →
+      ∃ n : ℕ, Int.fract (u n + r n) ∈ Set.Ioo a b := by
+  intro a b ha hab hb
+  let δ := (b - a) / 4
+  have hδ : 0 < δ := by dsimp [δ]; linarith
+  obtain ⟨N, hN⟩ := Metric.tendsto_atTop.mp hr δ hδ
+  obtain ⟨n, hn, hlo, hhi⟩ := hu (a + δ) (b - δ)
+    (by linarith) (by dsimp [δ]; linarith) (by linarith) N
+  have herr : |r n| < δ := by simpa only [Real.dist_eq, sub_zero] using hN n hn
+  obtain ⟨hrlo, hrhi⟩ := abs_lt.mp herr
+  have hinside : u n + r n ∈ Set.Ioo a b := ⟨by linarith, by linarith⟩
+  refine ⟨n, ?_⟩
+  rw [Int.fract_eq_self.mpr ⟨by linarith [hinside.1], by linarith [hinside.2]⟩]
+  exact hinside
+
+/-- Hitting every open interval inside `[0,1]` suffices to hit every hexadecimal cell.
+This includes length zero and the first and last cells, with no range hypothesis on `t`. -/
+theorem hitsHexadecimalIntervals_of_hitsOpenIntervals (t : ℕ → ℝ)
+    (ht : ∀ a b : ℝ, 0 ≤ a → a < b → b ≤ 1 →
+      ∃ n : ℕ, t n ∈ Set.Ioo a b) :
+    ∀ k m : ℕ, m < 16 ^ k → ∃ n : ℕ,
+      t n ∈ Set.Ico ((m : ℝ) / (16 : ℝ) ^ k)
+        (((m : ℝ) + 1) / (16 : ℝ) ^ k) := by
+  intro k m hm
+  have hp : 0 < (16 : ℝ) ^ k := by positivity
+  have hlower : 0 ≤ (m : ℝ) / (16 : ℝ) ^ k := div_nonneg (Nat.cast_nonneg _) hp.le
+  have hwidth : (m : ℝ) / (16 : ℝ) ^ k < ((m : ℝ) + 1) / (16 : ℝ) ^ k := by
+    apply (div_lt_div_iff_of_pos_right hp).2
+    linarith
+  have hupper : ((m : ℝ) + 1) / (16 : ℝ) ^ k ≤ 1 := by
+    apply (div_le_iff₀ hp).2
+    rw [one_mul]
+    exact_mod_cast Nat.succ_le_of_lt hm
+  obtain ⟨n, hlo, hhi⟩ := ht _ _ hlower hwidth hupper
+  exact ⟨n, hlo.le, hhi⟩
 
 /-- Disjunctivity is equivalent to hitting every hexadecimal cell, including the length-zero cell.
 The length `k` is retained even when the value `m` has leading-zero padding. -/

@@ -70,16 +70,19 @@ A separately authorized bounded pilot completed
 `OrbitCriteria.lean` proves the explicit interval-hitting equivalence and a
 conditional implication for π. The interval-hitting hypothesis remains unproved.
 The [workflow](docs/proof-workflow.md), [blueprint](docs/proof-blueprint.md), and
-[research log](docs/research-log.md) record the executed meta-plan. The pilot
-did not begin BBP formalization or universal visitation research.
+[research log](docs/research-log.md) record the executed meta-plan. A subsequent
+bounded milestone checked B4 (transfer under vanishing errors and arbitrarily
+late visits) and P3 (open-interval visits imply hexadecimal-cell visits).
+Neither cycle began BBP formalization or universal visitation research;
+the conjecture remains unproved.
 
 The digit and disjunctivity definitions remain parameterized by the base. The
 word value, orbit, and conjecture definitions use base 16. Reconstruction examples
 cover bases 2, 10, and 16. The default build checks the definitions, all three
 foundational steps, both formulation equivalences, termination, infinite
-reconstruction, recurrence, the interval-hitting equivalence and conditional π
-reduction, and examples. The review distinguishes these results from the
-mathematical comparison with the intended problem.
+reconstruction, recurrence, the interval-hitting equivalence, conditional π
+reduction, general transfer and cell conversion, and examples. The review
+distinguishes these results from the mathematical comparison with the intended problem.
 
 ## Installation
 
@@ -149,8 +152,8 @@ lake env lean Test.lean
 ```
 
 This check preserves the thirteen milestone C theorem-type audits and adds
-infinite reconstruction, recurrence, and the two interval-pilot results, for
-seventeen reviewed theorems. It uses
+infinite reconstruction, recurrence, the two interval-pilot results, and B4/P3,
+for nineteen reviewed theorems. It uses
 `#guard_msgs` to verify each theorem's exact axiom list: `propext`, `Classical.choice`, and
 `Quot.sound`. An unexpected axiom such as `sorryAx` makes the check fail. CI runs
 it after the library build. Two further checks expand the named π propositions
@@ -182,7 +185,7 @@ axiom lists, dependency inspection, validation results, and remaining limitation
 ## Repository guide
 
 - [docs/proof-plan.md](docs/proof-plan.md): the mathematical roadmap; Step 2 is
-  complete and universal visitation remains the open research gap.
+  complete, B4/P3 are checked, and universal visitation remains the open research gap.
 - [docs/proof-workflow.md](docs/proof-workflow.md): source-method adaptations and
   the minimal shell feedback loop established by [the meta-plan](docs/meta-proof-plan.md).
 - [docs/proof-blueprint.md](docs/proof-blueprint.md) and
@@ -232,10 +235,11 @@ axiom lists, dependency inspection, validation results, and remaining limitation
   and the failure of disjunctivity for zero.
 - [PiDisjunctivity.lean](PiDisjunctivity.lean): the library's root imports.
 - [PiDisjunctivity/OrbitCriteria.lean](PiDisjunctivity/OrbitCriteria.lean): the
-  explicit interval-hitting equivalence and conditional π reduction.
-- [Test.lean](Test.lean): seventeen foundational, equivalence, termination,
-  reconstruction, recurrence, and reduction statements with guarded axiom checks, and
-  two direct conjecture-definition checks.
+  explicit interval-hitting equivalence, conditional π reduction, interior-margin
+  transfer, and open-interval-to-cell conversion.
+- [Test.lean](Test.lean): nineteen foundational, equivalence, termination,
+  reconstruction, recurrence, reduction, and transfer statements with guarded
+  axiom checks, and two direct conjecture-definition checks.
 
 ## License
 

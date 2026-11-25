@@ -241,3 +241,133 @@ The preservation diff for all project Lean sources and dependency pins was empty
 The Lean build/audit results above are from the preceding triage; no rerun was
 needed for this documentation-only change. Stop after the requested commit and
 push, before beginning B4/P3.
+
+
+## 2026-11-25 — B4 conditional transfer and P3 cell conversion
+
+### Scope, checkout, and baseline
+
+Executed `docs/proof-attempt-session-prompt.md` at the user's request. The
+endpoint was exactly B4 and P3, their exports and audits, a retrospective,
+plan/status reconciliation, local milestone commits and post-commit review,
+and a committed handoff followed by a pause. No later milestone was authorized.
+
+The repository root is the nested `pi-disjunctivity/` directory containing
+both `lakefile.toml` and `lean-toolchain`, alongside another Lean project.
+Initial branch: `feature/attempt-02`; HEAD:
+`04ac826016f51cb190e44f8ba43dd9b4cc9a5a2a`. Existing user changes in
+`docs/proof-attempt-session-prompt.md`, `docs/.obsidian/`, and `docs/notes/`
+were preserved and excluded from staging. The prompt's working-copy addition
+requests a committed Markdown handoff; it was followed without staging the
+user's edit itself.
+
+Read the required repository instructions, plans, workflow, blueprint, log,
+formulation/trust records, current modules and audits, and dependency files.
+With `$HOME/.elan/bin` on `PATH` and all Lean commands run from that root,
+`lean --version` reported `4.37.0-rc1` (commit `0b77e12952ad39077d80d8bd6b66d601f225c321`).
+Baseline `lake build` passed (6655 jobs, no warnings), `lake env lean Test.lean`
+passed silently (seventeen theorem audits and both definition checks), and
+`git diff --check` passed.
+
+### Search, argument, and separate criticism
+
+Project search located the cell endpoint arithmetic in `OrbitEquivalence.lean`.
+Pinned Mathlib search and scratch `#check` confirmed `Metric.tendsto_atTop`,
+`Int.fract_eq_self`, `Real.dist_eq`, `div_lt_div_iff_of_pos_right`, and
+`div_le_iff₀`. These supply the entire required API; no new helper declaration
+or external source adaptation was needed.
+
+B4: for `u r : ℕ → ℝ`, assume only `r → 0` at infinity and visits of `u` to
+every `Set.Ioo a b` with `0 ≤ a < b ≤ 1` beyond every natural threshold.
+Set `δ = (b-a)/4 > 0`, choose `N` such that `n ≥ N` gives `|r n| < δ`, then
+choose a visit to `(a+δ,b-δ)` at such an `n`. The signed error bounds give
+`a < u n + r n < b`. Thus the perturbed value is in `[0,1)` and its fractional
+part equals itself. The conclusion asserts one visit for each target interval.
+
+P3: for arbitrary `t : ℕ → ℝ`, assume one visit to every such open interval.
+For `k m : ℕ`, `m < 16^k`, the denominator `(16 : ℝ)^k` is positive, the lower
+cell endpoint is nonnegative, the endpoints are strictly ordered, and the upper
+endpoint is at most 1 by casting `m+1 ≤ 16^k`. Apply the hypothesis to that open
+interior and weaken only its lower strict inequality to obtain `Set.Ico`.
+
+Reviewed the statements and arguments in a distinct pass before formalization
+and checked the resulting source again after compilation. This was sequential
+self-review, not an independent agent or fresh-context audit.
+
+- In B4 the convergence threshold is chosen before the late visit, and the
+  occurrence can depend on the whole target interval. Single visits of `u`
+  alone would not justify this choice.
+- At `a = 0` and/or `b = 1`, the quarter-width margin still yields strict
+  perturbed bounds inside `(0,1)`. Splitting `abs_lt` covers errors of either
+  sign. No global range bound on `u` or Lipschitz assertion about `Int.fract`
+  enters the proof.
+- In P3, `k = 0` forces `m = 0`, with open interior `(0,1)` and output cell
+  `[0,1)`. For any `k`, the first cell has lower endpoint 0, and the last cell
+  `m = 16^k-1` has upper endpoint 1 because `16^k > 0`. The strict upper
+  inequality is retained. There is no assumption that all values of `t`
+  lie in `[0,1)`.
+- P3 does not depend on B4 or any BBP fact. Neither lemma proves the input
+  visitation hypothesis, and neither adds a π-specific analytic identity.
+
+### Formalization and validation
+
+The disposable `/tmp/pi-disjunctivity-b4-p3.lean` contained the signature probes,
+both complete candidate proofs, and unguarded axiom reports. It compiled on the
+first attempt. Each actual axiom list was exactly
+`[propext, Classical.choice, Quot.sound]`; the integrated guards use those lists.
+No compiler, library, mathematical, or environment obstruction occurred.
+
+Added only two public theorems to `OrbitCriteria.lean`:
+
+- `hitsOpenIntervals_fract_add_of_tendsto_zero` (B4).
+- `hitsHexadecimalIntervals_of_hitsOpenIntervals` (P3).
+
+The existing `public import PiDisjunctivity.OrbitCriteria` in the library root
+already exports both results; the root needed no edit. `Test.lean` checks both
+complete types through that root and guards their axioms, retaining all earlier
+seventeen theorem audits and both expanded conjecture-definition checks.
+The only added import is `Mathlib.Tactic`, following the neighboring module's
+convention. Production proofs contain no scratch diagnostics. No helpers,
+late-output strengthening, composition theorem, or `Examples.lean` additions
+were needed; the complete type checks and universal proofs cover the specified
+boundary cases without duplicating them as examples.
+
+| Command/inspection | Actual result |
+| --- | --- |
+| `lake env lean /tmp/pi-disjunctivity-b4-p3.lean` | Passed; printed the exact library signatures and permitted axiom lists. |
+| `lake env lean PiDisjunctivity/OrbitCriteria.lean` | Passed silently. |
+| `lake build` | Passed: 6655 jobs, no compiler/linter warnings. |
+| `lake env lean Test.lean` | Passed silently: nineteen complete theorem-type/axiom audits and both definition checks. |
+| `git diff --check` | Passed after integration. |
+| `git diff HEAD -- lean-toolchain lakefile.toml lake-manifest.json PiDisjunctivity/Definitions.lean PiDisjunctivity/Conjectures.lean` | Empty: pins, dependencies, and reviewed definitions unchanged. |
+| Preservation/source inspection | All earlier Lean proofs and root exports are byte-identical to baseline; every prior `Test.lean` line remains in order. Nineteen guards and twenty-one type/definition examples counted. No forbidden proof constructs; Viewpoint policy unchanged. |
+| Documentation inspection | Relative Markdown file/heading links in edited documents passed, including the preserved session-prompt anchor; historical audit counts retained. |
+
+Validation used existing local dependency artifacts; no clean-environment
+rebuild, remote CI, or independent audit of all Mathlib artifacts is claimed.
+
+### Retrospective and plan adjustment
+
+The mathematical endpoint is met without extra hypotheses. Local library search
+and the scratch/compiler loop sufficed; no optional tooling or automation
+bottleneck appeared. The proof design needed no revision. The work confirms
+that the manual loop handles these elementary lemmas, without measuring its
+comparative performance or testing a solution of universal visitation.
+
+Updated the blueprint to mark B4/P3 checked, and reconciled the current audit
+count to nineteen in the proof plan, README, formulation, foundations, and trust
+summaries. Historical validation counts are preserved. Reviewed both plans:
+M1 is complete; B1–B3 and V remain unfinished. The next-task entries now propose
+a bounded B1 source and proof review, ending with the argument, source/license
+assessment, pinned-library map, and smallest implementation slice. No source
+review for that next milestone was begun here. The mathematical route, B1/B3
+order, Viewpoint commit cadence, and operational workflow are retained; the
+cycle supplied no evidence warranting a process rewrite. Tail/summability work
+and B3 before B1 remain a separate user-owned option, not an adopted reorder.
+
+Remaining obstruction to the target: V, arbitrarily late visitation of the fixed
+BBP recurrence, has no independent proof; B1's identity, B2's orbit bridge, and
+B3's tail control are unformalized. Hπ and T remain unproved. Completing B4/P3
+supplies conditional infrastructure only. Stop after local commits, the required
+post-commit proof-necessity review, and the final committed handoff; do not begin
+the proposed next task.
