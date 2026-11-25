@@ -2,8 +2,9 @@
 
 This document states the problem and outlines how to validate its formalization.
 The [implementation status](#implementation-status) records the current scope.
-The [foundational theorem plan](foundations-plan.md) gives the proposed statements
-and proof methods for the next work. The conjecture about π remains open.
+The [foundational theorem plan](foundations-plan.md) gives the reviewed statements,
+proof methods, and completion status for the foundations. The conjecture about π
+remains open.
 
 ## Problem formulation
 
@@ -91,9 +92,10 @@ $$
 $$
 
 We would establish this using floor arithmetic, quotient and remainder, and a
-lemma explaining how multiplication by $16^n$ shifts the digits. We would also
-show that length-$k$ words encode exactly the integers $0\le m<16^k$, with
-leading-zero padding where needed.
+lemma explaining how multiplication by $16^n$ shifts the digits. The word-value
+part is now proved: length-$k$ words encode exactly the integers $0\le m<16^k$,
+with leading-zero padding where needed. The word–interval correspondence itself
+remains pending.
 
 Keeping $k$ explicit preserves leading zeros: `007` corresponds to
 $[7/16^3,8/16^3)$. The word `00A` similarly corresponds to
@@ -164,18 +166,25 @@ Progress against [the foundational theorem plan](foundations-plan.md):
 1. **Complete:** `blockValue_eq_sum` in
    [`BlockValue.lean`](../PiDisjunctivity/BlockValue.lean) proves that recursive
    `blockValue` equals the displayed finite sum for every length and word.
-2. **Planned:** prove its upper bound and coverage of every integer below $16^k$.
+2. **Complete:** `blockValue_lt` and `exists_blockValue_eq` in the same module
+   prove the upper bound and coverage of every natural number below $16^k$,
+   including length zero and leading-zero padding.
 3. **Planned:** prove arbitrary-base digit bounds, prefix reconstruction, and
    truncation error.
 
-The default `lake build` checks the definitions, the Step 1 theorem, and examples.
+The default `lake build` checks the definitions, theorems from Steps 1 and 2,
+and examples.
 Additional word-value examples cover the empty word, any single digit, all-zero
-words, leading zeros, `FF`, and positional order (`12` versus `21`). The separate
-`lake env lean Test.lean` check verifies the reviewed theorem type and its axiom
-list: only `propext`, `Classical.choice`, and `Quot.sound` are used. It rejects a
-changed axiom list, including any introduction of `sorryAx` or a project-specific
-axiom. CI runs this check after building.
+words, leading zeros, `FF`, and positional order (`12` versus `21`). Range examples
+exercise the bound at lengths zero and one, coverage of zero at every length,
+all single digits, `00A`, `FF`, and the maximum value `16 ^ k - 1` at every length.
+The separate `lake env lean Test.lean` check verifies all three reviewed theorem
+types through the library root. Guarded `#print axioms` results require exactly
+`propext`, `Classical.choice`, and `Quot.sound` for each theorem. The audit rejects
+a changed axiom list, including any introduction of `sorryAx` or a project-specific
+axiom. CI runs this check after building. These checks and `git diff --check` pass
+with the pinned Lean and Mathlib versions.
 
 The cylinder correspondence and orbit equivalence remain unimplemented and will
-be addressed after the foundations. Step 1 makes no claim about the occurrence
-of words in π.
+be addressed after the foundations. Steps 1 and 2 make no claim about the
+occurrence of words in π.

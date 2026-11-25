@@ -18,6 +18,6 @@ jobs:
     steps:
       - uses: actions/checkout@v7
       - uses: leanprover/lean-action@v1
-      - name: Check Step 1 statement and axioms
+      - name: Check Steps 1 and 2 statements and axioms
         run: lake env lean Test.lean
       - uses: leanprover-community/docgen-action@v1

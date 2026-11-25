@@ -70,6 +70,35 @@ example : blockValue 2 ![1, (2 : Fin 16)] = 0x12 ∧
     blockValue 2 ![2, (1 : Fin 16)] = 0x21 := by
   norm_num [blockValue_eq_sum, Fin.sum_univ_succ]
 
+-- The range bound includes empty and one-digit words.
+example (s : Fin 0 → Fin 16) : blockValue 0 s < 1 := by
+  simpa using blockValue_lt 0 s
+
+example (d : Fin 16) : blockValue 1 ![d] < 16 := by
+  simpa using blockValue_lt 1 ![d]
+
+-- Coverage includes the empty word, each single digit, and zero at every length.
+example : ∃ s : Fin 0 → Fin 16, blockValue 0 s = 0 :=
+  exists_blockValue_eq 0 0 (by norm_num)
+
+example (d : Fin 16) : ∃ s : Fin 1 → Fin 16, blockValue 1 s = d.val :=
+  exists_blockValue_eq 1 d.val d.isLt
+
+example (k : ℕ) : ∃ s : Fin k → Fin 16, blockValue k s = 0 :=
+  exists_blockValue_eq k 0 (by positivity)
+
+-- Fixing the length allows 00A's padding and FF's maximum value.
+example : ∃ s : Fin 3 → Fin 16, blockValue 3 s = 10 :=
+  exists_blockValue_eq 3 10 (by norm_num)
+
+example : ∃ s : Fin 2 → Fin 16, blockValue 2 s = 0xFF :=
+  exists_blockValue_eq 2 0xFF (by norm_num)
+
+example (k : ℕ) : ∃ s : Fin k → Fin 16, blockValue k s = 16 ^ k - 1 :=
+  exists_blockValue_eq k (16 ^ k - 1) (by
+    have : 0 < (16 : ℕ) ^ k := by positivity
+    omega)
+
 example (x : ℝ) : ∃ n : ℕ, ∀ i : Fin 0,
     baseDigit 16 x (n + i.val) = (Fin.elim0 i : Fin 16).val := by
   exact ⟨0, fun i => Fin.elim0 i⟩

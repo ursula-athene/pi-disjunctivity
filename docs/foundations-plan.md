@@ -2,8 +2,8 @@
 
 This plan fills the three gaps identified when comparing the Lean definitions
 with the [problem formulation](problem-formulation.md). The earlier equivalence
-proof has been removed. Step 1 is now implemented and validated as described
-below; Steps 2 and 3 remain planned.
+proof has been removed. Steps 1 and 2 are now implemented and validated as
+described below; Step 3 remains planned.
 
 The Lean snippets below are the reviewed signatures in the `PiDisjunctivity`
 namespace. They intentionally have no proof bodies and are not source files to
@@ -53,7 +53,9 @@ include copyright and author headers; the license text is in [LICENSE](../LICENS
 
 ## 2. Show that words cover exactly the allowed integer values
 
-**Status: planned.**
+**Status: implemented and validated.** Both proofs are in
+[`PiDisjunctivity/BlockValue.lean`](../PiDisjunctivity/BlockValue.lean) and exported
+through `PiDisjunctivity.lean`.
 
 Two results together establish the required coverage:
 
@@ -81,7 +83,29 @@ the fact that the appended digit is at most 15. The empty word satisfies `0 < 1`
 - Append `r` to the prefix, then use `m = 16 * q + r`.
 
 The construction naturally pads with zeros when `m` needs fewer than `k` digits.
-It must handle `m = 0` and `m = 16 ^ k - 1` as well as interior values.
+It handles `m = 0` and `m = 16 ^ k - 1` as well as interior values.
+
+The implementation checks the quotient bound with `Nat.div_lt_iff_lt_mul` and
+`pow_succ`, and the remainder bound with `Nat.mod_lt`. It appends the last digit
+with `Fin.snoc`: `Fin.snoc_castSucc` recovers every prefix position and
+`Fin.snoc_last` recovers the remainder digit. `Nat.div_add_mod` then identifies
+the recursive value `16 * (m / 16) + m % 16` with `m`. For the bound, `omega`
+combines the prefix and final-digit inequalities after unfolding the successor
+case. Both proofs include length zero.
+
+**Validation:** `lake build`, `lake env lean Test.lean`, and `git diff --check`
+pass with the pinned Lean and Mathlib versions. The audit checks both exact
+signatures through the library root, alongside the unchanged Step 1 check.
+Guarded `#print axioms` results require exactly `propext`, `Classical.choice`, and
+`Quot.sound` for each of the three theorems, rejecting unexpected dependencies.
+CI runs the expanded audit after the build.
+
+New examples exercise the bound at lengths zero and one, coverage of zero at
+every length, all single digits, value 10 at length three (`00A`), value 255 at
+length two (`FF`), and `16 ^ k - 1` at every length. The existing exact word-value
+and Step 1 regression examples remain. These results establish precisely the
+range of fixed-length word values; digit reconstruction and the word–interval
+and orbit equivalences remain pending.
 
 ## 3. Validate digit reconstruction for arbitrary bases
 
@@ -151,11 +175,11 @@ trailing-zero convention.
 
 ## Implementation order and acceptance
 
-1. Put the word-value results in a new `PiDisjunctivity/BlockValue.lean` module.
-   Prove the sum formula, the bound, and then coverage.
+1. **Complete:** `PiDisjunctivity/BlockValue.lean` proves the sum formula, the
+   bound, and coverage.
 2. Put the arbitrary-base results in a new `PiDisjunctivity/Digits.lean` module.
    Prove the digit bound, floor recurrence, reconstruction, and error bound.
-3. Import both modules from the library root and build them with the pinned
+3. Import each completed module from the library root and build it with the pinned
    Lean and Mathlib versions. Add no `sorry`, `admit`, or project-specific axioms.
 4. Add an axiom audit for the new results and wire it into CI. Check the transitive
    dependencies, permitting only the standard Lean axioms used by Mathlib.

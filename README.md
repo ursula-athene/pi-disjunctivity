@@ -16,14 +16,17 @@ links to the BBP paper, and specifies the mathematical statement.
 
 ## Scope and current status
 
-Step 1 of the [foundational theorem plan](docs/foundations-plan.md) is implemented:
+Steps 1 and 2 of the [foundational theorem plan](docs/foundations-plan.md) are
+implemented:
 `PiDisjunctivity.blockValue_eq_sum` proves that the recursive hexadecimal word
 value equals the specified big-endian finite sum, for every length and word.
+`PiDisjunctivity.blockValue_lt` and `PiDisjunctivity.exists_blockValue_eq` prove
+that length-`k` words represent exactly the natural numbers below `16 ^ k`,
+including the empty word and leading-zero padding.
 The library also contains the problem definitions and exact examples.
 
-The next steps are to prove the word-value bound and coverage of every integer
-below $16^k$, then validate digit reconstruction in an arbitrary base. The earlier
-cylinder and orbit-equivalence proofs remain removed.
+The next foundational step is to validate digit reconstruction in an arbitrary
+base. The earlier cylinder and orbit-equivalence proofs remain removed.
 
 A later milestone is to connect hexadecimal digit blocks to base-16 intervals
 and prove the equivalence of disjunctivity with
@@ -40,8 +43,8 @@ not establish it.
 
 The digit and disjunctivity definitions remain parameterized by the base. The
 word value, orbit, conjecture definitions, and examples use base 16. The default
-build checks the definitions, Step 1 theorem, and examples. Steps 2 and 3 and
-the orbit equivalence are not yet implemented.
+build checks the definitions, theorems from Steps 1 and 2, and examples. Step 3, the
+word–interval correspondence, and the orbit equivalence are not yet implemented.
 
 ## Installation
 
@@ -103,16 +106,16 @@ Build the library, including the hexadecimal examples:
 lake build
 ```
 
-Check Step 1's exported statement and axiom dependencies:
+Check the exported statements and axiom dependencies for Steps 1 and 2:
 
 ```sh
 lake env lean Test.lean
 ```
 
-This check requires the exact reviewed theorem type and uses `#guard_msgs` to
-verify that its only axioms are `propext`, `Classical.choice`, and `Quot.sound`.
-An unexpected axiom such as `sorryAx` makes the check fail. CI runs it after the
-library build.
+This check requires all three reviewed theorem types and uses `#guard_msgs` to
+verify each theorem's exact axiom list: `propext`, `Classical.choice`, and
+`Quot.sound`. An unexpected axiom such as `sorryAx` makes the check fail. CI runs
+it after the library build.
 
 To build selected modules explicitly:
 
@@ -129,10 +132,10 @@ lake env lean --version
 ```
 
 Open the repository root in VS Code to work with Lean's interactive proof state.
-A successful build checks the definitions, theorem, and examples included. The
+A successful build checks the definitions, theorems, and examples included. The
 [implementation status](docs/problem-formulation.md#implementation-status)
-records the remaining proof work. The current audit covers Step 1, and does not
-reinstate the discarded equivalence proof.
+records the remaining proof work. The current audit covers Steps 1 and 2; the
+discarded equivalence proof remains unimplemented.
 
 ## Repository guide
 
@@ -143,15 +146,17 @@ reinstate the discarded equivalence proof.
 - [PiDisjunctivity/Definitions.lean](PiDisjunctivity/Definitions.lean): digit and
   disjunctivity definitions parameterized by the base, plus the hexadecimal orbit
   and recursive word value.
-- [PiDisjunctivity/BlockValue.lean](PiDisjunctivity/BlockValue.lean): the Step 1
-  proof that the recursive word value equals the finite sum.
+- [PiDisjunctivity/BlockValue.lean](PiDisjunctivity/BlockValue.lean): the Steps 1
+  and 2 proofs of the finite-sum formula, word-value bound, and coverage.
 - [PiDisjunctivity/Conjectures.lean](PiDisjunctivity/Conjectures.lean): proposition
   definitions naming the hexadecimal digit-block and orbit-closure conjectures.
 - [PiDisjunctivity/Examples.lean](PiDisjunctivity/Examples.lean): exact rational
   examples for hexadecimal indexing, digits `A`–`F`, leading zeros, terminating
-  expansions, interval boundaries, and the word-value sum formula.
+  expansions, interval boundaries, and the word-value sum formula; range examples
+  cover lengths zero and one, zero values, `00A`, `FF`, and the maximum value at
+  every length.
 - [PiDisjunctivity.lean](PiDisjunctivity.lean): the library's root imports.
-- [Test.lean](Test.lean): the Step 1 statement and axiom checks.
+- [Test.lean](Test.lean): the Steps 1 and 2 statement and guarded axiom checks.
 
 ## License
 

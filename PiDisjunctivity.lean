@@ -10,4 +10,4 @@ public import PiDisjunctivity.BlockValue
 public import PiDisjunctivity.Conjectures
 import PiDisjunctivity.Examples
 
-/-! Hexadecimal disjunctivity: definitions, word-value foundations, and examples. -/
+/-! Hexadecimal disjunctivity: definitions, word-value sum and range theorems, and examples. -/
