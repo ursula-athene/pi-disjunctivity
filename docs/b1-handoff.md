@@ -3,9 +3,8 @@
 Implementation checked 2026-11-25 on `feature/attempt-04`, in
 `/Users/adam/personal/proj/pi-disjunctivity/pi-disjunctivity`.
 
-**The full B1 BBP identity, audits, and required review pass.** Local commit
-and post-commit necessity review follow below. π disjunctivity and universal
-visitation remain unproved.
+**B1/M2 is complete: checked, reviewed, committed, and reviewed for necessity.**
+π disjunctivity and universal visitation remain unproved.
 
 ## Authorized endpoint and checked results
 
@@ -142,8 +141,31 @@ project imports/trust, and 192 local Markdown links/anchors passed. Final
 factual review records and staging receive fresh preservation/link/whitespace
 checks. The reviewed Lean proof and audits are unchanged after validation.
 
-Local commit and post-commit proof-necessity results are recorded below when
-completed.
+Committed the reviewed milestone locally as
+`5cbbd14fbf7e42392b314a553090d34ef22a93a8`, parent `0584737`, selecting only
+thirteen task-owned files with `git commit --only` (the twelve reviewed files
+plus the review report). Staged whitespace, 240 local Markdown links/anchors,
+and all preservation checks passed. Only the original unrelated Obsidian,
+notes, and papers files remained in the working tree.
+
+After committing, reread the new proof chain, existing root export, and full
+type/axiom additions. The local quadratic and eighth-power bounds discharge
+the field denominators. The positive log arguments and polynomial derivatives
+supply the chain-rule premises; the `hq` identity and rational decomposition
+normalize the derivative. `hcont` supplies the required interval integrability;
+`hftc` applies the closed-interval derivative theorem with the correct orientation.
+The exact endpoint arithmetic identifies Mathlib's π. The final rewrite retains
+B1c's `HasSum` and coefficients. Every new public theorem has the next proof or
+the requested B1 endpoint as its consumer; export and audits meet the acceptance
+criteria. No removable proof layer or justified substantive simplification was
+found. No fix review or empty code commit was needed.
+
+The final two-file documentation commit records this completed necessity
+review in the handoff and research log. Retrieve its ID with
+`git log -1 --format=%H -- docs/b1-handoff.md`; both local commit IDs are
+reported in the session's final response. Its diff, links, whitespace, and
+preservation are checked before committing. The reviewed Lean source and
+audits are identical to the passing validation inputs.
 
 ## Remaining obligations and next proposal
 

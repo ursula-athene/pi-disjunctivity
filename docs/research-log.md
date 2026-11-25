@@ -1132,3 +1132,30 @@ and earlier log entries. Manifest/package revisions and imports/trust checks
 passed. Local Markdown links/anchors passed (192); final records and staging
 receive fresh link/preservation/whitespace checks. The passing Lean source and
 audits remain unchanged. No B2/B3 or visitation proof work was begun.
+
+
+### Post-commit necessity review and final handoff
+
+Committed the full B1 milestone locally as
+`5cbbd14fbf7e42392b314a553090d34ef22a93a8` on `feature/attempt-04`, parent
+`0584737`. `git commit --only` selected the thirteen task-owned paths. Staged
+whitespace, 240 local Markdown links/anchors, and preservation checks passed;
+only the original Obsidian, notes, and papers work remained. No push, PR,
+history rewrite, or permission change occurred.
+
+Then reread the committed additions, root export, and audits. Local positivity
+and power bounds discharge field denominators. Polynomial derivatives and log
+nonzero facts justify the chain rules; the denominator identity and partial
+fractions match the kernel. Kernel continuity supplies interval integrability;
+the FTC application uses the derivative at every point of the closed interval,
+and exact endpoint arithmetic yields Mathlib's π. The final rewrite preserves
+B1c's coefficients and `HasSum`. Each new theorem has a direct consumer or is
+the requested endpoint; the root import/type/axiom guards provide the required
+export and trust evidence. No unnecessary layer or substantive simplification
+was justified, so no follow-up fix review or empty code commit was made.
+
+The final two-file documentation commit records this retrospective and the
+[completed B1 handoff](b1-handoff.md), with fresh link/whitespace/preservation
+checks. The reviewed source/audits remain unchanged after passing validation.
+Its ID is reported after committing. Step 3/M2 is complete; stop before B2a,
+B2/B3, or V. No visitation or disjunctivity hypothesis has been discharged.
