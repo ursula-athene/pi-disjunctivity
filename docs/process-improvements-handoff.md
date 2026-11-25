@@ -15,8 +15,8 @@ Implementation covers the five durable rules, mandatory consolidated Gemini
 procedure, document responsibilities, project memory/handoff conventions,
 offline documentation checker, scoped review preparation/capture inspection,
 CI integration, current-prompt consolidation, and lightweight evaluation.
-Review and final validation evidence are recorded below; local commit and
-post-commit necessity evidence are added only after completion. No push or PR is authorized.
+The milestone is complete: validated, reviewed, committed locally, and checked
+for necessity. No push, PR, or B2 execution occurred.
 
 ## Contracts and indexing
 
@@ -58,7 +58,7 @@ Carbon High's full review returned explicit no findings; see the
 [review record](agy-reports/process-improvements-review.md). Caller inspection
 also tightened the historical sibling-link exception against traversal back
 out of that directory, with a regression assertion. The focused follow-up and
-local commit/necessity outcomes will be appended after observation. Raw temporary review captures
+local commit/necessity outcomes are recorded below. Raw temporary review captures
 are not guaranteed archival storage. No quantitative productivity gain is claimed.
 
 ## Restart and remaining obligations
@@ -76,7 +76,7 @@ exits zero. Keep the actual `agy` invocation literal, outside wrapper scripts.
 Future measurement fields are specified in the [meta-plan](meta-proof-plan.md#lightweight-evaluation),
 not another status store. No global memory/configuration changes were made.
 
-## Final review and pre-commit acceptance
+## Final review and acceptance
 
 Both Carbon High reviews completed with explicit no findings. The follow-up
 covered the resolved sibling-path check, regression assertion, Git rule, and
@@ -89,4 +89,26 @@ Final validation passes: 23 unit tests (including CI wiring), 41 tracked Markdow
 files including staged additions, working/staged whitespace, 61 preserved
 baseline files outside scope, unchanged mathematical contracts/archives/pins,
 and exactly 24 staged task-owned paths. No remote CI or new Lean audit is claimed.
-Local commit and post-commit necessity results follow below after execution.
+
+## Local commits and post-commit necessity review
+
+Implementation commit: `3ef470c6aced848edd7675e28fc9b5f99d92f3c0`, parent
+`563ffed22c8dea726a95f71eb37e081ce9974f76`. Only the 24 task-owned paths were
+committed on the existing branch. Both earlier local commits are preserved.
+
+Inspected the committed utilities, test coverage, CI/project configuration,
+AGENTS, and documentation changes. Each utility has one consumer-facing job:
+validate local docs/current entry, prepare an exact scoped patch, or inspect
+review transport/results. The parser dependencies avoid a bespoke Markdown/YAML
+framework; the historical exceptions are narrow and tested. Required Gemini
+operations have one mandatory home, with compatibility anchors and short links
+elsewhere. Snapshot records preserve evidence instead of creating another live
+status store. No unnecessary layer, unused API, or justified further substantive
+simplification was found; no empty code commit or extra review was needed.
+
+This handoff and the concise log entry receive a separate factual receipt commit.
+Its ID can be retrieved with `git log -1 --format=%H -- docs/process-improvements-handoff.md`.
+Both IDs are reported in the final session reply. The receipt is checked for
+links, whitespace, exact owned scope, and preservation before commit. The tested
+and reviewed utility/CI code is unchanged. Remaining work is mathematical B2/B3
+and visitation as listed above, outside this completed process milestone.
