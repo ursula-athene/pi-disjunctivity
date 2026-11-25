@@ -47,13 +47,19 @@ with a terminating expansion, the floor convention selects trailing zeros. In
 Lean, the floor in this definition is `Nat.floor`; the restriction $x\ge 0$
 ensures that it agrees with the usual floor.
 
-Define
+The Lean functions are total, but their intended digit interpretation uses
+$x\ge 0$ and $b\ge 2$. For negative inputs the natural floor produces zero
+digits, so disjunctivity is false in bases at least two. In bases zero and one,
+the predicate is vacuously or trivially true. The relevant theorem hypotheses
+exclude these cases, and π is positive.
+
+Write $[k]=\{i\in\mathbb N:i<k\}$, so $[0]=\emptyset$. Define
 
 $$
 \operatorname{Disjunctive}_b(x)
 \iff
 \forall k\in\mathbb N,\;
-\forall s:\{0,\ldots,k-1\}\to\{0,\ldots,b-1\},\;
+\forall s:[k]\to[b],\;
 \exists n\in\mathbb N,\;
 \forall i<k,\quad d_b(x,n+i)=s(i).
 $$
@@ -67,6 +73,26 @@ $$
 The empty string, $k=0$, imposes no condition. In Lean, a length-$k$ word in base
 $b$ is represented by a function `Fin k → Fin b`, so its length and digit bounds
 are explicit. The hexadecimal specialization uses `Fin k → Fin 16`.
+
+### Arbitrarily late occurrences and finite prefixes
+
+For every base $b\ge 2$, disjunctivity implies that each word occurs starting
+at some $n\ge N$ for every threshold $N$. Prepend $N$ zero digits to the word
+and apply disjunctivity to this longer word; its suffix supplies the required
+occurrence. This is proved as `isDisjunctive_occurs_ge` in
+[`Disjunctivity.lean`](../PiDisjunctivity/Disjunctivity.lean), including the empty
+word. Unbounded occurrence positions in $\mathbb N$ are equivalent to infinitely
+many positions; conversely, arbitrarily late occurrence implies occurrence by
+taking $N=0$. No frequency conclusion follows.
+
+The same padding argument applies to any digit sequence. Consequently adding
+or deleting a finite prefix preserves disjunctivity: occurrences survive when
+a prefix is added, and arbitrarily late occurrences survive its removal. This
+explains why including the finitely many integer-part digits, with the radix
+separator omitted, gives the same property as using only fractional digits.
+The library formalizes arbitrarily late occurrence for `baseDigit`; this general
+finite-prefix explanation is a mathematical argument, not a separate exported
+sequence theorem.
 
 ## Plan for validating the formulation
 
@@ -86,6 +112,17 @@ part. Milestone C's supporting `baseDigit_div_pow_eq_zero` theorem explicitly
 proves the trailing-zero convention at every position after a terminating
 prefix, for all inputs $m/b^k$ with natural $m$ and $b\ge 2$. Exact examples
 supplement these general results.
+
+The later `hasSum_baseDigit` theorem additionally proves
+
+$$
+\sum_{n=0}^{\infty}\frac{d_b(x,n)}{b^{n+1}}=\operatorname{fract}(x)
+\qquad (b\ge 2,\ x\ge 0),
+$$
+
+with Lean's `HasSum`, which asserts convergence as well as the value. Its proof
+identifies the digits with Mathlib's `Real.digits` on the fractional part and
+uses `Real.hasSum_ofDigitsTerm_digits`. No additional library is required.
 
 ### 2. Connect finite words to hexadecimal intervals
 
@@ -410,9 +447,13 @@ zero at all lengths and offsets, leading zeros, both interval boundaries, a
 nonzero offset in a number with an integer part, and terminating expansions.
 Orbit examples additionally check both closure endpoints, word recovery under
 the closure hypothesis, and the zero-input counterexample.
-The separate `lake env lean Test.lean` check preserves all twelve original theorem
-types and adds the termination theorem through the library root. Two further
-checks expand the π proposition definitions. Guarded `#print axioms` results
+The [review follow-up](review-follow-up.md) additionally implements infinite-series
+reconstruction and arbitrarily late occurrence. It checks the first four
+fractional hexadecimal digits of `Real.pi` as `243F` from Mathlib's proved
+rational bounds. These results are included in the default build.
+The separate `lake env lean Test.lean` check preserves all thirteen milestone C
+theorem types and adds the two new theorem types through the library root.
+Two further checks expand the π proposition definitions. Guarded `#print axioms` results
 require exactly `propext`, `Classical.choice`, and `Quot.sound` for each theorem. The audit rejects
 a changed axiom list, including any introduction of `sorryAx` or a project-specific
 axiom. CI runs this check after building. These checks and `git diff --check` pass
@@ -424,4 +465,4 @@ specialization to π, and the final formulation review are complete. The
 sequence, implemented statements, and completed review criteria. The
 [review report](formulation-review.md) records findings, actual axiom lists,
 dependency checks, commands and results, and limitations. These results make no
-claim about the occurrence of words in π.
+claim that every finite word occurs in π.

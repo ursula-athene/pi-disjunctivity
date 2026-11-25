@@ -7,10 +7,11 @@ module
 
 public import PiDisjunctivity.Definitions
 public import Mathlib.Algebra.BigOperators.Fin
+public import Mathlib.Analysis.Real.OfDigits
 import Mathlib.Algebra.Order.Floor.Semiring
 import Mathlib.Tactic
 
-/-! Digit bounds, reconstruction, truncation error, and termination in arbitrary bases. -/
+/-! Digit bounds, reconstruction, truncation, and termination in arbitrary bases. -/
 
 public section
 
@@ -95,5 +96,29 @@ theorem baseDigit_div_pow_eq_zero (b : ℕ) (hb : 2 ≤ b) (m k n : ℕ) :
     field_simp
   rw [baseDigit, hscaled, Nat.floor_natCast]
   simp [pow_succ, Nat.mul_mod]
+
+/-- The base-`b` fractional digits sum to the fractional part of every nonnegative input. -/
+theorem hasSum_baseDigit (b : ℕ) (hb : 2 ≤ b) (x : ℝ) (hx : 0 ≤ x) :
+    HasSum (fun n => (baseDigit b x n : ℝ) / (b : ℝ) ^ (n + 1)) (Int.fract x) := by
+  let : NeZero b := ⟨by omega⟩
+  have hdigits (n : ℕ) : (Real.digits (Int.fract x) b n).val = baseDigit b x n := by
+    have hsplit : Int.fract x + (Nat.floor x : ℝ) = x := by
+      rw [natCast_floor_eq_intCast_floor hx, Int.fract_add_floor]
+    have hscaled : (b : ℝ) ^ (n + 1) * x =
+        (b : ℝ) ^ (n + 1) * Int.fract x + ((b ^ (n + 1) * Nat.floor x : ℕ) : ℝ) := by
+      calc
+        _ = (b : ℝ) ^ (n + 1) * (Int.fract x + (Nat.floor x : ℝ)) := by rw [hsplit]
+        _ = _ := by push_cast; ring
+    simp only [Real.digits, Fin.val_ofNat, baseDigit]
+    rw [mul_comm (Int.fract x), hscaled,
+      Nat.floor_add_natCast (mul_nonneg (by positivity) (Int.fract_nonneg x))]
+    simp [Nat.add_mod, Nat.mul_mod, pow_succ]
+  have hterms : Real.ofDigitsTerm (Real.digits (Int.fract x) b) =
+      fun n => (baseDigit b x n : ℝ) / (b : ℝ) ^ (n + 1) := by
+    funext n
+    simp only [Real.ofDigitsTerm, hdigits, div_eq_mul_inv]
+  rw [← hterms]
+  exact Real.hasSum_ofDigitsTerm_digits (Int.fract x) (by omega)
+    ⟨Int.fract_nonneg x, Int.fract_lt_one x⟩
 
 end PiDisjunctivity

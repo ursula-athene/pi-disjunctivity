@@ -8,6 +8,7 @@ module
 public import PiDisjunctivity.Definitions
 public import PiDisjunctivity.BlockValue
 public import PiDisjunctivity.Digits
+public import PiDisjunctivity.Disjunctivity
 public import PiDisjunctivity.Cylinders
 public import PiDisjunctivity.Conjectures
 public import PiDisjunctivity.OrbitEquivalence

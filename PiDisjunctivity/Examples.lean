@@ -10,11 +10,32 @@ import PiDisjunctivity.Digits
 import PiDisjunctivity.Cylinders
 import PiDisjunctivity.OrbitEquivalence
 import Mathlib.Algebra.Order.Floor.Semifield
+import Mathlib.Analysis.Real.Pi.Bounds
 import Mathlib.Tactic
 
 /-! Checks for words, digit reconstruction, truncation, and the interval and orbit equivalences. -/
 
 namespace PiDisjunctivity
+
+-- Mathlib's proved bounds identify the first fractional digits of π: 3.243F...₁₆.
+example : baseDigit 16 Real.pi 0 = 2 ∧ baseDigit 16 Real.pi 1 = 4 ∧
+    baseDigit 16 Real.pi 2 = 3 ∧ baseDigit 16 Real.pi 3 = 15 := by
+  have hlo := Real.pi_gt_d6
+  have hhi := Real.pi_lt_d6
+  norm_num at hlo hhi
+  have h0 : Nat.floor (16 * Real.pi) = 50 := by
+    apply (Nat.floor_eq_iff (by positivity)).2
+    constructor <;> norm_num <;> linarith
+  have h1 : Nat.floor (256 * Real.pi) = 804 := by
+    apply (Nat.floor_eq_iff (by positivity)).2
+    constructor <;> norm_num <;> linarith
+  have h2 : Nat.floor (4096 * Real.pi) = 12867 := by
+    apply (Nat.floor_eq_iff (by positivity)).2
+    constructor <;> norm_num <;> linarith
+  have h3 : Nat.floor (65536 * Real.pi) = 205887 := by
+    apply (Nat.floor_eq_iff (by positivity)).2
+    constructor <;> norm_num <;> linarith
+  norm_num [baseDigit, h0, h1, h2, h3]
 
 -- The integer part is ignored: 3.A in hexadecimal begins with fractional digit A.
 example : baseDigit 16 (58 / 16 : ℝ) 0 = 10 := by

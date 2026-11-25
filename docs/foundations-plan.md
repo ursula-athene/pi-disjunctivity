@@ -9,6 +9,12 @@ The [final consolidated formulation review](formulation-review.md) is complete
 as milestone C. It preserves these foundations and adds an explicit general
 trailing-zero theorem without changing any reviewed definition or statement.
 
+The subsequent [review follow-up](review-follow-up.md) adds
+`hasSum_baseDigit`, using Mathlib's positional-series theorem, and
+`isDisjunctive_occurs_ge`, proving arbitrarily late occurrences. The original
+foundation statements below remain unchanged; the current root audit covers
+fifteen theorems including these additions.
+
 The Lean snippets below are the reviewed signatures in the `PiDisjunctivity`
 namespace. They intentionally have no proof bodies and are not source files to
 compile. Existing definitions stay in `PiDisjunctivity/Definitions.lean`.

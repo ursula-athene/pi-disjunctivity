@@ -1,5 +1,10 @@
 # Consolidated formulation review (milestone C)
 
+This report records the milestone C review at its original scope. The later
+[review follow-up](review-follow-up.md) adds infinite reconstruction, recurrence,
+and actual π digit checks, and expands the guarded audit from thirteen to fifteen
+theorems without changing the reviewed definitions or existing statements.
+
 **Result: formulation verification complete, 2026-11-24.** The definitions and
 proved statements faithfully express the intended problem: every finite
 hexadecimal word occurs contiguously after the radix point of Mathlib's `Real.pi`,

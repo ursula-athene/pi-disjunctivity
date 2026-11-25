@@ -42,11 +42,13 @@ terms that the kernel checks, so their use does not by itself introduce new
 mathematical axioms. See the official
 [Lean explanation of tactic proofs](https://lean-lang.org/doc/reference/latest/Tactic-Proofs/).
 
-The current [Test.lean](../Test.lean) preserves all twelve original theorem-type
-checks and adds the general termination theorem, for thirteen audited theorems
-through the root library import. It guards their `#print axioms` results and
-also checks both named π definitions against their expanded statements. The
-[consolidated review](formulation-review.md#axiom-audit) records each actual list.
+The current [Test.lean](../Test.lean) preserves all thirteen milestone C theorem-type
+checks and adds infinite-series reconstruction and arbitrarily late occurrence,
+for fifteen audited theorems through the root library import. It guards their
+`#print axioms` results and also checks both named π definitions against their
+expanded statements. The
+[consolidated review](formulation-review.md#axiom-audit) records the original lists;
+the [follow-up review](review-follow-up.md) records the two additions.
 Every audited theorem currently reports exactly these three axioms:
 
 | Axiom | Meaning |

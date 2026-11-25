@@ -86,6 +86,17 @@ example (b : ℕ) (hb : 2 ≤ b) (m k n : ℕ) :
     PiDisjunctivity.baseDigit b ((m : ℝ) / (b : ℝ) ^ k) (k + n) = 0 :=
   PiDisjunctivity.baseDigit_div_pow_eq_zero b hb m k n
 
+-- Infinite reconstruction and arbitrarily late occurrence retain their complete hypotheses.
+example (b : ℕ) (hb : 2 ≤ b) (x : ℝ) (hx : 0 ≤ x) :
+    HasSum (fun n => (PiDisjunctivity.baseDigit b x n : ℝ) / (b : ℝ) ^ (n + 1))
+      (Int.fract x) :=
+  PiDisjunctivity.hasSum_baseDigit b hb x hx
+
+example (b : ℕ) (hb : 2 ≤ b) (x : ℝ) (h : PiDisjunctivity.IsDisjunctive b x)
+    (k : ℕ) (s : Fin k → Fin b) (N : ℕ) :
+    ∃ n, N ≤ n ∧ ∀ i : Fin k, PiDisjunctivity.baseDigit b x (n + i.val) = (s i).val :=
+  PiDisjunctivity.isDisjunctive_occurs_ge b hb x h k s N
+
 /--
 info: 'PiDisjunctivity.blockValue_eq_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
 -/
@@ -166,3 +177,16 @@ info: 'PiDisjunctivity.baseDigit_div_pow_eq_zero' depends on axioms:
 -/
 #guard_msgs (whitespace := lax) in
 #print axioms PiDisjunctivity.baseDigit_div_pow_eq_zero
+
+/--
+info: 'PiDisjunctivity.hasSum_baseDigit' depends on axioms: [propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms PiDisjunctivity.hasSum_baseDigit
+
+/--
+info: 'PiDisjunctivity.isDisjunctive_occurs_ge' depends on axioms:
+[propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms PiDisjunctivity.isDisjunctive_occurs_ge

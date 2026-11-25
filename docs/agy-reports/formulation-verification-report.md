@@ -4,6 +4,15 @@
 - **Repository audited:** [`pi-disjunctivity/`](../../) (branch `feature/attempt-01`, commit `ae2ba3f`)
 - **Toolchain verified:** Lean `4.37.0-rc1` (`0b77e12952ad39077d80d8bd6b66d601f225c321`) + Mathlib `v4.37.0-rc1` (`31ce06eaadf4a200c0e1407c5f10953cf606b8f8`)
 
+**Follow-up:** The findings below describe the audited commit above. The
+[subsequent improvements](../review-follow-up.md) add checked-in π digit examples,
+infinite reconstruction and recurrence proofs, clearer domain/empty-word
+documentation, and remove the empty `import` file. Hexadecimal specialization
+remains intentional. The original `verify_audit.lean` mentioned below is not
+checked into the repository, so its nine-theorem run remains the original
+reviewer's reported result. The follow-up records the checks that are now
+reproducible from the project itself.
+
 ---
 
 ## Executive Verdict
@@ -143,10 +152,10 @@ Neither issue affects `PiHexadecimalDisjunctivity` (`b = 16`, `Real.pi > 0`), an
 #### 4. Base-16 specialization vs. arbitrary-base generality
 `Definitions.lean` and `Digits.lean` already parameterize `baseDigit` and `IsDisjunctive` by `b : ℕ`, whereas `blockValue`, `hexadecimalOrbit`, `Cylinders.lean`, and `OrbitEquivalence.lean` hardcode `16`. This is a completely valid scoping choice aligned with the project's BBP motivation, and all documentation states this boundary accurately. However, none of the proofs in `BlockValue.lean`, `Cylinders.lean`, or `OrbitEquivalence.lean` use any property specific to `16` other than `2 ≤ 16`; parameterizing them by `(b : ℕ) (hb : 2 ≤ b)` would be a small refactor if future work compares base 2, base 10, and base 16.
 
-*(Note on mathematical scope: as already noted in `docs/pi-disjunctivity-codex-handoff.md`, hexadecimal disjunctivity of $\pi$ implies base-2 disjunctivity of $\pi$, because any binary word is a subword of a 4-bit-aligned binary word, i.e., a hexadecimal word. It does **not** imply base-10 disjunctivity, since $16$ and $10$ are multiplicatively independent.)*
+*(Note on mathematical scope: hexadecimal disjunctivity of $\pi$ implies base-2 disjunctivity of $\pi$, because any binary word can be extended to a 4-bit-aligned binary word, hence encoded as a hexadecimal word. No hexadecimal-to-decimal implication is established here. Since $16$ and $10$ are multiplicatively independent, the grouping argument for powers of a common base does not supply one; that observation alone is not a proof of nonimplication for the particular number $\pi$.)*
 
 #### 5. Stray tracked file `pi-disjunctivity/import`
-A 0-byte file named [`import`](../../import) exists at the root of `pi-disjunctivity/`, committed in `e85a8c85` ("initial addition"). It does not affect Lean compilation or any proof, and is likely an accidental shell artifact, but it was overlooked in `docs/formulation-review.md` and can be safely removed with `git rm import`.
+At the audited commit, a 0-byte file named `import` existed at the root of `pi-disjunctivity/`, committed in `e85a8c85` ("initial addition"). It did not affect Lean compilation or any proof, and was likely an accidental shell artifact. It was overlooked in `docs/formulation-review.md` and has been removed in the follow-up.
 
 ---
 

@@ -53,6 +53,11 @@ proofs. No definition or previously reviewed theorem statement needed correction
 `PiDisjunctivity.baseDigit_div_pow_eq_zero` now explicitly proves that every digit
 after a terminating prefix is zero, in every base $b\ge 2$.
 
+The [review follow-up](docs/review-follow-up.md) adds infinite-series
+reconstruction, arbitrarily late word occurrences under disjunctivity, and a
+check of π's first four hexadecimal fractional digits, `243F`, using Mathlib's
+proved bounds. It also clarifies the input domain and empty-word notation.
+
 See the [validation plan](docs/problem-formulation.md#plan-for-validating-the-formulation)
 and its [remaining Lean verification roadmap](docs/problem-formulation.md#remaining-lean-verification-roadmap)
 for the theorem statements, proof sequence, and completed review criteria.
@@ -63,9 +68,9 @@ property remains the research question; this repository does not establish it.
 The digit and disjunctivity definitions remain parameterized by the base. The
 word value, orbit, and conjecture definitions use base 16. Reconstruction examples
 cover bases 2, 10, and 16. The default build checks the definitions, all three
-foundational steps, both formulation equivalences, the termination theorem, and
-examples. The review distinguishes these kernel-checked results from the
-mathematical comparison with the intended problem.
+foundational steps, both formulation equivalences, termination, infinite
+reconstruction, recurrence, and examples. The review distinguishes these results
+from the mathematical comparison with the intended problem.
 
 ## Installation
 
@@ -134,9 +139,9 @@ both formulation equivalences:
 lake env lean Test.lean
 ```
 
-This check preserves the twelve original theorem-type audits and adds the
-termination theorem, for thirteen reviewed theorems. It uses `#guard_msgs` to
-verify each theorem's exact axiom list: `propext`, `Classical.choice`, and
+This check preserves the thirteen milestone C theorem-type audits and adds
+infinite reconstruction and recurrence, for fifteen reviewed theorems. It uses
+`#guard_msgs` to verify each theorem's exact axiom list: `propext`, `Classical.choice`, and
 `Quot.sound`. An unexpected axiom such as `sorryAx` makes the check fail. CI runs
 it after the library build. Two further checks expand the named π propositions
 to the explicit quantified digit and orbit statements.
@@ -145,7 +150,7 @@ To build selected modules explicitly:
 
 ```sh
 lake build PiDisjunctivity.Definitions PiDisjunctivity.BlockValue \
-  PiDisjunctivity.Digits PiDisjunctivity.Cylinders \
+  PiDisjunctivity.Digits PiDisjunctivity.Disjunctivity PiDisjunctivity.Cylinders \
   PiDisjunctivity.Conjectures PiDisjunctivity.OrbitEquivalence \
   PiDisjunctivity.Examples
 ```
@@ -166,6 +171,8 @@ axiom lists, dependency inspection, validation results, and remaining limitation
 
 ## Repository guide
 
+- [docs/review-follow-up.md](docs/review-follow-up.md): improvements prompted by
+  the external review, proof methods, validation, and current audit coverage.
 - [docs/formulation-review.md](docs/formulation-review.md): the completed milestone C
   review, with requirements mapped to definitions, universal proofs, and examples.
 - [docs/session-prompts.md](docs/session-prompts.md): the completed milestone C
@@ -185,7 +192,9 @@ axiom lists, dependency inspection, validation results, and remaining limitation
   milestone A's fixed-length injectivity theorem.
 - [PiDisjunctivity/Digits.lean](PiDisjunctivity/Digits.lean): the Step 3 proofs of
   arbitrary-base digit bounds, the scaled-floor recurrence, prefix reconstruction,
-  and truncation error, plus the general trailing-zero theorem added during review.
+  and truncation error, plus general termination and infinite-series reconstruction.
+- [PiDisjunctivity/Disjunctivity.lean](PiDisjunctivity/Disjunctivity.lean): every
+  finite word occurs arbitrarily far out under the disjunctivity hypothesis.
 - [PiDisjunctivity/Cylinders.lean](PiDisjunctivity/Cylinders.lean): hexadecimal
   digit shifting and the word–interval correspondence.
 - [PiDisjunctivity/Conjectures.lean](PiDisjunctivity/Conjectures.lean): proposition
@@ -193,7 +202,8 @@ axiom lists, dependency inspection, validation results, and remaining limitation
 - [PiDisjunctivity/OrbitEquivalence.lean](PiDisjunctivity/OrbitEquivalence.lean):
   the orbit-closure equivalence for every nonnegative real and its specialization
   to the two conjecture statements about π.
-- [PiDisjunctivity/Examples.lean](PiDisjunctivity/Examples.lean): exact rational
+- [PiDisjunctivity/Examples.lean](PiDisjunctivity/Examples.lean): π's first four
+  fractional hexadecimal digits from proved bounds, and exact rational
   examples for hexadecimal indexing, digits `A`–`F`, leading zeros, terminating
   expansions, interval boundaries, and the word-value sum formula; range examples
   cover lengths zero and one, zero values, `00A`, `FF`, and the maximum value at
@@ -204,8 +214,8 @@ axiom lists, dependency inspection, validation results, and remaining limitation
   and the empty word. Orbit examples check both closure endpoints, word recovery,
   and the failure of disjunctivity for zero.
 - [PiDisjunctivity.lean](PiDisjunctivity.lean): the library's root imports.
-- [Test.lean](Test.lean): the twelve original foundational and equivalence
-  statements plus the termination theorem, all with guarded axiom checks, and
+- [Test.lean](Test.lean): fifteen foundational, equivalence, termination,
+  reconstruction, and recurrence statements with guarded axiom checks, and
   two direct conjecture-definition checks.
 
 ## License

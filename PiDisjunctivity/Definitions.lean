@@ -14,11 +14,15 @@ public import Mathlib.Topology.Instances.Real.Lemmas
 
 namespace PiDisjunctivity
 
-/-- The digit at zero-based position `n` after the radix point of a nonnegative real. -/
+/-- The digit at zero-based position `n` after the radix point, for `x ≥ 0` and `b ≥ 2`.
+The formula is total, but values outside this domain have no intended positional interpretation:
+negative inputs give zero digits, and bases zero and one are degenerate. -/
 noncomputable def baseDigit (b : ℕ) (x : ℝ) (n : ℕ) : ℕ :=
   Nat.floor ((b : ℝ) ^ (n + 1) * x) % b
 
-/-- Every finite base-`b` word occurs, including words with leading zeros. -/
+/-- Every finite base-`b` word occurs, including words with leading zeros.
+The intended digit interpretation assumes `x ≥ 0` and `b ≥ 2`. Outside that domain,
+the predicate is false for negative inputs with `b ≥ 2`, and true for bases zero and one. -/
 def IsDisjunctive (b : ℕ) (x : ℝ) : Prop :=
   ∀ (k : ℕ) (s : Fin k → Fin b),
     ∃ n : ℕ, ∀ i : Fin k,
