@@ -775,3 +775,129 @@ commits, the necessity check, remaining obligations, and B1b as a proposal only.
 The final documentation commit contains this actual retrospective and handoff;
 its own ID is printed after committing. No infinite-sum interchange, π evaluation,
 B2/B3, or visitation work follows. Pause for the user's decision.
+
+## 2026-11-25 — B1b pointwise series and domination
+
+### Authorized endpoint and actual checkout
+
+Executed only the first Current prompt in `session-prompts.md`, after reading
+`AGENTS.md` and the B1a handoff, current plans, blueprint/log, workflow, source,
+audits, and trust/formulation records. Ignored archived instructions and did
+not repeat the completed B1 source review or B1a. Announced the bounded endpoint
+before editing: exactly the pointwise `HasSum` and uniform geometric norm bound,
+root-import checks, guarded audits, validation/review, local commits, necessity
+review, and handoff; stop before interchange, π evaluation, B2/B3, or V.
+
+Actual starting HEAD was `32e0974ea7389e38f28758a60cbeaad3b1794f2d` on the prepared
+`feature/attempt03`. Live `git ls-remote` found remote main at
+`9148792313151ac712f4caabe039b7b162690691`, matching local main/origin/main and
+an ancestor of HEAD, recording merged PR #2. Preserved the saved prompt and
+all unrelated Obsidian/notes/papers work. The saved `agy` prefix rule check
+returned `decision: allow`; active workspace/temporary write restrictions and
+no escalation were retained. No permission settings changed.
+
+### Independent proof and compiler feedback
+
+Pinned Mathlib source search confirmed `hasSum_geometric_of_lt_one`,
+`HasSum.mul_right`, `pow_le_one₀`, and `pow_le_pow_left₀`. The two new public
+theorems in `BBP/Series.lean` are `hasSum_bbpTerm` and `norm_bbpTerm_le`.
+Both assume exactly `x ∈ Set.Icc (0 : ℝ) 1`; the norm bound quantifies every
+`j : ℕ`. The proofs explicitly bound the ratio by `1/16`; the sum proof obtains
+positive `1-q`. Geometric summation and multiplication identify `P/(1-q)`.
+Power monotonicity and the polynomial absolute bound give `8*(1/16)^j`.
+All helper facts stay local; there is no new definition or public helper.
+
+The first sum proof's broad `simp` using commutativity produced mismatched
+multiplication orders inside the polynomial. `convert` followed by `ring`
+closed the exact intended target. Linter feedback removed redundant tactic
+sequencing and ensured endpoint tests used the exported theorems. These were
+compiler/linter issues, not missing mathematics. No external proof scripts,
+extra libraries, placeholders, or proof bypasses were used.
+
+From the correct root, Lean reported `4.37.0-rc1`; baseline and integrated
+`lake build` passed with 7201 jobs, and final source validation had no warnings.
+The root-import `Test.lean` passes with twenty-two exact type/axiom guards,
+preserving all twenty earlier audits and definition/value checks. Both actual
+new axiom lists were inspected before guarding them: exactly `propext`,
+`Classical.choice`, `Quot.sound`. Checked both `x = 0` and `x = 1` for the sum
+and bound, and `j = 0` for all admissible `x`. `git diff --check` passes.
+
+Separate mathematical review confirmed the quantifiers, signs, real division,
+closed endpoints, denominator positivity, and majorant independent of `x`.
+The only added import is pinned Mathlib's `Analysis.SpecificLimits.Basic`;
+B1a definitions/proof, the earlier statements, pins, manifest, CI, and policies
+are preserved. No clean-environment build or remote CI result is asserted.
+
+### Status and review preparation
+
+Only B1a/T1, B1b/T2, and T3's pointwise bound are checked. T3's remaining
+measurability, summability/integrability instances and interchange, T4,
+antiderivative/FTC conditions, integral endpoint evaluation, and final B1
+assembly remain open. B2/B3/V/Hπ/T and π disjunctivity remain unproved;
+B4 retains vanishing errors and arbitrarily late visits, and P3 retains
+open-interval visits. Both plans and the blueprint propose B1c only for new
+authorization. No further milestone has begun. Keep the direct `HasSum`
+integral route and B1-before-B3 order; the local workflow needed no new tooling.
+
+The [B1b handoff](b1b-handoff.md) records the exact results and scope. Required
+Gemini review, final preservation checks, local commits, and the post-commit
+necessity assessment are recorded below when completed.
+
+
+### Gemini review and final validation
+
+Gemini Carbon High completed the thirteen-file exact supplied-diff review with
+**no actionable correctness, policy, or documentation-consistency findings**.
+Conversation: `374e74bf-0499-402c-bc1d-c413278a6a00`. The
+[saved report](agy-reports/b1b-review.md) includes scope/diff hash, complete
+response, terminal fields, observed progress, and limitations. One invocation
+completed in 212.730 seconds: exit 0, `SUCCESS`, substantive nonempty response,
+no terminal error/finished-reason/denied-action fields. It used five read-only
+file calls and no observed shell/write tools. No recovery or substantive-fix
+follow-up was needed. The finalization reminder is to record actual commits
+and the post-commit necessity review, not a correctness finding.
+
+Sandbox restrictions prevented CLI-owned log/conversation/cache persistence,
+while authentication and the full review succeeded. The last tool return
+truncated some intermediate text events at its output budget; the complete
+terminal JSON/response and process exit were retained. The report explicitly
+records that capture limitation. Available chunks/result/timestamps are saved
+separately under `/tmp`; future polls should use a larger output budget as
+response deltas begin. No permission setting or effort/model changed.
+
+Before review, preservation passed for 24 unrelated/protected hashes, B1a's
+unchanged declarations, all twenty earlier guard blocks and all original
+checks, and archived prompt bytes. All 171 local Markdown links/anchors passed.
+The post-review report and outcome records receive final preservation/link and
+whitespace checks before staging/commit. No substantive code changed after
+the passing build and twenty-two-theorem audit; no additional Lean rerun is
+needed solely for factual review/commit records.
+
+
+### Post-commit necessity review and final handoff
+
+Committed the reviewed milestone locally as
+`0f5d5da16c51e805294f32aec8f633ee462d1582` on `feature/attempt03`, with parent
+`32e0974`. `git commit --only` selected fourteen task-owned files; the remaining
+working-tree changes are the preserved Obsidian, notes, and papers. No push or
+PR was made. Pre-commit checks passed for 206 local Markdown links/anchors,
+24 unrelated/protected hashes, B1a declarations, all twenty earlier audits
+and original checks, archived prompts, and staged/global whitespace.
+
+Then reread the committed module, root export, and audit additions. The local
+ratio facts supply the geometric premises, denominator positivity, norm signs,
+and exponent bound. The polynomial bound and multiplication inequality supply
+the requested uniform majorant, with exact algebra normalizing the final
+expressions. The existing public root import, full type and axiom checks, and
+boundary examples provide the required importer/trust/semantic coverage.
+Each piece serves the authorized statement, proof, or acceptance checks; no
+extra API or removable proof layer was found. No substantive simplification
+or fix was warranted, so no focused Gemini follow-up or empty code commit
+was made.
+
+The final two-file documentation commit records this actual retrospective and
+[handoff](b1b-handoff.md), with fresh whitespace/link/preservation checks.
+The reviewed source and audits are unchanged after their successful validation.
+Its commit ID is reported after committing. Stop at B1b: no interchange,
+integral evaluation, full BBP identity, B2/B3, or universal visitation proof
+has been begun. Pause for the user's next decision.

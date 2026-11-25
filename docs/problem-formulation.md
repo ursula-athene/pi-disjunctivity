@@ -21,8 +21,9 @@ and B4/P3, the conditional interior-margin transfer and open-interval-to-cell
 conversion. These general results preserve this reviewed formulation and their
 explicit visitation hypotheses. [The research log](research-log.md) records the
 scope, review, and expanded audit. A later separately authorized B1a cycle
-checked the BBP coefficient and single-term integral, with twenty theorem
-audits in total; see [the handoff](b1a-handoff.md). The full BBP series and
+checked the BBP coefficient and single-term integral; B1b now checks pointwise
+summation and domination, with twenty-two theorem audits in total; see
+[the B1b handoff](b1b-handoff.md). The full BBP series and
 universal visitation remain unproved.
 
 ## Problem formulation
@@ -464,8 +465,9 @@ rational bounds. These results are included in the default build.
 The separate `lake env lean Test.lean` check preserves all thirteen milestone C
 theorem types and adds the two new theorem types through the library root.
 The later bounded interval pilot adds two more types and the B4/P3 milestone
-adds two, then B1a adds the unconditional BBP single-term integral, for twenty
-in total, without changing the fifteen formulation/follow-up theorems. B4 assumes
+adds two, then B1a adds the unconditional BBP single-term integral and B1b
+adds pointwise summation/domination, for twenty-two in total, without changing
+the fifteen formulation/follow-up theorems. B4 assumes
 vanishing errors and arbitrarily late open-interval visits;
 P3 assumes open-interval visits and yields hexadecimal-cell visits. Both are
 general conditional results, with no BBP or global range hypothesis.

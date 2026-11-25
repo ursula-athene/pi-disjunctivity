@@ -7,7 +7,7 @@ module
 
 import PiDisjunctivity
 
-/-! Audit definitions, foundations, orbit criteria, and the BBP term integral after `lake build`. -/
+/-! Audit definitions, foundations, orbit criteria, and BBP analytic lemmas after `lake build`. -/
 
 -- Compare the named π statements directly with the reviewed quantified problem and orbit.
 example : PiDisjunctivity.PiHexadecimalDisjunctivity ↔
@@ -144,6 +144,35 @@ example (j : ℕ) :
       PiDisjunctivity.bbpCoeff j / (16 : ℝ) ^ j :=
   PiDisjunctivity.integral_bbpTerm j
 
+-- Pointwise summation and domination retain the closed interval and every natural index.
+example (x : ℝ) (hx : x ∈ Set.Icc (0 : ℝ) 1) :
+    HasSum (fun j : ℕ => (x ^ 8 / 16) ^ j * (4 - 2 * x ^ 3 - x ^ 4 - x ^ 5))
+      ((4 - 2 * x ^ 3 - x ^ 4 - x ^ 5) / (1 - x ^ 8 / 16)) :=
+  PiDisjunctivity.hasSum_bbpTerm x hx
+
+example (j : ℕ) (x : ℝ) (hx : x ∈ Set.Icc (0 : ℝ) 1) :
+    ‖(x ^ 8 / 16) ^ j * (4 - 2 * x ^ 3 - x ^ 4 - x ^ 5)‖ ≤
+      8 * (1 / (16 : ℝ)) ^ j :=
+  PiDisjunctivity.norm_bbpTerm_le j x hx
+
+-- At zero the zero-index term is 4; at one the polynomial factor vanishes.
+example : HasSum (fun j : ℕ => (0 : ℝ) ^ j * 4) 4 := by
+  simpa using PiDisjunctivity.hasSum_bbpTerm 0 (by norm_num)
+
+example : HasSum (fun j : ℕ => (1 / (16 : ℝ)) ^ j * 0) 0 := by
+  convert PiDisjunctivity.hasSum_bbpTerm 1 (by norm_num) using 1 <;> norm_num
+
+example (j : ℕ) : ‖(0 : ℝ) ^ j * 4‖ ≤ 8 * (1 / (16 : ℝ)) ^ j := by
+  simpa using PiDisjunctivity.norm_bbpTerm_le j 0 (by norm_num)
+
+example (j : ℕ) : ‖(1 / (16 : ℝ)) ^ j * 0‖ ≤ 8 * (1 / (16 : ℝ)) ^ j := by
+  convert PiDisjunctivity.norm_bbpTerm_le j 1 (by norm_num) using 1
+  norm_num
+
+example (x : ℝ) (hx : x ∈ Set.Icc (0 : ℝ) 1) :
+    ‖4 - 2 * x ^ 3 - x ^ 4 - x ^ 5‖ ≤ 8 := by
+  simpa using PiDisjunctivity.norm_bbpTerm_le 0 x hx
+
 /--
 info: 'PiDisjunctivity.blockValue_eq_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
 -/
@@ -272,3 +301,17 @@ info: 'PiDisjunctivity.integral_bbpTerm' depends on axioms:
 -/
 #guard_msgs (whitespace := lax) in
 #print axioms PiDisjunctivity.integral_bbpTerm
+
+/--
+info: 'PiDisjunctivity.hasSum_bbpTerm' depends on axioms:
+[propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms PiDisjunctivity.hasSum_bbpTerm
+
+/--
+info: 'PiDisjunctivity.norm_bbpTerm_le' depends on axioms:
+[propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms PiDisjunctivity.norm_bbpTerm_le

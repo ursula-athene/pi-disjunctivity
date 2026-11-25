@@ -10,7 +10,8 @@ with nineteen theorem audits passing. BBP formalization and universal visitation
 were not attempted. A subsequent B1 source/argument review is recorded below,
 without new Lean declarations. The separately authorized B1a cycle subsequently
 checked the coefficient and one-term integral, bringing the theorem audit count
-to twenty. The stages below remain the procedure for future separately scoped work.
+to twenty. B1b now checks pointwise summation and domination, bringing that
+count to twenty-two. The stages below remain the procedure for future separately scoped work.
 
 **Review-policy update, 2026-11-25:** the user requires Gemini Carbon High
 changed-file reviews through `agy` at milestones and at useful intermediate
@@ -19,7 +20,7 @@ and [AGENTS.md](../AGENTS.md#gemini-carbon-code-reviews-with-agy). This is a new
 user-directed process requirement; it does not retroactively claim an external
 review of the completed B4/P3 cycle.
 
-## B1a outcome and next bounded task
+## B1a/B1b outcomes and next bounded task
 
 The [B1 source and proof assessment](b1-source-proof-review.md) was already
 complete at `2b7a745`/`ab43f71` and was not repeated. The authorized B1a cycle
@@ -28,10 +29,21 @@ independently implemented `bbpCoeff` and the single-term integral. The
 B1's full `HasSum` identity, B2/B3, and universal visitation remain unproved;
 B4/P3 retain every hypothesis.
 
-The next proposed cycle is [B1b: pointwise series and domination](proof-plan.md#next-bounded-task-b1b-pointwise-series-and-domination),
-subject to separate authorization. It stops before infinite interchange and
-integral evaluation. The [current session record](session-prompts.md#current-prompt-b1a-coefficient-and-one-term-integral)
-records B1a's stopping point; it does not automatically invoke B1b.
+The separately authorized B1b cycle independently proved `hasSum_bbpTerm` and
+`norm_bbpTerm_le`, with root-import type/axiom guards and endpoint/zero-index
+checks. See [the B1b handoff](b1b-handoff.md). The next proposed cycle is
+[B1c: sum/integral interchange](proof-plan.md#next-bounded-task-b1c-sumintegral-interchange),
+subject to separate authorization. It stops before integral evaluation and
+identification with `Real.pi`. The [current session record](session-prompts.md)
+records B1b's stopping point; it does not invoke B1c.
+
+B1b needed only the pinned geometric-series and order APIs. A broad commutative
+simplification initially failed to match the series target; a targeted `convert`
+and `ring` closed it. Linter feedback removed redundant tactic sequencing and
+ensured the endpoint checks actually instantiate the exported theorems. These
+were compiler/linter issues, not missing mathematics. No new public helper,
+optional tooling, library dependency, or external proof script was needed.
+The existing workflow remains sufficient; no process rewrite is justified.
 
 Pinned-source search and the local compiler loop sufficed. The term proof
 compiled immediately; root-import definition checks then exposed a module

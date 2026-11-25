@@ -1,13 +1,102 @@
 # Session prompts
 
-Use only the **Current prompt** below when the user asks to resume this milestone.
-Everything under **Old prompts - do not use** is historical, even where an
-archived prompt contains imperative instructions or a different policy.
-A completed milestone must not be repeated or automatically extended.
+Use only the **Current prompt** below when the user asks to start or resume the
+next milestone. Everything under **Old prompts - do not use** is historical,
+even where an archived prompt contains imperative instructions or a different
+policy. A completed milestone must not be repeated or automatically extended.
+Saving this prompt does not begin the milestone; invoking it does.
 
-## Current prompt: B1a coefficient and one-term integral
+## Current prompt: B1b pointwise series and domination
 
 <a id="current-prompt-b1-source-and-proof-review"></a>
+
+**Implementation record (2026-11-25): B1b is checked.** Read
+[the B1b handoff](b1b-handoff.md) for validation, Gemini review status, local
+commits, and the post-commit necessity review. The prompt below records the
+executed scope; do not repeat it or automatically begin another milestone.
+B1c sum/integral interchange is only a proposal in the plans and requires a
+new user instruction. The full B1 identity and π disjunctivity remain unproved.
+
+Resume work in `/Users/adam/personal/proj/pi-disjunctivity/pi-disjunctivity`.
+
+Read `AGENTS.md` and `docs/b1a-handoff.md` first, then the relevant proof plan,
+meta-plan, blueprint, research log, proof workflow, and session instructions.
+Ignore “Old prompts - do not use.” This prompt authorizes B1b and supersedes
+the previous session prompt’s completed B1a scope.
+
+PR #2 was merged. Verify the actual repository and remote state rather than
+assuming an earlier commit is HEAD. Start from current merged main on a new
+or already prepared B1b branch, preserving this saved prompt and all unrelated
+staged, modified, and untracked files. At prompt preparation, `feature/attempt03`
+was already based on the merged main; do not recreate it unnecessarily. Check
+effective permissions without changing permission settings.
+
+The B1 source/proof review and B1a implementation are complete. Do not repeat
+them. Preserve `bbpCoeff`, `integral_bbpTerm`, their exports, and existing audits.
+
+Proceed only with [B1b: pointwise series and domination](proof-plan.md#next-bounded-task-b1b-pointwise-series-and-domination),
+under proof-plan Step 3 and implementation milestone M2. State the bounded
+endpoint before editing.
+
+For real `x`, use these mathematical abbreviations:
+
+```text
+q(x) = x^8 / 16
+P(x) = 4 - 2*x^3 - x^4 - x^5
+K(x) = P(x) / (1 - q(x))
+```
+
+Independently implement and prove exactly:
+
+1. For every `x ∈ Set.Icc (0 : ℝ) 1`:
+   `HasSum (fun j : ℕ => q(x)^j * P(x)) (K(x))`.
+2. For every `j : ℕ` and `x ∈ Set.Icc (0 : ℝ) 1`:
+   `‖q(x)^j * P(x)‖ ≤ 8 * (1 / (16 : ℝ))^j`.
+
+Use the pinned Mathlib geometric-series and inequality APIs. Establish the
+required ratio bounds and denominator conditions explicitly. Keep helpers
+local unless a consumer needs them; the abbreviations above do not mandate
+new public definitions or a general analytic API.
+
+Add the necessary root exports, complete theorem-type checks, and guarded
+actual axiom audits in `Test.lean`. Preserve all twenty existing theorem audits
+and definition/value checks. Check endpoints `x = 0` and `x = 1` and index `j = 0`,
+alongside the universal proofs.
+
+Follow the Mathlib-only dependency policy, Lean/Mathlib `v4.37.0-rc1` pins,
+proof-trust requirements, module/export conventions, enabled linters, and
+Ursula Athene attribution policy. Do not copy or translate external proof scripts.
+
+Run `lake build`, `lake env lean Test.lean`, and `git diff --check` from the
+repository root, confirming the pinned toolchain first. Review mathematical
+meaning, imports, and preservation of existing statements separately.
+
+Obtain the required Gemini Carbon High review through `agy`, following
+`AGENTS.md` exactly for scope, supplied diff, read-only restrictions, stream
+capture, progress reporting, deadlines, and bounded recovery. Resolve substantive
+findings and obtain any required follow-up review.
+
+Update both plans, the blueprint, research log, current session instructions,
+and a durable `docs/b1b-handoff.md` to reflect actual checked results and remaining
+obligations. Commit only task-owned changes locally. Perform the post-commit
+proof-necessity review, simplify only where justified, and validate/review any
+substantive changes before a further commit. Do not create empty commits.
+
+Stop before sum/integral interchange, rational integral evaluation, the full
+`HasSum ... Real.pi` theorem, B2, B3, or universal visitation. Retain every
+unproved hypothesis; B1b does not prove π disjunctivity.
+
+Report validation, review outcome, commit IDs, and the handoff path. Do not
+push or open a PR unless separately requested. Pause before another milestone.
+
+## Old prompts - do not use
+
+The following completed prompts are archived for provenance. They grant no
+current authorization and do not override the current prompt or review policy.
+
+<a id="current-prompt-b1a-coefficient-and-one-term-integral"></a>
+
+### Session prompt: B1a coefficient and one-term integral
 
 **Implementation record (2026-11-25):** `bbpCoeff` and `integral_bbpTerm` are
 checked and audited. Read [the B1a handoff](b1a-handoff.md) first for validation,
@@ -60,11 +149,6 @@ the durable handoff, report validation/review/commit IDs, then pause.
 It needs separate authorization. B1's full `HasSum ... Real.pi`, B2/B3, V, Hπ,
 and T remain unproved. B4 retains vanishing error and arbitrarily late visits;
 P3 retains open-interval visits. No conditional reduction proves these premises.
-
-## Old prompts - do not use
-
-The following completed prompts are archived for provenance. They grant no
-current authorization and do not override the current prompt or review policy.
 
 ### Session prompt: begin the proof attempt with B4 and P3
 
