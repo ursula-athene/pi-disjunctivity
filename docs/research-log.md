@@ -460,3 +460,30 @@ substantive response: resolved, with no remaining actionable issues. This was
 a supplied-patch recheck, not a fresh repository/build audit. Final preservation,
 archive, Markdown link/anchor, and whitespace checks passed. The documentation
 follow-up is committed locally; no next-milestone work or push is included.
+
+
+## 2026-11-25 — Persist unattended `agy` invocation guidance
+
+At the user's request, updated `AGENTS.md` and linked its persistent-approval
+procedure from the proof workflow. Future sessions should invoke the literal
+`agy --model gemini-4-carbon-high --mode plan` prefix directly, capture output
+through the execution tool, and save it separately. Shell redirects, wrappers,
+substitutions, and inline environment assignments can prevent the saved prefix
+rule from matching. The guidance distinguishes host rules from Gemini's internal
+permissions, records startup/restart behavior, and retains file-tool-only review,
+explicit diff input, and incomplete-result handling. No permission rule or global
+approval setting was changed.
+
+Validation: the saved host rule was inspected; `codex execpolicy check` returned
+`decision: allow` for the direct prefix. Markdown links/anchors and
+`git diff --check` passed. The diff for Lean source, audits, pins, and CI is empty,
+so no Lean build was rerun. Unrelated Obsidian and notes work is excluded.
+
+A bounded Gemini Carbon High review of the supplied two-file diff was attempted
+through direct `agy` invocation, with no shell redirection or reviewer tools.
+Conversation: `65b42fe3-3019-4a94-bcb0-e4075583afb3`. It reached the three-minute
+CLI deadline and exited 3 with `status: ERROR`, an empty response, and
+`finished_reason: print_timeout`. This is an **incomplete external review**;
+there are no returned findings or review approval to claim. The requested
+documentation commit proceeds with the local checks and this explicit limitation.
+No proof milestone or B1 work was started.

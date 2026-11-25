@@ -133,6 +133,10 @@ and the exact CLI procedure in
    prompt or an accessible file; current-file inspection alone cannot verify
    deletions or exact changes against the baseline.
 2. Use `agy --model gemini-4-carbon-high --mode plan` from the repository root.
+   Follow [the persistent-approval procedure](../AGENTS.md#persistent-approval-for-unattended-review-runs):
+   invoke that literal prefix directly, capture output through the execution
+   tool, and save it separately. Shell redirection or wrappers can prevent the
+   saved approval rule from matching and cause unnecessary prompts.
    Request no file changes or mutating commands, plus actionable findings with
    severity, file/line references, reasoning, and limitations. Review before the
    milestone commit; request intermediate reviews when they can catch a problem
