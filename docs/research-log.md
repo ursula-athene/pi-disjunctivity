@@ -371,3 +371,30 @@ B3's tail control are unformalized. Hπ and T remain unproved. Completing B4/P3
 supplies conditional infrastructure only. Stop after local commits, the required
 post-commit proof-necessity review, and the final committed handoff; do not begin
 the proposed next task.
+
+
+### Post-commit proof-necessity review and final handoff
+
+Milestone code, audits, plans, and status documentation were committed locally
+as `203e16c56c120072dba04301ef975b76ee342300`. Reviewed the committed proof
+pieces after that commit, following Viewpoint. B4's margin, convergence
+threshold, late visit, signed bounds, and fractional-part identity each serve
+the required implication. P3's denominator positivity and three endpoint
+conditions are exactly the inputs needed to apply open visitation. Both lemmas
+are needed in the planned chain; neither needs a new helper or composition
+result. The existing P1/P2 proofs remain relevant and unchanged.
+
+Simplified B4's final bounds to explicit order transitivity, replacing two
+`linarith` calls, and used `div_le_one` for P3's upper endpoint, removing the
+extra `one_mul` rewrite. The statements, imports, and axiom guards are unchanged.
+After these actual follow-up changes, reran
+`lake env lean PiDisjunctivity/OrbitCriteria.lean`, `lake build` (6655 jobs),
+`lake env lean Test.lean`, and `git diff --check`; all passed without warnings.
+The preservation diff against initial `04ac826` for pins and reviewed definitions
+was empty. No further proof simplification was warranted.
+
+The [final handoff](b4-p3-handoff.md) records the exact results, changed files,
+validation, remaining gaps, and proposed next bounded task. It accompanies the
+simplification commit; its introducing commit records that follow-up without
+an empty commit or history rewrite. Nothing was pushed. Pause here for the
+user's questions and next-milestone decision.

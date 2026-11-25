@@ -33,7 +33,7 @@ theorem hitsOpenIntervals_fract_add_of_tendsto_zero (u r : ℕ → ℝ)
   obtain ⟨hrlo, hrhi⟩ := abs_lt.mp herr
   have hinside : u n + r n ∈ Set.Ioo a b := ⟨by linarith, by linarith⟩
   refine ⟨n, ?_⟩
-  rw [Int.fract_eq_self.mpr ⟨by linarith [hinside.1], by linarith [hinside.2]⟩]
+  rw [Int.fract_eq_self.mpr ⟨ha.trans hinside.1.le, hinside.2.trans_le hb⟩]
   exact hinside
 
 /-- Hitting every open interval inside `[0,1]` suffices to hit every hexadecimal cell.
@@ -51,8 +51,7 @@ theorem hitsHexadecimalIntervals_of_hitsOpenIntervals (t : ℕ → ℝ)
     apply (div_lt_div_iff_of_pos_right hp).2
     linarith
   have hupper : ((m : ℝ) + 1) / (16 : ℝ) ^ k ≤ 1 := by
-    apply (div_le_iff₀ hp).2
-    rw [one_mul]
+    apply (div_le_one hp).2
     exact_mod_cast Nat.succ_le_of_lt hm
   obtain ⟨n, hlo, hhi⟩ := ht _ _ hlower hwidth hupper
   exact ⟨n, hlo.le, hhi⟩
