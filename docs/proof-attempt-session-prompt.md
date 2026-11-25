@@ -192,4 +192,8 @@ tail estimates, or attempting Step 5's universal visitation.
 Finish with a concise handoff: exact results and hypotheses, files changed,
 validation actually run, retrospective conclusions, plan adjustments, commit
 IDs, remaining obstructions, and the next task proposed for authorization.
+
+Write the handoff to a markdown file, commit it, and print to the user in a
+format that is readable on the Codex terminal.
+
 Then pause for the user's questions and decision.
