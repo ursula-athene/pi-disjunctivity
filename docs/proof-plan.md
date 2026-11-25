@@ -108,7 +108,11 @@ and rerun affected checks. No empty follow-up commit is required.
 Record the model, reviewed baseline/range, returned `conversation_id`, completion
 status, findings, and their disposition in the research log or a linked report.
 Follow `AGENTS.md` for result/error inspection, explicit-conversation follow-ups,
-and scoped sandbox approval. A timeout, interruption, or service error is an
+and scoped sandbox approval. Use streaming output with a twenty-minute deadline,
+monitor meaningful progress, and follow its
+[bounded-retry procedure](../AGENTS.md#progress-timeouts-and-bounded-retries)
+before making at most one focused recovery attempt. A deadline alone does not
+prove a hang. A timeout, interruption, or service error is an
 incomplete review; record it and do not claim review completion. An empty
 `response` remains incomplete even with exit code zero and `status: SUCCESS`.
 Require substantive findings or an explicit no-findings response; inspect

@@ -66,32 +66,65 @@ shell action can be denied by the headless reviewer's internal permissions.
 For example, replacing the scope/diff placeholders with the actual review input:
 
 ```sh
-agy --model gemini-4-carbon-high --mode plan --output-format json \
-  --print-timeout 10m \
+agy --model gemini-4-carbon-high --mode plan --output-format stream-json \
+  --print-timeout 20m \
   -p 'Read AGENTS.md using read-only file tools. Review only <scope and supplied diff> and relevant surrounding code. Do not modify files or invoke shell/Bash tools. Report actionable correctness issues with severity, file/line references, and reasoning. State any review limitations; if there are no findings, say so.'
 ```
 
 Capture stdout and stderr through the execution tool; save captured output in a
 separate permitted file-write operation. Do not append shell redirection to the
-`agy` invocation; see the persistent-approval instructions below. Inspect the
-process exit code and the result fields `status`, `response`, `error`,
-`finished_reason`, and `denied_actions` when present. Treat timeouts,
+`agy` invocation; see the persistent-approval instructions below. Collect the
+terminal `result` event and inspect the process exit code and its result payload
+fields `status`, `response`, `error`, `finished_reason`, and `denied_actions` when
+present. Treat timeouts,
 interruptions, errors, and an empty `response` as incomplete reviews, even with
 exit code zero and `status: SUCCESS`. Require substantive findings or an explicit
 no-findings response; resolve scope-blocking denials or record incomplete coverage.
-`--print-timeout 0` waits without a CLI deadline. For live progress, use
-`--output-format stream-json`: read the `init` and `step_update` events, then
-collect the final `result` event.
 
 Save the returned `conversation_id` and use it for follow-ups, replacing the
 placeholder below. Prefer an explicit ID over `--continue` when multiple tasks
 may be running:
 
 ```sh
-agy --model gemini-4-carbon-high --mode plan --output-format json \
-  --print-timeout 10m --conversation '<conversation_id>' \
+agy --model gemini-4-carbon-high --mode plan --output-format stream-json \
+  --print-timeout 20m --conversation '<conversation_id>' \
   -p 'Recheck your findings against the supplied fix diff and repository instructions. Use read-only file tools only if needed; do not modify files or invoke shell/Bash tools. Explain any remaining uncertainty.'
 ```
+
+### Progress, timeouts, and bounded retries
+
+Default to `--output-format stream-json --print-timeout 20m` for initial reviews
+and follow-ups. One successful review took about eight minutes twenty seconds;
+a later run reached a three-minute deadline without a response. Twenty minutes
+is a starting operational limit, not a completion guarantee. Do not use
+`--print-timeout 0` for unattended reviews: it removes the CLI deadline without
+solving a stall. Let the execution tool yield and retain its running session;
+poll that session in waits of at most sixty seconds, rather than treating an
+individual tool wait as the review deadline or launching a replacement process.
+
+Capture the stream continuously. Record the invocation start time, the `init`
+event's conversation ID/model, and timestamps of meaningful `step_update`
+changes: new steps, tool results, text deltas, or available usage updates. Keep
+the user informed while waiting. Repeated polls, an unchanged `ACTIVE` state,
+or a live client process do not demonstrate model progress. Silence can mean
+hidden reasoning or a service wait; record an unknown or suspected stall unless
+there is stronger evidence. In `json` mode, output arrives only at completion,
+so silence alone says even less. Record per-invocation wall time from caller or
+log timestamps; duration/usage counters on resumed conversations can be cumulative.
+
+After a timeout or failure, inspect captured events, stderr, and the relevant
+CLI log before retrying. Distinguish permission denials, explicit service errors,
+and a deadline reached without a known cause. `print_timeout` establishes that
+the CLI deadline expired, not that the model hung. Resolve an identified cause
+within existing authorization, or narrow the supplied review scope, and make
+at most **one focused recovery attempt per failed review**, retaining the explicit
+conversation ID and context when available. Verify the previous invocation has
+ended and check any reported active-turn state before resuming; do not create
+overlapping review runs. Record both attempts and any coverage omitted by a
+narrower retry. If recovery also fails, record the incomplete review and tooling
+obstacle; do not retry indefinitely, lower effort, switch models, bypass
+permissions, or claim completion. This recovery limit does not replace the
+focused follow-up review of substantive fixes after a completed review.
 
 ### Persistent approval for unattended review runs
 
@@ -124,7 +157,8 @@ check of the saved rule is:
 
 ```sh
 codex execpolicy check --rules /Users/adam/.codex/rules/default.rules --pretty -- \
-  agy --model gemini-4-carbon-high --mode plan --output-format json \
+  agy --model gemini-4-carbon-high --mode plan --output-format stream-json \
+  --print-timeout 20m \
   -p 'Review the supplied diff without modifying files.'
 ```
 

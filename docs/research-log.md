@@ -487,3 +487,34 @@ CLI deadline and exited 3 with `status: ERROR`, an empty response, and
 there are no returned findings or review approval to claim. The requested
 documentation commit proceeds with the local checks and this explicit limitation.
 No proof milestone or B1 work was started.
+
+
+## 2026-11-25 — Bound and observe `agy` review waits
+
+The user requested the timeout fix in the agent instructions and appropriate
+docs, with the live trial deferred to the next session. `AGENTS.md` now defaults
+both initial reviews and explicit-conversation follow-ups to streaming JSON and
+a twenty-minute CLI deadline. The proof plan, workflow, and current B1 prompt
+link the same progress and bounded-retry procedure. Capture meaningful event
+changes and per-invocation timestamps, distinguish permission/service errors
+from an unexplained deadline, inspect logs before at most one focused recovery
+attempt, and avoid overlapping runs. Unlimited unattended waits are not the
+default. No host permission rule, effort level, or model was changed.
+
+The diagnosis used existing results and CLI logs: the substantive review in
+conversation `4a903f42-ee6d-4555-9609-9b6a401614bd` took about eight minutes twenty
+seconds (00:28:20 to 00:36:40 in the log), and its focused recheck took about one
+minute. The resumed conversation's reported duration was cumulative, not the
+recheck's wall time. In conversation `65b42fe3-3019-4a94-bcb0-e4075583afb3`, the
+log recorded a generation RPC at 00:48:48 and the three-minute CLI timeout at
+00:51:40, without a substantive response. This establishes deadline expiry;
+it does not distinguish slow reasoning or service waiting from a hung request.
+Twenty minutes is a pragmatic starting limit, not an empirically verified cure.
+
+No new `agy` run was launched: the user explicitly deferred that trial to the
+next session. External review of this documentation follow-up is therefore
+deferred, not passed. Local validation passed: all 48 local Markdown links/anchors
+in the changed files, `git diff --check`, archive preservation, and preservation
+of Lean source, audits, dependency pins, CI, and the agent trust/scope policies.
+No Lean build was rerun for these documentation-only edits. No B1 work
+or next proof milestone was started.

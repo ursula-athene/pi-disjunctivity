@@ -133,6 +133,8 @@ and the exact CLI procedure in
    prompt or an accessible file; current-file inspection alone cannot verify
    deletions or exact changes against the baseline.
 2. Use `agy --model gemini-4-carbon-high --mode plan` from the repository root.
+   Default to `--output-format stream-json --print-timeout 20m` for reviews and
+   follow-ups; twenty minutes is an operational limit, not a completion guarantee.
    Follow [the persistent-approval procedure](../AGENTS.md#persistent-approval-for-unattended-review-runs):
    invoke that literal prefix directly, capture output through the execution
    tool, and save it separately. Shell redirection or wrappers can prevent the
@@ -143,9 +145,14 @@ and the exact CLI procedure in
    before later work depends on it.
    In headless mode, ask for read-only file tools only and no shell/Bash calls;
    even a read-only shell action can be denied by the reviewer's permissions.
-3. Capture the output, inspect the exit code and final result fields, and retain
-   the explicit `conversation_id`. A timeout or error is incomplete even if a
-   partial response exists. Record an unavailable reviewer as a tooling obstacle,
+3. Capture streaming events and their timestamps, inspect the exit code and final
+   result payload, and retain the explicit `conversation_id`. Follow
+   [the progress and bounded-retry procedure](../AGENTS.md#progress-timeouts-and-bounded-retries):
+   monitor meaningful step changes, distinguish a deadline from evidence of a
+   hang, inspect logs before retrying, and allow at most one focused recovery
+   attempt without overlapping runs. Record per-invocation wall time separately
+   from potentially cumulative conversation counters. A timeout or error is
+   incomplete even if a partial response exists. Record an unavailable reviewer as a tooling obstacle,
    not a clean review; follow the host approval procedure for sandbox restrictions.
    An empty `response` with exit code zero and `status: SUCCESS` is also
    incomplete. Require substantive findings or an explicit no-findings response,

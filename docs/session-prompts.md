@@ -121,6 +121,15 @@ calls. Prepare the exact scoped diff in the calling session and supply it in the
 prompt or an accessible review file, together with the baseline and file list.
 This lets the reviewer inspect deletions and changed lines without running Git.
 
+Use `--output-format stream-json --print-timeout 20m` for initial reviews and
+follow-ups. Follow the [progress and bounded-retry instructions](../AGENTS.md#progress-timeouts-and-bounded-retries):
+capture events and timestamps through the execution tool, monitor meaningful
+changes, and inspect errors/logs before at most one focused recovery attempt.
+Keep the explicit conversation ID, avoid overlapping runs, and record incomplete
+coverage if recovery fails. A deadline or silent client alone does not prove a
+hang; the longer deadline is not a guarantee. Use the direct approved command
+prefix and save output separately, as described in `AGENTS.md`.
+
 Have Gemini review the source assessment, candidate argument, dependency map,
 and changed plans before the milestone commit. Request an intermediate review
 when an uncertain argument would otherwise guide later work. This milestone
