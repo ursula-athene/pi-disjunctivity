@@ -7,6 +7,11 @@ Writing this prompt does not begin the next milestone; invoking it does.
 
 ## Current prompt: B1 source and proof review
 
+**Execution record (2026-11-25):** see [the B1 review](b1-source-proof-review.md)
+and its review/validation status. This prompt authorizes only that review;
+B1a implementation requires a separate user decision. On re-invocation, inspect
+the completion evidence before doing any work, as required below.
+
 Locate the pi-disjunctivity repository root and execute this bounded milestone:
 **B1 source and proof review**, as specified in
 [the proof plan](proof-plan.md#next-bounded-task-b1-source-and-proof-review).

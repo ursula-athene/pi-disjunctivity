@@ -76,6 +76,11 @@ late visits) and P3 (open-interval visits imply hexadecimal-cell visits).
 Neither cycle began BBP formalization or universal visitation research;
 the conjecture remains unproved.
 
+The documentation-only [B1 source and proof assessment](docs/b1-source-proof-review.md)
+records the analytic route, external-source license constraints, and pinned
+Mathlib API. B1 remains unformalized; the next proposed slice is the coefficient
+and one-term integral, subject to separate authorization.
+
 The digit and disjunctivity definitions remain parameterized by the base. The
 word value, orbit, and conjecture definitions use base 16. Reconstruction examples
 cover bases 2, 10, and 16. The default build checks the definitions, all three

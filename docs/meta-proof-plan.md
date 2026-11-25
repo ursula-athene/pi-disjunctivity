@@ -7,8 +7,9 @@ inspection, source adaptations, and Step 2 interval-hitting reduction.
 The pilot is complete; the conditional π theorem retains its unproved hitting
 hypothesis. A second authorized cycle completed B4 and P3 on 2026-11-25,
 with nineteen theorem audits passing. BBP formalization and universal visitation
-were not attempted. The stages below remain the procedure for future separately
-scoped work.
+were not attempted. A subsequent B1 source/argument review is recorded below,
+without new Lean declarations. The stages below remain the procedure for future
+separately scoped work.
 
 **Review-policy update, 2026-11-25:** the user requires Gemini Carbon High
 changed-file reviews through `agy` at milestones and at useful intermediate
@@ -19,21 +20,24 @@ review of the completed B4/P3 cycle.
 
 ## Next bounded task
 
-The recommended next cycle is the
-[B1 source and proof review](proof-plan.md#next-bounded-task-b1-source-and-proof-review).
-B4 and P3 are checked; their convergence and visitation premises remain explicit.
-The next review preserves the current B1-before-B3 order and prepares the
-mathematical argument before substantial formalization.
+The B1 source and proof assessment is recorded in
+[the review](b1-source-proof-review.md), including the required Gemini review
+status and limitations. The next proposed cycle is
+[B1a: coefficient and one-term integral](proof-plan.md#next-bounded-task-b1a-coefficient-and-one-term-integral).
+Its exact statements, prerequisites, acceptance checks, and stopping point are
+in the review. B1 remains unformalized; B4/P3 retain their hypotheses, and
+universal visitation remains open.
 
-Apply Stage 3's specify/search/sketch/criticize process to the B1 identity and
-its existing proof sources. Deliver a reviewed argument, pinned-library
-dependency map, license/attribution assessment, and a bounded implementation
-slice. Stop at that written handoff, or a precise source/argument obstruction,
-before adding BBP Lean declarations or adapting external code. This proposal
-authorizes no execution; the completed B4/P3 session pauses for a user decision.
-The [current session prompt](session-prompts.md#current-prompt-b1-source-and-proof-review)
-gives the bounded authorization, review procedure, validation, and stopping point
-for the next session when the user invokes it.
+This source-review cycle used Stage 3's specify/search/sketch/criticize process
+without implementing BBP. It supports independent local proofs from the
+published argument and Mathlib, preserving the attribution policy and current
+B1-before-B3 order. Retain the direct `HasSum` route to avoid a preliminary tail
+layer. Signature-only probes found and corrected namespace/name lookup errors;
+those were API issues, not mathematical obstructions. External source inspection
+is not an external rebuild or axiom audit. No added tooling or broader workflow
+change is warranted. The existing Gemini and Viewpoint procedures remain in
+force. The [current prompt](session-prompts.md#current-prompt-b1-source-and-proof-review)
+ends at the review handoff; it does not authorize B1a implementation.
 
 ## B4/P3 workflow retrospective
 

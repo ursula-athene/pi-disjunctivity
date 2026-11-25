@@ -518,3 +518,100 @@ in the changed files, `git diff --check`, archive preservation, and preservation
 of Lean source, audits, dependency pins, CI, and the agent trust/scope policies.
 No Lean build was rerun for these documentation-only edits. No B1 work
 or next proof milestone was started.
+
+
+## 2026-11-25 — B1 source and proof review
+
+### Authorized endpoint and baseline
+
+Executed only **Current prompt: B1 source and proof review**, ignoring the
+archived prompts. Initial checkout: `feature/attempt-02`,
+`a3feb6bf02cea0aafdba29331e551d9e8173477d`. Announced a documentation-only
+endpoint: source/license assessment, mathematical argument, pinned-Mathlib map,
+smallest implementation slice, validation, Gemini Carbon High review, local
+commits, retrospective and handoff, then pause. No BBP declaration, external
+code adaptation, B2/B3 implementation, or V attempt was authorized or made.
+Unrelated Obsidian and notes changes are preserved and excluded from staging.
+
+Read the repository instructions, both plans, workflow, blueprint/log, B4/P3
+handoff, literature report, formulation/trust records, relevant current Lean
+source/root/audits, and dependency files. From the correct root with Elan on
+`PATH`, Lean reported `4.37.0-rc1`; `lake build` passed (6655 jobs, no warnings),
+`lake env lean Test.lean` passed silently (nineteen theorem audits and both
+definition checks), and `git diff --check` passed.
+
+### Source assessment, mathematical review, and API feedback
+
+[The complete B1 review](b1-source-proof-review.md) records exact source URLs,
+the external commit `e5376424f932afdbf529c696f985e516836e6601`, the original PDF
+hash, inspected proof bodies/imports/configuration, and the scope of inspection.
+The original Theorem 1 page was rendered and visually checked. The external
+identity uses the same real coefficients and `Real.pi`; its source constructs
+`HasSum` before exporting a `tsum` equality. No external project was rebuilt or
+axiom-audited. Its referenced H04 planning document returned 404. The PDF shell
+download initially hit sandbox DNS restrictions; the scoped approved retry
+succeeded. Existing macOS PDFKit supplied rendering; nothing was installed.
+
+The external code is Apache 2.0, with applicable third-party notice requirements;
+the external paper text is CC BY 4.0. These notices cannot be replaced with the
+project's Ursula-only MIT header. Recommend independent local proof scripts,
+with scholarly source references, rather than code adaptation. This is a
+project-policy constraint, not a claim that Apache 2.0 and MIT are inherently
+incompatible. No external library or copied source entered the checkout.
+
+Reviewed the scaled-kernel argument on `[0,1]`, its termwise integral, geometric
+ratio bound, summable domination, almost-everywhere measurability, positive
+denominators, rational identity, log/arctangent derivative, FTC, and endpoints.
+Retain `HasSum` directly from dominated convergence; no preliminary tail layer
+is necessary. The report explicitly retains every local proof obligation.
+This is established mathematics awaiting local formalization, with no visit or
+distribution hypothesis discharged.
+
+Pinned-source searches and an imports/`#check`-only `/tmp` probe confirmed the
+needed API on Mathlib `31ce06eaadf4a200c0e1407c5f10953cf606b8f8`.
+Initial probes failed for the guessed `intervalIntegral.integral_pow` and
+`HasSum.congr`/`hasSum_congr` names. Corrected to root `integral_pow` and ordinary
+rewriting; the final probe passed. These are lookup/compiler diagnostics, not
+missing mathematics. No BBP definitions or proofs were made even in scratch.
+
+Both plans and the blueprint now propose the same **B1a coefficient and
+one-term integral** slice. Its exact definition, sole public theorem,
+prerequisites, checks, and stop condition are in the report. B1 is not marked
+checked; B1-before-B3 and Viewpoint's commit cadence are unchanged. No optional
+tooling or process expansion is justified by this cycle.
+
+### Review and final validation record
+
+Gemini Carbon High completed a supplied-evidence review of the exact seven-file
+diff against `a3feb6b`, with explicit **no findings**. Conversation:
+`a8f04fb2-eee8-4285-873b-cfcda7b64149`. The
+[detailed record](agy-reports/b1-source-proof-review.md) preserves both terminal
+payloads, progress observations, response, and independent assessment. The
+initial attempt had an internal read-file denial, empty response, and nominal
+`SUCCESS`; it was treated as incomplete. Stream/stderr and the CLI log confirmed
+cancellation/shutdown. One recovery retained the conversation and supplied the
+full diff, AGENTS, and source excerpts inline, requesting no tools. It finished
+with exit 0, `SUCCESS`, a substantive response, and no error/denial fields.
+The recovery took 5 min 47 s by caller observations. Both invocations used the
+required twenty-minute deadline, direct approved prefix, and bounded waits;
+neither timed out, and no overlapping invocation or permission bypass occurred.
+
+No substantive fixes were requested. The caller independently rechecked the
+argument and API mapping. Gemini did not perform fresh source retrieval,
+compile proposed BBP statements, or reproduce builds/audits; omitted external
+files and unchanged context were outside its independent inspection. The
+complete changed-file diff was still supplied. Baseline checks and the successful
+signature probe remain local validation; they do not prove B1.
+
+Pre-review checks passed for 112 local Markdown links/anchors, byte preservation
+of 18 protected Lean/config/CI/instruction files, all nineteen axiom guards,
+archive preservation, and whitespace. Final staging and post-commit necessity
+review are recorded with the handoff. No Lean-related input changed, so a
+second Lean build/audit is unnecessary for these documentation edits.
+
+During the external review, an unrelated `.codex/config.toml` appeared already
+staged. A global `git diff --cached --check` flags a trailing blank line there;
+it was left untouched. Task-scoped staged whitespace checks are used alongside
+`git diff --check`, and commits select explicit task paths to preserve that
+unrelated staged work. This is a user-file validation limitation, not a B1 or
+Lean failure.

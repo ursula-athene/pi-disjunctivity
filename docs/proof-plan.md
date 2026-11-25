@@ -14,9 +14,12 @@ universal visitation remains open.
 The B4/P3 implementation and audits are in `203e16c`; post-commit proof
 simplification and the [handoff](b4-p3-handoff.md) are in `a8c693e`. The audit
 passes with nineteen theorem checks and two expanded-definition checks. The
-next proposed milestone is the bounded B1 source and proof review below;
-its [current session prompt](session-prompts.md#current-prompt-b1-source-and-proof-review)
-authorizes execution only when invoked in a new session.
+B1 source/argument assessment is now recorded in [the review](b1-source-proof-review.md),
+including its Gemini review status. B1 itself remains unformalized. The next
+proposed implementation slice is B1a, the coefficient and one-term integral
+below; it requires separate authorization. The
+[current session prompt](session-prompts.md#current-prompt-b1-source-and-proof-review)
+records the bounded review scope and its stopping point.
 
 The goal is to prove `PiDisjunctivity.PiHexadecimalDisjunctivity`: every finite
 hexadecimal word occurs contiguously after the radix point of `Real.pi`,
@@ -46,7 +49,7 @@ still take substantial work to implement and check in Lean.
 | --- | --- | --- |
 | **1. Verified foundation** | Solved. | Already proved and checked in Lean, including the digit–interval and orbit equivalences. |
 | **2. Isolate interval hitting** | An elementary consequence of the existing equivalences that expresses exactly what remains to prove. | Completed by the bounded pilot in `OrbitCriteria.lean`: a general equivalence and a conditional π reduction, both audited. |
-| **3. Prove the BBP identity** | A classical, established theorem with published proofs. | Not implemented here. Formalizing convergence, exchanging sums and integrals, and evaluating the integral could be substantial work. Existing external Lean work may help after checking it and respecting this project's dependency policy. |
+| **3. Prove the BBP identity** | A classical, established theorem with published proofs. | Source and argument assessment recorded in the B1 review; no local implementation. The pinned API supports the proposed integral route. Independent implementation is recommended because external-code adaptation requires notices outside current attribution policy. |
 | **4. Connect BBP to the orbit** | The identities, tail estimates, and conditional transfer argument have standard proof methods. This plan supplies the mathematical outline. | B4, the general conditional transfer, is checked. BBP series splitting, recurrence, and tail estimates remain unimplemented. |
 | **5. Prove universal visitation** | Open mathematical research; no complete proof method is supplied. | The decisive missing argument about this particular recurrence. |
 
@@ -205,13 +208,16 @@ integral. Formalization must justify exchanging the sum and integral, verify
 the denominator conditions, and identify the value with Mathlib's `Real.pi`.
 See the [original BBP paper, Theorem 1](https://www.davidhbailey.com/dhbpapers/digits.pdf).
 
-Before implementing, inspect the existing BBP proof development identified by
+The [B1 source and proof review](b1-source-proof-review.md) inspects the original
+paper and existing BBP proof development identified by
 the [repository's later literature review](codex-reports/2026-11-24-lean-literature-review.md#certified-hexadecimal-digits-of-pi-metasecdevmath-proofs).
-That report inspected proof bodies but did not independently rebuild their
-dependencies or audit their axioms. It supersedes the earlier report's blanket
-claim that there is no Lean BBP work. External work can inform our proof;
-adding or vendoring another library would violate the Mathlib-only policy.
-Any adaptation needs attribution and license review, followed by local checking.
+Both reviews distinguish source inspection from external rebuilds and axiom
+audits, which were not performed. The BBP assessment verifies the coefficients,
+analytic conditions, and pinned-library signatures. Use the scaled kernel on
+`[0,1]`, retain the `HasSum` produced by dominated convergence, and write the
+local proof independently. Do not import, vendor, or translate the external
+Apache-2.0 code under the current attribution policy. The report records the
+license distinction and the exact remaining local proof obligations.
 
 **Deliverable:** a checked BBP series theorem using the existing version pins.
 This is substantial, established mathematics to formalize, not a proof of
@@ -333,33 +339,39 @@ cells; no extra helper theorem or example was needed. The late-visitation
 hypothesis remains unproved for the particular BBP recurrence. This milestone
 stops before BBP definitions, series, recurrences, tails, and Step 5.
 
-### Next bounded task: B1 source and proof review
+<a id="next-bounded-task-b1-source-and-proof-review"></a>
 
-**Proposed only; separate authorization required.** Preserve the existing
-M2/B1-before-M3/B3 order. Before substantial BBP formalization, inspect the
-original BBP identity proof and the external Lean development identified in
-Step 3, including its source revision, license, assumptions, imports, and
-version differences. Map a proof of
-`HasSum (fun j : ℕ => A(j) / (16 : ℝ) ^ j) Real.pi` to the pinned Mathlib API.
-Keep source inspection distinct from a local rebuild or axiom audit.
+### B1 source and proof review record
 
-**Endpoint:** a reviewed argument and dependency map, a license/attribution
-assessment, and the smallest concrete B1 implementation slice with exact
-statements and acceptance checks. If a source or argument is unavailable,
-record that precise obstruction. Stop after the written review, before adding
-BBP Lean declarations, adapting external code, changing dependencies, working
-on B2/B3, or attempting V. This bounds the next decision without presuming
-that the whole BBP identity is a small implementation task.
+The authorized documentation-only assessment is in
+[the B1 review](b1-source-proof-review.md): original paper and external revision,
+license/attribution decision, a complete classical argument, pinned-Mathlib API
+premises, and a minimal implementation slice. Its final section records the
+required Gemini Carbon High review and limitations. No BBP declaration or code
+adaptation was added, and no external build or axiom audit is claimed.
+B1 remains **known / unformalized**, not checked. See the
+[research log](research-log.md) for validation and the final handoff record.
 
-Have Gemini Carbon High review the source assessment, candidate argument,
-dependency map, and changed plans through `agy` before the milestone commit,
-following the changed-file review policy above. Resolve or explicitly record
-findings without extending the authorized mathematical scope.
+### Next bounded task: B1a coefficient and one-term integral
 
-The B4/P3 cycle found no mathematical or tooling obstacle that warrants a route
-change. Weighted-series/tail summability and B3 before B1 remain a possible
-alternative for a separate user decision, not an adopted reorder. The existing
-Viewpoint commit cadence also remains unchanged.
+**Proposed only; separate authorization required.** Implement precisely
+[the B1a slice](b1-source-proof-review.md#smallest-implementation-slice-proposed-for-authorization):
+`bbpCoeff : ℕ → ℝ` and `integral_bbpTerm`, identifying the integral of
+`(x^8/16)^j * (4 - 2*x^3 - x^4 - x^5)` on `[0,1]` with
+`bbpCoeff j / (16 : ℝ)^j` for every natural `j`.
+
+**Endpoint:** independently written proof in the proposed
+`PiDisjunctivity/BBP/Series.lean`, root export, complete type and guarded axiom
+audit, coefficient/sign/index checks including `j = 0`, required Lean checks,
+Gemini review, local commits, necessity review, and handoff. Stop before the
+infinite interchange or rational integral evaluation, and before B2/B3/V.
+The exact statement, prerequisites, and acceptance checks are in the review.
+No public general monomial API or separate summand definition is required.
+
+The evidence supports retaining the integral route and B1-before-B3 order.
+Directly retaining `HasSum` avoids a preliminary BBP tail/summability layer;
+this is a simplification within B1, not a reorder. Viewpoint's commit cadence
+remains unchanged. Neither the review nor the proposed slice supplies visits.
 
 ## 5. Prove the missing universal visitation theorem
 
@@ -481,6 +493,6 @@ existing word/interval and orbit equivalences ------+-> pi disjunctivity
 
 The pilot makes the exact missing interval-hitting hypothesis explicit. B4's
 conditional transfer and P3's cell conversion complete M1. The next proposed
-bounded task is the B1 source and proof review above. Step 5 research can be
-scoped separately; completing more infrastructure is not evidence that the
+bounded task is B1a, the coefficient and one-term integral above. Step 5 research
+can be scoped separately; completing more infrastructure is not evidence that the
 open visitation problem is solved.

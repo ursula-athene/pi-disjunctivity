@@ -1,6 +1,7 @@
 # Proof dependency and status index
 
-Updated 2026-11-25 after the checked B4 + P3 milestone. This indexes
+Updated 2026-11-25 with the B1 source/argument assessment; B4/P3 remain checked.
+This indexes
 [proof-plan.md](proof-plan.md), the sole mathematical roadmap. Validation and
 review evidence are in [research-log.md](research-log.md). All Lean names below
 are in namespace `PiDisjunctivity` and exported by the library root.
@@ -72,7 +73,7 @@ using the series as an analytic tail.
 
 | Node | Exact claim and hypotheses | Dependencies/evidence | Role/status |
 | --- | --- | --- | --- |
-| B1: BBP series | `HasSum (fun j : ℕ => A(j) / (16 : ℝ) ^ j) Real.pi`, for the fixed `A` above. | Original BBP identity cited in [Step 3](proof-plan.md#3-establish-the-bbp-identity-in-the-permitted-lean-stack). Integral/geometric-series argument; no hypothesis of density. | **Known / unformalized.** Supplies the π-specific analytic identity. Original proof and external Lean adaptation still require their own formalization review. |
+| B1: BBP series | `HasSum (fun j : ℕ => A(j) / (16 : ℝ) ^ j) Real.pi`, for the fixed `A` above. | Original BBP identity cited in [Step 3](proof-plan.md#3-establish-the-bbp-identity-in-the-permitted-lean-stack). Integral/geometric-series argument; no hypothesis of density. | **Known / unformalized.** Supplies the π-specific analytic identity. Source/argument assessment and pinned API map are in [the B1 review](b1-source-proof-review.md), including its Gemini review status. No local B1 proof or external adaptation; independent implementation proposed. |
 | B2: orbit bridge | For every `n : ℕ`, `16^n * Real.pi = S_n + R_n`, `y_(n+1) = fract(S_n)`, and `t_n(Real.pi) = fract(y_(n+1) + R_n)`. Also `0 ≤ y_n < 1`. | B1, convergent-series splitting, recurrence induction, fractional-part arithmetic; [Step 4](proof-plan.md#4-connect-bbp-arithmetic-to-the-actual-hexadecimal-orbit). | **Known / unformalized.** Relates recurrence index `n+1` to actual orbit index `n`. |
 | B3: tail control | For all `j,n : ℕ`, `abs(A(j)) ≤ 8/(8*j+1)` and `abs(R_n) ≤ 8/(15*(8*n+9))`; consequently `R_n → 0` as `n → ∞`. | Candidate bounds in Step 4; triangle inequality, denominator monotonicity, geometric sum, convergence. | **Proposed bounds / unformalized.** Must verify constants and series estimates; gives no visits. |
 | B4: general transfer | For `u r : ℕ → ℝ`, assume `Filter.Tendsto r Filter.atTop (nhds 0)` and `∀ a b : ℝ, 0 ≤ a → a < b → b ≤ 1 → ∀ N : ℕ, ∃ n ≥ N, u n ∈ Set.Ioo a b`. Then `∀ a b : ℝ, 0 ≤ a → a < b → b ≤ 1 → ∃ n : ℕ, Int.fract (u n + r n) ∈ Set.Ioo a b`. | `hitsOpenIntervals_fract_add_of_tendsto_zero` in [OrbitCriteria.lean](../PiDisjunctivity/OrbitCriteria.lean); `Metric.tendsto_atTop`, quarter-width margin, `Int.fract_eq_self`. Root-exported; complete type/axiom guards in `Test.lean`. | **Checked, conditional.** No global range hypothesis; signed errors and targets touching 0 or 1 included. Late visitation and vanishing error remain premises. |
@@ -109,10 +110,12 @@ irrationality alone does not rule out infinite proper limit sets. A global bound
 `abs(fract u - fract v) ≤ abs(u-v)` is false across an integer (take
 `u = 99/100`, `v = 101/100`). The transfer must use an interior margin.
 
-B4 and P3 are checked; Hπ and T remain unproved. Recommended next bounded
-task, if authorized: the
-[B1 source and proof review](proof-plan.md#next-bounded-task-b1-source-and-proof-review).
-Deliver the reviewed argument, source/trust/license assessment, and smallest
-implementation slice; stop before new BBP Lean declarations. The current
-session stops after B4/P3, their retrospective, local commits, and handoff.
-The B1/B3 order and Viewpoint commit policy remain unchanged.
+B4 and P3 are checked; B1–B3 are unformalized, and V, Hπ, and T remain
+unproved. The [B1 source/argument review](b1-source-proof-review.md) records a
+classical analytic route, source/license assessment, and pinned-library map;
+it adds no checked node. Recommended next bounded task, if authorized:
+[B1a coefficient and one-term integral](proof-plan.md#next-bounded-task-b1a-coefficient-and-one-term-integral).
+Prove only the exact termwise-integral statement and audit it, then stop before
+infinite interchange, integral evaluation, B2/B3, or V. The B1-before-B3 order
+and Viewpoint commit policy remain unchanged. This session stops at the source
+review, local commits, retrospective, and written handoff.
