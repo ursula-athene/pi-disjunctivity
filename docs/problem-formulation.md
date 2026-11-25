@@ -159,13 +159,23 @@ zeros, all digits `A`–`F`, nonzero offsets, terminating expansions, half-open
 interval boundaries, and the empty word. They are sanity checks, not general
 proofs of the validation requirements.
 
-The next work is specified in [the foundational theorem plan](foundations-plan.md):
+Progress against [the foundational theorem plan](foundations-plan.md):
 
-1. Prove that recursive `blockValue` equals the displayed finite sum.
-2. Prove its upper bound and coverage of every integer below $16^k$.
-3. Prove arbitrary-base digit bounds, prefix reconstruction, and truncation error.
+1. **Complete:** `blockValue_eq_sum` in
+   [`BlockValue.lean`](../PiDisjunctivity/BlockValue.lean) proves that recursive
+   `blockValue` equals the displayed finite sum for every length and word.
+2. **Planned:** prove its upper bound and coverage of every integer below $16^k$.
+3. **Planned:** prove arbitrary-base digit bounds, prefix reconstruction, and
+   truncation error.
 
-These are proposed statements and methods only; their proofs have not yet been
-implemented. The cylinder correspondence and orbit equivalence will be addressed
-after those foundations. The default `lake build` currently checks the retained
-definitions and examples.
+The default `lake build` checks the definitions, the Step 1 theorem, and examples.
+Additional word-value examples cover the empty word, any single digit, all-zero
+words, leading zeros, `FF`, and positional order (`12` versus `21`). The separate
+`lake env lean Test.lean` check verifies the reviewed theorem type and its axiom
+list: only `propext`, `Classical.choice`, and `Quot.sound` are used. It rejects a
+changed axiom list, including any introduction of `sorryAx` or a project-specific
+axiom. CI runs this check after building.
+
+The cylinder correspondence and orbit equivalence remain unimplemented and will
+be addressed after the foundations. Step 1 makes no claim about the occurrence
+of words in π.

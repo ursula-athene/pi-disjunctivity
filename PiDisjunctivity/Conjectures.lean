@@ -1,3 +1,8 @@
+/-
+Copyright (c) 2026 Ursula Athene. All rights reserved.
+SPDX-License-Identifier: MIT
+Authors: Ursula Athene
+-/
 module
 
 public import PiDisjunctivity.Definitions

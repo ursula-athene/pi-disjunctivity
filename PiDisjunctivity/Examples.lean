@@ -1,10 +1,15 @@
+/-
+Copyright (c) 2026 Ursula Athene. All rights reserved.
+SPDX-License-Identifier: MIT
+Authors: Ursula Athene
+-/
 module
 
-import PiDisjunctivity.Definitions
+import PiDisjunctivity.BlockValue
 import Mathlib.Algebra.Order.Floor.Semifield
 import Mathlib.Tactic
 
-/-! Exact rational checks for hexadecimal digits, offsets, and interval boundaries. -/
+/-! Checks for hexadecimal digits, offsets, interval boundaries, and word values. -/
 
 namespace PiDisjunctivity
 
@@ -42,8 +47,28 @@ example : (10 / 4096 : ℝ) ∈ Set.Ico (10 / 16 ^ 3 : ℝ) (11 / 16 ^ 3) ∧
     baseDigit 16 (11 / 4096 : ℝ) 2 = 11 := by
   norm_num [baseDigit, Nat.floor_div_ofNat]
 
+-- The sum formula handles the empty word and arbitrary one-digit words.
+example (s : Fin 0 → Fin 16) : blockValue 0 s = 0 := by
+  simp [blockValue_eq_sum]
+
+example (d : Fin 16) : blockValue 1 ![d] = d.val := by
+  simp [blockValue_eq_sum]
+
+-- An all-zero word has value zero at every length.
+example (k : ℕ) : blockValue k (fun _ => 0) = 0 := by
+  simp [blockValue_eq_sum]
+
+-- Leading zeros and the maximum hexadecimal digit use their positional values.
 example : blockValue 3 ![0, 0, (10 : Fin 16)] = 10 := by
-  norm_num [blockValue, Fin.last]
+  norm_num [blockValue_eq_sum, Fin.sum_univ_succ]
+
+example : blockValue 2 ![15, (15 : Fin 16)] = 0xFF := by
+  norm_num [blockValue_eq_sum, Fin.sum_univ_succ]
+
+-- Distinct mixed words check that the first digit is the most significant.
+example : blockValue 2 ![1, (2 : Fin 16)] = 0x12 ∧
+    blockValue 2 ![2, (1 : Fin 16)] = 0x21 := by
+  norm_num [blockValue_eq_sum, Fin.sum_univ_succ]
 
 example (x : ℝ) : ∃ n : ℕ, ∀ i : Fin 0,
     baseDigit 16 x (n + i.val) = (Fin.elim0 i : Fin 16).val := by

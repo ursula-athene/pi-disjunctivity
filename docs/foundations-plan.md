@@ -2,14 +2,17 @@
 
 This plan fills the three gaps identified when comparing the Lean definitions
 with the [problem formulation](problem-formulation.md). The earlier equivalence
-proof has been removed. This document proposes statements and proof methods;
-it does not implement or assert the theorems.
+proof has been removed. Step 1 is now implemented and validated as described
+below; Steps 2 and 3 remain planned.
 
-The Lean snippets below are proposed signatures in the `PiDisjunctivity`
+The Lean snippets below are the reviewed signatures in the `PiDisjunctivity`
 namespace. They intentionally have no proof bodies and are not source files to
 compile. Existing definitions stay in `PiDisjunctivity/Definitions.lean`.
 
 ## 1. Connect the recursive word value to the finite sum
+
+**Status: implemented and validated.** The proof is in
+[`PiDisjunctivity/BlockValue.lean`](../PiDisjunctivity/BlockValue.lean).
 
 The current definition builds a hexadecimal word from left to right:
 
@@ -35,7 +38,22 @@ The index bound `i.val < k` justifies the arithmetic involving natural-number
 subtraction in the exponents. Keeping `k` explicit preserves leading zeros even
 when two words of different lengths have the same integer value.
 
+**Validation:** `lake build` compiles the universally quantified theorem with
+exactly the signature above. `lake env lean Test.lean` checks that this statement
+is exported through the library root and that the theorem's only axioms are
+`propext`, `Classical.choice`, and `Quot.sound`, with no `sorryAx` or project-specific
+axiom. CI runs that audit after the build.
+
+The examples exercise the theorem on an empty word, any one-digit word,
+all-zero words of any length, `00A`, `FF`, and the distinct words `12` and `21`.
+The latter checks the direction of positional weighting. These examples supplement
+the general proof. The header style check is enabled in `lakefile.toml` and
+configured for the project's `SPDX-License-Identifier: MIT` line. Lean files
+include copyright and author headers; the license text is in [LICENSE](../LICENSE).
+
 ## 2. Show that words cover exactly the allowed integer values
+
+**Status: planned.**
 
 Two results together establish the required coverage:
 
@@ -66,6 +84,8 @@ The construction naturally pads with zeros when `m` needs fewer than `k` digits.
 It must handle `m = 0` and `m = 16 ^ k - 1` as well as interior values.
 
 ## 3. Validate digit reconstruction for arbitrary bases
+
+**Status: planned.**
 
 Use the existing `baseDigit b x n` definition. Assume `2 ≤ b` throughout;
 reconstruction and approximation additionally require `0 ≤ x` because the
