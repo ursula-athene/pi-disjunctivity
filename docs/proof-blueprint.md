@@ -124,8 +124,10 @@ irrationality alone does not rule out infinite proper limit sets. A global bound
 B1, B4, and P3 are checked. B2/B3, V, Hπ, T, and π disjunctivity remain
 unproved. The [source review](b1-source-proof-review.md) supplies the classical
 route; [the B1 handoff](b1-handoff.md) records completion and finalization.
-The next bounded task, only if separately authorized, is
-[B2a finite-prefix and tail split](proof-plan.md#next-bounded-task-b2a-finite-prefix-and-tail-split).
-Stop that slice before recurrence/fractional-part identities, B3 bounds, or V.
+The next [saved prompt](session-prompts.md#current-prompt-b2-complete-orbit-bridge)
+covers all of [B2](proof-plan.md#next-bounded-task-b2-complete-orbit-bridge):
+B2a's series split, recurrence/range proofs, and the exact fractional-part
+identity. Preparation adds no proofs; invoking the prompt starts the milestone.
+Stop after B2, before B3 bounds/decay, optional modular computation support, or V.
 No conditional visitation premise has been discharged. The B1-before-B3 order
 and Viewpoint commit policy remain unchanged.

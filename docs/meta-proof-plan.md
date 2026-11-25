@@ -42,9 +42,11 @@ to complete B1 authorized B1d and the remaining derivative/FTC, evaluation,
 and assembly work together; checked B1c was reused unchanged. Four new results
 finish the full unconditional `HasSum ... Real.pi` theorem. The
 [B1 completion handoff](b1-handoff.md) records validation and finalization.
-The next proposed cycle is [B2a: finite-prefix and tail split](proof-plan.md#next-bounded-task-b2a-finite-prefix-and-tail-split),
-subject to separate authorization. The [session instructions](session-prompts.md)
-pause after B1, before B2/B3 or visitation work.
+The next saved cycle is [all of B2: the orbit bridge](proof-plan.md#next-bounded-task-b2-complete-orbit-bridge),
+from the B2a series split through recurrence/range proofs to the exact orbit
+identity. The [session instructions](session-prompts.md#current-prompt-b2-complete-orbit-bridge)
+start that work only when invoked and stop before B3 or visitation research.
+Prompt preparation adds no Lean implementation and does not complete M3.
 
 The completion used the existing pinned logarithm/arctangent derivative and
 FTC APIs. Default `field_simp` normalization left inverses whose rearranged

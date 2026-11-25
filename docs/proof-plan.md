@@ -23,8 +23,9 @@ the primitive's derivative, integral evaluation, and `hasSum_bbpCoeff`, proving
 `HasSum (fun j : ℕ => bbpCoeff j / (16 : ℝ)^j) Real.pi` unconditionally.
 Twenty-seven theorem type/axiom audits pass, alongside all earlier checks.
 See the [B1 handoff](b1-handoff.md) for validation and finalization status.
-The next proposed slice is B2a's finite-prefix/tail split, requiring separate
-authorization; this milestone stops before Step 4's BBP bridge work.
+The next saved prompt covers all of B2: the finite-prefix/tail split,
+recurrence/range proofs, and exact orbit bridge. Invoking that prompt starts
+the milestone; preparation alone adds no Step 4 proof. B3 remains separate.
 
 The goal is to prove `PiDisjunctivity.PiHexadecimalDisjunctivity`: every finite
 hexadecimal word occurs contiguously after the radix point of `Real.pi`,
@@ -470,10 +471,25 @@ unused factorization lemma, general analytic API, or new import was introduced.
 See [the handoff](b1-handoff.md) for the validation and required review evidence.
 B2/B3, V, Hπ, T, and π disjunctivity remain open. B4/P3 keep every hypothesis.
 
-### Next bounded task: B2a finite-prefix and tail split
+<a id="next-bounded-task-b2a-finite-prefix-and-tail-split"></a>
 
-**Proposed only; separate authorization required.** Use the full B1 `HasSum`
-to establish, for every `n : ℕ`, the convergent scaled tail identity
+### Next bounded task: B2 complete orbit bridge
+
+**Prepared for a future session; not implemented.** The user requested a
+[saved prompt for all of B2](session-prompts.md#current-prompt-b2-complete-orbit-bridge),
+superseding the earlier B2a-only stopping point. Invoking the prompt authorizes
+the following steps together, ending before B3 or visitation work:
+
+1. **B2a: finite-prefix/tail split.** Use the full B1 `HasSum` to establish,
+   for every `n : ℕ`, the convergent scaled tail identity below and identify
+   the tail `R_n` with its convergent sum, giving `16^n*pi = S_n + R_n`.
+2. **Recurrence and range.** Define `y_0 = 0`,
+   `y_(n+1) = fract(16*y_n + A(n))`; prove `0 ≤ y_n < 1` and
+   `y_(n+1) = fract(S_n)` using the finite-sum recurrence.
+3. **Exact orbit bridge.** Prove
+   `fract((16 : ℝ)^n * Real.pi) = fract(y_(n+1) + R_n)` unconditionally.
+
+The B2a contract is unchanged:
 
 ```text
 HasSum (fun r : ℕ => bbpCoeff (n+r+1) / (16 : ℝ)^(r+1))
@@ -483,9 +499,12 @@ HasSum (fun r : ℕ => bbpCoeff (n+r+1) / (16 : ℝ)^(r+1))
 
 Check the inclusive prefix `0..n`, tail starting at `n+1`, natural-exponent
 subtraction only under `j ≤ n`, and `n = 0`. Keep convergence in the result;
-no tail estimate or visitation hypothesis is a premise. Export/audit, validate,
-review, and hand off this single bridge, stopping before recurrence/fractional-
-part identities, B3 bounds, or V. Do not begin B2a in the B1 completion session.
+no tail estimate or visitation hypothesis is a premise. Check the recurrence
+initialization, the coefficient `A(n+1)` in `S_(n+1) = 16*S_n + A(n+1)`,
+and the orbit/recurrence index offset. Export/audit, validate, review, commit,
+perform the necessity review, and hand off all of B2 together. Stop before
+B3 tail bounds/decay, optional modular computation support, or V. B2 alone
+does not complete M3/Step 4. No B2 implementation begins during prompt preparation.
 
 ## 5. Prove the missing universal visitation theorem
 
@@ -607,7 +626,8 @@ existing word/interval and orbit equivalences ------+-> pi disjunctivity
 
 The pilot makes the exact missing interval-hitting hypothesis explicit. B4's
 conditional transfer and P3's cell conversion complete M1. The full checked
-B1 identity completes M2. The next proposed bounded task is B2a, the scaled
-finite-prefix/tail split, requiring separate authorization. Step 5 research
+B1 identity completes M2. The next saved bounded task covers all of B2,
+starting with B2a and ending at the exact orbit identity; invoking the prompt
+starts implementation. B3 remains a separate task. Step 5 research
 can be scoped separately; completing more infrastructure is not evidence that the
 open visitation problem is solved.

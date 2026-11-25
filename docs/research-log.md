@@ -1159,3 +1159,35 @@ The final two-file documentation commit records this retrospective and the
 checks. The reviewed source/audits remain unchanged after passing validation.
 Its ID is reported after committing. Step 3/M2 is complete; stop before B2a,
 B2/B3, or V. No visitation or disjunctivity hypothesis has been discharged.
+
+## 2026-11-25 — Prepare the complete B2 session
+
+The user reported PR #4 merged and requested preparation of a new branch and
+a step-by-step prompt for all of B2, without beginning proof work. GitHub
+confirmed the merge at `53ae688f3c56becdb3ca562d75e6eb3c95fe9dd7`.
+Switched to `main`, ran `git pull --ff-only origin main`, and created/switched
+to `feature/attempt-05-b2` from that commit. Unrelated local work was retained.
+
+The first current section of [session-prompts.md](session-prompts.md#current-prompt-b2-complete-orbit-bridge)
+now specifies the convergent B2a split, independently defined recurrence and
+range, finite-sum identity, exact π-orbit bridge, audits, review, local commits,
+necessity review, and handoff. It ends before B3, optional modular computation,
+or visitation. The previous paused-after-B1 instructions were moved to the old
+section with their anchor retained; the older archive was preserved. Entry-point
+and next-task references in both plans and the blueprint agree with the new scope.
+
+This is prompt preparation only. B2/B3, V, Hπ, T, and π disjunctivity remain
+unproved; B4/P3 retain every hypothesis. No Lean source, test, dependency, or
+pin changed, so no new Lean build/audit is claimed. Whitespace, all 11 unrelated
+file hashes, exact previous-prompt/archive preservation, and 115 local links
+in the review scope passed; final records receive the same checks.
+
+Gemini Carbon High returned explicit no findings for the six-file preparation
+diff against merged main. Conversation: `da7f8d40-3204-4276-b930-9ed1c7da2421`.
+Exit zero, nonempty `SUCCESS` response, no terminal error or denied actions;
+the single invocation took 309.920 seconds by caller timestamps. See the
+[review record](agy-reports/b2-prompt-review.md) for capture, progress, findings,
+and limitations. No proof change or substantive prompt fix was needed.
+The preparation is finalized in a local documentation commit; no push or PR
+is part of this request. The next session must invoke the first Current prompt
+to begin B2, then stop at its specified endpoint.
