@@ -1,5 +1,8 @@
 # Process improvements handoff — 2026-11-25
 
+The original milestone snapshot below ends at local completion. Later user
+requests and publication are recorded in the [follow-up](#documentation-alignment-and-publication-follow-up--2026-11-25).
+
 ## Baseline and authorized endpoint
 
 Baseline `563ffed` on `feature/attempt-05-b2`, two existing commits ahead of
@@ -112,3 +115,35 @@ Both IDs are reported in the final session reply. The receipt is checked for
 links, whitespace, exact owned scope, and preservation before commit. The tested
 and reviewed utility/CI code is unchanged. Remaining work is mathematical B2/B3
 and visitation as listed above, outside this completed process milestone.
+
+## Documentation alignment and publication follow-up — 2026-11-25
+
+After local completion, the user requested deletion of the unused, untracked
+`uv` package scaffold; `src/` was removed. The user then requested publication.
+Commits through `4e5bc2f8171ee961ee38a39e611abeed4fb19298` were pushed in
+[PR #5](https://github.com/ursula-athene/pi-disjunctivity/pull/5), covering B2
+prompt preparation, the retrospective, and process improvements. B2 itself was
+not implemented. At that head, both push/PR build and process jobs passed;
+the docs jobs were skipped.
+
+A subsequent documentation audit found the foundations page still calling the
+historical nineteen-theorem inventory current. This bounded follow-up, based on
+`4e5bc2f`, marks that count historical, removes duplicated live audit inventories
+from the trust/formulation overviews, and points AGENTS to the proof plan for
+subsequent research. The dated formulation snapshot and all mathematical content
+and hypotheses are preserved. The exact current prompt, archive, Lean sources,
+dependency pins, process tools, CI, and unrelated work remain unchanged.
+
+Acceptance requires local documentation/utility checks, whitespace and scope
+preservation, Carbon High review of the exact owned diff, and inspection of the
+committed result before updating PR #5. Outcomes are recorded in the existing
+[review report](agy-reports/process-improvements-review.md). No new local Lean
+run is required for this documentation-only follow-up. Future research still
+uses the linked current prompt only when invoked, with its existing full-B2
+endpoint before B3; this follow-up does not execute it.
+
+Local acceptance checks passed: 23 utility/CI tests, 41 Markdown files,
+whitespace, and preservation of the 79 baseline files outside the six-file
+review scope. Carbon High returned explicit no findings with complete capture
+in one invocation. Final factual receipts receive link/whitespace and scope
+checks before commit; the report records review timing and limitations.

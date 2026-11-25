@@ -113,3 +113,49 @@ no recovery invocation, both captures complete; no quantified efficiency claim.
 These final factual receipts are caller-checked additions after the two reviewed
 diffs, not a claim that a reviewer checked its own subsequent receipt. No further
 substantive code or policy change followed the focused review.
+
+## Documentation alignment follow-up — 2026-11-25
+
+Reviewed the six-file documentation diff against
+`4e5bc2f8171ee961ee38a39e611abeed4fb19298`: AGENTS, dependencies/trust,
+foundations, formulation, process handoff, and research log. The scoped index
+utility produced `/tmp/pi-doc-alignment-review/diff.patch` and `scope.json`;
+diff SHA-256: `ad79f705c50aff01225df1719ca47f7f3dfde6396b99f3414c63bd656d6793fa`.
+The exact diff was supplied inline to the literal approved `agy` command,
+with Carbon High, plan mode, stream JSON, a twenty-minute deadline, and
+read-only file tools only. No shell or file changes were requested or observed.
+
+Conversation `fdb4484a-938e-4f28-a033-ac0ff50c5c00` returned **explicit no findings**
+for correctness, authority/scope, hypothesis preservation, and consistency.
+The caller accepted that assessment after inspecting the response and the diff;
+no substantive fixes or recovery attempt were needed. No-findings is not proof.
+
+Caller UTC start/final collection: `2026-11-25T23:25:10.084Z` /
+`2026-11-25T23:29:55.000Z` (284.916 seconds; CLI 283.388546 seconds).
+Init and initial reads were captured by `23:26:13.782Z`; another retrospective
+read was captured by `23:29:09.518Z`, followed by the final response/result.
+The intervening silent polls did not establish progress or a model stall.
+Twenty-five completed `read_file` steps were observed. Exit 0, terminal
+`SUCCESS`, nonempty response; `error`, `finished_reason`, and `denied_actions`
+absent. No structured errors or reviewer-tool denials were reported.
+
+All six execution chunks used 60,000-token budgets and were saved losslessly:
+`/tmp/pi-doc-alignment-capture-000.json` through `005.json`. The complete result
+and inspection are `/tmp/pi-doc-alignment-result.json` and
+`/tmp/pi-doc-alignment-inspection.json`. The inspector reported complete capture
+and candidate for human acceptance. CLI startup authentication warnings and
+sandbox-denied log/crash/summary/conversation persistence recurred; review
+continued with the existing login. Ancillary startup path/cache/updater warnings
+did not prevent file inspection or the terminal response. The unavailable CLI
+log path ended in `cli-20261125_152510.log`; captures retain those diagnostics.
+Temporary captures and conversation context are not guaranteed durable storage.
+
+The reviewer relied on caller-run tests, link/whitespace checks, baseline/hash
+and preservation checks, and GitHub CI inspection. It did not independently run
+Lean, Python, Git, or remote checks. Caller validation passed 23 tests and the
+41-file documentation check, preserved 79 files outside the six-file scope,
+all mathematical code/display blocks, and the research-log historical prefix.
+Lean sources, pins, tooling/CI, and current/archived prompts were unchanged;
+no new local Lean run is claimed. The prior PR head's build/process CI passed.
+This receipt and final handoff/log outcome sentences are subsequent factual
+additions checked by the caller; the reviewer explicitly left them pending.

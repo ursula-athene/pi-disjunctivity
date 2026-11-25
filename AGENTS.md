@@ -26,8 +26,10 @@ review of the intended problem statement.
 ## Scope and validation
 
 Complete and review the Lean formulation of the problem before beginning work
-on proving the pi disjunctivity conjecture. Follow the current status and
-milestones in [the problem formulation](docs/problem-formulation.md).
+on proving the pi disjunctivity conjecture. The completed formulation milestones
+are recorded in [the problem formulation](docs/problem-formulation.md); follow
+[the proof plan](docs/proof-plan.md) for the subsequent mathematical roadmap and
+exact milestone contracts.
 
 For Lean changes, run `lake build`, `lake env lean Test.lean`, and
 `git diff --check` from this directory. If needed, add `$HOME/.elan/bin` to

@@ -1226,3 +1226,27 @@ Post-commit inspection found each tool/check and consolidated guidance layer
 necessary; no further substantive simplification was justified. A final handoff/
 log receipt records completion with fresh link, whitespace, scope, and preservation
 checks. No push, PR, permission change, Lean change, or B2 execution occurred.
+
+## 2026-11-25 — Documentation alignment and publication follow-up
+
+After the process milestone, the user authorized deleting the unused untracked
+`src/` scaffold and opening [PR #5](https://github.com/ursula-athene/pi-disjunctivity/pull/5).
+The PR includes B2 prompt preparation, the retrospective, and its process
+improvements; it does not implement B2. Build and process CI passed at `4e5bc2f`.
+
+A follow-up audit found a historical nineteen-theorem count still labeled
+current in the foundations overview. Corrected that framing, directed subsequent
+research from AGENTS to the proof plan, and replaced duplicated mutable audit
+inventories with links to `Test.lean` and the blueprint. The formulation retains
+its dated B1 snapshot. No theorem contract, proof, pin, current/archived prompt,
+or unproved hypothesis changed. See the
+[handoff follow-up](process-improvements-handoff.md#documentation-alignment-and-publication-follow-up--2026-11-25)
+and [review record](agy-reports/process-improvements-review.md) for acceptance
+evidence and limitations. B2/B3, V, Hπ, T, and π disjunctivity remain unproved;
+B4/P3 retain their hypotheses.
+
+Documentation follow-up acceptance: 23 tests and the 41-file documentation
+check passed, with whitespace and preservation checks. Carbon High returned
+explicit no findings in one invocation (284.916 seconds by caller timestamps),
+with complete capture; see the linked report for limitations. Final factual
+receipts are caller checked before committing and updating PR #5.

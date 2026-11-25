@@ -42,23 +42,13 @@ terms that the kernel checks, so their use does not by itself introduce new
 mathematical axioms. See the official
 [Lean explanation of tactic proofs](https://lean-lang.org/doc/reference/latest/Tactic-Proofs/).
 
-The current [Test.lean](../Test.lean) preserves all thirteen milestone C theorem-type
-checks and adds infinite-series reconstruction and arbitrarily late occurrence,
-for fifteen foundational audited theorems. The bounded interval pilot adds a
-general interval-hitting equivalence and a conditional π reduction; B4/P3 add
-general interior-margin transfer and open-interval-to-cell conversion, bringing
-the subtotal to nineteen. B1a adds the unconditional BBP term integral and
-B1b adds pointwise summation and domination; B1c adds the unconditional
-coefficient-series/integral bridge. B1 completion adds rational decomposition,
-the primitive derivative, integral evaluation, and the full BBP series, for
-twenty-seven through the root library import. It guards their `#print axioms`
-results and also checks both named π definitions against their
-expanded statements, as well as the BBP coefficient expansion and zero-index
-value, and the B1b endpoints and zero index. The
-[consolidated review](formulation-review.md#axiom-audit) records the original lists;
-the [follow-up review](review-follow-up.md) records its two additions, and the
-[research log](research-log.md) records the interval-pilot, B4/P3, and all B1 additions.
-Every audited theorem currently reports exactly these three axioms:
+[Test.lean](../Test.lean) is the executable inventory of theorem-type checks,
+definition/boundary checks, and guarded `#print axioms` results through the
+library root. Use the [blueprint](proof-blueprint.md) for declarations and
+unproved hypotheses. Historical audit counts and validation outcomes belong to
+the dated [research log](research-log.md) and linked review reports, including
+the [consolidated formulation review](formulation-review.md#axiom-audit) and
+[follow-up](review-follow-up.md). The permitted axiom dependencies are:
 
 | Axiom | Meaning |
 | --- | --- |
@@ -90,7 +80,9 @@ git diff --check
 
 CI runs the theorem-type and axiom audit after the build. These checks do not
 automatically enforce the external-library policy; configuration and import
-review remain necessary.
+review remain necessary. Separate [Python process tools](process-tools.md)
+check documentation and review evidence; their dependencies are not Lean
+libraries or part of a theorem's logical assumptions.
 
 ## Completed formulation review and trust boundary
 
@@ -115,5 +107,5 @@ project; no vendored or additional library was introduced. CI retains its
 build-then-audit sequence. See the report for commands, results, and limitations.
 
 Formulation verification is complete. The pi disjunctivity conjecture itself
-remains unproved; work on proving it or formalizing BBP requires separate
-authorization.
+remains unproved. This trust policy grants no authorization for additional proof
+research; follow the user-authorized milestone and the [proof plan](proof-plan.md).
