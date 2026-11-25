@@ -1191,3 +1191,31 @@ and limitations. No proof change or substantive prompt fix was needed.
 The preparation is finalized in a local documentation commit; no push or PR
 is part of this request. The next session must invoke the first Current prompt
 to begin B2, then stop at its specified endpoint.
+
+## 2026-11-25 — Adopt B1 process improvements
+
+Authorized as one process-only milestone from `563ffed` on the existing
+`feature/attempt-05-b2`, preserving unrelated work and both existing local
+commits. Consolidated durable rules and mandatory Gemini operations, established
+record ownership and handoff conventions, added offline documentation/review
+evidence tools and CI checks, and shortened the current B2 prompt by linking
+procedures. Its exact mathematical contracts and archive remain unchanged; B2
+was not executed. The original retrospective remains a dated proposal record.
+
+The [meta-plan adoption](meta-proof-plan.md#b1-process-adoption--2026-11-25)
+connects decisions to evidence and specifies future measurements without
+inventing historical gains. The [process handoff](process-improvements-handoff.md)
+records checks, required review, limitations, finalization, and restart details.
+B2/B3, V, Hπ, T, and π disjunctivity remain unproved; B4/P3 retain their hypotheses.
+
+Initial Carbon High review completed with explicit no findings. A caller-found
+path-traversal edge in the historical-link exception was tightened and sent for
+focused follow-up. The apparent Git blocker was resolved by using the existing
+Git allow rule with a standalone command, without permission/configuration changes.
+See the [review record](agy-reports/process-improvements-review.md) for outcomes.
+
+Full and focused Carbon High reviews both returned explicit no findings; both
+captures are complete. Final validation passes 23 utility/CI tests, 41 Markdown
+files, whitespace, exact staged scope, and preservation checks. No Lean check
+was rerun because no Lean source or dependency changed. Review limitations and
+per-invocation elapsed times are in the linked report. Local finalization follows.

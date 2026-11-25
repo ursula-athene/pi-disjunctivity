@@ -1,92 +1,62 @@
 # Meta-plan for AI-assisted proof research
 
-**Executed 2026-11-24 within one authorized pilot.** The
-[adapted workflow](proof-workflow.md), [dependency index](proof-blueprint.md),
-and [research log](research-log.md) record the baseline, original-source
-inspection, source adaptations, and Step 2 interval-hitting reduction.
-The pilot is complete; the conditional π theorem retains its unproved hitting
-hypothesis. A second authorized cycle completed B4 and P3 on 2026-11-25,
-with nineteen theorem audits passing. BBP formalization and universal visitation
-were not attempted. A subsequent B1 source/argument review is recorded below,
-without new Lean declarations. The separately authorized B1a cycle subsequently
-checked the coefficient and one-term integral, bringing the theorem audit count
-to twenty. B1b now checks pointwise summation and domination, bringing that
-count to twenty-two. B1c adds the unconditional coefficient-series/integral
-bridge, bringing the subtotal to twenty-three. The combined B1 completion
-adds four more results, for twenty-seven, and completes M2. The stages below
-remain the procedure for future separately scoped work.
+This document owns evidence-based lessons, process decisions, and evaluation.
+The [proof plan](proof-plan.md) owns mathematical contracts, the
+[blueprint](proof-blueprint.md) owns declaration/dependency status, and the
+[workflow](proof-workflow.md) owns execution. The original 2026-11-24 pilot
+plan below is retained as a dated design record; its pilot is complete, not a
+standing instruction to repeat it. Outcomes are in the [research log](research-log.md).
 
-**Review-policy update, 2026-11-25:** the user requires Gemini Carbon High
-changed-file reviews through `agy` at milestones and at useful intermediate
-points. Follow the [proof-plan review policy](proof-plan.md#changed-file-reviews-with-gemini-carbon)
-and [AGENTS.md](../AGENTS.md#gemini-carbon-code-reviews-with-agy). This is a new
-user-directed process requirement; it does not retroactively claim an external
-review of the completed B4/P3 cycle.
+Next session: <!-- current-prompt --> [Current prompt](session-prompts.md#current-prompt-b2-complete-orbit-bridge)
+is the execution entry, only when invoked by the user.
 
-## B1 completion and next bounded task
+<a id="b1-completion-and-next-bounded-task"></a>
 
-The [B1 source and proof assessment](b1-source-proof-review.md) was already
-complete at `2b7a745`/`ab43f71` and was not repeated. The authorized B1a cycle
-independently implemented `bbpCoeff` and the single-term integral. The
-[handoff](b1a-handoff.md) records checked results, review status, and commits.
-B1 is now checked by the later completion below. B2/B3 and universal visitation
-remain unproved; B4/P3 retain every hypothesis.
+## B1 process adoption — 2026-11-25
 
-The separately authorized B1b cycle independently proved `hasSum_bbpTerm` and
-`norm_bbpTerm_le`, with root-import type/axiom guards and endpoint/zero-index
-checks. See [the B1b handoff](b1b-handoff.md). The separately authorized B1c
-cycle now proves `hasSum_bbpCoeff_integral`, with all dominated-convergence
-premises discharged locally and a full root-import type/axiom audit. The
-[handoff](b1c-handoff.md) records that milestone. The user's subsequent request
-to complete B1 authorized B1d and the remaining derivative/FTC, evaluation,
-and assembly work together; checked B1c was reused unchanged. Four new results
-finish the full unconditional `HasSum ... Real.pi` theorem. The
-[B1 completion handoff](b1-handoff.md) records validation and finalization.
-The next saved cycle is [all of B2: the orbit bridge](proof-plan.md#next-bounded-task-b2-complete-orbit-bridge),
-from the B2a series split through recurrence/range proofs to the exact orbit
-identity. The [session instructions](session-prompts.md#current-prompt-b2-complete-orbit-bridge)
-start that work only when invoked and stop before B3 or visitation research.
-Prompt preparation adds no Lean implementation and does not complete M3.
+The [original B1 retrospective](retrospectives/retrospective-2026-11-25-b1.md)
+is preserved as a dated proposal. A later user request authorized implementing
+all its process improvements as one milestone, explicitly excluding B2,
+mathematical changes, permission changes, and new external Lean dependencies.
+The [process handoff](process-improvements-handoff.md) records acceptance evidence.
 
-The completion used the existing pinned logarithm/arctangent derivative and
-FTC APIs. Default `field_simp` normalization left inverses whose rearranged
-denominators were not discharged; local positivity/bounds and a `linarith`
-discharger resolved them. An underconstrained `ContinuousOn.div` application
-caused `fun_prop` to unfold real arithmetic and hit the default heartbeat limit;
-explicitly typed numerator/denominator continuity proofs fixed elaboration
-without raising limits. Function equality was handled by `rfl`, and endpoint
-normalization by `norm_num` and `ring`. These were compiler/tactic issues, not
-missing mathematics or reasons to weaken the target. No external proof script,
-new import, optional tool, primitive definition, or generic analytic API was
-needed. The four public results each have a concrete consumer in the final
-chain. Retain the local feedback loop and existing Gemini/Viewpoint cadence.
+| B1 evidence | Adopted decision |
+| --- | --- |
+| B1a root-import visibility failure after a passing term proof | Probe exported definition bodies and downstream theorem types early. |
+| B1b broad simplification and boundary tests that bypassed their theorem; B1 completion elaboration/denominator repairs | Use explicit theorem instantiations, targeted normalization, and typed API probes; distinguish compiler repairs from missing mathematics. |
+| Successful composition of B1c, algebra, derivative, FTC, and final assembly | Complete the authorized milestone through internal checks, preserving intermediate reviews and the endpoint. |
+| B1c empty SUCCESS response; B1b truncated intermediate capture; unavailable persisted conversation during PR follow-up | Consolidate mandatory Carbon High operations; add scoped diff/hash preparation and capture/result inspection, retaining human coverage assessment and bounded recovery. |
+| Stale but valid archived entry anchor and duplicated mutable status prose | Establish record ownership, mark active current-prompt links, and test them offline in CI. Keep dated archives intact. |
+| Existing log and handoffs already supplied project context | Standardize concise handoffs; agent memory holds stable preferences/pointers, with volatile state verified from the checkout. |
+| Completion communication omitted substep labels and publication detail | Report completed substeps, remaining obligations, and local/pushed/PR state explicitly. |
 
-B1c's proof compiled on its first module check. The pinned API takes measurable
-terms under restricted volume, but its bound/summability/limit premises are
-almost-everywhere implications under unrestricted volume. Pointwise proofs
-via `ae_of_all` match those signatures directly. Constant-majorant integrability
-needs no explicit evaluation of its sum. The direct `HasSum` route avoided an
-unneeded tail or `tsum` layer; no additional helpers, tools, or process changes
-were justified. At that milestone B1 evaluation remained open; the later
-completion closes it while visitation obligations remain open.
+[AGENTS.md](../AGENTS.md) holds durable rules, with the full mandatory
+[Gemini procedure](gemini-review.md) moved to its own document. The
+[process tools](process-tools.md) are small offline Python utilities in a root
+`uv` project using MIT-licensed Markdown and YAML parsers. CI retains its Lean build and
+axiom audit. The current B2 prompt links consolidated procedures and retains
+all mathematical contracts and its proof-plan-before-implementation requirement;
+this adoption does not execute it. B2/B3, V, Hπ, T, and π disjunctivity remain
+unproved. B4 assumes vanishing errors and arbitrarily late visits; P3 assumes
+open-interval visits.
 
-B1b needed only the pinned geometric-series and order APIs. A broad commutative
-simplification initially failed to match the series target; a targeted `convert`
-and `ring` closed it. Linter feedback removed redundant tactic sequencing and
-ensured the endpoint checks actually instantiate the exported theorems. These
-were compiler/linter issues, not missing mathematics. No new public helper,
-optional tooling, library dependency, or external proof script was needed.
-The existing workflow remains sufficient; no process rewrite is justified.
+Keep the successful mathematical decomposition, pinned-source search, direct
+`HasSum` route, exact audits, and post-commit necessity review. No optional Lean
+infrastructure, new service, automatic retry loop, or permission expansion was
+justified. The source and prior cycle records support these decisions, not a
+claim that universal visitation will be similarly tractable.
 
-Pinned-source search and the local compiler loop sufficed. The term proof
-compiled immediately; root-import definition checks then exposed a module
-visibility issue, fixed by `@[expose]` on `bbpCoeff`, matching existing exposed
-definitions. This was an export/compiler issue, not missing mathematics.
-No external proof scripts were copied or translated, and no optional tooling
-was added. Keep the integral route, direct `HasSum` plan, B1-before-B3 order,
-and Gemini/Viewpoint cadence. See the log for actual review-tool outcomes.
+### Lightweight evaluation
 
-## B4/P3 workflow retrospective
+In future handoffs, record interface failures and their fixes; compiler repairs
+separately from missing mathematics; review attempts and per-invocation elapsed
+time; capture completeness (including missing chunks); and stale-entry-link
+incidents. Use short counts with evidence links when actually observed; say
+"not measured" for missing data. Separate proof and review/finalization time
+only when timestamps support it. Do not reconstruct historical counts, confuse
+cumulative usage with wall time, or claim quantified gains from one cycle.
+
+## B4/P3 workflow retrospective — 2026-11-25 snapshot
 
 Project and pinned-library search, a disposable scratch file, and the shell
 compiler loop sufficed. Both candidate proofs compiled on the first attempt;
@@ -102,6 +72,9 @@ added a bounded source/argument review because B1 needed analytic identities
 and possible source adaptation, unlike B4/P3. See the [research log](research-log.md) for actual checks.
 
 ## Purpose and scope
+
+The remaining sections preserve the 2026-11-24 pilot design and its previously
+adopted review policy. For the operational sequence use the workflow linked above.
 
 Adapt demonstrated theorem-proving methods into a practical research workflow
 for this repository. This is a plan for how to conduct and check the work, not

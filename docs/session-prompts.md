@@ -12,7 +12,9 @@ Resume work in `/Users/adam/personal/proj/pi-disjunctivity/pi-disjunctivity`
 on `feature/attempt-05-b2`.
 
 Read `AGENTS.md` and [the B1 handoff](b1-handoff.md) first, then the relevant [proof plan](proof-plan.md#4-connect-bbp-arithmetic-to-the-actual-hexadecimal-orbit),
-[blueprint](proof-blueprint.md#remaining-bbp-route), meta-plan, research log, and proof workflow. Ignore **Old prompts - do not use**.
+[blueprint](proof-blueprint.md#remaining-bbp-route), [meta-plan](meta-proof-plan.md),
+[research log](research-log.md), [workflow](proof-workflow.md), and
+[process handoff](process-improvements-handoff.md). Ignore **Old prompts - do not use**.
 
 Invoking this prompt authorizes **all of B2**, step by step, as one bounded
 milestone. Saving it does not start implementation. This replaces the earlier
@@ -136,46 +138,39 @@ Do not assume a global inequality
 
 ### 5. Validate and obtain the required review
 
-Preserve the Mathlib-only dependency policy, Lean/Mathlib `v4.37.0-rc1` pins,
-module/import/public conventions, enabled linters, MIT SPDX headers, and
-Ursula Athene-only attribution. Add no project axioms, `sorry`, `admit`,
-`native_decide`, or unsafe proof shortcuts. The only permitted axiom
-dependencies are `propext`, `Classical.choice`, and `Quot.sound`.
+Follow [AGENTS.md](../AGENTS.md), the [implementation sequence](proof-workflow.md#minimal-working-feedback-loop),
+and the mandatory [Gemini procedure](gemini-review.md). Establish the pinned
+baseline and probe root-import definitions/equations and full downstream theorem
+interfaces early. Compile the dependency chain incrementally, export through
+`PiDisjunctivity.lean`, and preserve every prior audit/check. For each reviewed
+theorem, inspect the actual `#print axioms` output and add full quantified type
+checks and guards in `Test.lean`. Boundary checks must instantiate the intended
+theorem, including the indices and convergence checks in steps 2–4 above.
 
-From the repository root, add `$HOME/.elan/bin` to `PATH` if needed, confirm
-`lean --version` is `4.37.0-rc1`, and establish the baseline. Compile the
-dependency chain incrementally. Export the new declarations through
-`PiDisjunctivity.lean`; add complete quantified type checks and guards for
-each reviewed theorem's inspected actual `#print axioms` output in
-`Test.lean`, preserving every prior audit/check. Run:
+Run `lake build`, `lake env lean Test.lean`, the offline documentation/utility
+checks, and working-tree/staged whitespace checks as specified in the workflow.
+Review definitions, indices, hypotheses, and mathematical meaning separately.
+Inspect imports, pins, manifest, and preservation of existing statements.
+Distinguish compiler/library/environment failures from missing mathematics;
+record exact obstructions without weakening the endpoint. Stop finalization
+if any required check fails or review is incomplete.
 
-```sh
-lake build
-lake env lean Test.lean
-git diff --check
-```
-
-Review definitions, indices, hypotheses, and mathematical meaning separately
-from compilation. Inspect imports, pins, manifest, and preservation of existing
-statements. Distinguish compiler/library/environment failures from missing
-mathematics, and record exact obstructions without weakening the endpoint.
-
-Obtain the Gemini Carbon High review required by `AGENTS.md` and the proof
-plan before the milestone commit. Supply the exact task-owned diff and baseline;
-use the literal approved `agy --model gemini-4-carbon-high --mode plan` prefix,
-read-only file tools only, no file changes or shell/Bash calls,
-`--output-format stream-json --print-timeout 20m`, and the specified terminal
-result/exit/denial checks. Follow the bounded wait, progress, explicit-conversation,
-and one-focused-recovery procedures. Save full captures separately and surface
-concise progress/results without truncating the underlying capture. Obtain
-intermediate review where uncertainty warrants it and focused follow-up review
-for substantive fixes. Never report an empty or incomplete review as clean.
+Obtain Carbon High review of the exact task-owned diff and baseline before the
+milestone commit, plus intermediate review where uncertainty warrants it and
+focused follow-up for substantive fixes. Use [evidence utilities](process-tools.md)
+for scope and capture checks; follow the mandatory procedure for literal `agy`
+invocation, read-only tools, adequate capture budgets, terminal-result inspection,
+explicit conversation IDs, and bounded recovery. Evaluate findings and coverage
+independently; tool success and no-findings text are not proof of correctness.
 
 ### 6. Finalize the complete B2 milestone and stop
 
-Update the proof plan, meta-plan, blueprint, research log, current session
-instructions, affected audit/status summaries, and a new `docs/b2-handoff.md`
-to match the actual checked results. Mark B2 complete only when all the split,
+Update records according to the [responsibility split](proof-workflow.md#records-and-project-memory):
+proof-plan contracts, blueprint declarations/status/hypotheses, concise log and
+current session instructions, meta-plan lessons where supported by evidence,
+and a new `docs/b2-handoff.md` using the [handoff template](handoff-template.md).
+Link orientation summaries to those records rather than duplicate audit counts.
+Mark B2 complete only when all the split,
 convergence, recurrence/range, and exact orbit-identity obligations above are
 proved, exported, audited, and reviewed. Partial work must be recorded as partial.
 
