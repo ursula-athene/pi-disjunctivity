@@ -20,7 +20,7 @@ B1b adds `hasSum_bbpTerm` and `norm_bbpTerm_le` on the closed unit interval.
 Twenty-two theorem type/axiom audits pass, alongside the two π definition checks,
 coefficient expansion/value checks, and B1b endpoint/zero-index checks. The full
 B1 `HasSum` identity remains unproved. See the [B1b handoff](b1b-handoff.md) for
-validation and review status, and the [current session record](session-prompts.md)
+validation and review status, and the [archived B1b session record](session-prompts.md#current-prompt-b1b-pointwise-series-and-domination)
 for the completed scope. The next proposed slice is B1c's sum/integral
 interchange, requiring separate authorization.
 

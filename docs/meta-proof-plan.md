@@ -34,8 +34,9 @@ The separately authorized B1b cycle independently proved `hasSum_bbpTerm` and
 checks. See [the B1b handoff](b1b-handoff.md). The next proposed cycle is
 [B1c: sum/integral interchange](proof-plan.md#next-bounded-task-b1c-sumintegral-interchange),
 subject to separate authorization. It stops before integral evaluation and
-identification with `Real.pi`. The [current session record](session-prompts.md)
-records B1b's stopping point; it does not invoke B1c.
+identification with `Real.pi`. The [current session prompt](session-prompts.md#current-prompt-b1c-sumintegral-interchange)
+prepares B1c for explicit invocation; saving it does not start the milestone.
+B1b's completed prompt is archived in the same file.
 
 B1b needed only the pinned geometric-series and order APIs. A broad commutative
 simplification initially failed to match the series target; a targeted `convert`

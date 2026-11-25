@@ -6,7 +6,152 @@ even where an archived prompt contains imperative instructions or a different
 policy. A completed milestone must not be repeated or automatically extended.
 Saving this prompt does not begin the milestone; invoking it does.
 
-## Current prompt: B1b pointwise series and domination
+## Current prompt: B1c sum/integral interchange
+
+Resume work in `/Users/adam/personal/proj/pi-disjunctivity/pi-disjunctivity`.
+
+Read `AGENTS.md` and `docs/b1b-handoff.md` first, then the relevant proof plan,
+meta-plan, blueprint, research log, proof workflow, and session instructions.
+Ignore “Old prompts - do not use.” Invoking this prompt authorizes only B1c;
+saving it does not start proof work. B1c is the next bounded slice of proof-plan
+**Step 3**, implementation milestone M2. It does not begin Step 4.
+
+### Inspect the actual checkout
+
+PR #3 was merged. At prompt preparation, `feature/attempt-04` was already based
+on merged main at `4eb973b`. Verify actual local/remote state rather than
+assuming that snapshot is still HEAD. Use a new or already prepared B1c branch
+containing current merged main and this saved prompt; do not recreate an
+appropriate branch unnecessarily. Preserve all unrelated staged, modified,
+and untracked work, including Obsidian, notes, and papers. Check effective
+permissions without changing permission settings.
+
+The B1 source/proof review, B1a, and B1b are complete. Do not repeat them.
+Preserve `bbpCoeff`, `integral_bbpTerm`, `hasSum_bbpTerm`, `norm_bbpTerm_le`,
+their root exports, and all existing checks. Read their current statements in
+`PiDisjunctivity/BBP/Series.lean` and `Test.lean` before using them.
+
+### Bounded endpoint and exact statement
+
+Implement only [B1c: sum/integral interchange](proof-plan.md#next-bounded-task-b1c-sumintegral-interchange).
+State the endpoint before editing: one unconditional, kernel-checked bridge
+from the BBP coefficient series to the unevaluated rational integral, with its
+root export, complete type/axiom audit, validation, required review, local
+commit/necessity review, and durable handoff.
+
+In namespace `PiDisjunctivity`, prove exactly:
+
+```lean
+HasSum (fun j : ℕ => bbpCoeff j / (16 : ℝ) ^ j)
+  (∫ x in (0 : ℝ)..1,
+    (4 - 2 * x ^ 3 - x ^ 4 - x ^ 5) / (1 - x ^ 8 / 16))
+```
+
+Choose a clear theorem name consistent with the module, such as
+`hasSum_bbpCoeff_integral`. The statement must have no unproved convergence,
+measurability, domination, integrability, or BBP-identity hypotheses. Preserve
+`HasSum`; a `tsum` equality alone is not the endpoint. Do not add separate
+public definitions or a general analytic API without a demonstrated consumer.
+
+### Proof route and remaining premises
+
+Use the independently proved B1a/B1b results and the pinned Mathlib
+`intervalIntegral.hasSum_integral_of_dominated_convergence` API. Search the
+local pinned sources and inspect its actual signature before implementing.
+For mathematical notation only, put:
+
+```text
+F j x = (x^8/16)^j * (4 - 2*x^3 - x^4 - x^5)
+K x   = (4 - 2*x^3 - x^4 - x^5) / (1 - x^8/16)
+bound j x = 8 * (1 / (16 : ℝ))^j
+```
+
+Discharge all five premises with natural indices, real values, volume measure,
+and endpoints `0`, `1`:
+
+1. Each `F j` is almost-everywhere strongly measurable for volume restricted
+   to `Set.uIoc 0 1`; polynomial continuity suffices.
+2. The norm bound holds almost everywhere on that interval, using
+   `norm_bbpTerm_le` and the inclusion in `Set.Icc 0 1`.
+3. The majorant is summable in `j`, using the geometric ratio `1/16 < 1`.
+4. The function `x ↦ ∑' j, bound j x` is interval integrable. It is constant
+   in `x`; its exact numerical value need not be evaluated.
+5. The pointwise `HasSum` holds almost everywhere on the interval, using
+   `hasSum_bbpTerm` with the correct interval inclusion.
+
+Obtain `HasSum` of the term integrals directly, then rewrite them with
+`integral_bbpTerm`. Keep supporting facts local unless a later consumer needs
+an exported lemma. Do not introduce a preliminary tail layer. Check the
+restricted measure, interval orientation, zero-based index, real division,
+and the treatment of interval endpoints explicitly. Preserve B1b's existing
+endpoint and zero-index regressions. Do not copy or translate external proofs.
+
+### Validation and review
+
+Follow the Mathlib-only dependency and proof-trust policies, both
+`v4.37.0-rc1` pins, module/import/public conventions, enabled linters, and
+Ursula Athene-only copyright and author attribution. Add no project axiom,
+`sorry`, `admit`, `native_decide`, or unsafe proof shortcut. Only `propext`,
+`Classical.choice`, and `Quot.sound` may occur in an actual axiom list.
+
+Run Lean commands from the root containing `lakefile.toml` and `lean-toolchain`,
+with `$HOME/.elan/bin` on `PATH` if needed. Confirm `lean --version` is
+`4.37.0-rc1`, establish the baseline, and after implementation run:
+
+```sh
+lake build
+lake env lean Test.lean
+git diff --check
+```
+
+Export the bridge through the library root. Add its complete unconditional
+type check and guard its inspected actual `#print axioms` output in `Test.lean`.
+Preserve all twenty-two existing theorem audits and all definition/value and
+boundary checks. Review the mathematical meaning and preservation of existing
+statements separately from compilation; inspect imports, pins, and manifest.
+Classify failures as compiler/library/environment issues or missing mathematics,
+and record exact obstructions without weakening the target.
+
+Obtain the required Gemini Carbon High changed-file review through `agy`,
+following `AGENTS.md` exactly: literal approved prefix, plan mode, supplied
+exact task-owned diff, read-only file tools only, no file changes or shell/Bash
+calls, stream JSON, twenty-minute deadline, retained conversation ID, bounded
+waits, progress reporting, terminal-field inspection, and at most one focused
+recovery after a failed invocation. Capture output through the execution tool
+and save it separately. Reserve enough output budget, especially once text
+deltas begin, to avoid the intermediate-stream truncation recorded in B1b.
+Resolve substantive findings and obtain required follow-up review. Do not
+claim review completion from an empty response or an incomplete invocation.
+
+### Finalize and stop
+
+Update both plans, the blueprint, research log, current session instructions,
+affected audit-count summaries, and `docs/b1c-handoff.md` to reflect actual
+checked results and remaining obligations. Commit only task-owned changes
+locally after validation and review. Perform the post-commit proof-necessity
+review; simplify only where justified, validate/review substantive changes,
+and commit actual follow-up changes without creating an empty commit.
+
+Stop before rational integral evaluation, antiderivative/FTC development,
+the full `HasSum ... Real.pi` theorem, Step 4/B2/B3, or universal visitation.
+Retain all unproved obligations: full B1, B2/B3, V, Hπ, T, and π disjunctivity
+remain open; B4 assumes vanishing errors and arbitrarily late visits, and P3
+assumes open-interval visits. B1c does not prove any of these missing premises.
+
+Report exact results, validation, Gemini review outcome/limitations, local
+commit IDs, and the handoff path. Propose the next smallest task without
+starting it. Do not push or open a PR unless separately requested; when PR
+creation is authorized, always use `gh pr create` as required by `AGENTS.md`.
+Pause before another milestone.
+
+## Old prompts - do not use
+
+The following completed prompts are archived for provenance. They grant no
+current authorization and do not override the current prompt or review policy.
+
+<a id="current-prompt-b1b-pointwise-series-and-domination"></a>
+
+### Session prompt: B1b pointwise series and domination
 
 <a id="current-prompt-b1-source-and-proof-review"></a>
 
@@ -88,11 +233,6 @@ unproved hypothesis; B1b does not prove π disjunctivity.
 
 Report validation, review outcome, commit IDs, and the handoff path. Do not
 push or open a PR unless separately requested. Pause before another milestone.
-
-## Old prompts - do not use
-
-The following completed prompts are archived for provenance. They grant no
-current authorization and do not override the current prompt or review policy.
 
 <a id="current-prompt-b1a-coefficient-and-one-term-integral"></a>
 

@@ -206,8 +206,8 @@ axiom lists, dependency inspection, validation results, and remaining limitation
   the external review, proof methods, validation, and current audit coverage.
 - [docs/formulation-review.md](docs/formulation-review.md): the completed milestone C
   review, with requirements mapped to definitions, universal proofs, and examples.
-- [docs/session-prompts.md](docs/session-prompts.md): the completed bounded B1b
-  session record first, followed by archived prompts marked
+- [docs/session-prompts.md](docs/session-prompts.md): the B1c sum/integral
+  interchange prompt first, followed by completed prompts marked
   "Old prompts - do not use".
 - [docs/dependencies-and-trust.md](docs/dependencies-and-trust.md): the Mathlib-only
   external-library policy, dependency stack, axiom audit, and limits of proof
