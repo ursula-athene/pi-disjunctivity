@@ -615,3 +615,32 @@ it was left untouched. Task-scoped staged whitespace checks are used alongside
 `git diff --check`, and commits select explicit task paths to preserve that
 unrelated staged work. This is a user-file validation limitation, not a B1 or
 Lean failure.
+
+### Post-commit necessity review and handoff
+
+Committed the reviewed milestone and finalized review record locally as
+`2b7a74529c47df66c7beb4f0218cbb1f0e3cb0a2`, selecting the eight task-owned
+documentation paths explicitly. The unrelated staged config was excluded and
+its index blob preserved. An untracked `papers/` directory also appeared during
+the session and is left untouched.
+
+After that commit, reread the committed mathematical outline and proposed proof
+pieces. The coefficient fixes the intended terms; the one-term integral links
+them to the kernel; the geometric bound and measurability justify interchange;
+the rational identity, derivative, FTC, and endpoints identify `Real.pi`.
+Each is needed. The direct `HasSum` route already avoids a preliminary tail
+layer and separate summability theorem. B1a needs no public monomial helper,
+separate summand definition, or new general analytic API. No further substantive
+simplification or fix was justified, hence no focused-fix Gemini follow-up or
+empty implementation commit is needed. The handoff/log update is actual
+follow-up documentation, with no changed mathematical proposal.
+
+Pre-milestone-commit validation passed for 115 local links/anchors and all
+preservation checks; a trailing blank line in the new saved reviewer report was
+caught by the staged check, removed, and the task-scoped check rerun successfully.
+The global cached check's unrelated config finding remains explicitly excluded.
+The [final handoff](b1-review-handoff.md) records results, remaining obligations,
+validation, review limits, process lessons, commits, and the B1a proposal. Final
+handoff links, preservation, and scoped whitespace are checked again before its
+commit, then the handoff is printed. No push, new Lean declaration, B2/B3 work,
+or visitation attempt follows. Pause for the user's decision.
