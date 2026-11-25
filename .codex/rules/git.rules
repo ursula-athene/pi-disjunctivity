@@ -1,6 +1,6 @@
 # allow all git commands - destructive ones are prohibited on Github using a ruleset
 prefix_rule(
-    pattern=["git"],
+    pattern=["git", "gh"],
     decision="allow",
 )
 
