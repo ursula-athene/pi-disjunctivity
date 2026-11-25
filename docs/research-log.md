@@ -742,3 +742,36 @@ successful build/audit, so those checks remain valid. Final link/preservation
 and staged-diff checks include the review report and outcome records.
 The [durable B1a handoff](b1a-handoff.md) records the milestone. The local commit
 and post-commit necessity review follow; no push or next milestone follows.
+
+
+### Post-commit necessity review and final handoff
+
+Committed the reviewed B1a milestone locally as
+`b60656d6498d30a887a2d2101b0662844701e0ef`, selecting the fourteen task-owned
+paths explicitly with `git commit --only`. Its parent is the preserved user
+permissions commit `855bb40`. The remaining working-tree changes are unrelated
+Obsidian/notes and papers. No push or history rewrite occurred.
+
+Then reread the committed `BBP/Series.lean`, root export, and new audits.
+The coefficient fixes the intended term; the local `hp` fact is reused by the
+subtraction premises; `hexpand` rewrites the scaled integrand into monomials;
+linearity and `integral_pow` evaluate them; cast/algebra normalization identifies
+the exact coefficient. The exposed definition and root export enable the required
+importer checks, and the guarded audit preserves the trust boundary. Each piece
+is needed for the statement, proof, or acceptance checks. No additional public
+API or removable proof layer was found. No substantive simplification or fix
+arose, so no focused Gemini follow-up or empty code commit was warranted.
+
+Pre-milestone-commit validation passed for 163 local Markdown links/anchors,
+task-scoped staged whitespace, `git diff --check`, preservation of sixteen
+unrelated files and sixteen protected files, the config blob, archived prompts,
+and all nineteen earlier axiom guards. Final handoff/log edits are factual
+records only; the reviewed Lean inputs are unchanged after their successful
+build and twenty-theorem audit. Their final links, whitespace, preservation,
+and two-file staged scope are checked again before the handoff commit.
+
+The [final B1a handoff](b1a-handoff.md) records results, review/runtime limitations,
+commits, the necessity check, remaining obligations, and B1b as a proposal only.
+The final documentation commit contains this actual retrospective and handoff;
+its own ID is printed after committing. No infinite-sum interchange, π evaluation,
+B2/B3, or visitation work follows. Pause for the user's decision.

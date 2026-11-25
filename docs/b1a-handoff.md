@@ -3,8 +3,7 @@
 Implementation checked 2026-11-25 on `feature/attempt-02`, in
 `/Users/adam/personal/proj/pi-disjunctivity/pi-disjunctivity`.
 
-**B1a is checked and its Gemini review is complete. Local commit and
-post-commit necessity records are being finalized.**
+**B1a is complete: checked, reviewed, committed, and reviewed for necessity.**
 The full B1 identity and π disjunctivity conjecture remain unproved.
 
 ## Checked result and scope
@@ -59,11 +58,14 @@ Commands from the correct root with `$HOME/.elan/bin` on `PATH`:
 The first root-import audit found the coefficient body was not exposed. Adding
 `@[expose]` fixed the export issue; the rebuilt root and audits passed. This was
 a compiler/export issue, not a mathematical gap. Dependency pins, original
-proofs/definitions, CI, and `AGENTS.md` are unchanged. Preservation checks passed for sixteen unrelated files, the config index blob,
+proofs/definitions, CI, and `AGENTS.md` are unchanged. Preservation checks passed
+for sixteen unrelated files, the config index blob,
 archived prompts, sixteen protected source/configuration files, and all nineteen
-old axiom-guard blocks. Task-scoped staged whitespace passed; pre-review local
-Markdown links/anchors passed (156 checks). Final links are checked again with
-the saved review record and compatibility anchor. No clean-environment rebuild,
+old axiom-guard blocks. Task-scoped staged whitespace passed. Pre-review local
+Markdown links/anchors passed
+(156 checks); final checks including the saved review record and historical
+entry-point/handoff links passed (163 before the milestone commit, 164 at final
+handoff). No clean-environment rebuild,
 external axiom audit, or remote CI result is claimed.
 
 ## Review and finalization
@@ -84,8 +86,25 @@ No permission setting was changed. The two nonblocking finalization checks were
 resolved: document the concurrent permissions commit and retain the former
 prompt anchor for one historical entry-point link. Neither changes the proof.
 
-The initial local milestone commit and post-commit necessity review are pending
-at this pre-commit snapshot; their actual IDs and results follow in finalization.
+The reviewed implementation and documentation were committed locally as
+`b60656d6498d30a887a2d2101b0662844701e0ef` (fourteen task-owned files only),
+after the preserved permissions commit `855bb40`. No unrelated work entered it.
+
+After committing, reread the committed module, root export, and audit additions.
+The coefficient identifies the series term; `hp` supplies the repeated
+integrability premises without a public helper; `hexpand` connects the scaled
+kernel to the monomials; linearity and `integral_pow` give their exact values;
+cast/algebra normalization matches the coefficient. The exposed body, root
+export, and audits meet the importer/semantic/trust requirements. Each piece
+serves the proof or its acceptance checks; no extra theorem or unnecessary
+layer was found. No substantive simplification or focused-fix review was
+needed, and no empty code commit was made.
+
+The final handoff/necessity-record commit changes only this file and the
+research log. Retrieve its ID with
+`git log -1 --format=%H -- docs/b1a-handoff.md`; it is also reported in the
+terminal handoff. Source, audits, and pins are unchanged after their passing
+build/checks, so no additional Lean rerun was necessary for this factual record.
 
 ## Remaining obligations and next proposed task
 
@@ -113,6 +132,8 @@ changes and `papers/` remain excluded. The original config blob remains
 byte-identical. Task paths are the thirteen reviewed paths listed in the saved
 review plus `docs/agy-reports/b1a-review.md`. Only those paths enter task commits.
 
-No push or history rewrite is authorized. Stop after the B1a review,
-validation, local commits, necessity review, and completed handoff; pause before
-any further milestone.
+No push or history rewrite was made. The final documentation diff, whitespace,
+links, and preservation were checked before the handoff commit. The completed
+handoff is printed after committing.
+
+**Paused before B1b or any other milestone, for the user's questions and decision.**
