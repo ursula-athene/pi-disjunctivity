@@ -7,7 +7,7 @@ module
 
 import PiDisjunctivity
 
-/-! Audit the problem definitions, foundations, and formulation equivalences after `lake build`. -/
+/-! Audit definitions, foundations, orbit criteria, and the BBP term integral after `lake build`. -/
 
 -- Compare the named π statements directly with the reviewed quantified problem and orbit.
 example : PiDisjunctivity.PiHexadecimalDisjunctivity ↔
@@ -128,6 +128,21 @@ example (t : ℕ → ℝ)
       t n ∈ Set.Ico ((m : ℝ) / (16 : ℝ) ^ k)
         (((m : ℝ) + 1) / (16 : ℝ) ^ k) :=
   PiDisjunctivity.hitsHexadecimalIntervals_of_hitsOpenIntervals t ht
+
+-- The BBP coefficient uses real division, the four reviewed signs, and zero-based indexing.
+example (j : ℕ) : PiDisjunctivity.bbpCoeff j =
+    4 / (8 * (j : ℝ) + 1) - 2 / (8 * (j : ℝ) + 4)
+      - 1 / (8 * (j : ℝ) + 5) - 1 / (8 * (j : ℝ) + 6) := rfl
+
+example : PiDisjunctivity.bbpCoeff 0 = (47 : ℝ) / 15 := by
+  norm_num [PiDisjunctivity.bbpCoeff]
+
+-- This is unconditional and includes j = 0; it makes no infinite-sum or π assertion.
+example (j : ℕ) :
+    (∫ x in (0 : ℝ)..1,
+      (x ^ 8 / 16) ^ j * (4 - 2 * x ^ 3 - x ^ 4 - x ^ 5)) =
+      PiDisjunctivity.bbpCoeff j / (16 : ℝ) ^ j :=
+  PiDisjunctivity.integral_bbpTerm j
 
 /--
 info: 'PiDisjunctivity.blockValue_eq_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
@@ -250,3 +265,10 @@ info: 'PiDisjunctivity.hitsHexadecimalIntervals_of_hitsOpenIntervals' depends on
 -/
 #guard_msgs (whitespace := lax) in
 #print axioms PiDisjunctivity.hitsHexadecimalIntervals_of_hitsOpenIntervals
+
+/--
+info: 'PiDisjunctivity.integral_bbpTerm' depends on axioms:
+[propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms PiDisjunctivity.integral_bbpTerm

@@ -1,8 +1,14 @@
 # B1 source and proof review
 
+**Subsequent implementation status (2026-11-25):** this is the completed B1
+source-review record. The separately authorized [B1a milestone](b1a-handoff.md)
+now checks T1 (`integral_bbpTerm`) and `bbpCoeff`. References below to T1 as
+unproved or proposed describe the source-review baseline. T2–T4, the analytic
+interchange/evaluation, and the final B1 `HasSum` theorem remain unproved.
+
 Review date: 2026-11-25. Baseline: `a3feb6bf02cea0aafdba29331e551d9e8173477d`
-on `feature/attempt-02`. This is the documentation-only milestone authorized by
-[the current prompt](session-prompts.md#current-prompt-b1-source-and-proof-review).
+on `feature/attempt-02`. Completion of this documentation-only milestone is
+recorded in [the source-review handoff](b1-review-handoff.md).
 No BBP Lean declaration or external-code adaptation is included.
 
 **Assessment:** the specified B1 identity has a complete classical analytic

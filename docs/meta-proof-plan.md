@@ -8,8 +8,9 @@ The pilot is complete; the conditional π theorem retains its unproved hitting
 hypothesis. A second authorized cycle completed B4 and P3 on 2026-11-25,
 with nineteen theorem audits passing. BBP formalization and universal visitation
 were not attempted. A subsequent B1 source/argument review is recorded below,
-without new Lean declarations. The stages below remain the procedure for future
-separately scoped work.
+without new Lean declarations. The separately authorized B1a cycle subsequently
+checked the coefficient and one-term integral, bringing the theorem audit count
+to twenty. The stages below remain the procedure for future separately scoped work.
 
 **Review-policy update, 2026-11-25:** the user requires Gemini Carbon High
 changed-file reviews through `agy` at milestones and at useful intermediate
@@ -18,26 +19,27 @@ and [AGENTS.md](../AGENTS.md#gemini-carbon-code-reviews-with-agy). This is a new
 user-directed process requirement; it does not retroactively claim an external
 review of the completed B4/P3 cycle.
 
-## Next bounded task
+## B1a outcome and next bounded task
 
-The B1 source and proof assessment is recorded in
-[the review](b1-source-proof-review.md), including the required Gemini review
-status and limitations. The next proposed cycle is
-[B1a: coefficient and one-term integral](proof-plan.md#next-bounded-task-b1a-coefficient-and-one-term-integral).
-Its exact statements, prerequisites, acceptance checks, and stopping point are
-in the review. B1 remains unformalized; B4/P3 retain their hypotheses, and
-universal visitation remains open.
+The [B1 source and proof assessment](b1-source-proof-review.md) was already
+complete at `2b7a745`/`ab43f71` and was not repeated. The authorized B1a cycle
+independently implemented `bbpCoeff` and the single-term integral. The
+[handoff](b1a-handoff.md) records checked results, review status, and commits.
+B1's full `HasSum` identity, B2/B3, and universal visitation remain unproved;
+B4/P3 retain every hypothesis.
 
-This source-review cycle used Stage 3's specify/search/sketch/criticize process
-without implementing BBP. It supports independent local proofs from the
-published argument and Mathlib, preserving the attribution policy and current
-B1-before-B3 order. Retain the direct `HasSum` route to avoid a preliminary tail
-layer. Signature-only probes found and corrected namespace/name lookup errors;
-those were API issues, not mathematical obstructions. External source inspection
-is not an external rebuild or axiom audit. No added tooling or broader workflow
-change is warranted. The existing Gemini and Viewpoint procedures remain in
-force. The [current prompt](session-prompts.md#current-prompt-b1-source-and-proof-review)
-ends at the review handoff; it does not authorize B1a implementation.
+The next proposed cycle is [B1b: pointwise series and domination](proof-plan.md#next-bounded-task-b1b-pointwise-series-and-domination),
+subject to separate authorization. It stops before infinite interchange and
+integral evaluation. The [current session record](session-prompts.md#current-prompt-b1a-coefficient-and-one-term-integral)
+records B1a's stopping point; it does not automatically invoke B1b.
+
+Pinned-source search and the local compiler loop sufficed. The term proof
+compiled immediately; root-import definition checks then exposed a module
+visibility issue, fixed by `@[expose]` on `bbpCoeff`, matching existing exposed
+definitions. This was an export/compiler issue, not missing mathematics.
+No external proof scripts were copied or translated, and no optional tooling
+was added. Keep the integral route, direct `HasSum` plan, B1-before-B3 order,
+and Gemini/Viewpoint cadence. See the log for actual review-tool outcomes.
 
 ## B4/P3 workflow retrospective
 

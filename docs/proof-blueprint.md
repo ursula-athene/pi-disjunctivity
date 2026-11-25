@@ -1,13 +1,15 @@
 # Proof dependency and status index
 
-Updated 2026-11-25 with the B1 source/argument assessment; B4/P3 remain checked.
+Updated 2026-11-25 with checked B1a coefficient and single-term integral;
+B4/P3 remain checked.
 This indexes
 [proof-plan.md](proof-plan.md), the sole mathematical roadmap. Validation and
 review evidence are in [research-log.md](research-log.md). All Lean names below
 are in namespace `PiDisjunctivity` and exported by the library root.
 
 **Target remains unproved:** `PiHexadecimalDisjunctivity`, whose unchanged
-definition is `IsDisjunctive 16 Real.pi`. No BBP result is implemented here.
+definition is `IsDisjunctive 16 Real.pi`. Only the B1a coefficient and single-term
+integral are implemented; the full BBP series identity remains unproved.
 
 ## Notation and status vocabulary
 
@@ -48,13 +50,15 @@ interval arithmetic uses reals. Each occurrence index may depend on `k,m`.
 The full fifteen-theorem foundation, including positional reconstruction,
 termination, and `HasSum`, is indexed by [the follow-up](review-follow-up.md)
 and [Test.lean](../Test.lean). The pilot adds two and B4/P3 add two more,
-bringing the audited total to nineteen. Every current list is exactly
+bringing that subtotal to nineteen; B1a adds the twentieth theorem audit.
+Every current theorem list is exactly
 `propext`, `Classical.choice`, `Quot.sound`; no claim here is an added axiom.
 
 ## Remaining BBP route
 
 B1–B3 and V below remain mathematical specifications from roadmap Steps 3–5,
-not importable declarations. The general B4 and P3 lemmas are now checked and
+not importable declarations. B1a below is the checked first part of B1.
+The general B4 and P3 lemmas are now checked and
 exported; they contain no BBP-specific definitions. For the remaining nodes,
 define, in real arithmetic,
 
@@ -67,13 +71,15 @@ R_n=\sum_{r=0}^{\infty}\frac{A(n+r+1)}{16^{r+1}},
 y_0=0,\qquad y_{n+1}=\operatorname{fract}(16y_n+A(n)).
 \]
 
-Here all indices are natural numbers. The tail expression is reindexed from
+Here `A(j)` is the implemented `bbpCoeff j`; the other expressions remain
+mathematical specifications. All indices are natural numbers. The tail is reindexed from
 the roadmap's `r ≥ 1` sum to start at zero. Convergence must be proved before
 using the series as an analytic tail.
 
 | Node | Exact claim and hypotheses | Dependencies/evidence | Role/status |
 | --- | --- | --- | --- |
-| B1: BBP series | `HasSum (fun j : ℕ => A(j) / (16 : ℝ) ^ j) Real.pi`, for the fixed `A` above. | Original BBP identity cited in [Step 3](proof-plan.md#3-establish-the-bbp-identity-in-the-permitted-lean-stack). Integral/geometric-series argument; no hypothesis of density. | **Known / unformalized.** Supplies the π-specific analytic identity. Source/argument assessment and pinned API map are in [the B1 review](b1-source-proof-review.md), including its Gemini review status. No local B1 proof or external adaptation; independent implementation proposed. |
+| B1a: coefficient and term integral | For every `j : ℕ`, `∫ x in (0 : ℝ)..1, (x^8/16)^j * (4 - 2*x^3 - x^4 - x^5) = bbpCoeff j / (16 : ℝ)^j`. No hypotheses. | `bbpCoeff`, `integral_bbpTerm` in [Series.lean](../PiDisjunctivity/BBP/Series.lean); polynomial continuity, integral linearity, and Mathlib `integral_pow`. Root export, exact type/axiom guard, coefficient expansion and zero-index check in `Test.lean`. | **Checked.** Supplies only the term integral (T1). No series convergence, interchange, or π evaluation. |
+| B1: BBP series | `HasSum (fun j : ℕ => A(j) / (16 : ℝ) ^ j) Real.pi`, for the fixed `A` above. | Original BBP identity cited in [Step 3](proof-plan.md#3-establish-the-bbp-identity-in-the-permitted-lean-stack). Integral/geometric-series argument; no hypothesis of density. | **Known / unformalized.** Supplies the π-specific analytic identity. Source/argument assessment and pinned API map are in [the B1 review](b1-source-proof-review.md), including its Gemini review status. B1a is checked; pointwise series, domination/measurability, interchange, rational algebra, derivative, integrability, endpoints, and final `HasSum` assembly remain to be proved locally. No external adaptation. |
 | B2: orbit bridge | For every `n : ℕ`, `16^n * Real.pi = S_n + R_n`, `y_(n+1) = fract(S_n)`, and `t_n(Real.pi) = fract(y_(n+1) + R_n)`. Also `0 ≤ y_n < 1`. | B1, convergent-series splitting, recurrence induction, fractional-part arithmetic; [Step 4](proof-plan.md#4-connect-bbp-arithmetic-to-the-actual-hexadecimal-orbit). | **Known / unformalized.** Relates recurrence index `n+1` to actual orbit index `n`. |
 | B3: tail control | For all `j,n : ℕ`, `abs(A(j)) ≤ 8/(8*j+1)` and `abs(R_n) ≤ 8/(15*(8*n+9))`; consequently `R_n → 0` as `n → ∞`. | Candidate bounds in Step 4; triangle inequality, denominator monotonicity, geometric sum, convergence. | **Proposed bounds / unformalized.** Must verify constants and series estimates; gives no visits. |
 | B4: general transfer | For `u r : ℕ → ℝ`, assume `Filter.Tendsto r Filter.atTop (nhds 0)` and `∀ a b : ℝ, 0 ≤ a → a < b → b ≤ 1 → ∀ N : ℕ, ∃ n ≥ N, u n ∈ Set.Ioo a b`. Then `∀ a b : ℝ, 0 ≤ a → a < b → b ≤ 1 → ∃ n : ℕ, Int.fract (u n + r n) ∈ Set.Ioo a b`. | `hitsOpenIntervals_fract_add_of_tendsto_zero` in [OrbitCriteria.lean](../PiDisjunctivity/OrbitCriteria.lean); `Metric.tendsto_atTop`, quarter-width margin, `Int.fract_eq_self`. Root-exported; complete type/axiom guards in `Test.lean`. | **Checked, conditional.** No global range hypothesis; signed errors and targets touching 0 or 1 included. Late visitation and vanishing error remain premises. |
@@ -110,12 +116,11 @@ irrationality alone does not rule out infinite proper limit sets. A global bound
 `abs(fract u - fract v) ≤ abs(u-v)` is false across an integer (take
 `u = 99/100`, `v = 101/100`). The transfer must use an interior margin.
 
-B4 and P3 are checked; B1–B3 are unformalized, and V, Hπ, and T remain
-unproved. The [B1 source/argument review](b1-source-proof-review.md) records a
-classical analytic route, source/license assessment, and pinned-library map;
-it adds no checked node. Recommended next bounded task, if authorized:
-[B1a coefficient and one-term integral](proof-plan.md#next-bounded-task-b1a-coefficient-and-one-term-integral).
-Prove only the exact termwise-integral statement and audit it, then stop before
-infinite interchange, integral evaluation, B2/B3, or V. The B1-before-B3 order
-and Viewpoint commit policy remain unchanged. This session stops at the source
-review, local commits, retrospective, and written handoff.
+B1a, B4, and P3 are checked. B1's full identity, B2/B3, V, Hπ, and T remain
+unproved. The [source review](b1-source-proof-review.md) supplies the classical
+route; [the B1a handoff](b1a-handoff.md) records this implementation and review.
+The next bounded task, only if separately authorized, is
+[B1b pointwise series and domination](proof-plan.md#next-bounded-task-b1b-pointwise-series-and-domination).
+Stop that slice before infinite interchange, integral evaluation, B2/B3, or V.
+No conditional visitation premise has been discharged. The B1-before-B3 order
+and Viewpoint commit policy remain unchanged.

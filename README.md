@@ -78,16 +78,18 @@ the conjecture remains unproved.
 
 The documentation-only [B1 source and proof assessment](docs/b1-source-proof-review.md)
 records the analytic route, external-source license constraints, and pinned
-Mathlib API. B1 remains unformalized; the next proposed slice is the coefficient
-and one-term integral, subject to separate authorization.
+Mathlib API. The subsequent [B1a milestone](docs/b1a-handoff.md) independently
+checks `bbpCoeff` and `integral_bbpTerm`. The full B1 series identity remains
+unproved. Pointwise summation and domination are the next proposed slice,
+subject to separate authorization.
 
 The digit and disjunctivity definitions remain parameterized by the base. The
 word value, orbit, and conjecture definitions use base 16. Reconstruction examples
 cover bases 2, 10, and 16. The default build checks the definitions, all three
 foundational steps, both formulation equivalences, termination, infinite
 reconstruction, recurrence, the interval-hitting equivalence, conditional π
-reduction, general transfer and cell conversion, and examples. The review
-distinguishes these results from the mathematical comparison with the intended problem.
+reduction, general transfer and cell conversion, the BBP term integral, and
+examples. The review distinguishes these results from the mathematical comparison with the intended problem.
 
 ## Installation
 
@@ -157,12 +159,13 @@ lake env lean Test.lean
 ```
 
 This check preserves the thirteen milestone C theorem-type audits and adds
-infinite reconstruction, recurrence, the two interval-pilot results, and B4/P3,
-for nineteen reviewed theorems. It uses
+infinite reconstruction, recurrence, the two interval-pilot results, B4/P3,
+and the B1a term integral, for twenty reviewed theorems. It uses
 `#guard_msgs` to verify each theorem's exact axiom list: `propext`, `Classical.choice`, and
 `Quot.sound`. An unexpected axiom such as `sorryAx` makes the check fail. CI runs
 it after the library build. Two further checks expand the named π propositions
-to the explicit quantified digit and orbit statements.
+to the explicit quantified digit and orbit statements. The BBP coefficient
+expansion and `bbpCoeff 0 = 47/15` are also checked through the root import.
 
 To build selected modules explicitly:
 
@@ -170,7 +173,7 @@ To build selected modules explicitly:
 lake build PiDisjunctivity.Definitions PiDisjunctivity.BlockValue \
   PiDisjunctivity.Digits PiDisjunctivity.Disjunctivity PiDisjunctivity.Cylinders \
   PiDisjunctivity.Conjectures PiDisjunctivity.OrbitEquivalence PiDisjunctivity.OrbitCriteria \
-  PiDisjunctivity.Examples
+  PiDisjunctivity.BBP.Series PiDisjunctivity.Examples
 ```
 
 For a quick check of one source file, or to inspect the selected Lean version:
@@ -200,8 +203,8 @@ axiom lists, dependency inspection, validation results, and remaining limitation
   the external review, proof methods, validation, and current audit coverage.
 - [docs/formulation-review.md](docs/formulation-review.md): the completed milestone C
   review, with requirements mapped to definitions, universal proofs, and examples.
-- [docs/session-prompts.md](docs/session-prompts.md): the current bounded B1
-  source-and-proof-review prompt first, followed by archived prompts marked
+- [docs/session-prompts.md](docs/session-prompts.md): the completed bounded B1a
+  session record first, followed by archived prompts marked
   "Old prompts - do not use".
 - [docs/dependencies-and-trust.md](docs/dependencies-and-trust.md): the Mathlib-only
   external-library policy, dependency stack, axiom audit, and limits of proof
@@ -243,9 +246,10 @@ axiom lists, dependency inspection, validation results, and remaining limitation
 - [PiDisjunctivity/OrbitCriteria.lean](PiDisjunctivity/OrbitCriteria.lean): the
   explicit interval-hitting equivalence, conditional π reduction, interior-margin
   transfer, and open-interval-to-cell conversion.
-- [Test.lean](Test.lean): nineteen foundational, equivalence, termination,
-  reconstruction, recurrence, reduction, and transfer statements with guarded
-  axiom checks, and two direct conjecture-definition checks.
+- [PiDisjunctivity/BBP/Series.lean](PiDisjunctivity/BBP/Series.lean): the BBP
+  coefficient and unconditional single-term integral; no π series theorem yet.
+- [Test.lean](Test.lean): twenty theorem statements with guarded axiom checks,
+  two direct conjecture-definition checks, and coefficient expansion/value checks.
 
 ## License
 

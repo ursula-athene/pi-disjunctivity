@@ -644,3 +644,101 @@ validation, review limits, process lessons, commits, and the B1a proposal. Final
 handoff links, preservation, and scoped whitespace are checked again before its
 commit, then the handoff is printed. No push, new Lean declaration, B2/B3 work,
 or visitation attempt follows. Pause for the user's decision.
+
+
+## 2026-11-25 — B1a coefficient and single-term integral
+
+### Authorized endpoint, baseline, and proof
+
+The user explicitly authorized only B1a, following the completed B1 source/proof
+review at `2b7a745` and `ab43f71`. Verified actual HEAD:
+`ab43f71285be84d92952765c4b67990866fed6f0`, branch `feature/attempt-02`.
+Read `AGENTS.md` and `b1-review-handoff.md` first, then the current plans,
+blueprint, log, workflow, session instructions, and relevant sources. Ignored
+archived prompts as instructions; their bytes are preserved. Did not repeat
+the completed source review or retrieve/copy/translate external proof scripts.
+
+Announced endpoint before editing: independent `bbpCoeff`, unconditional
+`integral_bbpTerm (j : ℕ)`, root export, guarded audit, coefficient/sign/index
+checks, validation, required review, local commits, necessity review, and handoff.
+Excluded infinite interchange, π integral evaluation, B2/B3, and V.
+
+The fresh-session saved-rule check returned `decision: allow` for the exact
+Gemini Carbon High plan-mode prefix. The active profile restricts filesystem
+writes to workspace/temporary roots and provides no escalation; permission
+settings were left unchanged. Baseline `lean --version` was `4.37.0-rc1`;
+`lake build` passed (6655 jobs), `lake env lean Test.lean` passed with nineteen
+audits and two definition checks, and `git diff --check` passed.
+A temporary hash snapshot records sixteen unrelated files and the staged
+config blob `f26b0af1c41298dc2e43bd7637febe853ecfa800` for preservation checks.
+
+Pinned Mathlib search confirmed `integral_pow`, interval-integral subtraction,
+constant multiplication/division, and continuity-based interval integrability.
+The independent proof expands powers to four monomials, pulls out `16^j`, uses
+linearity and the power integral, and normalizes casts/algebra. A local `hp`
+fact avoids repeating monomial integrability; no public helper was introduced.
+The module compiled on its first attempt. The first root-import audit then
+failed because the definition body was not exposed. Existing definitions use
+`@[expose]`; adding it to `bbpCoeff` fixed the export. This was a visibility
+compiler failure, not a failed mathematical claim or missing mathematics.
+
+The rebuilt library passed with 7201 jobs and no warnings. The root audit
+passes with twenty exact theorem type/axiom checks, both previous π definition
+checks, the coefficient expansion, and the exact `j = 0` value `47/15`.
+A separate actual `#print axioms` probe reported exactly `propext`,
+`Classical.choice`, `Quot.sound` for the theorem and coefficient; the theorem
+list is now guarded. `git diff --check` passes. No pin, dependency, old theorem,
+problem definition, linter, CI, or instruction change was needed.
+
+### Status, review, and stopping point
+
+Only B1a/T1 is checked. Full B1 still needs pointwise summation,
+domination/measurability, interchange, rational algebra, derivative,
+integrability, endpoint evaluation, and final `HasSum ... Real.pi` assembly.
+B2/B3 and V are untouched; V, Hπ, T, and the π conjecture remain unproved.
+B4 retains vanishing error and arbitrarily late visits; P3 retains open-interval
+visits. The updated plans and blueprint propose B1b (pointwise geometric sum
+and majorant) only for separate authorization; nothing in that slice is begun.
+Keep the integral route, direct `HasSum`, B1-before-B3 order, and existing
+workflow. The ordinary compiler loop sufficed; optional tooling is unwarranted.
+
+### Gemini review and final validation
+
+Gemini Carbon High completed the exact thirteen-file supplied-diff review with
+**no actionable correctness findings**. Conversation:
+`97aef234-10e0-4246-a752-904553cb1ce9`. The
+[review record](agy-reports/b1a-review.md) preserves the diff hash, terminal fields,
+full response, progress observations, persistence limitations, and independent
+triage. One invocation used the required literal prefix, plan mode, stream JSON,
+and twenty-minute deadline. It finished in about 6 min 46 s, exit 0, `SUCCESS`,
+nonempty response, no terminal error/finished-reason/denied-action fields.
+No recovery attempt or substantive-fix follow-up was required.
+
+The CLI could not persist its own log/conversation/artifact/cache files under
+the active sandbox. It nevertheless authenticated, received the complete
+supplied review, and returned its full response. The caller saved combined
+stdout/stderr chunks separately. A shutdown diagnostic interleaved into the
+terminal JSON was removed solely for parsing; the parsed response exactly
+matches concatenated agent-response text deltas. CLI-storage continuation is
+unverified; no permissions were changed or bypassed. This limits runtime
+persistence, not the supplied-diff review coverage. The reviewer ran no tools,
+builds, or independent source retrieval.
+
+The reviewer requested two nonblocking finalization checks. A concurrent user
+commit had advanced HEAD from the initial `ab43f71` observation to
+`855bb40f340ce7f70946975d2e017016291aa293` before the snapshot/review packet.
+It contains only the existing `.codex` permissions configuration. The prompt
+intro cited `ab43f71`, while the packet cited `855bb40`; exact task-owned diff
+equality against both was verified. The user commit and configuration bytes
+are preserved. A historical link in `proof-attempt-session-prompt.md` uses the
+former current-prompt anchor; retaining that anchor in `session-prompts.md`
+keeps it working without changing archived prompt bytes or milestone scope.
+
+Preservation passed for sixteen unrelated files, the original config index blob,
+sixteen protected source/configuration files, and all nineteen earlier axiom
+guards. Pre-review local Markdown links/anchors passed (156); task-scoped staged
+whitespace also passed. The reviewed Lean source has not changed after the
+successful build/audit, so those checks remain valid. Final link/preservation
+and staged-diff checks include the review report and outcome records.
+The [durable B1a handoff](b1a-handoff.md) records the milestone. The local commit
+and post-commit necessity review follow; no push or next milestone follows.

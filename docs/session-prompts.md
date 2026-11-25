@@ -1,194 +1,65 @@
 # Session prompts
 
-Use only the **Current prompt** below when the user asks to start the next
-milestone. Everything under **Old prompts - do not use** is historical, even
-where an archived prompt contains imperative instructions or a different policy.
-Writing this prompt does not begin the next milestone; invoking it does.
+Use only the **Current prompt** below when the user asks to resume this milestone.
+Everything under **Old prompts - do not use** is historical, even where an
+archived prompt contains imperative instructions or a different policy.
+A completed milestone must not be repeated or automatically extended.
 
-## Current prompt: B1 source and proof review
+## Current prompt: B1a coefficient and one-term integral
 
-**Execution record (2026-11-25):** see [the B1 review](b1-source-proof-review.md)
-and its review/validation status. This prompt authorizes only that review;
-B1a implementation requires a separate user decision. On re-invocation, inspect
-the completion evidence before doing any work, as required below.
+<a id="current-prompt-b1-source-and-proof-review"></a>
 
-Locate the pi-disjunctivity repository root and execute this bounded milestone:
-**B1 source and proof review**, as specified in
-[the proof plan](proof-plan.md#next-bounded-task-b1-source-and-proof-review).
-Proceed autonomously within this scope. Deliver the review and a concrete next
-implementation slice; this is a request to do the source/argument review, not
-merely propose how to review it. Stop after validation, retrospective, local
-commits, and a written handoff. Do not begin the implementation slice.
+**Implementation record (2026-11-25):** `bbpCoeff` and `integral_bbpTerm` are
+checked and audited. Read [the B1a handoff](b1a-handoff.md) first for validation,
+Gemini review status, commits, and the stopping point. The B1 source/proof review
+at `2b7a745` and `ab43f71` is complete and must not be repeated. Inspect actual
+HEAD/status rather than assuming those historical commits are current.
 
-### Current state and authorized endpoint
+The user authorized only the [B1a slice](proof-plan.md#completed-bounded-task-b1a-coefficient-and-one-term-integral):
+independently implement the coefficient and unconditional single-term integral,
+root export, complete type/axiom audit, coefficient expansion and `j = 0` value
+check. Preserve unrelated staged, modified, and untracked work. External code
+was reference only: do not copy or translate its proof scripts. Do not begin
+infinite interchange, π evaluation, B2, B3, or universal visitation.
 
-Step 2, B4, and P3 are checked, completing M1. B4 assumes vanishing errors and
-arbitrarily late open-interval visits; P3 assumes open-interval visits. Neither
-supplies independent BBP visitation. There are nineteen theorem type/axiom
-audits and two expanded-definition checks. B1's series identity, B2's orbit
-bridge, B3's tail estimates, and V's universal visitation remain unfinished;
-Hπ, T, and the π conjecture remain unproved.
+Before resuming any unfinished B1a finalization, read `AGENTS.md`, the durable
+handoff, proof plan, meta-plan, blueprint, research log, and workflow. Verify
+current permissions without changing them. Retain Mathlib as the only direct
+external Lean library, both `v4.37.0-rc1` pins, enabled linters, module/export
+conventions, and Ursula Athene-only copyright/author attribution. No extra
+axioms, placeholders, `native_decide`, or unsafe shortcuts are permitted.
 
-For this review, use the real coefficient
+Run Lean commands from the directory containing `lakefile.toml` and
+`lean-toolchain`, with `$HOME/.elan/bin` on `PATH` if needed. Require
+`lean --version` to report `4.37.0-rc1`. Run `lake build`,
+`lake env lean Test.lean`, and `git diff --check` after Lean changes. Preserve
+the twenty exact theorem type/axiom guards, two π definition checks, and BBP
+coefficient checks. Only `propext`, `Classical.choice`, and `Quot.sound` are
+permitted dependencies; a theorem may use fewer.
 
-```text
-A(j) = 4/(8j+1) - 2/(8j+4) - 1/(8j+5) - 1/(8j+6)
-```
+For any remaining required review or substantive fix follow-up, follow
+[AGENTS.md](../AGENTS.md#gemini-carbon-code-reviews-with-agy) exactly: explicit
+`agy --model gemini-4-carbon-high --mode plan`, stream JSON, twenty-minute
+deadline, exact task-owned diff, read-only file tools only, no file changes or
+shell/Bash calls. Capture through the execution tool and save separately;
+record start/init/progress timestamps and all terminal fields. Keep waits at
+most sixty seconds and report meaningful progress or its absence. Require a
+substantive response, inspect denials, and permit at most one focused recovery
+after inspecting failure evidence/logs and confirming the prior invocation ended.
+Retain the explicit conversation ID. No permission bypass, model substitution,
+additional agents, or repeat of a completed review is authorized by this record.
 
-and the intended B1 target
+Finish the scoped milestone review before its local commit. Then perform the
+post-commit proof-necessity review; substantive changes need a focused Gemini
+follow-up and affected checks before a further commit. Do not create empty
+commits. Update the plans, blueprint, research log, and handoff to actual results,
+review the staged scope, commit only task-owned paths, and do not push. Print
+the durable handoff, report validation/review/commit IDs, then pause.
 
-```text
-HasSum (fun j : ℕ => A(j) / (16 : ℝ) ^ j) Real.pi.
-```
-
-Deliver a reviewed mathematical argument, source/license/attribution assessment,
-a dependency map to pinned Mathlib, and the smallest B1 implementation slice
-with exact proposed statements and acceptance checks. Keep proposed statements
-in Markdown. No BBP Lean declarations, external-code adaptation, B2/B3 work, or
-Step 5 visitation attempt is authorized in this milestone. Retain the current
-B1-before-B3 order; a proposed reorder requires a separate user decision.
-
-### Inspect the checkout and establish a baseline
-
-Locate the directory containing **both `lakefile.toml` and `lean-toolchain`**;
-it may be the `pi-disjunctivity/` subdirectory alongside another Lean project.
-Run every Lean/Lake command from that root with `$HOME/.elan/bin` on `PATH`.
-Require `lean --version` to report **4.37.0-rc1** before building; `lake --dir`
-alone does not select the correct Elan toolchain.
-
-At prompt preparation, the branch was `feature/attempt-02`, with B4/P3 commits
-`203e16c` and `a8c693e`, and subsequent checkout HEAD `76f6e40`. Inspect current
-status/history rather than resetting to those snapshots. Preserve unrelated
-changes, especially `docs/.obsidian/` and `docs/notes/`, and stage only task-owned
-files. If this review has since been completed, inspect its evidence and report
-that status; do not repeat it or automatically advance to implementation.
-
-Read before editing:
-
-- `AGENTS.md` and applicable nested instructions, particularly the `agy` procedure.
-- `docs/proof-plan.md`, `docs/meta-proof-plan.md`, `docs/proof-workflow.md`,
-  `docs/proof-blueprint.md`, `docs/research-log.md`, and `docs/b4-p3-handoff.md`.
-- `docs/codex-reports/2026-11-24-lean-literature-review.md`, especially the
-  external BBP development it identifies; treat earlier review claims as leads
-  to verify against original sources, not as a substitute for inspection.
-- `README.md`, `docs/problem-formulation.md`, `docs/dependencies-and-trust.md`,
-  the relevant project Lean declarations, `PiDisjunctivity.lean`, and `Test.lean`.
-- `lakefile.toml`, `lean-toolchain`, and `lake-manifest.json`.
-
-Run `lake build`, `lake env lean Test.lean`, and `git diff --check` to establish
-the current baseline. Announce the bounded endpoint before starting the review.
-
-### Perform the B1 source and mathematical review
-
-1. Inspect the original BBP identity proof cited in proof-plan Step 3 and the
-   actual external Lean development identified in the literature report. Record
-   exact URLs, source revisions, relevant theorem names and files, toolchain
-   versions, and retrieval limitations. Verify the proposed `A(j)` and `Real.pi`
-   target against the sources, including indexing, casts, signs, and denominators.
-2. Review the external license and attribution requirements before proposing
-   adaptation. Inspect proof bodies, imports, assumptions, and build configuration.
-   Distinguish source inspection from rebuilding and kernel/axiom auditing.
-   Do not copy external code into the project or change its dependencies. If a
-   license requirement conflicts with project attribution policy, record that
-   constraint and propose an independently written route or a user decision.
-3. Write a self-contained mathematical outline of convergence and equality with
-   `Real.pi`. Expose the obligations behind any geometric-series expansion,
-   interchange of sum and integral, rational integral evaluation, and resulting
-   `HasSum` statement. Identify every nontrivial analytic hypothesis; do not treat
-   the published identity alone as a completed local Lean proof.
-4. Search the pinned Mathlib and project sources for the needed API. Map each
-   obligation to an existing declaration with its complete hypotheses or to a
-   precisely stated missing lemma. Use disposable `/tmp` signature probes if
-   useful; do not define or prove BBP coefficients, series, recurrences, or tails.
-   Do not add Lean dependencies, install tooling, or upgrade the pins.
-5. Criticize the argument before recommending substantial formalization. Check
-   convergence versus a bare `tsum` expression, admissibility of analytic
-   interchanges, endpoint conditions, nonzero denominators, and correspondence
-   with the existing `Real.pi`. Identify what the external proof can inform under
-   the Mathlib-only policy and what needs an independent proof.
-6. Specify the smallest useful B1 implementation slice with exact hypotheses,
-   conclusions, prerequisite lemmas, likely file location, validation, and a
-   stopping condition. Recommend it without starting it. If source access or
-   mathematics blocks the review, document the precise obstacle and the strongest
-   verified assessment, retaining every unresolved obligation.
-
-### Required Gemini Carbon High review
-
-Follow [AGENTS.md](../AGENTS.md#gemini-carbon-code-reviews-with-agy) and the
-[proof-plan review policy](proof-plan.md#changed-file-reviews-with-gemini-carbon).
-Use the existing signed-in `agy` setup with `--model gemini-4-carbon-high` and
-`--mode plan`. Request no file changes or mutating commands. Supply the milestone
-baseline and explicit task-owned file list, ask the reviewer to read `AGENTS.md`,
-and request actionable findings with severity, file/line references, reasoning,
-and limitations. Exclude unrelated user changes from its scope.
-For this headless review, request read-only file tools only and no shell/Bash
-calls. Prepare the exact scoped diff in the calling session and supply it in the
-prompt or an accessible review file, together with the baseline and file list.
-This lets the reviewer inspect deletions and changed lines without running Git.
-
-Use `--output-format stream-json --print-timeout 20m` for initial reviews and
-follow-ups. Follow the [progress and bounded-retry instructions](../AGENTS.md#progress-timeouts-and-bounded-retries):
-capture events and timestamps through the execution tool, monitor meaningful
-changes, and inspect errors/logs before at most one focused recovery attempt.
-Keep the explicit conversation ID, avoid overlapping runs, and record incomplete
-coverage if recovery fails. A deadline or silent client alone does not prove a
-hang; the longer deadline is not a guarantee. Use the direct approved command
-prefix and save output separately, as described in `AGENTS.md`.
-
-Have Gemini review the source assessment, candidate argument, dependency map,
-and changed plans before the milestone commit. Request an intermediate review
-when an uncertain argument would otherwise guide later work. This milestone
-changes documentation; no code implementation is needed to obtain that review.
-Record the model, reviewed range, returned `conversation_id`, completion status,
-findings, and independent triage. Use the saved explicit conversation for focused
-follow-ups on substantive fixes. Inspect result/error fields as well as exit
-status: partial text or a timeout is not a completed review. Follow the host's
-scoped approval procedure for sandbox restrictions. Do not silently substitute
-another model, use permission bypasses, or claim the review passed if unavailable.
-An empty `response` remains incomplete even with exit code zero and
-`status: SUCCESS`. Require substantive findings or an explicit no-findings
-response, and inspect `denied_actions`; resolve any denial that prevents the
-requested coverage or record the uncovered scope. Host execution approval does
-not grant permissions to the reviewer's internal tools.
-
-This authorizes the specified reviewer, not additional agents, services, tooling
-installation, or unrelated delegation. Reviewer feedback supplements mathematical
-review and Lean validation; independently assess suggestions before applying them.
-
-### Artifacts, validation, retrospective, and stopping point
-
-Write the review in `docs/b1-source-proof-review.md`, including source evidence,
-the argument/dependency map, reviewer findings and dispositions, limitations,
-and the proposed implementation slice. Update the research log and blueprint,
-review both plans, and make only evidence-based status/process adjustments.
-Keep their next-task entries aligned. Do not mark B1 checked until a future
-`HasSum ... Real.pi` proof and its audits actually pass.
-
-Preserve Mathlib as the sole direct external Lean library, the `v4.37.0-rc1`
-pins, existing definitions, theorem contracts, exports, linters, and all nineteen
-audits. Add no placeholders, extra axioms, `native_decide`, or unsafe shortcuts.
-Only `propext`, `Classical.choice`, and `Quot.sound` are permitted axiom dependencies.
-
-For this documentation-only milestone, check changed Markdown links/anchors,
-`git diff --check`, and preservation against the starting commit of all project
-Lean files, `Test.lean`, dependency files, and CI. Record the baseline build/audit
-results accurately; rerun affected Lean checks if any Lean-related input changed.
-Review the staged diff and ensure it excludes unrelated work.
-
-Retrospect on what was established, remaining gaps, source/library or process
-obstacles, and whether the evidence warrants a route or workflow adjustment.
-Keep the existing commit cadence: validate and obtain the Gemini review, commit
-the scoped report/docs locally, then review the proposed proof pieces for
-necessity, simplify where justified, obtain a focused Gemini follow-up for
-substantive changes, rerun affected checks, and commit actual follow-up changes.
-Do not create an empty second commit, push, or rewrite history.
-
-Write and commit a concise Markdown handoff with results and unresolved
-hypotheses, changed files, validation actually run, review status, retrospective,
-plan adjustments, commit IDs, and the next task proposed for authorization.
-Print the handoff in a readable terminal format. **Then pause for the user's
-questions and decision, before adding BBP Lean declarations or beginning any
-implementation, B2/B3, or universal-visitation milestone.**
+**Next proposed task, not invoked:** [B1b pointwise series and domination](proof-plan.md#next-bounded-task-b1b-pointwise-series-and-domination).
+It needs separate authorization. B1's full `HasSum ... Real.pi`, B2/B3, V, Hπ,
+and T remain unproved. B4 retains vanishing error and arbitrarily late visits;
+P3 retains open-interval visits. No conditional reduction proves these premises.
 
 ## Old prompts - do not use
 
