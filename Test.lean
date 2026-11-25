@@ -180,6 +180,28 @@ example :
         (4 - 2 * x ^ 3 - x ^ 4 - x ^ 5) / (1 - x ^ 8 / 16)) :=
   PiDisjunctivity.hasSum_bbpCoeff_integral
 
+-- Rational algebra and the ordinary derivative retain the entire closed unit interval.
+example (x : ℝ) (hx : x ∈ Set.Icc (0 : ℝ) 1) :
+    (4 - 2 * x ^ 3 - x ^ 4 - x ^ 5) / (1 - x ^ 8 / 16) =
+      (-4 * x) / (2 - x ^ 2) - 4 * (x - 2) / (x ^ 2 - 2 * x + 2) :=
+  PiDisjunctivity.bbpKernel_eq_partialFractions x hx
+
+example (x : ℝ) (hx : x ∈ Set.Icc (0 : ℝ) 1) :
+    HasDerivAt (fun y : ℝ =>
+      2 * Real.log (2 - y ^ 2) - 2 * Real.log (y ^ 2 - 2 * y + 2)
+        + 4 * Real.arctan (y - 1))
+      ((4 - 2 * x ^ 3 - x ^ 4 - x ^ 5) / (1 - x ^ 8 / 16)) x :=
+  PiDisjunctivity.hasDerivAt_bbpPrimitive x hx
+
+-- Integral evaluation and the complete BBP series have no unproved analytic hypotheses.
+example :
+    (∫ x in (0 : ℝ)..1,
+      (4 - 2 * x ^ 3 - x ^ 4 - x ^ 5) / (1 - x ^ 8 / 16)) = Real.pi :=
+  PiDisjunctivity.integral_bbpKernel
+
+example : HasSum (fun j : ℕ => PiDisjunctivity.bbpCoeff j / (16 : ℝ) ^ j) Real.pi :=
+  PiDisjunctivity.hasSum_bbpCoeff
+
 /--
 info: 'PiDisjunctivity.blockValue_eq_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
 -/
@@ -329,3 +351,31 @@ info: 'PiDisjunctivity.hasSum_bbpCoeff_integral' depends on axioms:
 -/
 #guard_msgs (whitespace := lax) in
 #print axioms PiDisjunctivity.hasSum_bbpCoeff_integral
+
+/--
+info: 'PiDisjunctivity.bbpKernel_eq_partialFractions' depends on axioms:
+[propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms PiDisjunctivity.bbpKernel_eq_partialFractions
+
+/--
+info: 'PiDisjunctivity.hasDerivAt_bbpPrimitive' depends on axioms:
+[propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms PiDisjunctivity.hasDerivAt_bbpPrimitive
+
+/--
+info: 'PiDisjunctivity.integral_bbpKernel' depends on axioms:
+[propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms PiDisjunctivity.integral_bbpKernel
+
+/--
+info: 'PiDisjunctivity.hasSum_bbpCoeff' depends on axioms:
+[propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms PiDisjunctivity.hasSum_bbpCoeff

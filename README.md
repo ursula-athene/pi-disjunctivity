@@ -82,8 +82,11 @@ Mathlib API. The subsequent [B1a milestone](docs/b1a-handoff.md) independently
 checks `bbpCoeff` and `integral_bbpTerm`. [B1b](docs/b1b-handoff.md) adds
 `hasSum_bbpTerm` and `norm_bbpTerm_le` on `[0,1]`. [B1c](docs/b1c-handoff.md)
 adds `hasSum_bbpCoeff_integral`, the unconditional bridge to the unevaluated
-rational integral. The full B1 identity remains unproved. Rational kernel
-decomposition is the next proposed slice, subject to separate authorization.
+rational integral. The [B1 completion](docs/b1-handoff.md) proves partial
+fractions, the primitive derivative, and the integral value, then establishes
+`hasSum_bbpCoeff`: the full unconditional BBP series converges to `Real.pi`.
+B2/B3 and universal visitation remain unproved. The finite-prefix/tail split
+is the next proposed slice, subject to separate authorization.
 
 The digit and disjunctivity definitions remain parameterized by the base. The
 word value, orbit, and conjecture definitions use base 16. Reconstruction examples
@@ -91,7 +94,8 @@ cover bases 2, 10, and 16. The default build checks the definitions, all three
 foundational steps, both formulation equivalences, termination, infinite
 reconstruction, recurrence, the interval-hitting equivalence, conditional π
 reduction, general transfer and cell conversion, the BBP term integral,
-pointwise summation and domination, sum/integral interchange, and examples. The review distinguishes
+pointwise summation and domination, sum/integral interchange, rational integral
+evaluation, the full BBP series identity, and examples. The review distinguishes
 these results from the mathematical comparison with the intended problem.
 
 ## Installation
@@ -163,7 +167,7 @@ lake env lean Test.lean
 
 This check preserves the thirteen milestone C theorem-type audits and adds
 infinite reconstruction, recurrence, the two interval-pilot results, B4/P3,
-the B1a term integral, both B1b results, and the B1c bridge, for twenty-three
+all eight BBP results through the full series identity, for twenty-seven
 reviewed theorems. It uses
 `#guard_msgs` to verify each theorem's exact axiom list: `propext`, `Classical.choice`, and
 `Quot.sound`. An unexpected axiom such as `sorryAx` makes the check fail. CI runs
@@ -208,7 +212,7 @@ axiom lists, dependency inspection, validation results, and remaining limitation
   the external review, proof methods, validation, and current audit coverage.
 - [docs/formulation-review.md](docs/formulation-review.md): the completed milestone C
   review, with requirements mapped to definitions, universal proofs, and examples.
-- [docs/session-prompts.md](docs/session-prompts.md): the pause after B1c and
+- [docs/session-prompts.md](docs/session-prompts.md): the pause after B1 and
   next-task proposal, followed by completed prompts marked
   "Old prompts - do not use".
 - [docs/dependencies-and-trust.md](docs/dependencies-and-trust.md): the Mathlib-only
@@ -252,9 +256,9 @@ axiom lists, dependency inspection, validation results, and remaining limitation
   explicit interval-hitting equivalence, conditional π reduction, interior-margin
   transfer, and open-interval-to-cell conversion.
 - [PiDisjunctivity/BBP/Series.lean](PiDisjunctivity/BBP/Series.lean): the BBP
-  coefficient, single-term integral, pointwise series, domination, and interchange;
-  no π series theorem yet.
-- [Test.lean](Test.lean): twenty-three theorem statements with guarded axiom checks,
+  coefficient, term integral, pointwise series/domination, interchange, rational
+  decomposition, primitive derivative, integral evaluation, and full BBP series for π.
+- [Test.lean](Test.lean): twenty-seven theorem statements with guarded axiom checks,
   two direct conjecture-definition checks, coefficient expansion/value checks,
   and B1b endpoint/zero-index checks.
 

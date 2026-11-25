@@ -49,12 +49,15 @@ general interval-hitting equivalence and a conditional π reduction; B4/P3 add
 general interior-margin transfer and open-interval-to-cell conversion, bringing
 the subtotal to nineteen. B1a adds the unconditional BBP term integral and
 B1b adds pointwise summation and domination; B1c adds the unconditional
-coefficient-series/integral bridge, for twenty-three through the root library import. It guards their `#print axioms` results and also checks both named π definitions against their
+coefficient-series/integral bridge. B1 completion adds rational decomposition,
+the primitive derivative, integral evaluation, and the full BBP series, for
+twenty-seven through the root library import. It guards their `#print axioms`
+results and also checks both named π definitions against their
 expanded statements, as well as the BBP coefficient expansion and zero-index
 value, and the B1b endpoints and zero index. The
 [consolidated review](formulation-review.md#axiom-audit) records the original lists;
 the [follow-up review](review-follow-up.md) records its two additions, and the
-[research log](research-log.md) records the interval-pilot, B4/P3, B1a, B1b, and B1c additions.
+[research log](research-log.md) records the interval-pilot, B4/P3, and all B1 additions.
 Every audited theorem currently reports exactly these three axioms:
 
 | Axiom | Meaning |

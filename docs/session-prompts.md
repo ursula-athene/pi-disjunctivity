@@ -6,18 +6,24 @@ even where an archived prompt contains imperative instructions or a different
 policy. A completed milestone must not be repeated or automatically extended.
 Saving this prompt does not begin the milestone; invoking it does.
 
-## Current prompt: paused after B1c
+## Current prompt: paused after B1
 
-B1c implementation is checked. Read [the B1c handoff](b1c-handoff.md) for the
-actual validation, required review, local commit, and necessity-review status.
-Do not repeat the completed proof or automatically advance to another milestone.
+The full B1 `HasSum (fun j : ℕ => bbpCoeff j / (16 : ℝ)^j) Real.pi` theorem
+is checked. Read [the B1 handoff](b1-handoff.md) for the actual validation,
+required review, local commit, and necessity-review status. Do not repeat
+completed B1 work or automatically advance to Step 4.
+
+The user explicitly extended the prior B1d proposal to completing B1 in one
+combined cycle. That scope reused the checked B1c bridge and included rational
+decomposition, the primitive derivative, FTC/integral evaluation, and final
+series assembly. The earlier pause-after-B1c restrictions no longer governed
+that authorized completion; archived prompts remain historical.
 
 The next smallest proposed task is
-[B1d rational kernel decomposition](proof-plan.md#next-bounded-task-b1d-rational-kernel-decomposition),
-requiring separate authorization. No antiderivative/FTC, integral evaluation,
-full B1, B2/B3, or universal-visitation work is authorized by this pause record.
-B1, B2/B3, V, Hπ, T, and π disjunctivity remain open; B4 and P3 retain their
-explicit hypotheses.
+[B2a finite-prefix and tail split](proof-plan.md#next-bounded-task-b2a-finite-prefix-and-tail-split),
+requiring separate authorization. B2/B3, V, Hπ, T, and π disjunctivity remain
+open. B4 assumes vanishing errors and arbitrarily late visits; P3 assumes
+open-interval visits. No Step 4 BBP bridge or Step 5 work has begun.
 
 ## Old prompts - do not use
 

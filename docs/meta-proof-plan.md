@@ -12,8 +12,9 @@ without new Lean declarations. The separately authorized B1a cycle subsequently
 checked the coefficient and one-term integral, bringing the theorem audit count
 to twenty. B1b now checks pointwise summation and domination, bringing that
 count to twenty-two. B1c adds the unconditional coefficient-series/integral
-bridge, bringing the total to twenty-three. The stages below remain the
-procedure for future separately scoped work.
+bridge, bringing the subtotal to twenty-three. The combined B1 completion
+adds four more results, for twenty-seven, and completes M2. The stages below
+remain the procedure for future separately scoped work.
 
 **Review-policy update, 2026-11-25:** the user requires Gemini Carbon High
 changed-file reviews through `agy` at milestones and at useful intermediate
@@ -22,25 +23,41 @@ and [AGENTS.md](../AGENTS.md#gemini-carbon-code-reviews-with-agy). This is a new
 user-directed process requirement; it does not retroactively claim an external
 review of the completed B4/P3 cycle.
 
-## B1a/B1b/B1c outcomes and next bounded task
+## B1 completion and next bounded task
 
 The [B1 source and proof assessment](b1-source-proof-review.md) was already
 complete at `2b7a745`/`ab43f71` and was not repeated. The authorized B1a cycle
 independently implemented `bbpCoeff` and the single-term integral. The
 [handoff](b1a-handoff.md) records checked results, review status, and commits.
-B1's full `HasSum` identity, B2/B3, and universal visitation remain unproved;
-B4/P3 retain every hypothesis.
+B1 is now checked by the later completion below. B2/B3 and universal visitation
+remain unproved; B4/P3 retain every hypothesis.
 
 The separately authorized B1b cycle independently proved `hasSum_bbpTerm` and
 `norm_bbpTerm_le`, with root-import type/axiom guards and endpoint/zero-index
 checks. See [the B1b handoff](b1b-handoff.md). The separately authorized B1c
 cycle now proves `hasSum_bbpCoeff_integral`, with all dominated-convergence
 premises discharged locally and a full root-import type/axiom audit. The
-[handoff](b1c-handoff.md) records validation and finalization status. The next
-proposed cycle is [B1d: rational kernel decomposition](proof-plan.md#next-bounded-task-b1d-rational-kernel-decomposition),
-subject to separate authorization. It stops before antiderivative/FTC work or
-integral evaluation. The [session instructions](session-prompts.md) pause after
-B1c; completed prompts remain archival.
+[handoff](b1c-handoff.md) records that milestone. The user's subsequent request
+to complete B1 authorized B1d and the remaining derivative/FTC, evaluation,
+and assembly work together; checked B1c was reused unchanged. Four new results
+finish the full unconditional `HasSum ... Real.pi` theorem. The
+[B1 completion handoff](b1-handoff.md) records validation and finalization.
+The next proposed cycle is [B2a: finite-prefix and tail split](proof-plan.md#next-bounded-task-b2a-finite-prefix-and-tail-split),
+subject to separate authorization. The [session instructions](session-prompts.md)
+pause after B1, before B2/B3 or visitation work.
+
+The completion used the existing pinned logarithm/arctangent derivative and
+FTC APIs. Default `field_simp` normalization left inverses whose rearranged
+denominators were not discharged; local positivity/bounds and a `linarith`
+discharger resolved them. An underconstrained `ContinuousOn.div` application
+caused `fun_prop` to unfold real arithmetic and hit the default heartbeat limit;
+explicitly typed numerator/denominator continuity proofs fixed elaboration
+without raising limits. Function equality was handled by `rfl`, and endpoint
+normalization by `norm_num` and `ring`. These were compiler/tactic issues, not
+missing mathematics or reasons to weaken the target. No external proof script,
+new import, optional tool, primitive definition, or generic analytic API was
+needed. The four public results each have a concrete consumer in the final
+chain. Retain the local feedback loop and existing Gemini/Viewpoint cadence.
 
 B1c's proof compiled on its first module check. The pinned API takes measurable
 terms under restricted volume, but its bound/summability/limit premises are
@@ -48,7 +65,8 @@ almost-everywhere implications under unrestricted volume. Pointwise proofs
 via `ae_of_all` match those signatures directly. Constant-majorant integrability
 needs no explicit evaluation of its sum. The direct `HasSum` route avoided an
 unneeded tail or `tsum` layer; no additional helpers, tools, or process changes
-were justified. All remaining B1 evaluation and visitation obligations stay open.
+were justified. At that milestone B1 evaluation remained open; the later
+completion closes it while visitation obligations remain open.
 
 B1b needed only the pinned geometric-series and order APIs. A broad commutative
 simplification initially failed to match the series target; a targeted `convert`
@@ -77,9 +95,9 @@ needed. This is evidence that the loop sufficed for these two elementary
 lemmas, not a performance comparison or evidence about universal visitation.
 
 Keep the existing workflow and Viewpoint commit/review cadence. No process
-rewrite or B1/B3 reorder is warranted by this cycle. The next task adds a bounded
-source/argument review because B1 needs analytic identities and possible source
-adaptation, unlike B4/P3. See the [research log](research-log.md) for actual checks.
+rewrite or B1/B3 reorder was warranted by that cycle. Its proposed next task
+added a bounded source/argument review because B1 needed analytic identities
+and possible source adaptation, unlike B4/P3. See the [research log](research-log.md) for actual checks.
 
 ## Purpose and scope
 

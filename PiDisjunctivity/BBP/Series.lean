@@ -11,9 +11,9 @@ import Mathlib.MeasureTheory.Integral.DominatedConvergence
 import Mathlib.Tactic
 
 /-!
-The BBP coefficient series sums to an unevaluated rational integral on `[0,1]`.
+The Bailey–Borwein–Plouffe series for π, proved by integrating a geometric series on `[0,1]`.
 The argument and source references are recorded in `docs/b1-source-proof-review.md`.
-This independent proof does not establish the infinite series identity for π.
+These independent proofs establish the series identity, without a disjunctivity assertion.
 -/
 
 public section
@@ -111,5 +111,65 @@ theorem hasSum_bbpCoeff_integral :
     · exact intervalIntegrable_const
     · exact MeasureTheory.ae_of_all _ fun x hx => hasSum_bbpTerm x (hsub hx)
   simpa only [integral_bbpTerm] using hsum
+
+/-- Partial fractions for the BBP rational kernel on the closed unit interval. -/
+theorem bbpKernel_eq_partialFractions (x : ℝ) (hx : x ∈ Set.Icc (0 : ℝ) 1) :
+    (4 - 2 * x ^ 3 - x ^ 4 - x ^ 5) / (1 - x ^ 8 / 16) =
+      (-4 * x) / (2 - x ^ 2) - 4 * (x - 2) / (x ^ 2 - 2 * x + 2) := by
+  have hD : 0 < 2 - x ^ 2 := by
+    linarith [pow_le_one₀ hx.1 hx.2 (n := 2)]
+  have hQ : 0 < x ^ 2 - 2 * x + 2 := by nlinarith [sq_nonneg (x - 1)]
+  have h8 := pow_le_one₀ hx.1 hx.2 (n := 8)
+  field_simp (disch := linarith)
+  ring
+
+/-- The logarithm/arctangent primitive has the BBP kernel as its derivative, including endpoints. -/
+theorem hasDerivAt_bbpPrimitive (x : ℝ) (hx : x ∈ Set.Icc (0 : ℝ) 1) :
+    HasDerivAt (fun y : ℝ =>
+      2 * Real.log (2 - y ^ 2) - 2 * Real.log (y ^ 2 - 2 * y + 2)
+        + 4 * Real.arctan (y - 1))
+      ((4 - 2 * x ^ 3 - x ^ 4 - x ^ 5) / (1 - x ^ 8 / 16)) x := by
+  have hD : 0 < 2 - x ^ 2 := by
+    linarith [pow_le_one₀ hx.1 hx.2 (n := 2)]
+  have hQ : 0 < x ^ 2 - 2 * x + 2 := by nlinarith [sq_nonneg (x - 1)]
+  have hD' : HasDerivAt (fun y : ℝ => 2 - y ^ 2) (-(2 * x)) x := by
+    simpa using (hasDerivAt_pow 2 x).const_sub 2
+  have hQ' : HasDerivAt (fun y : ℝ => y ^ 2 - 2 * y + 2) (2 * x - 2) x := by
+    simpa using ((hasDerivAt_pow 2 x).sub ((hasDerivAt_id x).const_mul 2)).add_const 2
+  have h := ((hD'.log hD.ne').const_mul 2).sub ((hQ'.log hQ.ne').const_mul 2)
+    |>.add (((hasDerivAt_id x).sub_const 1).arctan.const_mul 4)
+  convert h using 1
+  · rfl
+  · dsimp only [id_eq]
+    rw [bbpKernel_eq_partialFractions x hx]
+    have hq : 1 + (x - 1) ^ 2 = x ^ 2 - 2 * x + 2 := by ring
+    rw [hq]
+    ring
+
+/-- The rational integral obtained from the BBP series equals Mathlib's π. -/
+theorem integral_bbpKernel :
+    (∫ x in (0 : ℝ)..1,
+      (4 - 2 * x ^ 3 - x ^ 4 - x ^ 5) / (1 - x ^ 8 / 16)) = Real.pi := by
+  have hcont : ContinuousOn (fun x : ℝ =>
+      (4 - 2 * x ^ 3 - x ^ 4 - x ^ 5) / (1 - x ^ 8 / 16)) (Set.Icc 0 1) := by
+    refine (by fun_prop : Continuous (fun x : ℝ =>
+      4 - 2 * x ^ 3 - x ^ 4 - x ^ 5)).continuousOn.div
+      (by fun_prop : Continuous (fun x : ℝ => 1 - x ^ 8 / 16)).continuousOn ?_
+    intro x hx
+    have := pow_le_one₀ hx.1 hx.2 (n := 8)
+    linarith
+  have hftc := intervalIntegral.integral_eq_sub_of_hasDerivAt
+    (a := (0 : ℝ)) (b := 1)
+    (fun x hx => hasDerivAt_bbpPrimitive x
+      (by simpa only [Set.uIcc_of_le (by norm_num : (0 : ℝ) ≤ 1)] using hx))
+    (hcont.intervalIntegrable_of_Icc (by norm_num))
+  convert hftc using 1
+  norm_num [Real.arctan_neg, Real.arctan_one]
+  ring
+
+/-- The Bailey–Borwein–Plouffe series converges to Mathlib's π. -/
+theorem hasSum_bbpCoeff :
+    HasSum (fun j : ℕ => bbpCoeff j / (16 : ℝ) ^ j) Real.pi := by
+  simpa only [integral_bbpKernel] using hasSum_bbpCoeff_integral
 
 end PiDisjunctivity

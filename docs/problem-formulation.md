@@ -22,9 +22,10 @@ conversion. These general results preserve this reviewed formulation and their
 explicit visitation hypotheses. [The research log](research-log.md) records the
 scope, review, and expanded audit. A later separately authorized B1a cycle
 checked the BBP coefficient and single-term integral; B1b now checks pointwise
-summation and domination. B1c checks sum/integral interchange, with twenty-three
-theorem audits in total; see [the B1c handoff](b1c-handoff.md). The full BBP series and
-universal visitation remain unproved.
+summation and domination. B1c checks sum/integral interchange; the later combined
+B1 completion evaluates the integral and proves the full BBP series identity,
+with twenty-seven theorem audits in total. See [the B1 handoff](b1-handoff.md).
+B2/B3, universal visitation, and π disjunctivity remain unproved.
 
 ## Problem formulation
 
@@ -467,7 +468,8 @@ theorem types and adds the two new theorem types through the library root.
 The later bounded interval pilot adds two more types and the B4/P3 milestone
 adds two, then B1a adds the unconditional BBP single-term integral and B1b
 adds pointwise summation/domination. B1c adds the coefficient-series/integral
-bridge, for twenty-three in total, without changing
+bridge; rational decomposition, the primitive derivative, integral evaluation,
+and the full BBP series add four more, for twenty-seven in total, without changing
 the fifteen formulation/follow-up theorems. B4 assumes
 vanishing errors and arbitrarily late open-interval visits;
 P3 assumes open-interval visits and yields hexadecimal-cell visits. Both are

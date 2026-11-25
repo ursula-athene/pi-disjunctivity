@@ -1021,3 +1021,114 @@ checks. The reviewed proof and audits are unchanged after successful Lean
 validation. Its ID is reported after committing. B1d is proposed only; stop
 before rational kernel algebra, antiderivative/FTC, integral evaluation,
 full B1, B2/B3, or V. All open obligations and conditional premises are retained.
+
+
+## 2026-11-25 — Complete B1 after the checked B1c bridge
+
+### Authorization, endpoint, and actual checkout
+
+The user asked to keep going and complete B1 after discussing B1d and the
+primitive/FTC stages. Interpreted the explicit full-B1 objective as authorization
+for rational decomposition, derivative, integral evaluation, and assembly,
+reusing completed B1c unchanged. Announced that bounded endpoint before editing,
+including exports/audits, validation/review, local commit/necessity review, and
+handoff. Stop before B2/B3 or universal visitation; no archived prompt was invoked.
+
+Starting HEAD was `0584737a5cba74ad4acc1754457c260e2ea468b8` on `feature/attempt-04`.
+Live remote main remained `4eb973b0c3521a962a90f3d0aacafc2a4d5d7d50`, matching
+local main/origin/main and an ancestor of HEAD. Preserved unrelated Obsidian,
+notes, and papers work and saved 25 protected/unrelated file hashes. No branch
+recreation, permission change, dependency change, or history rewrite occurred.
+Read repository instructions, current source/audits, plans/blueprint, prior
+handoff, and assessed argument. The existing workflow/trust policy governs;
+the earlier source review and B1a/B1b/B1c proofs were not repeated.
+
+### Independent proof and compiler feedback
+
+Read actual pinned `HasDerivAt.log`, `HasDerivAt.arctan`, polynomial derivative,
+`ContinuousOn.intervalIntegrable_of_Icc`, and
+`intervalIntegral.integral_eq_sub_of_hasDerivAt` signatures. Existing public
+Mathlib imports already expose these APIs; no new import was necessary.
+
+`bbpKernel_eq_partialFractions` proves T4 on `Icc 0 1`, using local denominator
+bounds and field/ring algebra. `hasDerivAt_bbpPrimitive` proves the ordinary
+derivative, including endpoints, of the assessed logarithm/arctangent primitive.
+`integral_bbpKernel` supplies kernel continuity/integrability, invokes FTC on
+`uIcc 0 1 = Icc 0 1`, and evaluates `F(1)-F(0) = π`. `hasSum_bbpCoeff`
+rewrites the unchanged B1c bridge and proves the full unconditional BBP series.
+No primitive/kernel definition, unused helper API, preliminary tails, extra
+library, external proof translation, or proof bypass was introduced.
+
+Scratch failures were compiler/tactic issues: default field normalization did
+not discharge rearranged denominators; `convert` exposed a function equality;
+an untyped continuity-division application made `fun_prop` unfold reals and
+hit the default heartbeat limit; endpoint normalization left a ring identity.
+Local positivity plus `linarith`, `rfl`, explicitly typed continuity facts,
+and `norm_num`/`ring` resolved them. Linters removed redundant sequencing.
+No statement, limit, or linter setting was weakened.
+
+### Validation, mathematical meaning, and status
+
+Lean reports `4.37.0-rc1`; baseline build/audit passed with 7201 jobs and 23
+existing guards. Production module and integrated `lake build` pass without
+warnings. The actual four new axiom lists were inspected before guarding:
+exactly `propext`, `Classical.choice`, `Quot.sound`. `Test.lean` passes 27 full
+root-import type/axiom audits and all earlier definition/value/boundary checks.
+`git diff --check` passes; pins, manifest, reviewed definitions, root imports,
+source conventions, and CI are unchanged. No clean-environment/remote CI claim.
+
+Separate meaning review confirms real division, natural zero-based series,
+nonzero kernel denominators and positive log arguments on both endpoints,
+ordinary derivatives, volume measure, forward `0..1` orientation, correct FTC
+integrability premises, and exact Mathlib π through `arctan_one`. The final
+`HasSum (fun j : ℕ => bbpCoeff j / (16 : ℝ)^j) Real.pi` has no hypotheses.
+All eight BBP theorems and 27 total audited results are now checked.
+
+Both plans and the blueprint mark Step 3/M2 checked. B2/B3, V, Hπ, T, and π
+disjunctivity remain open; B4 retains vanishing error and arbitrarily late
+visits, and P3 retains open-interval visits. The next proposal is B2a's
+finite-prefix/convergent-tail split, only with separate authorization.
+The [B1 handoff](b1-handoff.md) records precise claims and remaining work.
+Local source search and typed compiler feedback sufficed; retain the planned
+order and Gemini/Viewpoint cadence without optional tooling or a process rewrite.
+
+### Review preparation
+
+The required Gemini review will receive the exact task-owned diff against
+`0584737` inline, avoiding B1c's demonstrated temporary-file permission obstacle.
+Keep the literal approved Carbon High/plan prefix, read-only repository file
+tools, no shell/Bash/modifications, twenty-minute deadline, bounded polling,
+and separately saved execution capture. Final review/commit/necessity outcomes
+are recorded below only when completed.
+
+
+### Gemini review and final validation
+
+Gemini Carbon High returned **explicit no findings** on the exact twelve-file
+B1-completion diff against `0584737`. Conversation:
+`a5edb71a-c1be-402f-b627-8c8e1939edd2`. The [saved review](agy-reports/b1-review.md)
+records the full response, scope/diff hash, progress, terminal fields, capture,
+and limitations. One invocation took 259.935 seconds, exit 0, `SUCCESS`,
+nonempty response, and absent terminal error/finished-reason/denied-action fields.
+No retry or substantive fix/follow-up was needed.
+
+The saved exact prefix rule was rechecked: `decision: allow`. Inline review
+input avoided B1c's temporary-file read permission obstacle without changing
+permissions. The reviewer completed 26 read-only repository-file reads; no
+shell/mutating tool was used. Its review included manifest and CI inspection,
+but actual Lean/axiom/Git/hash checks and the pinned Mathlib source signatures
+remain caller validation. CLI persistence was sandbox-denied while existing
+login and review succeeded. No clean-environment or remote CI claim is made.
+
+All five execution chunks were saved separately, using 50,000 tokens at startup
+and 60,000 per poll; none was truncated. A step-summary display was abbreviated
+after saving the complete capture, and the terminal result was separately read
+in full. The review report normalizes file links and corrects one erroneous
+response-only path; no source change was required.
+
+Pre-review preservation passed for 25 unrelated/protected hashes, all B1a/B1b/B1c
+declarations, all 23 earlier audits and other checks, archived prompt bytes,
+and earlier log entries. Manifest/package revisions and imports/trust checks
+passed. Local Markdown links/anchors passed (192); final records and staging
+receive fresh link/preservation/whitespace checks. The passing Lean source and
+audits remain unchanged. No B2/B3 or visitation proof work was begun.
