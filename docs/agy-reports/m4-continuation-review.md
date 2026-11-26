@@ -348,3 +348,42 @@ delegation. Parent exact checkers passed, including 33,792 rational-grid cases
 and K=1,...,8 finite-jet constructions. The 79-file documentation and both
 whitespace checks passed. Production Lean, audits and pins are unchanged;
 no new build or universal kernel certification is claimed. M4 remains incomplete.
+
+The finite-data checkpoint was committed locally as
+`1dba613b5b9ba39143ca419db59b3a198be3c5a3`. Its final staged diff SHA-256 is
+`c1a5f380315bb955e276c34837937a8e39063f5f6857da2cb4e80d82ba92d234`.
+Final validation and post-commit receipts remain in the packet: exact five
+paths, empty index, protected sources unchanged and unrelated work preserved.
+No unused infrastructure or substantive simplification was found; no push or
+PR occurred. The next residual investigation is outside that reviewed checkpoint.
+
+## Digit-sensitive Pade review
+
+Reviewer `/root/generating_review` completed the four-path review against
+`1dba613b5b9ba39143ca419db59b3a198be3c5a3`, frozen diff SHA-256
+`07c457288607d31609fa85dbf04d59005c1ba06cedba0c52f042323aa20dcff7`.
+Scope: the new Pade assessment, research log, handoff and this record. Packet
+`/tmp/pi-m4-pade-review-20261126/` retains the manifest, exact diff, caller
+receipt and full `review.md`. Both required adversarial guides were applied
+with unchanged hashes above, using the Codex replacement procedure.
+
+**Whole-cycle D/I/Q dispositions:** no defects or additional open questions.
+I1 requested explicit parameter domains in the general residual interface:
+n integer, B positive integer, and q,m,L natural. Applied as requested; the
+actual family already fixed B=1. No recommendation was omitted or deferred.
+Other subsequent edits only record the review outcome.
+
+Coverage included the exact residual identities, modulo-power-of-two
+surjectivity, suffix indexing, height and remainder budgets, elementary
+alpha-cost obstruction, primitive coefficient clearing and its distinction
+from evaluated cancellation, positive determinant, inverse and exact
+interpolation cost. The reviewer inspected the frozen report, full checker
+source, immutable data and caller receipt, and source pp.11-12. All recorded
+hashes matched. These are paper results and finite checks, not Lean proofs.
+
+Review was read-only without execution, builds, probes, mutation, services,
+Carbon or delegation. Exact-checker execution remains caller evidence. The
+80-file documentation and whitespace checks passed before review; production
+Lean, audits and pins are unchanged from the successful baseline. No new
+kernel certification or M4 acceptance is claimed. The fresh signed-remainder
+inquiry remains outside this checkpoint's mathematical scope.

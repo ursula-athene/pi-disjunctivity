@@ -2099,3 +2099,38 @@ reviewed construction. All D/I/Q items are resolved. The source-threshold and
 fixed-multiplier arguments were independently reconstructed with their exact
 limits; no kernel theorem or M4 acceptance is implied. The next Pade test is
 outside that reviewed mathematical scope and continues independently.
+
+**Numerator-sensitive outcome:** an actual degree-two BBP Pade kernel permits
+arbitrary residual residues modulo powers of two and gives a nonzero lower
+bound 16^m/32 for every m-digit suffix omitting F. This is a positive arithmetic
+gain with coupled coefficients. Its selected congruence also forces
+abs(alpha)>=16^m-1, so the symmetric error estimate cannot exploit the gain.
+The exact signed identity remains intact; coefficient clearing, evaluated
+cancellation and primitive residual reduction are kept distinct.
+
+The point-evaluation determinant is strictly positive by the actual BBP moment
+kernel. It shows that every rational approximant can be encoded in this small
+family; an explicit inverse and numerator-independent interpolation height cost
+quantify why mere coefficient existence is insufficient. Exact interpolation
+has zero residual and is expressly excluded as a source witness. Parent
+inspection and the replayable exact checker passed, including 63 prescriptions
+and 54,225 allowed-prefix residue cases. The new
+[assessment](m4-pade-residues.md) passed independent review; no pi digits were
+searched, production theorem added or V proved.
+
+**Fresh recovery, bounded to 30 minutes:** the residual test sharpened the cost
+but has not supplied an actual visit. A fresh-context worker has the exact
+target and failed-route map and is attempting one positive intermediate lemma
+using unused exact pi/BBP structure. It must name a concrete consumer, retain
+all hypotheses and distinguish any arithmetic gain from a renamed density
+assumption. This is a deliberate reset under the meta-plan, alongside review
+of the completed residual test. The finite-data checkpoint is committed locally
+as `1dba613b5b9ba39143ca419db59b3a198be3c5a3`, with post-commit scope and
+protected-source checks passed. No Carbon, push or PR occurred.
+
+**Pade review outcome:** no blocking defect or additional open question was
+found. I1 requested explicit integer and positivity domains for the general
+residual interface; these are now stated. The actual family already fixed B=1.
+Both adversarial guides were applied, with the full response and exact scope
+retained. The signed-remainder recovery remains separate ongoing research;
+review of a diagnostic is not acceptance of M4.

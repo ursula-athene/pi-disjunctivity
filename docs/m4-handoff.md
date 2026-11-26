@@ -7,7 +7,7 @@ The [continued research checkpoint](#continued-research-checkpoint--2026-11-26)
 records subsequent work during the user's absence; that checkpoint does not
 terminate the ongoing M4 effort.
 The latest dated continuation is the
-[finite-data assessment](#finite-data-assessment--2026-11-26); read the
+[Pade residual assessment](#pade-residual-assessment--2026-11-26); read the
 research log and actual checkout for subsequent results and current state.
 
 ## Baseline and authorized endpoint
@@ -345,3 +345,20 @@ can use forbidden-word transitions, with coefficient height and analytic error
 both accounted for. Read the subsequent log before repeating completed source,
 period or tail-jet tests. This is ongoing discovery under the unchanged M4
 acceptance boundary, with no Carbon, push or PR.
+
+## Pade residual assessment — 2026-11-26
+
+The finite-data checkpoint is committed locally as `1dba613`; its five-path
+scope, empty index and unchanged protected sources were verified after commit.
+The [Pade assessment](m4-pade-residues.md) now supplies an actual digit-sensitive
+residual gain and quantifies why its chosen symmetric consumer fails. It also
+proves the exact point-evaluation freedom and its height cost, keeping zero
+interpolation residuals separate from valid nonzero witnesses. Parent exact
+checks passed; independent changed-file review is complete, with its parameter
+domain clarification applied. V remains open.
+
+Evaluated cancellation and signed remainder dependence remain possible
+questions, without an established estimate. A fresh-context recovery pass is
+attempting a positive lemma using exact structure beyond the failed-route map;
+its bound and precise output belong in the research log. Completing these
+internal diagnostics does not end M4 or authorize M5 assembly.
