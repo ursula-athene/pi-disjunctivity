@@ -31,11 +31,11 @@ and hypotheses, and the [research log](docs/research-log.md) for dated evidence
 and handoffs. The [formulation review](docs/formulation-review.md) and
 [follow-up](docs/review-follow-up.md) record the semantic review of the problem.
 
-Next session: <!-- current-prompt --> [Current prompt](docs/session-prompts.md#current-prompt-b2-improvement-plan)
-tracks the [process/tool improvement plan](docs/b2-process-tool-improvement-plan.md)
-before B3. See the [implementation handoff](docs/b2-improvements-handoff.md) for
-acceptance and deferred host activation; do not repeat completed work.
-B2 proof development is out of scope.
+Next session: <!-- current-prompt --> [Current prompt: B3 tail control](docs/session-prompts.md#current-prompt-b3-tail-control)
+prepares the coefficient bound, tail bound and decay to zero, using the installed
+Lean tools and skills. B3 starts only when invoked; visitation remains out of scope.
+The [tooling handoff](docs/b2-improvements-handoff.md) records the completed
+improvement milestone and its limits; do not repeat completed B1/B2 or tooling work.
 Read [AGENTS.md](AGENTS.md) and the
 [workflow](docs/proof-workflow.md) before implementation.
 
