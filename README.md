@@ -14,6 +14,8 @@ extracting hexadecimal digits of π. The
 [problem formulation](docs/problem-formulation.md) explains this motivation,
 links to the BBP paper, and specifies the mathematical statement.
 
+Wikipedia article on general sequences: [Disjunctive sequence](https://en.wikipedia.org/wiki/Disjunctive_sequence)
+
 ## Scope and current status
 
 The formulation and its digit/interval/orbit equivalences are verified. The
