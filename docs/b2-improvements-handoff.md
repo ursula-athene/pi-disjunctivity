@@ -109,3 +109,33 @@ unnecessary implementation was found, so no additional proof/tool review was
 needed. The `b4d51ce` follow-up changed factual acceptance/necessity receipts only.
 Its receipt doc/whitespace checks passed before that separate commit.
 Unrelated Obsidian, notes, and papers remain preserved.
+
+### Installation follow-up acceptance and necessity
+
+Implementation commit `da18ff2637ae0c4d89e271028a33c6da31621c1c` contains exactly
+the ten task-owned installation, test and evidence files. It was pushed to the
+same feature branch; `git ls-remote` verified that exact remote revision. No PR
+was opened. This later receipt is documentation only; inspect Git for its commit
+and the current remote state.
+
+Final checks passed with exit 0: `lake build` (7203 jobs), `lake env lean Test.lean`,
+38 offline tests, the 59-file documentation check, and working/staged whitespace
+checks. The revised preflight matched all four installed skill trees and passed
+all five module/protocol functions. The isolated installation passed again with
+its generated wrapper empty. The 100 non-task files in the 104-file baseline
+hash inventory, including protected source/pins, user configuration and unrelated
+work, matched; temporary root probes were removed. Raw final receipts are in
+`/tmp/pi-b2-native-check/`, with the usual temporary-retention limit.
+
+Post-commit caller inspection found no unnecessary implementation or further
+fix: the installer owns setup/preservation, the smoke helper is the repeatable
+functional check, and the adaptation helper plus constraints reproduce the
+evaluated packages. Tests cover observed failure modes and preservation rules;
+the installation guide owns commands/rollback, while existing evaluation,
+review, handoff and log records keep their distinct roles. No parallel status
+ledger or production Lean change was introduced.
+
+The milestone and requested installer follow-up are complete within the user's
+explicit review boundary above, with pending module-command migration and
+lifecycle/transfer checks carried forward rather than claimed as passes. Stop
+here; B3 and visitation research require separate authorization.
