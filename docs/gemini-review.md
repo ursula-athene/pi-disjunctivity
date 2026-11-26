@@ -1,5 +1,30 @@
 # Gemini Carbon code reviews with `agy`
 
+## Current user-directed reviewer replacement
+
+On 2026-11-26 the user explicitly stopped Carbon reviews and requested a Codex
+subagent instead, while continuing M4. This override governs ongoing M4 and
+its persistence correction until the user changes it. Do not launch or resume
+Carbon. References to Carbon in the plan/current prompt now mean the replacement
+reviewer for this work; the Carbon CLI/model/capture recipes below are dormant.
+
+Use a separate subagent with the exact task-owned diff, baseline/hash, applicable
+guides, relevant context, intended claims and caller receipts. Require the same
+adversarial assessment, separate D/I/Q categories, evidence limits, per-item
+dispositions and focused follow-up for substantive fixes. The reviewer must not
+edit files, mutate Git, run builds/probes, install tools, contact services or
+delegate. It may inspect files and diffs through read-only tool calls, including
+read-only shell commands; the caller runs requested checks. Record the agent
+identity, exact scope, full returned review, actual completion and limitations
+in the existing review evidence. Subagent agreement is not proof or a measured
+review-quality gain. An incomplete review still blocks acceptance; use at most
+one focused recovery for a failed review, with no Carbon fallback.
+
+This user-directed substitution overrides the Carbon-only requirement below;
+it preserves the subject guides, review standards and trust policy. Historical
+Carbon receipts remain evidence of their actual outcomes, not authorization
+to restart that service.
+
 Use Gemini Carbon on **High effort** for the milestone and intermediate reviews
 required by [the proof plan](proof-plan.md#changed-file-reviews-with-gemini-carbon),
 through the Google Antigravity CLI (`agy`). Select it explicitly with

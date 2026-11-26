@@ -1,5 +1,9 @@
 # M4 universal visitation handoff — 2026-11-26
 
+This records the initial attempt. Its stopping/restart proposals were superseded
+by the [persistence follow-up](#persistence-follow-up--2026-11-26) below; its
+mathematical results and validation receipts remain historical evidence.
+
 ## Baseline and authorized endpoint
 
 Started at `b7c3bca2af60c2ea8d2a8bf06c086709a79fd15f` on
@@ -133,3 +137,25 @@ Read the [current entry](proof-attempt-session-prompt.md),
 [proof plan](proof-plan.md), [blueprint](proof-blueprint.md) and
 [research log](research-log.md), then verify the actual checkout. The current
 prompt remains M4 with this restart pointer; M5 has not begun.
+
+## Persistence follow-up — 2026-11-26
+
+The user reaffirmed continued M4 work and requested durable instructions against
+premature stopping. The earlier decision to end after agent-selected cycle
+bounds was not forced by permissions or an observed execution limit. It fell
+short of that persistence instruction. The negative mathematical results stand;
+they do not exhaust the authorized research.
+
+The [current prompt](session-prompts.md#current-prompt-m4-universal-visitation)
+and [persistence protocol](meta-proof-plan.md#persistence-and-stopping-conditions)
+now require another bounded investigation or discovery cycle after an
+unsuccessful route. A new estimate is something to seek, not a prerequisite
+for resuming. At a real interruption, preserve the next investigable question
+and actual stopping cause. M4 acceptance, theorem contracts, indices, trust
+rules, tool retry limits and M5 exclusion are unchanged.
+
+This process correction starts at `b20e1b34f08e73ce16389637ebcf52700b8f452a` on
+`feature/m4-universal-visitation`, with unrelated Obsidian/notes/papers preserved.
+The [process retrospective](retrospectives/retrospective-2026-11-26-m4-persistence.md)
+records the lesson; the [review report](agy-reports/m4-persistence-review.md)
+owns correction-scope validation and review receipts. No new V proof is claimed.

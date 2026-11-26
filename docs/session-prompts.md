@@ -13,8 +13,9 @@ Saving this prompt does not begin the milestone; invoking it does.
 before another cycle. The bounded source audit, three avoidance candidates and
 two recovery candidates did not supply the BBP-specific exclusion of an infinite
 proper limit set. Generic expansion/decay, irrationality, complexity and residue
-reformulations must not be repeated as if untested. A restart needs a concrete
-new estimate or source connection that survives the recorded countermodels.
+reformulations must not be repeated as if untested. Continue by investigating
+structure those methods did not exploit; discovering a new estimate or source
+connection is part of the authorized work, not a prerequisite for restarting.
 No unconditional V theorem, V audit or M5 assembly exists from that invocation.
 
 Work in `/Users/adam/personal/proj/pi-disjunctivity/pi-disjunctivity`.
@@ -32,13 +33,27 @@ Saving this prompt does not invoke it or begin research.
 
 M4 is open research: no complete visitation argument is supplied. Aim to prove
 the exact unconditional statement below; do not promise that an argument must
-exist within a session. If bounded research and recovery leave no justified
-next step, deliver the precise obstruction and checked partial results, clearly
-marking **M4 incomplete**. A conditional reduction, a tool trial or a research
-handoff alone does not complete M4.
+exist within a session. Keep **M4 incomplete** until that statement and its
+acceptance checks are complete. A conditional reduction, a tool trial, a
+reviewed obstruction or a research handoff alone does not complete M4 and is
+not a reason to end an otherwise authorized research effort.
 
 This is known to be a hard unsolved problem. Be persistent in solving it and
 do not give up.
+
+Apply the [persistence protocol](meta-proof-plan.md#persistence-and-stopping-conditions):
+bound individual investigations, reassess their outcomes, and continue with a
+changed question or method. Do not convert an agent-chosen cycle limit into a
+limit on the milestone. If no candidate survives, generate new questions and
+test them; do not wait for the user to supply a breakthrough or renew permission.
+Actual interruptions follow that protocol and leave an honest continuation
+record. Persistence never relaxes proof standards or the scope exclusions below.
+
+**Reviewer override (2026-11-26):** the user stopped Carbon and directed use of
+Codex subagents for reviews. Follow the
+[replacement-review procedure](gemini-review.md#current-user-directed-reviewer-replacement)
+where this prompt names Carbon; do not invoke Carbon unless the user changes
+that instruction. Review gates and adversarial guides remain required.
 
 B1–B3 and the general B4/P3 lemmas are already checked. Do not repeat them or
 the tooling milestone. Final export/assembly of `PiHexadecimalDisjunctivity`
@@ -131,11 +146,15 @@ ideas into explicit claims and small discriminating checks. Record failures so
 fresh contexts and workers do not repeat them. Distinguish mathematical gaps
 from library, compiler and environment failures.
 
-Continue useful in-scope cycles while evidence supports a next step; do not
-silently extend a bound or retry indefinitely without new evidence. If bounded
-recovery is exhausted with no justified next step, suspend that route and hand
-back the exact obstruction, attempts, strongest checked result and evidence
-needed to reopen it. Do not weaken V or label the milestone complete.
+At each bound, record the exact obstruction, attempts and strongest checked
+result, then choose the next in-scope investigation. If recovery produces no
+candidate, change the discovery question: inspect unused BBP structure, a
+countermodel's missing hypothesis, or a neighbouring method's failed bridge.
+Explain what the next check could teach without pretending it is likely to
+succeed. Suspend exhausted routes and avoid unchanged retries, but continue
+the milestone under the persistence protocol. Do not weaken V or label the
+milestone complete. A documented failure informs the next cycle; it is not a
+substitute for doing it.
 
 This invocation permits bounded subagent work when useful for M4 searches,
 alternative arguments, source connections, proof candidates and diagnosis.
@@ -183,12 +202,14 @@ silence alone. A prior request to self-review documentation preparation does
 not waive these M4 reviews. Stop acceptance on any required failure or incomplete
 review; substantive fixes need focused follow-up and affected checks.
 
-### 5. Finalize and stop at the M4 boundary
+### 5. Accept M4 or preserve an interrupted continuation
 
 Mark V/M4 complete only after the exact unconditional theorem, its dependencies,
 integration checks and reviews pass. Keep Hπ/T/final-conjecture export status
-honest: the remaining M5 assembly is not automatically executed here. On an
-obstruction, mark V/M4 open or blocked and retain every unproved premise.
+honest: the remaining M5 assembly is not automatically executed here. While an
+obstruction remains, keep V/M4 open and retain every unproved premise. Reserve
+an external-blocker report for the persistence protocol's actual stop conditions;
+missing mathematics alone calls for continued discovery.
 
 Update the proof plan, blueprint and research log to the actual result. Save
 a dated M4 retrospective under `docs/retrospectives/` and a concise M4 handoff
@@ -196,16 +217,23 @@ using the template. Record arguments tried, failures, remaining obligations,
 review dispositions, validation and the next justified decision. Keep any
 `PROGRESS.md` to evidence pointers; after compaction read those records and the
 actual target before continuing. On incomplete work, keep the current entry
-pointing to the precise M4 restart obligation; on acceptance, archive this prompt
+pointing to the precise M4 continuation question; on acceptance, archive this prompt
 and record the stopping boundary without automatically starting M5.
 
 Commit only task-owned, validated and reviewed work locally, including any
-clearly labelled partial result if blocked. Run Git mutations as standalone
+clearly labelled partial results at useful checkpoints. Such a commit or handoff
+does not end the ongoing research. At an actual interruption that prevents
+review/validation, preserve uncommitted continuation notes under the
+[workflow's memory rules](proof-workflow.md#records-and-project-memory), report
+their unreviewed state, and resume checks before committing. Do not stop research
+early merely to finalize a partial handoff. Run Git mutations as standalone
 execution calls. Inspect the committed result for necessity and duplication;
 validate/review substantive simplifications before a further commit, without
 creating an empty follow-up. Report exact completed results, all remaining
 hypotheses, review/check limitations, commit IDs and publication state. Print
-the handoff in terminal-readable form, then stop before M5 or unrelated work.
+the handoff in terminal-readable form at acceptance or an actual interruption.
+Stop at accepted M4 before M5 or unrelated work; otherwise continue M4 whenever
+the persistence protocol permits work.
 
 ## Old prompts - do not use
 

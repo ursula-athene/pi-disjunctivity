@@ -14,7 +14,7 @@ Next session: <!-- current-prompt --> [Current prompt: M4 Universal Visitation](
 defines the full Step 5 research and acceptance scope, authorized when invoked.
 Saving it starts no research. B1–B3 and the [tooling milestone](b2-improvements-handoff.md)
 are complete; [the B3 handoff](b3-handoff.md) records acceptance/publication.
-The [M4 handoff](m4-handoff.md) records the incomplete research attempt and restart obligation.
+The [M4 handoff](m4-handoff.md) records the initial attempt's evidence and follow-up continuation.
 Universal visitation remains open, and B4/P3 retain their hypotheses.
 
 The goal is to prove `PiDisjunctivity.PiHexadecimalDisjunctivity`: every finite
@@ -557,10 +557,12 @@ visitation argument was found. The [argument assessment](m4-visitation-obstructi
 records exact countermodels and source/recovery gaps; the
 [handoff](m4-handoff.md) owns validation and review evidence.
 
-### M4 research sequence — 2026-11-26
+<a id="m4-research-sequence--2026-11-26"></a>
+
+### Initial M4 research sequence — 2026-11-26 snapshot
 
 The current prompt was invoked at `b7c3bca` on
-`feature/attempt-09-b4`; work continues on `feature/m4-universal-visitation`.
+`feature/attempt-09-b4`; the initial attempt used `feature/m4-universal-visitation`.
 The exact acceptance contract is
 
 ```text
@@ -569,8 +571,9 @@ The exact acceptance contract is
 ```
 
 Keep the fixed initialization, every real interval (including endpoints 0 and
-1), every natural threshold, and the recurrence/orbit offset. Before substantial
-formalization, execute these bounded cycles, reassessing at each endpoint:
+1), every natural threshold, and the recurrence/orbit offset. The initial
+attempt selected the following finite sequence. Its numerical quotas describe
+that attempt, not the continuing authorization or the acceptance contract:
 
 1. **Source and dichotomy audit:** at most two primary source assessments and
    two targeted discovery passes. Extract the precise weak-dichotomy premise,
@@ -596,18 +599,38 @@ formalization, execute these bounded cycles, reassessing at each endpoint:
 
 The invoked scope includes local commits and post-commit necessity inspection;
 it excludes M5 export/assembly, push, PR, dependency/tool/permission changes,
-and unrelated files. A reviewed obstruction is an authorized stopping outcome,
-not acceptance of M4. The existing B4 interface audit still assumes V.
+and unrelated files. The initial attempt treated a reviewed obstruction as a
+stopping outcome, not acceptance of M4. The persistence correction below
+supersedes that stopping decision. The existing B4 interface audit still assumes V.
 
 **Cycle outcome:** the source audit, three avoidance candidates and two recovery
 candidates reached the same missing BBP-specific implication. Positive rational
 forcing with the BBP leading asymptotic can avoid intervals; generic irrationality,
 complexity and approximation arguments do not repair the gap. Modular residue
-coverage remains a reformulation without a new estimate. Suspend these tested
-generic routes. Reopen with an explicit BBP-specific exclusion of permanent
-avoidance (or a proved weak dichotomy), tested against the recorded models;
-no justified new estimate emerged within this cycle. The source finite-limit
-argument and its translation are not new exported Lean theorems.
+coverage remains a reformulation without a new estimate. These tested generic
+routes were suspended; no justified new estimate emerged within this cycle.
+The source finite-limit argument and its translation are not new exported Lean
+theorems.
+
+### M4 continuation after the persistence correction — 2026-11-26
+
+The user reaffirmed sustained M4 research and requested durable instructions
+against premature stopping. Follow the
+[persistence protocol](meta-proof-plan.md#persistence-and-stopping-conditions)
+and current prompt. The initial quotas are exhausted experiments, not an
+exhausted milestone. Keep their valid negative results and generate materially
+different questions within the same exact V contract. Discovering a BBP-specific
+estimate is authorized work; it need not be available before continuing.
+
+Before each new cycle, record in the research log its question, unused structure
+or unresolved bridge, evidence sought and finite reassessment point; revise this
+plan when the route or contract changes. Test candidates against
+the recorded countermodels; criticize the central argument before downstream
+formalization. If none survives, change the discovery question and continue.
+Only the exact unconditional theorem, root export, guarded audits, B2/B3/B4
+integration and mandated checks/reviews accept M4. An obstruction review or
+partial-result commit is an internal checkpoint. Actual interruptions preserve
+the next inquiry and leave V/M4 incomplete; M5 remains outside this scope.
 
 For the recurrence defined in Step 4, seek a proof of
 
@@ -652,9 +675,11 @@ pi as a dense-orbit point. In particular, excluding finite limit sets does not
 exclude infinite proper limit sets without an additional theorem. The decay
 `A(n) -> 0` alone also supplies no density conclusion.
 
-**Deliverable:** an unconditional proof of the visitation statement, or a
-precise record of the remaining unproved lemma. This is the decisive research
-milestone; no completion date or guaranteed method follows from the plan.
+**Deliverable:** an unconditional proof of the visitation statement through the
+M4 acceptance checks. At an actual interruption under the persistence protocol,
+retain an incomplete checkpoint with the remaining unproved obligation and
+next inquiry; that record does not complete M4 or authorize stopping early.
+No completion date or guaranteed method follows from the plan.
 
 ## 6. Assemble the proof of the original conjecture
 

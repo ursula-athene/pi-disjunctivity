@@ -1596,3 +1596,37 @@ Post-commit necessity inspection found no substantive simplification or unused
 proof API. The handoff records the separate factual receipt commit by lookup
 command. No push, PR, production Lean change or M5 work occurred. M4 remains
 incomplete; the reviewed obstruction is not acceptance of V.
+
+## 2026-11-26 — M4 persistence instruction correction
+
+The user reaffirmed sustained work and requested durable instructions against
+premature stopping. The initial attempt's small, agent-chosen research bounds
+were incorrectly treated as an endpoint despite the instruction to persevere.
+Its countermodels and source gaps remain valid; no external execution limit
+forced the decision to finalize.
+
+The [persistence protocol](meta-proof-plan.md#persistence-and-stopping-conditions)
+now separates local experiment bounds from continued milestone authorization.
+AGENTS, workflow, the current prompt, proof plan and restart pointers require a
+changed inquiry after failure and allow discovery before a new estimate exists.
+Historical snapshots remain identified as such; current instructions supersede
+their stopping proposals. Trust, review/retry rules, exact V, M5 exclusion and
+external resource/permission limits remain intact. No mathematical progress or
+behavioral effectiveness is claimed for these instruction edits.
+
+The [follow-up handoff](m4-handoff.md#persistence-follow-up--2026-11-26),
+[retrospective](retrospectives/retrospective-2026-11-26-m4-persistence.md) and
+[review report](agy-reports/m4-persistence-review.md) own the correction and its
+acceptance evidence. Process tests (38), documentation (70 files), and whitespace
+checks passed; the final subagent review completed without defects, additional
+improvements or acceptance-blocking questions. Initial Carbon recommendations
+and their dispositions are retained in the report; its interrupted follow-up
+is not treated as a completed review.
+
+While the focused Carbon follow-up was running, the user directed an immediate
+stop, replacement by a Codex subagent reviewer, and continued proof research
+during their absence. The invocation was interrupted (exit 1); its partial
+response is not accepted as a completed review. The current override in AGENTS,
+the review procedure and M4 prompt preserves review gates and forbids further
+Carbon calls unless the user changes that instruction. The subagent review
+covered the final sixteen-file correction; M4 research remains authorized.

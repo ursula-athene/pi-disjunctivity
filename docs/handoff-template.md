@@ -48,8 +48,12 @@ handoff describes its checkout at that time, not a future authorization.
   "not measured" with evidence links. Do not invent historical measurements.
 - State what the cycle changed about the next decision: continue, narrow,
   revise or suspend the proposed route/process, why, and the next bounded test.
+  If interrupted before acceptance, state the actual interruption reason and
+  next investigable question; it may be a discovery task without a proof idea.
+  Distinguish suspension of one route from the still-authorized objective.
   Use the [meta-plan](meta-proof-plan.md#review-the-plan-at-each-bounded-endpoint)
-  to evaluate the evidence; a proposed next test is not authorization to run it.
+  to evaluate the evidence. Continue tests within the invoked milestone without
+  renewed permission; a proposal outside that scope is not authorization.
 - Link [the current session entry point](proof-attempt-session-prompt.md),
   [proof plan](proof-plan.md), [blueprint](proof-blueprint.md), and supporting
   evidence. Verify checkout state before resuming; do not copy a mutable next

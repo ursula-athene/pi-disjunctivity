@@ -10,6 +10,51 @@ linked handoffs, rather than accumulating execution history here.
 Next session: <!-- current-prompt --> [Current prompt](session-prompts.md#current-prompt-m4-universal-visitation).
 A proposed next task becomes work only when authorized.
 
+## Persistence and stopping conditions
+
+Within an invoked research milestone, keep pursuing its objective through
+unsuccessful approaches. A finite bound chosen by the agent controls one
+experiment or cycle; reaching it requires reassessment and selection of the
+next cycle, not renewed user authorization or a final incomplete answer.
+User-imposed budgets and tool/host limits remain binding. Never silently prolong
+the same uninformative experiment: record its outcome, change the question,
+method or evidence sought, and state the next bound.
+
+When no promising candidate is available, make discovery the next task. Ask
+what structure the failed methods ignored, what a countermodel fails to retain,
+or which smaller claim would distinguish two mechanisms. A justified research
+question needs a connection to the target and a way to learn; it need not come
+with a plausible proof already in hand. Use the recovery protocol below to
+generate such questions. Keep conjectures explicit and retain informative
+failures. There is no fixed quota of failed candidates that exhausts a milestone.
+
+When proposing a BBP-specific invariant, identify which relevant recorded
+countermodel lacks it, or make testing that distinction the next inquiry. If
+consecutive cycles reach the same unsupported implication without new learning,
+change the source of ideas: use a bounded fresh-context critique/ideation pass
+when delegation is already authorized and available, supplying the exact target
+and compact failure record. Otherwise reconstruct the argument from those facts
+in a separate backward or model-problem pass. Do not count renamed claims as
+new approaches. Keep refinements to this protocol here and link from other records.
+
+Suspend a route when evidence warrants it; do not equate that with abandoning
+the objective. A stop is appropriate at the accepted endpoint, an explicit user
+pause/stop or scope change, an applicable user/host resource limit, or a genuine
+external blocker after useful authorized alternatives are exhausted. Difficulty,
+an open lemma, or the agent's inability to think of a next step is a discovery
+problem, not an external blocker. Tool failures still obey their own bounded
+recovery rules. An incomplete required review stops acceptance; continue useful
+independent work if available without bypassing that review.
+
+For an actual interruption, record its cause and a concrete continuation
+question in the existing log/handoff, even if the next task is exploratory.
+Do not present the interruption as completion or demand a new estimate before
+research can resume. On continuation, restore the unchanged contract, failed
+approaches and pending question before choosing the next bounded investigation.
+Progress reports explain learning and the next inquiry; they are not substitutes
+for that inquiry. This policy grants no new scope, tools, spend or permissions,
+and makes no claim that more effort must solve the problem.
+
 ## Review the plan at each bounded endpoint
 
 1. **Choose the uncertainty that matters.** Work backward from the target and
@@ -87,7 +132,8 @@ failures suggest a stall, state with evidence: **What did we learn? What changed
 What could the next attempt resolve?** Compare with the preceding attempts.
 If the answers remain unchanged and no justified next step emerges, record
 mathematical stuckness and activate the recovery protocol below. Reaching the
-effort bound requires reassessment; it does not authorize extending the bound.
+effort bound requires reassessment; use the persistence protocol to select a
+new bounded cycle within existing authorization, respecting external limits.
 A bounded failure records the limits of the present attempt; it does not
 establish impossibility.
 
@@ -134,11 +180,14 @@ These are discovery heuristics, not a recipe guaranteeing a breakthrough.
    it must receive the failed approaches so it does not repeat them. If outside
    expertise would help, prepare a precise question and minimal example for the
    user; contacting people or launching extra agents needs authorization.
-6. **Keep learning or change course.** At the bound, retain a checked lemma,
-   counterexample, precise source bridge, or sharper obstruction. Otherwise
-   suspend the approach and state what new evidence would justify reopening it.
-   Switch to another useful authorized subproblem or hand back a bounded next
-   proposal. Do not manufacture activity or silently weaken the target.
+6. **Keep learning or change course.** At the bound, retain any checked lemma,
+   counterexample, precise source bridge, or sharper obstruction; report an
+   inconclusive outcome honestly. Suspend an unproductive approach and identify
+   what would distinguish a useful revision from repeating it. Continue with
+   another authorized subproblem or a discovery cycle using steps 1–3. Do not
+   require that a new estimate already exist before searching for one. Only
+   end the effort under the stopping conditions above; do not manufacture
+   activity or silently weaken the target.
 
 The model/counterexample approach follows [Tao's research advice](https://terrytao.wordpress.com/career-advice/be-sceptical-of-your-own-work/)
 and [controlled extensions of known methods](https://terrytao.wordpress.com/career-advice/continually-aim-just-beyond-your-current-range/).

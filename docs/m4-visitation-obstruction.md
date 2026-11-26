@@ -1,5 +1,12 @@
 # M4 visitation argument assessment — 2026-11-26
 
+This is the initial attempt's mathematical evidence. Its historical reopening
+condition does not govern continued authorization: the current
+[persistence protocol](meta-proof-plan.md#persistence-and-stopping-conditions)
+supersedes that stopping proposal. Seeking a new BBP-specific estimate is part
+of continued discovery, not a prerequisite for it. The arguments below and
+their unproved obligations are unchanged.
+
 **V remains open.** This is a mathematical assessment, not a visitation proof.
 The [proof plan](proof-plan.md#m4-research-sequence--2026-11-26) owns the exact
 contract and research bounds. The central question is whether the particular

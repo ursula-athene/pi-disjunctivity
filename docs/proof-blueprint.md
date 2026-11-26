@@ -125,6 +125,8 @@ B3 supplies only the former for the BBP tail. P3 retains open-interval visits.
 Next session: <!-- current-prompt --> [Current prompt: M4 Universal Visitation](session-prompts.md#current-prompt-m4-universal-visitation)
 remains the research entry point. Its 2026-11-26 invocation ended with M4
 incomplete; [the handoff](m4-handoff.md) and argument assessment record the
-tested routes and precise reopening condition. A checked countermodel of a
+tested routes. Their historical stopping proposals are superseded by the current
+[persistence protocol](meta-proof-plan.md#persistence-and-stopping-conditions);
+discovery does not require a new estimate before resuming. A checked countermodel of a
 different recurrence rejects a generic implication, not V. The tooling
 milestone is complete with its existing limits.

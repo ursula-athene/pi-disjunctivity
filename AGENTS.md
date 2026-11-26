@@ -73,6 +73,30 @@ Save retrospectives in `docs/retrospectives/` using the filename pattern
 `retrospective-YYYY-MM-DD-<milestone>.md`, for example
 `retrospective-2026-11-25-b1.md`.
 
+### Persistence within an authorized milestone
+
+Treat research-cycle bounds as reassessment checkpoints, not permission to end
+the authorized milestone. A failed candidate, exhausted self-selected search
+quota, or lack of an immediate proof idea calls for a changed question and
+another bounded investigation. Generating and testing new ideas is authorized
+research; do not require a breakthrough before resuming. Suspend refuted or
+unproductive routes while continuing to pursue the unchanged objective.
+Follow the [persistence protocol](docs/meta-proof-plan.md#persistence-and-stopping-conditions).
+
+Keep working without repeated permission requests within the authorized scope.
+End research only at the accepted endpoint, an explicit user pause/stop or scope
+change, an applicable user/host resource limit, or a genuine external blocker
+that leaves no useful authorized independent work. Mathematical difficulty is
+not such an external blocker. Respect tool-specific retry limits and all trust,
+review, permission and scope rules; persistence does not override them.
+
+At a real interruption, save the exact obstruction, failed approaches and next
+investigable question in the existing log/handoff. State the actual reason work
+ended and leave the milestone incomplete. On continuation, read those records
+and resume the authorized work; a handoff or reviewed obstruction is not an
+acceptance result. Do not manufacture activity, repeat failed searches unchanged,
+weaken the theorem, or promise that persistence guarantees a proof.
+
 ## Authorized milestones and acceptance
 
 Complete the entire authorized milestone through internal checkpoints, including
@@ -93,6 +117,7 @@ instantiate the theorem they claim to exercise, rather than simplify away the
 contract. Follow the [implementation sequence](docs/proof-workflow.md#minimal-working-feedback-loop).
 
 Stop finalization when any required check fails or a required review is incomplete.
+This stops acceptance, not useful independent work within the authorized scope.
 Inspect actual exit codes and check newly added/staged files before committing.
 Report completed milestone/substeps, remaining obligations and hypotheses, and
 publication state: local commits, pushed commits, or a verified PR, as applicable.
@@ -102,6 +127,14 @@ and [handoff template](docs/handoff-template.md). Verify volatile state from the
 checkout; memory is not a second status store.
 
 ## Gemini Carbon code reviews with `agy`
+
+**Current user override (2026-11-26): do not use Carbon for reviews.** Use a
+separate Codex subagent under the
+[replacement-review procedure](docs/gemini-review.md#current-user-directed-reviewer-replacement)
+for ongoing M4 work, including the persistence correction. Preserve exact scope,
+applicable adversarial guides, read-only review, evidence limits and D/I/Q
+dispositions. Carbon-specific commands below remain dormant unless the user
+reauthorizes Carbon; this changes the reviewer, not the required review gates.
 
 The full [Gemini review procedure](docs/gemini-review.md) is **mandatory** for
 milestone and intermediate reviews required by

@@ -63,6 +63,23 @@ milestones explicitly say that theorem contracts and indices are unchanged.
 Keep any prompt-required `PROGRESS.md` to a short pointer to those records.
 Do not copy their inventories, review findings or acceptance receipts into it.
 
+Before a context handoff or actual interruption, record the exact open target,
+the latest learning, failed approaches with reasons, the next investigable
+question and its proposed bounded check, and any pending tool/review handle.
+State why work is interrupted; an exhausted agent-chosen cycle is a checkpoint,
+not a session stopping condition. After compaction or resumption, read these
+pointers and the live checkout, then continue the already authorized objective.
+Do not treat a status question, correction or process improvement as cancellation
+unless the user says so. Historical stopping proposals yield to current user
+instructions and the [persistence protocol](meta-proof-plan.md#persistence-and-stopping-conditions).
+
+Keep lightweight continuation notes during the work. If a real interruption or
+exhausted review recovery prevents validation/review, leave those notes
+uncommitted in the working tree and report their unreviewed state; resume the
+required checks before committing. A desire to finalize a clean partial handoff
+is not itself a reason to terminate research early. This permits preserving
+work, not accepting or committing unreviewed results.
+
 ## Read and coordinate by dependency
 
 Locate relevant headings with `rg` before reading long documents. Read bounded
@@ -266,13 +283,15 @@ criticism or contracts, never proof certificates or independent review.
 | Failure class | Required response |
 | --- | --- |
 | False statement or counterexample | Record the witness and revise the proposed route; preserve reviewed definitions and theorem contracts. |
-| Missing mathematics | Name the exact unproved implication and its hypotheses. Stop that route within the agreed bound; tactics cannot supply a missing argument. |
+| Missing mathematics | Name the exact unproved implication and its hypotheses. Reassess that route at its bound, then pursue another bounded investigation under the persistence protocol; tactics cannot supply a missing argument. |
 | Missing library infrastructure | Record the searches and smallest supporting lemma needed before implementing a larger API. |
 | Syntax, elaboration, type, or tactic error | Inspect the compiler's actual context, check local signatures and imports, and make a focused repair. |
 | Resource or environment limit | Record the failing command and limit; do not classify it as mathematical evidence. |
 
-Repetition without new evidence calls for a recorded obstruction and handoff,
-not indefinite retries. Unproved claims stay in Markdown, never as Lean axioms
+Repetition without new evidence calls for a recorded obstruction and a change
+of approach within the authorized milestone. Use a handoff when actually
+interrupted; do not end research merely because a cycle was unsuccessful.
+Unproved claims stay in Markdown, never as Lean axioms
 or placeholder proofs. Almost-everywhere density, finite digit checks, BBP
 extraction, and shrinking errors cannot be promoted to π-specific visitation.
 Conditional claims keep their hypotheses in the graph.
