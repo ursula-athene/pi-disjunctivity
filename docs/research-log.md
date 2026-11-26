@@ -1509,3 +1509,17 @@ sources, review refinements and their limits.
 The user also requested TRIZ and possible differentiated subagent/Carbon roles;
 these are included as a bounded heuristic adaptation, not a proof mechanism or
 authorization to start a research campaign.
+
+## 2026-11-26 — Define and recognize mathematical stuckness
+
+At the user's request, added the [definition and checkpoint rule](meta-proof-plan.md#recognizing-stuckness)
+from the discussion, with observable signs, the distinction from slow progress
+and tooling failures, and consistent parent/worker handoff requirements.
+Baseline: `352eb674d04ee7c6c7586d7e8b598ffe4ff9db1c` on `feature/attempt-08-b3`.
+The user explicitly requested self-review instead of Carbon for this change.
+Self-review checked repeated unsupported steps, useful negative results and
+environment failures against the rule; effort bounds remain binding, with no
+fixed failure quota or inference of impossibility. All 38 offline process tests,
+the 64-file documentation check and whitespace checks passed using the documented
+`uv --no-cache run --locked --offline` prefix. No Lean files, mathematical
+contracts or open hypotheses changed; no research milestone was started.

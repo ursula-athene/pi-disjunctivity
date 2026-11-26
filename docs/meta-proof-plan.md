@@ -24,8 +24,9 @@ A proposed next task becomes work only when authorized.
    Use a small interface probe when the uncertainty is whether results compose.
 3. **Monitor the actual obstacle.** During work, classify failures and record
    evidence that changes the assessment. If retries yield no new information,
-   stop that attempt and identify the obstruction. Keep compiler repairs
-   separate from discoveries; a failed search is not a counterexample.
+   apply the [stuckness checkpoint](#recognizing-stuckness) and identify the
+   obstruction. Keep compiler repairs separate from discoveries; a failed
+   search is not a counterexample.
 4. **Evaluate at checkpoints and completion.** Compare the result with the
    endpoint, including unsuccessful attempts and review findings. Ask whether
    the proof frontier moved, the next step became feasible, or a route was
@@ -61,9 +62,43 @@ no new visitation argument and starts no such cycle.
 
 ## When mathematical progress stalls
 
-Use this protocol when the obstacle is missing mathematics and further attempts
-produce no new evidence. Compiler/environment failures use the workflow's repair
-loop. These are discovery heuristics, not a recipe guaranteeing a breakthrough.
+### Recognizing stuckness
+
+**Stuck:** We cannot identify a justified next step, and bounded exploration is
+no longer changing our understanding of the mathematical obstruction.
+
+Use these observable signs as heuristics, not a fixed failure quota:
+
+- Different attempts repeatedly reach the same unproved implication.
+- Changes are mostly notation, tactics or reformulation, without a new
+  mathematical mechanism or insight into why the method fails.
+- We cannot explain what the next experiment would distinguish or teach us.
+- The agreed effort bound expires without a useful lemma, counterexample,
+  source connection or sharper obstruction.
+
+**Slow progress is not necessarily stuckness.** Eliminating a plausible
+approach, exposing an essential hypothesis or explaining a failure can be
+valuable progress even when no theorem has been proved. A failed library search
+alone does not establish a mathematical gap; library, compiler and environment
+obstacles use the workflow's corresponding repair loop.
+
+**Checkpoint rule:** At each research checkpoint, and sooner when repeated
+failures suggest a stall, state with evidence: **What did we learn? What changed?
+What could the next attempt resolve?** Compare with the preceding attempts.
+If the answers remain unchanged and no justified next step emerges, record
+mathematical stuckness and activate the recovery protocol below. Reaching the
+effort bound requires reassessment; it does not authorize extending the bound.
+A bounded failure records the limits of the present attempt; it does not
+establish impossibility.
+
+The parent and any delegated agents use this same rule. Carry the latest
+checkpoint answers, failed approaches and exact obstruction into handoffs, so
+a fresh agent can recognize the stall without repeating it. Keep this evidence
+in the existing research log/handoff rather than a separate status ledger.
+
+### Recovery protocol
+
+These are discovery heuristics, not a recipe guaranteeing a breakthrough.
 
 1. **Expose the obstruction.** In the existing research log, state the smallest
    missing lemma, its consumer, established facts, and failed approaches with
