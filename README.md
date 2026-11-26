@@ -33,7 +33,9 @@ and handoffs. The [formulation review](docs/formulation-review.md) and
 
 Next session: <!-- current-prompt --> [Current prompt: M4 Universal Visitation](docs/session-prompts.md#current-prompt-m4-universal-visitation)
 defines the next research milestone. Invoking it authorizes M4; saving it does
-not begin research. B3 is accepted and universal visitation remains open.
+not begin research. The [M4 handoff](docs/m4-handoff.md) records an incomplete
+bounded research attempt and the precise restart obligation. B3 is accepted;
+universal visitation remains open.
 The [tooling handoff](docs/b2-improvements-handoff.md) retains its tool limits.
 Read [AGENTS.md](AGENTS.md) and the [workflow](docs/proof-workflow.md).
 

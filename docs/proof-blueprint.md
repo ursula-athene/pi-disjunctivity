@@ -1,6 +1,6 @@
 # Proof dependency and status index
 
-Updated 2026-11-25 with the checked B3 coefficient/tail bounds and decay. This indexes
+Updated 2026-11-26 with the incomplete M4 research outcome; B3 remains checked. This indexes
 [proof-plan.md](proof-plan.md), the sole mathematical roadmap. Validation and
 review evidence are in [research-log.md](research-log.md). All Lean names below
 are in namespace `PiDisjunctivity` and exported by the library root.
@@ -86,7 +86,7 @@ the roadmap's `r ≥ 1` sum to start at zero. The exported `hasSum_bbpTail` supp
 | B3: tail control | For all `j,n : ℕ`, `abs(A(j)) ≤ 8/(8*j+1)` and `abs(R_n) ≤ 8/(15*(8*n+9))`; consequently `R_n → 0` as `n → ∞`. | `abs_bbpCoeff_le`, `abs_bbpTail_le`, `tendsto_bbpTail` in [Tail.lean](../PiDisjunctivity/BBP/Tail.lean); positive denominator comparison, local geometric `HasSum`, B2 `hasSum_bbpTail`, norm comparison and squeeze. Full root types/guards and boundary/B4 interface audits; [handoff](b3-handoff.md). | **Checked, unconditional.** Supplies vanishing error, gives no visits. |
 | B4: general transfer | For `u r : ℕ → ℝ`, assume `Filter.Tendsto r Filter.atTop (nhds 0)` and `∀ a b : ℝ, 0 ≤ a → a < b → b ≤ 1 → ∀ N : ℕ, ∃ n ≥ N, u n ∈ Set.Ioo a b`. Then `∀ a b : ℝ, 0 ≤ a → a < b → b ≤ 1 → ∃ n : ℕ, Int.fract (u n + r n) ∈ Set.Ioo a b`. | `hitsOpenIntervals_fract_add_of_tendsto_zero` in [OrbitCriteria.lean](../PiDisjunctivity/OrbitCriteria.lean); `Metric.tendsto_atTop`, quarter-width margin, `Int.fract_eq_self`. Root-exported; complete type/axiom guards in `Test.lean`. | **Checked, conditional.** No global range hypothesis; signed errors and targets touching 0 or 1 included. Late visitation and vanishing error remain premises of the general theorem; B3 discharges only the latter for `bbpTail`. |
 | P3: open intervals to cells | For `t : ℕ → ℝ`, assume `∀ a b : ℝ, 0 ≤ a → a < b → b ≤ 1 → ∃ n : ℕ, t n ∈ Set.Ioo a b`. Then `∀ k m : ℕ, m < 16 ^ k → ∃ n : ℕ, t n ∈ Set.Ico ((m : ℝ) / (16 : ℝ) ^ k) (((m : ℝ) + 1) / (16 : ℝ) ^ k)`. | `hitsHexadecimalIntervals_of_hitsOpenIntervals` in the same module; positive cell width, natural-to-real endpoint bounds, weakening the strict lower inequality. Root-exported; complete type/axiom guards. | **Checked, conditional.** Independent of B4 and BBP, with no range hypothesis. Includes `k = 0`, the first cell, and the last cell. Open-interval visitation remains a premise. |
-| V: universal visitation | For the fixed recurrence above, `∀ a b : ℝ, 0 ≤ a → a < b → b ≤ 1 → ∀ N : ℕ, ∃ n ≥ N, a < y_(n+1) ∧ y_(n+1) < b`. | Particular BBP coefficients, initialization, and indexing; [Step 5](proof-plan.md#5-prove-the-missing-universal-visitation-theorem) contains possible approaches, no complete proof. | **Open mathematical gap.** Supplies visits; neither B1 nor B3 discharges it. |
+| V: universal visitation | For the fixed recurrence above, `∀ a b : ℝ, 0 ≤ a → a < b → b ≤ 1 → ∀ N : ℕ, ∃ n ≥ N, a < y_(n+1) ∧ y_(n+1) < b`. | Particular BBP coefficients, initialization, and indexing; [Step 5](proof-plan.md#5-prove-the-missing-universal-visitation-theorem) and [M4 assessment](m4-visitation-obstruction.md). | **Open; M4 incomplete.** Bounded source, countermodel and recovery work supplied no BBP-specific exclusion of infinite proper limit sets. Neither B1 nor B3 discharges V. |
 | Hπ: actual cell visits | `H(Real.pi)` with no unproved premise. | B2 + B3 + B4 + V give visits to every open interval in `[0,1]`; P3 converts these to visits to each `I(k,m)`. | **Blocked.** Missing visitation V; B1/B2/B3 and conditional B4/P3 are checked. This is equivalent to the target, not independent progress. |
 | T: final theorem | `PiHexadecimalDisjunctivity` with no distribution hypothesis. | P2 applied to an unconditional proof of Hπ; alternative F3 route also possible. | **Blocked.** No exported unconditional proof exists. |
 
@@ -111,7 +111,7 @@ disjunctivity while purporting to prove it.
 
 ## Rejected inferences and next task
 
-These are review exclusions, not failed experiments performed in this pilot:
+The original pilot recorded the following review exclusions:
 almost-everywhere density does not select π; finite word checks do not prove
 universal occurrence; BBP extraction and a vanishing tail do not produce visits;
 irrationality alone does not rule out infinite proper limit sets. A global bound
@@ -123,6 +123,8 @@ records acceptance and publication. V, Hπ, T, and π disjunctivity remain open.
 B4 retains its general vanishing-error and arbitrarily-late-visit premises;
 B3 supplies only the former for the BBP tail. P3 retains open-interval visits.
 Next session: <!-- current-prompt --> [Current prompt: M4 Universal Visitation](session-prompts.md#current-prompt-m4-universal-visitation)
-defines the next research milestone, authorized only when invoked. Prompt
-preparation discharges no visitation premise. The tooling milestone is complete
-with its existing limits.
+remains the research entry point. Its 2026-11-26 invocation ended with M4
+incomplete; [the handoff](m4-handoff.md) and argument assessment record the
+tested routes and precise reopening condition. A checked countermodel of a
+different recurrence rejects a generic implication, not V. The tooling
+milestone is complete with its existing limits.

@@ -1541,3 +1541,47 @@ review approach; actual M4 reviews remain mandatory. Compared the contract with
 the blueprint, recurrence and existing B4 input audit. All 38 offline process
 tests, the 64-file documentation check, archive-preservation checks and whitespace
 checks passed. No Lean source, audit, pin or mathematical contract changed.
+
+## 2026-11-26 — M4 bounded visitation research, incomplete
+
+Invoked the current M4 prompt at `b7c3bca` on `feature/attempt-09-b4`, with an
+empty index and unrelated Obsidian/notes/papers changes; created
+`feature/m4-universal-visitation`. Baseline Lean `4.37.0-rc1`, `lake build`,
+`lake env lean Test.lean` and whitespace checks passed. Recorded the finite
+source/avoidance/recovery sequence in the proof plan before substantial work.
+
+[The argument assessment](m4-visitation-obstruction.md) owns the results:
+Lagarias's weak dichotomy is conditional; its identical one-based recurrence
+represents `pi/16`. A root-import probe checked coefficient algebra,
+irrationality after scaling and the orbit offset. A separate diagnostic model
+with positive rational-function forcing and zero initialization permanently
+misses an interval; parent and worker compilation passed with exactly the
+permitted axioms. Its BBP-matching leading asymptotic is paper algebra.
+An exact transcendental perturbation drops fixed rational-function structure.
+Actual-BBP denominator clearing left residue coverage unproved.
+
+Two bounded recovery tests also isolated gaps: maximal language entropy merely
+reformulates disjunctivity, and the Thue–Morse–Mahler source supplies a nondense
+number of irrationality exponent 2. No source or candidate supplied the needed
+BBP-specific exclusion of an infinite proper limit set. The source/argument
+skills supported separate same-session assessments; two authorized workers
+returned immutable evidence and no production edits. Compiler repairs (wrong
+irrationality namespace and explicit function shape) were distinct from the
+mathematical obstruction. The native symbol index was unavailable; pinned
+source and shell Lean worked. No new tooling was justified.
+
+**Checkpoint:** learned exact limitations of generic decay/expansion,
+irrationality, complexity and approximation routes; narrowed the missing
+arithmetic mechanism but did not move the π proof frontier. No justified new
+test emerged after the stated cycles. Suspend those routes and require a
+concrete BBP-specific estimate/source connection before reopening them.
+The meta-plan recovery loop remains appropriate; no process-policy change is
+supported by this attempt. A bounded failure is not proof of impossibility.
+
+M4/V, Hπ, T and π disjunctivity remain open. B4 retains late visits and vanishing
+error; B3 supplies only the latter. P3 retains open-interval visits. Production
+Lean, audits, pins and protected definitions are unchanged. The current prompt
+now points to the precise restart obligation; M5 is not started.
+The [handoff](m4-handoff.md), [retrospective](retrospectives/retrospective-2026-11-26-m4.md)
+and [Carbon report](agy-reports/m4-review.md) own final checks, review dispositions,
+local commit and post-commit necessity evidence.

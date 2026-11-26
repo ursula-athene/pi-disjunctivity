@@ -8,6 +8,15 @@ Saving this prompt does not begin the milestone; invoking it does.
 
 ## Current prompt: M4 Universal Visitation
 
+**Restart record (2026-11-26): M4 remains incomplete.** Read
+[the M4 handoff](m4-handoff.md) and [argument assessment](m4-visitation-obstruction.md)
+before another cycle. The bounded source audit, three avoidance candidates and
+two recovery candidates did not supply the BBP-specific exclusion of an infinite
+proper limit set. Generic expansion/decay, irrationality, complexity and residue
+reformulations must not be repeated as if untested. A restart needs a concrete
+new estimate or source connection that survives the recorded countermodels.
+No unconditional V theorem, V audit or M5 assembly exists from that invocation.
+
 Work in `/Users/adam/personal/proj/pi-disjunctivity/pi-disjunctivity`.
 
 ### Authorization and endpoint

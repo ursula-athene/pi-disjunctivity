@@ -4,6 +4,7 @@ Use only <!-- current-prompt --> [Current prompt: M4 Universal Visitation](sessi
 Invoking it authorizes the full Step 5/obligation V research milestone through
 proof, audits, reviews and local acceptance. Saving it does not start research.
 M4 remains open; a documented obstruction is not completion.
+Read [the M4 handoff](m4-handoff.md) for the bounded attempt and precise restart obligation.
 
 B1–B3 are checked; [the B3 handoff](b3-handoff.md) records their latest acceptance
 boundary. B4's general transfer retains late visitation and vanishing-error

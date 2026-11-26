@@ -14,6 +14,7 @@ Next session: <!-- current-prompt --> [Current prompt: M4 Universal Visitation](
 defines the full Step 5 research and acceptance scope, authorized when invoked.
 Saving it starts no research. B1–B3 and the [tooling milestone](b2-improvements-handoff.md)
 are complete; [the B3 handoff](b3-handoff.md) records acceptance/publication.
+The [M4 handoff](m4-handoff.md) records the incomplete research attempt and restart obligation.
 Universal visitation remains open, and B4/P3 retain their hypotheses.
 
 The goal is to prove `PiDisjunctivity.PiHexadecimalDisjunctivity`: every finite
@@ -551,7 +552,62 @@ modular computation, visitation research or final conjecture assembly.
 
 ## 5. Prove the missing universal visitation theorem
 
-**Status: open research; no complete argument is currently supplied.**
+**Status: M4 incomplete after bounded research on 2026-11-26.** No unconditional
+visitation argument was found. The [argument assessment](m4-visitation-obstruction.md)
+records exact countermodels and source/recovery gaps; the
+[handoff](m4-handoff.md) owns validation and review evidence.
+
+### M4 research sequence — 2026-11-26
+
+The current prompt was invoked at `b7c3bca` on
+`feature/attempt-09-b4`; work continues on `feature/m4-universal-visitation`.
+The exact acceptance contract is
+
+```text
+∀ a b : ℝ, 0 ≤ a → a < b → b ≤ 1 →
+  ∀ N : ℕ, ∃ n ≥ N, bbpRecurrence (n + 1) ∈ Set.Ioo a b
+```
+
+Keep the fixed initialization, every real interval (including endpoints 0 and
+1), every natural threshold, and the recurrence/orbit offset. Before substantial
+formalization, execute these bounded cycles, reassessing at each endpoint:
+
+1. **Source and dichotomy audit:** at most two primary source assessments and
+   two targeted discovery passes. Extract the precise weak-dichotomy premise,
+   its indexing, and the first missing implication for the actual BBP forcing.
+   Success means an applicable unconditional mechanism, or a documented gap;
+   a conditional theorem does not discharge V.
+2. **Permanent-avoidance test:** at most three explicit candidate implications
+   using expansion, coefficient structure, or rational approximation. Challenge
+   each with an exact nondense model or a quantified estimate. Search the pinned
+   library before proposing new supporting theory. Retain only candidates that
+   identify genuinely new BBP-specific input.
+3. **Bounded recovery:** if the central gap persists, test at most two materially
+   different representations/connections (symbolic avoidance, arithmetic, or
+   TRIZ separation of scales), with a falsifiable claim and evidence sought.
+   Continue only when a result identifies a justified new test; do not silently
+   extend the bounds or substitute peripheral formalization for the missing step.
+4. **Criticism and acceptance:** submit the strongest candidate/obstruction and
+   intended interfaces to Carbon with both guides. Formalize a surviving argument
+   only with all premises justified; export and audit unconditional V, instantiate
+   boundaries and the B2/B3/B4 consumer, and complete all mandated checks/reviews.
+   If bounded recovery leaves no justified next step, record M4 incomplete with
+   exact remaining obligations, reviewed evidence, retrospective and handoff.
+
+The invoked scope includes local commits and post-commit necessity inspection;
+it excludes M5 export/assembly, push, PR, dependency/tool/permission changes,
+and unrelated files. A reviewed obstruction is an authorized stopping outcome,
+not acceptance of M4. The existing B4 interface audit still assumes V.
+
+**Cycle outcome:** the source audit, three avoidance candidates and two recovery
+candidates reached the same missing BBP-specific implication. Positive rational
+forcing with the BBP leading asymptotic can avoid intervals; generic irrationality,
+complexity and approximation arguments do not repair the gap. Modular residue
+coverage remains a reformulation without a new estimate. Suspend these tested
+generic routes. Reopen with an explicit BBP-specific exclusion of permanent
+avoidance (or a proved weak dichotomy), tested against the recorded models;
+no justified new estimate emerged within this cycle. The source finite-limit
+argument and its translation are not new exported Lean theorems.
 
 For the recurrence defined in Step 4, seek a proof of
 
@@ -672,5 +728,6 @@ conditional transfer and P3's cell conversion complete M1. The full checked
 B1 identity completes M2. B2 supplies the exact orbit bridge and B3 supplies
 vanishing error, completing the required M3 arithmetic infrastructure. The B4
 transfer still needs V. B3 acceptance is recorded in its handoff. Step 5 research
-requires separate authorization; completing more infrastructure is not evidence that the
-open visitation problem is solved.
+was authorized by the invoked M4 prompt; its bounded outcome is incomplete.
+Completing more infrastructure is not evidence that the open visitation problem
+is solved. Use the M4 handoff before proposing a new research cycle.
