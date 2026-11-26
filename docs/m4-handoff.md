@@ -159,3 +159,10 @@ This process correction starts at `b20e1b34f08e73ce16389637ebcf52700b8f452a` on
 The [process retrospective](retrospectives/retrospective-2026-11-26-m4-persistence.md)
 records the lesson; the [review report](agy-reports/m4-persistence-review.md)
 owns correction-scope validation and review receipts. No new V proof is claimed.
+
+The correction is committed locally as
+`dacbd3c0ce44313afe405d8efdccdcbbe6dfe2a9`; no push or PR was performed.
+Post-commit necessity inspection found no unneeded proof/tool infrastructure or
+substantive simplification. The report records complete subagent review, the
+user-directed Carbon stop, checks and the separate factual receipt commit.
+This checkpoint does not end M4 research.

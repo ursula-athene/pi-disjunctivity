@@ -129,3 +129,16 @@ working/staged whitespace passed again after the reviewer override. A cached
 `lake build` also passed (7205 jobs) while preparing resumed M4 research;
 it is not evidence of new mathematics. Final factual receipt updates receive
 documentation/whitespace checks rather than another substantive review.
+
+## Local commit and necessity inspection
+
+Process correction commit `dacbd3c0ce44313afe405d8efdccdcbbe6dfe2a9` is local
+on `feature/m4-universal-visitation`; no push or PR was performed. Post-commit
+inspection confirmed the sixteen owned paths and exact working-tree postimages,
+with unrelated Obsidian/notes/papers still outside the commit. Policy lives in
+the meta-plan, operational rules in the workflow, current scope in the prompt,
+and review/history evidence in their existing records. No new tool, proof API
+or substantive simplification was warranted. The separate factual receipt
+commit is identifiable with `git log -1 --format=%H -- docs/agy-reports/m4-persistence-review.md`.
+Final `lake env lean Test.lean` also exited 0. M4 remains open and research
+continues under the user's instruction; this local process commit is a checkpoint.
