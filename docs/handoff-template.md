@@ -8,6 +8,8 @@ handoff describes its checkout at that time, not a future authorization.
 
 - Date, milestone/substeps, branch, starting commit, and preserved unrelated work.
 - Complete authorized endpoint and exclusions; actual completed/partial status.
+- Keep a compact acceptance checklist with links to evidence; update it as
+  checks finish rather than repeating receipts across status documents.
 - Local commit IDs (or a command to identify the handoff's own commit), and
   publication state: local only, pushed, or verified PR URL as applicable.
 
@@ -44,6 +46,10 @@ handoff describes its checkout at that time, not a future authorization.
   mathematics. Interface failures, compiler repairs, review attempts/time,
   capture gaps, and stale-entry incidents may be short measured counts or
   "not measured" with evidence links. Do not invent historical measurements.
+- State what the cycle changed about the next decision: continue, narrow,
+  revise or suspend the proposed route/process, why, and the next bounded test.
+  Use the [meta-plan](meta-proof-plan.md#review-the-plan-at-each-bounded-endpoint)
+  to evaluate the evidence; a proposed next test is not authorization to run it.
 - Link [the current session entry point](proof-attempt-session-prompt.md),
   [proof plan](proof-plan.md), [blueprint](proof-blueprint.md), and supporting
   evidence. Verify checkout state before resuming; do not copy a mutable next

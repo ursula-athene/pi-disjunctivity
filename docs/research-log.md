@@ -1490,3 +1490,22 @@ questions. See [the report](agy-reports/b3-review.md) for timings/captures and
 periodic-update limits. B3 supplies vanishing error only. V, Hπ, T and π
 disjunctivity remain open; B4 retains late visits and P3 open-interval visits.
 Stop at accepted B3; no further research or final assembly is authorized.
+
+## 2026-11-25 — Adopt B3 process lessons and rewrite the meta-plan
+
+The user authorized implementing the expanded B3 retrospective's improvements
+and replacing the accumulated meta-plan with a concise strategy for evaluating
+and revising the proving process. The [adoption handoff](b3-process-improvements-handoff.md)
+owns the recommendation mapping, checks, Carbon review and publication evidence.
+Execution rules live in the workflow/review procedure; the meta-plan now focuses
+on uncertainties, bounded tests, decision signals and plan revision. Historical
+records retain their evidence. No Lean contract, proof, audit or pin changes,
+and no visitation research or new proof milestone is started.
+During review, the user requested a stronger strategy for mathematical impasses.
+The meta-plan now adds model problems, alternative representations, counterexample
+search, precise source bridges and bounded tests, with fresh-context criticism
+and explicit stopping/reopening conditions. The handoff records methodological
+sources, review refinements and their limits.
+The user also requested TRIZ and possible differentiated subagent/Carbon roles;
+these are included as a bounded heuristic adaptation, not a proof mechanism or
+authorization to start a research campaign.

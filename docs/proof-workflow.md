@@ -8,12 +8,10 @@ This workflow authorizes no additional research, services, or workers.
 The user-directed Gemini Carbon review requirement below is the specified review
 exception; it does not authorize broader orchestration or additional services.
 
-The invoked [B2 improvement plan](b2-process-tool-improvement-plan.md) specifies
-the bounded process/tool milestone before B3. The review-guidance subset was separately
-[adopted](meta-proof-plan.md#carbon-review-guidance-adoption--2026-11-25);
-remaining implementation/evaluation evidence is recorded in the
-[implementation handoff](b2-improvements-handoff.md). Completed
-B2 supplies test material only, and B2 proof development is outside that milestone.
+Use the [meta-plan](meta-proof-plan.md) to evaluate and revise the mathematical
+route and this workflow at bounded endpoints. Completed process trials and tool
+capabilities are recorded in their [handoff](b2-improvements-handoff.md), with
+the [B3 process adoption](b3-process-improvements-handoff.md) recording later changes.
 
 ## Source adaptations
 
@@ -40,12 +38,14 @@ visitation argument.
 
 | Record | Responsibility |
 | --- | --- |
-| [Meta-plan](meta-proof-plan.md) | Evidence-based lessons, process decisions, and their evaluation. |
+| [Meta-plan](meta-proof-plan.md) | Strategy for monitoring, evaluating and revising the proof plan and proving process. |
 | [Proof plan](proof-plan.md) | Sole mathematical roadmap and exact milestone contracts. |
 | [Blueprint](proof-blueprint.md) | Declaration/dependency/status index retaining every unproved hypothesis. |
 | This workflow | Operational implementation and verification sequence. |
 | [Research log](research-log.md) | Concise dated outcomes linked to validation/review evidence. |
 | [Handoffs](handoff-template.md) | Restart baseline, contracts, pitfalls, and acceptance evidence as dated snapshots. |
+| Review reports (or a handoff's review section) | Exact review scope, evidence limits and every finding's disposition. |
+| [Retrospectives](retrospectives/) | Dated lessons and proposed improvements; adoption is recorded separately. |
 | [README](../README.md) and [session entry point](proof-attempt-session-prompt.md) | Short orientation and authoritative links. |
 | [Session prompts](session-prompts.md) | One current execution prompt; archived prompts remain historical. |
 
@@ -60,6 +60,25 @@ Update authoritative records when facts change, and link from orientation pages
 instead of repeating mutable status prose. Retain all hypotheses when shortening
 conditional-result summaries. New handoffs use the linked template; process-only
 milestones explicitly say that theorem contracts and indices are unchanged.
+Keep any prompt-required `PROGRESS.md` to a short pointer to those records.
+Do not copy their inventories, review findings or acceptance receipts into it.
+
+## Read and coordinate by dependency
+
+Locate relevant headings with `rg` before reading long documents. Read bounded
+sections to answer the next question, plus the required instructions and review
+guides in full. Retrieve only the tool signature needed next. If output is
+truncated, narrow the read; do not repeatedly request the same broad dump.
+Keep one compact acceptance checklist with evidence pointers in the task notes
+or handoff, rather than creating another status document.
+
+When delegation is authorized, assign distinct scratch-file ownership and ask
+each worker to deliver a final immutable path, exact declaration names/types,
+verification command and result, and an explicit completion signal. The parent
+integrates only after that signal and checks the result through the intended
+interface. A worker needing a later revision delivers a new path and receipt;
+it must not rename or edit a delivered file while the parent consumes it.
+The parent owns production edits. This protocol grants no delegation authority.
 
 ## Minimal working feedback loop
 
@@ -86,7 +105,15 @@ lake env lean Test.lean
    checkpoints without asking again between authorized steps. Scope extensions
    need authorization. Read current declarations, not remembered names. Follow
    any prompt requirement to update the proof plan before implementation.
-2. Search the project, then the pinned Mathlib checkout. For this pilot:
+2. Choose the proof-feedback route before probing: use native goals/diagnostics
+   for project files when available; use `lake env lean` from the repository
+   root for `/tmp` probes, which lack the project ancestry required by the LSP.
+   Use the shell fallback immediately when that limitation is predictable.
+   Corroborate suspicious declaration results with hover and pinned source.
+   A warming index, empty result or failed lookup is limited search evidence,
+   never proof of theorem nonexistence.
+
+   Search the project, then the pinned Mathlib checkout. For example:
 
    ```sh
    rg -n 'blockValue_lt|exists_blockValue_eq|block_iff_mem_interval' PiDisjunctivity
@@ -144,6 +171,12 @@ lake env lean Test.lean
    regression checks, rather than requiring an example for every module or
    freezing the file. Universal proofs, exported-type checks, axiom guards,
    and mathematical statement review remain the core validation.
+   Where relevant, add a consequence stated in established mathematical objects
+   and a downstream application sensitive to index/offset errors. B3's
+   `|Real.pi - 47/15| ≤ 8/135` check and B4 probe at recurrence index `n+1`
+   are examples in `Test.lean`. Explicitly consume the reviewed theorem and
+   retain every unproved premise; a bare type check against an arbitrary
+   sequence cannot protect a recurrence-to-orbit offset.
 7. For Lean changes, finish with `lake build` and `lake env lean Test.lean`.
    Run `uv run --locked --offline python -m unittest discover -s tests -v` and
    `uv run --locked --offline python tools/check_docs.py` for process-tool or
@@ -185,11 +218,10 @@ lake env lean Test.lean
    follow-up commit. Report completed substeps, remaining obligations, commit
    IDs, and publication state. Stop at the authorized endpoint.
 
-Compiler errors and `trace_state` supply file-based feedback. The original pilot
-used no independent review agent; the later user instruction adds Gemini Carbon
-High reviews through `agy`. No live editor goal service, semantic search endpoint,
-automated dependency-graph validator, or clean-environment proof comparator is
-established by this workflow. CI retains the Lean build and axiom audit alongside offline process checks.
+Compiler errors and `trace_state` supply file-based feedback. Native LSP tools
+have also been tested; the [capability record](b2-tool-evaluation.md#persistent-installation-and-native-host-follow-up)
+owns their availability and remaining limits. Preserve the shell fallback.
+CI retains the Lean build and axiom audit alongside offline process checks.
 
 ## Milestone and intermediate changed-file reviews
 
@@ -244,6 +276,10 @@ not indefinite retries. Unproved claims stay in Markdown, never as Lean axioms
 or placeholder proofs. Almost-everywhere density, finite digit checks, BBP
 extraction, and shrinking errors cannot be promoted to π-specific visitation.
 Conditional claims keep their hypotheses in the graph.
+For missing mathematics, use the [meta-plan's recovery protocol](meta-proof-plan.md#when-mathematical-progress-stalls)
+to seek new representations, model problems and precise connections within the
+authorized research scope. It does not turn an infrastructure failure into a
+reason to change the mathematical target.
 
 ## Automation decision after the pilot — 2026-11-24 snapshot
 

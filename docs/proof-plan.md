@@ -7,7 +7,8 @@ This is the mathematical roadmap and the owner of exact milestone contracts.
 The [blueprint](proof-blueprint.md) indexes checked declarations, dependencies,
 and unproved hypotheses; dated validation and publication evidence live in the
 [research log](research-log.md) and linked handoffs. Follow the
-[workflow](proof-workflow.md) for execution.
+[workflow](proof-workflow.md) for execution and the [meta-plan](meta-proof-plan.md)
+for how evidence should change this plan and the proving process.
 
 Next session: <!-- current-prompt --> [Current prompt: B3 stopping point](session-prompts.md#current-prompt-b3-stopping-point)
 records the accepted B3 endpoint and publication evidence in
