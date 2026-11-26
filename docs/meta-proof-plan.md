@@ -7,8 +7,45 @@ The [proof plan](proof-plan.md) owns mathematical contracts, the
 plan below is retained as a dated design record; its pilot is complete, not a
 standing instruction to repeat it. Outcomes are in the [research log](research-log.md).
 
-Next session: <!-- current-prompt --> [Current prompt](session-prompts.md#current-prompt-b2-workflow-and-lean-tooling)
+Next session: <!-- current-prompt --> [Current prompt](session-prompts.md#current-prompt-b2-improvement-plan)
 is the execution entry, only when invoked by the user.
+
+## B2 improvement plan — proposed 2026-11-25
+
+The [replacement process/tool plan](b2-process-tool-improvement-plan.md) now
+owns the bounded implementation sequence and evaluation criteria. It supersedes
+the earlier B2 tooling prompt, which remains archived. This is a planning
+decision, not adoption evidence: no tools or skills were installed or activated,
+and no operational workflow or Lean proof was implemented by this update.
+
+Implement and evaluate the improvements before moving to B3. B2 proof work is
+out of scope; already completed B2 provides fixed replay cases only. Preserve
+the existing mathematical roadmap, guarded audits, and unresolved hypotheses.
+
+The expanded B2 retrospective justifies a local LSP trial for generated-lemma
+discovery and goal inspection, a manual semantic status pass, bounded reads,
+and self-contained review packets. It does not establish a performance gain
+or justify broader orchestration. The
+[recommendation snapshot](lean-tooling-recommendations.md) adds focused
+argument-criticism and source-contract skill candidates, to be evaluated on
+existing material without beginning visitation research.
+
+The replacement retains selective evaluation of `lean-search-discovery` and
+`lean-proof-patterns`. It defers the old prompt's `lean-elaboration` installation:
+the inspected procedure explicitly uses `sorry` substitution, and no measured
+performance need warrants a compliant adaptation now. Remote search activation,
+Sage installation, and overlapping full skill suites are also deferred pending
+a concrete need. The plan records future trial criteria and preserves the
+working shell fallback.
+
+Future adoption must report functional correctness, actual host availability,
+startup versus warm effort, skill conflict/resource checks, and explicit
+adopt/defer/reject decisions. Small B2 replays have learning and cache effects;
+they cannot establish general productivity gains. Installation, configuration,
+protocol tests, and actual host tests are separate evidence. Keep detailed
+results in the future implementation handoff, with a concise adoption entry
+here only after execution. See the
+[planning handoff](b2-improvement-planning-handoff.md) for this document-only work.
 
 ## B2 process evidence — 2026-11-25
 
@@ -52,11 +89,12 @@ The [process handoff](process-improvements-handoff.md) records acceptance eviden
 [Gemini procedure](gemini-review.md) moved to its own document. The
 [process tools](process-tools.md) are small offline Python utilities in a root
 `uv` project using MIT-licensed Markdown and YAML parsers. CI retains its Lean build and
-axiom audit. The current B2 prompt links consolidated procedures and retains
-all mathematical contracts and its proof-plan-before-implementation requirement;
-this adoption does not execute it. B2/B3, V, Hπ, T, and π disjunctivity remain
-unproved. B4 assumes vanishing errors and arbitrarily late visits; P3 assumes
-open-interval visits.
+axiom audit. At this historical B1 adoption baseline, the then-current B2
+prompt linked consolidated procedures and retained all mathematical contracts
+and its proof-plan-before-implementation requirement; the process adoption did
+not execute it. B2/B3, V, Hπ, T, and π disjunctivity were then unproved. B4
+assumed vanishing errors and arbitrarily late visits; P3 assumed open-interval
+visits. Use the blueprint for current mathematical status.
 
 Keep the successful mathematical decomposition, pinned-source search, direct
 `HasSum` route, exact audits, and post-commit necessity review. No optional Lean

@@ -6,7 +6,55 @@ even where an archived prompt contains imperative instructions or a different
 policy. A completed milestone must not be repeated or automatically extended.
 Saving this prompt does not begin the milestone; invoking it does.
 
-## Current prompt: B2 workflow and Lean tooling
+## Current prompt: B2 improvement plan
+
+Work in `/Users/adam/personal/proj/pi-disjunctivity/pi-disjunctivity`.
+
+When the user invokes this prompt, implement and evaluate
+[the B2 process and tool improvement plan](b2-process-tool-improvement-plan.md)
+through P0–P5, including required intermediate reviews and final acceptance.
+That document is the sole implementation specification; do not combine its
+scope with the superseded prompt below.
+
+**Complete the improvement milestone before going on to B3. B2 proof
+development is out of scope.** B2 is already complete and is used only as
+fixed test material. Do not solve B2 again, change production Lean or audits,
+begin B3, or start visitation research. Saving or reviewing this prompt does
+not invoke it; the current authoring task is plan-only.
+
+Read `AGENTS.md`, the replacement plan, `docs/proof-workflow.md`,
+`docs/meta-proof-plan.md`, the B2 retrospective, `docs/gemini-review.md`,
+and `docs/handoff-template.md`. Verify the actual checkout and host state;
+preserve unrelated work and existing configuration.
+
+When invoked, this scope includes the plan's necessary isolated user-scoped
+LSP installation, supported minimal MCP configuration, selective installation
+of compatible search/proof skills, and bounded original-skill evaluations,
+subject to host permissions. It does not include the unmodified elaboration
+skill, optional remote-search activation, Sage installation, or broader
+frameworks. Keep the REPL disabled and both Lean/Mathlib pins unchanged.
+
+Distinguish installation, configuration, protocol testing, and actual host
+availability. Complete independent work if activation is pending, and leave
+an exact continuation step. Do not report adoption or acceptance that has
+not passed its required checks and reviews.
+
+Commit only reviewed task-owned files; perform post-commit necessity review
+and record the actual local publication state. Do not push or open a PR unless
+the executing user separately requests it. Stop at the improvement milestone's
+acceptance boundary; B3 requires a later explicit instruction.
+
+## Old prompts - do not use
+
+<a id="current-prompt-b2-workflow-and-lean-tooling"></a>
+
+**Superseded on 2026-11-25:** the replacement
+[B2 process and tool improvement plan](b2-process-tool-improvement-plan.md)
+and current prompt above replace this proposal. The original text below is
+historical: its installation list and push instructions grant no current scope.
+Do not execute it or merge its requirements into the replacement plan.
+
+### Superseded prompt: B2 workflow and Lean tooling
 
 Work in `/Users/adam/personal/proj/pi-disjunctivity/pi-disjunctivity`.
 
@@ -27,7 +75,7 @@ Read first:
 - `docs/handoff-template.md`
 - The relevant review requirements in `docs/proof-plan.md`
 
-### 1. Establish a safe baseline
+#### 1. Establish a safe baseline
 
 Inspect the actual branch, index, working tree, remotes, and applicable host
 rules. Preserve all existing branches and unrelated staged, modified, and
@@ -40,7 +88,7 @@ otherwise use the appropriate B2 branch. Use a separate worktree if needed.
 Record the bounded plan and acceptance criteria in the meta-plan before
 implementation. Preserve historical retrospectives and handoffs as snapshots.
 
-### 2. Implement the workflow improvements
+#### 2. Implement the workflow improvements
 
 Make small, concrete updates to the authoritative workflow documents:
 
@@ -58,7 +106,7 @@ Do not create a semantic documentation checker, duplicate status ledger,
 new approval framework, dependency graph, or multi-agent orchestration.
 Preserve the mathematical roadmap and all outstanding hypotheses.
 
-### 3. Install and configure the recommended tools
+#### 3. Install and configure the recommended tools
 
 Local clones are available at:
 
@@ -107,7 +155,7 @@ Inspect conflicts before replacing anything.
 Repository instructions prevail over skill guidance. Do not adopt the
 collection's frozen-manifest, draft-sorry, or orchestration workflows.
 
-### 4. Validate with completed B2
+#### 4. Validate with completed B2
 
 Keep Lean and Mathlib pinned at `v4.37.0-rc1`. Demonstrate the installed LSP
 against this exact checkout:
@@ -129,7 +177,7 @@ host tool availability. If activation requires a restart or new session,
 complete independent work and leave an exact continuation step; do not claim
 that untested integration passed.
 
-### 5. Complete acceptance and publication
+#### 5. Complete acceptance and publication
 
 Run the required documentation/process tests, documentation checker, and
 whitespace checks. Run `lake build` and `lake env lean Test.lean` to verify the
@@ -151,8 +199,6 @@ host restrictions; if genuinely blocked, state the exact failed action and
 required user step while completing independent authorized work.
 
 Do not open a PR. Stop before B3 or visitation research.
-
-## Old prompts - do not use
 
 <a id="current-prompt-paused-after-b2"></a>
 

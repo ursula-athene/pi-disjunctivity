@@ -6,6 +6,10 @@ installed capabilities or authorization to implement them. The
 [workflow](proof-workflow.md) and [trust policy](dependencies-and-trust.md)
 remain authoritative.
 
+The later [B2 improvement plan](b2-process-tool-improvement-plan.md) selects and
+sequences these candidates for this project. It supersedes this snapshot as an
+implementation proposal; the recommendations below are retained as source context.
+
 Prioritize live Lean feedback, better lemma search, and focused mathematical
 review. The project has two different needs: formalizing established arguments,
 such as the remaining B3 tail bounds, and discovering the missing universal

@@ -1340,3 +1340,21 @@ B2 is complete; M3/Step 4 is not. B3 tail bounds/decay, V, Hπ, T, and π
 disjunctivity remain open. B4 retains vanishing error and arbitrarily late
 visits; P3 retains open-interval visits. Stop before the proposed B3 task or
 visitation research. The current prompt records this boundary.
+
+
+## 2026-11-25 — Replacement B2 process and tool plan
+
+Saved the [tooling recommendations](lean-tooling-recommendations.md), then
+reviewed the expanded B2 retrospective, meta-plan, and previous tooling prompt.
+The [replacement plan](b2-process-tool-improvement-plan.md) specifies process
+improvements, completed-B2 LSP replays, selective skill evaluations, acceptance
+criteria, and explicit deferrals. The prior prompt is archived and all active
+entry links select its replacement. The meta-plan records a proposal, not adoption.
+
+This is plan-writing only. Future improvement implementation precedes B3;
+B2 proof development is out of scope and completed B2 is test material only.
+No tool installation, skill activation, configuration, Lean change, or new
+mathematical result is claimed. See the
+[planning handoff](b2-improvement-planning-handoff.md) and
+[review report](agy-reports/b2-improvement-planning-review.md) for actual
+validation, review, concurrent-commit handling, and local publication evidence.

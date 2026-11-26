@@ -8,6 +8,11 @@ This workflow authorizes no additional research, services, or workers.
 The user-directed Gemini Carbon review requirement below is the specified review
 exception; it does not authorize broader orchestration or additional services.
 
+The [B2 improvement plan](b2-process-tool-improvement-plan.md) specifies a future
+process/tool milestone before B3. It is proposed, not implemented by this link;
+the operational sequence below remains in force. Completed B2 supplies test
+material only, and B2 proof development is outside that milestone.
+
 ## Source adaptations
 
 The original sources below were read on 2026-11-24. Repository revisions are
