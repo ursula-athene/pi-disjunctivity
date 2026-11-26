@@ -122,6 +122,6 @@ B1, B2, B4, and P3 are checked. B2 acceptance and publication are recorded in
 [the B2 handoff](b2-handoff.md). B3, V, Hπ, T, and π disjunctivity remain
 unproved. B4 still assumes vanishing errors and arbitrarily late visits;
 P3 still assumes open-interval visits.
-Next session: <!-- current-prompt --> [Current prompt](session-prompts.md#current-prompt-paused-after-b2)
-records the stopping point. [B3 tail control](proof-plan.md#next-bounded-task-b3-tail-control)
+Next session: <!-- current-prompt --> [Current prompt](session-prompts.md#current-prompt-b2-workflow-and-lean-tooling)
+covers workflow and Lean tooling only. [B3 tail control](proof-plan.md#next-bounded-task-b3-tail-control)
 is proposed, not started. No conditional visitation premise has been discharged.

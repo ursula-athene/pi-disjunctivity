@@ -7,7 +7,7 @@ The [proof plan](proof-plan.md) owns mathematical contracts, the
 plan below is retained as a dated design record; its pilot is complete, not a
 standing instruction to repeat it. Outcomes are in the [research log](research-log.md).
 
-Next session: <!-- current-prompt --> [Current prompt](session-prompts.md#current-prompt-paused-after-b2)
+Next session: <!-- current-prompt --> [Current prompt](session-prompts.md#current-prompt-b2-workflow-and-lean-tooling)
 is the execution entry, only when invoked by the user.
 
 ## B2 process evidence — 2026-11-25

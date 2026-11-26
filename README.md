@@ -29,7 +29,7 @@ and hypotheses, and the [research log](docs/research-log.md) for dated evidence
 and handoffs. The [formulation review](docs/formulation-review.md) and
 [follow-up](docs/review-follow-up.md) record the semantic review of the problem.
 
-Next session: <!-- current-prompt --> [Current prompt](docs/session-prompts.md#current-prompt-paused-after-b2)
+Next session: <!-- current-prompt --> [Current prompt](docs/session-prompts.md#current-prompt-b2-workflow-and-lean-tooling)
 is invoked only at the user's request. Read [AGENTS.md](AGENTS.md) and the
 [workflow](docs/proof-workflow.md) before implementation.
 

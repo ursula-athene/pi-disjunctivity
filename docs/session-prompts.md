@@ -6,7 +6,157 @@ even where an archived prompt contains imperative instructions or a different
 policy. A completed milestone must not be repeated or automatically extended.
 Saving this prompt does not begin the milestone; invoking it does.
 
-## Current prompt: paused after B2
+## Current prompt: B2 workflow and Lean tooling
+
+Work in `/Users/adam/personal/proj/pi-disjunctivity/pi-disjunctivity`.
+
+Implement the process and tooling improvements proposed in
+[the B2 retrospective](retrospectives/retrospective-2026-11-25-b2.md).
+
+This is a bounded workflow/tooling milestone. Do not begin B3, visitation
+research, or new mathematical proofs. Do not execute another saved prompt.
+
+Read first:
+
+- `AGENTS.md`
+- `docs/proof-attempt-session-prompt.md`
+- `docs/retrospectives/retrospective-2026-11-25-b2.md`
+- `docs/proof-workflow.md`
+- `docs/meta-proof-plan.md`
+- `docs/gemini-review.md`
+- `docs/handoff-template.md`
+- The relevant review requirements in `docs/proof-plan.md`
+
+### 1. Establish a safe baseline
+
+Inspect the actual branch, index, working tree, remotes, and applicable host
+rules. Preserve all existing branches and unrelated staged, modified, and
+untracked work.
+
+Create a new implementation branch from a verified baseline containing B2
+and retrospective commit `07304f8`. Use updated main if it contains that work;
+otherwise use the appropriate B2 branch. Use a separate worktree if needed.
+
+Record the bounded plan and acceptance criteria in the meta-plan before
+implementation. Preserve historical retrospectives and handoffs as snapshots.
+
+### 2. Implement the workflow improvements
+
+Make small, concrete updates to the authoritative workflow documents:
+
+- Inspect exact Lean signatures and root-import visibility before composing
+  dependent proofs; make natural-index equalities explicit.
+- Add a focused semantic status pass before review, covering the active
+  overview, proof plan, blueprint, and current prompt.
+- Prefer bounded source reads and less frequent review polling, consistent
+  with the mandatory progress and timeout procedure.
+- Make review inputs self-contained: exact diff, baseline, contracts,
+  relevant API locations, and prior findings.
+- Keep detailed evidence in its authoritative record and link to it elsewhere.
+
+Do not create a semantic documentation checker, duplicate status ledger,
+new approval framework, dependency graph, or multi-agent orchestration.
+Preserve the mathematical roadmap and all outstanding hypotheses.
+
+### 3. Install and configure the recommended tools
+
+Local clones are available at:
+
+- `/Users/adam/personal/proj/pi-disjunctivity/lean-lsp-mcp`
+- `/Users/adam/personal/proj/pi-disjunctivity/LeanAutoformalizationSkills`
+
+Inspect their instructions, revisions, working trees, licenses, and installers.
+Use the revisions assessed in the retrospective as the starting point;
+verify and explain any different revision selected. Preserve clone contents
+and unrelated existing installations.
+
+I authorize the necessary user-scoped package and skill installations and
+minimal supported MCP configuration changes, subject to host permissions.
+Prefer existing package managers and isolated environments.
+
+Install lean-lsp-mcp from a verified local source snapshot or a pinned package
+version, preferably using uv. Keep it outside this project's Lean dependencies
+and Python dependency lock. Avoid an editable installation unless there is a
+concrete reason for one. Record the source revision, installed version,
+resolved environment, launch command, and removal instructions.
+
+Configure it for the actual Codex host in use, preferably with local stdio.
+Inspect the host's supported configuration rather than assuming a CLI config
+change makes tools available in the current session. Preserve existing MCP
+entries and keep machine-specific configuration out of portable repository
+files.
+
+Keep `LEAN_REPL` disabled. Do not add leanprover-community/repl or any other
+external Lean library. Initially expose only the local capabilities needed
+for the pilot; leave optional remote search services and automatic source
+rewriting out of scope.
+
+Install these complete skill folders, including their supporting resources:
+
+- `lean-search-discovery`
+- `lean-proof-patterns`
+- `lean-elaboration`
+
+Reserve lean-elaboration for measured performance problems. Install only
+these selected skills: the clone's bundled installer may install the entire
+collection. Use a supported selective installation method or links to the
+complete folders in the preserved clone. Preserve attribution and license
+notices; do not relabel third-party material as project-authored code.
+Inspect conflicts before replacing anything.
+
+Repository instructions prevail over skill guidance. Do not adopt the
+collection's frozen-manifest, draft-sorry, or orchestration workflows.
+
+### 4. Validate with completed B2
+
+Keep Lean and Mathlib pinned at `v4.37.0-rc1`. Demonstrate the installed LSP
+against this exact checkout:
+
+- Find `hasSum_nat_add_iff'`, including its generated-declaration search path.
+- Inspect actual signatures such as `pow_sub₀`.
+- Retrieve useful proof goals, declaration information, and diagnostics
+  from the completed B2 code or disposable probes.
+
+Use no `sorry`, `admit`, additional axioms, `native_decide`, or proof bypasses.
+Preserve production Lean declarations and audits.
+
+Record a small comparison with the existing shell workflow: successful
+results, failures, startup versus warm behavior, and practical effort.
+Do not claim a general performance improvement from a few probes.
+
+Distinguish installation, configuration, protocol-level testing, and actual
+host tool availability. If activation requires a restart or new session,
+complete independent work and leave an exact continuation step; do not claim
+that untested integration passed.
+
+### 5. Complete acceptance and publication
+
+Run the required documentation/process tests, documentation checker, and
+whitespace checks. Run `lake build` and `lake env lean Test.lean` to verify the
+pilot against the preserved project. Add tests only for meaningful new
+behavior if scripts are changed.
+
+Perform the required Gemini Carbon High review of the complete task-owned
+milestone diff using `docs/gemini-review.md`. Address findings and rerun affected
+checks. Preserve exact scope, read-only reviewer tools, capture inspection,
+and bounded recovery.
+
+Commit only task-owned repository files, push reviewed commits regularly,
+perform post-commit necessity review, and leave a concise durable handoff.
+Record adopted changes, installation evidence, limitations, outstanding
+activation steps, and publication state.
+
+Proceed through these internal steps without fresh authorization. Respect
+host restrictions; if genuinely blocked, state the exact failed action and
+required user step while completing independent authorized work.
+
+Do not open a PR. Stop before B3 or visitation research.
+
+## Old prompts - do not use
+
+<a id="current-prompt-paused-after-b2"></a>
+
+### Session instructions: paused after B2
 
 B2's convergent split, recurrence/range, and exact π-orbit identity are checked.
 Read [the B2 handoff](b2-handoff.md) for final review, commit, publication, and
@@ -16,8 +166,6 @@ The next proposed bounded task is [B3 tail control](proof-plan.md#next-bounded-t
 requiring separate authorization. B3, V, Hπ, T, and π disjunctivity remain open.
 B4 still assumes vanishing error and arbitrarily late visits; P3 still assumes
 open-interval visits. B2 alone does not complete M3/Step 4 or prove visitation.
-
-## Old prompts - do not use
 
 <a id="current-prompt-b2-complete-orbit-bridge"></a>
 

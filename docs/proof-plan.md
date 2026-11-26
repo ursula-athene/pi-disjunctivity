@@ -9,8 +9,8 @@ and unproved hypotheses; dated validation and publication evidence live in the
 [research log](research-log.md) and linked handoffs. Follow the
 [workflow](proof-workflow.md) for execution.
 
-Next session: <!-- current-prompt --> [Current prompt](session-prompts.md#current-prompt-paused-after-b2)
-records the stopping boundary. B1 and B2 are complete, checked and reviewed.
+Next session: <!-- current-prompt --> [Current prompt](session-prompts.md#current-prompt-b2-workflow-and-lean-tooling)
+covers workflow and Lean tooling only. B1 and B2 are complete, checked and reviewed.
 B3 and universal visitation remain unproved; the conditional
 B4/P3 results retain their hypotheses below and in the blueprint.
 
