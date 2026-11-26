@@ -45,7 +45,7 @@ M4 acceptance regardless of the documentation/review result.
   ten-file review, eleven files after the minor entry-link improvement).
 - [x] Carbon High criticism/full task-owned-diff review completed: no defects
   or open review questions; both nonblocking documentation improvements applied.
-- [ ] Local commit and post-commit necessity inspection; no publication.
+- [x] Local research commit and post-commit necessity inspection; no publication.
 
 The source probe `/tmp/pi-m4-source-probe.lean`, SHA-256
 `0e68e22a8857dbc1eec41618c03093ced766e5e3096770129a3137435e082c7e`, checks
@@ -84,6 +84,29 @@ mathematical review also scrutinizes the central argument assessment.
 Temporary `/tmp` probes/captures may disappear. Primary PDF text was read;
 usable PDF screenshots were unavailable. No clean rebuild, remote CI,
 exhaustive literature search or productivity comparison is claimed.
+
+## Local commit and necessity inspection
+
+Research commit: `7cc5bd38e45315348aa7580ee83f68011971f025`, local only on
+`feature/m4-universal-visitation`. No push or PR was performed. This factual
+handoff receipt is a separate documentation commit, identifiable with
+`git log -1 --format=%H -- docs/m4-handoff.md`.
+
+Inspected the committed eleven-file scope and matched every postimage to the
+reviewed/checked working content. The assessment preserves failed arguments
+and their precise separating examples; the plan owns the contract and bounds;
+the blueprint owns dependency status; the log, retrospective, review and
+handoff own their distinct evidence roles. Entry pages contain links, not a
+second roadmap. No production helper, theorem wrapper, modular-sum machinery
+or duplicate proof API was introduced. No justified substantive simplification
+was found, so no proof follow-up or empty commit was made.
+
+Final documentation (68 files), working/staged whitespace, exact owned scope,
+and protected-source preservation checks passed. Archived prompts are unchanged.
+The eleven unrelated files in the preservation snapshot remain unchanged;
+the original Obsidian/notes/papers work stays unstaged. Final factual receipts
+receive documentation and whitespace checks; unchanged Lean needs no further
+build or substantive-fix review.
 
 ## Restart and remaining obligations
 

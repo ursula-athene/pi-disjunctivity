@@ -1585,3 +1585,14 @@ now points to the precise restart obligation; M5 is not started.
 The [handoff](m4-handoff.md), [retrospective](retrospectives/retrospective-2026-11-26-m4.md)
 and [Carbon report](agy-reports/m4-review.md) own final checks, review dispositions,
 local commit and post-commit necessity evidence.
+
+Finalization: Carbon High completed with no defects or open review questions;
+both nonblocking documentation recommendations were implemented. Complete
+capture/log inspection passed, with source/kernel checks distinguished from
+reviewer inspection. Final build/audit, 38 process tests, 68-file documentation
+check, whitespace and owned-scope checks passed. Local research commit
+`7cc5bd38e45315348aa7580ee83f68011971f025` contains eleven documentation paths.
+Post-commit necessity inspection found no substantive simplification or unused
+proof API. The handoff records the separate factual receipt commit by lookup
+command. No push, PR, production Lean change or M5 work occurred. M4 remains
+incomplete; the reviewed obstruction is not acceptance of V.
