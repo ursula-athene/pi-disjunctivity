@@ -6,7 +6,170 @@ even where an archived prompt contains imperative instructions or a different
 policy. A completed milestone must not be repeated or automatically extended.
 Saving this prompt does not begin the milestone; invoking it does.
 
-## Current prompt: B2 improvement plan
+## Current prompt: B3 tail control
+
+Work in `/Users/adam/personal/proj/pi-disjunctivity/pi-disjunctivity`.
+
+Invoking this prompt authorizes the complete **B3 tail-control milestone** in
+[the proof plan](proof-plan.md#next-bounded-task-b3-tail-control), through
+implementation, audits, required reviews, validation, commits, post-commit
+necessity review, and a durable handoff. Saving this prompt does not start B3.
+Complete its internal steps without asking for fresh authorization between them.
+Do not execute an archived prompt or repeat completed B1, B2, or the B2 process
+and tool improvement milestone.
+
+### 1. Verify the baseline and state the endpoint
+
+Read `AGENTS.md`, the B3 contract and Step 4 in `docs/proof-plan.md`,
+`docs/proof-blueprint.md`, `docs/b2-handoff.md`, `docs/proof-workflow.md`,
+`docs/meta-proof-plan.md`, `docs/gemini-review.md`, and `docs/handoff-template.md`.
+Read the installation follow-up in `docs/b2-improvements-handoff.md`,
+`docs/b2-tool-evaluation.md`, and `docs/agy-reports/b2-improvements-review.md`,
+plus `docs/b2-tool-installation.md` for tool use, fallback and rollback.
+Inspect the relevant checked Lean declarations and recent research-log entries.
+
+Verify the actual branch, HEAD, index, working tree, remotes, and host capabilities.
+Use a user-prepared B3 branch if present; otherwise create an implementation
+branch from a verified baseline containing completed B2, the accepted tooling
+work, and this prompt. Do not assume `main` contains unmerged branch work.
+Preserve all unrelated staged, modified and untracked work, including Obsidian,
+notes and papers; use a separate worktree only if needed. Keep user configuration
+and other branches intact. Git mutations must be standalone execution-tool calls.
+
+Before implementation, record the bounded sequence and acceptance criteria in
+the proof plan; the meta-plan owns only process decisions and observations.
+B3 must deliver, for every natural `j` and `n`, with real division:
+
+```text
+|bbpCoeff j| ≤ 8 / (8 * (j : ℝ) + 1)
+|bbpTail n| ≤ 8 / (15 * (8 * (n : ℝ) + 9))
+Filter.Tendsto bbpTail Filter.atTop (nhds 0)
+```
+
+Verify these proposed constants and all side conditions before building on
+them. The results must be unconditional: no unproved analytic, summability,
+tail-decay or visitation premise. If a proposed bound fails, report the exact
+mathematical obstruction; do not silently weaken the contract or mark B3 complete.
+
+### 2. Use the installed tools and skills in the proof loop
+
+The B2 tooling milestone is complete. LSP 0.33.0 and the four selected skills
+are installed. The user ran the maintained migration successfully; receipt
+`/Users/adam/.local/share/pi-b2-activation/run-9ci32pt6` records reuse of the
+packages/skills, a passing five-tool protocol test and migration to the installed
+Python with `-m lean_lsp_mcp`. The configuration was checked against that receipt.
+Earlier pending-migration prose predates this result; do not reinstall or repeat
+the tooling milestone. Native tools worked before migration; verify availability
+and the configured project root in the actual new session rather than assuming
+that configuration or a terminal test proves app activation.
+
+Discover and exercise the five native `pi-b2-lean-lsp` tools against existing
+Lean or a disposable root-import probe, then use them throughout B3:
+
+- `lean_local_search`: find candidate Mathlib declarations, including generated
+  declarations; inspect index state and allow bounded warmup. An empty or warming
+  result is not proof of theorem nonexistence. Use `rg` and source inspection too.
+- `lean_hover_info` and `lean_declaration_file`: inspect full signatures,
+  hypotheses, casts, indexing and source before applying a candidate.
+- `lean_goal`: inspect the actual local context and before/after tactic goals.
+- `lean_diagnostic_messages`: check elaboration after edits; partial results
+  require follow-up, and a cleared diagnostic is not the final kernel audit.
+
+Read and apply the installed **adapted** `lean-search-discovery` and
+`lean-proof-patterns` skills for discovery and proof construction. Apply
+`pi-argument-critic` to the proposed B3 estimate/limit argument before relying
+on it, preserving every premise; this is a same-session criticism pass, not
+independent review. Use `paper-to-lean-contract` only if an already assessed
+source claim actually needs extraction. Do not force a new literature campaign
+or repeat the deferred source-transfer experiment merely to exercise that skill.
+Repository rules and the adaptations override conflicting upstream examples.
+
+Keep the five-tool selection unchanged and the REPL disabled; do not enable remote search,
+install additional skills/libraries, or change pins or permissions. If native
+tools are unavailable, use the documented shell/source-search and `lake env lean`
+fallback, record the exact activation step, and continue independent B3 work.
+Pending descendant-shutdown and app disable/restore checks remain tool limits,
+not prerequisites for the mathematical proof or permission to expand this task.
+Record a few concrete B3 tool successes/failures and practical costs in existing
+records; do not claim general productivity gains or start a benchmark project.
+
+### 3. Prove the estimates and decay with explicit interfaces
+
+Reuse B2's `hasSum_bbpTail` for the existing definition
+`bbpTail n = ∑' r : ℕ, bbpCoeff (n+r+1) / (16 : ℝ)^(r+1)`.
+Preserve the tail's first coefficient `n+1` and first denominator `16`, and the
+orbit/recurrence offset `n` versus `n+1`. A total `tsum` definition alone is not
+convergence evidence. Retain B1/B2 definitions, contracts, proofs and audits;
+extend the library with only the lemmas needed for B3 and its checked consumers.
+
+Establish the coefficient estimate, a summable geometric majorant for the tail,
+the explicit tail estimate, and convergence to zero. Prove denominator positivity,
+cast/index facts and summability needed for norm/absolute-value sum bounds.
+Choose the simplest pinned-Mathlib route; inspect its actual types before use.
+Keep helpers private unless a proof or audit consumer needs an exported result.
+Avoid unrelated refactors, optional modular computation and performance tuning.
+
+Probe new public theorem interfaces through `import PiDisjunctivity` early,
+before composing dependent layers. Extend `Test.lean` with complete theorem-type
+checks, actual axiom guards, and boundary checks that explicitly instantiate
+the coefficient and tail theorems at zero (and other useful first-index cases).
+Check that the decay result fits B4's vanishing-error input while keeping its
+arbitrarily-late-visitation premise explicit; do not start final conjecture assembly.
+
+Preserve Lean/Mathlib `v4.37.0-rc1`, Mathlib as the only direct external Lean
+library, existing module/public-section conventions, MIT headers, Ursula Athene
+attribution and enabled linters. No project-specific axioms, `sorry`, `admit`,
+`native_decide`, unsafe proof shortcuts, new library imports/dependencies outside
+the permitted stack, or direct imports of Mathlib's transitive packages.
+Allowed axiom dependencies remain only `propext`, `Classical.choice`, `Quot.sound`.
+
+### 4. Review, validate and finish the whole milestone
+
+Follow the normal B3 review requirements in `docs/proof-plan.md` and
+`docs/gemini-review.md`: useful intermediate checkpoints, complete task-owned
+Carbon High review before the milestone commit, and focused review of substantive
+fixes. The user's stop on further Carbon reviews applied to the completed B2
+improvement milestone; it is not a standing B3 waiver. Supply the Lean adversarial
+guide; also supply the strategy/tooling guide if substantive strategy/tooling
+changes enter the authorized diff. Keep review scope concise, exact and read-only;
+use the approved literal command prefix, separate `--log-file`, complete capture
+and result/log inspection, progress updates and bounded recovery.
+Preserve every defect, improvement and question's disposition. Carry forward
+Q2's lightweight cost/usefulness observations from actual required reviews only.
+
+Run `lake build`, `lake env lean Test.lean`, offline process tests,
+`tools/check_docs.py`, and working/staged `git diff --check`; inspect exit codes.
+Use `uv --no-cache run --locked --offline` for the Python checks when appropriate.
+Check new/staged files, protected pins/dependencies and unrelated-work preservation.
+Reconcile README, proof plan, blueprint and the active prompt semantically,
+not merely by passing the link checker. Do not finalize with a failed required
+check, incomplete required review or unresolved acceptance-blocking finding.
+
+Update the existing proof plan, blueprint and research log to checked facts.
+Write `docs/b3-handoff.md` using the handoff template and a dated B3 retrospective
+under `docs/retrospectives/`; link the review evidence rather than duplicating logs.
+Commit only task-owned files, perform post-commit proof-necessity review, and
+validate/review any substantive follow-up change. Do not manufacture an empty
+second commit. Push the completed B3 branch and verify the remote commit; do not
+open a PR. Report exact results, remaining hypotheses, tool limitations and
+local/pushed state, with a short whole-review-cycle summary.
+
+Stop at accepted B3. It supplies vanishing error, not visits: V, Hπ, T and π
+disjunctivity remain open. B4 retains its arbitrarily-late-visit premise and P3
+its open-interval-visitation premise. Do not begin visitation research, modular
+computation, final conjecture assembly or another milestone automatically.
+
+## Old prompts - do not use
+
+<a id="current-prompt-b2-improvement-plan"></a>
+
+### Session prompt: B2 improvement plan
+
+**Archived after completion:** the improvement milestone and installation follow-up
+are complete with the recorded review boundary and remaining tool limits. See
+[the handoff](b2-improvements-handoff.md). The original execution prompt follows;
+it grants no new scope.
+
 
 Work in `/Users/adam/personal/proj/pi-disjunctivity/pi-disjunctivity`.
 
@@ -20,7 +183,9 @@ scope with the superseded prompt below.
 development is out of scope.** B2 is already complete and is used only as
 fixed test material. Do not solve B2 again, change production Lean or audits,
 begin B3, or start visitation research. Saving or reviewing this prompt does
-not invoke it; the current authoring task is plan-only.
+not invoke it. Execution was subsequently authorized; the
+[implementation handoff](b2-improvements-handoff.md) records actual acceptance
+and pending activation. Do not repeat completed steps.
 
 Read `AGENTS.md`, the replacement plan, `docs/proof-workflow.md`,
 `docs/meta-proof-plan.md`, the B2 retrospective, `docs/gemini-review.md`,
@@ -44,22 +209,7 @@ and record the actual local publication state. Do not push or open a PR unless
 the executing user separately requests it. Stop at the improvement milestone's
 acceptance boundary; B3 requires a later explicit instruction.
 
-We are trying to conserve parent (supervisor, you) context to enable us to run a long
-time unattended. 
 
-So for long-running proof tasks, use subagents for Mathlib searches, independent
-proof attempts, and diagnosis of verbose build failures. Give each worker the
-exact question and relevant files. Ask it to return the result, verification
-command, and any precise obstruction. Keep parallel edits in separate scratch
-files or worktrees.
-
-The parent (supervisor, you) owns the target theorem and verifies candidate proofs \
-in the project. At each verified milestone or decisive failure, update PROGRESS.md with the
-current obligation, evidence, and next step. After context compaction, read
-PROGRESS.md and the target declaration before continuing.
-
-
-## Old prompts - do not use
 
 <a id="current-prompt-b2-workflow-and-lean-tooling"></a>
 
