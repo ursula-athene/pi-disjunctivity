@@ -325,3 +325,240 @@ No substantial complex-analysis API is being formalized without a surviving V
 consumer. The separate [continuation review](agy-reports/m4-continuation-review.md#generating-function-and-phase-checkpoint)
 completed with no findings. It covers these diagnostic claims, not V acceptance;
 the previous checkpoint's review was not reused for this new file.
+
+## Analytic sampling, finite differences and the complementary phase
+
+Extension, 2026-11-26; independent review pending. This fresh-context test
+changes from ordinary generating functions to interpolation of the actual
+samples. It identifies a precise loss at the floor operation, not a new
+visitation theorem. The [shared-residual construction](m4-shared-residuals.md)
+and exact V contract remain unchanged.
+
+With the positive moment density w used above, define
+
+    E(z)=integral_0^1 x^(z+1)*w(x)/(16-x) dx,
+    S(z)=pi*exp(z*log 16)-E(z),  Re z>-9/8.
+
+Near zero the absolute integrand is O(x^(Re z+1/8)); on compact subsets,
+logarithmic factors from differentiation have integrable majorants. This
+proves holomorphy. Expanding the geometric denominator gives E(n)=bbpTail(n)
+and S(n)=S_n. For x>=0,
+
+    abs(E(x+iy))<=E(0),
+    abs(S(x+iy))<=pi*16^x+E(0).                            (1)
+
+There is an exact sampling obstruction. Suppose f is holomorphic on a
+neighborhood of the closed right half-plane, its samples f(n) are bounded,
+and some C>0, a>=0, 0<=b<pi give
+
+    abs(f(x+iy))<=C*exp(a*x+b*abs(y)) for all x>=0.         (2)
+
+Then sum f(n)*z^n continues across z=-1. To prove this, on the sector
+abs(arg(-z))<pi-b use the branch log(-z) and the vertical integral
+
+    I(z)=-(1/(2*pi*i))*integral_(1/2-i infinity)^(1/2+i infinity)
+                          pi*f(s)*(-z)^s/sin(pi*s) ds.
+
+On compact subsets away from zero its integrand decays like
+exp(-(pi-b-abs(arg(-z)))*abs(Im s)); derivatives in z add only polynomial
+factors. Thus I is holomorphic there. For abs(z)<exp(-a), close a clockwise
+rectangle to Re s=M+1/2. The horizontal integrals vanish as their imaginary
+heights tend to infinity, and the right integral is bounded by a constant
+times (exp(a)*abs(z))^(M+1/2). Letting M grow gives
+I(z)=sum_(n>=1)f(n)*z^n by residues. The signs from sin(pi*s) and (-z)^s
+cancel at integers. Therefore f(0)+I continues the power series across -1.
+The real growth rate a is unrestricted; the strict bound concerns b.
+
+Now put p_n=floor S_n and c_n=p_(n+1)-16*p_n. One has
+c_n=floor(16*fract S_n+A(n+1)) in {0,...,16}, since
+0<A(n+1)<=106/819<1. Telescoping gives
+
+    pi=p_0+sum_(n>=0)c_n/16^(n+1).
+
+Irrationality of pi makes c nonperiodic even after deleting any finite prefix.
+The already inspected finite-alphabet theorem therefore gives its generating
+series a natural boundary. If P satisfying (2) interpolated p_n, then
+P(z+1)-16*P(z) would satisfy the same kind of bound and interpolate c_n,
+contradicting continuation across -1. There is also no such interpolator for
+fract S_n: subtracting it from (1) would give a prohibited P. The argument
+applies to every late tail. An entire interpolator of global exponential type
+strictly below pi is a special case of (2).
+
+The source input remains Breuer--Simon, Theorem 5.1, printed pp.12--13,
+[finite-alphabet natural boundaries](https://web.ma.utexas.edu/mp_arc/c/10/10-29.pdf#page=12).
+Carlson's zero-sample uniqueness theorem is not being applied to nonzero
+integer samples; the displayed contour proves the required bridge instead.
+
+An omitted interval does not supply (2). For xi=1/17, the base-16 phases
+alternate between 1/17 and 16/17, avoiding (4/5,9/10). Their generating
+series (1+16z)/(17*(1-z^2)) has a pole at -1, so no interpolator satisfying
+(2) exists. Yet 1/2-(15/34)*cos(pi*z) interpolates them at imaginary type pi.
+This example tests the inference from a hole to a growth bound; it does not
+retain actual BBP forcing or irrationality. The obstruction for the actual
+carries likewise uses only bounded nonperiodicity, not their four-pole
+arithmetic. A BBP-specific interpolation construction under avoidance remains
+missing. Merely raising the allowed type does not supply phase information,
+so that inheritance route is suspended.
+
+The exact finite-difference transformation also does not supply a second
+action on the original orbit closure. For n,k>=0,
+
+    T_(n,k)=Delta^k S_n
+      =16^n*15^k*pi-(-1)^k*I_(n,k),
+    I_(n,k)=integral_0^1 x^(n+1)*(1-x)^k*w(x)/(16-x) dx>0.
+
+For fixed n, I_(n,k) tends to zero by domination. For k>=1,
+T_(n,k)-15*T_(n,k-1)=Delta^(k-1)A(n+1), with sign (-1)^(k-1) and an
+exact rational beta-integral expression. But finite Newton blocks are an
+integer triangular change of the original forward block with diagonal one;
+their inverse is S_(n+j)=sum_(k<=j)binomial(j,k)*T_(n,k). Polynomial/carry
+arguments therefore return to the already tested affine line, with their
+transformed coefficient costs. A base-15 visit also need not transfer: 15/17
+lies in the interval missed by every base-16 phase of 1/17. No claim about
+density of that rational example is made.
+
+Finally, prime compression leaves an exact complementary dynamics. Let p>=7
+be prime and p^2>8(n+1)+6. Let a_n and b_n in {0,...,p-1} be the residues
+of p*S_n and p*A(n+1) modulo p, and put
+
+    R_n=S_n-a_n/p, Atilde_n=A(n+1)-b_n/p,
+    t_n=floor((16*a_n+b_n)/p).
+
+These complementary rationals have denominators prime to p. Reduction of the
+actual recurrence gives a_(n+1)=(16*a_n+b_n) mod p and exactly
+
+    R_(n+1)=16*R_n+Atilde_n+t_n, 0<=t_n<=16.              (3)
+
+If p does not divide the coefficient denominator, b_n=0 and Atilde_n=A(n+1).
+Modulo integers the complementary phase then follows the original expanding
+forced recurrence. There are at most four original p-pole entries in a block
+of p coefficient indices. Between entries the complement is not made constant,
+slow or independent of its entry value by removing the prime component.
+
+The next discriminating test must identify a restriction on the actual entry
+R_n that a proposed prime-block estimate uses. A theorem uniformly treating
+that value as free has not exploited the initialized orbit. Equation (3)
+does not select the positive branch or control the complementary character;
+the exact prefix entry remains necessary. The research log owns the next bound.
+
+The parent read and reconstructed the report, visually inspected both source
+pages, checked all manifest hashes and reran the revised exact checker, exit 0
+with a byte-identical receipt. It checks 96 rational recurrence/carry instances,
+1,088 Newton/beta/sign instances and 4,503 complementary recurrences. These
+are finite diagnostics, not analytic certification or a word search.
+Frozen evidence:
+
+- `/tmp/pi-m4-phase-bridge-report-v3.md`, SHA-256
+  `1b3467b1fb45773886f99b874ccdfd4b8ecdb50592482f0165698e913e2fc667`.
+- `/tmp/pi-m4-phase-bridge-check-v3.py`, SHA-256
+  `e225d4a8457a14519368e3c408f56eae71aa814f8699fe13691943350d14a7b5`.
+- `/tmp/pi-m4-phase-bridge-receipt-v3.json`, SHA-256
+  `bc9d5596c081105af2cddb025c5b1f292cc96d094a7af0a70d50588e89368a02`.
+- `/tmp/pi-m4-phase-bridge-manifest-v4.json`, SHA-256
+  `174ec5c94ec5b44d5b9a7ffdf4a3aad699acc41099880feab1492211be99f726`.
+
+The retained evidence erratum replaces the earlier checker's floating square
+root in trial division by `math.isqrt`; mathematical claims and counts are
+unchanged. It also records when the local source rendering was added. No new
+Lean proof, export or audit is claimed; V and M4 remain open.
+
+## Finite entry data still allow a different avoiding block
+
+This follow-up is under independent review. It resolves the proposed entry
+test while retaining substantially more than a free real starting point.
+For every sufficiently large prime N=p there is a rational x!=S_N such that,
+under the exact forcing x_(j+1)=16*x_j+A(N+j+1), 0<=j<N:
+
+- den(x)=den(S_N) and floor(x)=floor(S_N);
+- p*x_j and p*S_(N+j) have the same residue modulo p for every 0<=j<=N;
+- x_j=S_(N+j) modulo 16^(N+j) as rational 2-adic congruences;
+- every fract(x_j) lies strictly between 18/100 and 21/100.
+
+All relevant p-poles have order at most one, so the second condition preserves
+the complete principal p-component, including at entry events. These statements
+do not preserve global zero initialization, every future reduced denominator,
+or infinite avoidance. They refute only a block guarantee uniform over entries
+with these arithmetic summaries. They say nothing about whether the actual
+entry S_N visits this particular block.
+
+Here is the construction. At N=p>=17 the positive compression has h=1,s=0:
+
+    p*S_p = 752/15 mod p if p=1 mod4,
+    p*S_p = -1040/21 mod p if p=3 mod4.
+
+Both are nonzero in their applicable classes: the odd numerator factor 47
+in the first belongs to the other class, as do 5 and 13 in the second.
+Denominators are p-units. Thus S_N=P/q reduced with q=p*Q, Q odd and p not
+dividing Q. The reviewed denominator theorem gives log Q=6N+o(N). Its prime
+support is at most 8N+6, so omega(Q)=O(N/log N)=o(N), using ordinary PNT.
+
+For an integer t set
+
+    x(t)=S_N+16^N*t/Q=(P+p*16^N*t)/q.                     (4)
+
+Its numerator is always a p-unit. For each prime ell|Q, exactly one residue
+class of t makes that numerator divisible by ell. Avoiding those classes
+preserves the entire reduced denominator q, including all prime powers.
+The propagated difference is exactly
+
+    x_j-S_(N+j)=16^(N+j)*t/Q.                            (5)
+
+This proves the dyadic precision and the principal p-residue equality. The
+bound p^2>16p+6 for p>=17 controls the whole block through N+j=2N.
+
+For the real location, use r_n=1/5-E_n. B3 and positivity give
+0<E_n<1/100 for n>=17, and the exact tail recurrence yields
+
+    16*r_n+A(n+1)=3+r_(n+1).
+
+Let k=floor(S_N), epsilon=1/100. Every x in the open interval centered at
+k+r_N with radius epsilon*16^(-N) has that same integer part. Its j-th
+iterate is
+
+    16^j*k+(16^j-1)/5+r_(N+j)+16^j*e,
+    abs(e)<epsilon*16^(-N).
+
+The first two terms are integers; the last two lie in (18/100,21/100) for
+0<=j<=N. The synthetic target uses the actual tail only existentially; no
+actual tail value or digit block has been searched.
+
+Under (4), this target interval has t-length
+
+    L_N=2*epsilon*Q/16^(2N),
+    log L_N=(6-2*log16)*N+o(N).
+
+In any open real interval of length L, a residue class modulo d contains
+L/d integers with error at most 1, including integer endpoints. CRT and
+inclusion-exclusion over the w=omega(Q) forbidden prime classes therefore give
+
+    G >= L*product_(ell|Q)(1-1/ell)-2^w
+      >= L*2^(-w)-2^w
+
+admissible integers. Because 6>2*log16 and w=o(N), eventually L_N>2*4^w,
+which makes G>1. Excluding t=0 still leaves a choice. Equations (4)-(5) and
+the target interval prove all four properties, with x genuinely different
+from S_N. Reversing the un-fractional recurrence would change S_(-1)=0 by
+t/(16Q); since abs(x-S_N)<1, that change is nonzero and has magnitude below
+1, so it does not preserve the original fractional initialization either.
+
+The actual complementary entry cannot therefore be selected by these size,
+denominator, single-prime and finite dyadic data alone. A useful global-history
+restriction must retain additional coupled information from the initialized
+prefix. Naming that information is not a cancellation estimate. The real
+visitation bridge remains open.
+
+The parent reconstructed the proof and reran the exact checker, exit 0. It
+checks 25 prime-entry constants, 175 denominator equivalences, 11,928
+propagated congruences, 80 open-interval sieve cases and 115 synthetic affine
+identities. It does not construct an actual-tail target numerically; universal
+existence and the real avoidance bounds are paper arguments. Frozen evidence:
+
+- `/tmp/pi-m4-entry-phase-report-v1.md`, SHA-256
+  `675d153986e221d916b1240e3f734576679378ea842f6b951f4943a821ffe99f`.
+- `/tmp/pi-m4-entry-phase-check-v1.py`, SHA-256
+  `774f3357e3ac103e24f82157859a656ef5c132164d52e4e571cb4a67fb746b4c`.
+- `/tmp/pi-m4-entry-phase-receipt-v1.json`, SHA-256
+  `d58665b3293685aebbdb33bd1dbaad4b53785571cb964da9451817c271fd7801`.
+
+No global counterexample, Lean export or M4 acceptance follows. The independent
+review record owns both this extension and the sampling extension's status.

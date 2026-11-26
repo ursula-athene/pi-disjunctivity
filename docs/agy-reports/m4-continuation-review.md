@@ -591,3 +591,40 @@ evidence. No reviewer checker/probe/build, edits, Git mutations, installation,
 services, delegation or Carbon occurred. Subsequent edits record this outcome
 only. No Lean export, universal computational certification or V acceptance
 follows; the analytic discovery pass is outside this review scope.
+
+The shared-tail checkpoint is committed locally as
+`bea51f569ca53ee687c9106cd65395b3a54968a3`. Final staged diff SHA-256
+`0aea98493a1fb4effce3d705d7561746c890b90b82510ad9e40eca5b5a8c4c25`
+and final-validation/post-commit receipts remain in its packet. Final
+86-file documentation and both whitespace checks passed; exact six paths,
+empty index and unchanged protected sources were verified. Unrelated work was
+preserved; no unused infrastructure or substantive simplification was found.
+No push or PR occurred.
+
+## Analytic sampling and complementary recurrence review
+
+Reviewer `/root/generating_review` completed the exact five-path review against
+`bea51f569ca53ee687c9106cd65395b3a54968a3`, frozen diff SHA-256
+`4f3a133fb4fe12c67c3949f1ad862bdc0b2b200d7ed148d772c6d241a79ea4be`.
+Scope: generating-function/entry extensions, proof plan, log, handoff and this
+record. Packet `/tmp/pi-m4-sampling-review-20261126/` retains the full diff,
+scope/evidence hashes, caller checks and complete returned `review.md`.
+**Whole-cycle D/I/Q:** none; no item omitted or deferred.
+
+Coverage included the contour and growth majorants, finite-alphabet hypotheses,
+carry indexing and late tails, Newton transform, exact complementary recurrence,
+and the finite entry construction. The reviewer reconstructed the denominator
+sieve including open endpoints and nonzero perturbation, propagated congruences,
+strict real bounds and loss of both zero-initialization conditions. Both reports
+and checker sources, receipts, manifests and erratum were inspected with matching
+hashes. Breuer--Simon source pages 12--13 were visually inspected. The `isqrt`
+correction and later source-rendering evidence are accurately retained.
+
+Both full adversarial guides and their unchanged hashes were retained under
+AGENTS, the replacement procedure and argument-critic limits. Review was
+read-only inspection and mathematical reconstruction. Exact checker executions,
+the 86-file documentation check and both whitespace checks remain caller
+evidence. No reviewer execution, probe, build, edit, Git mutation, installation,
+service, delegation or Carbon occurred. Subsequent edits only record this
+outcome; no substantive repair was needed. No new Lean export or V follows.
+The Mellin/Poisson and conjugate-state investigations are outside this scope.

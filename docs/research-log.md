@@ -2308,3 +2308,51 @@ negative exponent and mesh adjustment. No defects, improvements or additional
 open questions were reported. Both guides, full reports/checkers and all hashes
 were inspected; successful executions remain caller evidence. No V or new
 Lean theorem follows. The ongoing analytic investigation is outside this scope.
+
+**Analytic sampling outcome:** the actual complex interpolation has bounded
+imaginary growth, but no floor or fractional-part interpolator can satisfy the
+specified uniform bound C*exp(a*x+b*abs(y)) with b<pi. A contour continuation
+argument and the inspected finite-alphabet theorem prove that obstruction.
+It applies generically to bounded nonperiodic carries and supplies no
+four-pole visitation estimate. The period-two model makes the threshold sharp
+for the attempted hole-to-growth inference. This inheritance route is suspended.
+
+The exact Newton transform changes 16^n to 16^n*15^k with a signed moment
+tail; finite blocks are unimodular changes of the earlier forward data, with
+no cylinder-transfer theorem. Splitting off a prime also leaves a complement
+that follows the same expanding forced phase recurrence between pole entries.
+Its exact entry value has not become slowly varying or independent. The
+[extension](m4-generating-functions.md#analytic-sampling-finite-differences-and-the-complementary-phase)
+retains all three limits. Parent paper reconstruction, source-page inspection
+and the revised exact checker passed. The checker now uses integer square
+roots; frozen earlier evidence is preserved with an erratum. Independent review
+completed with no D/I/Q items; no new Lean proof or V is claimed.
+
+**Entry-phase countertest, bounded to 15 minutes:** take a large prime N=p,
+the actual q_N=p*Q, and alternative entries S_N+16^N*t/Q. Test whether their
+actual initial floor, exact denominator, p-principal component and dyadic
+residue modulo 16^N can all be retained while the exact forward forcing avoids
+(4/5,9/10) for N steps. The proposed lattice interval has exponential length
+because 6>2*log16, while an elementary sieve for its exact denominator costs
+only exp(o(N)). The endpoint is a proof or a failed bound, preserving that the
+changed entry is not the globally zero-initialized orbit. This tests the
+specific input needed by a prime-block consumer rather than assuming one.
+
+**Entry-phase outcome:** the construction works for every sufficiently large
+prime N. An open-interval sieve preserves the actual initial denominator and
+floor while a nonzero perturbation retains the entire p-principal sequence
+and dyadic congruences modulo 16^(N+j) throughout N+1 states. Those states all
+lie in (18/100,21/100). It changes the global zero initialization and need not
+preserve future reduced denominators or infinite avoidance. This rules out
+only a block guarantee based uniformly on the retained summaries. Parent
+reconstruction and exact checks passed; the combined sampling/entry extension
+passed independent review with no D/I/Q items. No assertion about an actual
+missing pi word follows.
+
+**Changed real-analytic connection, bounded to 25 minutes:** test a precise
+Mellin/Poisson or Gamma-functional identity for a periodic interval detector
+sampled at pi*16^n. The uncertainty is whether the pi scale supplies any
+actual cancellation, or merely returns the same coupled phase (or a statement
+about 1/pi). Keep contours, regularization, endpoint terms and uniformity
+explicit. The worker must prove or refute one proposed gain with a cylinder
+consumer, not present another transform identity alone as a visitation result.

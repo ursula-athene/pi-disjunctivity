@@ -7,7 +7,7 @@ The [continued research checkpoint](#continued-research-checkpoint--2026-11-26)
 records subsequent work during the user's absence; that checkpoint does not
 terminate the ongoing M4 effort.
 The latest dated continuation is the
-[Shared-tail assessment](#shared-tail-assessment--2026-11-26); read the
+[Sampling assessment](#sampling-assessment--2026-11-26); read the
 research log and actual checkout for subsequent results and current state.
 
 ## Baseline and authorized endpoint
@@ -463,3 +463,26 @@ second-action and generating-function arguments must not be repeated unchanged.
 No production Lean, audit, dependency, pin or trust change has occurred. V, Hpi,
 T and M4 remain open, M5 is excluded, and no push or PR was made. This checkpoint
 continues the authorized research rather than ending it.
+
+## Sampling assessment — 2026-11-26
+
+The shared-tail and negative-branch checkpoint is committed locally as
+`bea51f5`; exact six-path scope, empty index and unchanged protected sources
+were verified after commit. The subsequent
+[sampling extension](m4-generating-functions.md#analytic-sampling-finite-differences-and-the-complementary-phase)
+locates a strict interpolation-growth obstruction at the floor operation.
+The exact Newton transform supplies no original-cylinder transfer, and prime
+removal leaves the complementary expanding recurrence and its actual entry
+phase intact. Parent reconstruction, exact checks and source-page inspection
+passed; independent changed-file review completed with no D/I/Q items.
+
+The entry countertest constructs a finite avoiding block preserving the actual
+initial denominator and floor, complete prime component and high dyadic
+precision. It changes the entry and loses global zero initialization, so it
+does not refute V or describe the actual orbit. This follow-up is included in
+the completed review. A separate bounded Mellin/Poisson connection tests
+pi-specific real transforms and their phase dependence. The research log owns
+the bound and outcome;
+the review record owns scope, evidence and limitations. No production Lean,
+audit, dependency or pin changed. V/Hpi/T/M4 remain open, M5 is excluded, and
+all commits remain local with no push or PR. Research continues.

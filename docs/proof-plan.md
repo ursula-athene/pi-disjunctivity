@@ -669,7 +669,18 @@ extension distinguishes the forward exponent 6 from the backward exponent
 forward results have completed independent review. Full Fourier cancellation
 would prove more than V and is not assumed necessary. The research log owns
 each finite bound, outcome and changed source of ideas. The bridge to positive
-real visits remains unproved.
+real visits remains unproved. The
+[analytic sampling test](m4-generating-functions.md#analytic-sampling-finite-differences-and-the-complementary-phase)
+identifies the exact growth bound lost by floor interpolation and the expanding
+recurrence still obeyed by a removed-prime complement. Its extension and the
+[entry construction](m4-generating-functions.md#finite-entry-data-still-allow-a-different-avoiding-block)
+have completed independent review. The entry construction
+preserves the actual initial floor and denominator, a complete prime component
+and increasing dyadic precision through a finite avoiding block, while changing
+global initialization. These data do not select the actual complementary phase.
+Further estimates must use additional initialized-prefix dependence. A separate
+Mellin/Poisson source connection is testing whether a pi-specific real transform
+retains a usable phase estimate; no cancellation or visitation is assumed.
 
 For the recurrence defined in Step 4, seek a proof of
 
