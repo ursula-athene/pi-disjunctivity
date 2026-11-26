@@ -1630,3 +1630,112 @@ response is not accepted as a completed review. The current override in AGENTS,
 the review procedure and M4 prompt preserves review gates and forbids further
 Carbon calls unless the user changes that instruction. The subagent review
 covered the final sixteen-file correction; M4 research remains authorized.
+
+## 2026-11-26 — M4 continuation: rational forcing structure
+
+Research resumes after local process checkpoints `dacbd3c` and `050e025`, under
+the user's instruction to keep working during their absence and to use Codex
+subagents instead of Carbon for review. Lean `4.37.0-rc1`, cached `lake build`
+(7205 jobs), and `lake env lean Test.lean` passed. The exact V contract and all
+trust/scope constraints remain unchanged.
+
+**Next bounded inquiry:** compare the actual BBP rational forcing with the
+telescoping avoidance model at the level of pole locations, residues and
+rational difference equations. The first reassessment point is an explicit
+structural comparison plus a test of whether the resulting condition says
+anything beyond irrationality/nonperiodicity already known. Do not formalize
+a new API unless an exact visitation consumer appears. A condition that merely
+rules out the old rational model is insufficient; attempt a stronger separating
+example or identify a specific missing implication before changing direction.
+In parallel, seek a precise primary-source connection for that structural gap,
+with source hypotheses intact. This cycle's endpoint is a reassessment, not
+permission to end M4. Findings and the next inquiry will be appended here.
+
+**Checkpoint:** [the rational-forcing assessment](m4-rational-forcing.md) gives
+an explicit positive completely monotone, simple-pole non-coboundary model with
+the same leading asymptotic and uniform avoidance. Its rational weighted value
+keeps it outside a proposed irrational-or-dense conclusion. A null BBP series
+also changes the actual pi representation to a pure arctangent kernel, changing
+the coefficient decay order without changing the represented constant.
+The parent inspected and reran the exact-rational checker successfully; analytic
+arguments remain paper proofs. Independent subagent criticism of the frozen
+assessment is in progress, with both guides and no Carbon invocation.
+
+The source-contract pass found G-function approximation/repetition theorems,
+but did not verify their large-base hypotheses at the actual value. A separate
+Thue–Morse argument shows that even zero normalized repetition growth does not
+imply visits. This changes the next decision: do not build a G-function or
+rational-telescoping Lean API for an inference already separated from V.
+
+**Next bounded inquiry:** inspect a finite-frequency cancellation mechanism
+after the null-series representation change. The first check is whether the
+pure-arctangent/Gaussian factorization actually controls the phases
+`exp(2*pi*i*h*16^n*pi)`, rather than just evaluating the original integral.
+End this check at an exact phase identity or the first unjustified operation;
+compare it with the rational model at h=21 before proposing estimates. In
+parallel, one worker tests the fixed-modulus exponential sums used in a solved
+Stoneham model against BBP's prefix/tail scales. These are discovery questions;
+no cancellation premise is added to V and no positive answer is presumed.
+
+**Second checkpoint:** [the arithmetic-window assessment](m4-fourier-windows.md)
+extracts an unconditional fixed-modulus theorem and its finite-frequency
+consumer, then tests both window length and denominator hypotheses. A fixed
+rational tail correction cannot repair this comparison: its error has a finite
+nonzero algebraic leading term, while a source-dependent PNT argument shows
+exponential corrected odd-denominator growth at every sufficiently large
+anchor. The parent and worker inspected the PNT statement at fixed modulus 4;
+this is not a Lean theorem. The smaller Dirichlet specialization compiled in
+both sessions with only the three permitted axioms. Exact rational checks passed.
+This rejects that repair of that sufficient bound, not actual cancellation or V.
+
+The pure arctangent identity alone evaluates the integral; it supplies no bound
+on `exp(2*pi*i*h*16^n*pi)`. Exponentiating an integral and replacing it by an
+integral of exponentials would be an unjustified operation. Positivity or a
+Gaussian factorization cannot silently supply that step. More fixed-order
+correction computations would repeat the now-resolved scale mismatch, so that
+route is suspended while M4 continues.
+
+**Changed discovery question:** a fresh-context worker constructed a positive
+polynomial detector for the central hole `(1/4,3/4)` and tested whether its
+radix pullback could enter pi's Gaussian-logarithm auxiliary arithmetic.
+The detector is valid, but independent products incur quadratic logarithmic
+height; an exact all-1 digit model defeats the proposed automatic content
+cancellation. The parent inspected and reran its rational checker successfully.
+The next bounded test couples two consecutive prefixes using
+`p_(j+1)=16*p_j+d`: derive the actual resultant/Bézout scaling, check all digit
+cases, and identify whether eliminating the height has also eliminated pi from
+the arithmetic identity. Its endpoint is that identity and its precise consumer
+or missing bridge, not another unquantified request for a better bound.
+
+The first independent subagent review of the rational-forcing assessment found
+no defects or unresolved diagnostic questions. Both improvements were applied:
+H's nonrational-function premise is discharged using its irrational special
+value, and the exact exponential sum and finite-frequency scope are now stated.
+The full frozen response is retained in
+`/tmp/pi-m4-rational-forcing-review-20261126/review.md`; final combined-diff
+review and local checkpoint validation are still pending. No Carbon was used.
+
+**Third checkpoint:** [the auxiliary-product assessment](m4-auxiliary-products.md)
+retains the exact detector and the two-prefix test. The resultant scales as
+`a^16*R_d`, with no vanishing digit cases. A Bézout representation removes a
+from its constant but is an identity for every argument, including the all-1
+avoiding model. Rewriting at `log(i)` yields zero upon subtraction at the
+rational approximant, not a nonzero auxiliary remainder. Parent exact checker
+execution passed. The independent-product and this elimination route are
+suspended; they supply no pi-specific average estimate.
+
+**Next bounded inquiry:** derive the generating functions of the actual
+recurrence and carries, inspect the precise analytic-continuation/natural-boundary
+connection, and test whether avoidance gives an additional restriction. The
+endpoint is the actual implication and its first missing bridge or separating
+example. Neither rational forcing nor a missing cylinder permits assuming the
+carry word is holonomic or automatic. A worker is investigating this while
+the combined partial checkpoint undergoes review; M4 remains active.
+
+Combined checkpoint review completed with no defects, additional improvements
+or unresolved diagnostic questions; the initial two improvements were verified.
+All 38 offline process tests, the 74-file documentation check, working/staged
+whitespace and protected-source preservation checks passed. The
+[review report](agy-reports/m4-continuation-review.md) retains exact scope and
+complete-response pointers. This accepts the diagnostic checkpoint only;
+V remains unproved and the generating-function inquiry continues.

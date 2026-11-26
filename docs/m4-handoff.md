@@ -3,6 +3,9 @@
 This records the initial attempt. Its stopping/restart proposals were superseded
 by the [persistence follow-up](#persistence-follow-up--2026-11-26) below; its
 mathematical results and validation receipts remain historical evidence.
+The [continued research checkpoint](#continued-research-checkpoint--2026-11-26)
+records subsequent work during the user's absence; that checkpoint does not
+terminate the ongoing M4 effort.
 
 ## Baseline and authorized endpoint
 
@@ -166,3 +169,53 @@ Post-commit necessity inspection found no unneeded proof/tool infrastructure or
 substantive simplification. The report records complete subagent review, the
 user-directed Carbon stop, checks and the separate factual receipt commit.
 This checkpoint does not end M4 research.
+
+## Continued research checkpoint — 2026-11-26
+
+Baseline `050e025aa6d1b4f65fb268add815d388255abebc`; branch remains
+`feature/m4-universal-visitation`. The user directed continued proof work while
+away and replacement of Carbon with Codex reviewers. The process correction
+was followed by further mathematical cycles, with failed approaches changed
+at their checkpoints. This is a partial research checkpoint, not a stopping
+decision or M4 acceptance.
+
+The exact V statement, initialization and recurrence/orbit offset are unchanged.
+B1–B3 and conditional B4/P3 remain the checked frontier. V and its unconditional
+B4 consumer remain missing; Hπ, T and final-conjecture assembly are still open.
+No production Lean, audit, dependency, pin, permission or tool configuration
+changed. M5, push and PR remain outside the invoked scope.
+
+New evidence is retained in three assessments:
+
+- [Rational forcing](m4-rational-forcing.md): a stronger avoiding model defeats
+  the proposed non-coboundary/simple-pole shortcut; null-series changes expose
+  representation-dependent features. G-function source hypotheses and a
+  separate repetition counterexample prevent an unsupported visitation inference.
+- [Arithmetic windows](m4-fourier-windows.md): a concrete fixed-modulus theorem
+  needs windows unavailable from the BBP freezing estimate. Every fixed rational
+  tail correction retains a finite nonzero algebraic error; a source-dependent
+  PNT argument gives exponential corrected odd denominators at every large anchor.
+- [Auxiliary products](m4-auxiliary-products.md): a valid interval detector does
+  not overcome the height cost of separate factors. Two-prefix resultants remove
+  a scale but eliminate the pi-specific information as well.
+
+The universal new claims in those notes are paper mathematics. The parent
+inspected and reran their exact-rational checkers, all exit 0. The small pinned
+Dirichlet specialization also compiled with only the three allowed axioms; it
+does not formalize the PNT or denominator/asymptotic arguments. Baseline Lean
+build and Test.lean audits passed on the unchanged production sources.
+The [continuation review](agy-reports/m4-continuation-review.md) owns review
+scope, dispositions, final documentation checks and the local checkpoint receipt.
+Verify current Git state rather than treating this dated snapshot as live status.
+Unrelated Obsidian configuration, notes and papers remain outside the work.
+
+**Continuation question at this checkpoint:** investigate the generating
+functions of the actual recurrence and integer carries. Derive their exact
+identity, inspect a precise natural-boundary theorem, and test whether interval
+avoidance adds any analytic restriction that rational BBP forcing can contradict.
+Do not assume carries are ordinary digits, that a forbidden word makes a sequence
+automatic, or that an analytic forcing makes the solution D-finite. The first
+endpoint is the actual analytic consequence and a separating model or an exact
+remaining bridge. This investigation is already authorized and underway;
+the user need not supply a new estimate or renew permission. Consult the latest
+research-log entry for subsequent findings before resuming.
