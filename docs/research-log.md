@@ -2218,3 +2218,47 @@ consumer should be no stronger than needed for an arbitrary cylinder visit
 unless a stronger estimate has a concrete advantage. A forbidden-language
 automaton must not be mistaken for a finite-state actual carry process. This
 is a change of source of ideas under the meta-plan, not another permission gate.
+
+**Joint forward outcome:** exact old-prime valuations survive polynomial
+restriction to a short forward block, with original coefficient height and
+leading-term cancellation accounted for. Hankel determinants supply nonzero
+affine dependence and strict signs, but finite carry-language polynomial
+equations are constant on that same forward line. The missing information is
+the inequalities selecting the actual floors. The
+[assessment](m4-forward-polynomials.md) records the scope; parent reconstruction
+and the immutable exact checker passed. No V consumer or production Lean follows.
+
+**Changed arithmetic test, bounded to 25 minutes:** after that obstruction,
+test whether multiple original poles at a prime combine into a usable exact
+state relation. The endpoint is an identity retaining incomplete blocks, a
+proved survival bound or a concrete cancellation, and a specific consumer with
+its normalization costs. This uses the actual rational four-pole forcing rather
+than a freely chosen residue system.
+
+**Prime-compression outcome:** the two sign states give eventual survival on
+every fixed linear prime scale. Together with the support upper bound and
+fixed-progression PNT, they prove log den(S_n)=6n+o(n) at paper level. The actual
+cancellation n=9,p=19 prevents a false square-root-scale claim. Exact evaluated
+divisibility q_L | alpha'*D_bc*V strengthens the primitive Pade height tradeoff
+and rules out the specified convex-hull interval/modulus certificate, retaining
+its degree and height restrictions. Parent reconstruction, source-page inspection
+and 40,774 exact compression cases passed. The [assessment](m4-prime-compression.md)
+and forward note passed combined independent review. No normality, V or new
+kernel theorem is asserted.
+
+**Next discriminating test, bounded to 25 minutes:** keep two signed residuals
+and the same nonconvex omitted-digit tail, rather than independent tail intervals.
+First classify their exact joint lattice after primitive normalization and ask
+whether it provides information beyond one scalar enclosure. Start with one
+explicit forbidden word as a test, retaining the full arbitrary-word V target.
+Compare with a genuinely nonlinear residual only if the shared-tail calculation
+identifies a concrete advantage. The worker must retain coefficient costs,
+correlations and the first missing bridge; no finite pi digit search or carry
+equation already shown constant counts as a new consumer.
+
+**Arithmetic review outcome:** no defects or additional open questions were
+found. I1 repaired the handoff's latest-continuation pointer; the reviewer
+inspected its exact one-line delta and resolved it. Both guides, full source
+reports/checkers and all hashes were inspected; successful executions remain
+caller evidence. The full response and six-path scope are retained in the
+review packet. These are reviewed paper diagnostics, not M4 acceptance.

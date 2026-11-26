@@ -652,10 +652,18 @@ has no eventual rational forcing representation or polynomial coefficient height
 The exact local/global character comparison identifies an uncontrolled joint
 odd/dyadic weight. The actual negative branch retains the rational forcing and
 fresh primes while real characters concentrate, so a transfer must use forward
-evolution essentially. A fresh recovery pass now seeks a weaker finite-cylinder
-consumer using that exact global structure; full Fourier cancellation would
-prove more than V and is not assumed necessary. The research log owns each
-finite bound and outcome. The bridge to positive real visits remains unproved.
+evolution essentially. The [joint forward test](m4-forward-polynomials.md)
+retains historical denominator primes in nonlinear expressions, but the natural
+finite carry equations eliminate the initial state exactly; the floor-selection
+inequalities remain essential. The [prime-compression argument](m4-prime-compression.md)
+uses the actual four poles to prove log den(S_n)=6n+o(n), including evaluated
+cancellation. Its primitive Pade corollary excludes interval-plus-modulus
+certificates in the stated degree and height range, even after gcd reduction.
+The next test retains the nonconvex tail and its dependence across coupled
+residuals. Full Fourier cancellation would prove more than V and is not assumed
+necessary. The research log owns each finite bound and outcome. These paper
+arguments passed independent review; the bridge to positive real visits
+remains unproved.
 
 For the recurrence defined in Step 4, seek a proof of
 

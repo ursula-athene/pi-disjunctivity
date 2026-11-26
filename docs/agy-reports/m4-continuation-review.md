@@ -509,3 +509,42 @@ Carbon. Successful finite runs remain caller evidence. The 83-file documentation
 and whitespace checks passed before review; no production Lean, audit or pin
 changed. The forward visitation estimate and V/M4 remain open. Subsequent edits
 only record this outcome; the new multi-anchor inquiry is outside this scope.
+
+The forward-branch extension is committed locally as
+`823844ed30fbf9ea738c830b7a6d5533e64cc4af`. Final staged diff SHA-256
+`363419e376a8ebac1a38dfc727a2d44d9b2e9cc1c1d2c957c7bf8ca87ac2a2d2`
+and final-validation/post-commit receipts remain in its packet. The final
+83-file documentation and whitespace checks passed; exact scope, empty index
+and unchanged protected sources were verified. Unrelated work was preserved;
+no unused infrastructure or substantive simplification was found. No push or PR.
+
+## Joint forward and prime-compression review
+
+Reviewer `/root/generating_review` completed the six-path review against
+`823844ed30fbf9ea738c830b7a6d5533e64cc4af`, frozen diff SHA-256
+`8828dfc0d9d8165268987ea73a08d8eb12f7c2bac9ede0b7256b60211712329b`.
+Scope: the two new arithmetic assessments, proof plan, research log, handoff
+and this record. Packet `/tmp/pi-m4-prime-review-20261126/` retains scope,
+full diff, caller evidence and the complete returned `review.md`.
+
+**Whole-cycle D/I/Q dispositions:** no defects or additional open questions.
+I1 corrected the handoff's latest-continuation pointer. The reviewer inspected
+and resolved the one-line delta, SHA-256
+`232e205cae3504b16948e44421821f6a3f4b3fe1cf1f97ecfb7cf082829a9dc0`.
+No item was omitted or deferred. Subsequent edits record factual review outcomes.
+
+Coverage included the full reports/checker sources, manifests and receipts,
+exact endpoint compression, fixed-sign coefficients, the fixed-H limiting
+argument, support and prime-power bounds, the actual p=19 cancellation, and
+evaluated primitive divisibility with its restricted consumer. The forward
+polynomial height/valuation argument, Hankel signs and carry-equation limit
+were reconstructed. Sutherland's PNT page was visually checked; only fixed
+modulus 4 is used. Both full adversarial guides were retained and their unchanged
+hashes verified under the replacement procedure and argument-critic limits.
+
+Review was read-only inspection and mathematical reconstruction; exact checker
+executions, the 85-file documentation check and both whitespace checks are
+caller evidence. No reviewer edits, builds, probes, execution, installations,
+services, Git mutations, delegation or Carbon occurred. No production Lean,
+audit or pin changed; no paper result is a Lean export or M4 acceptance.
+The ongoing shared-tail and negative-branch tests are outside this frozen scope.

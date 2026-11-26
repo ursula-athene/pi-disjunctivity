@@ -7,7 +7,7 @@ The [continued research checkpoint](#continued-research-checkpoint--2026-11-26)
 records subsequent work during the user's absence; that checkpoint does not
 terminate the ongoing M4 effort.
 The latest dated continuation is the
-[Forward-branch assessment](#forward-branch-assessment--2026-11-26); read the
+[Forward arithmetic assessment](#forward-arithmetic-assessment--2026-11-26); read the
 research log and actual checkout for subsequent results and current state.
 
 ## Baseline and authorized endpoint
@@ -413,3 +413,28 @@ A fresh-context recovery is examining a finite-cylinder consumer using global
 rational forcing and forward iteration. The completed diagnostics must not be
 repeated as if they supplied that consumer. Research remains authorized and
 ongoing, with V/Hpi/T/M4 open and no push, PR or M5 assembly.
+
+## Forward arithmetic assessment — 2026-11-26
+
+The previous extensions are committed locally as `823844e`, with exact reviewed
+scope, empty index and protected sources verified after commit. The new
+[joint polynomial note](m4-forward-polynomials.md) proves an arithmetic
+restriction on nonconstant forward expressions and identifies the floor
+inequalities as the information lost by polynomial carry equations. The
+[prime-compression note](m4-prime-compression.md) proves the actual reduced
+denominator asymptotic log q_n=6n+o(n) at paper level. Its primitive evaluation
+corollary closes only the specified degree-two interval/modulus argument in
+the stated height range, with nonconvex and joint information left open.
+
+Parent exact runs, paper reconstruction and PNT source-page inspection passed;
+combined independent review completed with the stale summary pointer corrected.
+No production Lean, audit, pin or
+dependency changed. The [review record](agy-reports/m4-continuation-review.md)
+owns exact scope, hashes and dispositions. Unrelated Obsidian/notes/papers
+remain preserved; no push or PR occurred.
+
+The ongoing bounded inquiry tests whether two primitive signed residuals with
+one shared omitted-digit tail provide a stronger joint constraint. It must
+retain their correlations and coefficient costs. The research log owns the
+bound and outcome. This is an internal checkpoint, not an interruption or
+acceptance: the unconditional V theorem, Hpi, T and M4 remain open; M5 is excluded.
