@@ -644,10 +644,15 @@ The [Pade residual](m4-pade-residues.md) and
 gain, exact signed formula and primitive denominator/height tradeoff, but no
 compatible selection theorem or visit. The same residue prescription cannot
 be repaired solely by retaining the sign and interval hull of its tail.
-Current discovery tests the actual backward 2-adic interpolation and reflected
-anchor, including the missing bridge from congruences to real fractional parts.
+The [backward 2-adic interpolation](m4-two-adic-reflection.md) proves a zero
+reflected anchor and exact residue permutations for the actual prefixes.
+An [analytic avoiding model](m4-two-adic-models.md) retains these, irrationality
+and exponential prefix heights, but drops the rational forcing and its
+polynomial coefficient height. Current discovery asks whether that actual
+rational structure can control the odd-denominator factors in a local/global
+character comparison. The bridge to real fractional parts remains unproved.
 The research log owns each finite bound and outcome; no visitation gain from
-that representation is assumed in the roadmap.
+the local invariant alone is assumed in the roadmap.
 
 For the recurrence defined in Step 4, seek a proof of
 

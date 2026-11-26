@@ -426,3 +426,43 @@ Carbon or delegation. Exact finite checks remain caller evidence, with no
 universal certification inferred. The 81-file documentation and whitespace
 checks passed before review. Production Lean, audits and pins remain unchanged;
 V and M4 remain incomplete.
+
+The signed-evaluation checkpoint was committed locally as
+`d53f350bd786671c1ceb621593ccb86a21b37b26`. Final staged diff SHA-256
+`b7316b7a0de83dd63ac79a06804f820e1cfc8fbfb5da6d3bd8642e81bf46389e`
+and final-validation/post-commit receipts remain in its packet. The final
+81-file documentation and both whitespace checks passed. Exact reviewed paths,
+empty index and unchanged protected sources were verified, with unrelated work
+preserved. No unused infrastructure or substantive simplification was found;
+all commits remain local, with no push or PR.
+
+## 2-adic invariant and models review
+
+Reviewer `/root/generating_review` completed the six-path review against
+`d53f350bd786671c1ceb621593ccb86a21b37b26`, frozen diff SHA-256
+`e0179116f69afa1eb30527a6baa7376494bb4cf50915ed2823166ce698c94e0b`.
+Scope: both new 2-adic assessments, proof plan, log, handoff and this record.
+Packet `/tmp/pi-m4-two-adic-review-20261126/` retains the full diff, manifest,
+caller evidence and complete `review.md`.
+
+**Whole-cycle D/I/Q dispositions:** D1 identified an overbroad Newton-basis
+vanishing statement. The parent repaired k<n to 0<=k<n, keeping the separate
+root at -1. The reviewer inspected the exact one-line delta, SHA-256
+`9f3476ab33f93d679dab7acb91f647196086a079558952fcac09e138ff989967`,
+and explicitly resolved D1. The frozen original analytic report retains the
+historical sentence and must be read with this correction. No other defects,
+improvements or additional open questions were found. No item was omitted
+or deferred; subsequent changes record factual outcomes only.
+
+Coverage included all three full reports and checker sources, manifest hashes,
+actual 2-adic analyticity and the convergent reflected-zero primitive, exact
+prefix and reflected valuations, both distinct model constructions and their
+real avoidance/height claims. Cohen's printed p.117 was visually inspected;
+its role is confined to the final logarithm cancellation. Both full adversarial
+guides and their unchanged hashes were retained under the replacement procedure.
+
+Review was read-only without checker execution, builds, probes, edits, services,
+installations, Git mutations, delegation or Carbon. The successful exact runs
+remain caller evidence; finite cases do not prove the universal statements.
+The 83-file documentation and whitespace checks passed before review. No Lean
+export, changed trust assumption, visitation theorem or M4 acceptance is claimed.

@@ -7,7 +7,7 @@ The [continued research checkpoint](#continued-research-checkpoint--2026-11-26)
 records subsequent work during the user's absence; that checkpoint does not
 terminate the ongoing M4 effort.
 The latest dated continuation is the
-[Signed-evaluation assessment](#signed-evaluation-assessment--2026-11-26); read the
+[2-adic assessment](#2-adic-assessment--2026-11-26); read the
 research log and actual checkout for subsequent results and current state.
 
 ## Baseline and authorized endpoint
@@ -378,3 +378,20 @@ The new inquiry uses backward 2-adic interpolation of the actual rational
 coefficient. Its first paper invariant and an analytic avoiding-model test
 are ongoing and outside this checkpoint's mathematical scope. The research log
 owns their bounds and next questions. No Carbon, push or PR has occurred.
+
+## 2-adic assessment — 2026-11-26
+
+The signed-evaluation checkpoint is committed locally as `d53f350`; all five
+reviewed paths, empty index and unchanged protected sources were verified.
+The [new actual invariant](m4-two-adic-reflection.md) proves a zero reflected
+anchor and exact residue permutations of rational BBP prefixes. The companion
+[models](m4-two-adic-models.md) show why those properties alone still cannot
+supply real interval visits, preserving the stronger analytic model's losses
+of rational forcing, polynomial coefficient height and negative rational values.
+Parent exact checks passed; independent changed-file review is complete after
+restricting the binomial vanishing statement to nonnegative prior inputs.
+
+The active question is a local/global character comparison using the actual
+four-pole formula to control odd-denominator factors. Its estimate is not yet
+available. V, Hpi, T and M4 remain open; no production Lean was changed and M5
+is excluded. This checkpoint does not terminate the ongoing research.

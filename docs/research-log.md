@@ -2161,3 +2161,30 @@ while producing an avoiding real orbit. The proposed Newton-binomial model
 drops the exact rational forcing function; its role is to isolate that remaining
 input, not to refute the BBP target. This investigation continues while the
 completed signed calculation is reviewed.
+
+**2-adic outcome:** the actual reflected sum vanishes in Q_2, proved by an
+explicit convergent formal log/arctangent identity. Thus B(n)=S_n exactly;
+v_2(S_m-S_n)=v_2(m-n), v_2(S_n)=v_2(n+1), and every residue block is a
+permutation modulo each power of two. The parent reconstructed the proof,
+visually checked Cohen's supporting logarithm lemma and reran the exact checker.
+The [assessment](m4-two-adic-reflection.md) retains the missing real bridge.
+
+**Analytic countertest outcome:** a Newton-binomial interpolation preserves
+the zero reflected anchor, analytic isometry, irrational weighted real sum,
+initial forcing, leading decay and exponential rational-prefix heights, while
+all recurrence values avoid (4/5,9/10). It loses the exact rational function,
+polynomial height of individual forcing values, real complete monotonicity and
+rationality at negative integers. The simpler rational/CM model preserves the
+isometry but loses the zero anchor and irrationality. Both proofs and exact
+checks are in the [model assessment](m4-two-adic-models.md); independent review
+of the combined checkpoint is complete after one domain correction: the
+binomial basis vanishes at nonnegative prior inputs, with -1 treated separately.
+No V or new Lean theorem is claimed.
+
+**Next cycle, bounded to 30 minutes:** work backward from e(h*S_n) or an omitted
+hexadecimal cylinder. Derive an actual local/global character relation retaining
+the odd denominators, and test whether the full rational four-pole structure
+controls their contribution. The worker must identify a nontrivial consumer
+estimate or precise missing bridge, distinguish the analytic countermodel, and
+avoid repeating complete-period or free-numerator arguments. The new positive
+invariant survives; its insufficiency alone calls for a changed question.
