@@ -20,7 +20,9 @@ scope with the superseded prompt below.
 development is out of scope.** B2 is already complete and is used only as
 fixed test material. Do not solve B2 again, change production Lean or audits,
 begin B3, or start visitation research. Saving or reviewing this prompt does
-not invoke it; the current authoring task is plan-only.
+not invoke it. Execution was subsequently authorized; the
+[implementation handoff](b2-improvements-handoff.md) records actual acceptance
+and pending activation. Do not repeat completed steps.
 
 Read `AGENTS.md`, the replacement plan, `docs/proof-workflow.md`,
 `docs/meta-proof-plan.md`, the B2 retrospective, `docs/gemini-review.md`,

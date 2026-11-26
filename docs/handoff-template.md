@@ -30,6 +30,10 @@ handoff describes its checkout at that time, not a future authorization.
   duplicating them; include those details here only if no separate report exists.
   Distinguish caller checks from reviewer-performed verification.
 - Post-commit necessity review and any actual follow-up commits.
+- For tool evaluations, distinguish installed, configured, protocol-tested, and
+  available-and-tested in the actual host; record the source/version, measured
+  case benefit and cost, adopt/defer/reject decision, rollback/tested fallback,
+  and any exact pending activation step.
 - Explicit limitations: checks not run, unavailable tooling, incomplete review,
   temporary capture retention, remote CI or clean-environment status.
 

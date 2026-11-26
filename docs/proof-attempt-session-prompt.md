@@ -4,7 +4,9 @@ Use only <!-- current-prompt --> [Current prompt: B2 improvement plan](session-p
 The [replacement plan](b2-process-tool-improvement-plan.md) specifies process
 improvements and bounded tool/skill evaluation before moving to B3.
 B2 proof development is out of scope; completed B2 is test material only.
-This session writes the plan; saving the prompt does not begin implementation.
+The prompt was invoked for the bounded implementation; see the
+[implementation handoff](b2-improvements-handoff.md) before resuming.
+Saving a prompt alone does not begin work.
 B3 and visitation research remain outside the improvement milestone's scope.
 Read [the B2 handoff](b2-handoff.md) for the completed mathematical milestone's
 review, commit, publication, and necessity-review acceptance.

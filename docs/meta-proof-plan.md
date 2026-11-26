@@ -10,6 +10,32 @@ standing instruction to repeat it. Outcomes are in the [research log](research-l
 Next session: <!-- current-prompt --> [Current prompt](session-prompts.md#current-prompt-b2-improvement-plan)
 is the execution entry, only when invoked by the user.
 
+## B2 improvement evaluation — 2026-11-25
+
+The invoked P0–P5 cycle uses baseline `e83580e` on the user-prepared
+`feature/b2-process-and-tooling-improvements`. The
+[handoff](b2-improvements-handoff.md) owns acceptance/publication; the
+[evaluation](b2-tool-evaluation.md) owns tool evidence and rollback. B2 is fixed
+test material; no production Lean, audit, pin, or manifest changes are included.
+The user subsequently authorized pushes on this branch, with no PR.
+
+Retain the signature/index checks, manual semantic status pass, bounded reads,
+self-contained review packets, and I6's separate CLI-log inspection. The stale
+fixture passed link checking but failed the manual status comparison. The LSP
+found a generated declaration via its symbol index and returned useful local
+goals/diagnostics; actual host installation/configuration was denied, so adoption
+is deferred and shell remains default. Selected external skills added no new
+proof output in the known replay and remain deferred. Two small original skill
+sources passed same-session seeded argument/contract cases and a focused retest;
+retain them for explicit manual use, with catalog adoption deferred. No blind
+skill-performance or general productivity claim follows.
+
+Reject the redundant lemma-lab wrapper and broad frameworks for this endpoint.
+Defer remote search, Sage, and elaboration tuning until the named triggers in
+the evaluation arise. These decisions do not advance B3 or visitation. Keep
+future evidence in the existing handoff/review records rather than adding more
+interim execution-status sections here (P1 review I4).
+
 ## Carbon review guidance adoption — 2026-11-25
 
 A later user request explicitly authorized adopting the Carbon review-guidance
@@ -36,8 +62,8 @@ There is no finding quota or claim that a low finding count demonstrates quality
 See the [review-guidance handoff](carbon-review-improvements-handoff.md) for
 actual validation, review items/dispositions, and publication evidence. No Lean
 proof, tool installation, LSP pilot, skill activation, or dependency changed.
-The rest of the B2 improvement plan remains future work; reconcile this adopted
-subset when implementing P1 rather than treating all of P1 as complete.
+At that scoped endpoint the rest of the B2 improvement plan remained future
+work. The later evaluation above reconciles that adoption without repeating it.
 
 ## B2 improvement plan — proposed 2026-11-25
 
@@ -146,8 +172,11 @@ Deferred [Carbon review item Q2](agy-reports/carbon-review-improvements-review.m
 in the next two authorized milestone reviews, retain per-invocation wall time,
 capture token counts/budgets, and D/I/Q dispositions with concrete usefulness or
 boilerplate examples. Use those observations to consider trimming the reporting
-burden; they do not establish a detection rate. Revisit during remaining P1
-implementation and its next retrospective, without extra benchmark-only runs.
+burden; they do not establish a detection rate. The [improvement review](agy-reports/b2-improvements-review.md) and
+[retrospective](retrospectives/retrospective-2026-11-25-b2-improvements.md) record
+P1/final observations within this first implementation milestone. Retain the
+next authorized milestone as the second milestone sample; do not add benchmark
+reviews or infer effectiveness from these counts.
 
 ## B4/P3 workflow retrospective — 2026-11-25 snapshot
 

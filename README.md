@@ -32,8 +32,10 @@ and handoffs. The [formulation review](docs/formulation-review.md) and
 [follow-up](docs/review-follow-up.md) record the semantic review of the problem.
 
 Next session: <!-- current-prompt --> [Current prompt](docs/session-prompts.md#current-prompt-b2-improvement-plan)
-implements the [process/tool improvement plan](docs/b2-process-tool-improvement-plan.md)
-before B3, only when invoked. B2 proof development is out of scope.
+tracks the [process/tool improvement plan](docs/b2-process-tool-improvement-plan.md)
+before B3. See the [implementation handoff](docs/b2-improvements-handoff.md) for
+acceptance and deferred host activation; do not repeat completed work.
+B2 proof development is out of scope.
 Read [AGENTS.md](AGENTS.md) and the
 [workflow](docs/proof-workflow.md) before implementation.
 
