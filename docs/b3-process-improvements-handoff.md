@@ -37,7 +37,7 @@ continue, without claiming a measured speedup or detection rate.
 - [x] Implement the seven recommendations and meta-plan rewrite.
 - [x] Validate process tests, documentation, whitespace and semantic alignment.
 - [x] Complete Carbon review, inspect captures/logs and disposition all items.
-- [ ] Inspect committed scope for necessity and record publication state.
+- [x] Inspect committed scope for necessity and record publication state.
 
 Caller validation: `uv --no-cache run --locked --offline python -m unittest
 discover -s tests -v` passed all 38 tests; the same prefix with
@@ -83,7 +83,7 @@ heartbeat guarantee follows. No retry or missing capture occurred.
 | I1, nonblocking | Remove the 45–60-second heartbeat target; retain boundary updates and caller polling. | Implemented: both templates request periodic meaningful-boundary/pre-analysis updates without artificial splitting. The user's progress-update requirement remains. The claimed internal timer mechanism was not independently verified; observed silence suffices to avoid promising a cadence. |
 | I2, nonblocking | Guard against conditional wrappers posing as progress, and supply a decision for inconclusive bounds. | Implemented in the decision table and recovery protocol. Conditional probes can diagnose a route but do not move the frontier merely by repackaging its open premise. |
 | I3, nonblocking | Reduce routine durable transcription of granular events, budgets and separate unchanged-guide hashes. | Implemented: compact receipts retain scope/model/conversation, wall time, capture/log outcome, guide revision, dispositions and retention limits; full raw capture/inspection remains mandatory. Anomalies and uncommitted guides retain relevant detail. |
-| Q1, acceptance-blocking until finalization | Populate receipts/dispositions, inspect real-review persistence, complete commit/necessity review and final checks. | Both review receipts and dispositions are complete; final commit/necessity receipts follow below. |
+| Q1, acceptance-blocking until finalization | Populate receipts/dispositions, inspect real-review persistence, complete commit/necessity review and final checks. | Resolved: both review receipts, dispositions, final checks and commit/necessity inspection are recorded here. |
 | I4, follow-up nonblocking | Give TRIZ ideation workers concrete statements/structure/counterexample checks/bridges, with parent filtering before Carbon; suggested at most one surviving candidate. | Implemented as a minor clarification of the existing bounded-role and handoff protocol. The parent sends a focused candidate, with both guides for actual mathematical arguments. Unknown bridges remain explicit. A blanket numerical cap is declined because a discriminating comparison may need two candidates; breadth still needs a concrete purpose and bound. No new review cadence, agents or research are introduced. |
 
 Focused follow-up reviewed complete-diff SHA-256
@@ -145,6 +145,16 @@ proof cycle is run merely to exercise the new prose. Benefits and remaining
 friction should be assessed during subsequent authorized work.
 
 ## Restart and remaining obligations
+
+Implementation commit: `cfa0c4c58d29bf9b5ce4e0f4676270e896a9d20b`.
+Post-commit inspection checked the seven-file scope, committed meta-plan and
+procedure diffs for necessity, duplication and preserved contracts. No further
+substantive simplification was justified; this receipt is the only follow-up.
+Identify its commit with `git log -1 --format=%H -- docs/b3-process-improvements-handoff.md`.
+Both commits are local only, with no push or PR. Final documentation checks
+(64 files) and working/staged whitespace checks passed. The Obsidian workspace
+changed externally during the task and was preserved; other pre-existing files
+still matched the task-start receipt. No unrelated path was staged or committed.
 
 Use the [current entry](proof-attempt-session-prompt.md) and
 [proof plan](proof-plan.md); verify actual checkout state before resuming.
