@@ -7,15 +7,14 @@ This is the mathematical roadmap and the owner of exact milestone contracts.
 The [blueprint](proof-blueprint.md) indexes checked declarations, dependencies,
 and unproved hypotheses; dated validation and publication evidence live in the
 [research log](research-log.md) and linked handoffs. Follow the
-[workflow](proof-workflow.md) for execution.
+[workflow](proof-workflow.md) for execution and the [meta-plan](meta-proof-plan.md)
+for how evidence should change this plan and the proving process.
 
-Next session: <!-- current-prompt --> [Current prompt: B3 tail control](session-prompts.md#current-prompt-b3-tail-control)
-authorizes the bounded B3 contract below only when invoked. B1 and B2 are
-complete, checked and reviewed; the [tooling milestone](b2-improvements-handoff.md)
-is complete with its recorded limits. Use the installed tools without repeating
-those milestones.
-B3 and universal visitation remain unproved; the conditional
-B4/P3 results retain their hypotheses below and in the blueprint.
+Next session: <!-- current-prompt --> [Current prompt: M4 Universal Visitation](session-prompts.md#current-prompt-m4-universal-visitation)
+defines the full Step 5 research and acceptance scope, authorized when invoked.
+Saving it starts no research. B1–B3 and the [tooling milestone](b2-improvements-handoff.md)
+are complete; [the B3 handoff](b3-handoff.md) records acceptance/publication.
+Universal visitation remains open, and B4/P3 retain their hypotheses.
 
 The goal is to prove `PiDisjunctivity.PiHexadecimalDisjunctivity`: every finite
 hexadecimal word occurs contiguously after the radix point of `Real.pi`,
@@ -46,7 +45,7 @@ still take substantial work to implement and check in Lean.
 | **1. Verified foundation** | Solved. | Already proved and checked in Lean, including the digit–interval and orbit equivalences. |
 | **2. Isolate interval hitting** | An elementary consequence of the existing equivalences that expresses exactly what remains to prove. | Completed by the bounded pilot in `OrbitCriteria.lean`: a general equivalence and a conditional π reduction, both audited. |
 | **3. Prove the BBP identity** | A classical, established theorem with published proofs. | Complete: `hasSum_bbpCoeff` proves the full `HasSum ... Real.pi` identity, using the checked term integral, pointwise series/domination, interchange, rational algebra, derivative, and FTC evaluation. Independent local proofs preserve the external-code attribution boundary. |
-| **4. Connect BBP to the orbit** | The identities, tail estimates, and conditional transfer argument have standard proof methods. This plan supplies the mathematical outline. | B4, the general conditional transfer, is checked. B2 split, recurrence/range, and exact orbit identity are checked. B2 acceptance is complete; B3 tail estimates remain unimplemented. |
+| **4. Connect BBP to the orbit** | The identities, tail estimates, and conditional transfer argument have standard proof methods. This plan supplies the mathematical outline. | B4, the general conditional transfer, is checked. B2 split, recurrence/range, and exact orbit identity are checked. B3 coefficient/tail bounds and decay are checked; B3 acceptance evidence is in its handoff. The conditional transfer still requires late visits. |
 | **5. Prove universal visitation** | Open mathematical research; no complete proof method is supplied. | The decisive missing argument about this particular recurrence. |
 
 The qualification for Step 4 is that it proves an implication:
@@ -63,7 +62,7 @@ producing them is Step 5.
 1       Completed and checked.
 2       Completed and checked; the π hitting hypothesis is still open.
 3       Completed and checked: the full BBP HasSum identity.
-4       General transfer and B2 orbit bridge checked; B3 tails remain unformalized.
+4       General transfer, B2 orbit bridge and B3 tail control checked; visitation is still required.
 5       Open mathematical research; no complete proof method supplied.
 ```
 
@@ -508,16 +507,47 @@ checkpoint and the completed full-milestone review. Post-commit necessity
 inspection found no justified substantive simplification; final receipt details
 are in the handoff. B2 does not discharge B3 or V.
 
-### Next bounded task: B3 tail control
+<a id="next-bounded-task-b3-tail-control"></a>
 
-**Proposed only; not started.** Verify and formalize the existing Step 4 bounds
+### B3 tail control
+
+**Complete, checked, reviewed, committed, pushed and inspected for necessity, 2026-11-25.** Starting from `ae4a0e3` on
+`feature/attempt-08-b3`, preserve unrelated Obsidian, notes and papers.
+The invoked B3 prompt authorized this sequence, recorded before implementation:
+
+1. Verify the coefficient estimate using positive denominators and the triangle
+   inequality; probe its full root-import interface before tail composition.
+2. Reuse `hasSum_bbpTail`, bound each term by the coefficient bound at `n+1`
+   times `16^(-(r+1))`, and evaluate the summable geometric majorant as `1/15`.
+   Check this substantial estimate block at an intermediate Carbon review.
+3. Prove decay by squeezing with the explicit bound; probe the B4 input with
+   its arbitrarily-late-visitation premise retained. Extend exact type, actual
+   axiom, and theorem-instantiating zero/first-index audits.
+4. Complete kernel, offline process/docs, preservation and staged checks; review
+   the entire owned diff with Carbon High, resolve findings, write the handoff
+   and retrospective, commit, inspect proof necessity, and push/verify the branch.
+
+Acceptance requires all three unconditional results below, no new trust or
+analytic premises, and the complete review/validation/publication evidence.
+The coefficient denominators are positive for all natural indices; replacing
+all four by `8*j+1` gives numerator `4+2+1+1=8`. For the tail,
+`n+r+1 ≥ n+1` and `∑ r≥0, 16^(-(r+1)) = 1/15`, giving the stated constant.
+The pre-implementation same-session criticism found no missing mathematical
+premise. Lean subsequently checked denominator order, casts, summability and
+the limit; the criticism was not independent certification.
+
+The checked Step 4 bounds and decay are
 `|bbpCoeff j| ≤ 8/(8*(j : ℝ)+1)` and
-`|bbpTail n| ≤ 8/(15*(8*(n : ℝ)+9))`, then prove
-`Filter.Tendsto bbpTail Filter.atTop (nhds 0)`. Reuse B2's unconditional tail
-`HasSum`; prove all coefficient and summation estimates without adding an
-analytic or visitation hypothesis. Validate, audit, review, commit, and hand
-off that bounded result. Stop before modular computation, visitation research,
-or final conjecture assembly. This proposal requires separate authorization.
+`|bbpTail n| ≤ 8/(15*(8*(n : ℝ)+9))`, and
+`Filter.Tendsto bbpTail Filter.atTop (nhds 0)`. The root-exported
+`abs_bbpCoeff_le`, `abs_bbpTail_le`, and `tendsto_bbpTail` in
+[Tail.lean](../PiDisjunctivity/BBP/Tail.lean) have no analytic or visitation
+hypothesis. Local geometric `HasSum` and norm comparison reuse B2 convergence;
+a reciprocal bound and squeeze prove decay. `Test.lean` guards complete types,
+actual axioms, zero/first indices and a B4 interface audit at recurrence index
+`n+1` with its late-visit premise explicit. The [handoff](b3-handoff.md) and
+[review report](agy-reports/b3-review.md) own acceptance evidence. Stop before
+modular computation, visitation research or final conjecture assembly.
 
 ## 5. Prove the missing universal visitation theorem
 
@@ -616,14 +646,14 @@ proved supporting results and any remaining conjectural input.
 
 ## Suggested implementation order
 
-`OrbitCriteria.lean`, `BBP/Series.lean`, and `BBP/Orbit.lean` now exist for
-M1/M2 and B2. Future module names are organizational suggestions.
+`OrbitCriteria.lean`, `BBP/Series.lean`, `BBP/Orbit.lean`, and `BBP/Tail.lean` now exist for
+M1/M2 and B2/B3. Future module names are organizational suggestions.
 
 | Milestone   | Order                        | Work                                                                            | Suggested location                                                 |
 | ----------- | ---------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------ |
 | M1          | First small milestone        | Complete: interval-hitting reduction, general transfer B4, and cell conversion P3 | `PiDisjunctivity/OrbitCriteria.lean`                          |
 | M2          | Completed supporting theorem | Complete: BBP convergence and equality with `Real.pi`                                     | `PiDisjunctivity/BBP/Series.lean`                                  |
-| M3          | Partially checked            | B2 orbit bridge checked; B3 tail control pending; modular reduction optional                  | `PiDisjunctivity/BBP/Orbit.lean`                                   |
+| M3          | Arithmetic bridge checked    | B2 orbit identity and B3 tail control checked; transfer remains conditional on V; modular reduction optional | `PiDisjunctivity/BBP/Orbit.lean`, `PiDisjunctivity/BBP/Tail.lean` |
 | M4          | Research milestone           | Develop and prove Step 5's missing visitation argument                          | Mathematical notes first; a Lean module once the argument is sound |
 | M5          | Final assembly               | The unconditional pi theorem and its audit                                      | `PiDisjunctivity/PiProof.lean` and `Test.lean`                     |
 
@@ -639,8 +669,8 @@ existing word/interval and orbit equivalences ------+-> pi disjunctivity
 
 The pilot makes the exact missing interval-hitting hypothesis explicit. B4's
 conditional transfer and P3's cell conversion complete M1. The full checked
-B1 identity completes M2. B2 supplies the exact orbit bridge; M3 remains
-incomplete until B3 tail control. B3 is the next proposed bounded task and
-has not begun. Step 5 research
-can be scoped separately; completing more infrastructure is not evidence that the
+B1 identity completes M2. B2 supplies the exact orbit bridge and B3 supplies
+vanishing error, completing the required M3 arithmetic infrastructure. The B4
+transfer still needs V. B3 acceptance is recorded in its handoff. Step 5 research
+requires separate authorization; completing more infrastructure is not evidence that the
 open visitation problem is solved.

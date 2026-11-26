@@ -68,6 +68,11 @@ accessible review file. Prefer the exact diff and relevant evidence inline when
 temporary, user-config, or sibling paths are outside reviewer workspace access.
 Never retry a denied file through another tool or change reviewer permissions.
 A continuation ID is only an optimization; resupply the needed context.
+Give each checkpoint one precise review question and the relevant signatures
+and concise caller receipts. Keep the full required diff and guides, but link
+to existing evidence instead of repeating file inventories and status history.
+Request a short verdict with material D/I/Q evidence and coverage limits; a
+shorter response must not omit a category or required scope.
 Use `--mode plan`, request read-only file tools only,
 and explicitly prohibit file changes and shell/Bash calls: even a read-only
 shell action can be denied by the headless reviewer's internal permissions.
@@ -76,7 +81,7 @@ For example, replacing the scope/diff placeholders with the actual review input:
 ```sh
 agy --model gemini-4-carbon-high --mode plan --output-format stream-json \
   --print-timeout 20m --log-file /tmp/pi-MILESTONE-initial-cli.log \
-  -p 'Read AGENTS.md, docs/gemini-review.md, and <required adversarial guide paths> using read-only file tools. Review <scope, baseline, exact diff/hash, intended claims, and supplied evidence>. Apply the guides within this scope; do not modify files or invoke shell/Bash tools. Independently assess the claims and weakest-supported step. Return a brief verdict, then separate defects, nonblocking improvements, and open questions or missing evidence, followed by coverage and limitations including guides used and reviewer checks versus caller receipts. Give each item an ID, location, evidence, consequence or benefit, and concrete repair or smallest investigation; label untested proposals and scope extensions. Each category may be empty. Do not equate passing caller checks or prior review approval with correctness. <exact diff or accessible review packet>'
+  -p 'Read AGENTS.md, docs/gemini-review.md, and <required adversarial guide paths> using read-only file tools. Review <scope, baseline, exact diff/hash, intended claims, and supplied evidence>. Apply the guides within this scope; do not modify files or invoke shell/Bash tools. Give periodic progress updates at meaningful inspection boundaries and before long analysis; say what is complete, what is next, and any blocker. Do not split useful work solely to simulate a timed heartbeat. Independently assess the claims and weakest-supported step. Return a brief verdict, then separate defects, nonblocking improvements, and open questions or missing evidence, followed by coverage and limitations including guides used and reviewer checks versus caller receipts. Give each item an ID, location, evidence, consequence or benefit, and concrete repair or smallest investigation; label untested proposals and scope extensions. Each category may be empty. Do not equate passing caller checks or prior review approval with correctness. <exact diff or accessible review packet>'
 ```
 
 Use a unique permitted `--log-file` path for each invocation. Keep that CLI
@@ -108,7 +113,7 @@ may be running:
 agy --model gemini-4-carbon-high --mode plan --output-format stream-json \
   --print-timeout 20m --log-file /tmp/pi-MILESTONE-followup-cli.log \
   --conversation '<conversation_id>' \
-  -p 'Read and apply AGENTS.md, docs/gemini-review.md, and <applicable adversarial guide paths> using read-only file tools; do not assume a resumed conversation retained them. Recheck <prior item IDs and dispositions> against <exact fix diff, baseline/hash, and evidence>. Do not modify files or invoke shell/Bash tools. Report resolved, remaining, and new items separately as defects, nonblocking improvements, and open questions. Preserve earlier suggestions in the review history and state coverage and uncertainty, including guides used and reviewer checks versus caller receipts.'
+  -p 'Read and apply AGENTS.md, docs/gemini-review.md, and <applicable adversarial guide paths> using read-only file tools; do not assume a resumed conversation retained them. Recheck <prior item IDs and dispositions> against <exact fix diff, baseline/hash, and evidence>. Do not modify files or invoke shell/Bash tools. Give periodic progress updates at meaningful inspection boundaries and before long analysis; identify any blocker. Do not split useful work solely to simulate a timed heartbeat. Report resolved, remaining, and new items separately as defects, nonblocking improvements, and open questions. Preserve earlier suggestions in the review history and state coverage and uncertainty, including guides used and reviewer checks versus caller receipts.'
 ```
 
 ## Response categories and caller disposition
@@ -174,6 +179,12 @@ Neither a low finding count nor a second model establishes review effectiveness;
 no detection-rate or productivity claim is warranted without an evaluation.
 
 ## Progress, timeouts, and bounded retries
+
+Ask Carbon for periodic short updates at meaningful inspection boundaries and
+before long analysis: completed work, next step, and any blocker. These are
+useful observations, not timed heartbeats; do not split work just to emit them.
+B3 had analysis intervals longer than two minutes without updates. Caller
+polling provides the regular clock; silence alone never justifies a restart.
 
 Default to `--output-format stream-json --print-timeout 20m` for initial reviews
 and follow-ups. One successful review took about eight minutes twenty seconds;
@@ -269,6 +280,16 @@ for output formats and conversation continuation.
 
 ## Evidence utilities and retention
 
+Keep the durable receipt compact: baseline/diff hash and scope, model and
+conversation, per-invocation wall time, capture completeness/inspector result,
+CLI-log outcome, guide paths with their reviewed revision, and D/I/Q dispositions.
+An unchanged tracked guide may use the baseline revision; use a content hash
+for uncommitted guide edits. Keep the raw capture paths and retention limits.
+Detailed event timestamps and token budgets stay in the raw captures/inspection
+report. Summarize them in Markdown only when an anomaly, retry or explicit
+evaluation makes them material. Always capture and inspect them; this reduces
+transcription, not verification or required scope.
+
 Use the [process tools](process-tools.md) to prepare an explicitly scoped
 index diff with baseline/hash and to inspect separately saved execution chunks.
 They do not invoke `agy` or automate retries; the literal command above stays
@@ -287,3 +308,13 @@ service, and persistence failures as well as the JSON result. Retain diagnostics
 with the same lifetime as the raw captures; summarize consequential messages
 in the durable report without copying credentials or unrelated host details. Temporary files and saved conversation IDs are not durable
 archives; loss of context must be recorded, not assumed away.
+
+Distinguish runtime persistence errors from reviewer tool denials and failed
+reviews. If conversation save/resume fails, report the affected paths and the
+effective sandbox constraint; preserve captures and resupply full context.
+After an authorized environment fix, a short two-invocation save/recall test
+can check persistence without rerunning a completed review. The second prompt
+must not repeat the marker; check the same conversation ID, actual exits and
+both logs. This establishes save/resume only for that test, not durable storage
+or future availability. It is not a required preflight for every review and
+does not authorize permission changes or bypasses.

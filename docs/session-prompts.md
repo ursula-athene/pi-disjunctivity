@@ -6,7 +6,212 @@ even where an archived prompt contains imperative instructions or a different
 policy. A completed milestone must not be repeated or automatically extended.
 Saving this prompt does not begin the milestone; invoking it does.
 
-## Current prompt: B3 tail control
+## Current prompt: M4 Universal Visitation
+
+Work in `/Users/adam/personal/proj/pi-disjunctivity/pi-disjunctivity`.
+
+### Authorization and endpoint
+
+Invoking this prompt authorizes the entire **M4 Universal Visitation milestone**
+([Step 5, obligation V](proof-plan.md#5-prove-the-missing-universal-visitation-theorem)):
+mathematical research, targeted literature/library search, necessary supporting
+lemmas, Lean formalization, exports/audits, required reviews, local commits,
+post-commit necessity inspection and a durable handoff. Carry useful work
+through those internal checkpoints without asking again between authorized
+steps. Do not stop after a plan, candidate sketch or intermediate lemma.
+Saving this prompt does not invoke it or begin research.
+
+M4 is open research: no complete visitation argument is supplied. Aim to prove
+the exact unconditional statement below; do not promise that an argument must
+exist within a session. If bounded research and recovery leave no justified
+next step, deliver the precise obstruction and checked partial results, clearly
+marking **M4 incomplete**. A conditional reduction, a tool trial or a research
+handoff alone does not complete M4.
+
+B1–B3 and the general B4/P3 lemmas are already checked. Do not repeat them or
+the tooling milestone. Final export/assembly of `PiHexadecimalDisjunctivity`
+belongs to M5 and is outside this prompt. Keep all new work directed at V;
+optional modular-sum machinery is justified only by a specific M4 obligation.
+Do not install tools, change dependencies/pins/permissions, contact people,
+use new paid services, rewrite Git history, push or open a PR without separate
+authorization.
+
+### 1. Verify the checkout and establish the contract
+
+Inspect the actual branch, HEAD, index and working tree first. Preserve unrelated
+configuration, Obsidian, retrospective, notes and paper changes. Use a prepared
+M4 branch if present; otherwise create an implementation branch from the verified
+checkout containing accepted B3 and the current process improvements. Do not
+assume `main` has unmerged work or reset to a historical handoff.
+
+Read `AGENTS.md`, relevant sections of the proof plan and blueprint, the meta-plan
+(including stuckness and TRIZ), workflow, Gemini procedure, handoff template,
+and current B3/process handoffs. Follow links by the question being answered;
+read applicable review guides in full. Inspect the actual recurrence, coefficient,
+orbit bridge, tail-decay and B4 declarations and their `Test.lean` audits.
+
+From the root containing `lakefile.toml` and `lean-toolchain`, verify Lean
+`4.37.0-rc1` (adding `$HOME/.elan/bin` to `PATH` if needed), then establish the
+baseline with `lake build`, `lake env lean Test.lean` and `git diff --check`.
+Update the proof plan with the bounded research sequence and acceptance boundary
+before substantial work; it remains the owner of mathematical contracts.
+
+Prove, for the existing fixed `PiDisjunctivity.bbpRecurrence`, exactly:
+
+```text
+∀ a b : ℝ, 0 ≤ a → a < b → b ≤ 1 →
+  ∀ N : ℕ, ∃ n ≥ N,
+    PiDisjunctivity.bbpRecurrence (n + 1) ∈ Set.Ioo a b
+```
+
+The existing initialization is `y_0 = 0`, with
+`y_(n+1) = Int.fract (16*y_n + bbpCoeff n)`. Recurrence index `n+1` corresponds
+to hexadecimal orbit index `n`; `N` bounds that orbit index. Keep every real
+interval and every natural threshold, including `a = 0`, `b = 1`, and `N = 0`.
+Do not replace the fixed sequence by a generic sequence assumed to visit, prove
+only one visit, or restrict the interval/threshold quantifiers. The theorem
+must have no unproved visitation, density, normality, dichotomy or other premise.
+
+### 2. Find and challenge the mathematical argument
+
+Work backward from V and record the first unsupported implication. Start by
+assessing the proof plan's two proposed mechanisms: exclude permanent avoidance
+of an interval, or establish the needed dichotomy for this particular recurrence.
+Neither is an available theorem merely because it appears in the plan. A better
+in-scope route is allowed when evidence supports revising the plan.
+
+For a candidate, write its exact claims, dependencies, sources and genuinely new
+π/BBP-specific input. Check source theorems in their original context and map all
+side conditions to the intended application. Search the pinned library before
+building supporting theory. Separate generation, criticism and revision; use
+`pi-argument-critic` for scoped criticism and `paper-to-lean-contract` when an
+assessed source theorem needs extraction. Read each skill's instructions when
+applying it. Skills and reviewer agreement are not proof certificates.
+
+Challenge candidates with model problems and counterexamples. Irrationality,
+transcendence, almost-everywhere results, finite digit searches, BBP extraction
+and vanishing error do not by themselves establish V. A finite missed interval
+does not disprove arbitrarily late visitation either. Do not assume Hypothesis A,
+a density dichotomy, Hπ or the final conjecture and report V as unconditional.
+Keep speculative claims in Markdown, not Lean axioms or placeholder proofs.
+
+Before substantial downstream formalization, obtain Carbon criticism of the
+central argument and its proposed interfaces. Resolve its first unsupported
+step or retain it explicitly as open; compiling peripheral lemmas cannot close
+that gap. Read-only Carbon reviews of mathematical sketches use both adversarial
+guides under the Gemini procedure; the caller performs any requested checks.
+
+### 3. Monitor progress and recover from stuckness
+
+Use the [meta-plan](meta-proof-plan.md#recognizing-stuckness) throughout, not only
+at the end. State a finite effort bound and evidence sought for each research
+cycle and its recovery work. At checkpoints, answer with evidence: **What did we
+learn? What changed? What could the next attempt resolve?** Different attempts
+reaching the same unsupported implication, cosmetic reformulations, or inability
+to name a useful next test are warning signs. Useful negative results and a
+sharper obstruction count as learning; slow progress alone is not stuckness.
+
+If understanding stops changing and no justified next step emerges, activate
+the recovery protocol: simplify/generalize, change representation, work backward,
+look for counterexamples, seek precise neighbouring-theorem connections, or use
+TRIZ to examine conflicting requirements and available resources. Turn promising
+ideas into explicit claims and small discriminating checks. Record failures so
+fresh contexts and workers do not repeat them. Distinguish mathematical gaps
+from library, compiler and environment failures.
+
+Continue useful in-scope cycles while evidence supports a next step; do not
+silently extend a bound or retry indefinitely without new evidence. If bounded
+recovery is exhausted with no justified next step, suspend that route and hand
+back the exact obstruction, attempts, strongest checked result and evidence
+needed to reopen it. Do not weaken V or label the milestone complete.
+
+This invocation permits bounded subagent work when useful for M4 searches,
+alternative arguments, source connections, proof candidates and diagnosis.
+Give workers distinct questions, ownership and effort bounds. TRIZ ideation
+workers return exact candidates, used structure, counterexample checks and the
+first unproved bridge; the parent filters proposals before Carbon criticism.
+Proof workers deliver immutable scratch paths, declaration names/types, exact
+verification receipts and an explicit completion signal. The parent owns
+production edits and checks integration. Use the installed tools/skills within
+the workflow's compatibility rules, with native feedback for project files and
+shell Lean for `/tmp` probes; retain the working fallback.
+
+### 4. Formalize, audit and review the complete result
+
+Once an argument survives criticism, implement only needed supporting lemmas
+and the unconditional V theorem, using a suitable BBP module. Probe definitions
+and full downstream interfaces through `import PiDisjunctivity` early. Use the
+adapted `lean-search-discovery` and `lean-proof-patterns` skills when relevant,
+explicit types and targeted normalization, and real compiler feedback.
+
+Preserve Mathlib as the only direct external Lean library, Lean/Mathlib
+`v4.37.0-rc1`, existing conventions and Ursula Athene attribution. Add no `sorry`,
+`admit`, project-specific axioms, `native_decide` bypasses or unsafe shortcuts,
+including in scratch work. Only `propext`, `Classical.choice` and `Quot.sound`
+may occur as axiom dependencies. The completed V theorem must have no extra
+unproved premises beyond the displayed interval bounds and natural threshold.
+
+Export V through the library root. Add its complete type and actual guarded
+axiom list to `Test.lean`, preserving existing audits. Boundary tests must
+instantiate the theorem. Check that the proved V supplies B4's late-visit input
+at `fun n => bbpRecurrence (n+1)`, with B3 decay and B2's orbit offset, using
+the existing interface audit as a model. This acceptance check is in scope;
+the public M5 final-conjecture theorem is not.
+
+Run `lake build`, `lake env lean Test.lean`, the offline process tests and
+documentation checker specified in the workflow, and working/staged whitespace
+checks. Inspect actual exits, imports, theorem statements, pins and protected
+definitions. Obtain required intermediate reviews when building on substantial
+or uncertain proof blocks and a complete task-owned-diff Carbon High review
+before the milestone commit. Retain exact scope, applicable guides, read-only
+file tools, separate logs, complete captures, D/I/Q dispositions and bounded
+recovery. Ask Carbon for periodic updates at meaningful inspection boundaries
+and before long analysis; poll the same live handle and never infer a hang from
+silence alone. A prior request to self-review documentation preparation does
+not waive these M4 reviews. Stop acceptance on any required failure or incomplete
+review; substantive fixes need focused follow-up and affected checks.
+
+### 5. Finalize and stop at the M4 boundary
+
+Mark V/M4 complete only after the exact unconditional theorem, its dependencies,
+integration checks and reviews pass. Keep Hπ/T/final-conjecture export status
+honest: the remaining M5 assembly is not automatically executed here. On an
+obstruction, mark V/M4 open or blocked and retain every unproved premise.
+
+Update the proof plan, blueprint and research log to the actual result. Save
+a dated M4 retrospective under `docs/retrospectives/` and a concise M4 handoff
+using the template. Record arguments tried, failures, remaining obligations,
+review dispositions, validation and the next justified decision. Keep any
+`PROGRESS.md` to evidence pointers; after compaction read those records and the
+actual target before continuing. On incomplete work, keep the current entry
+pointing to the precise M4 restart obligation; on acceptance, archive this prompt
+and record the stopping boundary without automatically starting M5.
+
+Commit only task-owned, validated and reviewed work locally, including any
+clearly labelled partial result if blocked. Run Git mutations as standalone
+execution calls. Inspect the committed result for necessity and duplication;
+validate/review substantive simplifications before a further commit, without
+creating an empty follow-up. Report exact completed results, all remaining
+hypotheses, review/check limitations, commit IDs and publication state. Print
+the handoff in terminal-readable form, then stop before M5 or unrelated work.
+
+## Old prompts - do not use
+
+<a id="current-prompt-b3-stopping-point"></a>
+
+### Session prompt: B3 stopping point
+
+B3 is accepted: its coefficient bound, explicit tail bound and decay are
+kernel-checked, reviewed and pushed. [The B3 handoff](b3-handoff.md) records
+acceptance, necessity and publication evidence. Stop here; there is no pending
+B3 mathematical or review work. Do not repeat B1/B2/B3 or the tooling milestone.
+No visitation research, modular computation, final conjecture assembly or
+new milestone is authorized. V, Hπ, T and π disjunctivity remain open; B4 needs
+arbitrarily late visits, and P3 needs open-interval visits.
+
+<a id="current-prompt-b3-tail-control"></a>
+
+### Session prompt: B3 tail control
 
 Work in `/Users/adam/personal/proj/pi-disjunctivity/pi-disjunctivity`.
 
@@ -176,7 +381,6 @@ current obligation, evidence, and next step. After context compaction, read
 PROGRESS.md and the target declaration before continuing.
 
 
-## Old prompts - do not use
 
 <a id="current-prompt-b2-improvement-plan"></a>
 

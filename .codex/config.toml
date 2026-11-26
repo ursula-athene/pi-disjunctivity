@@ -12,4 +12,4 @@ web_search = "live"
 # Allow commands to download papers and articles without network approvals.
 [sandbox_workspace_write]
 network_access = true
-
+writable_roots = ["/Users/adam/.gemini/antigravity-cli"]

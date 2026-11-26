@@ -1,18 +1,16 @@
 # Proof-attempt session prompt entry point
 
-Use only <!-- current-prompt --> [Current prompt: B3 tail control](session-prompts.md#current-prompt-b3-tail-control).
-It prepares B3's coefficient bound, explicit tail estimate and convergence to
-zero, including use of the installed Lean MCP tools and selected skills.
-Invoking it authorizes the complete bounded milestone through review,
-validation, commits, necessity review and handoff; saving it does not begin work.
+Use only <!-- current-prompt --> [Current prompt: M4 Universal Visitation](session-prompts.md#current-prompt-m4-universal-visitation).
+Invoking it authorizes the full Step 5/obligation V research milestone through
+proof, audits, reviews and local acceptance. Saving it does not start research.
+M4 remains open; a documented obstruction is not completion.
 
-Read [the B2 handoff](b2-handoff.md) for the checked orbit bridge and
-[the tooling handoff](b2-improvements-handoff.md) for the completed improvement
-milestone and remaining limits. The current prompt records the subsequent
-successful module-command migration. Do not repeat B1, B2 or the tooling cycle.
-B3 supplies no visitation theorem; visitation research and final conjecture
-assembly remain outside its scope.
+B1–B3 are checked; [the B3 handoff](b3-handoff.md) records their latest acceptance
+boundary. B4's general transfer retains late visitation and vanishing-error
+premises; B3 supplies the latter for the BBP tail. P3 retains open-interval
+visitation. Hπ, T and π disjunctivity remain open. M5 final assembly is separate.
+Do not repeat completed supporting proofs or the [tooling milestone](b2-improvements-handoff.md).
 
-Earlier execution prompts are preserved under
+Executed prompts are retained under
 [Old prompts - do not use](session-prompts.md#old-prompts---do-not-use).
-Archived prompts are historical and grant no new authorization.
+The archived B3 instructions retain their historical scope and stopping point.
