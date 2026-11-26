@@ -10,7 +10,7 @@ and unproved hypotheses; dated validation and publication evidence live in the
 [workflow](proof-workflow.md) for execution.
 
 Next session: <!-- current-prompt --> [Current prompt: B3 stopping point](session-prompts.md#current-prompt-b3-stopping-point)
-records the checked B3 endpoint and remaining acceptance work in
+records the accepted B3 endpoint and publication evidence in
 [the handoff](b3-handoff.md). B1/B2 and the [tooling milestone](b2-improvements-handoff.md)
 are complete. Universal visitation remains open; B4/P3 retain their hypotheses.
 No new research milestone is authorized.
@@ -510,7 +510,7 @@ are in the handoff. B2 does not discharge B3 or V.
 
 ### B3 tail control
 
-**All three proofs checked and reviewed, 2026-11-25; commit/publication finalization in progress.** Starting from `ae4a0e3` on
+**Complete, checked, reviewed, committed, pushed and inspected for necessity, 2026-11-25.** Starting from `ae4a0e3` on
 `feature/attempt-08-b3`, preserve unrelated Obsidian, notes and papers.
 The invoked B3 prompt authorized this sequence, recorded before implementation:
 

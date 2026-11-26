@@ -123,6 +123,5 @@ records acceptance and publication. V, Hπ, T, and π disjunctivity remain open.
 B4 retains its general vanishing-error and arbitrarily-late-visit premises;
 B3 supplies only the former for the BBP tail. P3 retains open-interval visits.
 Next session: <!-- current-prompt --> [Current prompt: B3 stopping point](session-prompts.md#current-prompt-b3-stopping-point)
-records the authorized boundary. Finish any recorded B3 acceptance steps and
-stop. The tooling milestone is complete with its existing limits; no further
+records accepted B3 and its stopping boundary. Stop here. The tooling milestone is complete with its existing limits; no further
 milestone is authorized and no visitation premise has been discharged.

@@ -1470,3 +1470,23 @@ stopping boundary; its executed prompt and older archive are preserved.
 Only factual acceptance receipts change after the reviewed Lean/audit snapshot.
 Commit, post-commit necessity inspection and verified push follow; no new
 mathematical work or research is authorized.
+
+
+## 2026-11-25 — B3 accepted, pushed and reviewed for necessity
+
+Implementation commit `06d15b74c96369870615de526bee8bf621956704` contains exactly the
+14 owned files and is pushed to `origin/feature/attempt-08-b3`; `git ls-remote`
+verified equality. Post-commit inspection of the actual source and audits found
+all three contracts, local majorant/comparison facts, export and checks needed
+for the endpoint or proof chain. No substantive simplification or empty code
+commit was warranted. The [handoff](b3-handoff.md) records that inspection and
+identifies its final factual receipt commit via Git; that receipt receives
+documentation/whitespace/scope checks and a separate push. Reviewed Lean/audit
+bytes remain identical. No PR was opened; unrelated work remains untouched.
+
+Whole review cycle: two completed Carbon High runs, no failures/retries, no
+defects, two nonblocking improvements implemented and rechecked, no blocking
+questions. See [the report](agy-reports/b3-review.md) for timings/captures and
+periodic-update limits. B3 supplies vanishing error only. V, Hπ, T and π
+disjunctivity remain open; B4 retains late visits and P3 open-interval visits.
+Stop at accepted B3; no further research or final assembly is authorized.

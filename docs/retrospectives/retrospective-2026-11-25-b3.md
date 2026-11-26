@@ -2,7 +2,7 @@
 
 The [handoff](../b3-handoff.md) owns acceptance/publication and the
 [review report](../agy-reports/b3-review.md) owns the full Carbon cycle. This
-record is being completed alongside B3; it does not authorize another milestone.
+record accompanies accepted B3; it does not authorize another milestone.
 
 ## Proof work and interfaces
 
@@ -18,8 +18,8 @@ rename before touching production; rereading the completed candidate resolved
 it. Compiler repairs concerned inequality-combinator orientation, explicit
 function/type arguments, cast/rational normalization and redundant tactic
 sequencing. None revealed missing mathematics. The zero/one tests explicitly
-instantiate the new bound theorems. Decay is checked with the same permitted axiom list; full acceptance remains
-pending at this interim snapshot.
+instantiate the new bound theorems. Decay is checked with the same permitted axiom list. All acceptance gates
+passed; post-commit inspection found no justified substantive simplification.
 
 ## Tools and review observations
 
@@ -57,3 +57,7 @@ B3 supplies vanishing error and no visits. The next mathematical gap remains V,
 not a compiler bottleneck. B4's arbitrarily-late-visitation hypothesis and P3's
 open-interval-visitation hypothesis remain visible. Stop at B3 acceptance;
 separate authorization is required for any new research milestone.
+
+Implementation and final factual receipts are published separately. The handoff
+owns exact commit evidence. No proof edit followed full review; final status
+updates preserve reviewed Lean/audit hashes and receive docs/whitespace checks.

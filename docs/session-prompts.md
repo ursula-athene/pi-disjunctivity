@@ -8,10 +8,10 @@ Saving this prompt does not begin the milestone; invoking it does.
 
 ## Current prompt: B3 stopping point
 
-B3's coefficient bound, explicit tail bound and decay are kernel-checked.
-[The B3 handoff](b3-handoff.md) records acceptance/publication evidence and any
-remaining B3 finalization steps. Complete those already-authorized steps, then
-stop. Do not repeat B1/B2/B3 proofs or the completed tooling milestone.
+B3 is accepted: its coefficient bound, explicit tail bound and decay are
+kernel-checked, reviewed and pushed. [The B3 handoff](b3-handoff.md) records
+acceptance, necessity and publication evidence. Stop here; there is no pending
+B3 mathematical or review work. Do not repeat B1/B2/B3 or the tooling milestone.
 No visitation research, modular computation, final conjecture assembly or
 new milestone is authorized. V, Hπ, T and π disjunctivity remain open; B4 needs
 arbitrarily late visits, and P3 needs open-interval visits.

@@ -1,17 +1,15 @@
 # B3 continuation pointer
 
-Authorized endpoint: [B3 in the proof plan](docs/proof-plan.md#next-bounded-task-b3-tail-control).
-Baseline `ae4a0e3`, branch `feature/attempt-08-b3`; verify Git on every restart.
-Unrelated Obsidian, notes and papers were present and must remain untouched.
+B3 is accepted. Mathematical contracts and evidence:
+[proof plan](docs/proof-plan.md#next-bounded-task-b3-tail-control),
+[handoff](docs/b3-handoff.md), [review report](docs/agy-reports/b3-review.md).
+Implementation `06d15b74c96369870615de526bee8bf621956704` was pushed to
+`origin/feature/attempt-08-b3` and verified remotely. Identify the final factual
+receipt with `git log -1 --format=%H -- docs/b3-handoff.md`; verify live Git state.
 
-Current obligation: commit reviewed B3, inspect committed proof necessity, then
-push and verify remote equality. All mathematical/review/validation gates pass.
-Evidence: `lake build` (7205 jobs), `lake env lean Test.lean`, 38 process tests,
-63-file docs check, whitespace/preservation checks and three actual axiom guards.
-Two complete Carbon High reviews; I1/I2 implemented and rechecked, no defects or
-blocking questions. [Review report](docs/agy-reports/b3-review.md),
-[handoff](docs/b3-handoff.md). No review process is live.
-Next step: stage factual review receipts, check final owned scope and commit;
-complete necessity/publication receipts afterward. Do not begin another milestone.
-This is the invoked prompt's compact continuation pointer; the proof plan,
-blueprint and research log retain their existing ownership.
+All three unconditional bounds/decay results, audits, validation, both Carbon
+reviews and post-commit necessity inspection are complete. No proof change was
+needed after review. There is no active review process or remaining B3 proof work.
+V, Hπ, T and π disjunctivity remain open. Stop; no new milestone is authorized.
+Preserve unrelated Obsidian, notes and papers. This prompt-required pointer
+links to authoritative records and does not define another mathematical roadmap.

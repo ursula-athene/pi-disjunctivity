@@ -114,7 +114,8 @@ or declined. Q2's second-milestone sample comprises these actual reviews: the
 shorter final review still rechecked both concrete audits, but no causal speedup
 or effectiveness claim follows from unlike review scopes. Full-review comments
 about completing factual receipts are implemented through the handoff's lifecycle.
-Post-commit necessity inspection and publication belong in that handoff.
+Post-commit necessity inspection and verified publication are recorded in
+[the handoff](../b3-handoff.md). No substantive proof change followed review.
 
 ## Retention and verification limits
 

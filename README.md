@@ -32,8 +32,7 @@ and handoffs. The [formulation review](docs/formulation-review.md) and
 [follow-up](docs/review-follow-up.md) record the semantic review of the problem.
 
 Next session: <!-- current-prompt --> [Current prompt: B3 stopping point](docs/session-prompts.md#current-prompt-b3-stopping-point)
-records the B3 acceptance boundary. Complete only any pending B3 acceptance
-steps recorded in the handoff, then stop; no next milestone is authorized.
+records accepted B3 and its stopping boundary. No next milestone is authorized.
 The [tooling handoff](docs/b2-improvements-handoff.md) retains its tool limits.
 Read [AGENTS.md](AGENTS.md) and the [workflow](docs/proof-workflow.md).
 

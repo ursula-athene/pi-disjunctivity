@@ -1,9 +1,9 @@
 # Proof-attempt session prompt entry point
 
 Use only <!-- current-prompt --> [Current prompt: B3 stopping point](session-prompts.md#current-prompt-b3-stopping-point).
-B3's three unconditional tail-control results are checked. Read
-[the B3 handoff](b3-handoff.md) for acceptance, publication and any remaining
-finalization steps. Finish only those already-authorized steps, then stop.
+B3's three unconditional tail-control results are accepted and pushed. Read
+[the B3 handoff](b3-handoff.md) for validation, review, necessity and publication
+evidence. Stop here; no next milestone is authorized.
 
 B4 retains its arbitrarily-late-visitation premise; P3 retains open-interval
 visitation. V, Hπ, T and π disjunctivity remain open. Visitation research,

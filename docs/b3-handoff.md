@@ -9,9 +9,13 @@ reviews, validation, commits, post-commit necessity inspection and verified push
 no PR. Existing Obsidian workspace/hotkeys, notes and papers are preserved.
 No user configuration, installed skills, pins, dependencies or prior proofs change.
 
-All three proofs and audits are checked and reviewed; commit/publication finalization is in progress. No B3 commit or push is claimed
-yet. Final receipt commit can be identified with
-`git log -1 --format=%H -- docs/b3-handoff.md`; verify actual remote equality.
+**B3 is accepted: checked, reviewed, committed, pushed and inspected for necessity.**
+Implementation commit `06d15b74c96369870615de526bee8bf621956704` is pushed to
+`origin/feature/attempt-08-b3`; `git ls-remote` verified that exact revision.
+This final factual receipt is a separate documentation commit, identified with
+`git log -1 --format=%H -- docs/b3-handoff.md`; verify actual remote equality
+when resuming. No PR was opened. No substantive follow-up proof change was
+needed and no empty code commit was made.
 The stopping boundary excludes visitation research, modular computation and
 final conjecture assembly.
 
@@ -66,7 +70,9 @@ conversation persistence failed, so raw captures are the temporary evidence.
 Complete-milestone review also passed, explicitly resolving both improvements
 with no new findings or blocking questions. Whole cycle: two successful reviews,
 no failed runs/retries, no defects, two implemented/rechecked improvements.
-Only commit, post-commit necessity inspection and publication remain pending.
+Implementation commit and verified push are complete; post-commit inspection
+is recorded below. Final factual receipts receive documentation, whitespace,
+owned-scope and unchanged-proof checks before their separate commit/push.
 
 The installed LSP 0.33.0 exposes all five native tools in this session; the
 configured root, Python module entry and disabled REPL match the successful
@@ -87,6 +93,25 @@ the parent integrated them and ran root builds/audits. Tool failures and compile
 repairs are recorded separately from missing mathematics. No productivity
 comparison is claimed.
 
+## Post-commit necessity review
+
+Inspected the committed `06d15b7` source, audit diff and exact 14-file
+scope. `abs_bbpCoeff_le` supplies the requested first bound and the tail term
+comparison; its three denominator inequalities and triangle steps are consumed.
+The local geometric `HasSum` and pointwise norm bound supply `abs_bbpTail_le`
+using B2 convergence. That bound is consumed by the signed squeeze limit;
+denominator growth discharges the reciprocal limit. The root import exposes
+all three required contracts. No new helper theorem or definition needs removal.
+
+The full-type/axiom guards protect trust and public interfaces; zero/one cases
+protect the first indices. I1 checks the split against `Real.pi`, and I2 guards
+the B4 offset while retaining V. Each is an acceptance or review consumer.
+Documentation retains its roadmap/index/log/handoff roles; `PROGRESS.md` is the
+invoked prompt's compact pointer, not another roadmap. No unnecessary proof
+abstraction, unused local fact or justified substantive simplification was found.
+The final receipt changes factual status only; reviewed Lean/audit hashes remain
+identical, so no additional Lean run or substantive-fix review is needed.
+
 ## Restart and remaining obligations
 
 Use the [current session entry](proof-attempt-session-prompt.md),
@@ -95,7 +120,7 @@ Use the [current session entry](proof-attempt-session-prompt.md),
 The compact [continuation pointer](../PROGRESS.md) is required by the invoked
 prompt and links to those authoritative records rather than defining a roadmap.
 
-B3 must still finish the acceptance steps explicitly pending above. V's
+B3 has no remaining mathematical or review obligation. V's
 arbitrarily-late visits of `bbpRecurrence (n+1)`, Hπ, T and π disjunctivity remain
 open. B4 retains its general vanishing-error and late-visitation inputs; B3
 supplies only the former for `bbpTail`. P3 retains open-interval visitation.
