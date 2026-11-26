@@ -1,5 +1,23 @@
 # Adversarial Lean proof review
 
+## Use in this project's Carbon reviews
+
+This is required subject-matter background for Lean proof milestone reviews,
+alongside `AGENTS.md`, the exact review scope, and the
+[Carbon procedure](../gemini-review.md). For a substantive tooling or meta-plan
+component, also use the [strategy/tooling guide](lean-proof-strategy-and-tooling-review.md).
+The procedure owns execution permissions, capture, recovery, and disposition;
+this guide informs mathematical scrutiny without expanding the authorized scope.
+
+Carbon uses read-only file tools only. References below to builds, `#print`,
+axiom audits, or temporary examples mean inspecting caller-supplied evidence
+or requesting a precise check from the caller, not running commands or writing
+files. Label unrun examples/repairs and unavailable evidence. Independent
+assessment does not imply independent execution of the checks. Do not use
+placeholders or other proof bypasses, even in proposed scratch experiments.
+
+## Review approach
+
 Act as an independent mathematical referee reviewing a Lean proof project. Determine exactly what the work establishes and whether that justifies the progress claimed for it. Ask: **Could Lean accept every declaration under review while the advertised mathematical claim is still false, weaker than advertised, or open?** Apply the same skepticism to your own objections. Return a review; make changes to the project only when asked.
 
 Use the scope supplied in the request: a diff, commit range, theorem, milestone, or project. For a diff, compare the base and proposed revisions. For a theorem or milestone, start at its principal declaration. If the request leaves scope implicit, identify the changes or target you chose and say so in the report.
@@ -22,7 +40,13 @@ Use the scope supplied in the request: a diff, commit range, theorem, milestone,
 
 Lead with a **mathematical verdict**: in one or two sentences, state the strongest result you verified, its assumptions, and whether it meets the intended milestone. If verification is partial, identify the exact step that remains uncertain.
 
-List confirmed findings in descending order of mathematical consequence. For each finding, include:
+Separate **defects**, **nonblocking improvements**, and **open questions or
+missing evidence**, using stable IDs (D1/I1/Q1) and the
+[response/disposition contract](../gemini-review.md#response-categories-and-caller-disposition).
+Each category may be empty; there is no quota. A final absence of defects does
+not erase useful suggestions or defects fixed earlier in the review cycle.
+
+List confirmed defects in descending order of mathematical consequence. For each finding, include:
 
 - **Location and claim.** Give the declaration, file and line, and the mathematical issue in one sentence.
 - **Intended and actual statements.** Write the smallest pair of statements that exposes the discrepancy.
@@ -30,7 +54,19 @@ List confirmed findings in descending order of mathematical consequence. For eac
 - **Consequence.** Say which project claim is affected and which results still hold.
 - **Proposed solution or investigation.** After presenting the evidence, give the best concrete repair you can justify. Identify the definition, theorem statement, lemma, or proof step to change. Explain why the repair addresses the cause, preserves the intended mathematics, and works for the downstream use that exposed the problem. Give a check that would establish the repair and say whether you ran it. Label an untested proof sketch as such. If you know no good solution, say so explicitly. Identify the unresolved mathematical or engineering question, why it blocks a recommendation, and the smallest investigation likely to clarify it. Confidence in the finding and confidence in the repair are separate judgments.
 
-List open questions separately and say what evidence would settle each. Close with the scope examined, checks run, and any material verification limits. When there are no confirmed findings, report that directly and describe the evidence supporting the verdict.
+Include worthwhile improvements even if the proof is correct: a simpler
+dependency chain, a more useful lemma interface, a discriminating boundary
+check, or clearer accounting of what remains open. Give the location, concrete
+benefit, smallest justified change, relevant tradeoff, and validation needed.
+Avoid style-only preferences without a consequence for this project. Identify
+whether each proposal is within the task or possible later work.
+
+List open questions separately and say what evidence would settle each and
+which conclusion depends on it. Challenge the weakest-supported advertised
+claim without treating passing caller checks or previous approval as conclusive.
+Close with scope examined, guides used, checks actually performed versus supplied
+by the caller, and material verification limits. Report empty categories
+explicitly and describe the evidence supporting the verdict.
 
 ## Example of the intended scrutiny
 

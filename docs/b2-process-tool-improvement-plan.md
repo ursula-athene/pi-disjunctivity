@@ -5,6 +5,13 @@ No installation, skill activation, workflow implementation, or proof work is
 performed by saving this document. The next implementation milestone is to
 implement and evaluate these improvements **before going on to B3**.
 
+**Subsequent scoped adoption, 2026-11-25:** the user separately authorized the
+[Carbon review-guidance update](meta-proof-plan.md#carbon-review-guidance-adoption--2026-11-25).
+That subset of P1 is now documented in the mandatory review procedure and the
+two adversarial guides. It does not complete P1 or execute P0/P2–P5. Reconcile
+the adopted guidance when implementing the remaining improvements; tooling and
+proof work remain unstarted by this update.
+
 **B2 proof development is out of scope.** B2 is already checked and reviewed;
 its completed code supplies test cases, not a problem to solve again. B3,
 universal visitation V, Hπ, T, and π disjunctivity remain unproved. B4 retains
@@ -118,9 +125,21 @@ retrospective identifies a gap. Avoid duplicating rules in `AGENTS.md`.
   and prior findings for each review. Prefer the exact diff inline when temporary
   reviewer-file access is unavailable; never retry a denied file through another
   tool or change reviewer permissions. A continuation ID is only an optimization.
-- Keep findings and concise coverage notes first. Preserve Carbon High,
+- Keep the brief verdict and categorized items ahead of concise closing
+  coverage notes. Preserve Carbon High,
   intermediate/final coverage, literal invocation, terminal inspection, and
   bounded recovery. Keep detailed evidence in the handoff/review report.
+- Supply the [required adversarial guide](gemini-review.md#select-the-adversarial-review-background)
+  for each review subject. Ask for defects, concrete nonblocking improvements,
+  and open questions without a quota. Record every item's implemented,
+  deferred, declined, or unresolved disposition and summarize the full cycle;
+  do not hide suggestions behind a final no-remaining-defects verdict.
+- Revisit deferred [Carbon item I6](agy-reports/carbon-review-improvements-review.md#items-and-dispositions):
+  adopt the successful per-invocation `--log-file` option in the initial/follow-up
+  templates, with diagnostic retention/inspection instructions and a check on
+  the next authorized review. Keep the literal prefix and existing permissions.
+  One successful recovery is evidence of clean capture, not a guarantee that
+  all stderr or persistence problems disappear.
 
 **Tests:** use a disposable documentation excerpt with valid links but stale
 status to exercise the manual pass; leave the automated checker limited to
@@ -271,6 +290,8 @@ Required acceptance:
 4. Required intermediate reviews and the complete task-owned Carbon High review
    finish; findings are assessed, substantive fixes receive focused follow-up,
    and affected checks are rerun. Capture/result and caller coverage review pass.
+   The selected guides and all item dispositions are recorded under the
+   mandatory review procedure; required evidence cannot be waived by deferral.
 5. Record environment/configuration changes and precise removal/rollback steps.
    Restore only task-owned settings when rejecting a tool; preserve pre-existing
    user configuration. Complete work through internal checkpoints without

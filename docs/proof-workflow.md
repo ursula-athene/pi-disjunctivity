@@ -9,9 +9,10 @@ The user-directed Gemini Carbon review requirement below is the specified review
 exception; it does not authorize broader orchestration or additional services.
 
 The [B2 improvement plan](b2-process-tool-improvement-plan.md) specifies a future
-process/tool milestone before B3. It is proposed, not implemented by this link;
-the operational sequence below remains in force. Completed B2 supplies test
-material only, and B2 proof development is outside that milestone.
+process/tool milestone before B3. The review-guidance subset was separately
+[adopted](meta-proof-plan.md#carbon-review-guidance-adoption--2026-11-25);
+the remaining implementation and tool evaluations are still proposed. Completed
+B2 supplies test material only, and B2 proof development is outside that milestone.
 
 ## Source adaptations
 
@@ -181,7 +182,13 @@ established by this workflow. CI retains the Lean build and axiom audit alongsid
 The [proof-plan policy](proof-plan.md#changed-file-reviews-with-gemini-carbon)
 defines milestone/intermediate review cadence and post-commit necessity review.
 Follow the mandatory [Gemini procedure](gemini-review.md) for preparation,
-literal invocation, capture, terminal inspection, and bounded recovery. Use
+subject-specific adversarial background, literal invocation, capture, terminal
+inspection, and bounded recovery. Ask for defects, nonblocking improvements,
+and open questions, rather than correctness failures alone. Record the
+[disposition of every item](gemini-review.md#response-categories-and-caller-disposition),
+including suggestions outside the findings section; report earlier fixes as
+well as remaining items. Unresolved acceptance-blocking issues prevent
+finalization; useful later work can be explicitly deferred. Use
 [process tools](process-tools.md) to prepare evidence and detect incomplete runs;
 they do not invoke `agy`, retry, assess mathematical correctness, or replace
 human findings triage. Reviewer feedback supplements Lean and statement checks.

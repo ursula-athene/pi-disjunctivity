@@ -1,5 +1,24 @@
 # Adversarial review of a Lean project's proof strategy and tooling proposals
 
+## Use in this project's Carbon reviews
+
+This is required subject-matter background for tooling, workflow, skill,
+proof-strategy, and meta-proof-plan reviews, alongside `AGENTS.md`, the exact review scope, and the
+[Carbon procedure](../gemini-review.md). For a substantive Lean proof component,
+also use the [proof guide](lean-adversarial-review-prompt.md). The procedure owns
+execution permissions, capture, recovery, and disposition. Apply the questions
+below to the material decisions in scope, not an unsolicited project-wide audit.
+
+Carbon uses read-only file tools only. Experiments, builds, profiling, and
+temporary examples below are checks to request from the caller or supplied
+evidence to inspect; they are not permission for Carbon to execute commands,
+install tools, write files, or launch other agents. Distinguish caller receipts
+from independent execution and label untested proposals. Repository trust and
+dependency rules also constrain suggested experiments. An improvement outside
+the current scope may be recommended for later consideration, not implemented.
+
+## Review approach
+
 Act as an independent mathematical referee and Lean tooling engineer. Review the project's plan for constructing a proof and its proposed changes to the tools used to discover, check, and track that proof. Your job is to help the project decide which mathematical route to pursue, which tooling changes to adopt or pilot, and what evidence would warrant changing course.
 
 Use these questions to guide the review.
@@ -8,7 +27,7 @@ Use these questions to guide the review.
 2. **Could the proposed tool pass its own evaluation while making the proof project no more capable?**
 3. **Which engineering or AI workflow change would most improve the team’s ability to prove the theorems that matter, how soon would it help, and at what total cost?**
 
-Give an evidence-based verdict on each. A research plan may legitimately depend on an open conjecture or a speculative technique. Identify exactly where that uncertainty enters, what success there would buy, and how the team could learn whether to continue.
+Give an evidence-based verdict on the questions relevant to the supplied scope. A research plan may legitimately depend on an open conjecture or a speculative technique. Identify exactly where that uncertainty enters, what success there would buy, and how the team could learn whether to continue.
 
 ## Establish the review scope
 
@@ -51,11 +70,25 @@ For each recommended skill, specify when to invoke it, the minimum context it ne
 
 ## Return a decision-ready review
 
-1. **Verdict.** State what the project can establish today, the most consequential uncertainty in the plan, and the engineering or AI improvement with the greatest credible benefit for proving. Identify the revision and scope reviewed.
+Keep the verdict brief, then separate **defects**, **nonblocking improvements**,
+and **open questions or missing evidence**, using stable IDs (D1/I1/Q1) under
+the [response/disposition contract](../gemini-review.md#response-categories-and-caller-disposition).
+Map the findings and tooling decisions below into these categories. A sound
+proposal can still have useful improvements; do not restrict recommendations
+to correctness failures. Each category may be empty, with no required quota.
+Preserve the strongest case for the proposal while challenging its weakest
+evidence and the simplest credible alternative. Prior approval and passing
+caller checks are evidence with limits, not a verdict to reproduce.
+Include the obligation table and tooling decisions below only when relevant
+to the scoped change. Any recommendation in the verdict, table, or closing
+prose must refer to its D/I/Q item; do not introduce untracked suggestions or
+nominate an improvement solely to fill a section.
+
+1. **Verdict.** State what the reviewed work establishes and its most consequential uncertainty. If supported within scope, identify the engineering or AI improvement with the greatest credible benefit, referring to its item below. Identify the revision and scope reviewed.
 2. **Proof obligations.** Give a compact table of the critical obligations, their current status and evidence, their downstream use, and the next decisive check. Include sound reductions and existing results worth retaining.
-3. **Prioritized findings.** For each consequential issue, name the file and declaration or plan section, the precise claim at issue, the evidence or counterexample, the consequence for the target, and a checkable resolution. Label open questions and say what would settle them. Severity and confidence are separate judgments.
+3. **Prioritized findings.** In the separate categories above, name the file and declaration or plan section, precise claim or opportunity, evidence or counterexample, consequence or benefit, and checkable resolution or smallest investigation. State current-task versus later scope. Label uncertainty and say what would settle it. Severity, confidence in the finding, and confidence in a proposed repair are separate judgments.
 4. **Tooling decisions.** Rank the material proposals and newly identified opportunities by their likely contribution to the project goal. For each, give the affected workflow, baseline, expected effect on effectiveness, speed, and resource use, then the decision and the evidence supporting it. Mark unmeasured effects as estimates or unknowns. If current evidence cannot distinguish two options, give the smallest comparison that would. Group proposals that depend on the same unresolved premise.
-5. **Next move and verification record.** Recommend the smallest action most likely to change the project's decision. Give its expected artifact and how to interpret success, failure, or an inconclusive outcome. Record the checks actually run and any consequential limits. A review with no material findings is a valid result.
+5. **Next move and verification record.** Where evidence supports one, recommend the smallest action most likely to change the project's decision. Give its expected artifact and how to interpret success, failure, or an inconclusive outcome. Record guides used, checks actually performed versus caller receipts, and consequential limits. Report each empty category explicitly; a review with no material findings or worthwhile improvements is valid. Do not invent an action merely to fill the report.
 
 ## Calibration example
 

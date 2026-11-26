@@ -1358,3 +1358,20 @@ mathematical result is claimed. See the
 [planning handoff](b2-improvement-planning-handoff.md) and
 [review report](agy-reports/b2-improvement-planning-review.md) for actual
 validation, review, concurrent-commit handling, and local publication evidence.
+
+
+## 2026-11-25 — Carbon adversarial review guidance
+
+The user authorized adopting the review-guidance subset of the B2 improvement
+plan. The Carbon procedure now routes Lean proof reviews to the proof guide,
+tooling/meta-plan reviews to the strategy guide, and substantive mixed work to
+both. The two guides retain their scrutiny while respecting Carbon's read-only
+execution boundary. Reviews separately report defects, nonblocking improvements,
+and open questions; every item receives a reasoned disposition and cycle-wide
+reporting preserves earlier fixes and suggestions.
+
+See the [review-guidance handoff](carbon-review-improvements-handoff.md) and
+[review report](agy-reports/carbon-review-improvements-review.md) for actual
+validation, items/dispositions, and local publication evidence. The remaining
+improvement implementation and all open mathematical obligations are unchanged.
+No installed-tool evaluation or gain in reviewer effectiveness is claimed.

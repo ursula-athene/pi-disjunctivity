@@ -10,13 +10,43 @@ standing instruction to repeat it. Outcomes are in the [research log](research-l
 Next session: <!-- current-prompt --> [Current prompt](session-prompts.md#current-prompt-b2-improvement-plan)
 is the execution entry, only when invoked by the user.
 
+## Carbon review guidance adoption — 2026-11-25
+
+A later user request explicitly authorized adopting the Carbon review-guidance
+improvements and integrating the two user-supplied adversarial guides. This is
+the review-documentation subset of the B2 improvement plan, not invocation of
+the full implementation prompt or permission to begin B3.
+
+The [Carbon procedure](gemini-review.md) now requires the proof guide for Lean
+milestones, the strategy/tooling guide for tooling and meta-plan reviews, and
+both for substantive mixed work. The guides inform scrutiny within the supplied
+scope; Carbon retains read-only file tools and requests caller-run checks where
+their examples call for experiments or compilation.
+
+The reporting change addresses observed omissions: B2a's documentation finding
+was fixed before its clean final review, and the tooling recommendation review
+included an optional supersession suggestion that was implemented but not
+highlighted in the summary. Future reviews separate defects, nonblocking
+improvements, and open questions. The caller records each item's disposition
+and reports the full cycle, including improvements to otherwise correct work.
+Neutral claim/evidence packets and explicit challenges to weak assumptions are
+intended to reduce confirmation-oriented review; their effect is unmeasured.
+There is no finding quota or claim that a low finding count demonstrates quality.
+
+See the [review-guidance handoff](carbon-review-improvements-handoff.md) for
+actual validation, review items/dispositions, and publication evidence. No Lean
+proof, tool installation, LSP pilot, skill activation, or dependency changed.
+The rest of the B2 improvement plan remains future work; reconcile this adopted
+subset when implementing P1 rather than treating all of P1 as complete.
+
 ## B2 improvement plan — proposed 2026-11-25
 
 The [replacement process/tool plan](b2-process-tool-improvement-plan.md) now
 owns the bounded implementation sequence and evaluation criteria. It supersedes
-the earlier B2 tooling prompt, which remains archived. This is a planning
-decision, not adoption evidence: no tools or skills were installed or activated,
-and no operational workflow or Lean proof was implemented by this update.
+the earlier B2 tooling prompt, which remains archived. That initial update was
+planning-only: no tools or skills were installed or activated, and no workflow
+or Lean proof was implemented. The review-guidance adoption above is a later,
+separately authorized subset; it does not complete the implementation plan.
 
 Implement and evaluate the improvements before moving to B3. B2 proof work is
 out of scope; already completed B2 provides fixed replay cases only. Preserve
@@ -111,6 +141,13 @@ incidents. Use short counts with evidence links when actually observed; say
 "not measured" for missing data. Separate proof and review/finalization time
 only when timestamps support it. Do not reconstruct historical counts, confuse
 cumulative usage with wall time, or claim quantified gains from one cycle.
+
+Deferred [Carbon review item Q2](agy-reports/carbon-review-improvements-review.md#items-and-dispositions):
+in the next two authorized milestone reviews, retain per-invocation wall time,
+capture token counts/budgets, and D/I/Q dispositions with concrete usefulness or
+boilerplate examples. Use those observations to consider trimming the reporting
+burden; they do not establish a detection rate. Revisit during remaining P1
+implementation and its next retrospective, without extra benchmark-only runs.
 
 ## B4/P3 workflow retrospective — 2026-11-25 snapshot
 

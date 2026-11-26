@@ -85,6 +85,9 @@ commit with **Gemini Carbon on High effort** through `agy`. The
 read-only tools, result inspection, capture, and bounded recovery. Include
 relevant surrounding code and documentation; for documentation-only milestones,
 review changed arguments, plans, and source assessments without inventing proof work.
+Supply the [required adversarial background](gemini-review.md#select-the-adversarial-review-background)
+for the milestone's subject. Retain separate defects, improvement suggestions,
+and open questions with the procedure's per-item dispositions.
 
 Request intermediate reviews when useful, especially after a substantial proof
 block, a theorem-contract/dependency change, or before building on an uncertain
