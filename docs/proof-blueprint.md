@@ -122,8 +122,8 @@ B1, B2, B4, and P3 are checked. B2 acceptance and publication are recorded in
 [the B2 handoff](b2-handoff.md). B3, V, Hπ, T, and π disjunctivity remain
 unproved. B4 still assumes vanishing errors and arbitrarily late visits;
 P3 still assumes open-interval visits.
-Next session: <!-- current-prompt --> [Current prompt](session-prompts.md#current-prompt-b2-improvement-plan)
-implements the [process/tool improvement plan](b2-process-tool-improvement-plan.md)
-using completed B2 as test material, with B2 proof development out of scope.
-[B3 tail control](proof-plan.md#next-bounded-task-b3-tail-control)
-is proposed, not started. No conditional visitation premise has been discharged.
+Next session: <!-- current-prompt --> [Current prompt: B3 tail control](session-prompts.md#current-prompt-b3-tail-control)
+prepares the [B3 contract](proof-plan.md#next-bounded-task-b3-tail-control) with
+the installed tools and skills. B3 is not started; invocation authorizes its
+implementation and acceptance. The [tooling milestone](b2-improvements-handoff.md)
+is complete. No conditional visitation premise has been discharged.

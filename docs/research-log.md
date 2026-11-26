@@ -1375,3 +1375,33 @@ See the [review-guidance handoff](carbon-review-improvements-handoff.md) and
 validation, items/dispositions, and local publication evidence. The remaining
 improvement implementation and all open mathematical obligations are unchanged.
 No installed-tool evaluation or gain in reviewer effectiveness is claimed.
+
+## 2026-11-25 — B2 process and tool improvement evaluation
+
+Invoked P0–P5 on the user-prepared improvement branch at `e83580e`.
+Implemented signature/index discipline, manual semantic review, bounded reads,
+and I6 diagnostic-log retention, reconciling the prior Carbon guidance subset.
+The P1 checkpoint returned no defects and four implemented improvements;
+full-cycle review/acceptance is in the [handoff](b2-improvements-handoff.md)
+and [review report](agy-reports/b2-improvements-review.md).
+
+The [evaluation](b2-tool-evaluation.md) records pinned temporary LSP protocol
+success, blocked persistent installation/configuration, selected-skill
+compatibility checks, original seeded skill evaluations, and explicit decisions.
+Shell remains default; host adoption is deferred. No production Lean, audit,
+pin, manifest, or mathematical contract changed. B3/V/Hπ/T remain open;
+B4/P3 retain their premises. The user later authorized branch pushes, no PR.
+
+## 2026-11-25 — B2 tooling installation follow-up
+
+The user completed persistent installation. After correcting an overstrict
+config comparison and repairing an empty generated launcher, app restart made
+all five MCP tools available and tested in this conversation; the four installed
+skills were visible and exercised. The requested [repeatable installer](b2-tool-installation.md)
+uses the tested Python module entry point, validates packages/protocol before
+configuration, and reuses matching components. A fresh isolated installation
+passed with its console wrapper deliberately emptied. See the
+[evaluation follow-up](b2-tool-evaluation.md#persistent-installation-and-native-host-follow-up)
+and [review report](agy-reports/b2-improvements-review.md#repeatable-installation-follow-up).
+Clean descendant shutdown and app disable/restore remain pending; known-case
+skill checks do not measure broader usefulness. No Lean contract or proof changed.

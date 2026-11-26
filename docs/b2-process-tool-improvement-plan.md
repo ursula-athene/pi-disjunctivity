@@ -1,16 +1,17 @@
 # B2 process and tool improvement plan
 
-Proposed replacement plan, 2026-11-25. **Plan-writing only in this session.**
-No installation, skill activation, workflow implementation, or proof work is
-performed by saving this document. The next implementation milestone is to
-implement and evaluate these improvements **before going on to B3**.
+Replacement specification, authored 2026-11-25 as a plan-only task. Saving it
+did not authorize execution. The user subsequently invoked P0–P5; the
+[implementation handoff](b2-improvements-handoff.md) records actual acceptance,
+evaluations, and deferred host activation. The specification below remains the
+authorized boundary; do not repeat accepted work or proceed automatically to B3.
 
 **Subsequent scoped adoption, 2026-11-25:** the user separately authorized the
 [Carbon review-guidance update](meta-proof-plan.md#carbon-review-guidance-adoption--2026-11-25).
 That subset of P1 is now documented in the mandatory review procedure and the
 two adversarial guides. It does not complete P1 or execute P0/P2–P5. Reconcile
 the adopted guidance when implementing the remaining improvements; tooling and
-proof work remain unstarted by this update.
+proof work remained unstarted by that scoped update.
 
 **B2 proof development is out of scope.** B2 is already checked and reviewed;
 its completed code supplies test cases, not a problem to solve again. B3,
@@ -134,12 +135,14 @@ retrospective identifies a gap. Avoid duplicating rules in `AGENTS.md`.
   and open questions without a quota. Record every item's implemented,
   deferred, declined, or unresolved disposition and summarize the full cycle;
   do not hide suggestions behind a final no-remaining-defects verdict.
-- Revisit deferred [Carbon item I6](agy-reports/carbon-review-improvements-review.md#items-and-dispositions):
+- Integrate [Carbon item I6](agy-reports/carbon-review-improvements-review.md#items-and-dispositions):
   adopt the successful per-invocation `--log-file` option in the initial/follow-up
   templates, with diagnostic retention/inspection instructions and a check on
   the next authorized review. Keep the literal prefix and existing permissions.
   One successful recovery is evidence of clean capture, not a guarantee that
-  all stderr or persistence problems disappear.
+  all stderr or persistence problems disappear. Implementation and next-run
+  verification are now recorded in the
+  [improvement review](agy-reports/b2-improvements-review.md).
 
 **Tests:** use a disposable documentation excerpt with valid links but stale
 status to exercise the manual pass; leave the automated checker limited to

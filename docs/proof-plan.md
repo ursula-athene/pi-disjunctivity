@@ -9,10 +9,11 @@ and unproved hypotheses; dated validation and publication evidence live in the
 [research log](research-log.md) and linked handoffs. Follow the
 [workflow](proof-workflow.md) for execution.
 
-Next session: <!-- current-prompt --> [Current prompt](session-prompts.md#current-prompt-b2-improvement-plan)
-implements the [process/tool improvement plan](b2-process-tool-improvement-plan.md)
-before B3. B2 proof development is out of scope; B1 and B2 are complete,
-checked and reviewed.
+Next session: <!-- current-prompt --> [Current prompt: B3 tail control](session-prompts.md#current-prompt-b3-tail-control)
+authorizes the bounded B3 contract below only when invoked. B1 and B2 are
+complete, checked and reviewed; the [tooling milestone](b2-improvements-handoff.md)
+is complete with its recorded limits. Use the installed tools without repeating
+those milestones.
 B3 and universal visitation remain unproved; the conditional
 B4/P3 results retain their hypotheses below and in the blueprint.
 

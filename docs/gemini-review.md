@@ -64,16 +64,27 @@ Run from the repository root, using the execution tool's working-directory
 parameter. Give the reviewer a bounded scope, ask it to read `AGENTS.md`, and
 request categorized findings with file/line references and reasoning. Prepare
 the exact task-owned diff in the calling session and supply it in the prompt or an
-accessible review file. Use `--mode plan`, request read-only file tools only,
+accessible review file. Prefer the exact diff and relevant evidence inline when
+temporary, user-config, or sibling paths are outside reviewer workspace access.
+Never retry a denied file through another tool or change reviewer permissions.
+A continuation ID is only an optimization; resupply the needed context.
+Use `--mode plan`, request read-only file tools only,
 and explicitly prohibit file changes and shell/Bash calls: even a read-only
 shell action can be denied by the headless reviewer's internal permissions.
 For example, replacing the scope/diff placeholders with the actual review input:
 
 ```sh
 agy --model gemini-4-carbon-high --mode plan --output-format stream-json \
-  --print-timeout 20m \
+  --print-timeout 20m --log-file /tmp/pi-MILESTONE-initial-cli.log \
   -p 'Read AGENTS.md, docs/gemini-review.md, and <required adversarial guide paths> using read-only file tools. Review <scope, baseline, exact diff/hash, intended claims, and supplied evidence>. Apply the guides within this scope; do not modify files or invoke shell/Bash tools. Independently assess the claims and weakest-supported step. Return a brief verdict, then separate defects, nonblocking improvements, and open questions or missing evidence, followed by coverage and limitations including guides used and reviewer checks versus caller receipts. Give each item an ID, location, evidence, consequence or benefit, and concrete repair or smallest investigation; label untested proposals and scope extensions. Each category may be empty. Do not equate passing caller checks or prior review approval with correctness. <exact diff or accessible review packet>'
 ```
+
+Use a unique permitted `--log-file` path for each invocation. Keep that CLI
+log alongside the raw execution chunks; inspect both before accepting a result
+or diagnosing a failure. Log separation kept terminal JSON intact in the
+review-guidance recovery, but does not guarantee suppression of every stderr
+message or repair denied conversation/auth/cache persistence. Never edit raw
+chunks to make an inspection pass.
 
 Capture stdout and stderr through the execution tool; save captured output in a
 separate permitted file-write operation. Do not append shell redirection to the
@@ -95,7 +106,8 @@ may be running:
 
 ```sh
 agy --model gemini-4-carbon-high --mode plan --output-format stream-json \
-  --print-timeout 20m --conversation '<conversation_id>' \
+  --print-timeout 20m --log-file /tmp/pi-MILESTONE-followup-cli.log \
+  --conversation '<conversation_id>' \
   -p 'Read and apply AGENTS.md, docs/gemini-review.md, and <applicable adversarial guide paths> using read-only file tools; do not assume a resumed conversation retained them. Recheck <prior item IDs and dispositions> against <exact fix diff, baseline/hash, and evidence>. Do not modify files or invoke shell/Bash tools. Report resolved, remaining, and new items separately as defects, nonblocking improvements, and open questions. Preserve earlier suggestions in the review history and state coverage and uncertainty, including guides used and reviewer checks versus caller receipts.'
 ```
 
@@ -171,6 +183,8 @@ is a starting operational limit, not a completion guarantee. Do not use
 solving a stall. Let the execution tool yield and retain its running session;
 poll that session in waits of at most sixty seconds, rather than treating an
 individual tool wait as the review deadline or launching a replacement process.
+Generally poll every 30–60 seconds; avoid repeated short polls with no new
+information. Display concise summaries while retaining complete raw captures.
 
 Capture the stream continuously. Record the invocation start time, the `init`
 event's conversation ID/model, and timestamps of meaningful `step_update`
@@ -228,7 +242,7 @@ check of the saved rule is:
 ```sh
 codex execpolicy check --rules /Users/adam/.codex/rules/default.rules --pretty -- \
   agy --model gemini-4-carbon-high --mode plan --output-format stream-json \
-  --print-timeout 20m \
+  --print-timeout 20m --log-file /tmp/pi-MILESTONE-initial-cli.log \
   -p 'Review the supplied diff without modifying files.'
 ```
 
@@ -267,6 +281,9 @@ of correctness are distinct. Utility exit zero is only a candidate for human
 acceptance; inspect the response, coverage, diagnostics, and findings yourself.
 Apply the category/disposition requirements above even when the utility passes;
 it does not judge recommendation quality or validate the review's output format.
-“No findings” is not proof. Record actual capture locations and retention limits
-in the review report. Temporary files and saved conversation IDs are not durable
+“No findings” is not proof. Record actual capture and per-invocation CLI-log locations and retention limits
+in the review report. Inspect the separate log for authentication, permission,
+service, and persistence failures as well as the JSON result. Retain diagnostics
+with the same lifetime as the raw captures; summarize consequential messages
+in the durable report without copying credentials or unrelated host details. Temporary files and saved conversation IDs are not durable
 archives; loss of context must be recorded, not assumed away.

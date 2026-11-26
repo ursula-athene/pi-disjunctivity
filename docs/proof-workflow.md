@@ -8,10 +8,11 @@ This workflow authorizes no additional research, services, or workers.
 The user-directed Gemini Carbon review requirement below is the specified review
 exception; it does not authorize broader orchestration or additional services.
 
-The [B2 improvement plan](b2-process-tool-improvement-plan.md) specifies a future
-process/tool milestone before B3. The review-guidance subset was separately
+The invoked [B2 improvement plan](b2-process-tool-improvement-plan.md) specifies
+the bounded process/tool milestone before B3. The review-guidance subset was separately
 [adopted](meta-proof-plan.md#carbon-review-guidance-adoption--2026-11-25);
-the remaining implementation and tool evaluations are still proposed. Completed
+remaining implementation/evaluation evidence is recorded in the
+[implementation handoff](b2-improvements-handoff.md). Completed
 B2 supplies test material only, and B2 proof development is outside that milestone.
 
 ## Source adaptations
@@ -92,6 +93,12 @@ lake env lean Test.lean
    rg -n 'disjunctiv|hexadecimalOrbit|block_iff_mem_interval' .lake/packages/mathlib/Mathlib
    ```
 
+   Inspect complete local signatures, implicit arguments, and side conditions
+   with `#check @name` before composing applications. For generated declarations,
+   trace the `@[to_additive]` source or use a tested local symbol index. Make
+   natural-index equalities explicit before field/ring normalization; check
+   subtraction orientation against the actual inequality premise.
+
    A search exit status of 1 means no matches; it is not a compiler failure or
    proof that no related result exists under another name.
 3. Sketch the argument and review it separately for quantifiers, hypotheses,
@@ -161,6 +168,13 @@ lake env lean Test.lean
    ```
 
    Also review changed theorem signatures and imports outside this file list.
+   Before review, read the active README overview, relevant proof-plan status,
+   blueprint row, and current prompt together. Reconcile completed versus
+   proposed work, recurrence/orbit offsets, and every remaining hypothesis.
+   Link to `Test.lean` for the executable inventory instead of copying live
+   counts. Valid links do not establish current mathematical status.
+   Read bounded source sections and display summaries; retain full review
+   captures under the mandatory procedure.
    Obtain the required Gemini Carbon High review of the task-owned milestone
    diff, triage its findings, and rerun affected checks after fixes, following
    the review procedure below.
@@ -192,6 +206,28 @@ finalization; useful later work can be explicitly deferred. Use
 [process tools](process-tools.md) to prepare evidence and detect incomplete runs;
 they do not invoke `agy`, retry, assess mathematical correctness, or replace
 human findings triage. Reviewer feedback supplements Lean and statement checks.
+
+## Focused skill compatibility
+
+When adopted, selected external skills supplement this workflow; they do
+not replace its contracts or reviews. A failed search, even under two strategies,
+is evidence about that search only. Preserve approved conditional B4/P3 results
+with their explicit premises. Do not reinterpret them as failed formalizations
+of an unconditional theorem. Frozen-manifest approvals, placeholder drafts,
+companion installation, remote search, and source-statement changes are not
+adopted. The repository headers, pins, trust rules, complete authorized scope,
+root probes, checks, and Carbon reviews prevail over skill guidance. Pins, Mathlib-facing imports,
+and the no-placeholder/trust prohibitions apply to disposable scratch files too;
+these probes do not require production headers, root exports, or Git-staged review.
+Use Mathlib-facing imports rather than direct imports of its transitive packages.
+
+Inspect complete skill resources and resolve cross-skill links before activation.
+An omitted companion is a documented boundary, not permission to install it.
+Preserve upstream notices in external installations and label local adaptations.
+Installation or copying alone does not establish discovery or successful use by
+the actual host. Record those separately, with exact rollback and a tested shell
+fallback in the milestone handoff. Original argument/source skills return scoped
+criticism or contracts, never proof certificates or independent review.
 
 ## Handling a failed attempt
 

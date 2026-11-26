@@ -84,7 +84,8 @@ infer ownership of hunks. Capture files belong outside the scoped diff.
 Supply that exact diff inline in the literal `agy` command or in a reviewer-readable
 file, together with baseline/hash/scope and the review question. Keep the actual
 invocation outside scripts/wrappers, as prescribed in the Gemini procedure.
-The helper does not execute a command or grant authorization.
+Prefer inline evidence for paths outside reviewer access; never retry a denied
+read through another tool. The helper does not execute a command or grant authorization.
 
 ## Save and inspect review capture
 
@@ -127,7 +128,9 @@ losslessly. Missing output cannot always be detected from the surviving files.
 Without attestation, completeness is unverified. The report retains the full
 terminal result (`status`, `response`, `error`, `finished_reason`,
 `denied_actions` when present), init/model/conversation, errors, denials,
-diagnostics, and progress observations. It checks sequence, budget/truncation,
+diagnostics, and progress observations. It inspects execution chunks only, not
+`--log-file`: zero reported diagnostic lines does not imply an empty CLI log.
+Inspect that log separately. It checks sequence, budget/truncation,
 JSON events, terminal result, and observed exit. Startup stderr is retained
 for human inspection: persistence/auth initialization messages need not mean
 that the review itself failed. Missing or malformed events fail conservatively.
@@ -148,7 +151,8 @@ use the mandatory bounded-recovery procedure after investigation.
 
 ## Retention
 
-Raw prompts, diffs, chunk JSON, and full inspection reports normally live in
+Raw prompts, diffs, chunk JSON, per-invocation `--log-file` diagnostics, and full
+inspection reports normally live in
 milestone-specific `/tmp/pi-...` paths. Record the actual locations, invocation
 timestamps, hash, conversation, findings/disposition, capture gaps, and review
 limitations in `docs/agy-reports/` and link from the handoff/log. Include the
