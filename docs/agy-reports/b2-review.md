@@ -51,3 +51,56 @@ Raw evidence is temporary: `/tmp/pi-b2a-review/{diff.patch,scope.json}`,
 response and progress/diagnostics). All returned execution chunks were saved
 losslessly with caller timestamps and exit metadata. Temporary files may vanish;
 this committed summary retains scope, finding disposition, and limitations.
+
+## Complete B2 milestone review
+
+Full thirteen-file index diff against the same merged-main baseline:
+`PiDisjunctivity.lean`, `PiDisjunctivity/BBP/Orbit.lean`, `Test.lean`, `README.md`,
+`docs/proof-plan.md`, `docs/proof-blueprint.md`, `docs/meta-proof-plan.md`,
+`docs/research-log.md`, `docs/session-prompts.md`,
+`docs/proof-attempt-session-prompt.md`, `docs/b2-handoff.md`,
+`docs/retrospectives/retrospective-2026-11-25-b2.md`, and this report's B2a record.
+SHA-256: `4a11e3847bd88ed0e8b903d4409c9a6ccee46e70f7eaadc863d10d6796314003`.
+HEAD at submission was the pushed B2a commit `d4135be`.
+
+Used the same literal Carbon High prefix, stream JSON, 20-minute deadline,
+read-only file tools, and an inline complete diff. Requested continuation with
+explicit prior ID `a24010a3-3bee-4771-9030-c0b12c375938`; CLI reported it was
+not locally available and started `73c412bd-1176-4272-8887-877c04b66e9e`.
+The full scope, prior finding, and caller evidence were supplied in the prompt;
+no continuity of hidden context is claimed. This was one milestone invocation,
+not a failed run or recovery retry. No permissions were changed.
+
+Caller start `2026-11-25T23:54:56.066Z`, final capture
+`2026-11-26T00:01:31.996Z`: **395.930 seconds** (both on November 25 locally).
+Explicit init model `gemini-4-carbon-high`; 41 read-only file calls completed.
+Read/usage progress was captured at `23:56:26.457Z`; a later quiet period had
+only CLI token-refresh output, not evidence of model progress. The final
+substantive response and terminal result completed the run. All chunks were
+saved with adequate budgets and no truncation; the inspector reports complete
+capture, zero process exit, no errors/denials/gaps. Terminal `status: SUCCESS`,
+nonempty response; `error`, `finished_reason`, and `denied_actions` absent.
+
+**Disposition: accepted, explicit no actionable findings across the full diff.**
+The reviewer verified definitions and offset, both `HasSum` contracts, split,
+private prefix recurrence, range, integer-floor witness, exact orbit bridge,
+root guards, and theorem-instantiating boundaries. It confirmed the prior stale
+status/count finding resolved, current/archived prompt links aligned, and
+B3/V/Hπ/T and conditional hypotheses retained. No substantive fix or additional
+review was required. Caller assessment agrees; kernel checks remain separate.
+
+Unlike the checkpoint review, this run also read the directly relevant pinned
+Mathlib floor and infinite-sum sources. It did not execute Lean, Git/hash,
+Python, or preservation checks; those rely on caller validation. No remote CI
+or clean-environment rebuild is claimed. Proposed B3 bounds remain outside the
+implemented milestone regardless of the reviewer's passing mathematical remark.
+CLI log/crash/cache/conversation writes were sandbox-denied, authentication
+succeeded, and all requested file reads completed. The failed saved-context
+lookup and temporary raw retention are explicit limitations, not lost diff scope.
+
+Temporary evidence: `/tmp/pi-b2-review/{diff.patch,scope.json}`,
+`/tmp/pi-b2-capture-*.json`, `/tmp/pi-b2-inspection.json` (full response and
+progress/diagnostics), and `/tmp/pi-b2-reviewed-files.json`. The exact diff hash
+was rechecked during review. Factual review/commit/necessity receipts added
+after this review receive caller scope, preservation, link, and whitespace
+checks; reviewed Lean/audit bytes stay unchanged.

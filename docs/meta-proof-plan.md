@@ -7,8 +7,26 @@ The [proof plan](proof-plan.md) owns mathematical contracts, the
 plan below is retained as a dated design record; its pilot is complete, not a
 standing instruction to repeat it. Outcomes are in the [research log](research-log.md).
 
-Next session: <!-- current-prompt --> [Current prompt](session-prompts.md#current-prompt-b2-complete-orbit-bridge)
+Next session: <!-- current-prompt --> [Current prompt](session-prompts.md#current-prompt-paused-after-b2)
 is the execution entry, only when invoked by the user.
+
+## B2 process evidence — 2026-11-25
+
+Early root definition/equation probes succeeded, followed by complete theorem
+interfaces before final audits. Local library search and scratch compilation
+sufficed for splitting and the integer-floor recurrence argument; no new
+proof infrastructure or mathematical hypothesis was needed. The B2a Carbon
+review found stale overview status/count prose even though links were valid.
+Corrected those summaries and removed the duplicated live audit count. The
+offline documentation checker checks links/entry consistency, not mathematical
+status prose; caller review must still reconcile both. This is a demonstrated
+limit of the check, not a reason to expand it into a semantic status checker.
+
+Keep the existing workflow and B1/B2/B3 ordering. See the
+[B2 retrospective](retrospectives/retrospective-2026-11-25-b2.md) and
+[handoff](b2-handoff.md) for observed repairs, review timing/capture, and final
+acceptance. B3 is only proposed; no visitation argument or productivity gain
+is inferred from this elementary orbit bridge.
 
 <a id="b1-completion-and-next-bounded-task"></a>
 

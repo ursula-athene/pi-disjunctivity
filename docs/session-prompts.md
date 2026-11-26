@@ -6,7 +6,27 @@ even where an archived prompt contains imperative instructions or a different
 policy. A completed milestone must not be repeated or automatically extended.
 Saving this prompt does not begin the milestone; invoking it does.
 
-## Current prompt: B2 complete orbit bridge
+## Current prompt: paused after B2
+
+B2's convergent split, recurrence/range, and exact π-orbit identity are checked.
+Read [the B2 handoff](b2-handoff.md) for final review, commit, publication, and
+necessity-review acceptance. Do not repeat B1/B2 or automatically start B3.
+
+The next proposed bounded task is [B3 tail control](proof-plan.md#next-bounded-task-b3-tail-control),
+requiring separate authorization. B3, V, Hπ, T, and π disjunctivity remain open.
+B4 still assumes vanishing error and arbitrarily late visits; P3 still assumes
+open-interval visits. B2 alone does not complete M3/Step 4 or prove visitation.
+
+## Old prompts - do not use
+
+<a id="current-prompt-b2-complete-orbit-bridge"></a>
+
+### Session prompt: B2 complete orbit bridge
+
+**Implementation record (2026-11-25):** all mathematical obligations are checked;
+see [the B2 handoff](b2-handoff.md) for final review, commit, and necessity status.
+The user superseded pre-merge branch instructions and authorized regular pushes,
+with no PR. The original prompt below is historical and grants no new scope.
 
 Resume work in `/Users/adam/personal/proj/pi-disjunctivity/pi-disjunctivity`
 on `feature/attempt-05-b2`.
@@ -192,7 +212,7 @@ IDs, and handoff path. Propose B3 as the next bounded task without starting it.
 Do not push or open a PR unless separately requested; use `gh pr create` when
 PR creation is authorized. Pause at the B2 endpoint.
 
-## Old prompts - do not use
+
 
 <a id="current-prompt-paused-after-b1"></a>
 

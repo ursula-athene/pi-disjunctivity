@@ -1,13 +1,10 @@
 # Proof-attempt session prompt entry point
 
-The current session instructions are in the first section.
-Use <!-- current-prompt --> [session-prompts.md: B2 complete orbit bridge](session-prompts.md#current-prompt-b2-complete-orbit-bridge).
-When the user asks to execute this file, follow only those current instructions.
-B1 is complete. Invoking the current prompt authorizes all of B2, ending before
-B3 or visitation work; saving the prompt does not begin implementation.
+Use only <!-- current-prompt --> [Current prompt: paused after B2](session-prompts.md#current-prompt-paused-after-b2).
+The B2 mathematical obligations are checked. Read [the B2 handoff](b2-handoff.md)
+for final review, commit, publication, and necessity-review acceptance. Do not
+repeat completed B1/B2 or begin B3/visitation without a new instruction.
 
-The previous paused-after-B1 instructions and completed B1c, B1b, B1a, and
-B4/P3 prompts are preserved under
-[Old prompts - do not use](session-prompts.md#old-prompts---do-not-use), followed
-by the older formulation-review prompt. Archived prompts are historical and
-must not be executed or used to override the current instructions.
+Earlier execution prompts are preserved under
+[Old prompts - do not use](session-prompts.md#old-prompts---do-not-use).
+Archived prompts are historical and grant no new authorization.

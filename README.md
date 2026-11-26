@@ -17,8 +17,10 @@ links to the BBP paper, and specifies the mathematical statement.
 ## Scope and current status
 
 The formulation and its digit/interval/orbit equivalences are verified. The
-unconditional BBP series for π is checked. B2/B3 and universal visitation remain
-unproved, and the conditional transfer results retain their hypotheses. This
+unconditional BBP series and exact recurrence-to-orbit bridge are checked.
+B3 tail control and universal visitation remain unproved, and the conditional
+transfer results retain their hypotheses. See [the B2 handoff](docs/b2-handoff.md)
+for final acceptance and publication evidence. This
 repository does not establish π disjunctivity.
 
 Use the [proof plan](docs/proof-plan.md) for the mathematical roadmap and exact
@@ -27,7 +29,7 @@ and hypotheses, and the [research log](docs/research-log.md) for dated evidence
 and handoffs. The [formulation review](docs/formulation-review.md) and
 [follow-up](docs/review-follow-up.md) record the semantic review of the problem.
 
-Next session: <!-- current-prompt --> [Current prompt](docs/session-prompts.md#current-prompt-b2-complete-orbit-bridge)
+Next session: <!-- current-prompt --> [Current prompt](docs/session-prompts.md#current-prompt-paused-after-b2)
 is invoked only at the user's request. Read [AGENTS.md](AGENTS.md) and the
 [workflow](docs/proof-workflow.md) before implementation.
 
@@ -117,7 +119,7 @@ To build selected modules explicitly:
 lake build PiDisjunctivity.Definitions PiDisjunctivity.BlockValue \
   PiDisjunctivity.Digits PiDisjunctivity.Disjunctivity PiDisjunctivity.Cylinders \
   PiDisjunctivity.Conjectures PiDisjunctivity.OrbitEquivalence PiDisjunctivity.OrbitCriteria \
-  PiDisjunctivity.BBP.Series PiDisjunctivity.Examples
+  PiDisjunctivity.BBP.Series PiDisjunctivity.BBP.Orbit PiDisjunctivity.Examples
 ```
 
 For a quick check of one source file, or to inspect the selected Lean version:

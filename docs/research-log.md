@@ -1283,3 +1283,35 @@ with the executable inventory link. These are factual documentation repairs;
 no mathematical statement or code changed. The complete B2 review will include
 them. [Review evidence](agy-reports/b2-review.md) records full capture, terminal
 fields, coverage, and limitations. Checkpoint commit/push follows validation.
+
+## 2026-11-25 — B2 recurrence and exact orbit bridge
+
+Committed and pushed the reviewed B2a checkpoint as
+`d4135bea00cd5fdb47468f09301dc269abfd8b93` on `feature/attempt-07-b2-orbit`.
+Post-commit inspection found the split theorem, tail `HasSum`, scaled identity,
+exposed definitions, root export, and guards necessary for the specified B2
+contracts and next proof layer; no substantive simplification was justified.
+No empty follow-up commit was made.
+
+Added private prefix zero/successor lemmas and the three public results
+`bbpRecurrence_mem_Ico`, `bbpRecurrence_succ_eq_fract_bbpPartialSum`, and
+`fract_pow_mul_pi_eq_bbpRecurrence_add_bbpTail`. The recurrence proof explicitly
+uses the integer witness `-16 * ⌊bbpPartialSum n⌋`; the final bridge combines
+that identity with the scaled split and `Int.fract_fract_add`. No convergence,
+range, density, or visitation hypotheses enter the final theorem. B3 has not
+begun. The original B1 proofs and all earlier audits remain unchanged.
+
+Full root-import types and actual axiom lists passed; all three lists contain
+only `propext`, `Classical.choice`, `Quot.sound`. Boundary probes explicitly
+instantiate recurrence/orbit theorems at zero and the orbit theorem at one;
+definition arithmetic also checks `y(1)=2/15` and the two-term prefix. Scratch
+feedback corrected a natural-subtraction rewrite; a production line-length
+warning was fixed without changing linters. No missing mathematics was found.
+
+All B2 mathematical obligations are checked. Complete milestone review,
+validation, commit/push, post-commit necessity review, and final handoff
+acceptance are recorded in [the B2 handoff](b2-handoff.md) and
+[review report](agy-reports/b2-review.md). B3, V, Hπ, T, and π disjunctivity
+remain open; B4 retains vanishing error and late visits, P3 retains
+open-interval visits. The current session entry now records the B2 stopping
+point, and B3 is proposed only.
