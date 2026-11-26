@@ -7,7 +7,7 @@ The [continued research checkpoint](#continued-research-checkpoint--2026-11-26)
 records subsequent work during the user's absence; that checkpoint does not
 terminate the ongoing M4 effort.
 The latest dated continuation is the
-[Sampling assessment](#sampling-assessment--2026-11-26); read the
+[Transform and conjugate-state assessment](#transform-and-conjugate-state-assessment--2026-11-26); read the
 research log and actual checkout for subsequent results and current state.
 
 ## Baseline and authorized endpoint
@@ -486,3 +486,30 @@ the bound and outcome;
 the review record owns scope, evidence and limitations. No production Lean,
 audit, dependency or pin changed. V/Hpi/T/M4 remain open, M5 is excluded, and
 all commits remain local with no push or PR. Research continues.
+
+## Transform and conjugate-state assessment — 2026-11-26
+
+The sampling/entry checkpoint is committed locally as `a155027`; its exact
+five paths, empty index and unchanged protected sources were verified. The
+separate [transform assessment](m4-transform-phases.md) identifies a concrete
+finite-frequency bound sufficient for the exact V contract. The bound remains
+unproved. Mellin reflection, with residues and boundary branches retained,
+counts floor(pi*16^n) again. Gaussian inversion does not transfer full-lattice
+cancellation to the selected powers of four, and its prefactor is offset by
+the dual length. The follow-up tests finite Fourier extraction costs explicitly.
+
+The [conjugate-state extension](m4-prime-compression.md#the-alternate-state-is-a-reflected-real-phase)
+proves sum Ahat(n)/16^n=-pi and Shat_n=-S_n+U_n with
+0<U_n<1/(16n+18). It retains exact local state swaps and endpoint corrections.
+The two phases are asymptotically inverse; paired entry perturbations preserve
+their null sum while losing individual global initialization. This closes a
+candidate independence inference, not V. Parent reconstruction and both exact
+checker replays passed; independent review completed after two domain repairs
+and an endpoint clarification. The review record retains every disposition.
+
+The fresh meta-plan pass tests whether a variable rational telescoper can
+cancel selected anchor denominators at a useful real error and height cost,
+while preserving the weighted constant and zero initialization. Its finite
+bound and actual outcome belong in the log. This is a test, not an assumed
+route to visits. No Lean, audits, dependencies, pins or trust assumptions changed.
+V/Hpi/T/M4 remain open; M5 is excluded. No push or PR occurred. Work continues.

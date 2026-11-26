@@ -285,6 +285,103 @@ and 256 dyadic cancellations. These are finite diagnostics. Evidence:
 - `/tmp/pi-m4-negative-denominator-receipt-v1.json`, SHA-256
   `6df38b71fe9ab808ce4ddc1edf3dec7d27f6f289e7bf6052cf3d0ef98f0dde72`.
 
+## The alternate state is a reflected real phase
+
+The negative-coefficient state Ahat introduced by the positive compression
+has an exact real interpretation. With
+
+    Ahat(n)=-4/(8n+2)-2/(8n+3)-2/(8n+4)+1/[2(8n+7)],
+    Shat_n=sum_(j=0)^n16^(n-j)*Ahat(j), U_n=S_n+Shat_n,
+
+its weighted infinite sum is -pi. This is the positive-index alternate state,
+not the opposite-direction branch X_m above. Define
+
+    F(z)=log[(2-z^2)/(z^2-2z+2)],
+    P_0(z)=1-z-z^2/2-z^3-z^4/4-z^5/4+z^6/8.
+
+The existing [null-kernel identity](m4-rational-forcing.md) gives
+P_0=(1-z^8/16)*F', F(0)=F(1)=0, and
+
+    D(n):=A(n)+Ahat(n)=4*integral_0^1 z^(8n)*P_0(z) dz.
+
+Uniform geometric convergence on [0,1] therefore gives sum D(n)/16^n=0.
+The actual BBP identity proves the asserted -pi constant. For M=8n+8,
+the exact remaining tail and integration by parts give
+
+    U_n=-sum_(k>=1) D(n+k)/16^k
+       =-(1/4)*integral_0^1 z^M*F'(z) dz
+       =(M/4)*integral_0^1 z^(M-1)*F(z) dz.               (10)
+
+Both logarithm arguments are positive on [0,1]. Since their difference is
+2z(1-z), F is positive in the interior. The elementary bounds
+z(1-z)<=F(z)<=2(1-z), strict for the upper bound in the interior, imply
+
+    M/[4(M+1)(M+2)] <= U_n < 1/[2(M+1)]=1/(16n+18).
+
+In particular U_n>0. The endpoint derivatives F'(1)=-2, F''(1)=-8 and a
+uniform cubic Taylor remainder give
+
+    U_n=1/[2(M+1)]-2/[(M+1)(M+2)]+O(M^(-3))
+       =1/(16n)-13/(128n^2)+O(n^(-3)).
+
+This controls the real relation Shat_n=-S_n+U_n, rather than providing an
+independent phase. With e(t)=exp(2*pi*i*t), for every integer h,
+
+    abs(e(h*Shat_n)-conjugate(e(h*S_n)))
+      <=2*pi*abs(h)/(16n+18).                            (11)
+
+The same bound with n replaced by N holds for the difference of any finite
+nonempty averages over indices n>=N. Their pointwise product tends to 1.
+Reflection and strict inner intervals transfer late visitation between the
+two states, but establish neither visitation theorem.
+
+The arithmetic transform is equally coupled. For an odd residue class s
+modulo 8, move offset r to delta=s*r mod8 in {1,...,7}, multiplying its
+coefficient by chi_s^delta*2^((r-delta)/2), where chi_s is 1 for s=1,7
+and -1 for s=3,5. This rational linear map T_s satisfies T_s^2=identity
+and T_s*T_t=T_(st mod8). It fixes A and Ahat separately for s=1,5, swaps
+them for s=3,7, and fixes D for every class.
+
+For primes p>=7, p^2>8n+7 and n=p*h+s_0, formula (1)'s compression applies
+to each of the three vectors c in {A,Ahat,D}, with transformed prefix T_p c:
+
+    p*S^c_n =16^s_0*(16*S^(T_p c)_(h-1)
+                +sum_(r:b_r<=s_0) w_r/(8h+delta_r)) mod p.
+
+Here b_r=(p*delta_r-r)/8 and w_r is the transformed coefficient. The square
+bound retains the alternate offset 7. These vectors have dyadic coefficients,
+so their coefficient denominators are p-units, as required by pole extraction.
+All included compressed denominators are p-units;
+the empty prefix at h=0 is zero. In particular the small real null prefix U
+reproduces itself under this compression. Its endpoint sum must use its own
+offset thresholds; it cannot be replaced by a full D coefficient.
+
+For canonical residues a=p*S_n mod p, ahat=p*Shat_n mod p and u=p*U_n mod p,
+write a+ahat=u+p*k, where k is 0 or 1. The p-integral cofactors satisfy
+
+    (S_n-a/p)+(Shat_n-ahat/p)=U_n-u/p-k.                  (12)
+
+The integer quotient and null state's own p-component remain present.
+Starting the two actual forced recurrences at S_N+epsilon and Shat_N-epsilon
+preserves their sum U_(N+j) at every future step, while their individual
+errors are opposite 16^j*epsilon. The existing finite entry construction
+therefore also preserves this sum and both corresponding prime/dyadic data.
+It does not preserve either global zero initialization or automatically the
+alternate reduced denominator. The sum relation alone fails to select the
+actual pair. This is a concrete instance of the previously recorded fixed
+null-family limit, not a new independence or averaging principle.
+
+The parent reconstructed the integral, endpoint expansion, transform and
+cofactor identities and reran the exact checker, exit 0. It checked 33,744
+principal-part comparisons, 11,248 cofactor identities and 315 paired-entry
+identities, alongside finite polynomial and rational-bound checks. A separate
+observed 2-adic valuation pattern is not used as a universal theorem. Frozen
+report `/tmp/pi-m4-conjugate-state-report-v1.md`, SHA-256
+`bcb9f629c2a7b531c8c63fed6bf5a055f3d4bd6eefa6d0f21d67a7324db51ff9`,
+has version1 checker, receipt and manifest siblings. The first missing real
+estimate still concerns the actual globally initialized phase; substituting
+the alternate state replaces it by its reflected copy.
+
 ## Evidence for the positive-branch argument
 
 The parent reconstructed the proof, visually checked the PNT source page and

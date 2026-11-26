@@ -678,9 +678,17 @@ have completed independent review. The entry construction
 preserves the actual initial floor and denominator, a complete prime component
 and increasing dyadic precision through a finite avoiding block, while changing
 global initialization. These data do not select the actual complementary phase.
-Further estimates must use additional initialized-prefix dependence. A separate
-Mellin/Poisson source connection is testing whether a pi-specific real transform
-retains a usable phase estimate; no cancellation or visitation is assumed.
+Further estimates must use additional initialized-prefix dependence. The
+[conjugate-state identity](m4-prime-compression.md#the-alternate-state-is-a-reflected-real-phase)
+proves that the other compressed state has constant -pi and real phase -S_n
+plus a positive vanishing null correction, so it supplies no independent phase.
+The [Mellin/Poisson assessment](m4-transform-phases.md) gives an explicit
+sufficient finite-frequency estimate, still unproved; reflection returns the
+original floor threshold and Gaussian inversion retains sparse extraction.
+These new paper extensions passed independent review after domain corrections.
+A fresh meta-plan investigation is
+testing variable rational telescopers with exact initialization and cost;
+no cancellation or visitation is assumed.
 
 For the recurrence defined in Step 4, seek a proof of
 

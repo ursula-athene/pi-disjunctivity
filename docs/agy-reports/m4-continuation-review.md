@@ -628,3 +628,54 @@ evidence. No reviewer execution, probe, build, edit, Git mutation, installation,
 service, delegation or Carbon occurred. Subsequent edits only record this
 outcome; no substantive repair was needed. No new Lean export or V follows.
 The Mellin/Poisson and conjugate-state investigations are outside this scope.
+
+The sampling/entry checkpoint is committed locally as
+`a1550277d0bb54bbb49b0377efb812297ee29a24`. Final staged diff SHA-256
+`dd084e1a8bcd0e929b34d38c0b733e7bf4092e3dedbe24448f001bd6ce0724c7`
+and final-validation/post-commit receipts remain in its packet. Final
+86-file documentation and both whitespace checks passed; exact five paths,
+empty index and unchanged protected sources were verified. Unrelated work was
+preserved; no unused infrastructure or substantive simplification was found.
+No push or PR occurred.
+
+## Transform and conjugate-state review
+
+Reviewer `/root/generating_review` completed the exact six-path review against
+`a1550277d0bb54bbb49b0377efb812297ee29a24`, frozen diff SHA-256
+`3c91e048b63d4bbf84c040236786d74f4698226aef7c8dd7bc9deb9c83eb9258`.
+Scope: transform assessment, prime-compression extension, proof plan, log,
+handoff and this record. Packet `/tmp/pi-m4-transform-review-20261126/`
+retains full diff, scope/evidence hashes, caller checks and verbatim review.
+
+**Whole-cycle dispositions:** D1 repaired the missing p-integral coefficient
+hypothesis in generalized compression. The counterexample p=7,n=0,c_1=1/7
+gives residues 1 versus 0. Production now restricts to the actual three dyadic
+vectors; the preserved report has a domain erratum. The reviewer inspected and
+resolved `domain-fix.patch`, SHA-256
+`cd1325e614bfd2bc1e4861d5d98341f3f05f50ab74cd6f3e997b0288d9298534`,
+and erratum SHA-256
+`771d56e27b55bb8b776f1a043526f277d747cca2c4d835f508636bbac5b03f39`.
+D2 repaired the minorant's integer domain to positive integers; negative m
+can satisfy the ratio condition. The inspected patch SHA-256 is
+`aaf98a335146ecd07cb70ad8dd6a94cd9e7d479dbc5c499d9211a3746265e1ba`.
+I1 clarified the frozen Mellin report's coincident endpoint convention using
+the inspected erratum SHA-256
+`cc309de16ddde496ae42d790b21a2d03aca5930f4c146779ba76a919461b79f2`.
+All three items are resolved; no open questions, omissions or deferrals remain
+for these diagnostic claims. CANC and V stay open.
+
+Coverage included both full reports/checkers, receipts/manifests, official
+formula extracts and null-kernel context, with matching hashes. The reviewer
+reconstructed strict minorant transfer, all contour residues and branches,
+uniformity limits, theta normalization and dual length, null-prefix integral
+and asymptotics, local transforms/endpoints/cofactors and paired-entry limits.
+Both full adversarial guides and unchanged hashes were retained under AGENTS,
+the replacement procedure and argument-critic limits.
+
+Review was read-only inspection and mathematical reconstruction; checker runs,
+the 87-file documentation check, whitespace checks and official HTML condition
+inspection remain caller evidence. No reviewer executions, probes, builds,
+edits, Git mutations, installations, services, delegation or Carbon occurred.
+Subsequent edits record these outcomes only. No new Lean theorem or M4
+acceptance follows. Sparse-completion and variable-telescoper research were
+outside this exact scope.

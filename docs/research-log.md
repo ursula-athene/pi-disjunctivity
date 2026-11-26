@@ -2356,3 +2356,45 @@ actual cancellation, or merely returns the same coupled phase (or a statement
 about 1/pi). Keep contours, regularization, endpoint terms and uniformity
 explicit. The worker must prove or refute one proposed gain with a cylinder
 consumer, not present another transform identity alone as a visitation result.
+
+**Mellin/Poisson outcome:** the frozen report supplies a smooth finite-mode
+minorant with an exact one-block sufficient estimate, retaining the strict
+interval margins and B3 transfer. The estimate remains unproved. Zeta reflection
+crosses the explicit -Log z and z/2 residues; its boundary branches count
+floor(pi*16^n) exactly. The original phase is still present. Gaussian inversion
+has an unresolved sparse-selection step and a quantified growing dual length.
+Parent reconstruction, official DLMF formula inspection and exact checker replay
+passed. The [assessment](m4-transform-phases.md) preserves these paper limits.
+
+**Conjugate state, bounded to 20 minutes, completed:** test whether the second
+prime-compression state has a usable global real relation. Its coefficient sum
+with A is four times the existing null kernel. Integration proves weighted
+constant -pi and a positive null prefix U_n<1/(16n+18), with two explicit
+asymptotic coefficients. The local transform swaps the two states for primes
+3 modulo 4 and fixes their sum, retaining distinct endpoint terms. Thus their
+real characters are asymptotically conjugate, not independent. Opposite entry
+perturbations preserve the entire null-prefix sequence and both actual forcings,
+but lose individual initialization. The
+[extension](m4-prime-compression.md#the-alternate-state-is-a-reflected-real-phase)
+and full exact checker were reconstructed and rerun by the parent. Its observed
+finite valuation pattern is not a theorem. Both new extensions passed independent
+review after restricting the compression coefficient domain, requiring a
+positive minorant exponent and clarifying coincident circle endpoints.
+
+**Extraction follow-up, bounded to 20 minutes:** quantify the finite Fourier
+completion norm of the powers-of-four mask against a quadratic Gauss sum.
+Retain aliases, even-modulus active frequencies, reduction after factoring the
+start index, and the distinction between fixed and adaptive starts. The test
+seeks a proved obstruction or a genuinely useful bound, not another invocation
+of a full-period estimate. A finite irrationality measure alone must not be
+claimed to control every adaptive block.
+
+**Fresh meta-plan pass, bounded to 25 minutes:** the exact arithmetic and
+analytic identities still leave the actual phase unestimated. A fresh context
+received the failure map and is testing variable rational telescopers that
+preserve both the BBP constant and zero initialization. For the chosen sign
+D(n)=16*r(n)-r(n+1), the weighted sum is 16*r(0), and the prefix correction is
+16^(n+1)*r(0)-r(n+1); r(0)=0 is essential. The proposed discriminating question
+is whether variable order permits useful denominator cancellation with a
+costed real cylinder margin. Fixed corrections or unrestricted interpolation
+alone would repeat earlier failures. No successful cancellation is assumed.
