@@ -47,6 +47,17 @@ proposed work; the [meta-plan evaluation](meta-proof-plan.md#lightweight-evaluat
 keeps Q2 visible for later reviews. Invoke the
 [current prompt](proof-attempt-session-prompt.md) only on the user's instruction.
 
-Local commit/publication and post-commit necessity evidence are pending until
-acceptance. No push or PR is requested. Identify this handoff's latest commit
-with `git log -1 --format=%H -- docs/carbon-review-improvements-handoff.md`.
+## Publication and post-commit necessity review
+
+Implementation commit: `f17a625de779df343e177afb86d75a3fdad53926`, local only.
+Post-commit inspection confirmed exactly the 13 task-owned Markdown files;
+unrelated Obsidian workspace/hotkeys, notes, and papers remain untouched.
+No push or PR was requested or performed.
+
+The necessity review retained the canonical procedure, subject-specific guide
+adapters, short policy/template cross-references, scoped adoption/deferral
+records, and review evidence. Each supports routing, acceptance, or the next
+session; no further substantive change or removable implementation was found.
+This receipt-only update records the observed commit and necessity review.
+Identify its commit with
+`git log -1 --format=%H -- docs/carbon-review-improvements-handoff.md`.
