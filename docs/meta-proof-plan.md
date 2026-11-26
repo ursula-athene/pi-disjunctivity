@@ -7,7 +7,7 @@ The [workflow](proof-workflow.md) owns execution; the
 Keep observations in the [research log](research-log.md), retrospectives and
 linked handoffs, rather than accumulating execution history here.
 
-Next session: <!-- current-prompt --> [Current prompt](session-prompts.md#current-prompt-b3-stopping-point).
+Next session: <!-- current-prompt --> [Current prompt](session-prompts.md#current-prompt-m4-universal-visitation).
 A proposed next task becomes work only when authorized.
 
 ## Review the plan at each bounded endpoint

@@ -31,8 +31,9 @@ and hypotheses, and the [research log](docs/research-log.md) for dated evidence
 and handoffs. The [formulation review](docs/formulation-review.md) and
 [follow-up](docs/review-follow-up.md) record the semantic review of the problem.
 
-Next session: <!-- current-prompt --> [Current prompt: B3 stopping point](docs/session-prompts.md#current-prompt-b3-stopping-point)
-records accepted B3 and its stopping boundary. No next milestone is authorized.
+Next session: <!-- current-prompt --> [Current prompt: M4 Universal Visitation](docs/session-prompts.md#current-prompt-m4-universal-visitation)
+defines the next research milestone. Invoking it authorizes M4; saving it does
+not begin research. B3 is accepted and universal visitation remains open.
 The [tooling handoff](docs/b2-improvements-handoff.md) retains its tool limits.
 Read [AGENTS.md](AGENTS.md) and the [workflow](docs/proof-workflow.md).
 

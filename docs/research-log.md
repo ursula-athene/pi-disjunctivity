@@ -1523,3 +1523,21 @@ fixed failure quota or inference of impossibility. All 38 offline process tests,
 the 64-file documentation check and whitespace checks passed using the documented
 `uv --no-cache run --locked --offline` prefix. No Lean files, mathematical
 contracts or open hypotheses changed; no research milestone was started.
+
+## 2026-11-26 — Prepare the full M4 Universal Visitation prompt
+
+Prepared the [current M4 prompt](session-prompts.md#current-prompt-m4-universal-visitation)
+from baseline `6d53f9d`, moving the B3 stopping point into the archive with its
+old anchor and body preserved. Older archives are unchanged. Aligned active
+entry links and the compact continuation pointer. This prepares authorization
+on invocation; it does not start M4 or discharge V, Hπ, T or π disjunctivity.
+
+The prompt retains the exact late-visit contract at recurrence index `n+1`,
+all thresholds and interval bounds, bounded research/recovery, stuckness/TRIZ,
+worker delivery rules, kernel audits, required Carbon reviews, local acceptance
+and an honest incomplete endpoint if the mathematical gap persists. M5 is separate.
+Self-reviewed this documentation preparation in line with the session's requested
+review approach; actual M4 reviews remain mandatory. Compared the contract with
+the blueprint, recurrence and existing B4 input audit. All 38 offline process
+tests, the 64-file documentation check, archive-preservation checks and whitespace
+checks passed. No Lean source, audit, pin or mathematical contract changed.

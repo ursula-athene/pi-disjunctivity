@@ -10,11 +10,11 @@ and unproved hypotheses; dated validation and publication evidence live in the
 [workflow](proof-workflow.md) for execution and the [meta-plan](meta-proof-plan.md)
 for how evidence should change this plan and the proving process.
 
-Next session: <!-- current-prompt --> [Current prompt: B3 stopping point](session-prompts.md#current-prompt-b3-stopping-point)
-records the accepted B3 endpoint and publication evidence in
-[the handoff](b3-handoff.md). B1/B2 and the [tooling milestone](b2-improvements-handoff.md)
-are complete. Universal visitation remains open; B4/P3 retain their hypotheses.
-No new research milestone is authorized.
+Next session: <!-- current-prompt --> [Current prompt: M4 Universal Visitation](session-prompts.md#current-prompt-m4-universal-visitation)
+defines the full Step 5 research and acceptance scope, authorized when invoked.
+Saving it starts no research. B1–B3 and the [tooling milestone](b2-improvements-handoff.md)
+are complete; [the B3 handoff](b3-handoff.md) records acceptance/publication.
+Universal visitation remains open, and B4/P3 retain their hypotheses.
 
 The goal is to prove `PiDisjunctivity.PiHexadecimalDisjunctivity`: every finite
 hexadecimal word occurs contiguously after the radix point of `Real.pi`,
