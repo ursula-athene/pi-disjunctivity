@@ -2398,3 +2398,57 @@ D(n)=16*r(n)-r(n+1), the weighted sum is 16*r(0), and the prefix correction is
 is whether variable order permits useful denominator cancellation with a
 costed real cylinder margin. Fixed corrections or unrestricted interpolation
 alone would repeat earlier failures. No successful cancellation is assumed.
+
+**Extraction outcome:** absolute Gauss completion costs at least L for an
+L-term powers-of-four mask at every odd squarefree effective modulus. The
+quadratic-character duality proof includes aliases. The nonsquarefree loss,
+q=27 counterexample, active even-frequency exceptions, exact replacement error
+and modulus reduction remain explicit. A finite irrationality exponent rules
+out the stated fixed-start long-block certificate, but not every adaptive
+start. Retaining the Gauss chirp exactly returns the original sparse sum.
+Parent reconstruction, exact checker replay and visual source inspection
+passed. The [extension](m4-transform-phases.md#absolute-gauss-completion-cannot-help-at-odd-squarefree-moduli)
+does not claim impossibility of every phase-sensitive estimate.
+
+**Variable-correction outcome:** finite rational interpolation programs an
+arbitrary rational orbit block while preserving pi, zero initialization,
+simple negative poles in the original four shift orbits and any prescribed
+finite asymptotic order. It changes the actual forcing and need not shadow
+the original orbit. Even a uniform circular margin at most 1/34 forces the
+same exponentially accurate initialized-phase approximation. Old-prime root
+counting gives a degree/content occupation bound. The
+[assessment](m4-null-gauges.md) retains all domains and missing real estimates.
+Parent read/replayed both original exact checkers. The positive-degree
+sharpness construction now has a separate degree-zero case.
+
+**Uniform-survival extension, bounded to 10 minutes, completed:** apply the
+existing fixed-H theorem uniformly on a proportional forward interval before
+root counting. If the denominator degree is o(n), cancelling the first d+1
+states into one rational orbit forces combined denominator content and seed
+denominator exponent at least 6. For degree at most theta*n the exact cutoff
+mass is ((8-theta)_+ +(4-theta)_+)/2. Limits are taken at fixed cutoff first.
+The actual n=8,p=19 cancellation supplies a finite countercondition to an
+all-index version. Parent reconstruction and the 537,253-comparison checker
+passed. The revised root checker uses math.isqrt with unchanged counts;
+the original is preserved, together with the explicit sharpness clarification.
+
+**Antisymmetric state, bounded to 15 minutes, completed:** diagonalize the
+two-state transform and test whether chi_4 signs yield a prime-average
+consumer. Its exact kernel reduces to 8/((z-1)^2+1), with constant 2*pi.
+The complete CRT expression retains the actual endpoint numerators, all
+prime powers and local division by two. Quadratic Gauss data loses additive
+numerator information. The same actual kernel run backward retains the
+eigen-sign but has real prefix bounded by 5/(2m), so a directional hypothesis
+cannot be dropped. Parent reconstruction and exact checker replay passed.
+The [extension](m4-prime-compression.md#the-antisymmetric-sign-does-not-determine-the-real-crt-phase)
+does not supply a forward character bound. All three extensions passed
+combined independent review with no D/I/Q items. Full reports/checkers, source
+pages and hashes were inspected; execution results remain caller evidence.
+
+**Changed cofactor question, bounded to 20 minutes:** lift p*S_n modulo p^2
+and retain the regular terms killed by principal-part reduction. Test whether
+the actual null/arctangent kernels collapse complete blocks to short Fermat
+quotient or finite-logarithm expressions, or retain a full-length endpoint
+sum. This is a closure test before any density inference. Even a successful
+single-prime lift would leave the entry-sieve and coupled real-phase gap;
+finite extra p-adic precision is not presumed to imply V.

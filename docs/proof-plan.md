@@ -686,9 +686,19 @@ The [Mellin/Poisson assessment](m4-transform-phases.md) gives an explicit
 sufficient finite-frequency estimate, still unproved; reflection returns the
 original floor threshold and Gaussian inversion retains sparse extraction.
 These new paper extensions passed independent review after domain corrections.
-A fresh meta-plan investigation is
-testing variable rational telescopers with exact initialization and cost;
-no cancellation or visitation is assumed.
+The [variable rational correction](m4-null-gauges.md) can program finite blocks
+while preserving pi and zero initialization, but uniform shadowing forces the
+original phase approximation. Consecutive-state root counting strengthens its
+combined denominator-content/seed cost to exponent 6 for sublinear degree.
+The [Gauss completion extension](m4-transform-phases.md#absolute-gauss-completion-cannot-help-at-odd-squarefree-moduli)
+rules out an absolute-norm gain for odd squarefree effective moduli, retaining
+prime-power and adaptive-start exceptions. The
+[antisymmetric-state test](m4-prime-compression.md#the-antisymmetric-sign-does-not-determine-the-real-crt-phase)
+retains the exact initialized CRT product and shows why the prime eigen-sign
+does not select its additive numerator phase. These extensions passed
+independent review with no D/I/Q items.
+A bounded lift to p^2 now tests whether the discarded regular cofactor really
+compresses; no cancellation or visitation is assumed.
 
 For the recurrence defined in Step 4, seek a proof of
 

@@ -382,6 +382,100 @@ has version1 checker, receipt and manifest siblings. The first missing real
 estimate still concerns the actual globally initialized phase; substituting
 the alternate state replaces it by its reflected copy.
 
+## The antisymmetric sign does not determine the real CRT phase
+
+Set R=A-Ahat and W_n=S_n-Shat_n, retaining D=A+Ahat and U_n above.
+The antisymmetric kernel has a pure arctangent interpretation:
+
+    K_R(z)=4+4z+2z^2-z^4-z^5-z^6/2,
+    K_R(z)/(1-z^8/16)=8/[(z-1)^2+1].
+
+Uniform geometric convergence on [0,1] gives sum R(n)/16^n=2*pi by
+8[arctan(z-1)]_0^1. The exact rational identity is 2*S_n=U_n+W_n.
+The local transform sends R to chi_4(p)*R, with chi_4(p)=1 for p=1 modulo 4
+and -1 for p=3 modulo 4. This is the elementary Frobenius action on the
+kernel's conjugate roots 1+i and 1-i.
+
+For p>=7, p^2>8n+7 and n=p*h+s, compression retains the actual endpoint set:
+
+    p*W_n=chi_4(p)*16^s*(16*W_(h-1)+J^R_(p,h,s)) mod p.
+
+Here J^R sums R's coefficient at delta_r, divided by 8h+delta_r, over original
+offsets r whose threshold b_r=(p*delta_r-r)/8 is at most s. The common chi_4
+factor has already been taken outside the sum. The empty prefix is zero. The
+corresponding formula for U has its own D endpoint set. These are dyadic
+coefficient vectors, so the coefficient-domain condition above holds.
+
+The complete real phase requires every prime power. For rational x=P/q,
+define a_p=p^e*x mod p^e when p^e exactly divides q, taking canonical
+residues. Then x-sum_p a_p/p^e is integral and
+
+    e(x)=product_p e(a_p/p^e), e(t)=exp(2*pi*i*t).         (13)
+
+The formula also works on a common denominator. The common denominator of
+S_n,U_n,W_n is odd: in addition to A's odd denominators,
+
+    Ahat(n)=-2/(4n+1)-2/(8n+3)
+             -3(n+1)/[(2n+1)(8n+7)].
+
+For each common prime power, the actual components therefore satisfy
+
+    2*a_S=a_U+a_W mod p^e,
+    a_S=2^(-1)*(a_U+a_W) mod p^e.                         (14)
+
+At a large first-power prime in the compression range,
+a_W=chi_4(p)*b_(p,n), where b_(p,n) includes 16^s, the compressed prefix
+and the endpoint sum. Those weights depend on p and n. Equations (13)--(14)
+retain the exact initialized product; a mean of chi_4 over primes is a
+different expression. No independence of its factors is supplied.
+
+The inverse of 2 in (14) is modular. Dividing a real CRT expression by 2
+can retain a sign from its discarded integer part. For example 4/3 has
+principal coefficient 1 modulo 3, but e((4/3)/2)=e(2/3), not e(1/6).
+The exact identity 2S=U+W or the full local inverse avoids dropping that sign.
+
+Quadratic Gauss sums do not recover the missing numerator information.
+For chi_p the Legendre character and tau_p(a)=sum_x chi_p(x)*e(a*x/p),
+change of variables and the elementary norm-square calculation give
+
+    tau_p(a)=chi_p(a)*tau_p(1) for p not dividing a,
+    tau_p(1)^2=chi_4(p)*p.
+
+The square explains the eigen-sign, but even tau_p(a) retains only the
+quadratic symbol of a. At p=7, numerators 1 and 2 give the same tau yet
+distinct additive characters. Substituting such a Gauss phase for a factor
+in (13), or inferring cancellation of the whole product from balanced prime
+signs, is unsupported.
+
+A same-kernel backward test makes the directional limitation concrete. Put
+
+    B_R(t)=R(-t-1),
+    Y_m=-16^(-m)*sum_(t=0)^(m-1)16^t*B_R(t), m>=1.
+
+The increasing-weight transform, whose power of 2 is 2^((delta-r)/2),
+again sends B_R to chi_4(p)*B_R. Its compression retains its own endpoints
+and requires p^2>8m-1. Nevertheless abs(R(-r))<=25/(2r) for r>=1, and
+splitting the geometric sum at floor(m/2) gives
+
+    abs(Y_m)<=5/(3m)+(5/6)*16^(-floor(m/2))<=5/(2m).
+
+Thus e(h*Y_m) tends to 1 for every integer h, with all prime-power factors
+retained in its CRT expression. No unproved dyadic cancellation is needed.
+The same rational kernel and prime eigen-sign therefore cannot justify an
+orientation-blind cancellation argument. Positive-time initialization and
+the coupled actual numerators remain essential to any surviving estimate.
+
+The parent reconstructed the kernel, CRT, Gauss and backward arguments and
+reran the exact checker, exit 0. It checks 12,118 component relations, 387
+CRT reconstructions, 11,248 endpoint/sign/phase comparisons, 129 backward
+bounds and CRT reconstructions, 13 Gauss squares and 266 twists, plus the
+kernel and eigen-identities. Frozen report
+`/tmp/pi-m4-antisymmetric-sign-report-v1.md`, SHA-256
+`6d95db5988ad6278cb6de7714a8a0878cfc0a0fea275b07f1936ae8bf41802b9`,
+has version1 checker, receipt and manifest siblings. These are paper
+diagnostics reviewed with no D/I/Q items, not a bound on the actual
+positive-time average.
+
 ## Evidence for the positive-branch argument
 
 The parent reconstructed the proof, visually checked the PNT source page and

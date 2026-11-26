@@ -7,7 +7,7 @@ The [continued research checkpoint](#continued-research-checkpoint--2026-11-26)
 records subsequent work during the user's absence; that checkpoint does not
 terminate the ongoing M4 effort.
 The latest dated continuation is the
-[Transform and conjugate-state assessment](#transform-and-conjugate-state-assessment--2026-11-26); read the
+[Gauge and Gauss assessment](#gauge-and-gauss-assessment--2026-11-26); read the
 research log and actual checkout for subsequent results and current state.
 
 ## Baseline and authorized endpoint
@@ -513,3 +513,36 @@ while preserving the weighted constant and zero initialization. Its finite
 bound and actual outcome belong in the log. This is a test, not an assumed
 route to visits. No Lean, audits, dependencies, pins or trust assumptions changed.
 V/Hpi/T/M4 remain open; M5 is excluded. No push or PR occurred. Work continues.
+
+## Gauge and Gauss assessment — 2026-11-26
+
+The transform/conjugate checkpoint is committed locally as `623d1bf`; exact
+six-path scope, empty index and unchanged protected sources were verified.
+The [rational correction assessment](m4-null-gauges.md) constructs arbitrary
+finite rational blocks while preserving pi and zero initialization. It changes
+the forcing and supplies no uniform real shadow. Even small circular shadowing
+requires exponentially accurate approximation of the original initialized phase.
+Root counting across consecutive states gives a degree/content tradeoff;
+uniform fixed-scale prime survival strengthens the combined content-and-seed
+cost to exponent 6 for sublinear denominator degree. Finite p=19 cancellation
+shows why the eventual uniformity hypothesis matters.
+
+The [Gauss extension](m4-transform-phases.md#absolute-gauss-completion-cannot-help-at-odd-squarefree-moduli)
+proves that absolute completion costs at least the trivial bound for every
+odd squarefree effective modulus, including aliased geometric masks. It
+retains prime-power counterexamples, even-modulus exceptions and the weakening
+of the irrationality-measure bound when block starts move. The
+[antisymmetric extension](m4-prime-compression.md#the-antisymmetric-sign-does-not-determine-the-real-crt-phase)
+identifies a pure arctangent kernel and its prime sign, while preserving the
+full CRT phase and division-by-two ambiguity. Its same-kernel backward branch
+still concentrates at zero; prime signs alone cannot give the needed estimate.
+
+Parent reconstructions, all exact checker replays and source-page inspection
+passed. The original evidence is retained with the integer-square-root and
+degree-zero clarifications. Independent combined review completed with no
+D/I/Q items. The next
+bounded arithmetic test lifts compression to p^2 and asks whether the actual
+regular cofactor shortens or keeps a full-length endpoint sum. A finite lift
+at one prime would still not settle the real phase. The log owns its bound
+and outcome. V/Hpi/T/M4 remain open, M5 is excluded, and no Lean, audit,
+dependency, pin or trust change occurred. All commits are local; no push or PR.

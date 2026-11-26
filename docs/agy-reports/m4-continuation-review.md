@@ -679,3 +679,45 @@ edits, Git mutations, installations, services, delegation or Carbon occurred.
 Subsequent edits record these outcomes only. No new Lean theorem or M4
 acceptance follows. Sparse-completion and variable-telescoper research were
 outside this exact scope.
+
+The transform/conjugate checkpoint is committed locally as
+`623d1bffa1a2991e16c0190eafdf338ef650eac2`. Final staged diff SHA-256
+`af5234c92f1e4740e1423e843e1f87bd382e410c2efbc20a8f4c722de4ed4438`
+and final-validation/post-commit receipts remain in its packet. Final
+87-file documentation and both whitespace checks passed; exact six paths,
+empty index and unchanged protected sources were verified. Unrelated work
+was preserved; no unused infrastructure or substantive simplification was
+found. No push or PR occurred.
+
+## Gauge, sparse completion and antisymmetric-state review
+
+Reviewer `/root/generating_review` completed the exact seven-path review against
+`623d1bffa1a2991e16c0190eafdf338ef650eac2`, frozen diff SHA-256
+`506ca8955200676f597255e691eaa581094e9ad6c40aafc66ba37f57fc94b162`.
+Scope: rational-correction note, transform and prime-compression extensions,
+proof plan, log, handoff and this record. Packet
+`/tmp/pi-m4-gauge-review-20261126/` retains full diff, scope/evidence hashes,
+caller checks and complete returned review. **Whole-cycle D/I/Q:** none;
+no item omitted or deferred. Subsequent edits only record this outcome.
+
+Coverage included all four full reports and checker sources, original/revised
+root-checker difference, receipts/manifests and existing compression context,
+with matching hashes. The reviewer visually inspected the irrationality source
+at PDF pages 1 and 13. The preserved integer-square-root, degree-zero and
+earlier endpoint clarifications are consistent. No substantive repair was needed.
+
+The reviewer reconstructed Gauss normalization/character duality, aliases and
+parity exceptions, approximation error and effective-modulus quantifiers;
+the exact null-gauge construction, pole and tail claims, circular lifting,
+occupation/content bounds, fixed-parameter survival and limit order; and the
+antisymmetric kernel, CRT/sign/endpoint identities, Gauss information loss and
+actual backward bound. All unresolved real-phase and uniform-shadowing premises
+remain explicit; no all-method impossibility or V theorem is inferred.
+
+Both full adversarial guides and unchanged hashes were retained under AGENTS,
+the replacement procedure and argument-critic limits. Review was read-only
+inspection and mathematical reconstruction. Checker runs, the 88-file
+documentation check and whitespace checks remain caller evidence. No reviewer
+execution, probe, build, edits, Git mutations, installations, services,
+delegation or Carbon occurred. The ongoing p^2 lift is outside this scope;
+no new Lean theorem or M4 acceptance follows.

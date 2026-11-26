@@ -35,6 +35,9 @@ Thus the following **unproved** estimate is sufficient for a visit:
 
     abs(T_(N,L)(k)) < mu*L/(2B) for every 1<=k<=K.        (CANC)
 
+Since F is negative somewhere outside J, its Fourier expansion also gives
+mu<2B. Thus this sufficient cancellation ratio lies strictly between 0 and 1.
+
 Given any original threshold, first choose N beyond it with E_n<delta for
 all n>=N. A positive term then has fract(x_n) in J, so subtracting E_n stays
 strictly inside (a,b) and (0,1), and equals fract(S_n). This keeps the actual
@@ -115,7 +118,7 @@ is v/abs(tau_n)^2 and its Gaussian scale is abs(tau_n)/sqrt(v). Explicitly,
 This rejects the prefactor-only argument. It does not rule out modular
 methods that prove a new bound for the sparse selection and actual phase.
 
-## Evidence and next discriminating question
+## Evidence for the transform identities
 
 Parent reconstruction, official-source inspection and checker replay passed.
 The exact checker covers 65 Laurent families, 260 means, 168 geometric sums
@@ -125,9 +128,118 @@ Frozen report `/tmp/pi-m4-mellin-phase-20261126T223305Z-report.md`, SHA-256
 `0bd5453bb1efee258b123f8f9a631c32824e98a77bdbcbc4ffb4417ce50ff86e`,
 has sibling checker, result receipt, source receipt and SHA256SUMS manifest.
 
-The next test concerns the norm and phase cost of extracting r=4^n by finite
-Fourier completion at a rational approximation to 2*pi*k. It must retain
-approximation error, modulus reduction, parity and the distinction between
-fixed and moving block starts. A full rational-period estimate or small
-modular prefactor alone would repeat a rejected inference. CANC and V remain
-open; no production Lean, audits, dependencies or pins change.
+The endpoint wording in the frozen report has a separate clarification:
+`/tmp/pi-m4-sparse-gauss-20261126T224735Z-prior-erratum.md`. At a=0,b=1,
+coincident circle endpoints add two halves to 1 in the Abel expression;
+this is not a strict full-circle indicator. The smaller-interval minorant
+above avoids that issue. The independent review accepted the clarification.
+
+## Absolute Gauss completion cannot help at odd squarefree moduli
+
+Approximate alpha=k*pi by a reduced fraction a/q. An approximation to the
+theta parameter 2*k*pi must first be divided by 2 and reduced. Put
+
+    e_q(t)=exp(2*pi*i*t/q),
+    M(r)=#{n in [N,N+L): 4^n=r mod q},
+    Mhat(h)=sum_r M(r)*e_q(-h*r),
+    Lambda=(1/q)*sum_h abs(Mhat(h)),
+    G(a,h;q)=sum_r e_q(a*r^2+h*r).
+
+The mask includes multiplicities, so no distinctness of the powers is assumed.
+Finite Fourier inversion gives
+
+    S=sum_(n=N)^(N+L-1) e_q(a*16^n)
+     =(1/q)*sum_h Mhat(h)*G(a,h;q),
+    abs(S)<=C_q:=(1/q)*sum_h abs(Mhat(h))*abs(G(a,h;q)).    (3)
+
+A lower bound on C_q limits this upper-bound method, not the actual sum S.
+For odd q, completing the square gives abs(G)=sqrt(q), hence C_q=sqrt(q)*Lambda.
+If q>2*4^(N+L-1), the additive energy of the mask is 2L^2-L by uniqueness
+of base-4 pair sums. The normalized second/fourth Fourier moments and Holder
+give sqrt(L/(2-1/L))<=Lambda<=sqrt(L). Aliased masks need not satisfy this.
+
+A stronger obstruction needs no nonaliasing assumption: if q>1 is odd and
+squarefree, let chi_q be the product of its Legendre characters. Its additive
+Fourier transform has magnitude sqrt(q) at unit frequencies and zero elsewhere.
+This follows by CRT from the elementary prime calculation abs(chihat_p(1))^2=p.
+Every selected 4^n has chi_q(4^n)=1. Finite Parseval therefore gives
+
+    L=sum_r M(r)*chi_q(r)
+      <=sqrt(q)*(1/q)*sum_h abs(Mhat(h))=C_q.              (4)
+
+Thus absolute completion cannot prove any strict bound below L at these
+moduli. For q=1, C_q=L directly. For a general odd q>1, lifting the primitive
+character modulo rad(q) gives only
+
+    C_q>=L*sqrt(rad(q)/q).                                (5)
+
+The limitation is real: q=27,N=0,L=9 has a mask equal to the indicator of
+1 modulo 3, Lambda=1 and C_q=sqrt(27)<9. This is a scope counterexample,
+not a full-period transfer argument for pi.
+
+For even q and reduced a, direct squaring gives
+
+    abs(G(a,h;q))^2=q*(1+(-1)^(q/2+h)).
+
+The active frequencies have h congruent to q/2 modulo 2. Their inverse
+projection is (M(r)+M(r+q/2))/2 when 4 divides q and
+(M(r)-M(r+q/2))/2 otherwise. For N>=1 the mask is supported on even residues,
+and a nonzero projected entry has absolute value at least 1/2. Consequently
+C_q>=sqrt(q/2). The same holds for N=0,L>=3; the zero-projection exceptions
+are exactly N=0,L=2,q in {2,6}. These must be retained when reindexing.
+
+## Approximation cost and the moving-start limitation
+
+For Delta=abs(k*pi-a/q), the termwise replacement certificate is
+
+    abs(T_(N,L)(k)-S)<=E(Delta)
+      :=sum_(n=N)^(N+L-1) min(2,2*pi*Delta*16^n)
+      <=(2*pi/15)*Delta*16^N*(16^L-1).                    (6)
+
+The [Zeilberger--Zudilin manuscript](https://sites.math.rutgers.edu/~zeilberg/mamarim/mamarimPDF/pimeas.pdf)
+proves an irrationality exponent below 8. Its definition on PDF page 1 and
+conclusion on page 13 imply a constant c>0 with abs(pi-p/q)>=c*q^(-8)
+for all integers p and q>=1, after absorbing finitely many denominators.
+No effective c or current-optimality claim is needed. Thus
+Delta>=c*k^(-7)*q^(-8).
+
+Fix 0<rho<1. If E(Delta)<=rho*L and R=floor(rho*L/2), the last R+1 terms
+cannot all equal 2. Therefore
+
+    Delta<pi^(-1)*16^(-(N+L-R-1)),
+    q>(pi*c*k^(-7))^(1/8)*16^((N+L-R-1)/8).              (7)
+
+Together with C_q>=sqrt(q/2), this defeats the unreduced absolute-completion
+certificate at sufficiently late N, uniformly in L for fixed k,rho.
+It concerns the displayed termwise error bound; possible cancellation in
+the replacement error itself is outside this argument.
+
+However, first factoring 16^N reduces the effective modulus to
+Q=q/gcd(q,16^N). Completion then concerns S=sum_(j=0)^(L-1)e_Q(A*16^j),
+where A=a*16^N/gcd(q,16^N). The correct scaled lower bound gives only
+
+    Q>(pi*c)^(1/8)*(k*16^N)^(-7/8)*16^((L-R-1)/8).        (8)
+
+For each fixed N this defeats asymptotically long blocks; its constant
+deteriorates with N. It does not exclude all adaptive starts. If effective
+Q is odd squarefree, (4) still gives the uniform obstruction C_Q>=L. If Q
+has repeated prime powers, neither (5) nor (8) settles every moving block.
+An effective modulus 1 likewise gives C_Q=L, not cancellation.
+
+Keeping the Gauss phases does not itself create a new estimate. For odd q,
+G(a,h;q)=G(a,0;q)*e_q(-(4a)^(-1)*h^2). Substituting Mhat and completing
+the square again recovers exactly the original sum S. The geometric mask
+relation Mhat(4h)=Mhat(h)-e_q(-h*4^N)+e_q(-h*4^(N+L)) translates only to
+the original orbit's endpoint reindexing identity. A useful phase-sensitive
+bound must do more than these exact identities or a full-period estimate.
+
+Parent reconstruction and replay of the exact cyclotomic checker passed,
+exit 0: 180 energy cases, 7,043 Gauss modulus cases, 304 character transforms,
+1,280 parity cases, 216 completion identities and the q=27 counterexample.
+The parent visually inspected source pages 1 and 13; PDF and rendered pages
+are retained under `/tmp/pi-m4-transform-sources-20261126/pimeas*` with a
+manifest. Frozen report `/tmp/pi-m4-sparse-gauss-20261126T224735Z-report.md`,
+SHA-256 `1fa76a62525c7a51a352c328a69c30c0013d33a0e7428ffc6c874d25597ee64e`,
+has checker, receipts and hash-manifest siblings. Finite consistency checks
+are not proofs of the universal statements or V. This extension passed
+independent review with no D/I/Q items; no Lean, audit, dependency or pin changes.
