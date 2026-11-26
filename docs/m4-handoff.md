@@ -219,3 +219,12 @@ endpoint is the actual analytic consequence and a separating model or an exact
 remaining bridge. This investigation is already authorized and underway;
 the user need not supply a new estimate or renew permission. Consult the latest
 research-log entry for subsequent findings before resuming.
+
+Local research checkpoint: `052234d83834b898125f0a9f9223572975526576`, seven
+documentation paths, with complete independent subagent review. The four
+arithmetic checkers, scratch Dirichlet compilation, 38 offline tests, 74-file
+documentation check and working/staged whitespace checks passed. Post-commit
+necessity/scope inspection found no unneeded API or substantive simplification;
+unrelated work remains preserved. The separate factual receipt is identified
+in the review report. Nothing was pushed and no PR was opened. Research
+continued immediately with the generating-function and carry-interface inquiry.

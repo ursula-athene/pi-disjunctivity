@@ -75,7 +75,15 @@ Baseline Lean `4.37.0-rc1`, `lake build` (7205 jobs), and `lake env lean Test.le
 passed; production Lean, audits and pinned dependencies have not changed.
 Offline process tests (38), documentation checking (74 tracked Markdown files),
 working/staged whitespace and protected-source preservation checks passed.
-Only the seven task-owned documentation paths are staged. The combined review is
-complete; final staged checks and post-commit necessity inspection remain before
-the local checkpoint receipt is finalized. No push or PR is authorized or
-performed. This checkpoint does not end the ongoing research.
+The seven task-owned documentation paths were committed locally as
+`052234d83834b898125f0a9f9223572975526576`
+(`Record M4 arithmetic and auxiliary-method investigations`). Final staged
+whitespace and documentation checks passed after factual review receipts were
+added. Post-commit inspection verified the exact seven paths, unchanged
+production/pin/audit scope, and preservation of unrelated work. The three
+assessments retain distinct arguments and their necessary side conditions;
+no unused proof API, tooling, or substantive simplification was found.
+
+The follow-up factual receipt is identifiable by
+`git log --all --oneline --grep='Record M4 continuation checkpoint receipt'`.
+No push or PR was performed. This checkpoint does not end the ongoing research.
