@@ -7,8 +7,93 @@ The [proof plan](proof-plan.md) owns mathematical contracts, the
 plan below is retained as a dated design record; its pilot is complete, not a
 standing instruction to repeat it. Outcomes are in the [research log](research-log.md).
 
-Next session: <!-- current-prompt --> [Current prompt](session-prompts.md#current-prompt-b2-complete-orbit-bridge)
+Next session: <!-- current-prompt --> [Current prompt](session-prompts.md#current-prompt-b2-improvement-plan)
 is the execution entry, only when invoked by the user.
+
+## Carbon review guidance adoption — 2026-11-25
+
+A later user request explicitly authorized adopting the Carbon review-guidance
+improvements and integrating the two user-supplied adversarial guides. This is
+the review-documentation subset of the B2 improvement plan, not invocation of
+the full implementation prompt or permission to begin B3.
+
+The [Carbon procedure](gemini-review.md) now requires the proof guide for Lean
+milestones, the strategy/tooling guide for tooling and meta-plan reviews, and
+both for substantive mixed work. The guides inform scrutiny within the supplied
+scope; Carbon retains read-only file tools and requests caller-run checks where
+their examples call for experiments or compilation.
+
+The reporting change addresses observed omissions: B2a's documentation finding
+was fixed before its clean final review, and the tooling recommendation review
+included an optional supersession suggestion that was implemented but not
+highlighted in the summary. Future reviews separate defects, nonblocking
+improvements, and open questions. The caller records each item's disposition
+and reports the full cycle, including improvements to otherwise correct work.
+Neutral claim/evidence packets and explicit challenges to weak assumptions are
+intended to reduce confirmation-oriented review; their effect is unmeasured.
+There is no finding quota or claim that a low finding count demonstrates quality.
+
+See the [review-guidance handoff](carbon-review-improvements-handoff.md) for
+actual validation, review items/dispositions, and publication evidence. No Lean
+proof, tool installation, LSP pilot, skill activation, or dependency changed.
+The rest of the B2 improvement plan remains future work; reconcile this adopted
+subset when implementing P1 rather than treating all of P1 as complete.
+
+## B2 improvement plan — proposed 2026-11-25
+
+The [replacement process/tool plan](b2-process-tool-improvement-plan.md) now
+owns the bounded implementation sequence and evaluation criteria. It supersedes
+the earlier B2 tooling prompt, which remains archived. That initial update was
+planning-only: no tools or skills were installed or activated, and no workflow
+or Lean proof was implemented. The review-guidance adoption above is a later,
+separately authorized subset; it does not complete the implementation plan.
+
+Implement and evaluate the improvements before moving to B3. B2 proof work is
+out of scope; already completed B2 provides fixed replay cases only. Preserve
+the existing mathematical roadmap, guarded audits, and unresolved hypotheses.
+
+The expanded B2 retrospective justifies a local LSP trial for generated-lemma
+discovery and goal inspection, a manual semantic status pass, bounded reads,
+and self-contained review packets. It does not establish a performance gain
+or justify broader orchestration. The
+[recommendation snapshot](lean-tooling-recommendations.md) adds focused
+argument-criticism and source-contract skill candidates, to be evaluated on
+existing material without beginning visitation research.
+
+The replacement retains selective evaluation of `lean-search-discovery` and
+`lean-proof-patterns`. It defers the old prompt's `lean-elaboration` installation:
+the inspected procedure explicitly uses `sorry` substitution, and no measured
+performance need warrants a compliant adaptation now. Remote search activation,
+Sage installation, and overlapping full skill suites are also deferred pending
+a concrete need. The plan records future trial criteria and preserves the
+working shell fallback.
+
+Future adoption must report functional correctness, actual host availability,
+startup versus warm effort, skill conflict/resource checks, and explicit
+adopt/defer/reject decisions. Small B2 replays have learning and cache effects;
+they cannot establish general productivity gains. Installation, configuration,
+protocol tests, and actual host tests are separate evidence. Keep detailed
+results in the future implementation handoff, with a concise adoption entry
+here only after execution. See the
+[planning handoff](b2-improvement-planning-handoff.md) for this document-only work.
+
+## B2 process evidence — 2026-11-25
+
+Early root definition/equation probes succeeded, followed by complete theorem
+interfaces before final audits. Local library search and scratch compilation
+sufficed for splitting and the integer-floor recurrence argument; no new
+proof infrastructure or mathematical hypothesis was needed. The B2a Carbon
+review found stale overview status/count prose even though links were valid.
+Corrected those summaries and removed the duplicated live audit count. The
+offline documentation checker checks links/entry consistency, not mathematical
+status prose; caller review must still reconcile both. This is a demonstrated
+limit of the check, not a reason to expand it into a semantic status checker.
+
+Keep the existing workflow and B1/B2/B3 ordering. See the
+[B2 retrospective](retrospectives/retrospective-2026-11-25-b2.md) and
+[handoff](b2-handoff.md) for observed repairs, review timing/capture, and final
+acceptance. B3 is only proposed; no visitation argument or productivity gain
+is inferred from this elementary orbit bridge.
 
 <a id="b1-completion-and-next-bounded-task"></a>
 
@@ -34,11 +119,12 @@ The [process handoff](process-improvements-handoff.md) records acceptance eviden
 [Gemini procedure](gemini-review.md) moved to its own document. The
 [process tools](process-tools.md) are small offline Python utilities in a root
 `uv` project using MIT-licensed Markdown and YAML parsers. CI retains its Lean build and
-axiom audit. The current B2 prompt links consolidated procedures and retains
-all mathematical contracts and its proof-plan-before-implementation requirement;
-this adoption does not execute it. B2/B3, V, Hπ, T, and π disjunctivity remain
-unproved. B4 assumes vanishing errors and arbitrarily late visits; P3 assumes
-open-interval visits.
+axiom audit. At this historical B1 adoption baseline, the then-current B2
+prompt linked consolidated procedures and retained all mathematical contracts
+and its proof-plan-before-implementation requirement; the process adoption did
+not execute it. B2/B3, V, Hπ, T, and π disjunctivity were then unproved. B4
+assumed vanishing errors and arbitrarily late visits; P3 assumed open-interval
+visits. Use the blueprint for current mathematical status.
 
 Keep the successful mathematical decomposition, pinned-source search, direct
 `HasSum` route, exact audits, and post-commit necessity review. No optional Lean
@@ -55,6 +141,13 @@ incidents. Use short counts with evidence links when actually observed; say
 "not measured" for missing data. Separate proof and review/finalization time
 only when timestamps support it. Do not reconstruct historical counts, confuse
 cumulative usage with wall time, or claim quantified gains from one cycle.
+
+Deferred [Carbon review item Q2](agy-reports/carbon-review-improvements-review.md#items-and-dispositions):
+in the next two authorized milestone reviews, retain per-invocation wall time,
+capture token counts/budgets, and D/I/Q dispositions with concrete usefulness or
+boilerplate examples. Use those observations to consider trimming the reporting
+burden; they do not establish a detection rate. Revisit during remaining P1
+implementation and its next retrospective, without extra benchmark-only runs.
 
 ## B4/P3 workflow retrospective — 2026-11-25 snapshot
 

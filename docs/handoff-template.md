@@ -24,6 +24,11 @@ handoff describes its checkout at that time, not a future authorization.
 - Actual validation commands/results, axiom inspection, and semantic checks.
 - Review report link: baseline/hash, model/conversation, attempts and elapsed
   time, capture completeness, findings/disposition, denied or omitted coverage.
+- Whole-cycle summary: defects found/fixed/remaining, improvement dispositions,
+  open questions, and acceptance-relevant limits. Link to the review report
+  owning guide revisions/read evidence and per-item reasons, rather than
+  duplicating them; include those details here only if no separate report exists.
+  Distinguish caller checks from reviewer-performed verification.
 - Post-commit necessity review and any actual follow-up commits.
 - Explicit limitations: checks not run, unavailable tooling, incomplete review,
   temporary capture retention, remote CI or clean-environment status.

@@ -109,6 +109,11 @@ milestone and intermediate reviews required by
 It preserves Carbon High, exact task-owned diff scope, read-only reviewer file
 tools, capture/result inspection, the literal approved command prefix, and
 bounded recovery. It supplements kernel checks and mathematical statement review.
+Supply the subject-specific adversarial guide required by that procedure:
+the Lean proof guide for proof milestones, the strategy/tooling guide for
+tooling, proof-strategy, and meta-plan reviews, and both for substantive mixed work. Require
+separate defects, nonblocking improvements, and open questions; preserve each
+recommendation's disposition and summarize the whole review cycle.
 
 ### Progress, timeouts, and bounded retries
 

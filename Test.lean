@@ -379,3 +379,117 @@ info: 'PiDisjunctivity.hasSum_bbpCoeff' depends on axioms:
 -/
 #guard_msgs (whitespace := lax) in
 #print axioms PiDisjunctivity.hasSum_bbpCoeff
+
+-- B2 definitions and convergent split retain the inclusive prefix and tail offset.
+example (n : ℕ) : PiDisjunctivity.bbpPartialSum n =
+    ∑ j ∈ Finset.range (n + 1), (16 : ℝ) ^ (n - j) * PiDisjunctivity.bbpCoeff j := rfl
+
+example (n : ℕ) : PiDisjunctivity.bbpTail n =
+    ∑' r : ℕ, PiDisjunctivity.bbpCoeff (n + r + 1) / (16 : ℝ) ^ (r + 1) := rfl
+
+example : PiDisjunctivity.bbpRecurrence 0 = 0 := rfl
+
+example (n : ℕ) : PiDisjunctivity.bbpRecurrence (n + 1) =
+    Int.fract (16 * PiDisjunctivity.bbpRecurrence n + PiDisjunctivity.bbpCoeff n) := rfl
+
+example (n : ℕ) :
+    HasSum (fun r : ℕ => PiDisjunctivity.bbpCoeff (n + r + 1) / (16 : ℝ) ^ (r + 1))
+      ((16 : ℝ) ^ n * Real.pi -
+        ∑ j ∈ Finset.range (n + 1), (16 : ℝ) ^ (n - j) * PiDisjunctivity.bbpCoeff j) :=
+  PiDisjunctivity.hasSum_bbpTail_sub n
+
+example (n : ℕ) :
+    HasSum (fun r : ℕ => PiDisjunctivity.bbpCoeff (n + r + 1) / (16 : ℝ) ^ (r + 1))
+      (PiDisjunctivity.bbpTail n) :=
+  PiDisjunctivity.hasSum_bbpTail n
+
+example (n : ℕ) :
+    (16 : ℝ) ^ n * Real.pi = PiDisjunctivity.bbpPartialSum n + PiDisjunctivity.bbpTail n :=
+  PiDisjunctivity.pow_mul_pi_eq_bbpPartialSum_add_bbpTail n
+
+example : HasSum (fun r : ℕ => PiDisjunctivity.bbpCoeff (r + 1) / (16 : ℝ) ^ (r + 1))
+    (Real.pi - PiDisjunctivity.bbpCoeff 0) := by
+  simpa only [Nat.zero_add, pow_zero, one_mul, Finset.sum_range_one, Nat.sub_self] using
+    PiDisjunctivity.hasSum_bbpTail_sub 0
+
+example : Real.pi = PiDisjunctivity.bbpCoeff 0 + PiDisjunctivity.bbpTail 0 := by
+  simpa only [PiDisjunctivity.bbpPartialSum, Nat.zero_add, pow_zero, one_mul,
+    Finset.sum_range_one, Nat.sub_self] using
+    PiDisjunctivity.pow_mul_pi_eq_bbpPartialSum_add_bbpTail 0
+
+/--
+info: 'PiDisjunctivity.hasSum_bbpTail_sub' depends on axioms:
+[propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms PiDisjunctivity.hasSum_bbpTail_sub
+
+/--
+info: 'PiDisjunctivity.hasSum_bbpTail' depends on axioms:
+[propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms PiDisjunctivity.hasSum_bbpTail
+
+/--
+info: 'PiDisjunctivity.pow_mul_pi_eq_bbpPartialSum_add_bbpTail' depends on axioms:
+[propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms PiDisjunctivity.pow_mul_pi_eq_bbpPartialSum_add_bbpTail
+
+-- B2 recurrence and exact orbit identity have no convergence or visitation premises.
+example (n : ℕ) : 0 ≤ PiDisjunctivity.bbpRecurrence n ∧ PiDisjunctivity.bbpRecurrence n < 1 :=
+  PiDisjunctivity.bbpRecurrence_mem_Ico n
+
+example (n : ℕ) :
+    PiDisjunctivity.bbpRecurrence (n + 1) = Int.fract (PiDisjunctivity.bbpPartialSum n) :=
+  PiDisjunctivity.bbpRecurrence_succ_eq_fract_bbpPartialSum n
+
+example (n : ℕ) : Int.fract ((16 : ℝ) ^ n * Real.pi) =
+    Int.fract (PiDisjunctivity.bbpRecurrence (n + 1) + PiDisjunctivity.bbpTail n) :=
+  PiDisjunctivity.fract_pow_mul_pi_eq_bbpRecurrence_add_bbpTail n
+
+example : PiDisjunctivity.bbpRecurrence 1 = Int.fract (PiDisjunctivity.bbpCoeff 0) := by
+  simpa only [PiDisjunctivity.bbpPartialSum, Nat.zero_add, Finset.sum_range_one, Nat.sub_self,
+    pow_zero, one_mul] using
+    PiDisjunctivity.bbpRecurrence_succ_eq_fract_bbpPartialSum 0
+
+example : Int.fract Real.pi =
+    Int.fract (PiDisjunctivity.bbpRecurrence 1 + PiDisjunctivity.bbpTail 0) := by
+  simpa only [pow_zero, one_mul] using
+    PiDisjunctivity.fract_pow_mul_pi_eq_bbpRecurrence_add_bbpTail 0
+
+example : Int.fract (16 * Real.pi) =
+    Int.fract (PiDisjunctivity.bbpRecurrence 2 + PiDisjunctivity.bbpTail 1) := by
+  simpa only [pow_one] using
+    PiDisjunctivity.fract_pow_mul_pi_eq_bbpRecurrence_add_bbpTail 1
+
+-- Definition-level arithmetic checks the first update and the two-term prefix.
+example : PiDisjunctivity.bbpRecurrence 1 = (2 : ℝ) / 15 := by
+  norm_num [PiDisjunctivity.bbpRecurrence, PiDisjunctivity.bbpCoeff, Int.fract]
+
+example : PiDisjunctivity.bbpPartialSum 1 =
+    16 * PiDisjunctivity.bbpCoeff 0 + PiDisjunctivity.bbpCoeff 1 := by
+  norm_num [PiDisjunctivity.bbpPartialSum, Finset.sum_range_succ]
+
+/--
+info: 'PiDisjunctivity.bbpRecurrence_mem_Ico' depends on axioms:
+[propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms PiDisjunctivity.bbpRecurrence_mem_Ico
+
+/--
+info: 'PiDisjunctivity.bbpRecurrence_succ_eq_fract_bbpPartialSum' depends on axioms:
+[propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms PiDisjunctivity.bbpRecurrence_succ_eq_fract_bbpPartialSum
+
+/--
+info: 'PiDisjunctivity.fract_pow_mul_pi_eq_bbpRecurrence_add_bbpTail' depends on axioms:
+[propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms PiDisjunctivity.fract_pow_mul_pi_eq_bbpRecurrence_add_bbpTail

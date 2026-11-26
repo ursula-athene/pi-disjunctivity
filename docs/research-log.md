@@ -1250,3 +1250,128 @@ check passed, with whitespace and preservation checks. Carbon High returned
 explicit no findings in one invocation (284.916 seconds by caller timestamps),
 with complete capture; see the linked report for limitations. Final factual
 receipts are caller checked before committing and updating PR #5.
+
+## 2026-11-25 — B2 implementation: convergent split checkpoint
+
+Verified PR #5 merged at `c3b3bd1dff4f975a93a1530e4daeaf9273a0176d` and
+created `feature/attempt-07-b2-orbit` from updated `main`. Existing branches and
+unrelated Obsidian, notes, and papers work are preserved. The invoked current
+prompt authorizes all B2, with regular pushes and no PR; updated the proof plan
+before implementation. B3 and visitation remain outside scope.
+
+Baseline Lean `4.37.0-rc1`, `lake build` (7201 jobs), all 27 prior audits, and
+whitespace passed. Added exposed prefix/tail/recursive definitions in
+`BBP/Orbit.lean`; early root-import equation probes passed. Pinned Mathlib's
+`hasSum_nat_add_iff'`, `HasSum.mul_left`, and `pow_sub₀` supply the convergent
+split. Prefix normalization first proves `j ≤ n`; tail normalization preserves
+the `n+r+1` coefficient and `r+1` denominator. The defined tail's `HasSum` and
+scaled π equality follow without convergence hypotheses.
+
+Integrated build (7203 jobs), 30 full type/axiom guards, definition and zero-index
+checks, and 23 offline utility tests pass. All three new axiom lists are exactly
+`propext`, `Classical.choice`, `Quot.sound`. Scratch repairs concerned an API
+argument and exponent normalization; a boundary simplification needed explicit
+`Nat.zero_add`. No mathematical gap or changed contract was involved. B2a is
+checked; checkpoint review/commit and recurrence/range/orbit work follow within
+the same authorization. B3, V, Hπ, T, and π disjunctivity remain unproved;
+B4 retains vanishing error and late visits, P3 retains open-interval visits.
+
+Carbon High completed the exact six-file B2a review: no proof/audit/trust
+findings, one low-severity stale Step 4 status and audit-count finding in the
+proof-plan overview. Corrected the status and replaced the duplicated count
+with the executable inventory link. These are factual documentation repairs;
+no mathematical statement or code changed. The complete B2 review will include
+them. [Review evidence](agy-reports/b2-review.md) records full capture, terminal
+fields, coverage, and limitations. Checkpoint commit/push follows validation.
+
+## 2026-11-25 — B2 recurrence and exact orbit bridge
+
+Committed and pushed the reviewed B2a checkpoint as
+`d4135bea00cd5fdb47468f09301dc269abfd8b93` on `feature/attempt-07-b2-orbit`.
+Post-commit inspection found the split theorem, tail `HasSum`, scaled identity,
+exposed definitions, root export, and guards necessary for the specified B2
+contracts and next proof layer; no substantive simplification was justified.
+No empty follow-up commit was made.
+
+Added private prefix zero/successor lemmas and the three public results
+`bbpRecurrence_mem_Ico`, `bbpRecurrence_succ_eq_fract_bbpPartialSum`, and
+`fract_pow_mul_pi_eq_bbpRecurrence_add_bbpTail`. The recurrence proof explicitly
+uses the integer witness `-16 * ⌊bbpPartialSum n⌋`; the final bridge combines
+that identity with the scaled split and `Int.fract_fract_add`. No convergence,
+range, density, or visitation hypotheses enter the final theorem. B3 has not
+begun. The original B1 proofs and all earlier audits remain unchanged.
+
+Full root-import types and actual axiom lists passed; all three lists contain
+only `propext`, `Classical.choice`, `Quot.sound`. Boundary probes explicitly
+instantiate recurrence/orbit theorems at zero and the orbit theorem at one;
+definition arithmetic also checks `y(1)=2/15` and the two-term prefix. Scratch
+feedback corrected a natural-subtraction rewrite; a production line-length
+warning was fixed without changing linters. No missing mathematics was found.
+
+All B2 mathematical obligations are checked. Complete milestone review,
+validation, commit/push, post-commit necessity review, and final handoff
+acceptance are recorded in [the B2 handoff](b2-handoff.md) and
+[review report](agy-reports/b2-review.md). B3, V, Hπ, T, and π disjunctivity
+remain open; B4 retains vanishing error and late visits, P3 retains
+open-interval visits. The current session entry now records the B2 stopping
+point, and B3 is proposed only.
+
+## 2026-11-25 — B2 accepted, pushed, and reviewed for necessity
+
+Complete Carbon High review returned explicit no actionable findings, including
+resolution of the B2a documentation issue; both captures are complete. See
+[the review report](agy-reports/b2-review.md) for scope, timing, conversation
+persistence limitation, and caller-versus-reviewer checks. Final validation
+passes pinned build (7203 jobs), 33 guards, 23 offline tests, 44 Markdown files,
+whitespace, exact owned staging, and preservation. No remote CI or clean rebuild
+is claimed. No proof changes followed passing validation/review.
+
+Committed and pushed the complete bridge as
+`a7f31bc63e00082c14f8579a3c3e17ca6b523ddf`, following pushed B2a `d4135be`.
+Post-commit review found all definitions, two private prefix lemmas, six public
+contracts, exports, and audits necessary for the specified endpoint or proof
+chain. No substantive simplification or empty code commit was warranted.
+The [durable handoff](b2-handoff.md) contains exact contracts, both implementation
+commit IDs, acceptance/necessity evidence, and a command identifying its own
+final receipt commit. That factual receipt receives preservation/link/whitespace
+checks and is pushed separately. No PR was opened; unrelated work is preserved.
+
+B2 is complete; M3/Step 4 is not. B3 tail bounds/decay, V, Hπ, T, and π
+disjunctivity remain open. B4 retains vanishing error and arbitrarily late
+visits; P3 retains open-interval visits. Stop before the proposed B3 task or
+visitation research. The current prompt records this boundary.
+
+
+## 2026-11-25 — Replacement B2 process and tool plan
+
+Saved the [tooling recommendations](lean-tooling-recommendations.md), then
+reviewed the expanded B2 retrospective, meta-plan, and previous tooling prompt.
+The [replacement plan](b2-process-tool-improvement-plan.md) specifies process
+improvements, completed-B2 LSP replays, selective skill evaluations, acceptance
+criteria, and explicit deferrals. The prior prompt is archived and all active
+entry links select its replacement. The meta-plan records a proposal, not adoption.
+
+This is plan-writing only. Future improvement implementation precedes B3;
+B2 proof development is out of scope and completed B2 is test material only.
+No tool installation, skill activation, configuration, Lean change, or new
+mathematical result is claimed. See the
+[planning handoff](b2-improvement-planning-handoff.md) and
+[review report](agy-reports/b2-improvement-planning-review.md) for actual
+validation, review, concurrent-commit handling, and local publication evidence.
+
+
+## 2026-11-25 — Carbon adversarial review guidance
+
+The user authorized adopting the review-guidance subset of the B2 improvement
+plan. The Carbon procedure now routes Lean proof reviews to the proof guide,
+tooling/meta-plan reviews to the strategy guide, and substantive mixed work to
+both. The two guides retain their scrutiny while respecting Carbon's read-only
+execution boundary. Reviews separately report defects, nonblocking improvements,
+and open questions; every item receives a reasoned disposition and cycle-wide
+reporting preserves earlier fixes and suggestions.
+
+See the [review-guidance handoff](carbon-review-improvements-handoff.md) and
+[review report](agy-reports/carbon-review-improvements-review.md) for actual
+validation, items/dispositions, and local publication evidence. The remaining
+improvement implementation and all open mathematical obligations are unchanged.
+No installed-tool evaluation or gain in reviewer effectiveness is claimed.

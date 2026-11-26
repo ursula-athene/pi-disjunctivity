@@ -135,7 +135,12 @@ that the review itself failed. Missing or malformed events fail conservatively.
 Exit zero means only **candidate for human acceptance**: transport checks passed,
 the process exited zero and the response is nonempty SUCCESS without detected
 errors/denials. The caller must still require substantive findings or explicit
-no-findings, assess coverage and all diagnostics, and evaluate correctness.
+category-specific no-items statements, assess coverage and all diagnostics,
+and evaluate correctness. Apply the
+[response/disposition contract](gemini-review.md#response-categories-and-caller-disposition)
+to the entire response, including suggestions in limitation paragraphs. The
+inspector checks transport and completion signals, not guide selection, output
+categories, mathematical quality, or whether recommendations were addressed.
 An arbitrary nonempty response is not sufficient; “no findings” is not proof.
 Unresolved denials, unknown termination reasons, errors/timeouts, missing results,
 or capture gaps fail the utility. This never authorizes automatic recovery;
@@ -146,7 +151,9 @@ use the mandatory bounded-recovery procedure after investigation.
 Raw prompts, diffs, chunk JSON, and full inspection reports normally live in
 milestone-specific `/tmp/pi-...` paths. Record the actual locations, invocation
 timestamps, hash, conversation, findings/disposition, capture gaps, and review
-limitations in `docs/agy-reports/` and link from the handoff/log. Temporary
+limitations in `docs/agy-reports/` and link from the handoff/log. Include the
+selected adversarial guides/revisions and per-item dispositions, preserving
+earlier findings even when the final review has no remaining defects. Temporary
 files may disappear and persisted conversations may be unavailable; neither is
 guaranteed archival storage. Commit concise evidence summaries, not large raw
 streams. If durable raw retention is needed, choose an explicitly authorized
