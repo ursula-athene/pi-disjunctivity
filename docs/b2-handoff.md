@@ -9,10 +9,11 @@ No separate worktree was necessary. The user invoked all B2, superseded the
 saved pre-merge branch instructions, authorized regular pushes, and prohibited
 a PR. The proof plan was updated before implementation.
 
-All B2 mathematical obligations are checked. Final milestone review, commit/push,
-and post-commit necessity acceptance are pending at this pre-review snapshot.
-B2a is already reviewed, committed, and pushed as
-`d4135bea00cd5fdb47468f09301dc269abfd8b93`. No PR was opened.
+**B2 is complete: checked, reviewed, committed, pushed, and reviewed for necessity.**
+B2a commit: `d4135bea00cd5fdb47468f09301dc269abfd8b93`. Complete bridge commit:
+`a7f31bc63e00082c14f8579a3c3e17ca6b523ddf`. Both are pushed to the new branch.
+The final factual acceptance receipt is committed/pushed separately; identify it
+with `git log -1 --format=%H -- docs/b2-handoff.md`. No PR was opened.
 The endpoint excludes B3 estimates/decay, modular computation, visitation
 research, and final conjecture assembly. B2 alone does not complete M3/Step 4.
 
@@ -85,12 +86,12 @@ review found no proof/audit issue and one stale documentation status/count issue
 which was corrected. Raw captures are temporary and CLI conversation persistence
 was sandbox-denied; those are retention limitations. Reviewer tools are read-only;
 caller Lean/Git/Python validation is separate. No clean-environment rebuild or
-remote CI result is claimed in this snapshot.
+remote CI result is claimed.
 
 B2a's post-commit necessity inspection found each definition, convergence result,
 split, export, and check required by the contract or next proof layer. No
-substantive simplification or empty follow-up commit was needed. Final milestone
-necessity inspection follows its commit and will be recorded below.
+substantive simplification or empty follow-up commit was needed. The completed milestone
+necessity inspection is recorded below.
 
 ## Restart and remaining obligations
 
@@ -110,3 +111,34 @@ long production line was wrapped. The [retrospective](retrospectives/retrospecti
 records process lessons without claiming a productivity measurement.
 
 Stop at B2. B3 is the next proposed bounded task, not an active authorization.
+
+## Final acceptance and post-commit necessity review
+
+Full Carbon High review completed with explicit no actionable findings and
+confirmed the B2a documentation finding resolved. Two successful invocations
+(one checkpoint, one complete-milestone review), no failed runs or recovery
+retries, both captures complete. Elapsed times: 322.675 and 395.930 seconds.
+The full review also inspected the pinned Mathlib floor/infinite-sum sources.
+The prior conversation was unavailable, so the CLI created a new one from the
+fully supplied diff/context; this did not narrow coverage. See the linked
+report for both conversations and terminal fields.
+
+Reviewed all six public theorem proofs, two private prefix lemmas, three exposed
+definitions, root export, and new audits again from committed `a7f31bc`.
+The scaled `HasSum` split supplies both the defined tail convergence and exact
+π split. Prefix zero/successor facts supply the induction base/step. The range
+result is an explicit requested contract; the integer witness supplies the
+modulo-integer argument; the orbit theorem composes those results directly.
+Definition checks protect the independent recurrence and offsets, while the
+boundary instances exercise actual theorems. Each public result is a required
+endpoint or a direct proof consumer's prerequisite. No unnecessary abstraction,
+unused helper, or justified substantive simplification was found. No empty code
+commit or additional fix review was needed.
+
+Final factual receipts update completion status, commit/publication evidence,
+and this necessity review. Documentation links, working/staged whitespace,
+exact owned scope, unchanged reviewed Lean/audit hashes, preserved prior audit/log
+and prompt/archive content, and unrelated-file preservation are rechecked before
+the receipt commit. Final remote equality is verified after pushing. The tested
+and reviewed Lean/audit bytes are unchanged; no additional Lean run is needed
+for these factual Markdown receipts. Stop before B3 or visitation.

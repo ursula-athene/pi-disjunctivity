@@ -1315,3 +1315,28 @@ acceptance are recorded in [the B2 handoff](b2-handoff.md) and
 remain open; B4 retains vanishing error and late visits, P3 retains
 open-interval visits. The current session entry now records the B2 stopping
 point, and B3 is proposed only.
+
+## 2026-11-25 — B2 accepted, pushed, and reviewed for necessity
+
+Complete Carbon High review returned explicit no actionable findings, including
+resolution of the B2a documentation issue; both captures are complete. See
+[the review report](agy-reports/b2-review.md) for scope, timing, conversation
+persistence limitation, and caller-versus-reviewer checks. Final validation
+passes pinned build (7203 jobs), 33 guards, 23 offline tests, 44 Markdown files,
+whitespace, exact owned staging, and preservation. No remote CI or clean rebuild
+is claimed. No proof changes followed passing validation/review.
+
+Committed and pushed the complete bridge as
+`a7f31bc63e00082c14f8579a3c3e17ca6b523ddf`, following pushed B2a `d4135be`.
+Post-commit review found all definitions, two private prefix lemmas, six public
+contracts, exports, and audits necessary for the specified endpoint or proof
+chain. No substantive simplification or empty code commit was warranted.
+The [durable handoff](b2-handoff.md) contains exact contracts, both implementation
+commit IDs, acceptance/necessity evidence, and a command identifying its own
+final receipt commit. That factual receipt receives preservation/link/whitespace
+checks and is pushed separately. No PR was opened; unrelated work is preserved.
+
+B2 is complete; M3/Step 4 is not. B3 tail bounds/decay, V, Hπ, T, and π
+disjunctivity remain open. B4 retains vanishing error and arbitrarily late
+visits; P3 retains open-interval visits. Stop before the proposed B3 task or
+visitation research. The current prompt records this boundary.

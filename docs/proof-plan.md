@@ -10,9 +10,8 @@ and unproved hypotheses; dated validation and publication evidence live in the
 [workflow](proof-workflow.md) for execution.
 
 Next session: <!-- current-prompt --> [Current prompt](session-prompts.md#current-prompt-paused-after-b2)
-records the stopping boundary. B1 and all B2 mathematical obligations are
-checked; B2 final review/commit acceptance is pending. B3 and universal
-visitation remain unproved; the conditional
+records the stopping boundary. B1 and B2 are complete, checked and reviewed.
+B3 and universal visitation remain unproved; the conditional
 B4/P3 results retain their hypotheses below and in the blueprint.
 
 The goal is to prove `PiDisjunctivity.PiHexadecimalDisjunctivity`: every finite
@@ -44,7 +43,7 @@ still take substantial work to implement and check in Lean.
 | **1. Verified foundation** | Solved. | Already proved and checked in Lean, including the digit–interval and orbit equivalences. |
 | **2. Isolate interval hitting** | An elementary consequence of the existing equivalences that expresses exactly what remains to prove. | Completed by the bounded pilot in `OrbitCriteria.lean`: a general equivalence and a conditional π reduction, both audited. |
 | **3. Prove the BBP identity** | A classical, established theorem with published proofs. | Complete: `hasSum_bbpCoeff` proves the full `HasSum ... Real.pi` identity, using the checked term integral, pointwise series/domination, interchange, rational algebra, derivative, and FTC evaluation. Independent local proofs preserve the external-code attribution boundary. |
-| **4. Connect BBP to the orbit** | The identities, tail estimates, and conditional transfer argument have standard proof methods. This plan supplies the mathematical outline. | B4, the general conditional transfer, is checked. B2 split, recurrence/range, and exact orbit identity are checked. Final B2 acceptance is pending; B3 tail estimates remain unimplemented. |
+| **4. Connect BBP to the orbit** | The identities, tail estimates, and conditional transfer argument have standard proof methods. This plan supplies the mathematical outline. | B4, the general conditional transfer, is checked. B2 split, recurrence/range, and exact orbit identity are checked. B2 acceptance is complete; B3 tail estimates remain unimplemented. |
 | **5. Prove universal visitation** | Open mathematical research; no complete proof method is supplied. | The decisive missing argument about this particular recurrence. |
 
 The qualification for Step 4 is that it proves an implication:
@@ -440,7 +439,8 @@ B4/P3 kept every hypothesis.
 
 ### B2 complete orbit bridge
 
-**All mathematical obligations checked, 2026-11-25; final review/commit pending.** The user invoked the
+**Complete, checked, reviewed, committed, and pushed, 2026-11-25.**
+The user invoked the
 [complete B2 prompt](session-prompts.md#current-prompt-b2-complete-orbit-bridge),
 superseding its pre-merge branch instructions: PR #5 is verified merged, and
 `feature/attempt-07-b2-orbit` starts from updated `main` at `c3b3bd1`.
@@ -498,7 +498,9 @@ lemmas support recurrence induction. The integer witness
 Root equations, full types, actual axiom guards, and zero/first-index checks
 are in `Test.lean`. The [handoff](b2-handoff.md) records validation and acceptance;
 [review evidence](agy-reports/b2-review.md) includes the reviewed/pushed B2a
-checkpoint and will record the complete-milestone review. B2 does not discharge B3 or V.
+checkpoint and the completed full-milestone review. Post-commit necessity
+inspection found no justified substantive simplification; final receipt details
+are in the handoff. B2 does not discharge B3 or V.
 
 ### Next bounded task: B3 tail control
 

@@ -1,8 +1,8 @@
 # B2 retrospective — 2026-11-25
 
 The authorized endpoint is the complete convergent split, independently recursive
-BBP sequence, range/finite-sum identity, and exact π-orbit bridge. All mathematical
-obligations are checked; final acceptance and publication are recorded in
+BBP sequence, range/finite-sum identity, and exact π-orbit bridge. B2 is checked,
+reviewed, committed, pushed, and reviewed for necessity; evidence is recorded in
 [the handoff](../b2-handoff.md), with [review evidence](../agy-reports/b2-review.md).
 B3 and visitation are outside this cycle and remain open. B4/P3 retain their
 vanishing-error/late-visit and open-interval-visit premises respectively.
@@ -33,3 +33,8 @@ Keep the existing proof/review/necessity workflow and B1/B2/B3 ordering. The nex
 bounded proposal is [B3 tail control](../proof-plan.md#next-bounded-task-b3-tail-control),
 ending at quantitative bounds and tail convergence with audits and review.
 This does not begin B3 or provide a route through the unresolved visitation gap.
+
+Final review confirmed the documentation correction and returned no actionable
+findings. Post-commit necessity review retained the small proof chain without
+substantive changes. Both reviews completed with full captures; no recovery
+retry was needed. No process expansion is warranted by this cycle.
