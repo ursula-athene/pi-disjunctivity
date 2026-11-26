@@ -2188,3 +2188,33 @@ controls their contribution. The worker must identify a nontrivial consumer
 estimate or precise missing bridge, distinguish the analytic countermodel, and
 avoid repeating complete-period or free-numerator arguments. The new positive
 invariant survives; its insufficiency alone calls for a changed question.
+
+**Local/global character outcome:** an exact CRT identity separates the
+2-adic permutation from an odd correction whose conductor survives dyadic
+rescaling. At integer real frequency the 2-adic character is trivial. The
+four-pole formula supplies explicit fresh-prime factors; their joint correlation
+is still uncontrolled. A stronger stress test uses the actual negative branch:
+complete local cycles and exponential fresh odd denominators coexist with real
+values tending to zero. The [extended assessment](m4-two-adic-reflection.md#7-exact-real-characters-and-the-missing-odd-correction)
+retains the distinction from the target's forward evolution and gives a precise
+weighted comparison, without asserting its missing variation estimate.
+
+**All-jets enhancement, bounded to 20 minutes, completed:** replacing the
+analytic model's rounding target by the actual BBP tail preserves every
+algebraic tail term at once, with exponentially small forcing error. Fixed-tie
+rounding avoids an unjustified claim that xi-pi is irrational. A 7-adic witness
+proves no rational function represents its forcing even eventually, and forces
+exponential denominators on an infinite progression. This makes the lost
+polynomial-height input precise. Parent inspection and both new exact checkers
+passed; combined independent review completed with three wording clarifications
+resolved: scaling of the rounding target, the height proof's extra ingredients,
+and growth of the prime product rather than its count. No Lean theorem or V is claimed.
+
+**Fresh recovery, bounded to 30 minutes:** after the character barrier, a
+fresh-context worker receives the exact target and failed-route map. It is to
+formulate materially different mechanisms using the global rational forcing
+and forward iteration, then investigate one discriminating small claim. The
+consumer should be no stronger than needed for an arbitrary cylinder visit
+unless a stronger estimate has a concrete advantage. A forbidden-language
+automaton must not be mistaken for a finite-state actual carry process. This
+is a change of source of ideas under the meta-plan, not another permission gate.

@@ -646,13 +646,16 @@ compatible selection theorem or visit. The same residue prescription cannot
 be repaired solely by retaining the sign and interval hull of its tail.
 The [backward 2-adic interpolation](m4-two-adic-reflection.md) proves a zero
 reflected anchor and exact residue permutations for the actual prefixes.
-An [analytic avoiding model](m4-two-adic-models.md) retains these, irrationality
-and exponential prefix heights, but drops the rational forcing and its
-polynomial coefficient height. Current discovery asks whether that actual
-rational structure can control the odd-denominator factors in a local/global
-character comparison. The bridge to real fractional parts remains unproved.
-The research log owns each finite bound and outcome; no visitation gain from
-the local invariant alone is assumed in the roadmap.
+An [analytic avoiding model](m4-two-adic-models.md) retains these, irrationality,
+exponential prefix heights and even all algebraic BBP tail terms, but provably
+has no eventual rational forcing representation or polynomial coefficient height.
+The exact local/global character comparison identifies an uncontrolled joint
+odd/dyadic weight. The actual negative branch retains the rational forcing and
+fresh primes while real characters concentrate, so a transfer must use forward
+evolution essentially. A fresh recovery pass now seeks a weaker finite-cylinder
+consumer using that exact global structure; full Fourier cancellation would
+prove more than V and is not assumed necessary. The research log owns each
+finite bound and outcome. The bridge to positive real visits remains unproved.
 
 For the recurrence defined in Step 4, seek a proof of
 

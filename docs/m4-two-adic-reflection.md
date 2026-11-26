@@ -1,6 +1,6 @@
 # Actual BBP reflected zero and coherent 2-adic prefix invariant
 
-Research checkpoint, 2026-11-26; independent changed-file review complete. This cycle proves on paper that the actual reflected BBP series vanishes in Q_2. Consequently every initialized weighted rational prefix is the value of one analytic isometry of Z_2, with exact pairwise valuations and no initial transient. This is an actual infinite cross-anchor identity, not a finite residue prescription. It does not prove real interval visitation. V and M4 remain open, and the parent continues the authorized research.
+Research checkpoint, 2026-11-26. The reflected invariant and local/global extension passed independent review. This cycle proves on paper that the actual reflected BBP series vanishes in Q_2. Consequently every initialized weighted rational prefix is the value of one analytic isometry of Z_2, with exact pairwise valuations and no initial transient. This is an actual infinite cross-anchor identity, not a finite residue prescription. It does not prove real interval visitation. V and M4 remain open, and the parent continues the authorized research.
 
 All universal statements here are paper arguments, not Lean exports. The parent read and reran the exact checker successfully. No pi digits were searched. The companion [avoiding models](m4-two-adic-models.md) test which of these properties alone can constrain the real orbit.
 
@@ -167,3 +167,119 @@ No solenoid, adelic equidistribution, or automatic-sequence theorem is invoked w
 The exact V statement and initialization are unchanged. The checked B1–B3 results and conditional B4/P3 remain the Lean frontier; none of B4's visitation hypotheses is discharged. Independent review is complete; any selected implementation still requires ordinary kernel-checked proofs under the existing trust policy.
 
 The positive-lemma endpoint is complete; M4 continues. The next inquiry asks whether the actual rational forcing controls odd-denominator characters well enough to transfer local residue information to real fractional parts.
+
+## 7. Exact real characters and the missing odd correction
+
+Write e(t)=exp(2*pi*i*t), x=P/q in lowest terms with odd q>0, and M=2^k>=2.
+Let a=P*q^(-1) mod M, 0<=a<M, and b=(P-q*a)/M. Then
+
+    x/M=a/M+b/q, gcd(b,q)=1,
+    e(h*x/M)=chi_M(x)^h*C_M(x)^h,
+    chi_M(x)=e(a/M), C_M(x)=e(b/q).
+
+The correction C_M(x)^h has exact order q/gcd(q,h), unchanged in its odd
+part when the dyadic scale grows. At integer real frequency h,
+
+    e(h*S_n)=C_M(S_n)^(h*M).
+
+The 2-adic character is trivial there. At frequency h/M, its cancellation
+over a complete M-index block still has the odd correction as a weight.
+
+The actual rational formula supplies explicit local factors. For p^v exactly
+dividing q, set c_p=P*(q/p^v)^(-1) mod p^v. CRT gives
+e(h*x)=product_(p|q)e(h*c_p/p^v). For any prime p=1 mod4 in (4N+3,8N+1],
+its factor for 0<=n<=N is 1 before index j_p, and afterwards is
+
+    e(h*kappa_p*16^(n-j_p)/p),
+    (j_p,kappa_p)=((p-1)/8,4) for p=1 mod8,
+                  ((p-5)/8,-1) for p=5 mod8.
+
+There is exactly one pole divisible by p through N, since 2p>8N+6.
+For C_M insert M^(-1) modulo p. Thus these factors use the exact four poles
+and polynomial individual coefficient height, which the analytic model lacks.
+Their cofactor is still coupled to them; independent cancellation is not proved.
+
+The positive reduced prefix denominator q_N satisfies
+
+    2N+o(N)<=log q_N<=8N+o(N).
+
+The lower bound uses the displayed surviving primes. For the upper bound,
+q_N divides the odd part of lcm(1,...,8N+6). The ordinary and fixed-progression
+PNT on [Sutherland's slide 3](https://math.mit.edu/~drew/PrimeGapsOberwolfach1.pdf#page=3)
+give these estimates; higher prime powers contribute o(N).
+
+A precise near-frequency consumer keeps the floor explicitly. Put f_n=fract(S_n),
+ell=h*M+1 and W_n=e(-floor(S_n)/M)*C_M(S_n)^ell. Then
+
+    e(h*S_n)=e(-f_n/M)*chi_M(S_n)*W_n.
+
+On a complete M-index block I, for every complex c,
+
+    abs(M^(-1)*sum_(n in I)e(h*S_n))
+      <=2*pi/M+M^(-1)*sum_(n in I)abs(W_n-c).      (16)
+
+The constant part cancels by the exact local permutation. No useful small
+variation bound for W_n is established. Its exact odd order is
+q_n/gcd(q_n,ell)>=q_n/abs(ell), exponential for indices in the latter half
+of a long block and fixed h. This prevents a bounded-conductor simplification;
+large order alone proves neither variation nor cancellation. Using raw S_n
+instead of f_n only gives a sufficient error bound 2*pi*abs(S_n)/M, useless
+on a length-M positive block since S_n>=(47/15)*16^n. This is a failure of
+that bound, not a lower bound on the actual phase difference.
+
+## 8. The actual negative branch separates local and real cancellation
+
+There is a countertest with the same four-pole function and rational values.
+The reflected identity gives, for m>=1,
+
+    X_m:=B(-m-1)
+      =-sum_(l=1)^m16^(-l)*A(-(m+1-l)).
+
+These are rational with odd reduced denominator, by the reflected valuation.
+For every integer r>=1,
+
+    0<A(-r)=(120r^2-151r+47)/
+       [(2r-1)(4r-3)(8r-1)(8r-5)]<=6/r^2.
+
+The numerator is positive and at most 120r^2; the denominator is at least
+21r^4. Splitting the sum at floor(m/2) bounds the two pieces by
+24/(15m^2) and (6/15)*16^(-floor(m/2)). Since m^2<=16^floor(m/2),
+
+    -2/m^2<=X_m<0.
+
+For m=T,...,T+M-1, these are M consecutive negative inputs of the same
+isometry, hence a complete local residue cycle. Yet for every integer h,
+
+    abs(M^(-1)*sum e(h*X_m)-1)<=4*pi*abs(h)/T^2,
+    abs(C_M(X_m)^h-chi_M(X_m)^(-h))
+        <=4*pi*abs(h)/(M*T^2).                  (17)
+
+The inequalities follow from abs(e(t)-1)<=2*pi*abs(t). If M does not divide h,
+the two local factor averages vanish or approach zero separately, while their
+product average approaches one. Their dependence cannot be discarded.
+For T>=2 all real fractional parts lie in [1-2/T^2,1), so these complete
+local cycles can avoid any fixed interior interval as T grows.
+
+This branch retains growing odd conductors as well. Each prime p=3 mod4 in
+(4m,8m-1] occurs exactly once in the negative coefficient denominators: at
+r=(p+1)/8 with coefficient -4/p when p=7 mod8, or at r=(p+5)/8 with coefficient
+1/p when p=3 mod8. Dyadic weights cannot cancel the unique pole. Thus
+v_p(X_m)=-1, and its reduced odd denominator q_m^- satisfies
+
+    2m+o(m)<=log q_m^-<=8m+o(m).
+
+The same PNT and odd-lcm bound apply. This excludes a local/global transfer
+that ignores direction even with actual rational forcing, polynomial
+coefficient heights and fresh primes. It does not refute positive-time V:
+X_(m+1)=(X_m-A(-m-1))/16 is a stable backward recursion, whereas the target
+uses forward multiplication by 16 and nonnegative indices. The remaining
+input must use that forward evolution to control the joint correction in
+(16), or the full odd-prime product by another estimate.
+
+Frozen report/checker: `/tmp/pi-m4-local-global-character-report-v1.md` and
+`/tmp/pi-m4-local-global-character-check-v1.py`. Parent inspection and execution
+passed: 3,870 exact CRT/carry/conductor cases, 258 principal-part decompositions,
+12,819 fresh-prime factors, 36 residue blocks and 256 negative real bounds.
+Characters are checked as rational phases modulo integers, with no floating
+exponential evidence or pi digit search. The universal arguments remain paper;
+the complete hashes and caller evidence are in the review packet.

@@ -466,3 +466,46 @@ installations, Git mutations, delegation or Carbon. The successful exact runs
 remain caller evidence; finite cases do not prove the universal statements.
 The 83-file documentation and whitespace checks passed before review. No Lean
 export, changed trust assumption, visitation theorem or M4 acceptance is claimed.
+
+The initial 2-adic checkpoint was committed locally as
+`906eff1c527c145b9993f71eff49c08ff71b9b6a`. Final staged diff SHA-256
+`e0964e728fb08e3a84cacafe0ad3cae62bd9f2c2464a52c805733a40e14dbbbd`
+and final-validation/post-commit receipts remain in its packet. The final
+83-file documentation and both whitespace checks passed; exact six paths,
+empty index and unchanged protected sources were verified. Unrelated work
+remains preserved. No unused infrastructure or substantive simplification
+was found; no push or PR occurred.
+
+## Forward-branch and all-jets extension review
+
+Reviewer `/root/generating_review` completed the six-path extension review
+against `906eff1c527c145b9993f71eff49c08ff71b9b6a`, frozen diff SHA-256
+`487a757006b1625d9e4f33b46e4790d4086474b5a44b9e81738a6ffbbf027880`.
+Scope: both 2-adic assessments, proof plan, log, handoff and this record.
+Packet `/tmp/pi-m4-forward-review-20261126/` retains exact scope, full diff,
+caller evidence and complete `review.md`.
+
+**Whole-cycle D/I/Q dispositions:** no defects or additional open questions.
+I1 clarified that 16^n*xi-E_n is the unscaled rounding target; I2 retained the
+rational mesh denominators and real bounds needed for the height proof, beyond
+the 2-adic valuation argument. The reviewer inspected the exact clarification
+patch, SHA-256 `88d375e27afce14373bebd0c03b5d345b439608cfc6abfc0f64e1975f4f52d5d`,
+and resolved both. I3 corrected two report-only phrases: exponential growth
+concerns the product/conductor of fresh primes, not their count. The frozen
+report remains preserved with `evidence-wording-erratum.md`, SHA-256
+`529b259be25726a18ad337817c55e30d4ab42ea0689b39317c0f64f83219b168`.
+The reviewer inspected and resolved I3. No item was omitted or deferred.
+
+Coverage included both full reports and checker sources, all evidence hashes,
+CRT and floor identities, fresh-prime factors/conductors, the actual negative
+branch and its orientation limit, all-jets bounds and fixed-tie construction,
+and the proof excluding eventual rational forcing and polynomial denominator
+height. Both full adversarial guides and their unchanged hashes were retained;
+the previous primary PNT inspection supports the fixed-modulus applications.
+
+The review was read-only inspection and reconstruction, without execution,
+edits, probes, builds, services, installations, Git mutations, delegation or
+Carbon. Successful finite runs remain caller evidence. The 83-file documentation
+and whitespace checks passed before review; no production Lean, audit or pin
+changed. The forward visitation estimate and V/M4 remain open. Subsequent edits
+only record this outcome; the new multi-anchor inquiry is outside this scope.

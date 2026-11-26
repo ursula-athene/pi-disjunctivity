@@ -7,7 +7,7 @@ The [continued research checkpoint](#continued-research-checkpoint--2026-11-26)
 records subsequent work during the user's absence; that checkpoint does not
 terminate the ongoing M4 effort.
 The latest dated continuation is the
-[2-adic assessment](#2-adic-assessment--2026-11-26); read the
+[Forward-branch assessment](#forward-branch-assessment--2026-11-26); read the
 research log and actual checkout for subsequent results and current state.
 
 ## Baseline and authorized endpoint
@@ -395,3 +395,21 @@ The active question is a local/global character comparison using the actual
 four-pole formula to control odd-denominator factors. Its estimate is not yet
 available. V, Hpi, T and M4 remain open; no production Lean was changed and M5
 is excluded. This checkpoint does not terminate the ongoing research.
+
+## Forward-branch assessment — 2026-11-26
+
+The initial 2-adic checkpoint is committed locally as `906eff1`, with exact
+six-path scope, empty index and protected sources verified. The subsequent
+extensions strengthen the countertest to all algebraic BBP tail terms and
+derive exact local/global character factors. An actual negative-branch
+calculation shows why a distribution transfer must use the forward direction.
+The [model](m4-two-adic-models.md#one-analytic-model-matching-every-algebraic-bbp-tail-term)
+and [character](m4-two-adic-reflection.md#7-exact-real-characters-and-the-missing-odd-correction)
+extensions have successful parent exact checks; combined independent review
+is complete with all three wording clarifications resolved. No production Lean
+or unconditional V is added.
+
+A fresh-context recovery is examining a finite-cylinder consumer using global
+rational forcing and forward iteration. The completed diagnostics must not be
+repeated as if they supplied that consumer. Research remains authorized and
+ongoing, with V/Hpi/T/M4 open and no push, PR or M5 assembly.

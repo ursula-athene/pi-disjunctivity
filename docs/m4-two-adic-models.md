@@ -1,6 +1,7 @@
 # Analytic 2-adic coherence can coexist with real avoidance
 
-Research checkpoint, 2026-11-26; independent changed-file review complete. This paper construction tests the newly
+Research checkpoint, 2026-11-26. The initial construction passed independent
+review, as has the all-jets extension below. This paper construction tests the newly
 proved BBP reflected-zero/isometry invariants. It preserves those abstract
 invariants, an irrational real weighted sum, the initial coefficient, leading
 decay and exponential rational heights. It drops the actual rational forcing
@@ -230,3 +231,100 @@ Exact checker `/tmp/pi-m4-isometry-model-check-v1.py`, SHA-256
 exited 0: 14 phase bounds; 20 full residue permutations and periods; 256 exact
 recurrences; 64 reflected-anchor congruences. The integral and 2-adic statements
 above remain paper proofs, not Lean exports. No pi digits were computed.
+
+## One analytic model matching every algebraic BBP tail term
+
+The preceding analytic construction can retain the actual tail to exponential
+accuracy, while still avoiding an interval. Keep xi, C_n, s_n and epsilon_n,
+but replace the rounding target e_n by
+
+    E_n=sum_(j>=1)A(n+j)/16^j,
+    A(n+1)/16<E_n<A(n+1)/15,
+    16E_(n-1)-E_n=A(n).
+
+These follow from the positive decreasing BBP coefficients. Choose the same
+rational mesh coefficient a_n=s_n*p_n using
+
+    p_n=floor([16^n*xi-E_n-B_(n-1)(n)]/s_n+1/2).
+
+The fixed convention includes ties. The earlier irrational-target assertion
+does not carry over: the unscaled target 16^n*xi-E_n equals
+16^n*(xi-pi) plus a rational number,
+and irrationality of xi-pi has not been proved. Existence and the error bound
+do not need that claim. For n>=1,
+
+    b_n=16^n*xi-E_n+delta_n, abs(delta_n)<=epsilon_n,
+    T_n:=16^n*xi-b_n=E_n-delta_n.
+
+The binomial stability is only at 0<=k<n, with -1 treated separately. Every
+2-adic argument above still applies because it used only the mesh valuation
+v_2(a_n)>=2n+1, regardless of the chosen integer p_n. The height argument also
+uses the unchanged rational mesh denominators and the real bounds on b_n and
+g_n established below.
+
+For n>=1, the rational formula gives A(n)>=40/(819n^2): its numerator is at
+least 120n^2 and its denominator at most (3n)(7n)(9n)(13n)=2457n^4.
+Writing r=4/81, the decreasing sequences (n+1)^2*r^n and n^2*r^n give
+
+    epsilon_n/E_n<26208/(5*3^16)<1/100,
+    (99/100)E_n<T_n<(101/100)E_n
+        <(101/100)*A(2)/15<2/15.
+
+For n>=2 the model forcing satisfies the exact bound
+
+    g_n=A(n)+delta_n-16delta_(n-1),
+    abs(g_n-A(n))<=325epsilon_n,
+    325epsilon_n/A(n)<=47320/387420489<1.        (10)
+
+At n=1 instead, g_1>=1/16-A(2)/15-epsilon_1>0, since zeta>=1/256.
+Thus every g_n is positive; g_0=47/15 still agrees exactly, while g_1 is a
+finite exceptional coefficient and is not claimed close to A(1). Subtracting
+T_n from the phase in [2/15,1/5] crosses no integer, so all recurrence values
+still lie in (0,1/5), including y1=2/15. The weighted real sum is xi.
+Telescoping also shows T_n=sum_(j>=1)g_(n+j)/16^j: these are the model's actual
+tails, not auxiliary corrections.
+
+For every fixed K>=0,
+
+    n^K*(T_n-E_n)->0, n^K*(g_n-A(n))->0.
+
+This is one construction retaining all algebraic asymptotic terms at once;
+no convergent asymptotic expansion is assumed. Furthermore
+
+    H_g(z)-H_A(z)=(g_1-A(1))*z
+                    +sum_(n>=2)(g_n-A(n))*z^n
+
+extends analytically to |z|<81/4 by (10). The finite linear term is harmless.
+The actual local singular behavior is therefore preserved modulo an analytic
+summand. Neither D-finiteness of H_g nor its boundary behavior at 81/4 is claimed.
+
+The lost rational-function hypothesis can now be proved, even eventually.
+If a rational R represented g_n for all sufficiently large n, exponential
+closeness would force R=A identically: a nonzero rational R-A has a nonzero
+leading power at infinity and cannot decay exponentially. But for every
+positive n=1 mod7, only the original denominator 8n+6 is divisible by 7, so
+v_7(A(n))=-v_7(8n+6)<0. Every g_n is 7-integral because its denominator uses
+only 3 and 5. This gives arbitrarily large contradictions to R=A.
+
+There is also a quantitative loss of polynomial forcing height. On n=1 mod7,
+n>=2, the nonzero difference has size at least 1/(q_g*q_A), while q_A<=2457n^4.
+Equation (10) forces
+
+    q_g >=[3^12/(325*2457*n^4)]*(81/4)^n.        (11)
+
+The prior exponential upper bound 5*3^(4n+12) holds at every index. Polynomial
+height is therefore genuinely excluded on an infinite progression. Real
+complete monotonicity and rationality at negative inputs remain unestablished;
+they are not asserted false. These are explicit limits, not a counterexample
+to the actual rational-forcing problem.
+
+Frozen enhancement: `/tmp/pi-m4-all-jets-avoidance-report-v2.md`, with exact
+checker `/tmp/pi-m4-all-jets-avoidance-check-v1.py`. The parent read both,
+reconstructed the arguments and reran the checker, exit 0: 64 actual-tail
+choices, positivity/error/denominator checks, 2,080 pairwise valuations,
+residue tables through 12 bits and 32 polynomial reflected checks. Rational
+BBP tail enclosures certify the finite choices; no pi digits were searched.
+The checker bounds its attempts and makes no universal claim about resolving
+rounding ties from intervals. The mathematical fixed-tie construction needs
+no such termination theorem. Hashes and full caller evidence are in the review
+packet; universal conclusions remain paper arguments.
