@@ -190,3 +190,62 @@ Test.lean run; no production rebuild is claimed for documentation-only work.
 External source theorems and universal analytic/arithmetic arguments remain
 paper mathematics. This review does not certify V or complete M4. Subsequent
 scratch-only inquiries lie outside this frozen checkpoint.
+
+The reviewed six-path checkpoint was committed locally as
+`b102ab3dde2820203e1c064f43f38f459a885a32`. Final staged diff SHA-256
+`386d49172ca9f6968b3fc6d1a4bc3791b19d3368eb696639b296398e991eef92`
+and final validation/post-commit receipts are retained in that packet.
+Post-commit inspection found the exact owned paths, unchanged protected sources,
+an empty index and preserved unrelated work; no unused infrastructure or
+substantive simplification was found. Nothing was pushed and no PR was opened.
+
+## Transform/period combined review
+
+Reviewer `/root/generating_review` completed the four-path checkpoint review
+against `b102ab3dde2820203e1c064f43f38f459a885a32`. The frozen diff SHA-256 is
+`f6302c6eacc7c5dfd3c27a9b8a846ea97286076532a4751c731f78c634cd7566`.
+The packet `/tmp/pi-m4-transforms-periods-review-20261126/` retains the exact
+scope, diff, evidence manifest, caller receipts and complete `review.md`.
+Scope: the new transform/period assessment, research log, M4 handoff and this
+record. Both adversarial guides were applied with their unchanged hashes above.
+
+The initial review covered the exact Borel coefficients/poles, avoiding model,
+Stoneham–Wallis period and prefix bounds, full-three-phase replacement and
+actual numerator, both Ramanujan normalizations and shifted period windows,
+and Long's single-prime supercongruence with its first consumer. The reviewer
+read all five reports/checkers, the earlier window erratum and primary source
+images, and reconstructed the paper arguments.
+
+**Whole-cycle D/I/Q dispositions:** one defect, D1, concerned the source's
+strict discrepancy bound at open endpoints. The parent reproduced the q=81
+counterexample and repaired the contract to use half-open intervals, explaining
+why hexadecimal cells are unaffected. The original report was preserved with
+a versioned correction and erratum. The focused follow-up resolves D1; neither
+review identified other defects, nonblocking improvements or additional open
+questions within the diagnostic scope. No recommendation was deferred.
+
+The follow-up also reviews the subsequently added combined prime-window proof,
+prime-endpoint precision, exact low-bit modulus and all-five-prefix construction.
+Its exact three-path delta SHA-256 is
+`93469c7ba62294f6cf3684e1d5dd36ad0918e0f13bd98b91a4a2db15a44fb00e`,
+retained as `followup.patch` with `followup-scope.json` and the full
+`followup-review.md`. It inspected the corrected/new reports, both new checker
+sources, erratum, parent receipt and the supplied Sutherland PNT slide. No
+findings remain. This was a substantive addition and requested repair follow-up,
+not recovery from a failed review. Later edits record factual outcomes only.
+
+Both passes were read-only: no builds, probes, checker execution, mutations,
+services, Carbon or delegation. Successful checker executions remain caller
+evidence. All six scoped arithmetic checkers and the endpoint check passed;
+the combined-prime run includes 5,903 prime-window pairs and 244 prefix cases.
+These finite checks and independent review do not certify universal source
+results or substitute for kernel proofs. No production Lean, audit, dependency
+or pin changed; the previously successful baseline build/Test.lean and 38
+process tests apply to unchanged sources/tooling, with no new run claimed.
+M4 and V remain incomplete. Subsequent recovery research lies outside this
+checkpoint, and no Carbon, push or PR occurred.
+
+Final caller validation passed the 78-file documentation check and both
+unstaged/staged whitespace checks. Protected Lean sources, audits and pins
+remain unchanged. The selected diff contains exactly the four reviewed paths;
+unrelated Obsidian, notes and papers work is excluded.

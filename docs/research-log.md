@@ -1912,3 +1912,108 @@ complete responses and exact diff hashes are retained in the continuation
 review record. The 38 offline process tests, 77-file documentation check and
 working/staged whitespace checks passed. This accepts only the diagnostic
 checkpoint; distinct scratch inquiries continue and V remains unproved.
+
+## 2026-11-26 — M4 continuation: transforms and rational periods
+
+The arithmetic-cost checkpoint is committed locally as
+`b102ab3dde2820203e1c064f43f38f459a885a32`. Post-commit inspection verified
+its exact six documentation paths, empty index, unchanged production/pins/audits
+and preserved unrelated work. No unneeded API, tooling or substantive
+simplification was found. No push or PR occurred; research continued.
+
+The [transform/period assessment](m4-transforms-and-periods.md) records two
+changed tests. The tail's explicit transform proves exact dyadic coefficient
+denominators, identifies all poles and residues, and separates contour loops
+from the decaying solution. The avoiding model shares the coarse singularity
+pattern, so those features alone cannot imply visitation. Pole subtraction
+gives a different exact integral but no rational or modular consumer.
+
+A precise Stoneham theorem genuinely applies to an explicit Wallis subsequence
+in base16. Its full period is at least quadratic in n, while even the actual
+prefix shared with pi/4 has length at most logarithmic in n. The same-denominator
+numerator-one test shows that the source hypotheses alone do not locate a word
+in that prefix. Parent primary-page inspection and both exact checkers passed;
+universal claims remain paper mathematics and independent review is pending.
+
+The next 20-minute arithmetic test retains the full numerator phase modulo
+the controlled power of three and asks what its actual global shape contributes.
+A separate fresh-context 30-minute pass changes representation to a modular or
+theta construction, retaining arithmetic costs before proposing a visitation
+consumer. These cycles continue the unchanged M4 objective; no V premise,
+production proof or acceptance result has been added.
+
+**Full-phase outcome:** the actual Wallis reduced numerator is exactly
+`2^(4n+1-popcount(n)-popcount(n+1))`. Elementary inclusion–exclusion supplies
+a small coprime replacement in every unit class modulo its full three-power
+factor, for every s>=2, without PNT. Such replacements can have a zero prefix
+through the possible transfer window. But the full phase together with the
+global power-of-two constraint uniquely identifies the actual numerator;
+the replacements cannot retain both. The exact shift of 2^h/q_n near position
+n is retained, with no unsupported distribution conclusion. Parent inspection
+and exact tests passed, including all unit residues through s=4. The structural
+test is complete; independent review is pending and the fresh modular/theta
+inquiry continues. No renamed early-hitting premise is counted as a proof step.
+
+**Next arithmetic source test, bounded to 30 minutes:** the fresh representation
+inquiry is deriving dyadic truncated Ramanujan series for 1/pi and exact
+denominators after inversion to approximate pi/4. Inspect one primary
+supercongruence for an actual family, retaining truncation length, normalization
+and exceptional primes. Test whether its odd-prime valuation or phase gives
+anything usable by the rational-period or short-window consumer. The endpoint
+is an exact applicability check and smallest discriminating calculation, not
+an inference from p-adic divisibility alone to visits. This is authorized
+discovery while the preceding diagnostics await independent review.
+
+**Reciprocal-series outcome:** two fixed Ramanujan identities give geometric
+approximation and exact valuation v_2(A_n)=3*popcount(n). After inversion,
+the reduced odd denominator is exponential; the actual shared-prefix ceiling
+is linear and smaller than the elementary minimum full-period scale. At
+n=2^s an exact denominator congruence controls the end of a seed repetend.
+Its shifted location in the actual period is before a trailing zero block;
+parent inspection explicitly retains possible leading padding and the missing
+alignment/coverage arguments. Primary-page inspection and the exact checker
+passed. This resolves that representation test without a V implication;
+the distinct odd-prime supercongruence inquiry continues.
+
+**Supercongruence outcome:** Long's proved theorem applies exactly at p>3,
+n=(p-1)/2 and yields v_p(q_n)=1 plus a normalized unit congruence modulo p^3.
+It does not give a p^4 denominator factor or Type A excess. A same-numerator,
+comparable-height congruence-class construction approaches 1/3 with long
+initial strings of fives; it explicitly loses the actual hypergeometric
+recurrence and pi limit. Parent theorem-page inspection and exact checks passed.
+The source's p=3 exception and p=5 squarefree-period example remain finite
+diagnostics, not asymptotic claims. This test is complete and awaits review.
+
+**Next changed test, bounded to 25 minutes:** use the actual extra central-
+binomial summands to extend the half-truncation congruence to every prime
+n<p<=2n+1. Test the simultaneous modulus and its compatibility with the
+existing low-two-bit information. The proposed endpoint is an exact prime-
+window statement and a comparison of its total modulus with the numerator
+and shared-prefix scales. This uses more of the actual coefficient recurrence;
+it must still distinguish constraints on extracted arithmetic from a theorem
+about the real leading digits. The unchanged V objective continues throughout.
+
+**Combined-prime outcome:** every prime n<p<=2n+1, p>3, has denominator
+valuation one and the extended congruence modulo p^3; a prime endpoint retains
+p^4. Combining these with the known exact low-bit datum still allows
+same-numerator fractions with all-five prefixes through the entire possible
+transfer ceiling. The ordinary PNT proves the needed modulus/height comparison
+eventually at every anchor. The parent inspected and ran the exact checker,
+including 5,903 prime-window pairs and 244 model prefixes. This closes the
+extracted-congruence consumer, not the actual recurrence or real pi enclosure.
+
+**Meta-plan recovery, bounded to 30 minutes:** several arithmetic tests now
+reach the same missing real-position implication. A fresh-context agent is
+attempting a positive intermediate lemma with a concrete visitation consumer,
+retaining the exact dependence across anchors that the countertests discard.
+The endpoint is a proved candidate or its first unsupported implication and
+a genuinely changed next question; it is not a new label for V or a reason
+to end the authorized research.
+
+**Intermediate review:** the independent reviewer found one endpoint-convention
+defect in the Stoneham source contract. The parent reproduced its q=81 example
+and repaired the strict bound to use half-open intervals, preserving the
+hexadecimal-cell application. The original report is preserved with a versioned
+correction and erratum. Focused review of this repair and the combined-prime
+addition is complete: D1 resolved, no further D/I/Q findings. M4 remains
+incomplete; no production Lean or trust policy changed.

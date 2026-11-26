@@ -7,7 +7,7 @@ The [continued research checkpoint](#continued-research-checkpoint--2026-11-26)
 records subsequent work during the user's absence; that checkpoint does not
 terminate the ongoing M4 effort.
 The latest dated continuation is the
-[arithmetic-cost checkpoint](#arithmetic-cost-checkpoint--2026-11-26); read the
+[transform/period checkpoint](#transformperiod-checkpoint--2026-11-26); read the
 research log and actual checkout for subsequent results and current state.
 
 ## Baseline and authorized endpoint
@@ -281,3 +281,29 @@ coefficients; read subsequent research-log entries before repeating either.
 The log states each finite endpoint. A failed test changes the next
 inquiry; it does not end M4. The accepted frontier remains B1–B3 and conditional
 B4/P3; V, Hpi, T and M5 assembly remain open under the unchanged contracts.
+
+## Transform/period checkpoint — 2026-11-26
+
+The arithmetic-cost checkpoint is committed locally as `b102ab3`; its exact
+scope, validation, review and post-commit inspection are recorded in the
+continuation review. No publication occurred. Subsequent work is in the
+[transform/period assessment](m4-transforms-and-periods.md): exact tail
+coefficients and poles, a separating avoiding model, a genuine Wallis
+rational-period application with its short-prefix mismatch, and an elementary
+full-three-phase countertest. The actual Wallis numerator is a power of two;
+that global property plus its full local phase uniquely determines it. None
+of these facts supplies the missing word-distribution estimate.
+
+These new results are paper mathematics with parent-inspected exact checkers
+and primary source pages. Initial independent review found one source-contract
+endpoint defect, now repaired and cleared in focused follow-up. The fresh test of
+reciprocal series is also complete: inversion retains an exponential odd denominator,
+and its finer congruence controls a seed-period ending whose useful alignment
+is unproved. Long's single-prime supercongruence applies, but its extracted
+arithmetic alone fails the proposed period/initial-window consumer. The combined
+prime-window test is also complete: its full precision plus known low bits
+still admits all-five prefixes through the transfer ceiling. Current meta-plan
+recovery seeks a positive lemma retaining exact dependence across approximation
+anchors; consult the subsequent log before repeating a completed test. No production
+Lean, axiom audit, dependency or pin changed. V/M4 remain incomplete, and this
+internal checkpoint does not stop the authorized research.
