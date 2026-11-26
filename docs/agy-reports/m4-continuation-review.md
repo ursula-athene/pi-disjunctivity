@@ -387,3 +387,42 @@ Carbon or delegation. Exact-checker execution remains caller evidence. The
 Lean, audits and pins are unchanged from the successful baseline. No new
 kernel certification or M4 acceptance is claimed. The fresh signed-remainder
 inquiry remains outside this checkpoint's mathematical scope.
+
+The Pade checkpoint was committed locally as
+`01ec415732a529930d32414ed153415171a0bfbc`. Final staged diff SHA-256
+`7dd8f8d49abf20b3263c6e0549886b9b41596521600f564ba09b983bb3ff78e2`
+and final-validation/post-commit receipts remain in its packet. The final
+80-file documentation check passed using the permitted `/tmp` uv cache after
+the default cache was inaccessible. Both whitespace checks passed. Exact paths,
+empty index and unchanged protected sources were verified; unrelated work was
+preserved. No unused infrastructure or substantive simplification was found.
+Nothing was pushed or published.
+
+## Signed-evaluation review
+
+Reviewer `/root/generating_review` completed the five-path review against
+`01ec415732a529930d32414ed153415171a0bfbc`, exact diff SHA-256
+`bb156122e59eb312d64c3a07e5494aaf85e5d53e05b58c71000c6360fddeb8be`.
+Scope: the new signed-evaluation assessment, proof plan, log, handoff and this
+record. Packet `/tmp/pi-m4-signed-review-20261126/` retains its manifest,
+full diff, caller receipt and complete `review.md`.
+
+**Whole-cycle D/I/Q dispositions:** no items. The reviewer also confirmed the
+prior Pade parameter-domain clarification and found no further substantive
+simplification. Nothing was omitted or deferred. Subsequent changes only record
+this completed outcome; the new 2-adic work remains outside the mathematical
+scope of this checkpoint.
+
+Coverage included all three full reports/checker sources and evidence hashes,
+orthogonal-moment normalization and sign, rational derivative and image interval,
+primitive rays/gcd factors, prime exclusions and evaluated denominator tradeoff,
+and the periodic-gap argument with its precise weakened-certificate limitation.
+Sutherland's PNT slide was visually rechecked. Both full adversarial guides
+were retained and their unchanged hashes verified under the replacement procedure.
+
+Review was read-only inspection and mathematical reconstruction, without
+execution, edits, builds, probes, services, installations, Git mutations,
+Carbon or delegation. Exact finite checks remain caller evidence, with no
+universal certification inferred. The 81-file documentation and whitespace
+checks passed before review. Production Lean, audits and pins remain unchanged;
+V and M4 remain incomplete.

@@ -2134,3 +2134,30 @@ residual interface; these are now stated. The actual family already fixed B=1.
 Both adversarial guides were applied, with the full response and exact scope
 retained. The signed-remainder recovery remains separate ongoing research;
 review of a diagnostic is not acceptance of M4.
+
+**Signed-remainder recovery outcome:** the actual moment kernel gives an exact
+signed formula with rational sign enclosures. Combining it with point evaluation
+simplifies the derivative to a rational function and shows the safe slope cone
+represents every rational in its explicit image interval. A new prime argument
+bounds the product of coefficient height and the actual primitive evaluated
+denominator; it does not substitute coefficient clearing for evaluation.
+The original residue certificate also fails with any signed interval containing
+the full omitted-digit tail hull. These facts and their precise exclusions are
+in the [signed-evaluation assessment](m4-signed-evaluation.md). Parent exact
+checkers passed; independent changed-file review completed with no D/I/Q items.
+No V follows.
+
+**Changed representation, bounded to 30 minutes:** investigate the full tower
+of actual BBP congruences via B(x)=sum_(j>=0)16^j A(x-j) in Z_2. The question is
+whether coherent interpolation, beyond freely prescribed residues, constrains
+permanent real interval avoidance. The worker must prove the exact invariant,
+retain the real-fractional-part bridge, and challenge it with an avoiding model.
+
+**Parent discriminating follow-up, bounded to 20 minutes:** the worker has a
+paper proof of B(-1)=0 and isometry, hence exact prefix valuations. Before
+using them as a visitation mechanism, test whether analytic interpolation can
+preserve those properties, irrationality and exponential rational-prefix height
+while producing an avoiding real orbit. The proposed Newton-binomial model
+drops the exact rational forcing function; its role is to isolate that remaining
+input, not to refute the BBP target. This investigation continues while the
+completed signed calculation is reviewed.

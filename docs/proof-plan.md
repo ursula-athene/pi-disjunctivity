@@ -639,11 +639,15 @@ way to transfer a complete rational-period occurrence guarantee. The
 [rational-forcing assessment](m4-rational-forcing.md) also separates every
 finite tail jet from visitation and retains the loss of irrationality in
 those models. None of these diagnostics discharges the fixed V contract.
-Current discovery tests whether the exact BBP/logarithmic arithmetic can make
-an auxiliary integer residual sensitive to allowed prefix transitions,
-including its full coefficient-height cost. It must differ from the failed
-uniform-small-polynomial construction. The research log owns its finite bound
-and outcome; no such arithmetic gain is assumed in the roadmap.
+The [Pade residual](m4-pade-residues.md) and
+[signed-evaluation assessment](m4-signed-evaluation.md) provide an actual modular
+gain, exact signed formula and primitive denominator/height tradeoff, but no
+compatible selection theorem or visit. The same residue prescription cannot
+be repaired solely by retaining the sign and interval hull of its tail.
+Current discovery tests the actual backward 2-adic interpolation and reflected
+anchor, including the missing bridge from congruences to real fractional parts.
+The research log owns each finite bound and outcome; no visitation gain from
+that representation is assumed in the roadmap.
 
 For the recurrence defined in Step 4, seek a proof of
 

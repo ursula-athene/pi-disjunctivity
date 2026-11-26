@@ -7,7 +7,7 @@ The [continued research checkpoint](#continued-research-checkpoint--2026-11-26)
 records subsequent work during the user's absence; that checkpoint does not
 terminate the ongoing M4 effort.
 The latest dated continuation is the
-[Pade residual assessment](#pade-residual-assessment--2026-11-26); read the
+[Signed-evaluation assessment](#signed-evaluation-assessment--2026-11-26); read the
 research log and actual checkout for subsequent results and current state.
 
 ## Baseline and authorized endpoint
@@ -362,3 +362,19 @@ questions, without an established estimate. A fresh-context recovery pass is
 attempting a positive lemma using exact structure beyond the failed-route map;
 its bound and precise output belong in the research log. Completing these
 internal diagnostics does not end M4 or authorize M5 assembly.
+
+## Signed-evaluation assessment — 2026-11-26
+
+The Pade checkpoint is committed locally as `01ec415`; exact reviewed paths,
+empty index and protected sources were verified after commit. The subsequent
+[signed-evaluation assessment](m4-signed-evaluation.md) supplies a rigorous signed
+interface, an exact rational derivative, primitive evaluation classification
+and a height/denominator tradeoff. The original residue certificate remains
+insufficient even with sign information when only the tail interval is used.
+Parent exact checks passed; independent review is complete with no D/I/Q items. No Lean export,
+unconditional visit or M4 acceptance exists.
+
+The new inquiry uses backward 2-adic interpolation of the actual rational
+coefficient. Its first paper invariant and an analytic avoiding-model test
+are ongoing and outside this checkpoint's mathematical scope. The research log
+owns their bounds and next questions. No Carbon, push or PR has occurred.
