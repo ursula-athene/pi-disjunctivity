@@ -2262,3 +2262,49 @@ inspected its exact one-line delta and resolved it. Both guides, full source
 reports/checkers and all hashes were inspected; successful executions remain
 caller evidence. The full response and six-path scope are retained in the
 review packet. These are reviewed paper diagnostics, not M4 acceptance.
+
+**Shared-tail outcome:** an exact moment identity reduces the two remainders
+to one correlated scalar. Under the stated height budget their primitive
+denominators share an exponentially large gcd. Dropping the individual
+congruences therefore creates false fractional integer parts; keeping a full
+Cantor tail alone does not exclude these relaxed witnesses at fixed moment
+order. The full lattice and higher-order enclosures remain outside that
+obstruction. The [assessment](m4-shared-residuals.md) retains the exact limit.
+
+**Positive triple extension within that bound:** partitioning the actual
+denominator's whole prime powers and selecting congruences through 256*q_i
+constructs three conditioned actual Pade vectors with primitive denominator
+gcd one. Nearest-point selection in their safe evaluation interval costs only
+a polynomial factor; total coefficient height is exp(2L+o(L)). Three is the
+first possible number at the stated height budget. This removes the pair's
+false grid, but a costed uniform exclusion from the actual forbidden-tail set
+is still missing. Parent reconstruction and both exact checkers passed. The
+source report's ambiguous "interior point" wording was corrected to an allowed
+point inside the hull; the Cantor set itself has empty interior.
+
+**Opposite-direction test, bounded to 15 minutes, completed:** test whether
+the positive denominator exponent distinguishes the actual negative branch
+already known to concentrate in the reals. The increasing-weight compression
+has an exact zero state on two prime strips of combined weighted mass m/5.
+It gives log den(X_m)=(29/5)m+o(m), with full dyadic cancellation retained.
+The real-positive rational state m=20,p=13 still cancels modulo p, so fixed-scale
+quantifiers remain essential. A finer mesh also lets the analytic avoiding
+model match scalar exponent 6; it still loses exact rational forcing. Parent
+reconstruction and the 40,557-case checker passed. This extension and the
+shared-tail/triple note passed combined independent review with no D/I/Q items.
+
+**Fresh source of ideas, bounded to 30 minutes:** the arithmetic now removes
+a concrete lattice obstruction but still does not control real position.
+A fresh-context worker has the exact target and compact failure map and is
+testing an analytic sampling/interpolation bridge. It must distinguish this
+from the already failed ordinary generating-function natural-boundary inference
+and the missing second-base closure premise. The endpoint is a proved small
+claim with an actual cylinder consumer or a newly identified precise obstruction,
+not another denominator estimate. No change to V or authorization is requested.
+
+**Shared-tail review outcome:** the independent reviewer reconstructed the
+full triple construction and its restricted lattice consumer, pair limits,
+negative exponent and mesh adjustment. No defects, improvements or additional
+open questions were reported. Both guides, full reports/checkers and all hashes
+were inspected; successful executions remain caller evidence. No V or new
+Lean theorem follows. The ongoing analytic investigation is outside this scope.

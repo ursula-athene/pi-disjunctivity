@@ -185,7 +185,7 @@ tail set, a dependence estimate for tail and remainder, another family or a
 larger height budget is outside this obstruction. The shared-tail question
 continues alongside the [joint forward test](m4-forward-polynomials.md).
 
-## Real-character limitation and evidence
+## Real-character limitation
 
 When (1) is nonzero, it supplies the actual principal coefficient p*S_n modulo
 p for the factor exp(2*pi*i*c/p) of the real character of S_n. For primes on
@@ -195,6 +195,97 @@ powers, and those factors are coupled. Preventing local cancellation does not
 bound the average of their product over forward n. No estimate neutralizing
 the complementary factors, or forcing an arbitrary real interval visit, is
 proved here.
+
+## The actual backward branch has a different exponent
+
+This extension passed independent review. It tests (4) against the existing
+[negative-branch stress test](m4-two-adic-reflection.md#7-exact-real-characters-and-the-missing-odd-correction),
+which retains the rational coefficient function but has concentrating real
+characters. Put, for m>=1,
+
+    D(t)=A(-t-1)=1/(8t+2)+1/(8t+3)+2/(8t+4)-4/(8t+7),
+    R_m=sum_(t=0)^(m-1)16^t*D(t),  X_m=-16^(-m)*R_m.
+
+The previously reviewed reflected identity gives v_2(R_m)=4m+v_2(m).
+Thus X_m has odd denominator and den(X_m)=den(R_m); division by 16^m adds
+no dyadic denominator cost.
+
+For prime p>=7 with p^2>8m-1, write m-1=p*h+s. The compression now uses
+increasing weights: for (r,c_r)=(2,1),(3,1),(4,2),(7,-4), take the same delta
+and b as above, but w_r=c_r*chi_p^delta*2^((delta-r)/2). The two states are
+D for p=1 mod4 and
+
+    C(t)=-1/[2(8t+1)]+2/(8t+4)+2/(8t+5)+4/(8t+6)
+
+for p=3 mod4. If T^sigma_h=sum_(t<h)16^t*D^sigma(t), then
+
+    p*R_m = T^sigma_h+16^h*E_(p,h,s) mod p.                 (7)
+
+Again E contains exactly b_r<=s and is an initial segment of the state's
+ordered offsets, namely (2,3,4,7) or (1,4,5,6). All included denominators
+are p-integral. Eligibility is p=1 mod4, p<=4m-3, or p=3 mod4, p<=8m-1;
+the latter means p<=8m-5 in class 3 modulo 8 and p<=8m-1 in class 7.
+
+There is now an exact zero state. For h=0 the first two C terms sum to
+-1/2+2/4=0. It occurs precisely on the strips
+
+    p=3 mod8: (8m-1)/5 < p <= 2m-1,
+    p=7 mod8: (8m-5)/5 < p <= 2m-1.                       (8)
+
+The second term enters at b_4=(p-1)/2; the third enters at (5p-7)/8 or
+(5p-3)/8, giving these endpoints. For p>=7 the strips imply h=0 and
+8m-1<5p+4<p^2. Thus every such p is wholly absent from den(X_m), not just
+reduced in exponent.
+
+All other eligible rational states are nonzero. The D partial sums are
+positive. At h=0 the C partial sums are -1/2, 0, 2/5, 16/15. For h>=1 its
+smallest nonempty value is Q_h=T^C_h-16^h/[2(8h+1)]. One has Q_1=8/45 and
+
+    Q_(h+1)-Q_h
+      =16^h*[2/(8h+4)+2/(8h+5)+4/(8h+6)-8/(8h+9)]>0.
+
+The positive numerators total 8 and their denominators are strictly smaller
+than the negative term's denominator. Empty final blocks are positive too.
+The fixed-H argument used for (3) therefore proves eventual survival on every
+fixed linear scale outside (8). This does not exclude isolated modular
+cancellation: m=20,p=13 has compressed value 2496/385, nonzero rationally but
+zero modulo 13.
+
+The two strips together have weighted prime mass
+theta(2m;4,3)-theta((8/5)m;4,3)+O(log m)=m/5+o(m).
+The bounded endpoint differences need no short-interval theorem or modulus-8
+asymptotic. Eligible support has total weighted mass 6m+o(m). Lower bounds
+follow by deleting the strips and primes <=m/(H+1), then taking limits in
+that order; upper bounds use the exact strip absence and the same negligible
+higher-power estimate as before. Consequently
+
+    log den(X_m)=(29/5)*m+o(m).                            (9)
+
+Thus the positive exponent 6 distinguishes this actual opposite-direction
+example. The difference alone still gives no real-visitation implication.
+Even scalar exponent 6 is reproducible by the analytic avoiding model: replace
+its mesh denominator by 3^d_n, d_n=ceil(6n/log 3)+12, and choose its mesh
+numerator not divisible by 3. Such numerators have gaps at most 2, so the finer
+mesh keeps the old error allowance. Earlier interpolation contributions have
+strictly smaller powers of 3 in their denominators, whereas the new term is a
+3-unit numerator over 3^d_n. The prefix denominator therefore has exact
+3-exponent d_n and at most a bounded factor 5, giving log denominator=6n+O(1).
+The 2-adic interpolation bounds persist. This model still loses the exact
+rational forcing and polynomial coefficient height; it is not a model for
+the full principal-part data.
+
+The parent reconstructed and reran the frozen negative-branch checker, exit 0:
+40,557 compression comparisons, 32,271 prime-power checks, 1,125 strip absences
+and 256 dyadic cancellations. These are finite diagnostics. Evidence:
+
+- `/tmp/pi-m4-negative-denominator-report-v1.md`, SHA-256
+  `6d7b05a53c13b22903234fb5ff212a73c69ed10f0ba3dbcf069e56c87f5b2d80`.
+- `/tmp/pi-m4-negative-denominator-check-v1.py`, SHA-256
+  `b6aa74fd662476dfbf882cb0f171339dcdef795bdc9013d88198d06432b1c694`.
+- `/tmp/pi-m4-negative-denominator-receipt-v1.json`, SHA-256
+  `6df38b71fe9ab808ce4ddc1edf3dec7d27f6f289e7bf6052cf3d0ef98f0dde72`.
+
+## Evidence for the positive-branch argument
 
 The parent reconstructed the proof, visually checked the PNT source page and
 reran the exact standard-library checker, exit 0. Frozen evidence:

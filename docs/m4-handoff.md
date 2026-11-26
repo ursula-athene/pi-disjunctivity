@@ -7,7 +7,7 @@ The [continued research checkpoint](#continued-research-checkpoint--2026-11-26)
 records subsequent work during the user's absence; that checkpoint does not
 terminate the ongoing M4 effort.
 The latest dated continuation is the
-[Forward arithmetic assessment](#forward-arithmetic-assessment--2026-11-26); read the
+[Shared-tail assessment](#shared-tail-assessment--2026-11-26); read the
 research log and actual checkout for subsequent results and current state.
 
 ## Baseline and authorized endpoint
@@ -438,3 +438,28 @@ one shared omitted-digit tail provide a stronger joint constraint. It must
 retain their correlations and coefficient costs. The research log owns the
 bound and outcome. This is an internal checkpoint, not an interruption or
 acceptance: the unconditional V theorem, Hpi, T and M4 remain open; M5 is excluded.
+
+## Shared-tail assessment — 2026-11-26
+
+The forward arithmetic checkpoint is committed locally as `1e079c1`; exact
+six-path scope, empty index and unchanged protected sources were verified.
+The [shared-tail note](m4-shared-residuals.md) proves the pair's common-factor
+constraint and constructs a conditioned triple with primitive gcd one and
+heights exp(2L+o(L)). This is a positive removal of the false-grid obstruction,
+with actual numerator dependence and full prime-power precision retained.
+It leaves uniform separation from the nonconvex forbidden tail unproved.
+
+The [prime-compression extension](m4-prime-compression.md#the-actual-backward-branch-has-a-different-exponent)
+shows that the concentrating negative branch has exponent 29/5 rather than 6,
+caused by an exact cancellation strip. Scalar exponent 6 alone still admits
+an analytic avoiding model; no distribution criterion follows from the exponent.
+Parent exact runs and paper reconstruction passed; combined independent review
+completed with no D/I/Q items. The existing review record owns exact scope and
+evidence limits.
+
+A fresh-context analytic sampling investigation is ongoing under the meta-plan;
+its bound and actual output belong in the research log. The established failed
+second-action and generating-function arguments must not be repeated unchanged.
+No production Lean, audit, dependency, pin or trust change has occurred. V, Hpi,
+T and M4 remain open, M5 is excluded, and no push or PR was made. This checkpoint
+continues the authorized research rather than ending it.

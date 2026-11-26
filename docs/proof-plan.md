@@ -659,11 +659,17 @@ inequalities remain essential. The [prime-compression argument](m4-prime-compres
 uses the actual four poles to prove log den(S_n)=6n+o(n), including evaluated
 cancellation. Its primitive Pade corollary excludes interval-plus-modulus
 certificates in the stated degree and height range, even after gcd reduction.
-The next test retains the nonconvex tail and its dependence across coupled
-residuals. Full Fourier cancellation would prove more than V and is not assumed
-necessary. The research log owns each finite bound and outcome. These paper
-arguments passed independent review; the bridge to positive real visits
-remains unproved.
+The [shared-tail calculation](m4-shared-residuals.md) retains that dependence:
+two primitive residuals have a large common factor, while three conditioned
+actual vectors of height exp(2L+o(L)) can have primitive gcd one. This removes
+the false lattice points introduced by a pair relaxation, but supplies no
+uniform separation from the actual nonconvex tail set. A negative-branch
+extension distinguishes the forward exponent 6 from the backward exponent
+29/5 through an exact cancellation strip. These extensions and the preceding
+forward results have completed independent review. Full Fourier cancellation
+would prove more than V and is not assumed necessary. The research log owns
+each finite bound, outcome and changed source of ideas. The bridge to positive
+real visits remains unproved.
 
 For the recurrence defined in Step 4, seek a proof of
 

@@ -548,3 +548,46 @@ caller evidence. No reviewer edits, builds, probes, execution, installations,
 services, Git mutations, delegation or Carbon occurred. No production Lean,
 audit or pin changed; no paper result is a Lean export or M4 acceptance.
 The ongoing shared-tail and negative-branch tests are outside this frozen scope.
+
+The forward arithmetic checkpoint is committed locally as
+`1e079c1ac9adff4169d1506c87b5528968546468`. Final staged diff SHA-256
+`85f9374a4051387fe824aaeabc66dd1d53050bd05d36136c6818e2da8edf9abc`
+and final-validation/post-commit receipts remain in its packet. The final
+85-file documentation and both whitespace checks passed; exact six paths,
+empty index and unchanged protected sources were verified. Unrelated work
+remains preserved; no unused infrastructure or substantive simplification
+was found, and no push or PR occurred.
+
+## Shared-tail and negative-branch extension review
+
+Reviewer `/root/generating_review` completed the exact six-path review against
+`1e079c1ac9adff4169d1506c87b5528968546468`, frozen diff SHA-256
+`d78db395b99d00cf0ab6d506676dd082d17ff18dd95fe5ba833ce8414b20cbfc`.
+Scope: the shared-residual assessment, prime-compression extension, proof plan,
+log, handoff and this record. Packet `/tmp/pi-m4-shared-review-20261126/`
+retains the complete diff, scope/evidence hashes, caller checks and verbatim
+returned `review.md`. **Whole-cycle D/I/Q:** none; no item omitted or deferred.
+
+The reviewer reconstructed safe interval costs, whole-prime-power partition,
+prime selection, full dyadic/odd congruence, actual numerator dependence,
+matrix inversion and height control, primitive reduction and gcd-one lattice
+consumer. Pair moment dependence and fixed-order limits were checked without
+extending their conclusions to full congruences or stronger analytic bounds.
+The pair report v3 preserves v2 with only an ambiguity corrected: the allowed
+point lies inside the hull, not the topological interior of the Cantor set.
+
+Coverage also included the negative compression states and exact zero strip,
+dyadic cancellation, support and fixed-H exponent argument, isolated modular
+exception, and the model's adjusted mesh and denominator exponent. All three
+reports and checker sources were read fully and their evidence hashes checked.
+The pinned Bertrand theorem was inspected; the prior visually checked PNT
+source and unchanged hashes were retained. Both full adversarial guides were
+retained and verified under AGENTS, the replacement procedure and argument-critic
+limits. No review recovery or substantive repair was needed.
+
+Review was read-only mathematical reconstruction and inspection. Three checker
+replays, the 86-file documentation check and both whitespace checks are caller
+evidence. No reviewer checker/probe/build, edits, Git mutations, installation,
+services, delegation or Carbon occurred. Subsequent edits record this outcome
+only. No Lean export, universal computational certification or V acceptance
+follows; the analytic discovery pass is outside this review scope.
