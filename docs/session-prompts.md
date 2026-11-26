@@ -159,6 +159,23 @@ disjunctivity remain open. B4 retains its arbitrarily-late-visit premise and P3
 its open-interval-visitation premise. Do not begin visitation research, modular
 computation, final conjecture assembly or another milestone automatically.
 
+### 5. Context management and use of subagents
+
+We are trying to conserve parent (supervisor, you) context to enable us to run a long
+time unattended. 
+
+So for long-running proof tasks, use subagents for Mathlib searches, independent
+proof attempts, and diagnosis of verbose build failures. Give each worker the
+exact question and relevant files. Ask it to return the result, verification
+command, and any precise obstruction. Keep parallel edits in separate scratch
+files or worktrees.
+
+The parent (supervisor, you) owns the target theorem and verifies candidate proofs \
+in the project. At each verified milestone or decisive failure, update PROGRESS.md with the
+current obligation, evidence, and next step. After context compaction, read
+PROGRESS.md and the target declaration before continuing.
+
+
 ## Old prompts - do not use
 
 <a id="current-prompt-b2-improvement-plan"></a>
