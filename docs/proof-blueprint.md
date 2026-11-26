@@ -1,6 +1,6 @@
 # Proof dependency and status index
 
-Updated 2026-11-25 with the completed, checked and reviewed B2 orbit bridge. This indexes
+Updated 2026-11-25 with the checked B3 coefficient/tail bounds and decay. This indexes
 [proof-plan.md](proof-plan.md), the sole mathematical roadmap. Validation and
 review evidence are in [research-log.md](research-log.md). All Lean names below
 are in namespace `PiDisjunctivity` and exported by the library root.
@@ -8,8 +8,8 @@ are in namespace `PiDisjunctivity` and exported by the library root.
 **Target remains unproved:** `PiHexadecimalDisjunctivity`, whose unchanged
 definition is `IsDisjunctive 16 Real.pi`. B1 is implemented, including rational
 algebra, the primitive derivative, integral evaluation, and the full `HasSum`.
-B2 split, recurrence/range, and the exact orbit bridge are checked. B3 and
-universal visitation remain unproved.
+B2 split, recurrence/range, the exact orbit bridge, and B3 tail control are
+checked. Universal visitation remains unproved; B3 acceptance is in its handoff.
 
 ## Notation and status vocabulary
 
@@ -54,8 +54,8 @@ axiom list; no claim here is an added axiom.
 
 ## Remaining BBP route
 
-B1 and B2 below are checked. B3 and V remain specifications from roadmap
-Steps 4–5; no corresponding theorem is claimed.
+B1, B2 and B3 below are checked. V remains an unproved specification from
+roadmap Step 5; no corresponding visitation theorem is claimed.
 The general B4 and P3 lemmas are now checked and
 exported; they contain no BBP-specific definitions. For the remaining nodes,
 define, in real arithmetic,
@@ -82,12 +82,12 @@ the roadmap's `r ≥ 1` sum to start at zero. The exported `hasSum_bbpTail` supp
 | B1e: primitive derivative | For `x ∈ Icc (0 : ℝ) 1`, `HasDerivAt (fun y => 2*log(2-y^2)-2*log(y^2-2*y+2)+4*arctan(y-1)) ((4-2*x^3-x^4-x^5)/(1-x^8/16)) x`. | `hasDerivAt_bbpPrimitive`; positive log arguments, chain rules, T4; full type/axiom guard. | **Checked.** Ordinary derivative at every point including endpoints; no unproved analytic premise. |
 | B1f: integral evaluation | `(∫ x in (0 : ℝ)..1, (4-2*x^3-x^4-x^5)/(1-x^8/16)) = Real.pi`. No hypotheses. | `integral_bbpKernel`; kernel continuity/integrability, B1e, FTC, exact log/arctangent endpoint values; full type/axiom guard. | **Checked.** Identifies the B1c integral with Mathlib's π. |
 | B1: BBP series | `HasSum (fun j : ℕ => A(j) / (16 : ℝ) ^ j) Real.pi`, for the fixed `A` above. | `hasSum_bbpCoeff` in [Series.lean](../PiDisjunctivity/BBP/Series.lean); B1c rewritten with B1f. Full root-import type/axiom guard; [handoff](b1-handoff.md). | **Checked, unconditional.** Supplies the π-specific analytic identity and convergence. No density hypothesis, external adaptation, or visitation conclusion. |
-| B2: orbit bridge | For every `n : ℕ`, the specified tail has sum `16^n*Real.pi-S_n` and has sum `R_n`; `16^n*Real.pi = S_n+R_n`, `0 ≤ y_n < 1`, `y_(n+1) = fract(S_n)`, and `t_n(Real.pi) = fract(y_(n+1)+R_n)`. No hypotheses. | Six public theorems in [Orbit.lean](../PiDisjunctivity/BBP/Orbit.lean): `hasSum_bbpTail_sub`, `hasSum_bbpTail`, `pow_mul_pi_eq_bbpPartialSum_add_bbpTail`, `bbpRecurrence_mem_Ico`, `bbpRecurrence_succ_eq_fract_bbpPartialSum`, `fract_pow_mul_pi_eq_bbpRecurrence_add_bbpTail`. B1, prefix split/scaling, private prefix recurrence, integer-floor witness; complete root types/guards and boundary checks. [Handoff](b2-handoff.md). | **Checked, unconditional; reviewed and committed.** Recurrence index `n+1` matches orbit index `n`. B3 and V remain open. |
-| B3: tail control | For all `j,n : ℕ`, `abs(A(j)) ≤ 8/(8*j+1)` and `abs(R_n) ≤ 8/(15*(8*n+9))`; consequently `R_n → 0` as `n → ∞`. | Candidate bounds in Step 4; triangle inequality, denominator monotonicity, geometric sum, convergence. | **Proposed bounds / unformalized.** Must verify constants and series estimates; gives no visits. |
-| B4: general transfer | For `u r : ℕ → ℝ`, assume `Filter.Tendsto r Filter.atTop (nhds 0)` and `∀ a b : ℝ, 0 ≤ a → a < b → b ≤ 1 → ∀ N : ℕ, ∃ n ≥ N, u n ∈ Set.Ioo a b`. Then `∀ a b : ℝ, 0 ≤ a → a < b → b ≤ 1 → ∃ n : ℕ, Int.fract (u n + r n) ∈ Set.Ioo a b`. | `hitsOpenIntervals_fract_add_of_tendsto_zero` in [OrbitCriteria.lean](../PiDisjunctivity/OrbitCriteria.lean); `Metric.tendsto_atTop`, quarter-width margin, `Int.fract_eq_self`. Root-exported; complete type/axiom guards in `Test.lean`. | **Checked, conditional.** No global range hypothesis; signed errors and targets touching 0 or 1 included. Late visitation and vanishing error remain premises. |
+| B2: orbit bridge | For every `n : ℕ`, the specified tail has sum `16^n*Real.pi-S_n` and has sum `R_n`; `16^n*Real.pi = S_n+R_n`, `0 ≤ y_n < 1`, `y_(n+1) = fract(S_n)`, and `t_n(Real.pi) = fract(y_(n+1)+R_n)`. No hypotheses. | Six public theorems in [Orbit.lean](../PiDisjunctivity/BBP/Orbit.lean): `hasSum_bbpTail_sub`, `hasSum_bbpTail`, `pow_mul_pi_eq_bbpPartialSum_add_bbpTail`, `bbpRecurrence_mem_Ico`, `bbpRecurrence_succ_eq_fract_bbpPartialSum`, `fract_pow_mul_pi_eq_bbpRecurrence_add_bbpTail`. B1, prefix split/scaling, private prefix recurrence, integer-floor witness; complete root types/guards and boundary checks. [Handoff](b2-handoff.md). | **Checked, unconditional; reviewed and committed.** Recurrence index `n+1` matches orbit index `n`. V remains open. |
+| B3: tail control | For all `j,n : ℕ`, `abs(A(j)) ≤ 8/(8*j+1)` and `abs(R_n) ≤ 8/(15*(8*n+9))`; consequently `R_n → 0` as `n → ∞`. | `abs_bbpCoeff_le`, `abs_bbpTail_le`, `tendsto_bbpTail` in [Tail.lean](../PiDisjunctivity/BBP/Tail.lean); positive denominator comparison, local geometric `HasSum`, B2 `hasSum_bbpTail`, norm comparison and squeeze. Full root types/guards and boundary/B4 interface audits; [handoff](b3-handoff.md). | **Checked, unconditional.** Supplies vanishing error, gives no visits. |
+| B4: general transfer | For `u r : ℕ → ℝ`, assume `Filter.Tendsto r Filter.atTop (nhds 0)` and `∀ a b : ℝ, 0 ≤ a → a < b → b ≤ 1 → ∀ N : ℕ, ∃ n ≥ N, u n ∈ Set.Ioo a b`. Then `∀ a b : ℝ, 0 ≤ a → a < b → b ≤ 1 → ∃ n : ℕ, Int.fract (u n + r n) ∈ Set.Ioo a b`. | `hitsOpenIntervals_fract_add_of_tendsto_zero` in [OrbitCriteria.lean](../PiDisjunctivity/OrbitCriteria.lean); `Metric.tendsto_atTop`, quarter-width margin, `Int.fract_eq_self`. Root-exported; complete type/axiom guards in `Test.lean`. | **Checked, conditional.** No global range hypothesis; signed errors and targets touching 0 or 1 included. Late visitation and vanishing error remain premises of the general theorem; B3 discharges only the latter for `bbpTail`. |
 | P3: open intervals to cells | For `t : ℕ → ℝ`, assume `∀ a b : ℝ, 0 ≤ a → a < b → b ≤ 1 → ∃ n : ℕ, t n ∈ Set.Ioo a b`. Then `∀ k m : ℕ, m < 16 ^ k → ∃ n : ℕ, t n ∈ Set.Ico ((m : ℝ) / (16 : ℝ) ^ k) (((m : ℝ) + 1) / (16 : ℝ) ^ k)`. | `hitsHexadecimalIntervals_of_hitsOpenIntervals` in the same module; positive cell width, natural-to-real endpoint bounds, weakening the strict lower inequality. Root-exported; complete type/axiom guards. | **Checked, conditional.** Independent of B4 and BBP, with no range hypothesis. Includes `k = 0`, the first cell, and the last cell. Open-interval visitation remains a premise. |
 | V: universal visitation | For the fixed recurrence above, `∀ a b : ℝ, 0 ≤ a → a < b → b ≤ 1 → ∀ N : ℕ, ∃ n ≥ N, a < y_(n+1) ∧ y_(n+1) < b`. | Particular BBP coefficients, initialization, and indexing; [Step 5](proof-plan.md#5-prove-the-missing-universal-visitation-theorem) contains possible approaches, no complete proof. | **Open mathematical gap.** Supplies visits; neither B1 nor B3 discharges it. |
-| Hπ: actual cell visits | `H(Real.pi)` with no unproved premise. | B2 + B3 + B4 + V give visits to every open interval in `[0,1]`; P3 converts these to visits to each `I(k,m)`. | **Blocked.** Missing visitation V and unformalized B3; B1/B2 and B4/P3 are checked. This is equivalent to the target, not independent progress. |
+| Hπ: actual cell visits | `H(Real.pi)` with no unproved premise. | B2 + B3 + B4 + V give visits to every open interval in `[0,1]`; P3 converts these to visits to each `I(k,m)`. | **Blocked.** Missing visitation V; B1/B2/B3 and conditional B4/P3 are checked. This is equivalent to the target, not independent progress. |
 | T: final theorem | `PiHexadecimalDisjunctivity` with no distribution hypothesis. | P2 applied to an unconditional proof of Hπ; alternative F3 route also possible. | **Blocked.** No exported unconditional proof exists. |
 
 Modular reduction of finite sums is optional computation support in Step 4;
@@ -96,7 +96,7 @@ orbit generalization, and numerical word searches are not prerequisites.
 
 ```text
 B1 (checked BBP) ──> B2 (checked orbit identity) ──────────────────────┐
-B3 (tail control) ──> vanishing error ─────────────────┤
+B3 (checked tail control) ──> vanishing error ─────────────────┤
 V  (OPEN: late visits of the fixed recurrence) ────────┤
 B4 (general conditional transfer) ────────────────────┤
 P3 (general open-interval-to-cell conversion) ─────────┴─> Hπ (OPEN)
@@ -118,12 +118,11 @@ irrationality alone does not rule out infinite proper limit sets. A global bound
 `abs(fract u - fract v) ≤ abs(u-v)` is false across an integer (take
 `u = 99/100`, `v = 101/100`). The transfer must use an interior margin.
 
-B1, B2, B4, and P3 are checked. B2 acceptance and publication are recorded in
-[the B2 handoff](b2-handoff.md). B3, V, Hπ, T, and π disjunctivity remain
-unproved. B4 still assumes vanishing errors and arbitrarily late visits;
-P3 still assumes open-interval visits.
-Next session: <!-- current-prompt --> [Current prompt: B3 tail control](session-prompts.md#current-prompt-b3-tail-control)
-prepares the [B3 contract](proof-plan.md#next-bounded-task-b3-tail-control) with
-the installed tools and skills. B3 is not started; invocation authorizes its
-implementation and acceptance. The [tooling milestone](b2-improvements-handoff.md)
-is complete. No conditional visitation premise has been discharged.
+B1, B2, B3, B4, and P3 are checked. [The B3 handoff](b3-handoff.md)
+records acceptance and publication. V, Hπ, T, and π disjunctivity remain open.
+B4 retains its general vanishing-error and arbitrarily-late-visit premises;
+B3 supplies only the former for the BBP tail. P3 retains open-interval visits.
+Next session: <!-- current-prompt --> [Current prompt: B3 stopping point](session-prompts.md#current-prompt-b3-stopping-point)
+records the authorized boundary. Finish any recorded B3 acceptance steps and
+stop. The tooling milestone is complete with its existing limits; no further
+milestone is authorized and no visitation premise has been discharged.

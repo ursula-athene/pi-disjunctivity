@@ -493,3 +493,74 @@ info: 'PiDisjunctivity.fract_pow_mul_pi_eq_bbpRecurrence_add_bbpTail' depends on
 -/
 #guard_msgs (whitespace := lax) in
 #print axioms PiDisjunctivity.fract_pow_mul_pi_eq_bbpRecurrence_add_bbpTail
+
+
+-- B3 coefficient and tail bounds are unconditional and include the first indices.
+example (j : ℕ) : |PiDisjunctivity.bbpCoeff j| ≤ 8 / (8 * (j : ℝ) + 1) :=
+  PiDisjunctivity.abs_bbpCoeff_le j
+
+example (n : ℕ) : |PiDisjunctivity.bbpTail n| ≤ 8 / (15 * (8 * (n : ℝ) + 9)) :=
+  PiDisjunctivity.abs_bbpTail_le n
+
+example : |PiDisjunctivity.bbpCoeff 0| ≤ (8 : ℝ) := by
+  simpa only [Nat.cast_zero, mul_zero, zero_add, div_one] using
+    PiDisjunctivity.abs_bbpCoeff_le 0
+
+example : |PiDisjunctivity.bbpCoeff 1| ≤ (8 : ℝ) / 9 := by
+  convert PiDisjunctivity.abs_bbpCoeff_le 1 using 1
+  norm_num
+
+example : |PiDisjunctivity.bbpTail 0| ≤ (8 : ℝ) / 135 := by
+  convert PiDisjunctivity.abs_bbpTail_le 0 using 1
+  norm_num
+
+example : |PiDisjunctivity.bbpTail 1| ≤ (8 : ℝ) / 255 := by
+  convert PiDisjunctivity.abs_bbpTail_le 1 using 1
+  norm_num
+
+/--
+info: 'PiDisjunctivity.abs_bbpCoeff_le' depends on axioms:
+[propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms PiDisjunctivity.abs_bbpCoeff_le
+
+/--
+info: 'PiDisjunctivity.abs_bbpTail_le' depends on axioms:
+[propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms PiDisjunctivity.abs_bbpTail_le
+
+
+example : Filter.Tendsto PiDisjunctivity.bbpTail Filter.atTop (nhds 0) :=
+  PiDisjunctivity.tendsto_bbpTail
+
+-- B1/B2/B3 agree on the zero-index error, stated without project-defined symbols.
+example : |Real.pi - 47 / 15| ≤ (8 : ℝ) / 135 := by
+  have hs := PiDisjunctivity.pow_mul_pi_eq_bbpPartialSum_add_bbpTail 0
+  norm_num [PiDisjunctivity.bbpPartialSum, PiDisjunctivity.bbpCoeff] at hs
+  have he : Real.pi - 47 / 15 = PiDisjunctivity.bbpTail 0 := by linarith only [hs]
+  rw [he]
+  convert PiDisjunctivity.abs_bbpTail_le 0 using 1
+  norm_num
+
+-- B3 supplies B4's error premise at the B2 offset; the late-visit premise stays explicit.
+-- This is an interface audit, not an unconditional visitation theorem or conjecture assembly.
+example
+    (hu : ∀ a b : ℝ, 0 ≤ a → a < b → b ≤ 1 →
+      ∀ N : ℕ, ∃ n ≥ N, PiDisjunctivity.bbpRecurrence (n + 1) ∈ Set.Ioo a b) :
+    ∀ a b : ℝ, 0 ≤ a → a < b → b ≤ 1 →
+      ∃ n : ℕ, Int.fract ((16 : ℝ) ^ n * Real.pi) ∈ Set.Ioo a b := by
+  intro a b ha hab hb
+  obtain ⟨n, hn⟩ := PiDisjunctivity.hitsOpenIntervals_fract_add_of_tendsto_zero
+    (fun n => PiDisjunctivity.bbpRecurrence (n + 1)) PiDisjunctivity.bbpTail
+    PiDisjunctivity.tendsto_bbpTail hu a b ha hab hb
+  exact ⟨n, by rwa [PiDisjunctivity.fract_pow_mul_pi_eq_bbpRecurrence_add_bbpTail]⟩
+
+/--
+info: 'PiDisjunctivity.tendsto_bbpTail' depends on axioms:
+[propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms PiDisjunctivity.tendsto_bbpTail

@@ -1405,3 +1405,68 @@ passed with its console wrapper deliberately emptied. See the
 and [review report](agy-reports/b2-improvements-review.md#repeatable-installation-follow-up).
 Clean descendant shutdown and app disable/restore remain pending; known-case
 skill checks do not measure broader usefulness. No Lean contract or proof changed.
+
+
+## 2026-11-25 — B3 authorized baseline and argument criticism
+
+Invoked the current B3 prompt on the prepared `feature/attempt-08-b3` branch
+at `ae4a0e3`. Recorded the full implementation/acceptance sequence in the
+proof plan before proof work. The index was empty; unrelated Obsidian settings,
+notes and papers are preserved. Pinned Lean `4.37.0-rc1`, baseline `lake build`
+(7203 jobs) and `lake env lean Test.lean` pass with exit 0.
+
+Applied the adapted search/proof skills and `pi-argument-critic` to the proposed
+estimate: all four coefficient denominators are positive, their reciprocals
+are bounded by that at `8*j+1`, and `4+2+1+1=8`. Tail coefficients start at
+`n+1`; geometric weights start at `1/16` and sum to `1/15`. The resulting
+`8/(15*(8*n+9))` tends to zero. No missing mathematical premise was found in
+this same-session criticism; denominator order, casts and convergent-sum
+comparison still require Lean proofs. It supplies no visits and cannot remove
+B4's arbitrarily-late-visitation premise or P3's open-interval-visitation premise.
+
+All five native LSP tools are exposed and exercised against unchanged B2:
+diagnostics pass, source extraction locates the generated additive split
+lemma's multiplicative source, hover exposes `pow_sub₀` with its nonzero and
+index-order premises, and goal inspection shows the tail reindexing equality.
+Search first reported an unavailable index and later a warming index with the
+generated declaration found; neither state is used as a negative theorem test.
+The configured project root, disabled REPL and Python module command match
+the user's successful migration receipt. No installation/configuration change.
+The prompt-requested isolated proof workers use scratch files only; the caller
+owns integration and final checks. The compact root `PROGRESS.md` points here
+and to the mathematical plan, as required by the invoked prompt.
+
+
+## 2026-11-25 — B3 proofs and intermediate review checked
+
+`BBP/Tail.lean` exports `abs_bbpCoeff_le`, `abs_bbpTail_le`, and
+`tendsto_bbpTail` with the exact unconditional B3 contracts. The coefficient
+root probe passed before tail composition; B2's `hasSum_bbpTail` and a local
+geometric `HasSum` give the norm bound. Denominator growth and squeeze give
+decay. No private/public helper API, definition change or new hypothesis.
+Pinned build (7205 jobs), root/audit checks, actual three-axiom guards and
+integrated native diagnostics pass without warnings. Scratch/compiler repairs
+were elaboration/normalization issues, not missing mathematics.
+
+Intermediate Carbon High review completed with no defects/questions and two
+nonblocking audit improvements, both implemented: the definition-free zero-index
+π error bound and B4 compatibility at the actual `n+1` recurrence offset with
+its complete late-visitation premise retained. See [the report](agy-reports/b3-review.md)
+for exact diff, terminal/capture/log inspection, cost and periodic-update limits.
+The full milestone review and commit/necessity/push steps remain pending.
+The [handoff](b3-handoff.md) and [retrospective](retrospectives/retrospective-2026-11-25-b3.md)
+record those boundaries. V, Hπ, T and π disjunctivity remain open; P3 still
+requires open-interval visits. No visitation research or final assembly begun.
+
+
+## 2026-11-25 — B3 complete precommit review
+
+Full Carbon High review accepted all three unconditional contracts and the
+14-file scope, rechecked intermediate I1/I2, and found no defects, new
+improvements or blocking questions. Both captures/logs were inspected; see
+[the report](agy-reports/b3-review.md) for exact hashes, conversations, timing,
+progress-update gaps and retention limits. The active entry now records the B3
+stopping boundary; its executed prompt and older archive are preserved.
+Only factual acceptance receipts change after the reviewed Lean/audit snapshot.
+Commit, post-commit necessity inspection and verified push follow; no new
+mathematical work or research is authorized.

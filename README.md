@@ -19,11 +19,11 @@ Wikipedia article on general sequences: [Disjunctive sequence](https://en.wikipe
 ## Scope and current status
 
 The formulation and its digit/interval/orbit equivalences are verified. The
-unconditional BBP series and exact recurrence-to-orbit bridge are checked.
-B3 tail control and universal visitation remain unproved, and the conditional
-transfer results retain their hypotheses. See [the B2 handoff](docs/b2-handoff.md)
-for final acceptance and publication evidence. This
-repository does not establish π disjunctivity.
+unconditional BBP series, exact recurrence-to-orbit bridge, and B3 coefficient/
+tail bounds and decay are checked. Universal visitation remains unproved;
+the conditional transfer still needs arbitrarily late visits. See
+[the B3 handoff](docs/b3-handoff.md) for acceptance and publication evidence.
+This repository does not establish π disjunctivity.
 
 Use the [proof plan](docs/proof-plan.md) for the mathematical roadmap and exact
 milestone contracts, the [blueprint](docs/proof-blueprint.md) for declarations
@@ -31,13 +31,11 @@ and hypotheses, and the [research log](docs/research-log.md) for dated evidence
 and handoffs. The [formulation review](docs/formulation-review.md) and
 [follow-up](docs/review-follow-up.md) record the semantic review of the problem.
 
-Next session: <!-- current-prompt --> [Current prompt: B3 tail control](docs/session-prompts.md#current-prompt-b3-tail-control)
-prepares the coefficient bound, tail bound and decay to zero, using the installed
-Lean tools and skills. B3 starts only when invoked; visitation remains out of scope.
-The [tooling handoff](docs/b2-improvements-handoff.md) records the completed
-improvement milestone and its limits; do not repeat completed B1/B2 or tooling work.
-Read [AGENTS.md](AGENTS.md) and the
-[workflow](docs/proof-workflow.md) before implementation.
+Next session: <!-- current-prompt --> [Current prompt: B3 stopping point](docs/session-prompts.md#current-prompt-b3-stopping-point)
+records the B3 acceptance boundary. Complete only any pending B3 acceptance
+steps recorded in the handoff, then stop; no next milestone is authorized.
+The [tooling handoff](docs/b2-improvements-handoff.md) retains its tool limits.
+Read [AGENTS.md](AGENTS.md) and the [workflow](docs/proof-workflow.md).
 
 ## Installation
 
@@ -125,7 +123,8 @@ To build selected modules explicitly:
 lake build PiDisjunctivity.Definitions PiDisjunctivity.BlockValue \
   PiDisjunctivity.Digits PiDisjunctivity.Disjunctivity PiDisjunctivity.Cylinders \
   PiDisjunctivity.Conjectures PiDisjunctivity.OrbitEquivalence PiDisjunctivity.OrbitCriteria \
-  PiDisjunctivity.BBP.Series PiDisjunctivity.BBP.Orbit PiDisjunctivity.Examples
+  PiDisjunctivity.BBP.Series PiDisjunctivity.BBP.Orbit PiDisjunctivity.BBP.Tail \
+  PiDisjunctivity.Examples
 ```
 
 For a quick check of one source file, or to inspect the selected Lean version:

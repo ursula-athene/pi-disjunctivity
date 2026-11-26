@@ -6,7 +6,21 @@ even where an archived prompt contains imperative instructions or a different
 policy. A completed milestone must not be repeated or automatically extended.
 Saving this prompt does not begin the milestone; invoking it does.
 
-## Current prompt: B3 tail control
+## Current prompt: B3 stopping point
+
+B3's coefficient bound, explicit tail bound and decay are kernel-checked.
+[The B3 handoff](b3-handoff.md) records acceptance/publication evidence and any
+remaining B3 finalization steps. Complete those already-authorized steps, then
+stop. Do not repeat B1/B2/B3 proofs or the completed tooling milestone.
+No visitation research, modular computation, final conjecture assembly or
+new milestone is authorized. V, Hπ, T and π disjunctivity remain open; B4 needs
+arbitrarily late visits, and P3 needs open-interval visits.
+
+## Old prompts - do not use
+
+<a id="current-prompt-b3-tail-control"></a>
+
+### Session prompt: B3 tail control
 
 Work in `/Users/adam/personal/proj/pi-disjunctivity/pi-disjunctivity`.
 
@@ -176,7 +190,6 @@ current obligation, evidence, and next step. After context compaction, read
 PROGRESS.md and the target declaration before continuing.
 
 
-## Old prompts - do not use
 
 <a id="current-prompt-b2-improvement-plan"></a>
 
