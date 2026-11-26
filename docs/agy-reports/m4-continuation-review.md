@@ -721,3 +721,46 @@ documentation check and whitespace checks remain caller evidence. No reviewer
 execution, probe, build, edits, Git mutations, installations, services,
 delegation or Carbon occurred. The ongoing p^2 lift is outside this scope;
 no new Lean theorem or M4 acceptance follows.
+
+The gauge/Gauss/antisymmetric checkpoint is committed locally as
+`804138d0b5cde2cce5666eeb79bcef5642504946`. Final staged diff SHA-256
+`4a6c3791b6c48e1e0e1527c934b7889d4bb3180684c58af8b133656302e35fbb`
+and final-validation/post-commit receipts remain in its packet. Final
+88-file documentation and both whitespace checks passed; exact seven paths,
+empty index and unchanged protected sources were verified. Unrelated work
+was preserved; no unused infrastructure or substantive simplification was
+found. No push or PR occurred.
+
+## Prime-square compression review
+
+The separate `/root/generating_review` reviewer completed the exact five-path
+review against `804138d0b5cde2cce5666eeb79bcef5642504946`: the new prime-square
+assessment, proof plan, log, handoff and this record. The frozen diff hash is
+`f92123b2e419271453672265ebe11592252d015336a81678eb17763819cdfd4d`.
+The full returned review is `/tmp/pi-m4-square-review-20261126/review.md`,
+SHA-256 `30244fa3684820ca774b7ab0274b3a7f01d653901c30c85ea6d4d7adb9adf64d`.
+Both adversarial guides, their unchanged hashes, AGENTS, the replacement
+procedure and argument-critic limits were retained. Inspection was read-only;
+the reviewer ran no checker, probe or build and made no edits.
+
+**Defects:** none. **Nonblocking improvements:** I1 requested an explicit
+prime hypothesis at the opening definition of q2. It was implemented exactly;
+the focused patch hash is
+`635c03c387e0eaa2af13eb5b3c0aba609802ace32760ed5a0bc93f7fa102bfac`.
+The reviewer verified the patch and working file and marked I1 resolved in
+`focused-review.md` in the same packet. **Open questions/missing evidence:**
+none blocking the stated paper results. The real-phase consumer remains open.
+
+The reviewer reconstructed the unit domains in the quadratic algebra, both
+finite-log pair identities, complete/partial root-filter normalization, exact
+regular/pole cancellation, initialized exponents, prime-entry cofactor quotient,
+precision counterexamples and endpoint dependence. The fixed-extra-digit sieve
+was checked with its initialization limit. Parent independent derivation,
+full evidence inspection and both exact checker replays passed; these execution
+receipts and the 89-file documentation/whitespace checks remain caller evidence.
+The original report, precision and normalization addenda and manifest chain
+are retained. The complete-block congruence does not control the initialized
+real phase. The E-function-zero connection is outside this review scope;
+V and M4 remain open. No Lean export, audit, dependency, pin or trust change
+is included. Final exact-diff, validation and post-commit receipts belong in
+the same packet; publication is local only.

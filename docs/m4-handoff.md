@@ -7,7 +7,7 @@ The [continued research checkpoint](#continued-research-checkpoint--2026-11-26)
 records subsequent work during the user's absence; that checkpoint does not
 terminate the ongoing M4 effort.
 The latest dated continuation is the
-[Gauge and Gauss assessment](#gauge-and-gauss-assessment--2026-11-26); read the
+[Prime-square assessment](#prime-square-assessment--2026-11-26); read the
 research log and actual checkout for subsequent results and current state.
 
 ## Baseline and authorized endpoint
@@ -546,3 +546,31 @@ regular cofactor shortens or keeps a full-length endpoint sum. A finite lift
 at one prime would still not settle the real phase. The log owns its bound
 and outcome. V/Hpi/T/M4 remain open, M5 is excluded, and no Lean, audit,
 dependency, pin or trust change occurred. All commits are local; no push or PR.
+
+## Prime-square assessment — 2026-11-26
+
+The gauge/Gauss/antisymmetric checkpoint is committed locally as `804138d`;
+exact seven-path scope, empty index and unchanged protected sources were
+verified. The subsequent [prime-square calculation](m4-prime-square-lift.md)
+has a positive complete-block result. Finite-log identities reduce regular
+blocks to q_p(2); their correction cancels the lifted pole correction exactly.
+For the four actual states c and p^2>8kp-1,
+p*S^c_(kp-1)=16^(k(p-1))*S^(T_p c)_(k-1) modulo p^2.
+
+Arbitrary endpoints retain an explicit incomplete-log term, which literally
+contains the initialized prefix S_s when p>8s+7. Nonzero examples rule out
+discarding it. The actual p=11 examples also rule out upgrading the same
+formula uniformly to p^3. Fixed extra p-adic precision remains compatible
+with the finite entry countertest; no real phase estimate follows. Parent
+independent derivation, checker replays and evidence inspection passed;
+changed-file review found no substantive defect. Its sole opening-domain
+clarification was applied and verified in focused follow-up. The report is
+preserved with precision and
+partial-root-filter normalization addenda.
+
+A fresh bounded source investigation tests whether pi's being the first
+positive sine zero, with rational Taylor coefficients, gives a restriction
+on missing-word approximation numerators beyond the rejected generic height
+arguments. Its question is exact applicability and cost, not transcendence
+alone. The log owns the bound and outcome. No new Lean or audit changed;
+V/Hpi/T/M4 remain open, M5 is excluded, and no push or PR occurred.

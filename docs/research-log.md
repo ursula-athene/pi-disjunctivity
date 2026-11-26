@@ -2452,3 +2452,39 @@ quotient or finite-logarithm expressions, or retain a full-length endpoint
 sum. This is a closure test before any density inference. Even a successful
 single-prime lift would leave the entry-sieve and coupled real-phase gap;
 finite extra p-adic precision is not presumed to imply V.
+
+**Prime-square outcome:** complete regular blocks really do close. The root
+filter reduces them to two finite-log pair evaluations at (1+/-i)/2 and
++/-1/sqrt(2), giving a Fermat quotient of 2. The pole-power correction cancels
+the complete regular contribution, yielding an initialized congruence modulo
+p^2 and a short complete-endpoint supercongruence. Parent independently
+derived the pair evaluations and cancellation, then reconstructed the full
+report and replayed both exact checkers. The
+[assessment](m4-prime-square-lift.md) retains all four states and p-unit domains.
+
+The endpoint term remains an incomplete finite logarithm; before the first
+pole it is exactly the initialized prefix at the remainder index. At p=17,
+two endpoints with the same coarse pole/block data give different values.
+The parent's exact p=11 test also shows that the same complete-block formula
+fails modulo p^3 for A and R; the worker independently reproduced it. No
+higher-order claim about D follows. A separate clarification states the
+partial root-filter normalization explicitly; complete-block geometric
+prefactors are not carried into partial windows. All frozen originals remain.
+
+This is positive arithmetic closure with an unproved real consumer. The
+entry sieve can retain any fixed number of additional digits at one prime
+at only polynomial cost, so the initialized joint phase still needs a new
+estimate. Independent changed-file review found no substantive defect or
+blocking question. Its sole improvement made primality explicit at the opening
+definition; the fix passed focused follow-up. This is not kernel verification.
+
+**Changed source connection, bounded to 25 minutes:** a fresh context is
+testing pi as the first positive zero of the rational-coefficient E-function
+sin z. Under missing-word avoidance, dyadic approximation numerators lie in
+a proper finite-type language. The test asks whether quantitative E-function
+values or simultaneous auxiliary expressions exploit that restriction with
+a better cost than the previously rejected generic polynomial/G-function
+bounds. It must retain shared arguments, numerator sets, degree/height/error
+and source hypotheses; irrationality or transcendence alone is not a bridge.
+No finite digit search, generic complexity assumption or successful estimate
+is presumed. The parent continues integration and review in parallel.

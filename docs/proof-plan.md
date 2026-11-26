@@ -697,8 +697,13 @@ prime-power and adaptive-start exceptions. The
 retains the exact initialized CRT product and shows why the prime eigen-sign
 does not select its additive numerator phase. These extensions passed
 independent review with no D/I/Q items.
-A bounded lift to p^2 now tests whether the discarded regular cofactor really
-compresses; no cancellation or visitation is assumed.
+The [prime-square lift](m4-prime-square-lift.md) now proves exact complete-block
+closure modulo p^2: regular finite-log sums collapse to a Fermat quotient and
+cancel the pole correction. General endpoints retain an incomplete prefix;
+the precision cannot be upgraded unchanged to p^3. This new paper result
+passed independent review and supplies no real visitation bound. A fresh source connection
+tests whether the rational-coefficient sine function's zero at pi yields a
+missing-word restriction beyond generic approximation bounds.
 
 For the recurrence defined in Step 4, seek a proof of
 
