@@ -7,7 +7,7 @@ The [continued research checkpoint](#continued-research-checkpoint--2026-11-26)
 records subsequent work during the user's absence; that checkpoint does not
 terminate the ongoing M4 effort.
 The latest dated continuation is the
-[positive-transform recovery](#positive-transform-recovery--2026-11-26); read the
+[finite-data assessment](#finite-data-assessment--2026-11-26); read the
 research log and actual checkout for subsequent results and current state.
 
 ## Baseline and authorized endpoint
@@ -326,3 +326,22 @@ navigation improvement was applied. No new Lean theorem or V is claimed.
 Further acceleration alone is suspended as a mechanism. Continuation must
 seek an estimate for actual modular positions or change the avoidance argument;
 consult the latest research log rather than repeat the completed family test.
+
+## Finite-data assessment — 2026-11-26
+
+The positive-transform checkpoint is committed locally as `1bb8bff`, with
+all four reviewed paths and unchanged protected sources verified after commit.
+The later [rational-forcing additions](m4-rational-forcing.md) close the stated
+G-function rescaling test and extend the fixed-multiplier separating bound.
+A separate construction matches every prescribed finite BBP tail jet and the
+actual first coefficient with a rational avoiding model. The latter loses
+irrationality and the exact four-pole function; it does not refute V or weak
+dichotomy. Parent exact checks passed and sketch review accepted the construction;
+combined changed-file review is complete after a kernel-notation correction.
+No new production Lean or V exists.
+
+The active changed question asks whether an actual auxiliary integer residual
+can use forbidden-word transitions, with coefficient height and analytic error
+both accounted for. Read the subsequent log before repeating completed source,
+period or tail-jet tests. This is ongoing discovery under the unchanged M4
+acceptance boundary, with no Carbon, push or PR.

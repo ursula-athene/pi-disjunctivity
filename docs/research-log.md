@@ -2052,3 +2052,50 @@ and the exact target. The endpoint is a fully mapped theorem and discriminating
 applicability check, or an explicit missing bridge with a changed next question.
 This is targeted discovery within the ongoing milestone, not a claim that such
 a theorem exists or that a bounded search can exclude all possible connections.
+
+**Parallel strategy test, bounded to 20 minutes:** determine whether positive,
+completely monotone rational forcing can match an arbitrary finite endpoint
+Taylor jet of the actual BBP moment kernel while its weighted constant is
+dyadic rational. Such a construction would delimit all finite-order tail
+arguments at once, rather than test another coefficient order. The planned
+test uses a positive polynomial cutoff preserving the chosen endpoint jet
+and a rational integral adjustment; it must retain initialization and exhibit
+actual eventual interval avoidance. This is a diagnostic of finite local
+information, not a counterexample to the fixed BBP recurrence or a V proof.
+
+**Source-connection outcome:** the best theorem was already assessed;
+the new calculation proves that its published sufficient constants fail for
+every pure BBP radix dilation and the tested joint dyadic Machin identity.
+The existing cube-free separating word also satisfies a full fixed-multiplier
+denominator bound. This sharpens two recorded gaps without supplying a new
+visitation mechanism. Parent source-page inspection and the exact checker
+passed; the universal argument awaits integration review.
+
+**Finite-jet outcome:** for each K>=1 a separate rational positive completely
+monotone forcing matches the actual tail through O(n^(-K-2)), preserves
+g(0)=47/15 and y_0=0, yet has weighted value 51/16 and avoids (1/4,3/4).
+The positive polynomial cutoff and two moment corrections were proved on
+paper and checked exactly for K=1,...,8. Independent sketch review found no
+defect. Irrationality and the exact four-pole function are explicitly lost;
+the result does not refute a method using those additional inputs. Integration
+review remains pending. The positive-transform checkpoint is committed locally
+as `1bb8bffc41a6f00f0047eaeb55dc66f2ff821b4d`, with exact post-commit scope,
+unchanged protected sources and no push or PR.
+
+**Next distinct test, bounded to 30 minutes:** inspect the actual cleared
+integer residual in a non-diagonal Pade construction for BBP or a pi
+logarithmic identity. Attempt one way for a forbidden-word automaton to force
+a larger divisor or absolute lower bound, while preserving the analytic
+remainder and coefficient-height budget. The worker must retain dependence
+between the actual auxiliary coefficients; prescribing arbitrary residues for
+free is not an argument. The endpoint is a nontrivial proved gain and consumer,
+or the first unsupported step with its concrete cost. No finite pi-word search
+or renamed prefix-exclusion premise counts as a result.
+
+**Combined review outcome:** the five-path finite-data checkpoint passed after
+one integration repair: the actual kernel is P_A, whereas the older note's P
+denotes a null-series polynomial. The focused correction restores the already
+reviewed construction. All D/I/Q items are resolved. The source-threshold and
+fixed-multiplier arguments were independently reconstructed with their exact
+limits; no kernel theorem or M4 acceptance is implied. The next Pade test is
+outside that reviewed mathematical scope and continues independently.

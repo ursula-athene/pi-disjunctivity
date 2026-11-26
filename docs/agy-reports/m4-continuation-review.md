@@ -288,3 +288,63 @@ audits, dependencies and pins remain unchanged from the successful baseline;
 no new build or kernel certification is claimed. These paper results do not
 prove V or complete M4. The subsequent source-connection inquiry is outside
 the mathematical scope of this checkpoint.
+
+The positive-transform checkpoint was committed locally as
+`1bb8bffc41a6f00f0047eaeb55dc66f2ff821b4d`. Final staged diff SHA-256
+`da71f443cbf367e5c0e854712ea1467377825ea796b9802c3c5365dcb31f6b38`
+and final validation/post-commit receipts are retained in the packet. The exact
+four reviewed paths, empty index and unchanged protected sources were verified;
+unrelated work remains preserved. No unused infrastructure or substantive
+simplification was found, and nothing was pushed or published.
+
+## Arbitrary finite-jet intermediate sketch review
+
+Reviewer `/root/generating_review` independently reconstructed the immutable
+parent report `/tmp/pi-m4-finite-jet-report-v1.md`, SHA-256
+`5291b4e375954e793ddaf0c3f46586360d712a48c4790713fc98bae0ce76576f`,
+against local baseline `1bb8bffc41a6f00f0047eaeb55dc66f2ff821b4d` before
+integration. Scope comprised that report, the exact checker and its receipt;
+the complete response is `/tmp/pi-m4-finite-jet-review-v1.md`. Both adversarial
+guides and the argument-critic limits were applied, with unchanged guide hashes.
+
+**D/I/Q outcome:** none. The reviewer checked the separate-for-each-K
+quantifiers, positivity and jet-preserving cutoff, two rational moment
+corrections, rational poles/complete monotonicity, beta-integral error bound
+and actual recurrence indexing. It explicitly retained the loss of irrationality
+and exact four-pole structure. Review was read-only without execution or
+mutation; the successful finite checks remain caller evidence. The result is
+approval of a paper sketch, not changed-file integration, a kernel proof or
+M4 acceptance. Combined integration/source review remains pending.
+
+## Finite-data combined review
+
+Reviewer `/root/generating_review` completed the five-path review against
+`1bb8bffc41a6f00f0047eaeb55dc66f2ff821b4d`, frozen diff SHA-256
+`3522096da528bc766309ab519433c0edda766e77de1968cc035368c80f759d59`.
+Scope: the rational-forcing assessment, proof plan, research log, handoff and
+this record. Packet `/tmp/pi-m4-finite-data-review-20261126/` retains the exact
+diff, manifest and full `review.md`. Both required guides were applied with
+unchanged hashes above.
+
+**Whole-cycle D/I/Q dispositions:** D1 identified a kernel-name collision in
+the integrated finite-jet proof: P already denoted the null-series polynomial.
+The parent repaired the section to recall and use the actual P_A throughout.
+The reviewer inspected exact delta `symbol-repair.patch`, SHA-256
+`0fa9eb749665a958255ef9a2824389cab7acf5169ee1870dfd59298df9a1af2c`,
+during the same review and explicitly resolved D1. No other defects,
+nonblocking improvements or additional open questions were found. Nothing
+was omitted or deferred; this focused repair was not a failed-review retry.
+
+Coverage included all five paths, both immutable reports/checker sources and
+receipts, the source's actual theorem/coefficient/system/constant pages, every
+specified rescaling, the Machin branch, and the all-B separating proof with
+its fixed-cutoff limitation. The finite-jet integration retains its exact
+quantifiers and missing irrationality. Subsequent edits record factual
+review outcomes only; the active Pade test is outside this checkpoint.
+
+All reviewer work was read-only inspection and mathematical reconstruction,
+without checker execution, builds, probes, services, mutations, Carbon or
+delegation. Parent exact checkers passed, including 33,792 rational-grid cases
+and K=1,...,8 finite-jet constructions. The 79-file documentation and both
+whitespace checks passed. Production Lean, audits and pins are unchanged;
+no new build or universal kernel certification is claimed. M4 remains incomplete.

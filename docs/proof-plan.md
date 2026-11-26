@@ -632,6 +632,19 @@ integration and mandated checks/reviews accept M4. An obstruction review or
 partial-result commit is an internal checkpoint. Actual interruptions preserve
 the next inquiry and leave V/M4 incomplete; M5 remains outside this scope.
 
+The later [positive-transform assessment](m4-catalan-transforms.md) proves
+usable exact enclosures but bounds their common-prefix window uniformly even
+when cancellation order grows. Further acceleration alone is suspended as a
+way to transfer a complete rational-period occurrence guarantee. The
+[rational-forcing assessment](m4-rational-forcing.md) also separates every
+finite tail jet from visitation and retains the loss of irrationality in
+those models. None of these diagnostics discharges the fixed V contract.
+Current discovery tests whether the exact BBP/logarithmic arithmetic can make
+an auxiliary integer residual sensitive to allowed prefix transitions,
+including its full coefficient-height cost. It must differ from the failed
+uniform-small-polynomial construction. The research log owns its finite bound
+and outcome; no such arithmetic gain is assumed in the roadmap.
+
 For the recurrence defined in Step 4, seek a proof of
 
 ```text
