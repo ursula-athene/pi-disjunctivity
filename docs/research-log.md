@@ -2017,3 +2017,38 @@ hexadecimal-cell application. The original report is preserved with a versioned
 correction and erratum. Focused review of this repair and the combined-prime
 addition is complete: D1 resolved, no further D/I/Q findings. M4 remains
 incomplete; no production Lean or trust policy changed.
+
+**Changed positive test, bounded to 25 minutes:** the recovery worker found an
+exact positive Catalan-coefficient transform of the actual Ramanujan series.
+The parent derived an arbitrary-order extension with integer super-Catalan
+coefficients. Test its telescoping identity, primitive valuation and positive
+tail enclosure, allowing the cancellation order to grow with the truncation.
+The discriminating consumer compares the enlarged possible shared-prefix
+window with the actual denominator/period scale. This differs from the earlier
+BBP Stieltjes truncations and must be checked on its own; acceleration alone
+is not visitation. The preceding four-path diagnostic checkpoint is committed
+locally as `5b431a35e07427503e85f03c2a7ccdb33666863f`; post-commit scope and
+protected-source checks passed, with no push or PR.
+
+**Positive-transform outcome:** the exact Catalan block identity gives positive
+integer coefficients and explicit BBP margin enclosures. Its arbitrary-order
+extension preserves two exact integer recurrences and has primitive valuation
+`s(N)+2s(N+r)`. The parent found the same family in Guillera's 2011 paper and
+visually checked the normalization; no novelty is claimed. A uniform elementary
+lower error bound proves that every possible common-prefix length is at most
+half the denominator's base-16 logarithm, up to logarithmic terms, even with
+growing order. The balanced diagonal attains that exponential ratio but matches
+the existing M=12 benchmark. This closes acceleration alone as the proposed
+complete-period transfer mechanism. Exact finite checkers passed; the new
+[assessment](m4-catalan-transforms.md) passed independent review, with its sole
+navigation improvement applied and no mathematical finding. V remains open.
+
+**Next connection test, bounded to 25 minutes:** seek one precise primary-source
+theorem about digit restrictions of G-function values or logarithms of algebraic
+numbers. The consumer must constrain the actual pi orbit without relying on
+complete rational periods, almost-everywhere assertions, or insufficient
+complexity/irrationality bounds. A fresh-context worker has the failed bridges
+and the exact target. The endpoint is a fully mapped theorem and discriminating
+applicability check, or an explicit missing bridge with a changed next question.
+This is targeted discovery within the ongoing milestone, not a claim that such
+a theorem exists or that a bounded search can exclude all possible connections.

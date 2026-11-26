@@ -249,3 +249,42 @@ Final caller validation passed the 78-file documentation check and both
 unstaged/staged whitespace checks. Protected Lean sources, audits and pins
 remain unchanged. The selected diff contains exactly the four reviewed paths;
 unrelated Obsidian, notes and papers work is excluded.
+
+That four-path checkpoint was committed locally as
+`5b431a35e07427503e85f03c2a7ccdb33666863f`. Its final staged diff SHA-256 is
+`8cab5b31c95f88a603e17e3916c86f38efe4603e13064d10a8d3081b82789713`.
+The packet retains `final-validation.json` and `postcommit.json`: exact scope,
+empty index after commit, unchanged protected sources and preserved unrelated
+work. No unused infrastructure or substantive simplification was found.
+
+## Positive-transform recovery review
+
+Reviewer `/root/generating_review` completed the exact four-path review against
+`5b431a35e07427503e85f03c2a7ccdb33666863f`. The frozen diff SHA-256 is
+`cb3c6a50adea7f76b23aefab9383a85f4d09bf9c763079a120767a2a40d605f0`.
+Packet `/tmp/pi-m4-catalan-review-20261126/` retains `diff.patch`, `scope.json`,
+all evidence hashes and the full `review.md`. Scope: the new Catalan assessment,
+research log, handoff and this record. Both required guides were applied with
+unchanged hashes above, under the user-directed Codex replacement procedure.
+
+**Whole-cycle D/I/Q dispositions:** no defects or additional open questions.
+I1 requested updating the handoff's latest-continuation pointer; applied to
+the positive-transform section. The reviewer explicitly classified this as
+navigation only, needing no mathematical revalidation. No recommendation was
+omitted or deferred. Subsequent changes record factual outcomes and the next
+bounded discovery question, without altering reviewed mathematical claims.
+
+Coverage included the exact finite block identity, primitive valuations,
+strict enclosure and BBP margin consumer, arbitrary-order integrality and
+both integer recurrences, uniform accuracy/height bound and diagonal benchmark.
+The reviewer inspected the full worker report, both checker sources, parent
+receipt and Guillera page, and distinguished the supplementary model from
+the actual coefficient and pi enclosure. All evidence hashes matched.
+
+Review was read-only, without builds, probes, checkers, services, mutations,
+Carbon or delegation. Executions remain caller evidence: both exact checkers,
+the 79-file documentation check and whitespace checks passed. Production Lean,
+audits, dependencies and pins remain unchanged from the successful baseline;
+no new build or kernel certification is claimed. These paper results do not
+prove V or complete M4. The subsequent source-connection inquiry is outside
+the mathematical scope of this checkpoint.

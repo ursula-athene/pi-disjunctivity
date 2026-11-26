@@ -7,7 +7,7 @@ The [continued research checkpoint](#continued-research-checkpoint--2026-11-26)
 records subsequent work during the user's absence; that checkpoint does not
 terminate the ongoing M4 effort.
 The latest dated continuation is the
-[transform/period checkpoint](#transformperiod-checkpoint--2026-11-26); read the
+[positive-transform recovery](#positive-transform-recovery--2026-11-26); read the
 research log and actual checkout for subsequent results and current state.
 
 ## Baseline and authorized endpoint
@@ -307,3 +307,22 @@ recovery seeks a positive lemma retaining exact dependence across approximation
 anchors; consult the subsequent log before repeating a completed test. No production
 Lean, axiom audit, dependency or pin changed. V/M4 remain incomplete, and this
 internal checkpoint does not stop the authorized research.
+
+## Positive-transform recovery — 2026-11-26
+
+The transform/period checkpoint is committed locally as `5b431a3`; exact
+four-path and protected-source post-commit checks passed. No push or PR.
+Fresh-context recovery then produced the
+[positive Catalan transform](m4-catalan-transforms.md), its exact block identity
+and a rational enclosure consumer. The parent extended it to arbitrary order
+and recognized the resulting family in Guillera's published WZ formulas.
+Both the order-one and growing-order exact checkers passed.
+
+The new uniform accuracy/height bound shows that growing cancellation order
+still cannot transfer a complete-period occurrence guarantee through the
+shared prefix. Its best exponential ratio matches the already assessed M=12
+series. Independent review is complete with no mathematical defect; its one
+navigation improvement was applied. No new Lean theorem or V is claimed.
+Further acceleration alone is suspended as a mechanism. Continuation must
+seek an estimate for actual modular positions or change the avoidance argument;
+consult the latest research log rather than repeat the completed family test.
