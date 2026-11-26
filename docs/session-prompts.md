@@ -28,6 +28,9 @@ next step, deliver the precise obstruction and checked partial results, clearly
 marking **M4 incomplete**. A conditional reduction, a tool trial or a research
 handoff alone does not complete M4.
 
+This is known to be a hard unsolved problem. Be persistent in solving it and
+do not give up.
+
 B1–B3 and the general B4/P3 lemmas are already checked. Do not repeat them or
 the tooling milestone. Final export/assembly of `PiHexadecimalDisjunctivity`
 belongs to M5 and is outside this prompt. Keep all new work directed at V;
