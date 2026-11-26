@@ -147,3 +147,77 @@ P1 caller checks passed: baseline Lean build/audits, all 23 offline process test
 23 process tests, 58-file doc check, both skill validators, separate working/staged
 whitespace checks, and protected/unrelated/config/clone preservation comparison.
 Later acceptance receipts belong in the handoff/final section. No remote CI or fresh-host run.
+
+## Repeatable installation follow-up
+
+User-requested follow-up at baseline `b4d51cede84fdb7164966cc5623b9da5100462af`:
+replace the temporary installer with a repeatable, module-based installation
+and functional checks after successful native activation. This is a tooling-only
+change; the strategy/tooling guide applies. Existing review items above are
+preserved. Final-I1's partial-stem, PATH and root-cleanup checks now have evidence;
+its descendant-shutdown check remains deferred. Final-I2's broader skill-transfer
+benefit remains deferred despite subsequent user-directed catalog installation.
+
+Caller evidence before review: all five native MCP functions passed in this
+conversation after restart; the repaired console reports 0.33.0. All four
+installed skills matched reproducible adaptations and passed known-case checks.
+Existing-installation preflight and a fresh isolated uv installation passed;
+the latter's module passed all five tools with its console wrapper deliberately
+emptied. 32 offline tests passed. Config writes/migration, actual app disable/
+restore, clean descendant shutdown and general productivity improvement are not
+claimed by these tests. Review results and the user's final review boundary are
+recorded below.
+
+### Installation review and dispositions
+
+Initial Carbon High review completed with exit 0 and substantive SUCCESS,
+conversation `d37414b1-1d7a-439c-af9c-adfe65cf65d5`, against exact diff
+`622bb04977991702c4f63dd5f3e6e4d909ea7e314310b3c8d29965d902d2d87d`.
+All ten post-images, AGENTS, the review procedure and the complete strategy/tooling
+guide were read with read-only file tools. No reviewer shell, mutation, denied
+file access, retry or capture truncation occurred. The capture inspector passed;
+separate CLI-log inspection found successful authentication after initial auth
+messages and no review-coverage failure. Caller checks remain caller receipts.
+Guide SHA-256 is the same `c4a04d75a297c6ec361d31ab11e465e3c3e74a6c89eb590bddb03d95c243ad3b`
+used above; CLI-log SHA-256 is
+`619def6a21cc67f960b709cb6d9c8a163dbd3da14eee901384ad097ca01519de`.
+
+The reviewer reported **no defects**, four nonblocking improvements and two
+questions. IDs below are scoped to this installation review, preserving the
+older P1/Final items above.
+
+| Item | Recommendation / question | Disposition |
+| --- | --- | --- |
+| I1 | Permit isolated full-install paths; validate the reused Python interpreter and complete distribution inventory; avoid resolving an unused build interpreter. | **Implemented in part:** actual reused runtime must be Python 3.13.2 and the complete inventory must match the 43 evaluated packages; build-Python lookup runs only for a new install. Runtime/extra/missing/version mismatch fixtures pass. **Deferred:** new skill/state-directory CLI overrides; they would not solve this host's separate config-write constraint and are unnecessary for the normal user installation. Revisit if a permitted end-to-end installer test needs these destinations. Fresh isolated uv/module tests and actual skill-tree reproduction are already available. |
+| I2 | Allow bounded generated-declaration index warmup instead of one immediate lookup. | **Implemented:** at most six queries with 7.75 seconds total backoff, only for warming/unavailable index state, within the existing 180-second limit. Fixtures cover eventual hit, bounded noncompletion and immediate stop on other missing-result states. No nonexistence inference. |
+| I3 | Check mandatory adaptation replacements and local links; test those transformations. | **Implemented:** missing/duplicate anchors fail, all retained local links must stay inside the complete selected package and exist, and fixtures cover overrides, pinned external links, local companion links, notices, changed anchors and escaping links. Real regenerated folders still byte-match installed receipts. |
+| I4 | Reconcile already-completed Final-I1 checks and distinguish the b4d51ce receipt; preserve deferred conditional B1 source routing. | **Implemented:** active restart text now separates completed partial-stem/PATH/root cleanup from pending lifecycle checks; the earlier receipt is named explicitly. Both conditional routing and broader source transfer remain deferred under Final-I2. |
+| Q1 | Establish whether Codex 0.172.0 replaces an existing MCP name without remove-first. | **Resolved by versioned source inspection:** the installed CLI reports 0.172.0; its official `run_add` implementation loads the existing map, replaces the named key via `insert`, and persists that map. The suggested test that repurposes CODEX_HOME was not run because current host instructions prohibit that override. The config guard has fixtures for owned-entry replacement and unrelated-value preservation. This establishes intended overwrite semantics, not an executed user-config migration. |
+| Q2 | Actual user-directory migration, module-entry app reload, clean descendants and app disable/restore remain untested. | **Deferred with exact continuation:** run the maintained `--all --install` command from a permitted Terminal, reload if needed, verify native tools, then perform the lifecycle checks in the installation instructions. Native functionality via the repaired console is already tested. This limit does not imply the present tools are unavailable. |
+
+Q1 source: [Codex rust-v0.172.0 run_add](https://github.com/openai/codex/blob/rust-v0.172.0/codex-rs/cli/src/mcp_cmd.rs#L418-L428).
+The revised suite passes 38 offline tests and the existing-installation preflight
+still reproduces all four skill trees and passes all five tools. Revised runtime
+validation and the five-tool replay also pass in the isolated installation with
+its console wrapper still empty.
+
+**User-directed review boundary:** before the focused follow-up was launched,
+the user instructed, “Don't do any more Carbon reviews this milestone. I want
+to finish and go on.” No further Carbon run was started. This explicit instruction
+supersedes the normal substantive-fix follow-up requirement for this milestone.
+I1–I3's final implementation changes are caller-inspected and tested, but have
+not received focused Carbon re-review; Q1's source evidence and I4's receipt
+corrections likewise have no subsequent Carbon assessment. The initial completed
+review remains evidence for its exact diff, not approval of the revised snapshot.
+The pre-follow-up fix diff is retained at
+`/tmp/pi-b2-repeatable-review/fix.patch`, SHA-256
+`690cfa2855c7f27499d3835349ae2f6885b6bc9f4bf55ce392e9a5c595300038`.
+Later changes only record this instruction and final acceptance facts.
+
+Cost/usefulness: the initial CLI reported 592.578 seconds; caller observation was
+about 618 seconds. Eleven complete chunks contained 20,298 transport tokens;
+response prose was 611 words with links reduced to labels. I1–I3 improve validation
+or repeatability; I4 is status housekeeping. These are observed costs and concrete
+corrections from a required review, not measured review effectiveness, price or
+proof productivity. Raw prompt/diff/chunks/log/response/inspection are retained
+under `/tmp/pi-b2-repeatable-review/`; temporary retention is not archival storage.

@@ -12,6 +12,23 @@ evaluation, required reviews, final validation, commit, and post-commit necessit
 review are complete: P0–P5 is accepted with the explicit tool deferrals below.
 This does not claim successful persistent installation or actual host adoption.
 
+**Subsequent user-requested installation follow-up:** the user installed the
+packages and four skill candidates in their Terminal. After launcher repair and
+app restart, all five native MCP tools worked in this same conversation. The
+maintained [installer and instructions](b2-tool-installation.md) supersede the
+temporary activation bundle. The [evaluation follow-up](b2-tool-evaluation.md#persistent-installation-and-native-host-follow-up)
+records the distinction between functional activation and pending lifecycle checks.
+The original milestone receipts below remain a dated snapshot.
+
+The repeatable-installer follow-up passes 38 offline tests, the installed-tool
+preflight, and an isolated five-tool module replay with an empty console wrapper.
+Its initial Carbon review found no defects and four nonblocking improvements;
+the [report](agy-reports/b2-improvements-review.md#installation-review-and-dispositions)
+preserves each disposition. The user explicitly stopped further Carbon reviews
+before the focused follow-up launched. Final runtime, index-warmup and skill-
+adaptation fixes are caller-validated, without Carbon re-review. This instruction
+does not turn the unexecuted real config migration or lifecycle checks into passes.
+
 ## Contracts and indexing
 
 All production Lean, audits, mathematical contracts, and indices are unchanged.
@@ -59,20 +76,20 @@ and remote CI are not claimed. The tested shell fallback remains default.
 Follow the [sole implementation specification](b2-process-tool-improvement-plan.md)
 and [current entry](proof-attempt-session-prompt.md); do not repeat the completed
 improvement cycle. For host activation,
-follow the [exact continuation and rollback](b2-tool-evaluation.md#activation-continuation-and-rollback)
+follow the maintained [installation, checks and rollback](b2-tool-installation.md)
 in a permitted user terminal, then test the actual host. Do not equate protocol
 testing with activation or silently install the unmodified upstream skills.
 Stop before B3 or visitation research. Use the [proof plan](proof-plan.md) and
 [blueprint](proof-blueprint.md) for unchanged mathematical obligations.
 
-Before a later permitted activation, revisit
-[Final-I1/I2](agy-reports/b2-improvements-review.md#complete-milestone-review):
-LSP needs import-only partial-stem discovery against `rg`, Elan PATH, root-probe
-cleanup and descendant-shutdown checks. Paper-skill catalog adoption needs
-conditional source routing and one separately authorized already-cited source
-transfer case. Do not run that Step 4/5 test or new visitation research merely
-because this handoff mentions it. Q2's next sample is the next authorized
-milestone's actual required review, not an extra benchmark run.
+The installation follow-up completed the partial-stem, Elan PATH and root-probe
+cleanup parts of [Final-I1](agy-reports/b2-improvements-review.md#complete-milestone-review).
+Descendant shutdown and actual app-entry disable/restore remain pending.
+Final-I2's conditional B1 source routing and separately authorized already-cited
+source transfer case remain deferred; catalog installation alone did not perform
+those checks. Do not run that Step 4/5 test or new visitation research merely
+because this handoff mentions it. Q2 uses actual required reviews as samples,
+including this installation follow-up, not additional benchmark-only reviews.
 
 ## Publication and post-commit necessity review
 
@@ -89,6 +106,6 @@ history, concise retrospective, and two 35-line project skill candidates. Each
 has a named consumer or acceptance/restart purpose; the redundant lemma-lab
 wrapper and broad framework were already rejected. No substantive change or
 unnecessary implementation was found, so no additional proof/tool review was
-needed. This follow-up changes factual acceptance/necessity receipts only.
-Final receipt doc/whitespace checks are required before its separate commit.
+needed. The `b4d51ce` follow-up changed factual acceptance/necessity receipts only.
+Its receipt doc/whitespace checks passed before that separate commit.
 Unrelated Obsidian, notes, and papers remain preserved.

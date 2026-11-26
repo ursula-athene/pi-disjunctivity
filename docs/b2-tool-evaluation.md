@@ -362,3 +362,62 @@ watchfiles==1.3.0
 ```
 
 </details>
+
+## Persistent installation and native host follow-up
+
+The user subsequently installed LSP 0.33.0 and all four selected skill folders
+from their Terminal. The first installer stopped because Codex omitted an
+existing `node_repl.args = []`; comparison against the backup and the CLI's
+resolved arguments established semantic equivalence. The corrected guard accepts
+only this empty-stdio-arguments normalization and still rejects substantive
+unrelated changes. The user then completed skill installation.
+
+Functional testing discovered a separate empty console launcher. Its package
+RECORD expected 335 bytes; all other checked hashed files in lean-lsp-mcp,
+leanclient and mcp matched. Truncation cause is unknown. An exact RECORD-matching
+repair was prepared, and after the user's restart the executable reported
+0.33.0 and the actual conversation exposed exactly the five selected tools.
+Native calls passed: fixed B2 diagnostics, generated-declaration search/source,
+full power-lemma hover, before/after goals, and an intentional identifier error
+at line 3, column 9 followed by successful correction. Both root probe files
+were removed. A separate import-only partial-stem test found the generated sum
+lemma with a warming index; no completeness or general speedup is inferred.
+
+The four installed skills appeared in the actual catalog and were read and
+exercised on the existing fixed cases: explicit signature/index proofs compiled,
+the critic retained the six invalid/two valid-conditional distinctions, and
+source extraction preserved the BBP zero index, convergence/analytic obligations
+and lack of visitation implications. Installed folders matched the receipt hashes.
+This is known-case functional use, not measured transfer benefit or independent
+review. Final-I2 remains deferred; the user's subsequent installation did not
+perform that broader source-transfer evaluation or silently waive its limits.
+
+The [maintained installer](b2-tool-installation.md) uses the supported persistent
+Python module entry point, so the generated console wrapper is outside the MCP
+launch path. Source archives and skill adaptations are reproducible from pinned
+local clones; constraints preserve the evaluated Python versions. Matching
+reruns reuse components; differing contents/settings stop for inspection.
+Both the full existing-installation preflight and a fresh isolated uv install
+passed. The latter deliberately emptied only its temporary console launcher;
+the module still passed all five functional checks and repeat source/version
+validation. This tests the observed failure condition without inferring its cause.
+The normal user-config migration write remains to be run from a permitted
+Terminal; the working native app currently uses its repaired console entry.
+
+32 offline tests passed before review; the revised suite passes 38, including config normalization, conflict
+preservation, exact legacy-entry migration, repeated module-entry reuse, skill
+reuse, notice preservation and user-edit/symlink rejection, plus runtime inventory,
+bounded index warmup and adaptation fixtures. The earlier passing
+`lake build` and `Test.lean` checks remain applicable: production Lean, audits,
+pins and dependency manifests are unchanged. The required tooling review and
+final receipts are in the [review report](agy-reports/b2-improvements-review.md).
+Raw native/installed/fresh-install captures are under `/tmp/pi-b2-native-check/`,
+`/tmp/pi-b2-installed-check/`, and `/tmp/pi-b2-repeatable-evaluation/`; these are
+not permanent raw archives.
+
+**Capability state:** persistently installed and configured; module/protocol
+and native five-tool calls tested. Main server PID exit was observed in the
+separate protocol test, but descendant enumeration was denied and an ignored
+asyncio shutdown warning occurred. Clean descendant shutdown and actual app
+entry disable/restore remain unverified. Keep shell fallback and existing
+adoption limits; no B3 or visitation work follows from activation.
