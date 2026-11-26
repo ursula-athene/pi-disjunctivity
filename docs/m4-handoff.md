@@ -6,6 +6,9 @@ mathematical results and validation receipts remain historical evidence.
 The [continued research checkpoint](#continued-research-checkpoint--2026-11-26)
 records subsequent work during the user's absence; that checkpoint does not
 terminate the ongoing M4 effort.
+The latest dated continuation is the
+[arithmetic-cost checkpoint](#arithmetic-cost-checkpoint--2026-11-26); read the
+research log and actual checkout for subsequent results and current state.
 
 ## Baseline and authorized endpoint
 
@@ -246,3 +249,35 @@ results. Its separate independent subagent review completed with no findings;
 the scratch compilation, exact checkers, 38 process tests, 75-file documentation
 check and whitespace checks passed. The review report retains full scope and
 evidence limitations. No Carbon, push or PR was performed.
+
+## Arithmetic-cost checkpoint — 2026-11-26
+
+From local baseline `9b6ca1b`, the
+[logarithmic assessment](m4-logarithmic-constraints.md) determines the original
+four-pole kernel and the full eight-pole kernel, showing uniqueness after
+retaining O(n^-2) decay. Its first independent review found no defect; the
+one source-notation clarification was applied. The
+[approximation assessment](m4-approximation-interfaces.md) retains the precise
+polynomial height/value costs, holonomy applicability failures, and the missing
+independent radix action. The
+[Fourier extension](m4-fourier-windows.md#growing-order-corrections-a-uniform-obstruction)
+now handles every finite natural truncation order, even when growing with n:
+its prime denominator product survives and its absolute real-shadowing window
+is at most n+O(log n). No modular cancellation conclusion follows.
+
+These universal results are paper mathematics with source dependencies and
+exact arithmetic sanity checks; no new Lean export, axiom audit or V theorem
+is claimed. Combined checkpoint review and its focused follow-up are complete;
+all review recommendations are resolved. Documentation and whitespace checks
+passed, alongside the 38 offline process tests. The review report owns their
+receipts. Unrelated work is
+preserved, and no Carbon, push or PR is authorized by this checkpoint.
+
+The specified dihedral pullback test is complete: its mod-eight regrouping is
+the earlier arctangent representation plus an endpoint correction, and its
+primitive denominator retains an exponential odd cost. Continuation seeks a
+pi-specific prefix coupling and an exact tail transform suggested by dyadic
+coefficients; read subsequent research-log entries before repeating either.
+The log states each finite endpoint. A failed test changes the next
+inquiry; it does not end M4. The accepted frontier remains B1–B3 and conditional
+B4/P3; V, Hpi, T and M5 assembly remain open under the unchanged contracts.

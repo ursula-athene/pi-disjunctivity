@@ -225,3 +225,141 @@ instantiates the displayed prime theorem and prints only `propext`,
 `Classical.choice`, `Quot.sound`; worker and parent compilations exited 0.
 No valuation, PNT, residual-asymptotic or
 visitation theorem was added to the project. No dependency or audit changed.
+
+## Growing-order corrections: a uniform obstruction
+
+The preceding fixed-rational result leaves open a different question: can
+the truncation order grow with the anchor, making the tail error exponentially
+small without increasing its odd denominator? The following paper argument
+handles every finite order of the natural inverse-power expansion. It does
+not cover Padé approximants or modular coincidences. Independent review of
+this extension is complete in the
+[continuation review record](agy-reports/m4-continuation-review.md).
+
+Write
+
+```text
+w(s)=2*1_[1,4](s)+1_[1,5](s)+1_[1,6](s),
+A(m)=integral_1^6 w(s)/(8m+s)^2 ds,
+E(n)=(1/64)*sum_(r>=0)16^(-r-1)
+                 *integral_1^6 w(s)/(n+r+1+s/8)^2 ds.
+```
+
+The reciprocal derivative proves the first identity; the weight has integral
+15. Equivalently E(n)=integral (n+u)^(-2) dmu(u), for a positive measure mu
+of mass 1/64 supported on [9/8,infinity). All moments mu_j are finite because
+geometric decay dominates each polynomial in r. Define
+
+```text
+a_j=(-1)^j*(j+1)*mu_j,
+R_K(n)=sum_(j<K) a_j/n^(j+2),  D_K(n)=E(n)-R_K(n).
+```
+
+For every x>=0 and finite K>=0, a finite algebraic identity gives
+
+```text
+(1+x)^(-2)-sum_(j<K)(-1)^j*(j+1)*x^j
+  =(-1)^K*x^K*((K+1)+K*x)/(1+x)^2.
+```
+
+It is valid outside the Taylor convergence disk. Integration yields
+
+```text
+(-1)^K*D_K(n)
+  =integral (u/n)^K*((K+1)+K*u/n)/(n+u)^2 dmu(u)
+  =d_K(n)>0.
+```
+
+For fixed K this positive integrand strictly decreases with n. Dominated
+convergence also gives the fixed-order asymptotic
+`D_K(n) ~ (-1)^K*(K+1)*mu_K*n^(-K-2)`, confirming these are the natural
+coefficients. The following uniform bound does not use that fixed-K limit.
+For n>=1 select just the r=n-1 summand, where u=n+s/8>=n. Its remainder
+factor `(u/n)^K*((K+1)+K*u/n)` is at least one for every K. Thus
+
+```text
+abs(D_K(n)) >=16^(-n)*A(2n)
+            >=15*16^(-n)/(16n+6)^2
+            >=(15/484)*16^(-n)/n^2.                 (U)
+```
+
+This holds for every n>=1 and every finite K>=0, including an arbitrary
+choice K=K(n). No convergence of the infinite asymptotic series is asserted.
+
+### Coefficient denominators at arbitrary order
+
+Let c_1=4,c_4=-2,c_5=c_6=-1 and v_(r,a)=r+1+a/8. Integrating the moment
+polynomial gives
+
+```text
+integral w(s)*(r+1+s/8)^j ds
+  =-8/(j+1)*sum_a c_a*v_(r,a)^(j+1),
+a_j=(-1)^(j+1)/8 *sum_a c_a*sum_(r>=0)16^(-r-1)*v_(r,a)^(j+1).
+```
+
+The division by j+1 cancels; it cannot introduce a new denominator prime.
+The geometric moments M_l=sum r^l/16^(r+1) satisfy M_0=1/15 and
+`15*M_l=sum_(t<l)binomial(l,t)*M_t` for l>=1. Hence
+15^(l+1)*M_l is integral, and the binomial expansion above proves
+`120^(j+2)*a_j` integral. Consequently
+
+```text
+R_K(n) belongs to Z[1/(30n)]
+```
+
+for every finite K and positive integer n. The first three coefficients
+are 1/64, -23/512 and 415/4096. Every prime p in the earlier product M_n
+exceeds n and 5, so R_K(n) is p-integral while S_n has valuation -1.
+Its valuation therefore remains -1 in S_n+R_K(n). Unlike the general
+fixed-rational bound, no Q(n) factor is lost:
+
+```text
+M_n divides the odd reduced denominator q'_(n,K),
+q'_(n,K)>=M_n=exp(2n+o(n)), uniformly in K.
+```
+
+Only the previously inspected fixed-progression PNT is used in the last
+asymptotic; the prime-divisibility statement is elementary exact arithmetic.
+
+### Three distinct real comparison errors
+
+Fix one anchor n and order K, and freeze P=S_n+R_K(n). The exact BBP split
+gives three different comparisons with the rational orbit 16^j*P:
+
+| Compared sequence | Exact real difference |
+| --- | --- |
+| 16^(n+j)*pi | 16^j*D_K(n) |
+| S_(n+j) | 16^j*D_K(n)-E(n+j) |
+| S_(n+j)+R_K(n+j) | 16^j*D_K(n)-D_K(n+j) |
+
+The final row keeps K fixed within that window. It is not the raw-prefix
+identity, and no smallness of a growing-order R_K(n+j) is assumed.
+If the first difference has absolute value at most eta>0, (U) forces
+
+```text
+j <= n+2*log_16(n)+log_16(484*eta/15).
+```
+
+A window j=0,...,J-1 has length at most one more than this bound. The
+raw-prefix row has the same n+O(log n) restriction because
+`0<E(n+j)<=1/(64n^2)` and the triangle inequality bounds
+16^j*d_K(n) by eta+1/(64n^2). For the corrected-prefix row, constant sign
+and monotonicity give absolute difference at least `(16^j-1)*d_K(n)`,
+again allowing only n+O(log n). All constants can be independent of K(n).
+
+Even granting the unavailable uniform version of the fixed-tower exponential
+sum estimate, its sufficient window scale sqrt(q')*log q' is exponential
+in n. Arbitrarily high natural truncation order therefore cannot repair
+this absolute-real-shadowing comparison at any subsequence of anchors.
+Large real error may still be close to an integer. Actual modular phase
+cancellation, circular coincidences and other rational approximants remain
+unexcluded, and V remains open.
+
+The immutable report is `/tmp/pi-m4-growing-order-report-v1.md`, SHA-256
+`535d0dbf2f78fe57ae91bea5528084f7280f089cdf732eae837044edefc07cd3`.
+The parent inspected and reran `/tmp/pi-m4-growing-order-check-v1.py`,
+SHA-256 `4e30e84a0b84a103752fe2e2c19bee915daedf5ca42e05c5b4a9fd073f9f999c`:
+exit 0. It checks 30 coefficient orders, exact finite remainder identities,
+sampled monotonicity and 245 anchor/order denominator pairs. Those finite
+checks are sanity evidence; the infinite sums and universal inequalities
+above remain paper mathematics. No production Lean declaration changed.

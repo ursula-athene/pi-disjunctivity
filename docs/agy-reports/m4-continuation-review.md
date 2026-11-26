@@ -119,3 +119,74 @@ documentation checker, working/staged whitespace, and unchanged production/pin/
 audit scope. Production Lean was not rebuilt for these documentation-only
 changes; the successful unchanged baseline and the separate scratch compilation
 are distinguished. Post-review changes record these factual outcomes only.
+
+The generating/phase checkpoint was committed locally as
+`9b6ca1b63f21be4f57ff195a36effa09255384c0`. Post-commit inspection verified its
+four documentation paths, unchanged protected sources and preserved unrelated
+work. No unused API, tool change or substantive simplification was found.
+
+## Logarithmic-constraint intermediate review
+
+Reviewer `/root/generating_review` completed a separate intermediate review of
+the initial `docs/m4-logarithmic-constraints.md`, baseline
+`9b6ca1b63f21be4f57ff195a36effa09255384c0`, frozen diff SHA-256
+`9fc35cf67dc5208d2f86836c1c343e72b864c3e375f686b23d2ab21e6e032819`.
+The packet and complete response are retained in
+`/tmp/pi-m4-logarithmic-initial-review-20261126/`, response `review.md`.
+Both required guides were applied with their unchanged hashes above. The
+reviewer independently reconstructed the four-/eight-pole kernel arguments and
+the Bernoulli-dimension counterexample, and inspected supplied source images.
+
+**D/I/Q outcome:** no defects or remaining diagnostic questions; one improvement:
+I1 requested that the local exclusion of the zero polynomial be distinguished
+from Breuillard–Varjú's implicit source convention. Applied in the source-contract
+paragraph, after parent comparison with printed pp.2–3. The requested definition
+pages were supplied during the same review, without a failed-review retry.
+No recommendation was dropped or deferred. Combined checkpoint review remains
+pending as the next mathematical investigations are integrated.
+
+Execution remains caller evidence: the four-pole, eight-pole and Bernoulli exact
+checkers were inspected and rerun successfully. External source theorems and
+universal analytic arguments remain paper mathematics. The reviewer used only
+read-only inspection, with no execution, mutations, services, Carbon or delegation.
+
+## Arithmetic-cost combined review
+
+Reviewer `/root/generating_review` completed the six-path review against
+`9b6ca1b63f21be4f57ff195a36effa09255384c0`. The frozen diff SHA-256 is
+`30649da07ee39234c3dabbf60d88e7080cf1eac45269bb5eac7e1cdaa91baee7`.
+The packet `/tmp/pi-m4-arithmetic-cost-review-20261126/` retains `scope.json`,
+`diff.patch`, source/report hashes, caller receipts and the full `review.md`.
+Scope: the logarithmic and approximation assessments, Fourier extension,
+research log, M4 handoff and this review record. Both required guides were
+applied with the unchanged hashes recorded above.
+
+The reviewer reconstructed the four-/eight-pole, polynomial interpolation,
+holonomy, dihedral primitive-denominator, multibase and all-order tail
+arguments and inspected relevant primary source images. It used read-only
+inspection without executing checks, mutations, services, Carbon or delegation.
+
+**Whole-cycle D/I/Q dispositions:** no defects or blocking questions. I1
+verified the already applied source-notation clarification. I2 requested
+explicit rational BBP recurrence samples and weights for the finite empirical
+transform claim; applied, with the real/circle distinction retained. Parent
+inspection of `Series.lean` and `Orbit.lean` confirms the rational-arithmetic
+induction. I3 requested that the completed dihedral test leave the active
+handoff list; applied. No recommendation was omitted or deferred.
+
+The focused I2/I3 follow-up inspected exact two-path delta SHA-256
+`941eae27dcb22f6aae3e1e0ec19294eb55504d0af726e7a61a3bee1b2ca690cd`,
+retained as `clarification.patch`. Its full `clarification-review.md` resolves
+both items with no new D/I/Q findings. This was a requested clarification
+follow-up, not recovery from a failed review. Later edits record factual
+review/check outcomes only.
+
+Caller validation: all scoped exact arithmetic checkers passed, including
+30 tail orders/245 anchor-order pairs and the dihedral degree-48 composition,
+240-index valuation and 2,795 prime checks. The 38 offline process tests,
+77-file documentation check and both whitespace checks passed. Production
+Lean, audits and pins are unchanged from the successful baseline build and
+Test.lean run; no production rebuild is claimed for documentation-only work.
+External source theorems and universal analytic/arithmetic arguments remain
+paper mathematics. This review does not certify V or complete M4. Subsequent
+scratch-only inquiries lie outside this frozen checkpoint.
