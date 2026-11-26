@@ -62,4 +62,15 @@ from pending host activation and genuinely adopted capabilities.
 Verify volatile checkout/publication state before continuing. This session
 requests local documentation commits only, with no push or PR. Identify the
 planning commit using `git log -1 --format=%H -- docs/b2-process-tool-improvement-plan.md`.
-Post-commit necessity review remains pending until that commit exists.
+
+The replacement plan and reconciled documentation were committed locally as
+`15957cfcd0aa4f0b43a0b2ce792f37ab9e63e61d`. Post-commit scope and necessity
+review retained the recommendation context, the single detailed implementation
+plan, the concise meta-plan decisions, required active links/archive, and
+acceptance records. Each has a distinct consumer or record responsibility;
+no substantive simplification or follow-up review was needed. This factual
+receipt records that completed review without changing the proposal.
+
+The authoring milestone is complete. Implementation, installation, compatibility,
+skill evaluation, and adoption remain future work. Nothing was pushed and no PR
+was opened by this session; unrelated work remains outside the commits.
