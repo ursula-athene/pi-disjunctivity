@@ -41,7 +41,9 @@ The final CLI run took 435.329 seconds and 38,701 transport-capture tokens.
 Its 679-word prose response met the 700-word target, compared with P1's
 1,451 words (links counted as labels). Different scopes and known cases prevent
 a causal efficiency or detection-benefit claim.
-Post-commit necessity observations will be recorded after inspection.
+Post-commit necessity inspection of `7c1c7a1` retained the small skill sources,
+canonical rules, and required evidence/restart records. No substantive fix or
+removable implementation was found; the follow-up records acceptance only.
 Use the [review report](../agy-reports/b2-improvements-review.md) for the whole
 cycle and every disposition. Q2's P1/final observations are within one milestone;
 retain the next authorized milestone as a second sample before drawing broader

@@ -8,9 +8,9 @@ P0–P5 invoked on the user-prepared
 replacement plan (`15957cf`/`24204ec`), and Carbon guidance (`f17a625`/`f3d34f5`).
 Preserve Obsidian workspace/hotkeys, personal notes, and papers. The user later
 authorized pushing reviewed commits; no PR is requested. Implementation,
-evaluation, required reviews, and pre-commit validation are accepted with the
-explicit tool deferrals below. Commit/necessity/publication receipts follow
-only after observation.
+evaluation, required reviews, final validation, commit, and post-commit necessity
+review are complete: P0–P5 is accepted with the explicit tool deferrals below.
+This does not claim successful persistent installation or actual host adoption.
 
 ## Contracts and indexing
 
@@ -22,15 +22,16 @@ open-interval visitation. This milestone supplies no new mathematical result.
 ## Acceptance evidence and limitations
 
 P0–P4 implementation/evaluation is recorded in the
-[tool evaluation](b2-tool-evaluation.md). P5 final review has accepted the complete milestone diff; commit and
-post-commit necessity inspection remain the final publication steps. Final `lake build`, `lake env lean Test.lean`, all 23
+[tool evaluation](b2-tool-evaluation.md). P5 final review accepted the complete
+milestone diff and verified the P1 fixes. Final `lake build`,
+`lake env lean Test.lean`, all 23
 offline process tests, the 58-file documentation check, both skill validators,
 and working/staged whitespace checks passed (each exit 0). Final pre-review
 comparisons found all 18 protected files, all 11 unrelated
 files, both clean sibling clones, and the existing user MCP configuration
 unchanged. No permission setting changed.
 
-The [review report](agy-reports/b2-improvements-review.md) records the P1
+The [review report](agy-reports/b2-improvements-review.md) records the whole
 cycle: zero defects, four nonblocking improvements implemented and verified,
 two later improvements deferred with restart triggers, and evidence questions
 addressed through the required checks/receipts.
@@ -56,8 +57,8 @@ and remote CI are not claimed. The tested shell fallback remains default.
 ## Restart and remaining obligations
 
 Follow the [sole implementation specification](b2-process-tool-improvement-plan.md)
-and [current entry](proof-attempt-session-prompt.md). After the final receipt
-checks, commit and inspect necessity; record actual publication state. For host activation,
+and [current entry](proof-attempt-session-prompt.md); do not repeat the completed
+improvement cycle. For host activation,
 follow the [exact continuation and rollback](b2-tool-evaluation.md#activation-continuation-and-rollback)
 in a permitted user terminal, then test the actual host. Do not equate protocol
 testing with activation or silently install the unmodified upstream skills.
@@ -72,3 +73,22 @@ conditional source routing and one separately authorized already-cited source
 transfer case. Do not run that Step 4/5 test or new visitation research merely
 because this handoff mentions it. Q2's next sample is the next authorized
 milestone's actual required review, not an extra benchmark run.
+
+## Publication and post-commit necessity review
+
+Implementation commit `7c1c7a10fb9f1b176a49fa03a643fc85059ae7ac` was pushed to
+`origin/feature/b2-process-and-tooling-improvements`; `git ls-remote` verified
+that exact remote HEAD. No PR was opened. This receipt's commit is identified
+with `git log -1 --format=%H -- docs/b2-improvements-handoff.md`; verify the
+actual remote ref when resuming rather than treating this snapshot as live state.
+
+Post-commit inspection confirmed exactly the sixteen task-owned files and no
+production Lean/audit/pin/manifest changes. Retained the canonical process rules,
+short entry/template pointers, evaluation evidence and rollback, review item
+history, concise retrospective, and two 35-line project skill candidates. Each
+has a named consumer or acceptance/restart purpose; the redundant lemma-lab
+wrapper and broad framework were already rejected. No substantive change or
+unnecessary implementation was found, so no additional proof/tool review was
+needed. This follow-up changes factual acceptance/necessity receipts only.
+Final receipt doc/whitespace checks are required before its separate commit.
+Unrelated Obsidian, notes, and papers remain preserved.
