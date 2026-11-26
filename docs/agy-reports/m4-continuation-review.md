@@ -87,3 +87,35 @@ no unused proof API, tooling, or substantive simplification was found.
 The follow-up factual receipt is identifiable by
 `git log --all --oneline --grep='Record M4 continuation checkpoint receipt'`.
 No push or PR was performed. This checkpoint does not end the ongoing research.
+
+## Generating-function and phase checkpoint
+
+The next review baseline is `7b73048c1671cb598d33f917ae8e04bcf3fbab46`.
+Scope: `docs/m4-generating-functions.md`, the appended continuation in
+`docs/research-log.md` and `docs/m4-handoff.md`, and this review record.
+The mathematical assessment includes a scratch carry interface, natural-boundary
+arguments, phase-correction sharpness, and the null-family averaging test.
+Production Lean, pins, audits, the V contract and publication scope are unchanged.
+
+Reviewer `/root/generating_review` completed the independent review of frozen
+diff SHA-256 `a4f2723eaea0830709a3b344fdab9f4e0d7fef56ed94b81e487f18f59093115b`.
+The exact packet and complete response are retained in
+`/tmp/pi-m4-generating-review-20261126/`, with the response in `review.md`.
+Both guides were read in full and their unchanged hashes verified. The reviewer
+independently matched scope and scratch hashes, inspected the supplied primary
+source passage and three worker reports, and reconstructed the mathematical
+arguments. It performed read-only inspection, without builds, probes, mutations,
+services or delegation. No Carbon was used.
+
+**Completed D/I/Q outcome:** no defects, no nonblocking improvements requiring
+a change, and no missing evidence blocking this diagnostic checkpoint. There
+are no undisposed recommendations. The review explicitly retains the unresolved
+V argument, the unformalized analytic/probability claims, caller-only execution
+receipts and parsed-text source limitations. No repair or retry was required.
+
+Caller validation passed: the five scratch carry declarations with the permitted
+axioms, both exact arithmetic checkers, 38 offline process tests, the 75-file
+documentation checker, working/staged whitespace, and unchanged production/pin/
+audit scope. Production Lean was not rebuilt for these documentation-only
+changes; the successful unchanged baseline and the separate scratch compilation
+are distinguished. Post-review changes record these factual outcomes only.

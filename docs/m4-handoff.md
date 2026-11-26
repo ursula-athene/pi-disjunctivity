@@ -228,3 +228,21 @@ necessity/scope inspection found no unneeded API or substantive simplification;
 unrelated work remains preserved. The separate factual receipt is identified
 in the review report. Nothing was pushed and no PR was opened. Research
 continued immediately with the generating-function and carry-interface inquiry.
+
+## Generating and phase checkpoint — 2026-11-26
+
+After local receipt `7b73048`, the
+[generating-function assessment](m4-generating-functions.md) records actual
+carry/recurrence natural boundaries, a sharp generic phase-correction estimate,
+and the failure of null-family horizon averaging to select a fixed visiting
+orbit. A scratch Lean probe verifies the actual carry's finite alphabet and
+weighted sum pi through the library root. The analytic and probability arguments
+are paper mathematics; no new production export or V theorem exists.
+
+The current investigations test the original four-pole rational nullspace and
+a separate pi-specific arithmetic connection. Their bounds require reassessment,
+not stopping. Consult the latest research-log entry and checkout for subsequent
+results. Its separate independent subagent review completed with no findings;
+the scratch compilation, exact checkers, 38 process tests, 75-file documentation
+check and whitespace checks passed. The review report retains full scope and
+evidence limitations. No Carbon, push or PR was performed.

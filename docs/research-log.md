@@ -1739,3 +1739,66 @@ whitespace and protected-source preservation checks passed. The
 [review report](agy-reports/m4-continuation-review.md) retains exact scope and
 complete-response pointers. This accepts the diagnostic checkpoint only;
 V remains unproved and the generating-function inquiry continues.
+
+## 2026-11-26 — M4 continuation: generating functions and phases
+
+The previous seven-path checkpoint is committed locally as `052234d`, with
+factual receipt `7b73048`; no push or PR. The next cycle supplied an actual
+analytic consequence for the BBP sequence, not visitation: its carry series K
+and recurrence series Y have natural boundaries, although the forcing series H
+has analytic continuation across the rest of the unit circle. Their exact
+identity exhibits cancellation of those boundaries. A restricted-digit model
+shows why the natural-boundary conclusion does not imply V. The
+[assessment](m4-generating-functions.md) retains the source contract and gap.
+
+To verify the critical indexing, the parent used the Lean search/proof-pattern
+skills for a bounded scratch interface. Through `import PiDisjunctivity`, it
+proved the carry decomposition, initial carry 3, a sufficient finite integer
+range, summability of the weighted recurrence, and `HasSum (carry n/16^n) pi`.
+The final immutable probe compiled with only the three permitted axioms.
+No production API was added; the complex-analytic consequences remain paper
+mathematics awaiting independent review.
+
+**Next bounded inquiry:** test the exact phase-weighted correction G_h at high
+frequencies, retaining its dependence on the actual orbit. First determine
+whether the generic `O(sqrt(abs h))` bound is sharp on the earlier avoiding
+model at frequencies divisible by 21. The endpoint is an exact identity and
+an improper-integral limit, or a counterexample to that proposed calculation,
+with all endpoint estimates justified. Then isolate the specific improvement
+the pi phases would need. Fixed-frequency summability alone is not a new
+visitation mechanism. This test is underway while the accepted frontier and
+all V quantifiers remain unchanged.
+
+**Phase checkpoint:** the generic square-root estimate is sharp along frequencies
+divisible by 21 for the earlier rational avoiding model. The exact scaling
+limit has nonzero real part; integrable domination controls both endpoints.
+For actual BBP, `G_h(1)=e(h*pi)-1+T_h-T_(16h)` retains the unresolved orbit
+phases. Fixed-frequency summability gives invariance only. An explicit diffuse
+restricted-digit invariant measure also defeats an inference from averaged
+frequency decay to decay along powers of 16. These are paper arguments, not
+new kernel results or a disproof of a pi-specific estimate.
+
+**Representation checkpoint:** the null family with `t(n)=n/(n+1)^4` preserves
+pi, the leading coefficient and full late visitation for each fixed parameter.
+Its uniform horizon laws, however, escape to infinity. A zero-base model has
+the same uniform marginals and no visiting fixed orbit; every fixed probability
+law gives vanishing circle offsets. Even all-index positivity bounds the
+allowable parameter using the first two coefficients. The parent inspected
+and reran the 240-case exact checker successfully. The assessment retains the
+circle/representative distinction and missing joint-event estimate.
+
+**Next bounded inquiries:** a 30-minute structural pass determines the rational
+nullspace inside the original four simple poles, retaining O(n^-2) decay; a
+separate 35-minute fresh-context pass seeks one pi-specific arithmetic mechanism
+or precise neighboring-theorem test not already refuted by these examples.
+Each must return an exact relation or first missing bridge, not a renamed V
+premise. The parent prepares independent review of the generating, phase and
+null-family checkpoint while those investigations run. Cycle bounds remain
+reassessment points; M4 continues with all original quantifiers and trust rules.
+
+The independent `/root/generating_review` review completed with no D/I/Q findings.
+The exact four-path packet and full response are retained under
+`/tmp/pi-m4-generating-review-20261126/`. Scratch and arithmetic checks, 38
+process tests, the 75-file documentation check and whitespace checks passed.
+This accepts the diagnostic checkpoint only; the two changed inquiries continue
+and no V premise has been removed or silently assumed.
