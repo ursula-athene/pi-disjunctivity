@@ -1305,3 +1305,50 @@ probe, build or mutation ran. Execution and preservation remain caller evidence,
 and prior Coleman/PNT results remain paper inputs. Subsequent edits record
 this result only. The fresh analytic-family consumer inquiry is excluded.
 No V/M4 acceptance or new Lean theorem is claimed.
+
+## Continuous p=17 defect and the fixed eight-pole family — 2026-11-27 UTC
+
+Baseline is local commit `868a092c7797065f90b5a73d5d0222d69d0f7a88`.
+The five-path scope is `m4-logarithmic-constraints.md`, `proof-plan.md`,
+`research-log.md`, `m4-handoff.md` and this record. No Lean, dependency, pin,
+audit, tool or unrelated workspace change is included.
+
+Frozen evidence is `/tmp/pi-m4-analytic-family-consumer-20261127/`, including
+the complete report, exact source contract, same-session critic, checker,
+receipt, source image, input snapshots and immutable manifest. The parent
+read and reconstructed the argument, including its linear constant-boundary
+extension to r=8 and its retained Coleman input. The original Brumer Theorem 1
+and definitions were visually inspected on the publisher's p.121 image;
+the complete source proof was not accessed. Unchanged-copy replay passed 825
+finite algebra checks, exit 0, identical receipt and preserved originals.
+Those checks do not prove Brumer, analytic convergence, Coleman continuation
+or any visitation claim.
+
+Worker I1 was incorporated before freezing by giving the primitive identity
+and its domain/exponent justification. I2 is retained by suspending further
+same-family classification without a real consumer. Q1–Q2 remain open:
+infinite full-family models and reconstruction from actual avoiding carries.
+The parent additionally clarifies that raw seed continuity is not invariant
+under integer shifts preserving all canonical orbit values. This agrees with
+the earlier reviewed rational-entry calculation.
+
+Independent changed-file review by `/root/generating_review` is complete under
+the Codex replacement procedure, with retained full readings and verified
+unchanged hashes of both adversarial guides. Frozen scope is
+`/tmp/pi-m4-p17-family-review-20261127/`, diff SHA-256
+`cc9c219611e72345aeee50774f856f20c54d06d3f9e8ec642b94c9d9d20e51c2`.
+The complete returned response is `review-full.txt`, SHA-256
+`f928cf818206c54ebc002237381813dbfb7a0938485a28abecd16b4770231d17`.
+All five production hashes and 28 evidence hashes matched. **D: none. I: no
+new improvements; worker I1–I2 incorporated. Q1–Q2 retained; Q3 resolved for
+paper review.** The generic constant-boundary extension, including r=8,
+survived independent reconstruction; that is not kernel certification.
+
+The reviewer visually inspected the original source theorem and reconstructed
+the log-basis application, rank-six kernel, primitive normalization, continuity,
+asymptotics and raw-seed qualification. Read-only inspection, hashing, image
+inspection and mathematics were performed; no checker, probe, build or mutation
+ran. Execution/preservation remain caller evidence, and Brumer's full proof
+was not accessed. Earlier Coleman results remain paper inputs. Subsequent
+edits record this outcome only. The active adelic inquiry is excluded.
+No V/M4 acceptance or new Lean theorem is claimed.

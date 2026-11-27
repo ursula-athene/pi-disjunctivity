@@ -828,13 +828,21 @@ modulus at primorial endpoints grows faster than the uniform moment-grid
 budget. This defeats that counting guarantee, not all possible correlated
 constructions, and supplies no real visit by itself.
 
-The next 20-minute fresh-context investigation seeks an actual consumer of
-the full analytic family together with the exact finite rational forcing,
-or one precise neighboring theorem connection with its first missing bridge.
-It must retain earlier-prefix dependence and canonical floors, and cannot
-count a uniqueness/classification statement alone as a visit. The review
-record owns integration status; all target contracts and Lean status remain
-unchanged. Research continues within M4.
+The [one-prime classification](m4-logarithmic-constraints.md#one-p-adic-continuous-defect-selects-the-normalized-eight-pole-forcing)
+shows that continuous initialized p=17 defect plus the BBP asymptotic
+normalization selects A within the fixed unshifted eight-pole family. It
+does not reconstruct a competing finite-pole vector from word avoidance;
+that consumer remains missing. More same-family classification and Brumer
+formalization are suspended without an actual real-position consequence.
+
+The next 20-minute inquiry tests one adelic rationality/continuation criterion
+as a possible reconstruction bridge. It must identify the same function at
+all places, retain integrality, denominators, domains and radii, and explain
+how the actual floors enter. Prime-dependent Phi_p cannot be substituted for
+one global series without proof. A precise failed hypothesis or one genuinely
+new applicable check is the endpoint; generic G-function or Dwork terminology
+is not a consumer. The review record owns integration status; all target
+contracts and Lean status remain unchanged. Research continues within M4.
 
 For the recurrence defined in Step 4, seek a proof of
 

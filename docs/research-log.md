@@ -2980,3 +2980,39 @@ floors, and distinguish identifying A from proving a real visit. This changes
 the source of ideas after the comparison-model sequence. No broad literature
 campaign, source-free independence claim, digit enumeration or premature
 formalization is authorized by this inquiry. Research continues.
+
+**Arithmetic checkpoint and fresh-context outcome — 2026-11-27 UTC:** local
+commit `868a092c7797065f90b5a73d5d0222d69d0f7a88` contains the reviewed six-path
+comparison-model/analytic-cost assessment. Exact scope, empty index, preserved
+protected/unrelated files and post-commit necessity were verified. No push or
+PR occurred. The fresh consumer packet gives a paper classification instead
+of a visit: continuous initialized p=17 defect selects span_Q{A,D} in the
+fixed unshifted eight-pole space; the BBP asymptotic normalization selects A.
+It proves no reconstruction of a distinct vector from an avoiding actual
+carry sequence. More same-family classification is suspended without that
+independent consumer.
+
+The worker and parent inspected Brumer's original Theorem 1 on the publisher's
+p.121 image, including its definitions and hypotheses; the full proof was
+not accessed. Parent reconstruction covered the p-adic logarithm kernel,
+generic constant-boundary extension, initialization and asymptotic restrictions.
+Unchanged-copy replay passed 825 exact field/rank/pole checks, exit 0,
+identical receipt and preserved originals. Brumer and Coleman arguments are
+paper inputs, not certified by those checks. The production clarification
+retains the earlier fact that integer seed changes preserve canonical orbit
+values even while destroying raw p-adic continuity. Independent integration
+review is complete: no defects or new improvements; Q1–Q2 remain open, and
+Q3's generic boundary extension passed paper reconstruction. All five scoped
+file hashes and 28 evidence hashes matched. The continuation review record
+owns the complete response and limits; no V or Lean theorem follows.
+
+**Changed question, 20 minutes before reassessment:**
+`/tmp/pi-m4-adelic-rationality-test-20261127/` tests one precise adelic
+rationality or analytic-continuation criterion for the missing reconstruction
+step. The first check is whether there is a common function at every place;
+the known Phi_p are prime-dependent. The source contract must retain all
+coefficient, radius, domain and integrality hypotheses, and test the actual
+logarithmic A generating function as a sanity case. No finite-state language
+is assumed to imply analytic continuation, and no generic Dwork-congruence
+converse is assumed. The endpoint is a concrete applicable bridge or a
+precise failed hypothesis that changes the next decision. M4 continues.

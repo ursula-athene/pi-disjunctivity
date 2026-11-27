@@ -7,7 +7,7 @@ The [continued research checkpoint](#continued-research-checkpoint--2026-11-26)
 records subsequent work during the user's absence; that checkpoint does not
 terminate the ongoing M4 effort.
 The latest dated continuation is the
-[Arithmetic moment models](#arithmetic-moment-models--2026-11-27-utc); read the
+[One-prime finite-family classification](#one-prime-finite-family-classification--2026-11-27-utc); read the
 research log and actual checkout for subsequent results and current state.
 
 ## Baseline and authorized endpoint
@@ -878,3 +878,24 @@ A fresh-context bounded inquiry now asks whether the full family and exact
 finite rational forcing have an actual visitation consumer or a useful
 neighboring-theorem bridge. The research log owns its bound and outcome.
 V/Hpi/T/M4 remain open, B4/P3 retain visitation premises, and M5 is excluded.
+
+## One-prime finite-family classification — 2026-11-27 UTC
+
+The preceding arithmetic-model checkpoint is local commit
+`868a092c7797065f90b5a73d5d0222d69d0f7a88`; its exact six-path scope, empty
+index, preservation and necessity checks passed. Nothing was pushed. The new
+[p=17 classification](m4-logarithmic-constraints.md#one-p-adic-continuous-defect-selects-the-normalized-eight-pole-forcing)
+identifies A inside the fixed normalized eight-pole family but supplies no
+distinct vector or logarithmic relation from actual word avoidance. It does
+not classify infinite analytic moment models. Same-family classification and
+formalization are suspended without a real-position consumer.
+
+The parent inspected the original Brumer theorem image, reconstructed the
+argument and replayed 825 exact checks with identical receipt and unchanged
+originals. Independent integration review is complete with no defects or new
+improvements; Q1–Q2 remain open and Q3 passed paper review. The continuation
+review record owns its scope and limits. No Lean, pin, dependency, audit or target
+contract changed. The next bounded inquiry tests an adelic rationality
+criterion, beginning with a common function and its exact local hypotheses.
+The log owns that investigation. V/Hpi/T/M4 remain open, B4/P3 retain visits,
+and M5 is excluded; research continues.

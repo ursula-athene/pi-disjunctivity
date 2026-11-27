@@ -344,3 +344,87 @@ and seek an exact arithmetic or functional identity exploiting the original
 pole pattern. Their 30-minute bounds require an explicit cost comparison or
 first missing bridge, followed by reassessment. No generic entropy or
 irrationality conclusion is being substituted for the unchanged V contract.
+
+## One p-adic continuous defect selects the normalized eight-pole forcing
+
+The full analytic family distinguishes the fixed finite-pole formula from the
+moment countermodels more sharply than its pointwise bounds. For fixed
+c=(c_1,...,c_8) in Q^8, put c(n)=sum_r c_r/(8n+r), use S_-1^c=0, and define
+
+    G_c(k)=17*S_(17k-1)^c-16^(16k)*S_(k-1)^c, G_c(0)=0.
+
+At paper level, G_c extends continuously to Z_17 if and only if
+c belongs to span_Q{A,D}. Adding c(n)=15/(64n^2)+O(n^-3) forces c=A.
+This concerns only the fixed unshifted simple eight-pole family. It neither
+classifies infinite analytic moment perturbations nor proves a real visit.
+
+The new source is [Brumer, *On the units of algebraic number fields*,
+Theorem 1, printed p.121](https://doi.org/10.1112/S0025579300003703).
+For algebraic p-adic units with Q-linearly independent logarithms, it promotes
+their independence to algebraic coefficients. The parent and worker visually
+inspected the original publisher page, including its definitions and unit
+hypotheses. The full proof was not accessed; no effective estimate is used.
+
+Fix an embedding Q(sqrt(2),i) into C_17. With the preceding eight roots rho_j
+and beta_j=1-1/rho_j, every beta_j is a 17-adic unit: reduction rho_j=1 would
+contradict rho_j^8=16 modulo 17. Put L_j=log_17(beta_j). Apply Brumer to an
+actual Q-basis chosen from these logs, not to an assumed independent list.
+This permits the same field-component separation as in the complex argument.
+The zero-normalized Coleman period is
+
+    Pi_17(c)=-(1/8)*sum_j (sum_r c_r*rho_j^r)*L_j.
+
+The unit logarithm vanishes precisely at roots of unity. The ratios for
+L_0-L_4 and L_2-L_6 are respectively 3-2sqrt(2) and (1+2i*sqrt(2))/3,
+which are not roots of unity; the latter has trace 2/3 against its inverse.
+The rational-prime logs of 2, 3 and 5 are Q-independent by unique factorization.
+Now L_1-L_7=log_17(i)=0, whereas L_3-L_5 is nonzero, since its argument
+(4+3i)/5 has trace 8/5. Using U,V,W,Z,E_minus,E_0,E_1 defined above, the
+kernel conditions are exactly
+
+    U=V=c_8=E_minus=E_0-W=Z-E_1=0.
+
+Their rank is 6 and their kernel is span_Q{A,D}. This differs from the
+complex kernel because the p-adic logarithm kills the root-of-unity angle.
+
+The required boundary comparison extends linearly to all eight basis vectors.
+At p=17, lambda=16^17 and B=256, the prime transform is the identity;
+the matched pole has j=2r, including r=8,j=16. With ell=log_17(B) and
+J(x)=(exp(ell*x)-1)/x, the removable forcing is
+
+    h(x)=16^16*[17*sum_(j<17,r:j!=2r)c_r*16^(-j)/(136x+8j+r)
+                       -sum_r c_r*B^(-r)*J(8x+r)].
+
+Its Taylor valuations grow at least (15/16)(d+1)+C_c, so the existing
+finite-difference inverse constructs analytic Phi. Exact initialization gives
+G_c(k)=Phi(k)-lambda^k*Phi(0). Since 17^j tends to 0 and lambda^(17^j)
+tends to -1, continuity with G_c(0)=0 forces Phi(0)=0. The ordinary-disc
+Coleman comparison gives Phi(0)=-(17-1)*Pi_17(c)/16=-Pi_17(c).
+Its zero-disc primitive identity is retained in the frozen report; multiplying
+by t^136 removes all negative exponents, including the endpoint r=8.
+No p-adic series is evaluated outside its convergence disk. The existing
+analytic A/D results and linearity give the converse.
+
+For c=aA+bD the coefficient sum is -15b/2, so O(n^-2) decay forces b=0.
+The leading constant then forces a=1. D passes the continuity condition but
+has order n^-1 and period zero; excluding it identifies A without supplying
+an orbit inequality. Similarly, a rational seed s adds 16*lambda^k*s to
+this raw defect and destroys continuity unless s=0. This is a raw condition:
+integer seeds still leave every canonical fractional orbit value unchanged.
+
+The prospective consumer would have to turn actual word avoidance into a
+distinct normalized eight-pole forcing or a new logarithmic relation. No such
+step was found. A finite-state allowed language does not make an individual
+carry sequence rational or give this pole restriction; integer floors remain
+additional data. Further classification or Brumer formalization is suspended
+without an independent real-position consequence.
+
+Frozen packet `/tmp/pi-m4-analytic-family-consumer-20261127/` has report
+SHA-256 `930b11154b9fe6db1657a2aca658ce09f0a0edbc89216e03063c721bfc109cde`
+and manifest SHA-256
+`3c825ec38cf6c250a07ae5210ec527bc3d0d6260459e4f29238b7786924e254b`.
+Parent reconstruction, primary theorem-image inspection and unchanged-copy
+replay passed: 825 exact algebra checks, exit 0, identical receipt, originals
+preserved. The finite checks do not prove Brumer, Coleman continuation or
+analytic convergence. Independent integration review is recorded separately;
+no V or Lean theorem follows.
