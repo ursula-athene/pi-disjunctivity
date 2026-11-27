@@ -1792,3 +1792,70 @@ bridges and global covering. Subsequent edits record outcomes and that link
 correction only. Documentation (93 files), process tests (38), whitespace and
 preservation of 17 protected plus 11 unrelated files passed before review.
 No Lean build was repeated for these documentation-only changes.
+
+## Global support and sparse conductors — 2026-11-27 UTC
+
+Baseline is local commit `1d1410fd3e844d01f91ad2c6427bba6f6830e77a`.
+The global-support packet received independent read-only criticism from
+`/root/generating_review`, captured at
+`/tmp/pi-m4-global-support-paper-review-20261127.txt`. **D1: resolved:**
+the exact singleton requires max(K,floor(N/7))<=i<N; the original statement
+admitted forbidden zero-prefix indices. **I1: resolved:** the homogeneous
+content test only needs possible content primes r>=7. Both repairs were
+inspected in immutable report v3, with no other mathematical change.
+**Q1--Q2: open:** arbitrary exceptional-support cancellations and the distinct
+actual-V bridge. The explicit primitive CRT family is not a short dual.
+
+The parent read and reconstructed the complete report, checker and criticism.
+Its byte-unchanged replay in `/tmp/pi-m4-global-support-parent-replay-20261127/`
+passed 7,047 exact checks, identical receipt, all eight originals preserved.
+The new `/tmp/pi-m4-global-support-isqrt-20261127/check-v3.py` only replaces
+floating prime enumeration by isqrt; its identical receipt passed, and the
+reviewer inspected that exact delta. Finite Q11 checks concern original
+rows, primitive values and coordinate identities; Q11 is not exceptional.
+The large fixed Q and universal bounds remain paper mathematics.
+
+The sharp sparse-support packet is
+`/tmp/pi-m4-sparse-newton-support-20261127/`. Parent full reconstruction and
+byte-unchanged replay passed, exit 0, identical receipt and four preserved
+manifest-bound originals. It includes 154 independent conductor-minor checks,
+101 global-dual denominator checks, all root/globalization tests and 808
+complete-tail scalar minimizations. These finite results do not certify
+universal localization or asymptotic sparsity. Independent criticism by
+`/root/generating_review` completed, captured verbatim at
+`/tmp/pi-m4-sparse-newton-paper-review-20261127.txt`. **D: none; I: none
+required. Q1--Q3: retained open:** dense-support cancellation, attainment for
+prescribed global a-support, and the separate global-covering/actual-V bridges.
+The reviewer reconstructed the local sharpness, complete root interface,
+denominator bound and full-tail asymptotic consumer, and verified all four
+manifest-bound hashes and replay identity. Executions remain caller evidence.
+Final exact task-owned-diff review and focused repairs completed as below.
+
+Both adversarial guides and the replacement procedure govern these reviews.
+The completed reviewer performed read-only inspection, hashing and mathematical
+reconstruction, with no checker, probe, build, extractor, mutation, service
+or delegation. Earlier envelope/orthogonal/Newton estimates remain paper
+inputs. No Lean theorem or V acceptance is claimed. The negative-anchor
+inquiry is excluded from this checkpoint's mathematical scope.
+
+The frozen five-path integration packet is
+`/tmp/pi-m4-global-sparse-review-20261127/`, diff SHA-256
+`7e7cf5c5a08903223717765bc80bb2aef3905fe02d79121721d035b32f17d90e`.
+Full initial response `review-full.txt` has SHA-256
+`9d73183b53db4afcdc9bfe716ef807b0b19ae81df2da2825d424124a16bcc902`.
+Reviewer `/root/generating_review` verified all five production, 33 evidence,
+two guide and 28 preservation hashes and inspected the entire diff.
+**D1/I1: resolved** as above. **D2: resolved:** production now requires m>1,
+prime factors at least 7 outside Q, and products of all eligible primes up to
+a growing bound for the divergent limit. **D3: resolved:** local chain
+coefficients are gamma_m; b_j remains the positive budget. The exact repair
+diff has SHA-256
+`4056d00fbecc03a6431959dcd004eeaded4a94294295e862567ec332d61b998a`.
+Focused response `followup-full.txt` confirms both repairs and no other drift.
+**Q1--Q3: retained open:** larger-support cancellation, prescribed global
+support attainment, and global covering versus actual V. Documentation
+(93 files), process tests (38), whitespace and protected/unrelated preservation
+passed. No arithmetic rerun was requested for the domain/notation repairs;
+no Lean build was repeated for these documentation-only changes. Subsequent
+edits record review outcomes only. This accepts a local research checkpoint,
+not V or M4.

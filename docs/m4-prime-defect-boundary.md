@@ -1232,3 +1232,216 @@ under `/tmp/pi-m4-adaptive-window-isqrt-20261127/`; the same receipt passed
 and originals remain intact. No finite basis search, actual phase or Lean
 proof was used. Further local full-basis enlargement is suspended; global
 older-coordinate control and period-specific fibers remain open.
+
+## Global support vanishing and exceptional combinations
+
+Fix K>=1 and rational B>0. For an integer-valued dual of Gamma_(K,N), write
+w=sum q_i*a_i and retain the complete error
+
+    E_N(w,theta)=sum_(K<=j<N)b_j*|w_j-theta*beta_j|+|theta|tail_N.
+
+The q_i are rational integer-prefix coefficients; w_j are orthogonal-coordinate
+coefficients. For max(K,floor(N/7))<=i<N, set V_i=D/L_i and every other
+prefix zero. The lower-chain occurrence would require 7(i+1)<=N, so is absent.
+For each p>=7 dividing i+1 put k=(i+1)/p, H=floor(N/p), t=H-k. The original
+Newton rows have values (-1)^(r-k)*binom(r,k)*pD/L_i for k<=r<=H. Their
+required valuation increases with r, giving the exact minimal positive scale
+
+    D_(i,N)=product_(p>=7,p|i+1)
+      p^[H+1+v_p(L_i)+v_p(k!)+v_p(t!)]
+      =M_i*product_(p>=7,p|i+1)p^[t+v_p(t!)].
+
+This is a full global lattice witness. Its inverse moment coordinates are
+c_j=(D/L_i)*([t^i]R_j-16[t^(i+1)]R_j)/h_j for j>=i, and zero earlier.
+Roots of R_j in (0,1) bound the coefficient difference by
+binom(j,i)+16binom(j,i+1). For fixed C>0 and N-C*log N<=i<N, uniformly
+
+    log ||c||_b <= [F(i+1)+log8-4]*N+o(N),
+    tail_i/tail_N <= exp(log(16/15)*N+o(N)).
+
+Here log D<=N*F(i+1)+O(log^2 N); all constants retain fixed K,B,C.
+If E_N<1/2, integrality and the complete tail give
+|q_i*D|<=||c||_b*(1/2+tail_i/(2tail_N)). Consequently, for every fixed
+epsilon>0, eventually
+
+    F(i+1)<=tau-epsilon ==> q_i=0,
+    tau=4-log(128/15),  N-C*log N<=i<N.
+
+In particular F<=9/8 has a fixed positive margin. Applying the same real
+estimate to the unit-a_i inverse vector, without claiming its lattice
+membership, gives |q_i|<=exp(-tau*N+o(N)) at every such index of a short
+dual, including exceptional ones. If j is its largest nonzero q index,
+triangularity makes j its largest w index too. CRT surjectivity of the
+prefix projection lets w descend to cutoff j+1; the omitted zero w terms
+combine with the tail to give E_N=E_(j+1). This shortening is valid only
+at the actual support horizon, not at an arbitrary interior index.
+
+### Exceptional support does not bound the top denominator
+
+Fix Q with F(Q)>2 and p>=7 not dividing Q. Put N=pQh, n=N-1,
+e=v_p(L_n), J_p(h)=h+2+v_p(h!) and E=J_p(h)+e-1. The functional
+
+    W_(p,Q,h)=L_n/p^[J_p(h)+e] * Delta_Q^h G_p(0)
+
+is a global integer dual. Finite binomial expansion gives integer coefficients
+Delta_Q^h binom(k,r), zero for r<h, so the original Newton conditions imply
+the required p-divisibility; L_n clears all other denominators. Its support
+lies at pQr-1 and Qr-1 for 1<=r<=h, all exceptional, and its top coefficient
+is exactly p^(-E).
+
+For h>=ceil((K+1)/p) and N/r^v_r(N)>=K+1 for every prime r!=p dividing N,
+the dual is primitive. The newest-only witness restricts content primes to
+p>=7 dividing N. At p, prescribe G_p(k)=p^J_p(h)*binom(k,h), take free
+chain roots zero and clear other primes by a p-unit; the resulting W value
+is a p-unit because Delta_Q^h binom(k,h)=Q^h. At each other possible
+content prime r>=7, use the homogeneous r-chain rooted at N/r^v_r(N), with
+the root normalized by its envelope r-power. Its top a_n is an r-unit;
+earlier chain contributions acquire an r-factor through L_n/L_i. Clearing
+other primes by an r-unit preserves this. These witnesses need not be small.
+
+A fixed squarefree Q is the product of primes from 7 through 59,
+64092011671807087969; positive rational logarithm bounds certify F(Q)>2.
+Let m>1 be squarefree with every prime factor at least 7 and not dividing Q.
+Put N=Qm, h_p=m/p and E_p=J_p(h_p)+v_p(L_(N-1))-1.
+For D=product_(p|m)p^E_p, choose integer coefficients A_p with
+sum A_p*D/p^E_p=1. Then W=sum A_p*W_(p,Q,h_p) has top coefficient 1/D,
+exceptional support and primitive content under the preceding prefix conditions.
+The p-forcing witness makes its own summand a unit and the others divisible
+by p; a prime in Q sees the top value a_(N-1)/D modulo that prime.
+Along products of all primes p>=7 outside Q up to a growing bound,
+
+    log D/N=(1/Q)*sum_(p|m)log p/(p-1)+O(log^2 N/N) -> infinity.
+
+Nevertheless this family cannot be short. Keep its smallest prime p0 fixed.
+At i=N-p0*Q-1, only W_p0 has a primary endpoint; no secondary endpoint
+reaches i for sufficiently large m. Thus
+
+    q_i=-A_p0*h_p0*L_(N-1)/(p0^E_p0*L_i),
+    |q_i|>=p0^(-E_p0),
+    log(p0^E_p0)/N -> log p0/[Q*(p0-1)] < tau.
+
+The coefficient is a fixed distance from the top and violates the necessary
+near-top real bound. Primitivity prevents normalization from removing this
+obstruction. This excludes only the constructed family; further combinations
+might cancel the exposed coefficient. No global covering conclusion follows.
+
+Corrected report `/tmp/pi-m4-global-support-domain-fix-20261127/report-v3.md`
+has SHA-256 `f0142ebe08cd59fc4d5809f9a3afb772d5cfe5a6e7b8deb0bddd6cdda3ce5277`.
+Independent criticism resolved a missing i>=K singleton hypothesis and narrowed
+the homogeneous-chain step to possible content primes. The original packet
+`/tmp/pi-m4-global-support-20261127/` remains intact. Parent unchanged-copy
+replay passed 7,047 exact checks with an identical receipt and eight preserved
+files. A separate integer-square-root checker cleanup also passed identically.
+N28 tests singleton minimality and moment inversion; N1001,Q11 tests primitive
+single/CRT duals against original rows. Q11 is not exceptional: its algebraic
+fixture is distinct from the symbolic large-Q asymptotics. All universal
+arguments remain paper mathematics; no actual pi phase or Lean proof is used.
+
+## Sharp local conductors exclude globally sparse duals
+
+Fix a prime p, 1<=s0<=H and a nonempty S subset {s0,...,H}. Put
+d=s0+|S|-1 and H_i(x)=(x)_(s0)*product_(k in S,k!=i)(x-k). On the whole
+module G(0)=...=G(s0-1)=0 with Delta^j G(0) in p^(j+2)*j!*Z_p,
+an integral functional sum_(i in S)c_i*G(i) necessarily satisfies
+
+    v_p(c_i)>=-d-2-v_p(H_i(i)).
+
+These bounds are simultaneously attained. Integer Stirling changes of basis
+identify the interpolating polynomial module with G(x)=p^2*F(px),
+F in Z_p[x], degree<=H and the required zeros. Monic division shows that
+the isolated-value ideal at i is exactly p^(d+2)*H_i(i)*Z_p, attained by
+G=p^(d+2)*H_i. The functional
+
+    p^(-d-2)*sum_(i in S)G(i)/H_i(i)
+
+is the order-d divided difference of F on the integral nodes
+p*({0,...,s0-1} union S), and is integral. Reducing higher columns by the
+monic node polynomial shows that the restricted module is generated by
+(p^(j+2)*(i)_j)_(i in S), s0<=j<=d. The corresponding coupled conditions
+characterize its dual; separate coordinate bounds do not. For example,
+S={1,2},s0=1,c=(p^-4,0) satisfies the separate bounds but fails on p^3*x.
+Factorial and clustering costs are already present in H_i(i), so no general
+individual-coordinate improvement is possible. Polynomial witnesses and
+finite restrictions give the same conductors for the infinite Newton class.
+
+### Keep the free roots when returning to the global lattice
+
+For fixed p>=7 let R_t=V_(t-1) for p-free t and gamma_m=q_(m-1)*L_(m-1),
+zero off the original support. Unwinding every p-chain gives
+
+    w=sum_(p-free t)D_t*R_t+sum_k B_k*G_p(k),
+    D_t=sum_(r>=0) gamma_(p^r*t)*chi_p^r*16^(p^r*t-t)/p^r,
+    B_k=sum_(r>=1) gamma_(p^r*k)*chi_p^(r-1)*16^(p^r*k-p*k)/p^r.
+
+All sums stop at the cutoff. In particular D_t=gamma_t+chi_p*16^[t(p-1)]*B_t.
+Writing l_n=v_p(L_n), the exact envelope identity
+l_(p^r*t-1)=r+l_(t-1) makes the local root ranges p^(-l_(t-1))*Z_p.
+The zero prefix sets R_t=0 for t<=K and G_p(k)=0 for k<s0=floor(K/p)+1.
+Root variables and strong-Newton variables are otherwise independent. Global
+duals must therefore satisfy v_p(D_t)>=l_(t-1) for p-free t>K as well as
+the full coupled G-functional conditions. Rational basis witnesses have
+integer a-coordinates; a p-unit clears other primes, proving this localization.
+It supplies no bound on the real size of that clearing multiplier.
+
+Local conductor attainment need not preserve a specified global a-support.
+The earlier K1,N14 root witness has G_7=0, V_1=1/7 and
+V_13=-16^12/49, with a_13 a 7-unit. It violates a_13/7^4 integrality
+despite the G-only allowance. This guard is why roots cannot be omitted.
+
+### A complete-norm consequence for arbitrary sparse support
+
+Let A be the nonzero a-support, r=|A|, j=max A, m=j+1. For each p>=7
+dividing m put k=m/p, s0=floor(K/p)+1 and
+
+    U_p={(n+1)/p^u>=s0 : n in A, 1<=u<=v_p(n+1)},
+    d_p=s0+|U_p|-1,
+    H_(p,k)=(k)_(s0)*product_(t in U_p,t!=k)(k-t),
+    e_p=v_p(L_j)+d_p+1+v_p(H_(p,k)),
+    D_j(A)=product_(p>=7,p|m)p^e_p.
+
+The ambient ancestor set permits cancellations among B coefficients, but
+its top B_k=q_j*L_j/p cannot cancel. The local bound applies. At p not
+dividing m, the free root t=m instead forces q_j to be p-integral. At
+2,3,5 the lattice index is prime to that prime, giving the same conclusion.
+Hence D_j(A)*q_j is a nonzero integer. Since U_p subset {s0,...,k},
+d_p<=k and H_(p,k) divides k!, this D_j(A) divides the older bound M_j.
+Attainment for a prescribed global support is not asserted.
+
+The weighted ancestor count sum_(p|m)|U_p|*log p<=r*log m and
+v_p(H_(p,k))*log p<=d_p*log m give the explicit bound
+
+    log D_j(A)<=(r+K/7+1)*[(log m)^2/log7+log m]
+                                  +(log4/log7)*log m.
+
+The full-tail top-coordinate minimization, using |q_j|>=1/D_j(A), yields
+
+    E_N(w,theta) > (15/256)*L_j*h_(j+1)*b_(j+1)/D_j(A).
+
+Its numerator has logarithm (4-log8)*j+o(j). Therefore for fixed K,B and
+j tending to infinity, r=o(j/log^2(j+2)) forces the infimum over theta to
+grow exponentially, with lower exponential rate at least 4-log8. More
+quantitatively, every sequence of short global duals E_N<1/2 must satisfy
+
+    liminf r*log^2(j+2)/j >= (4-log8)*log7.
+
+On a hypothetically violating subsequence, r=O(j/log^2 j), so the linear-log
+remainder is o(j) and the norm lower bound gives the contradiction. These
+are a-support sizes, not c-support sizes. No uniform finite threshold follows.
+
+Ordinary-index deletion does not imply this sparsity. F(m)>9/8 includes
+every multiple of 7436429=7*11*13*17*19*23, a positive-density progression.
+Its count eventually exceeds j/log^2 j. Nor has deletion at every interior
+index been proved. Larger supports and cancellation of their entire real
+norm remain open, as do global period covering and actual V.
+
+Frozen report `/tmp/pi-m4-sparse-newton-support-20261127/report-v1.md`,
+SHA-256 `b8cfc2ab8c4dd6ae20c63c7c79b39ba6aadd50ef4fd21c9985b72462f84f7631`,
+contains the full arguments. Parent reconstruction and byte-unchanged replay
+passed: 154 independent minor-based conductor checks, 101 global-dual
+denominator checks, and the full column/root/globalization/support/norm
+checks, exit 0, identical receipt, four preserved originals. The universal
+module, localization and asymptotic arguments are paper proofs, not finite
+test conclusions or Lean exports. Independent criticism completed with no
+defect; the review record retains the dense-support, global-attainment and
+actual-visitation gaps. Final integration review and its focused domain/notation
+repairs passed; the review record owns the full dispositions.

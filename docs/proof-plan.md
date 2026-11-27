@@ -911,20 +911,27 @@ approximates the actual orbit with vanishing error and exposes the odd-division
 carry; its binomial valuation data do not control the coupled real phase.
 All these universal arguments are paper mathematics, not new Lean exports.
 
-The next arithmetic inquiry has a 40-minute reassessment bound: test whether
-very small single-prefix witnesses at ordinary near-top indices force zeros
-in global dual coordinates, then use the actual off-diagonal rows to constrain
-the remaining support. This is distinct from the refuted local full-basis
-repair and remains a comparison-model investigation. The completed fresh-context
-pass gives a [discrete-grid obstruction](m4-language-auxiliaries.md#the-actual-denominator-grid-still-admits-many-avoiding-entries)
+The [global-support inquiry](m4-prime-defect-boundary.md#global-support-vanishing-and-exceptional-combinations)
+proves ordinary-coordinate zeros near the support horizon. Primitive
+exceptional-supported duals can still have superexponential top denominators;
+an exposed earlier coefficient excludes the constructed family from shortness.
+The [sharp conductor follow-up](m4-prime-defect-boundary.md#sharp-local-conductors-exclude-globally-sparse-duals)
+retains free roots and ancestor coordinates and excludes arbitrary duals with
+a-support size o(j/log^2 j), including exceptional endpoints. Larger supports
+and their complete-norm cancellations remain uncontrolled. These comparison
+lattice results do not give global covering or actual visitation.
+
+The completed fresh-context pass gives a
+[discrete-grid obstruction](m4-language-auxiliaries.md#the-actual-denominator-grid-still-admits-many-avoiding-entries)
 to uniform polynomial certificates, even with actual denominator and finite
 seed precision. Its necessary odd-carry target remains unproved; replacement
-entries are not the actual initialized sequence. A new 25-minute inquiry tests
-sparse-support Newton interpolation and the exact global dual interface,
-seeking a quantitative norm consumer rather than another support reformulation.
+entries are not the actual initialized sequence. A separate 30-minute actual
+history inquiry tests whether the exact reflected identity and rational
+negative-index prefixes add a canonical-carry constraint. It must distinguish
+new information from backward recurrence or an unproved continuation of floors.
 The log owns bounds, outcomes and the failed source-applicability screens.
-V and all Lean contracts are unchanged; neither conditional wrapping nor
-more classification supplies visitation.
+V and all Lean contracts are unchanged; neither conditional wrapping nor more
+classification supplies visitation.
 
 For the recurrence defined in Step 4, seek a proof of
 

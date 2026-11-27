@@ -3570,3 +3570,51 @@ zero-prefix conditions and p-unit globalization remain explicit. Its endpoint
 is an exact sharper bound with a tested consumer, an attained obstruction,
 or an informative failure. No global covering or actual visitation result
 is assumed. The parent continues independent work and integration.
+
+**Global support and sparse conductors — 2026-11-27 UTC:** the discrete/source
+checkpoint is local commit `1d1410fd3e844d01f91ad2c6427bba6f6830e77a`.
+Its full review and focused navigation correction, documentation/process and
+whitespace checks, exact staged scope, and post-commit necessity/preservation
+checks passed. Nothing was pushed; no Lean file changed.
+
+The 40-minute global-support inquiry completed. Small global singleton
+witnesses force ordinary q-coordinates to vanish in a logarithmic window at
+the actual support horizon. A primitive exceptional-supported CRT family
+has superexponential top denominators, so support alone does not bound them.
+An exposed earlier coefficient nevertheless proves that this family cannot
+be short. Parent reconstruction and unchanged-copy replay passed 7,047 checks,
+exit 0, identical receipt and eight preserved originals. Independent criticism
+found a missing i>=K hypothesis in the exact singleton statement and a prime
+range clarification in the content proof. Both are corrected in a new v3
+report, with originals preserved; the eventual support theorem is unchanged.
+A separate integer-square-root checker cleanup passed the same receipt.
+
+The 25-minute follow-up completed a sharp local conductor theorem, its full
+root/ancestor interface and a complete-norm consumer for arbitrary sparse
+global duals. Short sequences with top index j tending to infinity must have
+liminf r*log^2(j+2)/j >= (4-log8)*log7, for fixed K,B and a-support size r.
+The local bound is attained by divided differences; this does not imply
+attainment for a prescribed global support. The exceptional set contains a
+positive-density progression, so its support restriction supplies no required
+sparsity. Parent reconstruction and byte-unchanged replay passed, with identical
+receipt and all four originals preserved. The checks include independent
+minors, root tests, p-unit globalization and the complete-tail minimization;
+the universal and asymptotic claims remain paper arguments. Independent
+criticism completed with no defect or required improvement; dense cancellation,
+fixed-global-support attainment and actual visitation remain open. Final
+production review found two compression defects: omitted CRT family domains
+and reuse of b for both a chain coefficient and the positive budget. Both
+were repaired and passed focused review; the full cycle is retained in the
+continuation review record. Documentation/process/whitespace checks passed.
+
+The next actual-sequence question has a separate **30-minute bound**. Worker
+`/root/actual_negative_anchor` owns
+`/tmp/pi-m4-negative-anchor-consumer-20261127/`. It tests whether the exact
+two-sided rational prefix graph and reflected zero can constrain canonical
+carries, first separating consequences already forced by backward recurrence.
+The opening was the negative rationality lost by earlier comparison models;
+neither 2-adic analyticity of B nor a hypothetical continuation of floors is
+taken as a real-word theorem. Its report and criticism are not yet accepted.
+The auxiliary lattice analysis remains directed at the comparison-model
+boundary; it is not substituted for the unchanged actual V obligation.
+V/C_odd/global covering remain open, B4/P3 retain visits, and M4 work continues.

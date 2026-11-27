@@ -7,7 +7,7 @@ The [continued research checkpoint](#continued-research-checkpoint--2026-11-26)
 records subsequent work during the user's absence; that checkpoint does not
 terminate the ongoing M4 effort.
 The latest dated continuation is the
-[Discrete entries and sparse-support continuation](#discrete-entries-and-sparse-support-continuation--2026-11-27-utc); read the
+[Global support and sparse conductors](#global-support-and-sparse-conductors--2026-11-27-utc); read the
 research log and actual checkout for subsequent results and current state.
 
 ## Baseline and authorized endpoint
@@ -1090,3 +1090,23 @@ global coordinate changes. Its scratch root is
 `/tmp/pi-m4-sparse-newton-support-20261127/`; no result from it is claimed here.
 Read the research log and verify live checkout/handles before resuming.
 V/C_odd/global covering remain unproved, B4/P3 retain visits, and M4 continues.
+
+## Global support and sparse conductors — 2026-11-27 UTC
+
+The discrete/source checkpoint is local commit
+`1d1410fd3e844d01f91ad2c6427bba6f6830e77a`; its review, checks and
+post-commit necessity inspection passed. Nothing was pushed. The
+[global support theorem](m4-prime-defect-boundary.md#global-support-vanishing-and-exceptional-combinations)
+and [sharp sparse conductor](m4-prime-defect-boundary.md#sharp-local-conductors-exclude-globally-sparse-duals)
+now restrict candidate dual obstructions. They do not control dense support,
+prove global covering or supply actual visitation. The global report's two
+domain corrections are integrated; sparse criticism completed with no defect.
+Final changed-file review and focused repairs of CRT domains and chain
+notation passed. Parent exact replays passed with originals preserved.
+
+A separate actual-history inquiry uses the reflected zero and rational
+negative-index prefixes, with a 30-minute bound and scratch ownership at
+`/tmp/pi-m4-negative-anchor-consumer-20261127/`. No result from that inquiry
+is accepted here. The log owns live handles, evidence and outcomes. No Lean,
+pin, audit, dependency or trust change has occurred. V/C_odd/global covering
+remain open, B4/P3 retain their premises, and authorized M4 research continues.
