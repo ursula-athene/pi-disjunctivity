@@ -3920,3 +3920,50 @@ which archived countermodel lacks its proposed resource. Its endpoint is a
 discriminating claim/test or a precise negative outcome and changed next
 question, not another name for actual selection. No unfinished result is
 accepted. V/C_odd/global covering and M4 remain open; work continues.
+
+**Ordered reciprocity and exact affine updates — 2026-11-27 UTC:** the
+polynomial/source checkpoint is local commit
+`73dd5cae0f7799b35aa5c75bd7027b43360c899d`. Its full/focused reviews,
+checks and post-commit necessity/preservation inspection passed. At inspection
+the branch was four ahead of its remote-tracking reference, index empty and
+task-owned tree clean; this run issued no push or PR. All 17 protected and
+11 unrelated hashes still matched the preservation snapshot.
+
+The 20-minute reset begun at 11:05:24 UTC completed by 11:21:27 UTC with
+no surviving actual-seed claim. Its ordered-sum inversion collision and
+failed half-shift sign rule are retained in the
+[mathematical assessment](m4-language-auxiliaries.md#ordered-reciprocity-retains-an-unestimated-carry-correlation).
+Parent replay passed 160 exact checks. Independent `/root/generating_review`
+found two missing domains: define the finite sum beyond coprime pairs, and
+require canonical inverse units at odd q. Both were repaired in immutable v2;
+the requested pairwise-versus-actual-statistic clarification was also applied.
+Focused review passed with actual-history selection and richer consumers open.
+
+At 11:23:57 UTC the same research worker began a distinct **15-minute**
+one-step affine-update test, completing at 11:32:59 UTC in
+`/tmp/pi-m4-affine-reciprocity-test-20261127/`. It derives the exact weighted
+carry remainder, including reduction and endpoint terms. A synthetic pair
+using actual A(1), with matching old/scaled sums and denominator reduction,
+has different output sums and opposite floor parity. Arbitrary finite raw
+2-adic agreement is possible, without a uniform height bound. No actual past
+is retained by that pair. Classical reciprocity moves the missing information
+to a numerator-dependent sum or selected lift; no telescoping consumer follows.
+Parent unchanged-copy replay passed 78 exact checks, with an identical receipt
+and all seven originals preserved. The primary classical formula was inspected
+in text and its rendered page; no full source-proof audit is claimed.
+Independent affine paper review by `/root/generating_review` completed with
+no defect or improvement; its actual-history estimate remains explicitly open.
+Final five-path integration review by `/root/logarithmic_source_review`
+completed with no new finding; earlier domain/scope repairs remain integrated.
+Documentation (93), process tests (38), whitespace and preservation checks
+passed. No Lean, audit, pin or dependency changed.
+
+At 11:33:11 UTC a fresh-context `/root/exact_function_recovery` began a
+**20-minute** meta-plan inquiry, deadline 11:53:11 UTC, scratch
+`/tmp/pi-m4-exact-function-recovery-20261127/`. It tests at most two precise
+implications using the exact finite rational function or logarithmic period
+against an entire eventually restricted carry language. It must distinguish
+the archived raw homogenization, natural-boundary and source-complexity
+failures. The endpoint is a discriminating claim/test or a precise changed
+question, not a renamed selection hypothesis. No unfinished result is adopted.
+C_odd, V, global covering and M4 remain open; work continues.

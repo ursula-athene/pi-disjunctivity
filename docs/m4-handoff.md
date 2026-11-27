@@ -7,7 +7,7 @@ The [continued research checkpoint](#continued-research-checkpoint--2026-11-26)
 records subsequent work during the user's absence; that checkpoint does not
 terminate the ongoing M4 effort.
 The latest dated continuation is the
-[Polynomial norms and logarithmic source limits](#polynomial-norms-and-logarithmic-source-limits--2026-11-27-utc); read the
+[Ordered reciprocity and exact affine updates](#ordered-reciprocity-and-exact-affine-updates--2026-11-27-utc); read the
 research log and actual checkout for subsequent results and current state.
 
 ## Baseline and authorized endpoint
@@ -1250,3 +1250,29 @@ A fresh bounded actual-seed reset is active; the research log owns its scope
 and outcome. It has supplied no accepted new candidate. No Lean, audit, pin,
 dependency or trust boundary changed. V/C_odd/global covering and M4 remain
 open; continue the authorized research after this checkpoint.
+
+## Ordered reciprocity and exact affine updates — 2026-11-27 UTC
+
+The preceding checkpoint is local commit
+`73dd5cae0f7799b35aa5c75bd7027b43360c899d`. Its complete/focused reviews,
+checks and post-commit necessity/preservation inspection passed. The branch
+was four ahead of its remote-tracking reference at the current inspection;
+this run issued no push or PR. Verify volatile state before continuing.
+
+The [ordered-sum inquiry](m4-language-auxiliaries.md#ordered-reciprocity-retains-an-unestimated-carry-correlation)
+identifies exact collisions and derives the affine update's weighted carry
+correlation, retaining gcd reduction and integer endpoint terms. The tested
+compressed state does not determine the next statistic or carry parity.
+This is a limitation of that proposed consumer, not every reciprocity method
+or the actual initialized sequence. The required actual-history estimate is
+still missing. Parent exact replays passed with preserved originals.
+Independent paper and production review receipts are owned by the
+[continuation review](agy-reports/m4-continuation-review.md#ordered-reciprocity-and-exact-affine-updates--2026-11-27-utc).
+All required reviews for this diagnostic checkpoint completed; the initial
+domain/scope repairs passed focused review. Documentation, process, whitespace
+and preservation checks passed.
+
+A fresh 20-minute exact-function recovery is active; the research log owns
+its handle, bound and outcome. No unfinished result is accepted. No Lean,
+audit, pin, dependency or trust boundary changed. C_odd, V, global covering
+and M4 remain open; continue authorized research after this checkpoint.

@@ -2196,3 +2196,68 @@ The reviewer verified the actual diff and all revised production hashes.
 Documentation and whitespace reruns passed; process tests remained unaffected.
 Subsequent edits record review outcomes only. The cycle has no remaining
 defect or required improvement; its mathematical obligations remain open.
+
+## Ordered reciprocity and exact affine updates — 2026-11-27 UTC
+
+Baseline is `73dd5cae0f7799b35aa5c75bd7027b43360c899d`.
+Independent `/root/generating_review` inspected the completed reset packet,
+original report SHA-256
+`24870f47aa46145999dcd0f3df2fd3f58522a98e20eed34bdf6a86cd61b774f5`.
+Full initial and focused responses are
+`/tmp/pi-m4-reciprocity-paper-review-20261127.txt` and
+`/tmp/pi-m4-reciprocity-focused-review-20261127.txt`.
+**D1--D2: repaired and verified:** the finite sum is defined beyond coprime
+pairs; the collision requires odd q>1 and canonical inverse units.
+**I1: implemented and verified:** replacements share the sum with each other,
+without asserting agreement with the actual statistic. Authoritative v2 has
+SHA-256 `8c1c0ffd96cc5889f96bc6501ebc515e37d759529455ca3776497d771746bd5a`.
+**Q1--Q2: retained open:** actual-history selection and richer shifted-sum
+consumers. The specified sign-rule failure does not settle those questions.
+
+The reviewer reconstructed inversion, the modular lift/floor argument and
+the even-numerator half-shift identity, and inspected every original artifact
+hash. Parent replay passed 160 exact checks, identical receipt and five
+preserved originals. Finite executions remain caller evidence; universal
+identities are paper results. Original packets were not overwritten by fixes.
+
+The separate affine packet's report SHA-256 is
+`7c083ca4a3bc6884644b214cd71d1969c65954b2f7e84b02a717ef420d3da2fe`.
+Parent reconstruction and unchanged-copy replay passed 78 exact checks,
+with an identical receipt and seven original artifacts preserved, recorded
+in `/tmp/pi-m4-affine-reciprocity-parent-20261127/replay.json`.
+The parent opened the primary source and visually inspected printed p.389.
+Its classical reciprocity statement is used; no full source-proof audit or
+application of the general three-variable theorem is claimed. Independent
+affine paper review by `/root/generating_review` completed; full response is
+`/tmp/pi-m4-affine-reciprocity-paper-review-20261127.txt`.
+**D/I: none. Q1: retained open:** control of the weighted correlation at the
+actual initialized entries. The reviewer reconstructed reduction for every
+positive g, endpoint cancellation, the bound, synthetic outputs and precision
+lifts, both reciprocal formulas and raw/canonical parity. It inspected the
+primary page and all six manifest-bound hashes. Executions remain caller
+evidence. Final exact changed-file review completed as recorded below.
+
+Both adversarial guides and the user-directed replacement procedure apply.
+No new Lean declaration, audit, pin, dependency or trust assumption is added.
+No calculation supplies actual C_odd/V or M4 acceptance. The new exact-function
+recovery is outside this packet's accepted mathematical scope.
+
+Documentation (93 tracked Markdown files), process tests (38) and working
+whitespace passed. The 17 protected and 11 unrelated hashes are preserved.
+No Lean build was repeated for this documentation-only checkpoint.
+
+Full integration review by `/root/logarithmic_source_review` completed on
+the frozen five-path diff, SHA-256
+`53b14d4603b2bfe3e789247523f72a85437bfb62f06458804248cdbf5ab2078a`.
+Packet `/tmp/pi-m4-ordered-affine-review-20261127/` retains `initial.diff`,
+the 5-production/25-evidence manifest, preservation inventory and full
+`review-full.txt` response. **D/I: none newly identified. Q1--Q2: retained
+open:** actual initialized control and richer history-dependent consumers.
+The earlier D1/D2/I1 repairs remain correctly integrated. The reviewer
+reconstructed the mathematical arguments, inspected the primary page and
+verified the actual diff, five production hashes and authoritative reports.
+Complete evidence/preservation inventories remain parent execution evidence;
+the reviewer did not independently recompute all entries. No checker, probe,
+build, extractor, mutation, service or delegation occurred. No substantive
+repair was required; subsequent changes record outcomes only. The review
+cycle is complete, with its mathematical obligations unchanged.

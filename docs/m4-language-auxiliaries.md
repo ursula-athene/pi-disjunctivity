@@ -822,6 +822,105 @@ identical receipts and all originals preserved. No actual q_N census or
 digit search was used. General identities/asymptotics remain paper results;
 C_odd, universal grid escape, V and M4 remain unproved.
 
+## Ordered reciprocity retains an unestimated carry correlation
+
+The completed actual-seed reset and affine-update test examine a specific
+compressed-state proposal, not all reciprocity methods. Put B(x)=fract(x)-1/2
+off the integers and B(x)=0 at integers. For integer p and integer q>=1 define
+
+```text
+s(p,q)=sum_(j=0)^(q-1) B(j/q)*B(p*j/q),
+R(p,q)=sum_(j=0)^(q-1) B((2j+1)/(2q))*B(p*(2j+1)/(2q)).
+```
+
+The finite sums are defined without coprimality. Residue permutation gives
+s(p,q)=s(p^(-1),q) when gcd(p,q)=1. Fix odd q>1 and canonical inverse units
+1<=a,b<q of opposite parity. For any k>=1 and raw residue r modulo 2^k,
+the unique K_a,K_b in [0,2^k) solving a+qK_a=b+qK_b=r modulo 2^k have
+opposite parity. Thus the two positive raw rationals share their denominator,
+ordered sum and raw precision, but have opposite floor parity. Canonical a,b are
+essential to identify those floors with K_a,K_b.
+
+For example q=4095, a=11, b=2606 give s=752741/24570. The raw numerators
+200666=49q+11 and 199166=48q+2606 are both 2 modulo 4 and lie between 0
+and 64q. They match the archived actual S_1 numerator 205826 only in that
+coarse congruence. Their sums agree **with each other**; no equality with
+s(205826,4095) is asserted. They do not retain the actual initialized past.
+
+Even/odd splitting gives R(p,q)=s(p,2q)-s(p,q). For even p, distribution
+of B further gives R(p,q)=s(p/2,q)-s(p,q). The half shift distinguishes
+some collisions, but a naive sign consumer fails: R(6,11)=-1/11 although
+0<6/11<1, and R(4,7)=0. These are limited counterexamples, not a proof
+that every function of shifted sums fails to determine parity.
+
+For the actual rational coefficient write P=120n^2+151n+47 and
+D=(2n+1)(4n+3)(8n+1)(8n+5), n>=0. Take an abstract integer u>=0 and odd
+q>=1 with gcd(u,q)=1. Set N=qD, v=16uD+Pq, g=gcd(v,N), p=v/g, Q=N/g.
+Then 16u/q+A(n)=p/Q in lowest terms, Q and g are odd, and p has the parity
+of n+1. The unreduced matrix has determinant 16D^2, not 1. Distribution
+of B, grouping residues modulo q, proves s(gp,gq)=s(p,q) for every positive
+g; the splitting identity gives R(gp,gq)=R(p,q) as well.
+
+With z_j=(2j+1)/(2N), the exact update is
+
+```text
+C=sum_(j=0)^(N-1) B(z_j)*floor(fract(16uD*z_j)+fract(Pq*z_j)),
+R(p,Q)=R(16u,q)+R(P,D)-C,
+abs(C)<=(N^2-1)/(8N).
+```
+
+Indeed B(a+b)-B(a)-B(b) is 1/2-floor(fract(a)+fract(b)) plus
+(1_(a+b integral)-1_(a integral)-1_(b integral))/2. Each weighted endpoint
+sum cancels under j -> N-1-j, as does the constant term. Reduction of the
+two remaining sums proves the formula. The bound is the total positive
+mass of B(z_j). It gives no sign or actual-history estimate for C.
+
+The scalar update fails even if R(16u,q) is supplied. At n=1, P=318,
+D=2457 and A(1)=106/819, the synthetic entries u/q=6/17 and 28/17 have
+R(u,q)=R(16u,q)=0, the same even numerator parity, g=3 and Q=13923.
+Their reduced outputs are respectively 80426/13923 and 368714/13923,
+with R=-6467/5967 and 2659/5967, and floors 5 and 26. Their weighted C
+values are 6592/4641 and -506/4641; R(P,D)=827/2457 in both cases.
+Thus the listed data determine neither the next scalar nor its floor parity.
+The full numerator is not among those compressed data.
+
+For any k>=1 choose t>=0 with 17t=-11 modulo 2^(k-1). Replacing 28 by
+28+34t matches 6 modulo 2^k, preserves the old sums, and shifts the next
+raw value by the even integer 32t. The output R, denominator reduction and
+floor parity are unchanged. No uniform height bound is claimed as k grows.
+Raw input floors need not vanish: floor(16(K+x)+A)=16K+floor(16x+A), so
+the next raw parity equals the canonical carry parity. None of these inputs
+is asserted to be an actual initialized entry.
+
+Classical reciprocity in Hall--Wilson--Zagier,
+[*Reciprocity formulae for general Dedekind--Rademacher sums* (1995), p.389](https://people.mpim-bonn.mpg.de/zagier/files/acta/73-4/fulltext.pdf),
+applies to positive coprime arguments with the stated integer convention.
+Subtracting its two instances gives, for positive coprime p,Q with Q odd,
+
+```text
+p=2r: R(2r,Q)=R(Q,r)+[-r/Q+Q/(2r)+1/(2rQ)]/12,
+p odd: R(p,Q)=R(2Q,p)+[-p/(2Q)+Q/p-1/(2pQ)]/12.
+```
+
+The reciprocal modulus depends on the full updated numerator. Reducing first
+to pbar=p-2Q*floor(p/(2Q)) instead retains floor(p/Q) mod 2=floor(pbar/Q),
+the unresolved selected half. Neither form supplies the required control of
+C at actual initialized entries. The source statement and page were inspected;
+its classical proof and general three-variable theorem were not adopted here.
+
+The reset's authoritative report is
+`/tmp/pi-m4-reciprocity-clarification-20261127/report-v2.md`, SHA-256
+`8c1c0ffd96cc5889f96bc6501ebc515e37d759529455ca3776497d771746bd5a`.
+It repairs the sum's domain and canonical-unit hypotheses, and distinguishes
+pairwise agreement from agreement with an actual statistic. The affine report is
+`/tmp/pi-m4-affine-reciprocity-test-20261127/report-v1.md`, SHA-256
+`7c083ca4a3bc6884644b214cd71d1969c65954b2f7e84b02a717ef420d3da2fe`.
+Parent unchanged-copy replays passed 160 and 78 exact checks with identical
+receipts and all original artifacts preserved. Universal identities remain
+paper mathematics; the checks are synthetic diagnostics, not actual phase
+computations. Separate paper reviews and the reset's focused repairs passed.
+No C_odd, V, global covering or M4 acceptance follows.
+
 ## Evidence boundary
 
 The frozen sine-zero report is `/tmp/pi-m4-sine-zero-report-v1.md`, SHA-256

@@ -977,9 +977,15 @@ certificate requires dist(theta*delta,Z)>E_N(w,theta). Absence of such a
 certificate supplies neither covering sufficiency nor actual-seed selection.
 The [logarithmic source screen](m4-language-auxiliaries.md#logarithmic-values-do-not-yet-supply-pointwise-exclusion)
 found complexity and whole-set embedding results, neither a pointwise
-exclusion theorem for the required transformed pi values. A fresh bounded
-actual-seed reset reassesses the next mechanism without adopting an unfinished
-candidate. The log owns bounds, outcomes and the failed applicability screens.
+exclusion theorem for the required transformed pi values. The completed
+[ordered-reciprocity test](m4-language-auxiliaries.md#ordered-reciprocity-retains-an-unestimated-carry-correlation)
+derives an exact affine update with a weighted carry correlation. Synthetic
+collisions rule out closure on the specified old/scaled sums and finite raw
+precision, even with denominator reduction supplied. The actual initialized
+correlation remains uncontrolled; richer reciprocity methods are not excluded.
+A fresh bounded inquiry tests the finite rational-function identity against
+an entire restricted carry language. No unfinished candidate is adopted.
+The log owns bounds, outcomes and the failed applicability screens.
 V and all Lean contracts are unchanged; neither conditional wrapping nor more
 classification supplies visitation.
 
