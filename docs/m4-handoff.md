@@ -7,7 +7,7 @@ The [continued research checkpoint](#continued-research-checkpoint--2026-11-26)
 records subsequent work during the user's absence; that checkpoint does not
 terminate the ongoing M4 effort.
 The latest dated continuation is the
-[Descendant costs and relative forcing](#descendant-costs-and-relative-forcing--2026-11-27-utc); read the
+[Finite-grid escape and source limits](#finite-grid-escape-and-source-limits--2026-11-27-utc); read the
 research log and actual checkout for subsequent results and current state.
 
 ## Baseline and authorized endpoint
@@ -1149,3 +1149,30 @@ A 25-minute complete-grid escape test is
 underway; its exact scope and handle are in the research log. No new result
 from it is accepted here. V/C_odd/global covering and M4 remain open, B4/P3
 retain their premises, no Lean or trust boundary changed, and research continues.
+
+## Finite-grid escape and source limits — 2026-11-27 UTC
+
+The descendant/relative-field checkpoint is local commit
+`c25b65627b8757fc6b10bcef67177feb633fdfba`; review, checks, exact staging
+and post-commit necessity/preservation inspection passed. A later read-only
+`git ls-remote` check found the remote branch at that commit;
+the local reflog records an update by push at 09:36 UTC. This research run
+issued no push. Subsequent checkpoint edits remain local until separately verified.
+The [completed grid inquiry](m4-language-auxiliaries.md#finite-canonical-escape-is-an-actual-threshold-covering-question)
+gives exact finite escape times and an explicit arithmetic covering question.
+Denominator growth preserves distinct states, and the generic interval error
+cannot prove escape. C<5 fails for the proposed bound uniform at every N;
+C=5 remains unproved and the partial N=3 search is inconclusive.
+
+Parent unchanged-copy replays and separate paper criticism passed. The targeted
+source screen also completed with no applicable escape theorem; outside-set,
+rationality and full-period premises remain essential. Its explicit domain
+clarification is integrated. Final review and focused correction of the
+nondegenerate source domain passed; documentation/process/whitespace checks passed.
+A 25-minute shifted-coefficient inquiry now tests whether rational identities
+can connect the actual carry constraints with useful parity/error control;
+the research log owns its handle and endpoint. No result from it is accepted
+here. A separate 20-minute meta-plan pass seeks at most two materially different
+candidates from unused exact structure, excluding the current gauge inquiry and
+archived failures. V/C_odd/global covering and M4 remain open, B4/P3 retain their premises,
+and no Lean, audit, pin, dependency or trust boundary changed. Work continues.

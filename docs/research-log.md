@@ -3696,3 +3696,70 @@ Partial samples cannot be reported as exhaustive; a finite result is not
 C_odd or V. No output from this new inquiry is accepted here. The zero-defect
 repair and relative norm/trace positivity inference are suspended; research
 continues toward the unchanged M4 target.
+
+**Finite-grid escape and source limits — 2026-11-27 UTC:** the
+descendant/relative-field checkpoint is local commit
+`c25b65627b8757fc6b10bcef67177feb633fdfba`. Exact staging, post-commit
+necessity and preservation checks passed; no PR or Lean change occurred.
+This run issued no push. A later read-only `git ls-remote` check
+verified the remote branch at c25b656; the local remote-tracking reflog records
+an update by push at 09:36 UTC. The publication state changed outside this run's
+actions; subsequent checkpoint edits remain local until separately verified.
+
+The 25-minute grid inquiry completed. Two exact algorithms exhaust the
+q_0=15, q_1=4095 and q_2=765765 grids, giving all-seed escape times 5,9,15
+and reduced times 4,9,15. A reduced nonactual N=2 witness rejects C<5 for
+the proposed horizon C(N+1) uniform in every N. A separately capped N=3
+search covers only 5,000,000 of 111,035,925 seeds; its lack of a 20-step
+survivor is inconclusive. No constant was refitted. The exact survivor
+intersection uses permuted half-intervals; all unfiltered states stay distinct
+even after forcing-field collapse. Continuum measure 2^-h and component
+counts give a lower-survival range but cannot certify emptiness.
+
+Parent byte-unchanged replay in
+`/tmp/pi-m4-finite-grid-parent-replay-20261127/` passed both scripts, with
+matching mathematical JSON results after excluding elapsed-time fields and
+six preserved originals. Independent critic `/root/generating_review`
+reconstructed the identities and found no defect or required improvement.
+The actual-threshold covering estimate and the incomplete N=3 case remain
+open; neither is a validation requirement for this explicitly finite report.
+
+A targeted **20-minute source screen** completed for Schleischitz's rational
+Cantor separation/exit bounds, Shparlinski's rational-membership/full-period
+restrictions, and Gilson's corrected v3 separation preprint. Primary versions,
+exact contracts, source hashes and application limits are retained in the
+[language assessment](m4-language-auxiliaries.md#source-limits-for-escape-and-separation).
+The first source assumes outside membership; removing actual forcing introduces
+an irrational translated seed. The second does not transfer full rational
+periods to actual A. The third withdraws the earlier exit claim. None closes
+the grid-cover gap. This is a statement screen, not full proof verification.
+
+Existing PDFKit rendered four theorem pages, all visually inspected. Its
+initial default-cache attempts exited 1; specifying a writable /tmp module
+cache recovered with exit 0, without installation or permission changes.
+Independent reviewer `/root/m4_strategy_reset` found no defect and requested
+explicit source domains. Immutable report v2 adds them; the original packet
+is preserved. Final integration review requested the p.1 missing-digit domain
+2<=|W|<b and a positive-dimension restriction for the local separation contract.
+The parent inspected that extra primary page and retained immutable v3; focused
+review of this repair passed with no remaining finding. Documentation (93),
+process tests (38), whitespace and preservation checks passed. No Lean theorem
+or proof-frontier advance is claimed from these paper/finite results.
+
+Next, `/root/actual_negative_anchor` has a **25-minute bound**, starting about
+09:37 UTC, to test rational shift/coboundary relations of exact A. The endpoint
+is a relation with a justified parity/error consumer, or an exact obstruction
+to that mechanism, after checking archived finite-filter/gauge failures.
+It must pivot if the initial question is already settled, and use only scratch
+files; no new census or constant fitting is requested. This changes the test
+from ambient denominator size to correlated forcing constraints. No output
+from the new inquiry is accepted here. V/C_odd/global covering remain open;
+the user requested a status update, which was answered without stopping work.
+
+At about 09:47 UTC, `/root/m4_strategy_reset` began a distinct **20-minute
+meta-plan recovery pass**. It must use the failure archive, exclude the active
+gauge inquiry, and return at most two materially different exact candidates,
+each with a concrete consumer and discriminating test, or a precise account
+of the missing resource. New notation for an already failed mechanism is not
+a new candidate. This is bounded ideation, not review or authorization to stop;
+no output from it is accepted in this checkpoint.

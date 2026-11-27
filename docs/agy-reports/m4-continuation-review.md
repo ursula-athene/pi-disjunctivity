@@ -1956,3 +1956,64 @@ covering and V still separate. Documentation (93 files), process tests (38),
 whitespace and preservation checks passed as caller evidence. No arithmetic
 rerun or Lean build was required for the wording repair. Subsequent edits
 record outcomes only; the current grid inquiry remains excluded.
+
+## Finite-grid escape and source limits — 2026-11-27 UTC
+
+Baseline is local commit `c25b65627b8757fc6b10bcef67177feb633fdfba`.
+Independent reviewer `/root/generating_review` reconstructed the completed
+grid packet, report SHA-256
+`33b49c60163ad2a1b3441b332a97d1c23b757d7086e54ffa822f32c6404fd162`.
+Full response `/tmp/pi-m4-finite-grid-paper-review-20261127.txt` records
+**D/I: none. Q1: retained open:** the particular threshold covering estimate.
+**Q2: retained open:** the capped N=3 search is inconclusive. Its completion
+is not required to validate the finite claim. C<5 is excluded only for the
+stated bound uniform in every N, not an eventual bound with small exceptions.
+The reviewer inspected both checker sources and six bound hashes but did
+not execute them. Parent unchanged-copy replays subsequently passed with
+matching mathematical receipts and originals preserved.
+
+Independent reviewer `/root/m4_strategy_reset` inspected the source packet,
+report v1 SHA-256
+`00faba698d020c2c1b8eae804fe09cc89b66941093b4ff0b3b391df6e676ef77`.
+Full response `/tmp/pi-m4-fractal-separation-paper-review-20261127.txt`
+records **D: none. I1: implemented:** explicit b>=3, xi in (0,1), positive
+r,q and digit range. Corrected immutable report v2 has SHA-256
+`dfae78226ab0ad1e2b6cc4d74140639ccbdb96a645d357ea7888ab685f71ddb8`.
+**Q1--Q3: retained open:** canonical-language identification, reduced
+replacement denominators, and actual uniform escape/C_odd/V. The reviewer
+independently viewed all four rendered source pages and checked thirteen
+packet hashes; retrieval/rendering remained caller evidence. The source
+proofs and full literature were not audited.
+
+Both reviewers read the required unchanged adversarial guides and replacement
+procedure. Neither ran a checker, probe, extractor, build, mutation, service
+or delegation. Parent PDF rendering recovered by using a writable temporary
+cache; this was a tooling issue, not a mathematical obstruction. The ongoing
+shifted-coefficient inquiry is excluded. No universal estimate, Lean result
+or M4 acceptance is claimed.
+
+Initial exact integration review completed against the frozen five-path diff
+`59b47914b2442223c93c238d6383339630fa021568c47d3125e6c0a1dd5e98b4`
+in `/tmp/pi-m4-grid-source-review-20261127/`. Full response is retained as
+`review-full.txt`. Reviewer `/root/generating_review` verified five production,
+33 evidence, two guide and 28 preservation hashes, reconstructed the integration
+and compared parent replay receipts. **D: none. I1: resolved** as above.
+**I2: resolved:** explicitly retain 2<=|W|<b from the source's p.1
+definition and Delta>0 in the local separation contract. Report v3 preserves
+the originals and the additional rendered page; the eight-digit application
+is unchanged. **Q1--Q2: retained open:** universal escape and source-to-actual
+orbit bridges. The focused repair review passed. Publication-ref changes
+and the newly bounded meta-plan pass are recorded separately from mathematics.
+
+The complete repaired diff has SHA-256
+`63748ae9d7e2fdd98e91293080d0d0853aeadc793e97cafb8bf0dbb56a315cac`;
+its diff-of-diffs against the original has SHA-256
+`3c11f210664a8c828d629951200c6d059094c4c45b78087f5c23bb635e9c60a2`.
+Full initial and focused responses have SHA-256, respectively,
+`8eca58d145a32908eb5da043c6f62f9584dd1fbc15fd98c2bbd58c407873b830`
+and `bdea12a0417f83314c9b9712178acbc97c29145da78cacb3419499385f1e3bf0`.
+The focused review verified all revised production/extra-evidence hashes and
+the unchanged originals, with no further finding. Documentation (93 files),
+process tests (38), whitespace and preservation checks passed as caller
+evidence. No Lean build was repeated for this documentation-only checkpoint.
+Subsequent edits record review outcomes only; the ongoing research is excluded.

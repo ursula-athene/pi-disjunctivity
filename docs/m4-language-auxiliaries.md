@@ -525,6 +525,128 @@ wording; final integration review and a counting-window clarification passed.
 A proposed shorter collapse
 constant was not adopted or needed for this result.
 
+## Finite canonical escape is an actual-threshold covering question
+
+Fix N>=0, q=q_N=den(S_N), and all canonical starts x_0=r/q,
+0<=r<q. Keep the exact future A, with
+c_(j-1)=floor(16*x_(j-1)+A(N+j)) and x_j its fractional part.
+Let R_h be the seeds whose first h carries are even; R_h^* restricts to
+gcd(r,q)=1. A uniform escape bound h<=C(N+1), for every N, would imply
+the weaker actual C_odd because fract(S_N) is a reduced seed. It would
+not by itself prove V. No such bound is established here.
+
+There is an exact fixed-grid description, despite changing forcing
+denominators. Put F_0=0, F_j=16*F_(j-1)+A(N+j), H_j=F_j mod 2 in
+[0,2), and w_j=8*16^(j-1)*r mod q. The canonical carry is even exactly
+when (2*w_j/q+H_j) mod 2 belongs to [0,1). The allowed integer residues
+J_j are the following half-open intervals:
+
+```text
+H<1:       [0,ceil(q*(1-H)/2)) union [ceil(q*(2-H)/2),q),
+1<=H<2:    [ceil(q*(2-H)/2),ceil(q*(3-H)/2)).
+R_h = intersection_(j=1)^h (8*16^(j-1))^(-1) J_j in Z/qZ.
+```
+
+The inverse is a permutation inverse since q is odd. A second algorithm
+uses Q_j=lcm(Q_(j-1),den(A(N+j))) and exact integer divmod of the canonical
+numerators. Both methods compared complete ordered survivor arrays at every
+step for these exhaustive grids:
+
+| N | q_N | First empty R_h | First empty R_h^* |
+| --- | ---: | ---: | ---: |
+| 0 | 15 | 5 | 4 |
+| 1 | 4095 | 9 | 9 |
+| 2 | 765765 | 15 | 15 |
+
+The reduced nonactual seed 13322/765765 has carries
+0,4,12,12,6,14,6,2,4,10,12,0,2,4,1. It rejects C<5 for a bound uniform
+in every N, not for an eventual bound allowing small exceptions. C=5 is
+unproved. A separate capped N=3 search examined only 5,000,000 of
+111,035,925 seeds for 20 even carries and found none; 106,035,925 seeds
+were unexamined, so that result is inconclusive. No larger constant was fitted.
+
+With forcing replaced by zero, complete period censuses instead leave
+8/4, 512/213 and 2080/0 permanent all/reduced survivors on these grids.
+These changed-forcing examples separate expansion from the role of actual A.
+The previously recorded exact-A trajectory x_j=2/15-E_(N+j) has carry 2
+forever, but its irrational initial entry is outside every rational grid.
+
+New forcing denominators also do not merge states: differences remain
+16^j*(r-s)/q modulo integers, so all q states stay distinct and form a
+translated q-grid before filtering. This persists after the relative
+cyclotomic stabilizer becomes trivial. Field collapse supplies no escape.
+
+For any forcing values in (0,1), each target has eight even-carry inverse
+branches, each of slope 1/16. The continuum survivor set has measure 2^-h
+and at most m_h=(8^(h+1)-1)/7 half-open interval components. Consequently
+
+```text
+abs(#R_h-q/2^h)<=m_h,
+abs(#R_h^*-phi(q)/2^h)<=2^omega(q)*m_h.
+```
+
+The archived denominator asymptotics give reduced survivors when
+h*log16<=(6-epsilon)N for fixed epsilon>0 and large N. The upper error
+grows like 8^h and never certifies an empty intersection. The missing input
+is an integer-strength upper count using the particular A-generated H_j.
+
+Frozen packet `/tmp/pi-m4-finite-grid-escape-20261127/` has report SHA-256
+`33b49c60163ad2a1b3441b332a97d1c23b757d7086e54ffa822f32c6404fd162`.
+Parent unchanged-copy replay passed both scripts; complete arrays/counts,
+fixtures and the partial receipt matched after excluding elapsed-time fields.
+All six original artifacts were preserved. Independent paper criticism found
+no defect or required improvement. The general identities and asymptotics
+remain paper results; finite computation proves no C_odd or V theorem.
+
+### Source limits for escape and separation
+
+[Schleischitz, arXiv:1812.10689v4](https://arxiv.org/pdf/1812.10689v4),
+Theorem 3.4, p.8, assumes a one-dimensional affine rational-preserving monic
+IFS with OSC and a rational p/q outside its Cantor set C. Our local usable
+contract restricts to positive dimension Delta>0. It gives
+dist(C,p/q)>exp(-rho*q^Delta), for sufficiently large rho(C). Theorem 4.9,
+pp.13-14, concerns an eventually periodic rational expansion in (0,1),
+base b>=3 and 2<=|W|<b (the p.1 definition), and assumes a digit outside
+W occurs; its first index is
+O(q_0^Delta) for reduced denominator q_0 and Delta=log|W|/log b.
+Neither establishes exit. Our application limit is stronger than a scale
+mismatch: removing the actual forcing introduces the irrational seed
+r/q_N+E_N. The natural translated IFS is no longer rational-preserving.
+Even for the standard eight-digit base-16 set, the displayed scale becomes
+exp((9/2)N+o(N)), not a linear horizon. Branch/borrow identification is
+also required before treating canonical carry avoidance as fixed digit avoidance.
+
+[Shparlinski, Theorem 1.1 and Lemma 2.1, p.23](https://doi.org/10.1017/S0004972720000386),
+give different rational restrictions. For base g>=2 and a nonempty proper
+digit set D, rational membership r/q in C(D), gcd(gr,q)=1, requires
+rad(q)>=c(g)log q and P(q)>=c(g)*sqrt(log q*log log q). For positive
+r,q with that coprimality, the full-period count of d in {0,...,g-1}
+satisfies abs(N_(r,q)(d)-tau(q)/g)<2*tau_0(q), where tau=ord_q(g)
+and tau_0=ord_rad(q)(g). The archived fresh primes of q_N meet the
+necessary denominator restrictions. No full-period transfer to actual A,
+or sufficient order ratio for q_N, has been established.
+
+The current [Gilson v3 abstract and revision comments](https://arxiv.org/abs/2601.11799v3),
+dated 10 September 2026, withdraw the earlier log-square exit/separation
+claims and retain conditional reductions. Its quadratic setting also does
+not contain the actual tail. No result from it is adopted.
+
+The source screen retains primary PDFs/HTML, hashes and four visually inspected
+theorem pages under `/tmp/pi-m4-fractal-separation-screen-20261127/`.
+Source SHA-256 values, respectively, are
+`1bbac7bd2e4d178682b44ded08cd80c9b23883dcaa63423d0592da704a3467e0`,
+`8b3c7a2529c38c6cd0e4db2cffb49353fd5cbaad2d45b29030e1fb1fbe4e7855`,
+and `0187a2dc1982489739784930fda4b31ad302425eab5366e142c029e150a2159b`.
+Independent criticism found no defect; explicit domain clarifications are
+incorporated in report v3, SHA-256
+`6b43f19d769c4c1990e3b4d1b0f6f952e19bebcdd8c23ddf2d1ac8cc76c9b047`.
+The additional p.1 definition was also rendered and visually inspected.
+The positive-dimension restriction excludes singleton attractors without
+adjudicating the source's broad IFS conventions.
+The denominator claims concern q_N, not every unreduced replacement seed.
+It assesses these statements and their application, not the full source proofs
+or all available literature. None supplies the missing actual-grid cover.
+
 ## Evidence boundary
 
 The frozen sine-zero report is `/tmp/pi-m4-sine-zero-report-v1.md`, SHA-256

@@ -948,11 +948,16 @@ actual rational prefixes are fixed by the automorphisms; their chosen analytic
 exponential phases are the missing selection data. This is a precise failed
 averaging consumer, not an infinite countermodel or visitation estimate.
 
-A new 25-minute test asks whether all entries on a small complete denominator
-grid escape the all-even carry language within a linear horizon under actual
-future A. It must give an exact survivor recurrence and distinguish finite
-counts from the unproved uniform bound. Neither grid exhaustion nor a generic
-escape comparison establishes actual C_odd or V.
+The [completed finite-grid test](m4-language-auxiliaries.md#finite-canonical-escape-is-an-actual-threshold-covering-question)
+gives exact escape times for three complete grids and an explicit intersection
+of permuted integer half-intervals. Small fixtures reject C<5 for a bound
+C(N+1) uniform in every N; C=5 and every universal escape estimate remain
+unproved. State injectivity persists after forcing-field collapse, and the
+generic component-count error cannot certify escape. The targeted source
+screen supplies neither an outside-Cantor premise nor a full-period transfer.
+A new 25-minute inquiry tests rational shift/coboundary relations of exact A:
+can a relation connect carry constraints while retaining parity and a useful
+real error bound? Archived finite-filter and gauge failures must not be repeated.
 The log owns bounds, outcomes and the failed source-applicability screens.
 V and all Lean contracts are unchanged; neither conditional wrapping nor more
 classification supplies visitation.
