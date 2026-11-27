@@ -1008,8 +1008,14 @@ and fails in this construction. The
 has linearly many poles and a canonical total representative of degree p-3.
 A separately reviewed finite-logarithm proof makes its initial finite part
 C(0) vanish for every split prime p>5, removing that initialized factor.
-The inspected completion bound remains vacuous. A bounded consumer inquiry
-now tests restricted-prefix representations and their actual estimate;
+The inspected completion bound remains vacuous. The
+[restricted-prefix test](m4-transform-phases.md#restricted-prefix-interpolation-and-modular-taylor-error)
+also requires exact representation degree to grow with prefix length and
+excludes sufficiently accurate fixed-degree polynomial approximation at a
+fixed start. An actual pole defeats termwise Taylor smallness after modular
+reduction, leaving collective cancellation open. Suspend these tested
+consumers without a new estimate. A fresh-context meta-plan inquiry tests
+whether nonlinear period structure provides a different costed constraint;
 no unfinished result is adopted. The log owns bounds and outcomes.
 V and all Lean contracts are unchanged; neither conditional wrapping nor more
 classification supplies visitation.

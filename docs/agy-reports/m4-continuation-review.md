@@ -2517,3 +2517,46 @@ and 11 unrelated hash, plus the live exact diff. Documentation (93), process
 tests (38), whitespace and preservation checks passed. Unchanged Lean was not
 rebuilt. Subsequent edits record outcomes only. This paper/documentation
 checkpoint's review is complete; V and M4 are not accepted.
+
+## Restricted-prefix consumers and a fresh reset — 2026-11-27 UTC
+
+Baseline `8938b680031fcb878481d915871eec734e6760dd`. Five documentation
+paths extend the transform-phase owner and update plan/log/handoff/review.
+The nonlinear-period reset is an inquiry only; no unfinished result is adopted.
+No Lean, protected definition, pin or dependency changed; V/M4 remain open.
+
+Independent `/root/generating_review` completed the original and focused
+paper review at 13:39:50 UTC, within its 12-minute bound. Full response:
+`/tmp/pi-m4-split-prefix-paper-review-20261127.txt`. **D: none. I1--I2:
+resolved:** a uniform approximation margin is explicit, and residue
+representatives change by multiples of p before division into angles.
+Authoritative `/tmp/pi-m4-split-prefix-clarification-20261127/report-v3.md`
+has SHA-256
+`c4f312a9f3515c4095e58a5b533bb2c06a66b45213bdb80639d1aa16a92dd6fa`.
+Original and intermediate v2 remain preserved; the original-to-v3 delta has
+exactly these two clarifications. **Q1: retained open:** the selected time-sum
+estimate; moving starts, growing degree, approximate rational functions and
+collective cancellation remain outside the proved obstructions.
+
+The critic reconstructed the local root counts, fixed-start finite-difference
+and no-wrap argument, and actual residue-1/4 Taylor example in both split
+classes. It checked all manifest-bound hashes, actual orbit/tail contracts,
+checker source and caller receipts. Parent unchanged-copy replay passed 937
+exact algebra checks with identical output and five preserved originals.
+Finite checks do not prove the universal arguments. Both adversarial guides,
+critic skill and current replacement procedure governed read-only criticism;
+no execution, mutation, service or delegation occurred.
+
+Full integration review by `/root/finite_log_independent_review` completed
+at 13:45:26 UTC on diff SHA-256
+`64d84d470eb5819ff7751bfb681eb171c7494118f2848520b20fecdec5dcc430`.
+Packet `/tmp/pi-m4-restricted-prefix-review-20261127/` retains the frozen
+diff, manifest, preservation inventory and complete `review-full.txt` response.
+**D/I: none additional. Q1: retained open:** the actual selected time-sum
+estimate, with all stated exceptions intact. The critic independently
+reconstructed the arguments, checked live/frozen diff equality and all 5
+production, 16 evidence, 2 guide, 17 protected and 11 unrelated hashes.
+Documentation (93), process tests (38), whitespace and preservation checks
+passed. No unchanged Lean build was repeated. Subsequent edits record outcomes
+only; no substantive fix was needed. This checkpoint's review is complete,
+with V/M4 still open and the nonlinear-period inquiry excluded.

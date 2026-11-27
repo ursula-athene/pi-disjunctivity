@@ -7,7 +7,7 @@ The [continued research checkpoint](#continued-research-checkpoint--2026-11-26)
 records subsequent work during the user's absence; that checkpoint does not
 terminate the ongoing M4 effort.
 The latest dated continuation is the
-[Finite-field conjugacy and its vanishing constant](#finite-field-conjugacy-and-its-vanishing-constant--2026-11-27-utc); read the
+[Restricted-prefix consumers and a fresh reset](#restricted-prefix-consumers-and-a-fresh-reset--2026-11-27-utc); read the
 research log and actual checkout for subsequent results and current state.
 
 ## Baseline and authorized endpoint
@@ -1395,3 +1395,26 @@ A 20-minute consumer inquiry is testing whether this simplification yields
 a usable representation on the selected short prefix, where the global
 degree bounds do not apply automatically. The research log owns its bounds
 and outcome. Continue research; V and M4 remain open.
+
+## Restricted-prefix consumers and a fresh reset — 2026-11-27 UTC
+
+The finite-field checkpoint is local commit
+`8938b680031fcb878481d915871eec734e6760dd`. Its reviews, checks, exact
+staging and post-commit inspection passed. At inspection the branch was
+nine ahead of its remote-tracking reference, index empty and task-owned
+tree clean. Subsequent edits are uncommitted; this run issued no push or PR.
+
+The [short-prefix consumer](m4-transform-phases.md#restricted-prefix-interpolation-and-modular-taylor-error)
+has local exact-degree lower bounds and a separate fixed-start approximation
+obstruction. Its modular approximation corollary retains a uniform error
+margin. The Taylor countertest uses an actual BBP pole, but excludes only
+termwise smallness; collective cancellation remains open. Moving starts,
+growing degree and approximate rational representations are not ruled out.
+
+Parent replay passed 937 exact algebra checks with identical output and five
+originals preserved. Separate paper review and the two wording clarifications
+passed; full integration review found no new D/I item. Documentation, process,
+whitespace and preservation checks passed. No Lean or trust boundary changed.
+A fresh-context 20-minute reset now tests nonlinear period structure against
+an actual costed consumer. The log owns its bound and outcome; no unfinished
+claim is adopted. Continue M4, whose visitation estimate remains unproved.

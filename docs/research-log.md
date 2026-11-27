@@ -4191,3 +4191,37 @@ UTC. The actual selected-prefix estimate remains open. Documentation (93),
 process tests (38), whitespace and protected/unrelated preservation checks
 passed. This checkpoint records paper results only; unchanged Lean was not
 rebuilt. Research continues through the separate consumer inquiry.
+
+**Restricted-prefix consumers and a fresh reset — 2026-11-27 UTC:** the
+finite-field checkpoint is local commit
+`8938b680031fcb878481d915871eec734e6760dd`. Its reviews, checks, exact
+staging and post-commit necessity/preservation inspection passed. The index
+was empty and task-owned tree clean; the branch was nine ahead of its
+remote-tracking reference. This run issued no push or PR.
+
+The short-prefix inquiry completed at 13:35:46 UTC, within its bound.
+Its two tested mechanisms retain exact/approximate representations as
+different questions and distinguish termwise Taylor error from collective
+cancellation. Parent read the complete paper/checker and replayed 937 exact
+algebra checks, with identical receipt and all five original files preserved.
+Separate paper review completed at 13:39:50 UTC, with no defect. I1--I2
+were resolved in immutable v3: the modular approximation needs a uniform
+margin as T grows, and a field representative changes by a multiple of p.
+Q1 retains the selected-prefix estimate, including moving starts and collective
+cancellation outside these obstructions. No new visitation claim is adopted.
+
+At 13:32:35 UTC a fresh-context `/root/m4_unused_structure_reset` began a
+**20-minute** meta-plan discovery pass, deadline 13:52:35 UTC, scratch
+`/tmp/pi-m4-unused-structure-reset-20261127/`. It seeks at most two materially
+different uses of BBP-specific structure with an actual pointwise consumer,
+starting with an exact test of a possible nonlinear period constraint.
+The failure inventory explicitly excludes another linear alternate state,
+null gauge, generic completion or unconsumed classification. The endpoint is
+a worked candidate or failed transfer with its first missing implication.
+No actual digit/phase census or unfinished candidate is adopted. V/M4 remain open.
+
+The restricted-prefix checkpoint's full integration review completed at
+13:45:26 UTC with no new D/I item. Its actual selected time-sum estimate
+remains open. Documentation (93), process tests (38), whitespace and
+preservation checks passed. No Lean change or rebuild; the ongoing
+nonlinear-period inquiry remains outside this reviewed result.

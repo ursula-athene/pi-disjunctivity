@@ -555,3 +555,101 @@ structure. Full periods, seed averages and the vanishing constant alone
 do not supply that control. Both universal paper arguments have separate
 immutable reports and caller replays; their review/integration evidence is
 recorded in the continuation review. No new Lean theorem or visit follows.
+
+## Restricted-prefix interpolation and modular Taylor error
+
+The next consumer test uses the proved split-prime constant zero, but asks
+separately about exact representations, approximate phases and termwise
+Taylor error. Let p=1 mod D_T, p>8T+6, and U_n=C(n+1) for 0<=n<=T.
+No existence or least-size theorem for these auxiliary primes is used here.
+
+If a rational H=U/V of numerator/denominator degrees at most d, with no
+poles at 0,...,T, matches C(n+1) there, then
+H(n+1)-16*H(n)=A(n+1) at T distinct points. Writing A(z+1)=N_+(z)/D_+(z),
+cross-multiplication gives the polynomial
+
+```text
+D_+(z)*(U(z+1)*V(z)-16*U(z)*V(z+1))-N_+(z)*V(z)*V(z+1),
+```
+
+of degree at most 2d+4. If T>2d+4, it vanishes identically, forcing
+H(z)=R(z+1) by uniqueness. Its approximately 5p/8 poles contradict that
+degree bound. Thus d>=ceil((T-4)/2) for T>=5. For polynomial H the
+cleared degree is at most d+4 and an identity cannot equal the four-pole
+A(z+1), giving d>=T-4. Ordinary interpolation gives the upper bound T.
+On a window of L consecutive points the corresponding lower bounds are
+ceil((L-5)/2) and L-5, when positive. These are local arguments, not
+applications of the earlier global extension bounds. Exact character
+equality implies field equality when h is nonzero modulo p; approximate
+character equality does not. Constant size of an affine recurrence matrix
+also does not imply bounded phase degree or a sum estimate.
+
+There is a distinct approximation obstruction. Fix h!=0 integral, d>=0,
+M>=0 and 0<=epsilon<1/(17*2^(d+1)). There cannot be arbitrarily large T
+with real polynomials Q_T of degree at most d such that
+
+```text
+||h*S_n-Q_T(n)||_(R/Z)<=epsilon  for every M<=n<=T.
+```
+
+Coefficients may vary with T. Set q=d+1. Taking q forward differences
+kills Q_T; integer corrections still have integer differences, while the
+absolute binomial weights sum to 2^q. The exact tail identity gives
+
+```text
+Delta^q S_n=15^q*16^n*pi-Delta^q E_n.
+```
+
+Choose 2^q*epsilon<delta<1/17. Since E_n tends to zero, one N>=M,
+independent of T and of the approximant, ensures
+||16^n*beta||<=delta for N<=n<=T-q, where beta=h*15^q*pi.
+Signed representatives x_n in [-delta,delta] then satisfy
+x_(n+1)-16*x_n integral with absolute value at most 17*delta<1, hence zero.
+Consequently
+
+```text
+0<||16^N*beta||<=delta*16^(-(T-q-N)).
+```
+
+The fixed positive left side, from irrationality of pi, bounds T. This
+rejects the specified approximation; it does not infer visitation from
+irrationality. Moving starting indices, growing degree, larger errors and
+approximate rational functions remain outside the conclusion.
+
+For a family of modular approximations, the angular comparison error is
+at most (64/15)*|h|*16^T/p_T. The same proof requires a uniform margin
+
+```text
+epsilon_mod(T)+(64/15)*|h|*16^T/p_T
+  <=epsilon_*<1/(17*2^(d+1)),
+```
+
+with epsilon_* fixed as T grows. Pointwise inequalities without that gap
+are not justified by the displayed proof. Changing a field representative
+by a multiple of p changes its divided angle by an integer. Angular error
+here is distance in R/Z, not complex chord distance.
+
+The second test uses an actual pole: u=(p+1)/2 has residue 1/4 for every
+split p>5. For f(z)=(1/4)/(z-u), its degree-d Taylor polynomial J_d at zero
+satisfies
+
+```text
+f(z)-J_d(z)=(1/4)*z^(d+1)/(u^(d+1)*(z-u)).
+```
+
+At z=2 the absolute real remainder for the lift u=(p+1)/2 is
+(1/(2*(p-3)))*(4/(p+1))^(d+1). Nevertheless reduction modulo p gives
+E_d=2*4^d/3, since u=1/2 in F_p. For auxiliary p=1 mod3 and K=2*4^d<p,
+the canonical representative is (p+K)/3, strictly between p/3 and 2p/3.
+Thus |e_p(E_d)-1|>=sqrt(3) at frequency 1. This is the second selected
+time, n=1, whenever T>=1; if p>2*16^T it also covers every d<=T.
+The negative phase sign only conjugates the exponential. Frequencies
+divisible by 3 need not have this particular obstruction.
+
+This exact example rejects termwise real Taylor smallness after modular
+reduction. It does not bound the full remainder: contributions from other
+poles may cancel. Neither tested consumer yields the required selected
+time-sum estimate. Any continuation of this route must control collective
+modular cancellation, rather than infer it from pole distance, interpolation
+or the vanished constant. The paper report, replay and separate criticism
+are recorded in the continuation review; no new Lean result is asserted.
