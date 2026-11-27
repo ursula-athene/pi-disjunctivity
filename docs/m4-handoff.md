@@ -7,7 +7,7 @@ The [continued research checkpoint](#continued-research-checkpoint--2026-11-26)
 records subsequent work during the user's absence; that checkpoint does not
 terminate the ongoing M4 effort.
 The latest dated continuation is the
-[Global arithmetic and integer sampling](#global-arithmetic-and-integer-sampling--2026-11-27-utc); read the
+[Discrete entries and sparse-support continuation](#discrete-entries-and-sparse-support-continuation--2026-11-27-utc); read the
 research log and actual checkout for subsequent results and current state.
 
 ## Baseline and authorized endpoint
@@ -1068,3 +1068,25 @@ read it and verify the checkout before continuing. Full local basis repairs,
 derivative-only sampling, and valuation-only arcsine phase claims are suspended.
 Global period covering, actual carry control and V remain unproved. Hpi/T/M4
 remain open, B4/P3 retain visitation premises, M5 is excluded, and work continues.
+
+## Discrete entries and sparse-support continuation — 2026-11-27 UTC
+
+The global-arithmetic/sampling checkpoint is local commit
+`0d8b849176116446acdd8edb320656256009ca4b`; its review, checks and
+post-commit necessity inspection passed. Nothing was pushed. The subsequent
+[discrete-grid test](m4-language-auxiliaries.md#the-actual-denominator-grid-still-admits-many-avoiding-entries)
+retains exact future forcing, denominator and finite seed bits in many
+replacement entries, showing why uniform low-degree certificates cannot
+select the actual entry. The weaker actual odd-carry target is still open.
+Independent criticism and parent replay passed; the character-pair scope
+clarification is integrated. Final changed-file review remains pending.
+
+A short source screen found no applicable Gauss-rigidity or restricted-rational
+counting bridge; the research log records the exact hypothesis mismatches,
+original source locations and evidence. The global-support worker continues
+within its original bound. A distinct 25-minute sparse-support inquiry seeks
+a sharp p-local conductor bound and a real-norm consumer, with explicit
+global coordinate changes. Its scratch root is
+`/tmp/pi-m4-sparse-newton-support-20261127/`; no result from it is claimed here.
+Read the research log and verify live checkout/handles before resuming.
+V/C_odd/global covering remain unproved, B4/P3 retain visits, and M4 continues.

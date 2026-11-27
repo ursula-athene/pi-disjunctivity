@@ -3510,3 +3510,63 @@ seeks an actual-initialization/avoidance implication, rejecting ideas already
 covered in the archive. Both endpoints require a new precise bound or an
 informative failure, not renamed visitation. No outcome is claimed here.
 The user-directed continuation remains active; V/Hpi/T/M4 remain open.
+
+**Discrete entries and source applicability — 2026-11-27 UTC:** the preceding
+seven-file checkpoint is local commit
+`0d8b849176116446acdd8edb320656256009ca4b`. Its full review, exact staged
+scope, 93-file documentation check, 38 process tests, whitespace checks and
+17 protected/11 unrelated preservation checks passed. Post-commit scope,
+parent, diff hash, empty index and necessity inspection passed; no follow-up
+change was warranted. Nothing was pushed.
+
+The 30-minute fresh-context pass completed the
+[discrete grid test](m4-language-auxiliaries.md#the-actual-denominator-grid-still-admits-many-avoiding-entries).
+Under a quantified linear horizon/seed-precision budget, exponentially many
+reduced entries retain the actual denominator, prescribed numerator bits and
+exact future A while avoiding a word. Uniform strict integer-evaluation
+certificates must pay for all those roots. A weaker actual target, infinitely
+many odd canonical carries, remains open; a finite character pair only shows
+non-determination among replacements. Parent reconstruction and byte-unchanged
+replay passed with identical receipt and all four originals preserved.
+Independent criticism found no blocking defect; its replacement-only
+quantifier clarification is implemented in production. Final integration
+review remains pending. No actual canonical numerator or pi digit was evaluated.
+
+A separate **20-minute source-applicability screen** sought a rigidity or
+population theorem with an actual-entry consumer. The parent inspected
+[Beukers--Houben--Straub, Theorem 8.1, p.18](https://arminstraub.com/downloads/pub/gausscongruences.pdf#page=18):
+the generating function must already be rational, and the Gauss property
+requires coefficient integrality at almost all primes. The existing actual
+moment series fails both requirements; separate prime-dependent interpolants
+do not repair them. This classification supplies no new rigidity bridge.
+
+[Chow--Varju--Yu, Theorem 1.2, pp.2--3](https://wrap.warwick.ac.uk/id/eprint/195877/7/1-s2.0-S0001870826000290-main.pdf#page=3)
+bounds the population of rational members of one fixed infinite missing-digit
+set. Blocking a forbidden word fits the one-omitted-digit alphabet, but
+finite shadowing does not place rational BBP prefixes in that set. No large
+enough collection of distinct rational members was constructed. This result
+also supplies no actual-numerator selection. Both sources were read in their
+original context, with relevant pages visually inspected by parent and critic;
+neither full source proof was independently audited. The frozen assessment is
+`/tmp/pi-m4-rigidity-source-screen-20261127/assessment-v1.md`, SHA-256
+`924ec16e4d2710dbf5f82b0a565d7cdbd8cca98d618d9fd388dcae31cd214d84`.
+Independent criticism found no defect or required improvement, retaining the
+two missing application bridges. These are informative applicability failures,
+not new theorem exports or a literature-exhaustion claim.
+
+The global-support inquiry continues within its original 40-minute bound.
+Its next test concerns the real norm of duals surviving the ordinary-support
+zeros. A proposed sparse-support interpolation bound is exploratory and not
+yet an accepted global theorem. No larger finite basis campaign is underway.
+V, C_odd, global covering, Hpi/T/M4 remain open; M5 remains excluded.
+
+A **25-minute sparse-support inquiry**, begun at 08:10 UTC, now tests the
+sharp p-local conductor of arbitrary finite Newton-support sets and its
+consumer for the complete real dual norm. Worker `/root/m4_strategy_reset`
+owns `/tmp/pi-m4-sparse-newton-support-20261127/`. The current global worker
+already has an elementary interpolation/interface calculation; the new pass
+must go beyond that calculation, not duplicate it. p-power ancestor mixing,
+zero-prefix conditions and p-unit globalization remain explicit. Its endpoint
+is an exact sharper bound with a tested consumer, an attained obstruction,
+or an informative failure. No global covering or actual visitation result
+is assumed. The parent continues independent work and integration.

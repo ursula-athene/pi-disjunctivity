@@ -1738,3 +1738,57 @@ above. The reviewer ran no checker, probe, build, extractor, mutation, service
 or delegation. Subsequent edits record this outcome only. Documentation
 (93 files), process tests (38) and whitespace passed before review; final
 validation and preservation are checked again before the local commit.
+
+## Discrete entries and source applicability — 2026-11-27 UTC
+
+Baseline is local commit `0d8b849176116446acdd8edb320656256009ca4b`.
+The discrete-grid argument received independent read-only criticism from
+`/root/generating_review`, captured in full at
+`/tmp/pi-m4-strategy-reset-paper-review-20261127.txt`. **D: none. I1: resolved**
+in production: the opposite-parity character pair separates replacement
+numerators only, and refutes no actual-sequence rule, universal or eventual.
+**Q1--Q2: retained open:** actual canonical-numerator parity and methods that
+use additional actual history to select one entry. The critic read all four
+manifest-bound artifacts and the parent replay receipt and reconstructed
+the interval, count, polynomial-height and raw-congruence arguments.
+
+The parent read the complete report/checker/criticism and reconstructed its
+claims, then replayed the byte-unchanged checker in
+`/tmp/pi-m4-strategy-reset-parent-replay-20261127/`: exit 0, identical receipt,
+all four originals preserved. It passed 575 interval counts, 7,554 entries,
+14,988 carry steps, 99 coefficient checks, 460 progression checks, three
+primitive products, 288 raw-precision steps, one character pair and 54
+actual-denominator cases. Synthetic rational tails retain exact future A;
+these checks do not certify the actual irrational-tail construction or
+universal asymptotics, and evaluate no actual canonical numerator or pi digit.
+
+The separate source screen received criticism from the same reviewer,
+captured at `/tmp/pi-m4-rigidity-source-paper-review-20261127.txt`.
+**D: none; I: none required; Q1--Q2: retained open:** a qualifying rational
+generating function with actual canonical information, and sufficiently many
+rational members of one infinite missing-digit set. Parent and reviewer both
+visually inspected Gauss pp.1/18 and Cantor pp.2--3; all 11 evidence hashes
+matched. The scope is statement/application inspection, not an audit of the
+complete source proofs. Retrieval/rendering are caller evidence.
+
+Both reviews reused full readings of the two unchanged adversarial guides.
+The reviewer ran no checker, probe, build, extractor, mutation, service or
+delegation. Raw captures remain temporary. Ongoing global/sparse-support
+inquiries are not accepted by these paper reviews. No Lean, trust, dependency
+or visitation contract changed.
+
+Final integration packet `/tmp/pi-m4-discrete-source-review-20261127/` has
+diff SHA-256
+`4bfed9e745f6abedbed579d691963cfceb05f13891bced7d8e15ce1939ba1d77`.
+The complete response is `review-full.txt`, SHA-256
+`b842fa10b276b7bf87c5e3d007087891cd4e325407ba006dd96fa8d59fc85292`.
+Reviewer `/root/generating_review` verified all five production, 24 evidence
+and two guide hashes and completed the exact-diff review. **D: none; I1:
+resolved** as above. **I2: resolved:** the handoff's opening now links to
+its latest appended continuation. Focused inspection confirmed the navigation
+fix and no substantive drift; the full response is `followup-full.txt` in
+the packet. **Q1--Q2: retained open:** actual selection, source application
+bridges and global covering. Subsequent edits record outcomes and that link
+correction only. Documentation (93 files), process tests (38), whitespace and
+preservation of 17 protected plus 11 unrelated files passed before review.
+No Lean build was repeated for these documentation-only changes.

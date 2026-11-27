@@ -340,6 +340,92 @@ checks do not evaluate actual A phases or certify the infinite logarithmic
 integral. Uniform real-entry polynomial smallness is suspended for this
 class; discrete or differently constrained consumers are not ruled out.
 
+## The actual denominator grid still admits many avoiding entries
+
+The preceding continuous-entry obstruction has a quantitative discrete version.
+Write the actual reduced raw prefix as S_N=P_N/q_N, its floor as K_N and
+its canonical numerator as a_N=P_N-K_N*q_N. Put x_N=a_N/q_N and retain
+16^N*pi=S_N+E_N. The established q_N is odd, log q_N=6N+o(N), and
+0<E_N<1/15 with 16E_N-E_(N+1)=A(N+1).
+
+Fix a nonempty forbidden word w and let B be {1,...,14} excluding its final
+symbol, with m=|B|>=13. Set I=[1/15,14/15]. For each b in B^h, let p_b
+be its base-16 code. The m^h closed intervals
+
+    J_b=(p_b+I)/16^h-E_N
+
+are disjoint, lie strictly in (0,1), and have length 13/(15*16^h).
+Backward branches theta_j=(b_(j+1)+theta_(j+1))/16 preserve I. Therefore
+X_j=theta_j-E_(N+j) stays strictly in (0,1), and the exact tail identity gives
+16X_j+A(N+j+1)=b_(j+1)+X_(j+1). Both closed endpoints are safe. Every entry
+in J_b consequently has precisely those h future canonical carries under the
+unchanged A. Excluding w's last symbol also prevents an occurrence crossing
+any fixed admissible past-language boundary. The actual past is not retained.
+
+For odd q>=3, k>=0 and any residue r modulo 2^k, the number R of these entries
+a/q with 0<a<q, gcd(a,q)=1 and a=r modulo 2^k satisfies
+
+    R >= m^h*((13/15)*phi(q)/(2^k*16^h)-2^omega(q)).
+
+For each interval, Mobius inversion counts one progression modulo 2^k*d for
+each squarefree d|q. A closed progression count differs from length/spacing
+by at most one, giving the stated error uniformly in r and the real shift.
+The bound may be nonpositive at finite anchors. Since q>=(omega(q)+1)!,
+log q_N=6N+o(N) implies omega(q_N)=o(N); also phi(q)>=q/2^omega(q).
+For every fixed epsilon>0, if k*log2+h*log16<=(6-epsilon)*N, eventually
+
+    R >= (13/30)*phi(q_N)*2^(-k)*(m/16)^h
+      >= exp(epsilon*N+h*log m+o(N)).
+
+This applies even to r=a_N modulo 2^k without identifying a_N. Suppose a
+nonzero rational polynomial P of degree d, with bP integral for integer b>0,
+has |P(a/q)|<1/(b*q^d) uniformly on these R entries. Integer evaluation then
+forces all R roots. The primitive part of bP is divisible by the product of
+the distinct primitive factors q*T-a. Gauss's lemma gives d>=R and primitive
+leading coefficient, hence height, at least q^R. This excludes only the
+stated uniform low-degree/height certificate; additional actual-history
+constraints and arbitrary-degree auxiliaries remain outside the result.
+
+### A weaker actual carry question remains open
+
+Let c_n=floor(16*x_n+A(n+1))=K_(n+1)-16*K_n. The precise weaker target
+C_odd asks for an odd c_n at arbitrarily late n. V implies it: a visit
+x_n in (1/12,3/32), with 0<A(n+1)<4/9, forces c_n=1. The rational
+normalization of A gives A(n)=S_n=n+1 modulo 2 in the odd-denominator rationals.
+Consequently c_n is odd exactly when a_(n+1) is not n+2 modulo 2. That
+canonical-numerator assertion remains unproved; the congruence only relocates it.
+
+Choosing B={2,4,6,8,10,12,14} gives the same count with m=7 and all h
+replacement carries even. Choose r=a_N modulo 2^k and the raw replacement
+T_0=K_N+a/q_N. Its raw difference from the actual prefix after j steps is
+16^j*(a-a_N)/q_N, of two-adic valuation at least k+4j. This survives rational
+reduction as a cross-multiplied numerator congruence because the denominators
+are odd. It does not preserve future denominator equality or precision of
+canonical numerators after subtracting differing floors. Thus finite entry
+precision and exact future A cannot force an odd carry within the stated
+horizon uniformly over these replacements. No infinite rational avoiding
+model, actual zero-initialized counterexample or converse to V follows.
+
+A narrower odd-prime test uses S_1=205826/4095 and
+4095=3^2*5*7*13. Its raw numerator has Legendre signs (-1,+1,-1,+1)
+at (3,5,7,13). Both reduced replacement numerators 101 and 146 have those
+four signs but opposite parity. This rules out determining parity from this
+denominator and these characters uniformly over reduced replacements. It
+does not refute a rule restricted to the actual initialized sequence, at
+every anchor or eventually. Full local residues and their canonical
+representative are distinct from character data.
+
+Frozen packet `/tmp/pi-m4-strategy-reset-20261127/` has report SHA-256
+`53c1edfe05dcfbfbbd8f4ad0cac42105dbdbc992f362aa98885869ce014686d4`.
+The parent reconstructed the argument and replayed a byte-unchanged checker:
+575 counts, 7,554 entries, 14,988 exact-A carry steps and the supplementary
+endpoint/precision/character checks passed, exit 0, identical receipt, all
+four originals preserved. Synthetic rational tails exercise the finite carry
+algebra; they do not verify the actual irrational-tail or asymptotic proofs.
+No actual canonical numerator or pi digit was evaluated. Independent criticism
+found no blocking defect and requested the replacement-only character scope
+now stated above. V, C_odd and M4 remain open; this is paper mathematics.
+
 ## Evidence boundary
 
 The frozen sine-zero report is `/tmp/pi-m4-sine-zero-report-v1.md`, SHA-256
