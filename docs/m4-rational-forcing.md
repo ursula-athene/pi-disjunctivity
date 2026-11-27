@@ -527,3 +527,165 @@ the single repeated run. This was a harness issue, not a mathematical failure.
 The generic positivity route is suspended at its exact carry obstruction.
 Combining positivity with the actual denominator rate is a separate question;
 no V or new Lean theorem follows from these comparisons.
+
+## Gaussian moment models match an exact BBP prefix
+
+The positive moment representation admits finite models with exact prefix
+agreement, a different property from uniform coefficient approximation.
+Set P(x)=4-2x^3-x^4-x^5. Under t=x^8 the actual moments are
+
+    A(n)=integral_0^1 t^n dmu(t),
+    dmu(t)=P(t^(1/8))/(8*t^(7/8)) dt, mu([0,1])=47/15.
+
+The factorization P(x)=(1-x)(4+4x+4x^2+2x^3+x^4) makes mu positive on
+(0,1). Its monic orthogonal polynomial Q_m has rational coefficients, since
+its Hankel system has rational entries and is positive definite. Its m roots
+t_i are distinct and lie in (0,1). Positive Gaussian weights w_i match moments
+through degree 2m-1. This is the applicable classical quadrature statement in
+[Allen et al., Theorem 1, printed pp. 65–66](https://www.cambridge.org/core/services/aop-cambridge-core/content/view/133CD9E0E6960B585002005424549ADA/S0004972700043641a.pdf/pade-approximation-and-gaussian-quadrature.pdf).
+The source lists denominator degree first; its [m,m-1] convention and inverted
+Stieltjes variable are retained. It supplies no visitation estimate.
+
+Define A_m(n)=sum_i w_i*t_i^n. This is positive and completely monotone.
+The recurrence given by Q_m and rational initial moments makes every A_m(n)
+rational, although the nodes and weights need not be rational individually.
+It is not in general a rational function of n. Put
+
+    F(z)=integral dmu(t)/(z-t),
+    P_(m-1)(z)=integral (Q_m(z)-Q_m(t))/(z-t) dmu(t).
+
+Then P_(m-1) has rational coefficients and Gaussian exactness gives
+F_m(z)=sum_i w_i/(z-t_i)=P_(m-1)(z)/Q_m(z). Orthogonality also proves
+
+    F(z)-F_m(z)=Q_m(z)^(-2)*integral Q_m(t)^2/(z-t) dmu(t).
+
+Consequently the compressed period Pi_m=16*P_(m-1)(16)/Q_m(16) is rational,
+and delta_m=pi-Pi_m is strictly positive. Comparing the monic norm with the
+shifted Chebyshev polynomial and using Q_m(16)>15^m gives
+
+    0<delta_m<3008/(225*3600^m).
+
+The Laurent expansion of the squared-polynomial identity has positive
+coefficients after its first nonzero term: A_m(n)=A(n) for n<2m and
+A_m(n)<A(n) for n>=2m. The first error is integral Q_m^2 dmu>0.
+For the same zero-initialized inclusive prefixes this yields
+
+    S_n^(m)=S_n                              (0<=n<2m),
+    0<S_n-S_n^(m)<16^n*delta_m              (n>=2m).
+
+Thus for n<=floor(11m/4), their circle distance is at most
+(3008/225)*(128/225)^m, tending to zero with m. This extends a controlled
+comparison beyond the exact prefix but does not supply a visit.
+
+The valid consumer is: for every target and threshold N, find m>=1 and
+N<=n<2m with fract(S_n^(m)) in the target. This is equivalent to V by exact
+prefix agreement; it requires an independent early-window estimate from the
+model's arithmetic. A variant can use the longer comparison window with a
+strict inner target and error below its margin. Neither estimate is proved.
+
+For each fixed m, however,
+
+    S_n^(m)=16^n*Pi_m-sum_i w_i*t_i^(n+1)/(16-t_i).
+
+The error tends to zero geometrically and Pi_m is rational, so this model has
+a finite omega set. A fixed finite family cannot supply universal late visits.
+Its period differs irrationally from pi, so the rational-entry bridge does
+not identify the two global visitation problems. This negative result does
+not refute the valid growing-order consumer. The model also loses A's n^-2
+decay and denominator-exponent-six theorem.
+
+The frozen `/tmp/pi-m4-fresh-mechanism-reset-20261127/` report has SHA-256
+`519effa153b074ed464adb4639674a5e787c6fb7946377ae1e870e7a8980fe33`,
+and its manifest has SHA-256
+`407600f3baa13fe626ef1b10dae825c4b6133d4e821d9a13eb0e1b9efb14995e`.
+The parent reconstructed the full argument, inspected both rendered source
+pages and replayed the unchanged checker: 444 exact checks, exit 0, identical
+JSON receipt, originals preserved. For m=1..8, denominator-only checks exclude
+a full rational period within 2m; they imply no general order bound or visit.
+No actual initialized fractional state, pi digit or new Lean theorem is used.
+
+## Analytic moment perturbations can have an irrational nondense period
+
+A stronger countertest keeps rational moments, an arbitrary fixed BBP prefix,
+positive moment comparisons and the leading tail constants, while allowing
+an irrational nondense period. Its missing arithmetic hypotheses are explicit:
+it does not retain a rational function of n or a denominator growth bound.
+
+Use the preceding actual measure mu_A and put dnu=(1-t)dmu_A. Its moments
+A(n)-A(n+1) are rational. Let R_k be its monic rational orthogonal polynomial,
+with R_0=1, and set
+
+    beta_k=16*integral R_k(t)/(16-t) dnu(t)
+          =16/R_k(16)*integral R_k(t)^2/(16-t) dnu(t)>0.
+
+The identity follows from orthogonality to a polynomial of degree k-1;
+R_k(16)>0 since its roots lie in (0,1). Fix a prefix length L>=0 and rational
+0<epsilon<1. For R_k(z)=sum_j r_kj*z^j choose rational budgets
+
+    M_k=3*sum_j |r_kj|*2^j,
+    b_k=epsilon*2^(-(k-L+2))/M_k, k>=L.
+
+Any rational choices |c_k|<=b_k give absolute uniform convergence on |z|<=2
+of f(z)=sum_(k>=L)c_k*R_k(z). The relative multiplier h(z)=(1-z)f(z) is
+holomorphic on |z|<2, real on [0,1], has h(1)=0 and |h|<=epsilon/2.
+Thus dmu_tilde=(1+h)dmu_A is positive with the same support. It is the
+relative multiplier that is analytic; the Lebesgue density retains its
+original t^(-7/8) endpoint singularity.
+
+Orthogonality makes each modified moment a finite rational expression:
+
+    A_tilde(n)=A(n)+sum_(L<=k<=n)c_k*integral t^n R_k(t) dnu(t).
+
+All terms k>n vanish exactly. Hence every moment is rational and the first
+L moments match actual A. Pointwise bounds on 1+h give uniform factors
+1±epsilon/2 for every nonnegative moment test or polynomial squared norm,
+and factors (1±epsilon/2)^d for d-dimensional Gram determinants.
+
+This freedom realizes every period in a nonempty interval around pi. Put
+a_k=b_k*beta_k>0; the uniform bounds imply sum a_k<infinity. Given
+|delta|<=a_L/2, maintain a residual of magnitude at most a_k/2. Rational
+density permits c_k in (-b_k,b_k) with the next residual smaller than
+a_(k+1)/2. The residual tends to zero, so sum c_k*beta_k=delta. Uniform
+convergence justifies the period interchange, giving exactly pi+delta.
+These rational choices encode the prescribed real target. Their denominators
+are unrestricted; this is not an effective bounded-height phase estimate.
+
+Choose an irrational nondense target Gamma in that interval by taking the
+base-16 Thue--Morse number with digits 1 and 2 and adding a suitable rational.
+Its orbit lies in a finite union of translates of the closed nowhere-dense
+two-digit set. No pi digit is used to make the existential selection.
+
+The endpoint factor gives more than relative asymptotics. Since
+P(x)<=15(1-x), 1-x^8<=8(1-x), and |f|<=epsilon/6,
+
+    |A_tilde(n)-A(n)|
+      <=40*epsilon/((8n+1)*(8n+2)*(8n+3)).
+
+Thus n^2*A_tilde(n) tends to 15/64 and the positive scaled tail has limit
+n^2*E_tilde(n)->1/64, by dominated convergence in its geometric sum.
+The zero-initialized recurrence has the exact split
+16^n*Gamma=S_tilde(n)+E_tilde(n), and matches actual S_n for n<L.
+Its circle omega set is nevertheless the proper set of Gamma, so an open
+interval is eventually avoided.
+
+The infinite construction matters. Here beta_0=752/15-15*pi and
+beta_k=R_k(16)*beta_0-16*P_(k-1)^nu(16), with P_(k-1)^nu rational
+and P_(-1)^nu=0.
+Every finite rational polynomial perturbation has period a+b*pi with rational
+a,b and a finite rational-function forcing. If b!=0, its universal density
+question is equivalent to V; if b=0, its period is rational. Infinite rational
+coefficient sums need not retain this relation, and the separated rational
+and pi components need not converge separately. This countertest cannot be
+used against an argument retaining the exact finite pole structure or a
+proved denominator restriction. It also does not refute the exact-prefix
+Gaussian consumer; the missing early-window visit remains.
+
+Frozen packet `/tmp/pi-m4-analytic-moment-model-20261127/`, report SHA-256
+`17d1642039d404158141d7f061c119338168ac529d6ff3a87e71b1d5cf4b0e6b`,
+manifest SHA-256
+`bc8ad1e693a9e133af5eb0939cdf6a732e403301fdfb1afb7b44eaadf2e2ccf7`,
+retains the full existential proof and separate criticism. The parent proposed
+the construction and reconstructed the worker's completed argument, then
+replayed an unchanged checker: 150 exact checks, exit 0, identical JSON,
+originals preserved. The infinite choices are not instantiated by those checks.
+No V or kernel theorem is claimed; independent review is recorded separately.

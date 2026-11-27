@@ -1199,3 +1199,54 @@ both shifts to zero. No executable check was needed for that repair.
 Caller documentation, working/staged whitespace and post-commit scope and
 preservation checks are retained with the packet. The quadrature investigation
 is excluded. No V/M4 acceptance or new Lean theorem is claimed.
+
+## Gaussian prefixes and irrational analytic moment models — 2026-11-27 UTC
+
+Baseline is local commit `ae152090219c118fa8fe8a59813f64d43a1852a8`.
+The five-path documentation scope is `m4-rational-forcing.md`,
+`proof-plan.md`, `research-log.md`, `m4-handoff.md` and this record. No Lean,
+dependency, tool, pin or unrelated workspace change is included.
+
+The frozen `/tmp/pi-m4-fresh-mechanism-reset-20261127/` and
+`/tmp/pi-m4-analytic-moment-model-20261127/` packets retain full reports,
+source/input contracts, critics, checker sources, receipts and manifests.
+The parent reconstructed their orthogonality, rationality, positive error,
+comparison-window and nondensity arguments, and the infinite rational greedy
+construction with its exact finite moment sums, common analytic neighborhood
+and endpoint constants. The latter was parent-proposed and worker-reconstructed;
+neither that agreement nor the same-session critics is independent review.
+
+Unchanged-copy replays passed, Gaussian 444 and analytic 150 checks, both
+exit 0 with identical JSON receipts and preserved originals. They do not
+instantiate the infinite choices or prove universal claims. The parent opened
+the primary publisher PDF and visually inspected rendered Theorem 1 pages
+65–66; `parent-source-inspection.json` retains command, exit and hashes.
+This resolves Gaussian critic Q2's worker image limitation without altering
+its frozen record. Its I1–I2 and analytic I1–I3 were incorporated before
+freezing: rational-valued versus rational-function forcing, the valid diagonal
+consumer, relative analyticity, finite-versus-infinite period relations and
+uncontrolled heights. Their missing early-window/global arithmetic estimate
+and finite-diagnostic limits remain explicit.
+
+Independent changed-file review by `/root/generating_review` is complete under
+the Codex replacement procedure, with both full adversarial guides and their
+unchanged hashes verified. The frozen packet is
+`/tmp/pi-m4-moment-models-review-20261127/`; its diff SHA-256 is
+`e9c3a76190dd9c4346ffe561f190c7f610eeffca4cfbfc70484e9d7a6c15ae98`.
+The complete response is retained as `review-full.txt`, SHA-256
+`8ae1eac7d4d42a1112c742f5037eb0fff40b1ab2f8bdc535321c8fe42701b13e`.
+All five scoped file hashes and 34 evidence hashes matched. **D/I/Q: no
+defects, no requested improvements, and no additional evidence gaps.** The
+reviewer independently reconstructed the Gaussian/error and infinite analytic
+arguments, checked the actual Series/Orbit/Tail interfaces, and visually
+inspected both primary theorem pages, resolving the worker's Q2 limitation.
+
+The missing actual early-window visit remains explicit; fixed-model nondensity
+does not refute the growing-order consumer. The analytic construction loses
+finite rational-function forcing and denominator control. Review was read-only
+inspection, hashing, source-image inspection and mathematical reconstruction;
+no checker, probe, build, extractor, mutation, service or delegation ran.
+Finite executions remain caller evidence and do not certify the infinite
+construction. Subsequent changes record this result only. The controlled-
+denominator follow-up is excluded. No V/M4 acceptance or new Lean theorem is
+claimed; B4/P3 premises remain unchanged.

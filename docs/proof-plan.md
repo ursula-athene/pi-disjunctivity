@@ -801,12 +801,23 @@ improves the rational-offset count to ord_(q_N)(16), yet supplies neither a
 common hole address nor a valid fixed-entry consumer from variable-N sampling.
 Those scalar refinements are suspended without a new actual-phase estimate.
 
-A fresh-context 20-minute investigation now tests positive quadrature models
-that match an initial segment of the actual A coefficients exactly. The
-candidate consumer must prove a visit *inside* the matching segment; eventual
-visitation of an approximating model is insufficient. The review record owns
-integration status; all target contracts and Lean status remain unchanged.
-Research continues within M4.
+The [Gaussian moment calculation](m4-rational-forcing.md#gaussian-moment-models-match-an-exact-bbp-prefix)
+gives rational-period models matching A through index 2m-1 and a controlled
+longer comparison window. A hit inside the exact prefix would transfer to V,
+but no independent early-window estimate was found; fixed models have finite
+omega sets. The [analytic moment countertest](m4-rational-forcing.md#analytic-moment-perturbations-can-have-an-irrational-nondense-period)
+preserves rational moments, any prescribed finite prefix, positive comparisons
+and the leading tail constants while admitting an irrational nondense period.
+It loses finite rational-function forcing and denominator control. Generic
+positivity or quadrature refinements without a retained arithmetic distinction
+are suspended.
+
+The next 20-minute investigation tests that explicit height limitation: whether
+a modified orthogonal basis and rational coefficient grids can give such a
+countermodel a denominator upper exponent at most 6+eta for each eta>0.
+This would be an upper bound for separate models, not the actual exponent-6
+theorem or its prime defects. The review record owns integration status; all
+target contracts and Lean status remain unchanged. Research continues within M4.
 
 For the recurrence defined in Step 4, seek a proof of
 

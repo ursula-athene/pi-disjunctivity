@@ -2867,3 +2867,42 @@ of rational entry. Whether the spectral model provides an independent estimate
 within that segment is the discriminating question. The finite-family and
 post-prefix limits must remain explicit. This is new discovery within M4,
 not authorization to install tools or formalize a missing premise.
+
+**After local commit `ae15209`:** the six-path entry-cost checkpoint passed
+independent review, D1's focused quantifier repair, documentation and staged
+checks, exact post-commit scope/necessity and preservation inspection. No push
+or PR occurred. The fresh quadrature packet is complete. An order-m positive
+Gaussian model has rational moments, exact agreement through 2m-1 and a
+rational full period. Its comparison remains exponentially small through
+floor(11m/4), but no early-window visit estimate was found. Fixed-model
+nondensity does not refute the valid growing-order consumer. The parent read
+and reconstructed the complete packet, inspected Allen et al.'s rendered
+Theorem 1 pages 65–66, and replayed 444 exact checks: exit 0, identical JSON,
+originals preserved. This resolves the worker's source-image evidence limit.
+
+A subsequent 20-minute countertest in
+`/tmp/pi-m4-analytic-moment-model-20261127/` reconstructed a parent-proposed
+analytic relative perturbation of the actual positive measure. Orthogonality
+makes each modified moment a finite rational sum while rational greedy choices
+encode any period in a small interval. It yields an irrational nondense period,
+any prescribed exact prefix, all positive moment comparisons, and the same
+15/64 and 1/64 asymptotic constants. Finite rational polynomial perturbations
+still have period a+b*pi; the infinite construction loses rational-function
+forcing and denominator bounds. The parent read and reconstructed the full
+argument/critic/checker, then replayed 150 checks: exit 0, identical JSON,
+originals preserved. Infinite coefficient choices are paper mathematics.
+Independent integration review of both packets is complete with no D/I/Q
+findings. The reviewer verified the exact five-path diff and 34 evidence
+hashes, reconstructed both arguments and inspected the primary theorem images.
+The [continuation review](agy-reports/m4-continuation-review.md#gaussian-prefixes-and-irrational-analytic-moment-models--2026-11-27-utc)
+owns the full-response receipt and evidence limits. No V or Lean result follows.
+
+**Next changed question, 20 minutes before reassessment:** test the uncontrolled
+height explicitly in `/tmp/pi-m4-controlled-moment-model-20261127/`. A standard
+Jacobi basis with integer polynomial coefficients may permit rational grids
+whose common denominator gives upper exponent 6+eta, for each eta>0. Required
+checks include nonvanishing period coefficients, a fixed analytic neighborhood,
+greedy selection on discrete grids, natural odd-lcm inclusion and all changed
+scope limits. An upper bound near 6 is not exact rate 6, nor the strong prime
+defect information. This inquiry tests a missing hypothesis of the countermodel;
+it does not assume an early-window visit or stop M4 research.

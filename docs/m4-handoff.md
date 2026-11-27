@@ -7,7 +7,7 @@ The [continued research checkpoint](#continued-research-checkpoint--2026-11-26)
 records subsequent work during the user's absence; that checkpoint does not
 terminate the ongoing M4 effort.
 The latest dated continuation is the
-[Entry precision and quantitative holes](#entry-precision-and-quantitative-holes--2026-11-27-utc); read the
+[Moment models and exact prefixes](#moment-models-and-exact-prefixes--2026-11-27-utc); read the
 research log and actual checkout for subsequent results and current state.
 
 ## Baseline and authorized endpoint
@@ -830,3 +830,26 @@ scope and dispositions. No Lean file, pin, dependency, audit
 or V contract changed. A fresh-context quadrature investigation is testing an
 exact-prefix visit consumer; the log owns its bound and outcome. V/Hpi/T/M4
 remain open, B4/P3 retain visits as premises, and M5 remains excluded.
+
+## Moment models and exact prefixes — 2026-11-27 UTC
+
+The entry-cost checkpoint is local commit
+`ae152090219c118fa8fe8a59813f64d43a1852a8`. Its six paths, empty index,
+protected/unrelated preservation and necessity inspection were verified.
+Nothing was pushed. New paper assessments are in the
+[Gaussian prefix](m4-rational-forcing.md#gaussian-moment-models-match-an-exact-bbp-prefix)
+and [analytic moment](m4-rational-forcing.md#analytic-moment-perturbations-can-have-an-irrational-nondense-period)
+sections. The former supplies exact/controlled comparison windows but no hit;
+the latter gives an irrational nondense period with the claimed analytic
+properties while losing finite rational-function forcing and denominator control.
+Neither is a counterexample to actual A or a proof of V.
+
+Parent reconstruction, primary-source visual inspection and unchanged-copy
+replays passed, with originals preserved. Independent integration review is
+complete with no D/I/Q findings; the continuation review record owns the exact
+scope, full-response receipt and evidence limits. No Lean, dependency, pin, audit or
+target contract changed. The next bounded inquiry tests whether the latter
+countermodel can retain a denominator upper rate arbitrarily close to 6,
+explicitly distinguishing that from the exact A theorem and prime identities.
+The log owns the bound and current result. V/Hpi/T/M4 remain open, B4/P3
+retain visitation premises, and M5 remains excluded. Research continues.
