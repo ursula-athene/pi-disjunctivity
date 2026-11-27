@@ -3618,3 +3618,40 @@ taken as a real-word theorem. Its report and criticism are not yet accepted.
 The auxiliary lattice analysis remains directed at the comparison-model
 boundary; it is not substituted for the unchanged actual V obligation.
 V/C_odd/global covering remain open, B4/P3 retain visits, and M4 work continues.
+
+**Actual negative history and canonical selection — 2026-11-27 UTC:** the
+global/sparse checkpoint is local commit
+`7268e5525e60106246ebf2160ae4aa29049b9da4`. Full and focused review,
+documentation/process/whitespace checks, exact staged scope and post-commit
+necessity inspection passed. All 17 protected and 11 unrelated files were
+preserved; no push, PR or Lean change occurred.
+
+The 30-minute actual-history inquiry completed with a precise failed consumer.
+Exact A and the raw zero anchor already determine rational negative prefixes.
+Their canonical carries are 15 for n<=-3, 16 at -2 and 3 at -1; the entire
+portion before -1 cancels in Q_2, leaving only the known forward initialization.
+Two bounded even-carry decompositions keep the actual B everywhere, negative
+canonical history and initial state while relaxing the positive remainder
+cell. Thus those relaxed assumptions cannot select canonical parity. The
+actual negative samples also give an explicit floor-continuity failure.
+The unit-cell question remains open; no actual avoiding trajectory is supplied.
+
+Parent reconstruction and byte-unchanged replay passed with identical receipt
+and five preserved originals. Independent reviewer `/root/m4_strategy_reset`
+found no defect and requested an explicit recurrence offset/C_odd contract;
+a new immutable report v2 adds that clarification and passed focused review.
+The continuation review record owns captures and dispositions. Final production
+review completed with no defect or new recommendation; documentation (93),
+process tests (38), whitespace and preservation checks passed. Universal
+identities retain their paper status.
+
+The next two questions each have a **25-minute reassessment bound**. Worker
+`/root/global_dual_recovery` owns `/tmp/pi-m4-descendant-witness-20261127/`:
+construct earlier-root witnesses with required descendants, retaining all
+original rows, and quantify their full real norm or identify its obstruction.
+Worker `/root/canonical_selection_recovery` owns
+`/tmp/pi-m4-canonical-selection-recovery-20261127/`: a fresh-context meta-plan
+pass must propose a concrete actual-selection mechanism and discriminating
+test, using the exact positive unit cell and checking the failure archive.
+No finished result from either is accepted here. The direct reflected-carry
+consumer is suspended, while V/C_odd/global covering remain open and M4 continues.

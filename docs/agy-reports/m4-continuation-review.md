@@ -1859,3 +1859,45 @@ passed. No arithmetic rerun was requested for the domain/notation repairs;
 no Lean build was repeated for these documentation-only changes. Subsequent
 edits record review outcomes only. This accepts a local research checkpoint,
 not V or M4.
+
+## Actual negative history and canonical selection — 2026-11-27 UTC
+
+Baseline is local commit `7268e5525e60106246ebf2160ae4aa29049b9da4`.
+Independent reviewer `/root/m4_strategy_reset` completed read-only criticism of
+`/tmp/pi-m4-negative-anchor-consumer-20261127/report-v1.md`, SHA-256
+`a30351d15e259db56fea364551888437b589f0f07918db7ad423f4897620e7c0`,
+its checker, receipt, manifest and completion signal. The full response is
+`/tmp/pi-m4-negative-anchor-paper-review-20261127.txt`. **D: none. I1:
+resolved:** the new immutable report v2 explicitly states
+f_n=bbpRecurrence(n+1) for n>=0 and the quantifiers of C_odd, distinguishing
+the raw anchor from the inclusive prefix. Focused response
+`/tmp/pi-m4-negative-anchor-followup-20261127.txt` confirms that sole delta
+and all five preserved original hashes. **Q1: retained open:** actual lower-even
+remainders cannot yet be shown to leave [0,1) arbitrarily late.
+
+The reviewer reconstructed the backward recurrence, strict negative-cell bound,
+anchor carry, Q_2 cancellation, both rounding constructions and initial
+transition, parity equivalences and continuity witnesses. Both adversarial
+guides were read in full and retain their earlier hashes. No checker, probe,
+build, extractor, mutation, service or delegation was performed by the reviewer.
+Parent unchanged-copy replay at
+`/tmp/pi-m4-negative-anchor-parent-replay-20261127/` passed, exit 0, identical
+receipt and five preserved originals. Its negative samples and synthetic
+rounding checks do not prove the universal identities. Only initialization
+and its first transition were checked among actual nonnegative states.
+The reflected-graph input and new identities remain paper mathematics.
+Final changed-file review completed; ongoing descendant and fresh-selection
+inquiries are excluded from mathematical acceptance here.
+
+The exact five-path packet is
+`/tmp/pi-m4-negative-anchor-integration-review-20261127/`, diff SHA-256
+`910e646b97b77bead4d201045a689b5f50a96555c41c47d62945ace7a4646033`.
+The full response is `review-full.txt` in that packet. Independent reviewer
+`/root/generating_review` verified all five production, 15 evidence, two guide
+and 28 preservation hashes, inspected the entire diff and reconstructed the
+identities against the actual recurrence. **D: none. I1: resolved; no new
+recommendation. Q1: retained open:** actual canonical parity remains unproved.
+Documentation (93 files), process tests (38), whitespace and preservation
+checks passed as caller evidence. No Lean build was repeated for these
+documentation-only changes. Subsequent edits record review outcomes only;
+the checkpoint does not accept C_odd, V or M4.

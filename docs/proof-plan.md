@@ -925,10 +925,19 @@ The completed fresh-context pass gives a
 [discrete-grid obstruction](m4-language-auxiliaries.md#the-actual-denominator-grid-still-admits-many-avoiding-entries)
 to uniform polynomial certificates, even with actual denominator and finite
 seed precision. Its necessary odd-carry target remains unproved; replacement
-entries are not the actual initialized sequence. A separate 30-minute actual
-history inquiry tests whether the exact reflected identity and rational
-negative-index prefixes add a canonical-carry constraint. It must distinguish
-new information from backward recurrence or an unproved continuation of floors.
+entries are not the actual initialized sequence. The completed
+[actual-history inquiry](m4-two-adic-reflection.md#9-the-full-negative-carry-history-cancels-at-the-zero-anchor)
+determines the negative canonical carries and proves that their full 2-adic
+contribution cancels, returning only the original initialization. Even-carry
+decompositions retain the actual raw graph and its entire negative history
+when the positive canonical cell is relaxed. They exclude a boundedness-only
+consumer, not actual C_odd or V. Direct reflected-carry continuation is suspended.
+
+Two distinct 25-minute follow-ups test descendant-completed global witnesses
+below the singleton horizon and seek a fresh actual-canonical-selection
+mechanism using the exact positive unit cell. Their endpoints require a
+quantified consumer, discriminating check or precise failed implication.
+Neither a comparison witness nor a reformulated parity target supplies V.
 The log owns bounds, outcomes and the failed source-applicability screens.
 V and all Lean contracts are unchanged; neither conditional wrapping nor more
 classification supplies visitation.

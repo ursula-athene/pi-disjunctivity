@@ -283,3 +283,102 @@ passed: 3,870 exact CRT/carry/conductor cases, 258 principal-part decompositions
 Characters are checked as rational phases modulo integers, with no floating
 exponential evidence or pi digit search. The universal arguments remain paper;
 the complete hashes and caller evidence are in the review packet.
+
+## 9. The full negative carry history cancels at the zero anchor
+
+This continuation uses the same actual analytic graph B, not a changed forcing
+or entry. Put K_n=floor(B(n)), f_n=B(n)-K_n and
+c_n=K_(n+1)-16K_n for every integer n. For n>=0,
+f_n=bbpRecurrence(n+1); the weaker open target C_odd asks for an odd c_n
+at arbitrarily late n. The raw anchor B(-1)=0 precedes f_0=2/15.
+
+Exact A and B(-1)=0 already determine every rational B(n), forward and
+backward. Negative rationality is therefore not an extra independent boundary
+condition. The stronger reflection result is compatibility of those values
+with one bounded analytic Q_2 graph and its isometry.
+
+The preceding backward formula and 0<A(-r)<=6 give
+-2/5<B(n)<0 for n<=-2. Hence the actual canonical history is
+
+    K_n=-1 (n<=-2), K_(-1)=0, K_0=3,
+    c_n=15 (n<=-3), c_(-2)=16, c_(-1)=3.
+
+The boundary is exact: B(-2)=-1/21, A(-1)=16/21 and
+16*f_(-2)+A(-1)=16. For fixed integer n, integrality of K implies
+16^M*K_(n-M) tends to zero in Q_2. Telescoping therefore gives
+
+    K_n=sum_(j>=0)16^j*c_(n-1-j).
+
+For n>=0 the whole portion with carry index at most -2 is
+
+    16^(n+1)*16+15*sum_(r>=n+2)16^r
+      =16^(n+2)+15*16^(n+2)/(1-16)=0 in Q_2.
+
+Only K_n=3*16^n+sum_(j=0)^(n-1)16^(n-1-j)*c_j remains. This is the
+original initialized forward recurrence, with no new positive parity relation.
+At the anchor, finite reflected sums satisfy
+
+    R_M=sum_(j<M)16^j*A(-1-j)=-16^M*B(-M-1),
+    C_M=sum_(j<M)16^j*c_(-2-j)=16^M,
+    R_M-C_M=-16^M*f_(-M-1).
+
+Both sums tend to zero in Q_2; C_M grows in the real embedding. No real
+zero or real convergence is inferred from this identity.
+
+### Bounded even carries on the unchanged actual raw graph
+
+Retain L_n=K_n for n<=0 and set L_n=2*floor(B(n)/2) for n>=1. Then
+Z_n=B(n)-L_n is rational, 0<=Z_n<2 at every integer index, and
+
+    Z_(n+1)=16*Z_n+A(n+1)-d_n,
+    d_n=L_(n+1)-16*L_n.
+
+The negative canonical history, zero anchor and initial canonical state are
+unchanged. Every future d_n, n>=0, is even; indeed
+d_n=2*floor((16*Z_n+A(n+1))/2) lies in {0,2,...,32}, using 0<A(n+1)<1.
+At the initial transition, 16*f_0+A(1)=9266/4095 lies in (2,3), so
+L_1=50, d_0=2 and Z_1=1076/4095 lies in (0,1).
+
+Alternatively, use L_n^c=2*floor((B(n)+1)/2) for n>=1 and retain K_n
+for n<=0. Then -1<=Z_n^c<1 at positive indices and |Z_n^c|<=1 everywhere.
+Its future carries are even, in {-16,-14,...,16} for n>=1, with d_0=2.
+No strict absolute bound is assumed at a possible odd-integer B(n).
+
+These are decompositions of the actual raw sequence. They are not the
+canonical recurrence: the first relaxes the remainder cell to [0,2), and
+the second permits negative remainders. They show that the exact graph,
+initialization, negative history, integrality and these boundedness conditions
+alone cannot force an odd carry. The precise positive unit cell is essential.
+For n>=1, Z_n=f_n if K_n is even and Z_n=1+f_n otherwise; the centered
+values are f_n and f_n-1 respectively. Thus C_odd is equivalent to arbitrarily
+late Z_n>=1, or Z_n^c<0. These are reformulations, not new estimates.
+
+### A concrete continuity failure and the remaining consumer
+
+The negative inputs n_k=-1-2^k tend to -1 in Z_2, but
+f_(n_k)=B(n_k)+1 tends to 1 whereas f_(-1)=0. Likewise
+c_(-2-2^k)=15 and c_(-2)=16. Since negative integers <=-2 are dense,
+their fractional samples force any continuous extension to be B+1, already
+inconsistent with the anchor. This failure occurs before positive avoidance
+is assumed. It does not exclude regularity of a different observable under
+additional proved hypotheses.
+
+The direct reflected-carry consumer is suspended: it cancels its known input.
+A new consumer must control the selected positive unit cell, or prove suitable
+regularity for another observable. Generic bounded remainders and continuity
+inherited from B repeat the demonstrated failure. Actual C_odd and V remain
+open, with no changed Lean theorem or discharged B4/P3 premise.
+
+The clarified frozen report is
+`/tmp/pi-m4-negative-anchor-contract-20261127/report-v2.md`, SHA-256
+`38b3aacd3c3f32d12c7c5c741d13c7cc5dada53dba441ae9dfd0b2b8b3a13c33`.
+Parent reconstruction and unchanged-copy replay passed: initial transition,
+256 negative values, 258 carries, 256 reflected partial sums, 65 geometric
+cancellations, eight discontinuity witnesses and the synthetic rounding tests.
+Receipt identity and all five originals were preserved. The only nonnegative
+actual states tested were initialization and its first transition; synthetic
+samples are not actual future prefixes. Independent criticism found no defect
+and requested the explicit offset/C_odd clarification retained above. Universal
+arguments and the reflected-graph input remain paper mathematics. Final
+production integration review completed with no defect or new recommendation;
+the continuation review record retains the exact scope and evidence limits.

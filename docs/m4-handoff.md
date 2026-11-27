@@ -7,7 +7,7 @@ The [continued research checkpoint](#continued-research-checkpoint--2026-11-26)
 records subsequent work during the user's absence; that checkpoint does not
 terminate the ongoing M4 effort.
 The latest dated continuation is the
-[Global support and sparse conductors](#global-support-and-sparse-conductors--2026-11-27-utc); read the
+[Actual negative history and canonical selection](#actual-negative-history-and-canonical-selection--2026-11-27-utc); read the
 research log and actual checkout for subsequent results and current state.
 
 ## Baseline and authorized endpoint
@@ -1110,3 +1110,22 @@ negative-index prefixes, with a 30-minute bound and scratch ownership at
 is accepted here. The log owns live handles, evidence and outcomes. No Lean,
 pin, audit, dependency or trust change has occurred. V/C_odd/global covering
 remain open, B4/P3 retain their premises, and authorized M4 research continues.
+
+## Actual negative history and canonical selection — 2026-11-27 UTC
+
+The global/sparse-support checkpoint is local commit
+`7268e5525e60106246ebf2160ae4aa29049b9da4`; complete and focused reviews,
+validation, exact staging and post-commit necessity/preservation checks passed.
+Nothing was pushed. The
+[negative-history result](m4-two-adic-reflection.md#9-the-full-negative-carry-history-cancels-at-the-zero-anchor)
+now shows that the actual negative canonical tail cancels in its full 2-adic
+convolution. Bounded noncanonical decompositions of the unchanged raw graph
+retain all-even future carries, isolating the need for the exact positive
+unit cell. They neither contradict nor prove actual C_odd or V.
+
+Independent paper criticism and its offset clarification passed, as did the
+parent's unchanged-copy replay with originals preserved. Final production
+review completed with no defect. Two bounded follow-ups test earlier descendant witnesses
+and a fresh actual-selection mechanism; the research log owns their handles,
+bounds and outcomes. Read it and verify the checkout before resuming. No
+Lean, pin, audit or dependency changed; M4 remains open and work continues.
