@@ -4648,3 +4648,37 @@ source's conditional Z-number hypotheses passed focused review at
 Frozen scope, complete captures and delta are in
 `/tmp/pi-m4-history-source-matrix-review-20261127/`. Documentation (93),
 process tests (38), whitespace and preservation checks passed; no Lean changed.
+
+The history/source/matrix checkpoint is local commit
+`5d25c54657f24df90c5513f9966e095f91408158`, parent `13192550`.
+Post-commit scope/blob/necessity inspection passed at 17:26:16 UTC with
+empty index, clean task-owned tree and all 28 preservation hashes matched.
+The branch was sixteen ahead of its remote-tracking reference; no push or PR.
+
+The direct-pi inquiry completed at 17:22:44 UTC. Its
+[disk-count dissection](m4-transforms-and-periods.md#disk-count-dissection-cancels-the-area-coefficient)
+cancels the area coefficient exactly. Fixed-shell asymptotics retain an
+uncontrolled absolute tail and selected lacunary phases. This rejects the
+tested consumer, not every geometric method. Parent source verification ran
+17:26:49--17:32:38 UTC within six minutes; unchanged-copy replay passed with
+identical output and three preserved originals. Independent paper/source
+review ran 17:32:58--17:35:52 UTC within six minutes, with no D/I item and
+uncancelled phase control retained open. Full integration remains pending.
+No new Lean result or visitation premise is supplied.
+
+**Next discovery bound, 17:34:30--17:59:30 UTC:** fresh-context
+`/root/m4_initialized_arithmetic_reset` owns only
+`/tmp/pi-m4-initialized-arithmetic-reset-20261127/`. Test whether exact
+rational forcing together with prescribed rational initialization gives
+a new arithmetic constraint on long avoiding carry histories. Rational-seed
+equivalence and small-type interpolation were matched to archived failures
+and suspended before redevelopment. The remaining discovery question concerns
+congruence-preserving integer-valued functions; inheritance by canonical
+floors is an unproved premise, not an available theorem. No unfinished claim
+is adopted. V/M4 remain open and research continues.
+
+Disk-count full integration review ran 17:40:24--17:41:54 UTC within ten
+minutes, with no D/I item and uncancelled phase control retained open. The
+frozen four-path scope and complete capture are in
+`/tmp/pi-m4-disk-integration-review-20261127/`. Documentation (93), process
+tests (38), whitespace and all preservation checks passed; no Lean changed.

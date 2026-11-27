@@ -692,3 +692,59 @@ checks, exit 0, identical receipt and six preserved artifacts. No actual
 arcsine prefix, pi phase or digit was computed. Independent paper criticism
 found no defect; its explicit direct-to-V offset/error clarification appears
 above. Universal statements remain paper mathematics, and V remains open.
+
+## Disk-count dissection cancels the area coefficient
+
+A direct geometric test uses r2(m), the number of integer pairs with squared
+norm m. For positive integer q, put C(q)=sum_(0<=m<q)r2(m)+r2(q)/2 and
+P(q)=C(q)-pi*q. At q=16^n the boundary has four points and the nonzero
+interior points occur in rotational sets of four. Thus C(q)=3 mod4 and
+fract(-P(16^n))=fract(16^n*pi).
+
+Choose an even smooth probability density eta supported in (-delta,delta),
+0<delta<1/16. The function F(x)=integral eta(t)*1_(|x|^2<=q+t)dt is compact
+smooth, has lattice sum C(q), and has integral pi*q. Poisson summation for
+Schwartz functions, [Elkies, March 2009 draft, Theorem 2, printed p.10](https://people.math.harvard.edu/~elkies/aws09.pdf),
+applies to the self-dual lattice Z^2 with covolume one. Radial evenness
+reconciles the source's positive Fourier kernel with the negative convention.
+[DLMF 10.9.1](https://dlmf.nist.gov/10.9.E1) and
+[10.22.1](https://dlmf.nist.gov/10.22.E1) give
+
+    P(q)=sum_(m>=1) A_m(q;eta),
+    A_m(q;eta)=r2(m)*integral eta(t)*sqrt((q+t)/m)
+                            *J1(2*pi*sqrt(m*(q+t)))dt.
+
+Absolute convergence follows from Schwartz Fourier decay; no unsmoothed
+Bessel series is substituted. Set eta16(t)=eta(t/16)/16. Its support remains
+within (-1,1), preserving exact integer lattice samples and area. The identity
+r2(16m)=r2(m) gives A_m(16q;eta16)=16*A_(16m)(q;eta). Consequently
+
+    H(q)=sum_(m>=1,16 does not divide m) A_m(q;eta),
+    -16*H(q)=P(16q)-16*P(q)=C(16q)-16*C(q).
+
+The pi coefficient cancels. At q=16^n this implies H(q) belongs to
+1/16+(1/4)*Z; it does not locate P(q) modulo one. For each fixed m,
+[DLMF 10.17.3](https://dlmf.nist.gov/10.17.E3), at fixed order one and positive
+real arguments tending to infinity, instead gives
+
+    A_m(16^n;eta)=r2(m)*2^n/(pi*m^(3/4))
+        *cos(2*pi*4^n*sqrt(m)-3*pi/4)+O_(eta,m)(2^(-n)).
+
+This estimate is not summed over unbounded m. No sufficiently small absolute
+tail estimate or control of the selected lacunary phases is supplied.
+
+The extracted recurrence alone admits a nondense irrational comparison:
+gamma=3+sum_(j>=0)16^(-2^j), C_gamma(n)=4*floor((gamma*16^n-1)/4)+3,
+E_gamma(n)=C_gamma(n)-gamma*16^n. Its phases lie in [0,1/15], yet
+-2<E_gamma(n)<=2 and E_gamma(n+1)-16*E_gamma(n) is an integer congruent to
+3 modulo4. This comparison loses the actual disk and Bessel coefficients;
+it rejects only the proposed use of the extracted identities.
+
+The immutable packet `/tmp/pi-m4-direct-pi-discovery-20261127/` and
+parent source/replay packet `/tmp/pi-m4-disk-parent-review-20261127/`
+retain the full argument. Parent unchanged-copy replay matched 256 scaling
+cases and five dyadic count cases with zero pi evaluations; these finite
+checks establish no analytic theorem. Independent paper/source criticism
+found no defect and retained uncancelled phase control as open. The specific
+dissection consumer is suspended. This is paper mathematics, not a new Lean
+result or movement of the visitation frontier.

@@ -1612,3 +1612,22 @@ mathematical questions remain open. Documentation, process, whitespace and
 preservation checks passed. None advances actual visitation or changes Lean.
 Fresh direct-pi discovery changes representation; its bounds and outcome
 belong in the log. V/M4 remain open, and research continues.
+
+## Direct disk-count test — 2026-11-27 UTC
+
+The history/source/matrix checkpoint is local commit
+`5d25c54657f24df90c5513f9966e095f91408158`. Post-commit inspection passed
+with empty index, clean task-owned tree and preserved unrelated work; the
+branch was sixteen ahead of its remote-tracking reference. Subsequent edits
+are uncommitted; this run issued no push or PR.
+
+The [disk-count dissection](m4-transforms-and-periods.md#disk-count-dissection-cancels-the-area-coefficient)
+supplies a valid smoothed Poisson identity, but its proposed elimination
+cancels pi. The fixed-frequency alternative lacks an absolute tail estimate
+and control at lacunary radii. Parent source checks, unchanged replay and
+independent paper criticism passed with those limits. Full integration review
+also passed, with no D/I item and uncancelled phase control retained open.
+Documentation, process, whitespace and preservation checks passed. No new Lean
+theorem or actual visitation result was obtained.
+The fresh arithmetic discovery and its bound are in the research log;
+unreviewed work is excluded from adoption. V/M4 remain open.

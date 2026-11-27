@@ -3184,3 +3184,48 @@ evidence; unchanged Lean was not rebuilt. No reviewer execution, mutation,
 service or delegation occurred. Source and replay limits remain as above.
 Only the separately reviewed clarification, outcome records and dated discovery
 metadata follow the frozen review; unfinished direct-pi work is excluded.
+
+## Disk-count dissection — 2026-11-27 UTC
+
+The worker packet `/tmp/pi-m4-direct-pi-discovery-20261127/` completed at
+17:22:44 UTC within its 17:14:18--17:34:18 bound. Report SHA-256
+`11e86f408768b08667aa58e1027c0ba1f34d9c5ac606bc70fbe66db0a07a29db`.
+Parent source/replay packet `/tmp/pi-m4-disk-parent-review-20261127/` has
+manifest SHA-256
+`cf1d8f8562e3ce9809983fb3690870fa8577c7898343f7f6fd632af8d064f750`.
+It binds eighteen source, report and execution files. Unchanged-copy replay
+passed 256 scaling and five dyadic count cases, with byte-identical output
+and all three worker originals preserved. Zero pi evaluations were used;
+the finite checks establish no analytic theorem.
+
+Independent `/root/generating_review` ran 17:32:58--17:35:52 UTC within six
+minutes. Complete response: `/tmp/pi-m4-disk-paper-review-20261127.txt`,
+SHA-256 `3aab69791d837295732c26cecb68368dd9efe8d61e35dfc715f055f620e8f768`.
+**D/I: none. Q1: retained open:** control of the uncancelled expression with
+absolute accuracy sufficient for a target interval, at the selected radii.
+The critic reconstructed the smoothing, Poisson hypotheses, transform
+normalization, scale identity, fixed-m asymptotic and limited countermodel.
+
+Both full guides, critic/source skills and replacement procedure applied.
+All eighteen manifest-bound files matched. The critic read supplied source
+text and visually inspected Elkies pp.9--11, including Theorem 2. DLMF TeX
+formulas were inspected; webpage domains were supplied by the parent's
+source assessment, not independently retrieved. No whole-source dependency
+audit or Lean verification is claimed. Caller checks were inspected without
+execution, mutation, rendering, extraction, services or delegation. Production
+integration is pending; V/M4 remain open.
+
+Full four-path integration review by `/root/finite_log_independent_review`
+ran 17:40:24--17:41:54 UTC within ten minutes. Baseline `5d25c546`;
+exact diff SHA-256
+`e9731ba95a1b8bd5cc51ea84d3a28d8f7860510cb782b29230e433335565b5f1`;
+manifest SHA-256
+`ea07e6e23cdf62cfa51132e44b1a20768204b4504eed16b52e7dd486e39e6cf4`.
+Complete capture and frozen scope: `/tmp/pi-m4-disk-integration-review-20261127/`.
+**D/I: none in either review. Q1: retained open.** The critic independently
+reconstructed the argument and found no consequential duplication. All 58
+bound files and the live diff matched; both complete guides and source/critic
+skills applied. Source and caller-execution limits remain as above. No
+checker execution, mutation, service or delegation occurred. Documentation
+(93), process tests (38), whitespace and preservation checks passed; unchanged
+Lean was not rebuilt. Only factual outcome records follow the frozen review.
