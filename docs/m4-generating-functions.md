@@ -597,6 +597,51 @@ at prime N. Neither exact initialization, every future denominator, nor one
 coherent infinite choice is retained. It is a finite countertest, not an
 infinite avoiding model or a new visitation mechanism.
 
+### Coherent seeds can preserve every forward denominator
+
+The finite-word test above does not preserve future reduced denominators.
+A separate countertest preserves all of them, but does not retain its
+arbitrary-word conclusion. Write S_-1=0, S_n=16S_(n-1)+A(n), and
+q_n=den(S_n). For K=floor(log_5(8n+5)), n>=0, the exact paper calculation is
+
+```text
+v_5(S_n)=-K,
+5^K*S_n = 4 mod5 if 8n+4<4*5^K, and 1 mod5 otherwise.
+```
+
+At the maximal 5-power level, only cofactors 1 and 4 fall in the actual
+pole classes. The former always occurs and contributes 4 modulo5; the latter
+adds -2/4=2 modulo5 when present. Lower levels vanish and all weights
+16^(n-j) equal one modulo5. Every original denominator is below 5^(K+1):
+the possible endpoint 8n+6 cannot equal that odd power. This proves the
+valuation and both residues for every n>=0.
+
+For either fixed seed delta=2/5 or3/5, set
+
+```text
+X_-1=delta,  X_n=S_n+16^(n+1)*delta.
+```
+
+This is a coherent exact-A history with den(X_n)=q_n for every n>=0 and
+X_n-S_n divisible by 16^(n+1) in Z_2. Away from5 the added term is integral.
+For K>=2 it has higher five-valuation; at K=1 neither possible leading
+residue is canceled by 2 or3. The seed denominator at -1 is5, not1, and
+zero initialization, floors and the actual numerators are lost. The
+congruence is raw; subtracting different integer parts need not preserve it.
+
+Thus full forward denominator profiles, exact forcing and coherent growing
+raw dyadic precision do not uniquely select zero. These are not independently
+proved nondense models: rational-entry V-equivalence still applies, with
+possibly different holes if V fails. Exact zero identifies this raw history;
+it is not claimed necessary for visitation of every rational-entry history.
+
+The archived integral two-adic graph does select zero when extended in both
+directions. Any nonzero rational seed contributes 16^(-m)delta at index
+-m-1, eventually of negative valuation and dominating the integral graph.
+That selector already existed and has no new real-placement consumer.
+The [review record](agy-reports/m4-continuation-review.md#column-unit-survival-and-profile-rigidity--2026-11-27-utc)
+retains the full proof and finite-check limits; no Lean theorem was added.
+
 ### Even carries do not increase an analytic radius
 
 The exact rational formula gives A(n)=n+1 modulo 2. Thus, for formal series
@@ -772,6 +817,55 @@ manifest v2 SHA-256 is
 Parent full reconstruction and unchanged-copy replay passed: 3,791 exact
 checks, exit 0, UTC-only receipt difference, originals preserved. These are
 paper arguments and diagnostics, not a new kernel theorem or V acceptance.
+
+### Fixed odd-prime support limits a common-hole family
+
+[Jiang–Kong–Li–Wang, Theorem 1.2](https://arxiv.org/pdf/2204.04624v4),
+printed p.2, states the following. For coprime integers p>=2,q>=3, a digit
+set D subset {0,...,q-1} with 1<|D|<q, rational r and real alpha, the set
+(r D_p+alpha) intersect K(q,D) is finite. Here D_p is all terminating
+base-p fractions d/p^h in [0,1), and K(q,D) is the closed missing-digit set.
+The v4 revision is dated 4 June 2024; its title-page date is 5 June.
+The source pages and argument were inspected, but the imported Schleischitz
+dependency was not independently audited. This remains a paper source input.
+
+For actual A, fix an odd integer p>=3, rational r!=0, a nonempty open interval
+J strictly inside (0,1), and N>=0. The theorem implies that only finitely
+many seeds delta in r D_p satisfy
+
+```text
+for every n>=N, fract(S_n+16^(n+1)*delta) is outside J.
+```
+
+Indeed, choose J0 with positive margin inside J and ONE M>=N using the
+seed-independent E_n->0. The exact identity
+
+```text
+S_n+16^(n+1)*delta+E_n = 16^n*(pi+16*delta)
+```
+
+transfers any pure-orbit hit in J0 at n>=M into J. A closed cylinder
+[j/B,(j+1)/B] inside J0, B=16^ell, therefore cannot be visited by aligned
+pure iterates. Their phase at time M lies in K(B,{0,...,B-1}\{j}). Pi plus
+a rational shift is irrational, so ambiguous endpoint expansions do not arise.
+Write that phase as fract(alpha+R*d), with fixed alpha=16^M*pi,
+R=16^(M+1)*r and d in D_p. There are finitely many integer wraps. On each
+wrap the source applies with fixed translation alpha-wrap and rational slope
+R; injectivity and a finite union prove the claim.
+
+Taking p to be a product covers a fixed finite set of odd denominator primes;
+a bounded rational family is covered by finitely many translates. Thus the
+archived infinite common-hole family cannot also retain such fixed support.
+The hole, threshold and support must stay fixed. A countable union of finite
+exceptions may still contain every rational seed, consistently with the
+rational-entry equivalence above.
+
+Actual avoidance has not produced an infinite bounded family of distinct seeds
+satisfying these uniform conditions. The profile countertest and finite-word sieve
+do not supply that missing construction. The theorem restricts comparison
+families; it does not select the actual zero seed or prove V. The
+[review record](agy-reports/m4-continuation-review.md#column-unit-survival-and-profile-rigidity--2026-11-27-utc)
+retains the exact source contract, bridge, replay and independent review.
 
 ## A rationality criterion needs the same canonical carry series
 

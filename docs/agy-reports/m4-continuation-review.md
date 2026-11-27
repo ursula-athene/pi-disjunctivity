@@ -3548,3 +3548,104 @@ passed. Lean is unchanged and was not rebuilt. The corrected guide-filename
 mistake occurred during packet preparation, before review; it was not a
 failed review run. Only factual review-outcome records follow the reviewed
 diff. This checkpoint does not accept V/M4 or end ongoing research.
+
+## Column unit survival and profile rigidity — 2026-11-27 UTC
+
+The unit/window report is
+`/tmp/pi-m4-column-uniform-window-20261127-195029/report.md`, SHA-256
+`be7a7cbc3d8f34eea64534bc9d4cd3c4e075f8ae528f8bb736a37d804fbfa93c`;
+worker manifest `1371a4b2923ceb4fb567801c2e71a7fd6f8a0c739937bf1041f0420505974c20`.
+Parent packet `/tmp/pi-m4-column-unit-parent-20261127-2006/` has manifest
+`e983110faa41dd2de2ee769cb6ffb6303920b52d68ee59edfdddac9ad8f313ac`.
+Unchanged replay at 20:05:42 UTC passed 87,596 local arithmetic checks,
+preserving seven worker artifacts and five inputs. Parent completion was
+20:06:44 within nine minutes; its rounded label is clarified separately.
+Independent `/root/finite_log_independent_review` ran 20:07:10--20:10:04
+within ten minutes, reassessing at 20:09:28. **D/I: none. Q1: unresolved:**
+joint unscaled visits with both error margins. **Q2: unresolved:** the selected
+inverse branch and correlations between kicks. The complete residue proof,
+full-interval discrepancy convention, PNT dependency, varying comparison and
+sufficient-only prefix shift were independently reconstructed. Full capture:
+parent `review-full.txt`, SHA-256
+`2cf0b1fede0c0859c7d78666e3b9a113824b14ee3f59014670c3a292c841560f`.
+
+The fixed-prime source screen is
+`/tmp/pi-m4-stoneham-sum-source-screen-20261127-1956/assessment.md`, SHA-256
+`2a7dabc5343c0567ec413480e8c4619482227960f1afbed866bc5f88c6bb5551`.
+Assessment finished at 20:01 within 19:55:31--20:04:31; later provenance
+clarification was part of review. Independent review ran 20:03:03--20:06:17
+within nine minutes, reassessing at 20:05:42. **D: none. I1: implemented:**
+readable Stoneham copies have one added final LF; Xi also normalizes CRLF.
+New exact-source copies match all four upstream Git blob IDs; no frozen
+artifact was changed. Clarified manifest v3 is
+`8a120a8dcd7dd09297f9208537126a15e7dc1f8853a6d02338807b9ec7edc526`.
+**Q1: unresolved:** a consumer for the actual signed sum. **Q2: unresolved:**
+uniformity under growing parameters. Full capture is `review-full.txt` in
+that packet, SHA-256
+`ba6f8e8ef852cc3c50e867a134e43487903e66920cfc5fa7d192d780277da240`.
+The exact two-sum, localized-logarithm and Vandehey contracts were inspected;
+the external developments were not built, fully audited or imported.
+
+The coherent-profile/common-hole report is
+`/tmp/pi-m4-initialized-history-discovery-20261127T195106Z/report.md`, SHA-256
+`22e996cf1bc39dd6bd1a2a625a90f787b31db92fd2df5364b3416888812a94cc`;
+worker manifest `f5c50cc4eb97d705260c3baba75c1ad27607288e33714db62a60b57d694d97f0`.
+Parent packet `/tmp/pi-m4-history-source-parent-20261127-2009/` has manifest
+`6efb02731eaef9a27020f0de4364451973c9d356c8ff5c8a4674b17da77a0491`.
+Unchanged replay at 20:09:49 passed 41,747 checks, preserving nine originals.
+Parent completed at 20:11:15 within ten minutes. Independent review ran
+20:11:34--20:15:02 within ten minutes, reassessing at 20:14:39.
+**D/I: none. Q1: unresolved:** the selected history's real placement.
+**Q2: unresolved:** production of an infinite bounded fixed-support common-hole
+family from actual avoidance. The raw/seed/canonical distinctions and fixed
+quantifiers were independently checked. Full capture is parent `review-full.txt`.
+Source pages 1–2 were visually inspected; the imported Schleischitz proof
+and full dependency chain were not independently audited.
+
+All three reviews used both complete adversarial guides, the replacement
+procedure and applicable critic/source skills. Reviewers read files/images,
+reconstructed arguments and verified hashes/receipt identity. No reviewer
+executed checkers, probes, builds, rendering or extraction, wrote files,
+contacted services, changed Git, installed tools or delegated. Finite counts
+remain caller execution evidence, not universal proofs. No other-prime
+exploratory pattern, new Lean theorem or V/M4 acceptance is adopted.
+Full changed-file integration review and checks remain pending.
+
+Full integration review by `/root/finite_log_independent_review` ran
+20:20:35--20:26:34 UTC within twelve minutes, reassessing at 20:25:29.
+Baseline `b98f4a45`; exact five-path diff SHA-256
+`0afce9eb078b4b69a8a1f2d8b895964996daeb0a4d3f875ed8986c9dc7e5ffbd`;
+manifest `1f84f047410449b464c1d569c4f8043f23259da71f8edfb2183186f8e8b2269f`
+bound 82 files. All bound files, the live diff and 28 preservation hashes
+matched. **D1: repaired, pending focused verification:** summary statements
+omitted boundedness of the fixed-support common-hole seed family. Integer
+translates of an avoiding seed form an unbounded counterexample. The log,
+handoff and current Q2 summary now retain an infinite bounded family (or
+fixed r D_p); the mathematical owner already fixed r D_p and boundedness.
+The earlier paper review's abbreviated Q2 had the same omission, while its
+reconstruction retained boundedness. Its original capture is preserved;
+this paragraph supplies the clarification rather than rewriting that review.
+**Prior I1: verified implemented. I2: implemented, pending verification:**
+the production interval is now explicitly nonempty. **Q1--Q3 remain open:**
+joint unscaled visits/branch control, the selected history and bounded seed
+family, and actual signed-sum/uniform-parameter consumers. Full initial review
+and exact repair evidence are in
+`/tmp/pi-m4-unit-profile-integration-20261127-2020/`. Documentation (93),
+process tests (38), and whitespace checks passed before the repair; affected
+checks and focused review follow. No Lean changed. This review does not
+accept V/M4 or interrupt the ongoing research.
+
+Focused follow-up ran 20:28:45--20:29:31 UTC within six minutes, reassessing
+at 20:29:21. **D1 and I2: verified resolved. Prior I1: remains resolved.**
+No new defect or improvement. The repair diff SHA-256 is
+`9f3236fe7edab7e837b20759755dfbd7fe6294a98e22f53ff43210a140ef2a2e`;
+revised full diff `aed7f23eaf80e491192641d709cfa91b07f87bd2a29314934c9e3393dfa593f2`;
+fix manifest `3cfa6617a5ae5820554a76b4ba03b1cf4e4e5ef64dffdcf99dbbf48fce03f967`
+bound 91 entries. Live scope, original snapshots, 77 original non-production
+entries and all 28 preservation hashes matched. Original review history is
+preserved in `review-initial.txt`; complete follow-up is `review-followup.txt`.
+Affected documentation and whitespace checks passed. The complete cycle found
+and fixed one summary quantifier defect, implemented one domain clarification,
+and verified the prior source-serialization improvement. Q1--Q3 remain open
+and block V/M4, not this limited documentation checkpoint. Only factual outcome
+records follow the reviewed repair; no new mathematical claim is added.

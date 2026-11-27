@@ -4938,3 +4938,65 @@ correlation and uniform-visit obligations remain open. Documentation (93),
 process tests (38), and whitespace checks passed; no Lean changed.
 Complete scope, validation and review capture are retained in
 `/tmp/pi-m4-word-column-integration-20261127-1957/`. Research continues.
+
+The finite-word/column checkpoint is local commit
+`b98f4a458b4aa871301b09990b364a4997e32640`, parent `70666670`.
+Post-commit scope/blob/necessity inspection at 19:59:46 UTC passed: exactly
+five owned paths, empty index, owned tree clean and all 28 preservation
+hashes matched. At that inspection it was two ahead of upstream `116f072d`.
+This agent did not push or open a PR.
+
+The uniform-column worker ran 19:50:29--20:03:07 UTC within eighteen
+minutes, reassessing at 19:59:17. Its exact top-17 unit test succeeds for
+all cutoffs and indices in the stated domains, but scaled orbit pieces
+remain at most seven terms and denominator clearing loses the selected
+unscaled branch. Parent replay passed 87,596 exact checks at 20:05:42;
+paper reconstruction completed at 20:06:44 within nine minutes. Independent
+review ran 20:07:10--20:10:04, reassessed 20:09:28, with no D/I and joint
+visits/inverse-branch questions retained. The
+[owner](m4-fourier-windows.md#the-unit-test-succeeds-but-the-available-orbit-pieces-stay-short)
+states the partition-bound limit without claiming an actual discrepancy bound.
+
+A parent source screen ran 19:55:31--20:01 within nine minutes after a
+preliminary search. It inspected the September 2026 two-Stoneham-sum and
+localized-logarithm claims and Vandehey's original short-sum statement.
+Their fixed-parameter and sparse-insertion conditions do not supply the
+actual uniform transfer. Review ran 20:03:03--20:06:17 within nine minutes;
+no mathematical defect, one implemented serialization clarification, and
+signed-sum/uniformity questions remain. Exact source bytes were preserved
+separately during review; no external Lean proof was built or imported.
+
+The initialized-history worker ran 19:50:47--20:06:59 within twenty-two
+minutes, reassessed at 20:01:15. Its exact five-valuation permits two coherent
+changed seeds preserving every forward denominator, while losing zero and
+floors. A new source consequence makes each bounded fixed-support, fixed-hole,
+fixed-threshold seed family finite. Actual avoidance has not supplied an
+infinite such family. Parent replay passed 41,747 exact checks at 20:09:49;
+reconstruction finished 20:11:15 within ten minutes. Review ran
+20:11:34--20:15:02, reassessed 20:14:39, with no D/I. The
+[profile](m4-generating-functions.md#coherent-seeds-can-preserve-every-forward-denominator)
+and [common-hole](m4-generating-functions.md#fixed-odd-prime-support-limits-a-common-hole-family)
+sections retain separate hypotheses. Full integration remains pending;
+[review evidence](agy-reports/m4-continuation-review.md#column-unit-survival-and-profile-rigidity--2026-11-27-utc)
+owns all dispositions and source limits.
+
+Fresh-context `/root/post_profile_mechanism_reset` was assigned a twenty-minute
+discovery bound from its first clock, reassessing within ten. It seeks a
+different actual-period or initialized-history implication, with an archive
+screen and a discriminating test, excluding more profile/approximation
+refinements without a real-visitation consumer. Its unfinished claims are
+excluded from adoption. No checked theorem or acceptance status has changed;
+the parent continues the authorized M4 investigation.
+
+The full unit/profile integration review ran 20:20:35--20:26:34 UTC within
+twelve minutes, reassessing at 20:25:29. It caught one summary quantifier
+defect: common-hole finiteness needs a bounded seed family, since integer
+translates otherwise give a counterexample. It also requested an explicit
+nonempty interval. Both repairs passed focused review at 20:28:45--20:29:31
+within six minutes, reassessed at 20:29:21; no new findings. The prior source
+serialization clarification remains verified. Exact initial scope, repair,
+91-entry manifest and complete captures are retained in
+`/tmp/pi-m4-unit-profile-integration-20261127-2020/`; all 28 preservation
+hashes matched. Documentation (93), process tests (38), and whitespace passed,
+with affected documentation/whitespace rerun after repair. No Lean changed.
+All visit, branch, bounded-family and uniformity obligations remain open.

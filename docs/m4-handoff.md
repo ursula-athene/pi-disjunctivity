@@ -12,15 +12,17 @@ and [persistence protocol](meta-proof-plan.md#persistence-and-stopping-condition
 Use Codex subagents for required reviews; Carbon remains stopped. M5, push,
 PR, new dependencies, installations and permission changes are not authorized.
 
-Read the [finite-word entry test](m4-generating-functions.md#every-finite-word-can-retain-the-dyadic-entry-precision)
-and [prime-power column assessment](m4-fourier-windows.md#normal-prime-power-columns-do-not-supply-a-sum-estimate),
+Read the [column unit and window test](m4-fourier-windows.md#the-unit-test-succeeds-but-the-available-orbit-pieces-stay-short)
+and [coherent profile test](m4-generating-functions.md#coherent-seeds-can-preserve-every-forward-denominator),
 then the end of the [research log](research-log.md) and the actual checkout.
-Local entry precision permits every finite word in the tested alphabet;
-separately normal columns do not control their correlated sum or uniformly
-early visits. Further approximation acceleration is suspended without a
-visitation consumer. The next tests concern the column method's uniform cost
-and a constraint on the same initialized numerator across successive indices.
-The log owns bounds and outcomes; this entry is not a second live status ledger.
+The 17-adic unit test succeeds but has no joint unscaled visit estimate;
+coherent changed seeds can retain every forward denominator. A
+[common-hole finiteness theorem](m4-generating-functions.md#fixed-odd-prime-support-limits-a-common-hole-family)
+would need an infinite bounded fixed-support seed family that actual avoidance has
+not supplied. Fresh discovery seeks a different implication from the exact
+period or initialized history. Further approximation or profile refinement
+requires a real-visitation consumer. The log owns bounds and outcomes;
+this entry is not a second live status ledger.
 
 For the immediate failure record, follow the relevant mathematical owner:
 
@@ -28,7 +30,8 @@ For the immediate failure record, follow the relevant mathematical owner:
   exceptional fine returns, and the absent fixed divisible integer.
 - [Generating functions](m4-generating-functions.md): natural boundaries,
   interpolation limits, finite-word entry freedom, and the absence of a
-  parity-to-continuation implication.
+  parity-to-continuation implication; full forward profiles do not select zero,
+  and the common-hole theorem lacks the required bounded seed family.
 - [Two-adic reflection](m4-two-adic-reflection.md): the exact raw graph and
   zero anchor have not supplied a real-cell visitation estimate.
 - [Language auxiliaries](m4-language-auxiliaries.md) and
@@ -37,7 +40,8 @@ For the immediate failure record, follow the relevant mathematical owner:
 - [Prime compression](m4-prime-compression.md): the real matching estimate
   needed by the qualitative density theorem remains unproved.
 - [Arithmetic windows](m4-fourier-windows.md): normal prime-power columns
-  can cancel; fixed-cutoff normality would still lack uniform early visits.
+  can cancel; exact unit survival leaves bounded orbit pieces and an uncontrolled
+  inverse branch. Newer fixed-prime source methods retain the transfer gap.
 - [Transforms and periods](m4-transforms-and-periods.md): disk dissection
   cancels pi; fixed-frequency asymptotics do not control the remaining tail.
 - [Approximation interfaces](m4-approximation-interfaces.md): AGM unit norms,

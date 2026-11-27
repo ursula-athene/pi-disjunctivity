@@ -449,3 +449,104 @@ and independent review. A possible insertion-valuation test has no proved
 real-visitation consumer. Further work on this representation must test a
 joint estimate at n of order M, rather than take a fixed-M limit and silently
 transfer it to pi. V/M4 and the actual odd-carry question remain open.
+
+### The unit test succeeds but the available orbit pieces stay short
+
+Let S_M be the included 17-free cofactors m<=M above, and set
+
+```text
+D_M=lcm_(m in S_M) den(c_(m mod8)/m),
+B_M(j)=sum_(r in {1,4,5,6}, sf17(8j+r)<=M) c_r/(8j+r),
+S_(M,n)=sum_(j<=n)16^(n-j)*B_M(j),  X_(M,n)=D_M*S_(M,n).
+```
+
+Here sf17 removes all factors 17. D_M is prime to 17 and each
+w_m=D_M*c_r/m is an integral 17-adic unit. For M>=6,n>=2, put
+K=floor(log_17(8n+6)). Then the reduced denominator of X_(M,n) is
+**exactly 17^K**. After multiplication by 17^K, lower levels vanish modulo
+17. The possible top cofactors are 1,4,5,6,9,12,13,14; the time and cutoff
+conditions select a nonempty initial segment. Since (17^K-1)/8 is even,
+their cumulative residues, after removing the unit D_M*(-1)^n, are
+4,12,5,2,11,14,1,12. None vanishes. This proves the proposed unit test
+with the actual coefficient vector and zero raw initialization retained.
+
+Nevertheless, through n<=floor((17M-6)/8), D_M*B_M(n) is nonintegral
+exactly at n=2,8,10,12 modulo17. At such an index exactly one pole is
+17-divisible and its cofactor is included; its unit numerator cannot cancel
+against the other integral terms. The gaps are 6,2,2,7. Thus maximal
+homogeneous orbit pieces have at most seven terms throughout the sufficient
+transfer window, for large M. The unscaled forcing even agrees with actual
+A through n<=floor((M-6)/8).
+
+For full interval discrepancy, any J-point sequence has discrepancy at
+least 1/J, by shrinking an interval around an atom. Consequently the
+triangle estimate D_total<=sum_i(J_i/N)D_(J_i), with all J_i<=7, has its
+**right-hand side at least 1/7**. This is no lower bound on actual total
+discrepancy. It shows that this partition estimate cannot certify arbitrarily
+small discrepancy; it discards the needed correlations between pieces.
+The source's square-root-modulus estimate likewise gives no vanishing bound
+on bounded-length pieces. Earlier dependencies remain unaudited; the parent
+and reviewer inspected Definition 2.1(3), p.529, and the displayed bound p.534.
+
+Clearing denominators also costs interval information. The exact odd-prime
+support of D_M is p!=17 with either p=1 mod4,p<=M or p=3 mod4,2p<=M;
+its 2-part is exactly two. Higher powers contribute o(M) to its logarithm.
+The previously assessed fixed-progression PNT therefore gives
+
+```text
+log D_M=3M/4+o(M),
+D_M/16^W_M(delta) -> infinity,
+W_M(delta)=M/8+log_16 M+O_delta(1).
+```
+
+For one fixed 16-normal beta in (0,1), alpha_M=beta/D_M has the same
+normal scaled orbit for every M, while all unscaled phases up to W_M tend
+uniformly to zero. Each alpha_M is normal, but the numbers vary with M and
+lose the actual period and forcing history. This refutes only a uniform
+inverse transfer based on the scaled information. It does not give a fixed
+avoiding number or a counterexample to V. No order-of-16 lower bound follows
+merely from D_M's size.
+
+The k=0 rational prefix can be removed after scaling by shifting past its
+largest exponent, between floor((M-6)/8) and floor((M-1)/8). That sufficient
+procedure uses order M/8 shifts and leaves only O(log M) in the guaranteed
+window; it is not a necessary bound excluding earlier cancellation.
+The [review record](agy-reports/m4-continuation-review.md#column-unit-survival-and-profile-rigidity--2026-11-27-utc)
+retains the full paper proof and checks. Unit survival is now established at
+paper level; the unscaled interval branch and a joint early-visit estimate
+remain open. No fixed-M normality or new Lean theorem is asserted.
+
+### Stronger fixed-prime sources retain the transfer gap
+
+The September 2026 [two-Stoneham-sum paper](https://github.com/CaptainSude/Stoneham-sum-normal/blob/f4d3d1f01d00c57425c684409849053e58e42261/paper/stoneham-two-sum-normality.tex)
+claims normality of alpha_(b,c)+alpha_(b,d) for integer b,c,d>=2 and
+gcd(b,c)=gcd(b,d)=1, where alpha_(b,c)=sum_(k>=1)1/(c^k*b^(c^k)).
+Both coefficients are +1. Its proof uses denominators between n^eta and
+n^2, fixed prime support, bounded insertion counts on dyadic windows, and
+an orbit-sum estimate for length at least q^(17/36). Its statement does
+not cover our signed weights, shifted insertions or growing number of columns.
+Normality of a two-sum cannot be iterated by treating the sum as another
+Stoneham constant.
+
+The related [localized-logarithm paper](https://github.com/CaptainSude/xi-normality/blob/06961817c7f61181ed9a5c73badb8d908d6ccdcc/paper/localized-logarithm-normality.tex)
+claims normality of sum_(m in M_P)1/(m*b^m), with M_P the positive integers
+supported on a fixed finite nonempty prime set P, if all primes in P are
+coprime to b, or if b=2 and 3 belongs to P. It explicitly retains the
+nonuniformity preventing passage to its logarithmic limits. Its finite-prime
+extension is paper-only, beyond its claimed formalized {2,3} result.
+
+[Vandehey, Corollary 1.2](https://arxiv.org/html/1606.07911v1), states that
+for fixed finite prime support P, integer b>=2, q supported on P,
+gcd(a,q)=gcd(b,q)=1, and fixed epsilon>0, there are delta(epsilon)>0 and
+C(epsilon,b,P)>0 with
+
+```text
+|sum_(j=1)^L e(a*b^j/q)| <= C*q^(-delta)*L*(1+log q),  L>=q^epsilon.
+```
+
+The primary statement was inspected, not its full proof. Even with P={17},
+bounded pieces fail that length condition as q grows. Varying epsilon or P
+requires new uniform estimates. The complete two-sum TeX and the localized
+finite-prime argument were read, but neither external Lean development was
+built, audited or imported. The source screen rejects these direct transfers;
+it does not reject all possible adaptations of their methods.
