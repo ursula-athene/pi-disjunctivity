@@ -190,3 +190,112 @@ The next useful question is a signed cross-index relation or estimate specific
 to A and Ahat that fails for D. Restating the forced recurrence, discarding
 beta_j, or averaging over all seeds would repeat the missing step. V and M4
 remain open; this bounded diagnostic does not end the authorized research.
+
+## Full mixed differences retain the largest denominator
+
+A second consumer test uses the unrestricted mixed-prime relations directly,
+without Fourier completion. Let Q be a nonempty squarefree product of primes
+at least 7 and retain every transformed state:
+
+    C_Q^c(k)=sum_(d|Q) mu(Q/d)*d*F_(T_(Q/d)c)(dk),
+    B_Q=product_(p|Q)(p-chi_4(p)).
+
+For each selected p, v_p(C_Q^c(k))>=2. In the real absolute value, for
+fixed Q, C_Q^A(k) tends to pi*B_Q, C_Q^R(k) to 2*pi*B_Q, and C_Q^D(k)
+to zero. Thus the A expression itself is not small. Cancelling its constant
+by adjacent subtraction gives
+
+    Delta_Q(k)=C_Q^A(k)-C_Q^A(k+1)
+      =-sum_(d|Q) mu(Q/d)*d
+          *sum_(j=dk)^(d(k+1)-1)16^(-j)*(T_(Q/d)A)(j). (4)
+
+The smallest corner survives. Set a_Q=T_Q A and delta=91/65536000. For all
+k>=1, uniformly in every such Q,
+
+    |Delta_Q(k)+mu(Q)*16^(-k)*a_Q(k)|
+       <=delta*16^(-k)*|a_Q(k)|.                       (5)
+
+For j>=1 the elementary coefficient bounds are
+
+    0<A(j)<=1/j, 0<-Ahat(j)<=1/j,
+    min(A(j),-Ahat(j))>=40/(819*j^2).
+
+For A the lower bound follows from its explicit positive quadratic numerator;
+for Ahat, -Ahat(j)>4/(8j+2). A divisor d>1 contributes at most
+(16/(15k))*16^(-dk). Relative to the d=1 term this is at most
+(546/25)*k*16^(-(d-1)k). All such divisors are at least 7. Summing over
+every integer d>=7, and using k*16^(-(d-1)k)<=16^(-(d-1)), gives exactly
+delta. In particular the actual Delta_Q(k) is nonzero and has size at least
+(1-delta)*40*16^(-k)/(819*k^2).
+
+This failure of zero forcing persists after actual denominator reduction.
+For even k>=2, K=Q(k+1) is odd. Both coefficient states have odd reduced
+denominators; an explicit form is
+
+    Ahat(j)=-2/(4j+1)-2/(8j+3)
+                 -3*(j+1)/[(2j+1)*(8j+7)].
+
+The last two factors have gcd dividing 3, cancelled by the numerator. A(j)
+is a 2-adic unit for even j. In 16^(K-1)*Delta_Q(k), the last term in
+(4) is -Q*A(K-1), a 2-adic unit, while every earlier term has an additional
+factor of 16. Hence
+
+    v_2(Delta_Q(k))=-4*(K-1).
+
+If Delta_Q(k)=a/b is reduced, b>0, then 16^(K-1) divides b, gcd(b,Q)=1,
+and Q^2 divides a. Its supplied reduced lattice step is Q^2/b. Therefore
+
+    |Delta_Q(k)|/(Q^2/b)
+      >=(1-delta)*(40/819)*16^((Q-1)*(k+1))/(k^2*Q^2)>1. (6)
+
+The final inequality holds for Q>=7,k>=2: k^2<=16^(k-1) and
+Q^2<=16^(Q-1) leave at least 16^11. For fixed Q the ratio grows
+exponentially along arbitrarily late even k, including k coprime to Q.
+Thus selected prime-square divisibility and this actual real smallness
+cannot force the period-annihilated rational to vanish. No stronger
+valuation or new avoidance-dependent estimate is ruled out.
+
+For the full denominator cost, put L_K=lcm of the positive odd integers
+at most 8K-1 and V=L_K/product_(p|Q)p^(v_p(L_K)). The legitimate scaled
+modulus is product_(p|Q)p^(2+v_p(L_K)), giving the coarse step
+
+    g=Q^2/[16^(K-1)*V].
+
+The ordinary PNT gives log L_K=8K+o(K). The removed selected-prime part
+has logarithm O((log K)^2), since Q<=K. Hence
+log g=-(8+log16)K+o(K). All unselected odd prime powers remain. This
+coarse cap is consistent with, but not needed for, the reduced bound (6).
+
+There is also a precise limitation of separately relaxing word cells. For
+the original C_Q^A(k), K=Qk, retain canonical integers z_d and fractions
+theta_d of each transformed S_(dk-1). The exact expression is
+sum_(d|Q)mu(Q/d)*d*16^(-(dk-1))*(z_d+theta_d). Separate cells of length
+w give an interval of width at least 16^(-(k-1+w)); it exceeds g whenever
+16^(K-k-w)>Q^2. Such an open interval contains a scalar lattice point.
+This tests only continuous box relaxation, not an actual coupled avoidance
+model. Initialization, forcing and the carry in S^Ahat=U-S^A cannot be
+discarded. For eventual avoidance take k-1 beyond the specified threshold.
+
+Adjacent subtraction also removes the old initialized prefix: (4) depends
+only on coefficients at indices at least k. Replacing F_A(m) by F_A(m)+t
+and F_Ahat(m) by F_Ahat(m)-t for m>=1 changes C_Q^A by t*B_Q but leaves
+Delta_Q unchanged. Such a replacement loses the actual initialization;
+it diagnoses information discarded by this auxiliary alone. It does not
+refute combining the auxiliary with a separate initialized constraint.
+
+The actual null state satisfies the same selected-prime bounds and
+|C_Q^D(k)|<2*16^(-k)/k. Its small real values coexist with those constraints
+while its recurrence avoids (1/2,1). The nonzero A period remains available
+to a different argument; it was cancelled in the tested construction.
+
+Frozen report `/tmp/pi-m4-mixed-consumer-20261127/report-v1.md` has SHA-256
+`bb296725710eeb9a794122220572673c9365a1ce90a19ccccfcc41ad19a06022`.
+The parent read its full report/checker, reconstructed the bounds and exact
+dyadic argument, and replayed an unchanged checker copy with an identical
+receipt and unchanged originals. It exited 0: 38 adjacent products, 60
+selected-prime valuations, 19 reduced-lattice cases, 20 complete denominator
+caps and 114 word-width comparisons. These finite checks do not certify
+the universal paper argument. A useful new consumer must retain the actual
+branch information and obtain an additional signed or avoidance-dependent
+estimate. The raw period-cancelling route above supplies neither; V remains
+open, and research continues under the unchanged contract.

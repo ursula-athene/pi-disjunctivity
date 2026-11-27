@@ -847,3 +847,75 @@ mutation, service contact or delegation occurred; Carbon remains disabled.
 Later precision and real-consumer investigations were excluded. Final exact
 diff, validation and post-commit receipts belong in the same packet. This
 checkpoint remains local and does not accept V/M4 or end ongoing research.
+
+## Boundary argument checkpoint and complete integration review
+
+Reviewer `/root/generating_review` completed an intermediate argument review
+against baseline `8a50efa27368f8052890b53fa7e06cc2b24716a5`. The exact 27-input
+scope is `/tmp/pi-m4-boundary-argument-review-20261127/scope.json`; primary
+report SHA-256 is
+`eff6c0d8d1e09a86a19524df3ac98d4773f46f2e2ea4bc5cd0da0943c64a2c13`.
+The full returned response is retained in that packet's `review.md`, SHA-256
+`d58b24717e440a0d52734406086b1aa45441ac665004ecb00ba30d4d97bae24e`.
+**Defects:** none. **Nonblocking improvements:** none requested.
+**Open questions/missing evidence:** none blocking the argument checkpoint;
+formalization and the real visitation estimate remain outstanding. No item
+was omitted or deferred and no substantive repair was required.
+
+The reviewer independently reconstructed the single-annulus principle, finite
+horizontal-kernel stabilization, flat base change and natural subobject
+transport. The Leibniz term disappears in the successive quotient, preserving
+linearity of the kernel maps; whole-product injectivity was not substituted
+for the required single-annulus conclusion. It checked Newton convergence,
+deleted-disc domains, zero-normalized iterated primitives, comparison scalars,
+the de Jeu convention, initialization, all-k quantifiers, tower gains and the
+p=7 exception. Both full supporting reports/checkers, manifests, source text
+and supplied page images were covered. All scoped hashes matched at review.
+The earlier draft production note was context, not integration acceptance.
+
+AGENTS, the reviewer replacement, argument-critic limits and both retained
+full adversarial guides were applied with unchanged guide hashes verified.
+The reviewer used only read-only inspection and mathematical reconstruction;
+no checker, probe, build, extractor, service, Git mutation or delegation ran.
+Executions remain caller evidence: analytic-inverse replay is byte-identical,
+and the boundary-comparison receipt differs only in timestamp. Source review
+and exact finite checks are not kernel certification.
+
+The broader integration also includes the mixed-consumer barrier and three
+positive-certificate packets. The parent read their full reports/checkers,
+reconstructed their arguments, and replayed unchanged copies with matching
+receipts and preserved originals. Same-session critic passes are retained:
+the longer-determinant pass fixed the domain of its Q/p collision-height bound;
+circle criticism retained the diagonal cost, singular-kernel limit and the
+clustered-grid countertest. Their open actual-numerator questions remain open.
+The intermediate verdict did not waive the separate integration review or
+establish V/M4 acceptance.
+
+Reviewer `/root/generating_review` then completed that seven-path integration
+against the same baseline. Exact packet:
+`/tmp/pi-m4-boundary-products-review-20261127/`; diff SHA-256
+`1975ff0147550a42e65a1af71497091da4c28714d7659e83afc358997b83b71c`.
+Full returned `review.md` SHA-256:
+`1089d5f06b92ec0bdbe4c77ba55e77b7f27ebf83a7a81581254c45b34219422a`.
+**Defects:** none. **Nonblocking improvements:** none requiring a scope change.
+**Open questions/missing evidence:** no additional gap in the advertised paper
+results; the actual V estimate is still missing. No recommendation was omitted,
+deferred or treated as resolved by a finite check. No substantive fix required
+focused follow-up.
+
+The reviewer reconstructed all integrated inequalities and their domains,
+checked all seven file hashes and 61 evidence hashes, read the four new full
+supporting reports/checkers and available critics, and rechecked the boundary
+integration against the earlier source inspection. Coverage includes canonical
+floors, square-root uniformity, long-block collision costs, the singular
+convolution and diagonal, parameter order, grid formulas and the exact missing
+numerator inequality. Both adversarial guides were retained in full with
+unchanged hashes verified. Read-only inspection and reconstruction were the
+reviewer's only checks; no checker/build/probe/extractor, edit or service ran.
+
+Caller documentation validation reports 93 tracked Markdown files, and both
+whitespace checks exit 0. Final exact-diff, preservation and post-commit
+receipts belong to the same packet. The newer precision-consumer, Bernoulli
+energy and source-connection investigations are excluded. These reviews accept
+the scoped paper assessment only; no new Lean proof, V/M4 acceptance, push or
+PR is claimed, and ongoing research continues.

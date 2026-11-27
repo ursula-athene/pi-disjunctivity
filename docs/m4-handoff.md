@@ -7,7 +7,7 @@ The [continued research checkpoint](#continued-research-checkpoint--2026-11-26)
 records subsequent work during the user's absence; that checkpoint does not
 terminate the ongoing M4 effort.
 The latest dated continuation is the
-[Initialized reconstruction and language tests](#initialized-reconstruction-and-language-tests--2026-11-26); read the
+[Boundary precision and positive certificates](#boundary-precision-and-positive-certificates--2026-11-27-utc); read the
 research log and actual checkout for subsequent results and current state.
 
 ## Baseline and authorized endpoint
@@ -646,3 +646,42 @@ avoidance after retaining every corner and height cost. Each cycle has a
 20-minute reassessment bound. V/Hpi/T/M4 remain open, no Lean theorem or audit
 has been added, and M5 remains excluded. A review or checkpoint commit does
 not interrupt the ongoing authorized research.
+
+## Boundary precision and positive certificates — 2026-11-27 UTC
+
+The preceding exact-phase/unrestricted-lift checkpoint is local commit
+`8a50efa27368f8052890b53fa7e06cc2b24716a5`. Its exact six-path scope, empty
+index, protected-file preservation and necessity inspection were verified.
+No push or PR occurred. The present work remains documentation-only paper
+mathematics. Both the central-argument checkpoint and the complete seven-path
+changed-file integration passed separate review with no D/I/Q items.
+
+The [boundary calculation](m4-prime-defect-boundary.md) constructs the unique
+continuous analytic solution Phi of the raw-defect recurrence. The actual
+initialized defect is Phi(k)-16^(pk)*Phi(0), so the boundary constant cannot
+be silently discarded. Newton generating functions and a source-mapped
+Coleman comparison prove Phi_c(0)=0; a normalized dilogarithm reflection
+identity also gives Phi_D'(0)=0. Consequently the valuations are at least
+2+v_p(k) for A/Ahat/R and 3+2v_p(k) for D, for every p>=7 and k>=1.
+The separate reviewer reconstructed the delicate one-annulus identity
+principle and found no D/I/Q items. This is not a Lean certificate or V.
+
+The [mixed-consumer assessment](m4-crt-phase.md#full-mixed-differences-retain-the-largest-denominator)
+retains all corners and proves why the tested period-cancelling difference
+does not become small enough for its divisibility to force zero. Its reduced
+dyadic denominator is exact, and independent word-cell relaxation loses the
+joint forcing. The [positive certificates](m4-positive-certificates.md) expose
+two different costs: ordinary consecutive determinants fail a uniform-model
+test for narrow gaps; the circle product passes that test but is unstable
+under an exceptionally close pair. A scalar denominator cap and finite
+character cancellation do not repair the latter. Actual reduced denominator
+costs persist; the required canonical-gap numerator bound remains open.
+
+Parent full-report/checker inspection, source-page reconstruction and
+unchanged-copy replays passed; the detailed record retains their limits.
+No actual A fractional-state search was used as evidence for universal claims.
+The next two bounded questions are whether the stronger prime precision
+constrains actual canonical gaps, and whether the nonsingular Bernoulli
+circle energy gives a useful arithmetic sum. The log owns their outcomes.
+V/Hpi/T/M4 remain open, B4/P3 retain their visit premises, and M5 is excluded.
+Research continues; this checkpoint is not an interruption.

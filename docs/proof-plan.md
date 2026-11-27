@@ -725,10 +725,27 @@ removes the complete-block square restriction by cancelling pole differences
 before reduction. It gives twisted p-adic towers and mixed-prime four-corner
 relations with their full middle terms. Both new assessments passed independent
 review with no D/I/Q items. The null state satisfies these relations too.
-Two new investigations, each bounded
-to 20 minutes before reassessment, test stronger k-dependent precision and
-a real consumer retaining all mixed-index heights and phases. The precision
-pattern is conjectural; even proving it would not alone discharge V.
+The [boundary comparison](m4-prime-defect-boundary.md) now proves the stronger
+k-dependent precision at paper level, using a canonical analytic inverse,
+Coleman continuation and an exact dilogarithm reflection identity. Its central
+argument passed independent review; changed-file integration is a separate gate.
+The [mixed-consumer test](m4-crt-phase.md#full-mixed-differences-retain-the-largest-denominator)
+shows that adjacent period cancellation retains a large actual dyadic
+denominator and loses initial-branch information. Its tested scalar lattice
+and word-box relaxations do not force a contradiction.
+
+The [positive-certificate investigation](m4-positive-certificates.md) supplies
+finite determinant and circle-product visit certificates. Actual denominator
+costs survive on square-root windows. Ordinary consecutive determinants have
+an equilibrium mismatch; the circle product fixes that but adds an
+anti-clustering demand not implied even by weak equidistribution and a scalar
+height cap. No actual A numerator lower bound has been proved. The next
+20-minute reassessment cycles test whether stronger precision controls canonical
+gaps, and whether a bounded Bernoulli circle energy admits a new arithmetic
+estimate. Neither a new arithmetic theorem nor another sufficient certificate
+alone discharges V. Production integration of these latest assessments passed
+independent review with no D/I/Q items; all target contracts and Lean status
+remain unchanged.
 
 For the recurrence defined in Step 4, seek a proof of
 

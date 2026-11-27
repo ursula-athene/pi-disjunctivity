@@ -2591,3 +2591,67 @@ all intermediate states, denominator growth and the actual null-state
 comparison. A successful p-adic refinement is not assumed to supply the real
 consumer. The parent continues independent reconstruction and review; these
 cycle bounds are reassessment points, not an end to authorized M4 research.
+
+## 2026-11-27 UTC — boundary precision and positive certificates
+
+The preceding CRT/unrestricted-lift checkpoint is local commit `8a50efa`.
+Its exact six-path scope, empty index and unchanged protected/unrelated files
+were verified; no push or PR occurred. The following work keeps V/M4 open.
+
+**Arithmetic outcome:** [canonical interpolation](m4-prime-defect-boundary.md)
+first reduced the stronger all-k valuations to two exact boundary zeros.
+The analytic forcing alone did not establish them: an essential homogeneous
+term retained the actual initialization. A changed 20-minute cycle identified
+the boundaries through Newton generating functions and normalized Coleman
+primitives. The constant comparison uses the ordinary-disc identity principle;
+the derivative comparison derives single-annulus uniqueness from Besser's
+finite horizontal-kernel construction and natural fiber-functor transport.
+The sourced de Jeu reflection identity then gives the required derivative
+zero. This proves the stronger precision at paper level, including arbitrary
+unit cofactors and the explicit p=7 integrality limitation. The parent
+reconstructed the argument, inspected source pages, and replayed the exact
+checks. Independent central-argument review found no D/I/Q items. Production
+integration and kernel checking are distinct; no Lean result was added.
+
+**Mixed-consumer outcome:** the [complete-corner calculation](m4-crt-phase.md#full-mixed-differences-retain-the-largest-denominator)
+proves an exact dyadic denominator for adjacent period-cancelling differences.
+Their real smallness is insufficient relative to the available prime-square
+lattice, even after reduction. Separate word-cell relaxation likewise leaves
+scalar lattice points and drops the coupling. The parent reconstructed the
+paper proof and replayed the checker with an identical receipt. This limits
+the specified constructions, not every use of the stronger precision.
+
+**Direct avoidance cycles, each bounded to 20 minutes:** a determinant
+certificate made the missing numerator estimate explicit. A rational rotation
+improved its threshold, and elementary order filtering extended actual
+denominator survival to m=o(sqrt N). Prime-length blocks retain an uncontrolled
+floor-dependent collision sum. Testing an equidistributed model then exposed
+a geometric limitation for narrow gaps, motivating a circle kernel instead.
+The [circle-product calculation](m4-positive-certificates.md) proves a fully
+finite avoidance bound with explicit smoothing and diagonal errors. Uniform
+grids pass, but a weakly uniform configuration with one very close pair fails,
+even within a BBP-sized scalar denominator cap. This additional anti-clustering
+requirement makes the product no demonstrated improvement over the earlier
+finite-frequency consumer. Actual denominator costs double; the actual A
+numerator estimate remains absent. Parent unchanged-copy replays for all three
+packets exited 0 with identical receipts and preserved frozen originals.
+Finite synthetic checks are not evidence of pi's distribution.
+
+**Next changed questions, 20 minutes each before reassessment:** test the new
+prime-power precision on actual canonical gaps at structured indices, retaining
+all floors; independently test a bounded Bernoulli circle energy, which removes
+the exceptional-pair instability and lowers the denominator exponent. The
+endpoint is an actual new estimate or a precise reason it returns to the
+missing signed information. The parent is integrating the completed work for
+required changed-file review while these investigations continue. No cycle
+limit, partial proof, review or commit is treated as ending the authorized M4
+effort. B4 still needs arbitrarily late visits and P3 still needs interval visits.
+
+The complete seven-path integration subsequently passed independent review
+with no D/I/Q items. The reviewer reconstructed the boundary comparison,
+mixed-consumer costs and both positive-certificate arguments, verified every
+scoped hash, and inspected the full new reports/checkers and receipts. All
+executions remain caller evidence. Documentation (93 tracked Markdown files)
+and working/staged whitespace checks exited 0. The exact review packet and
+limitations are retained in the [review record](agy-reports/m4-continuation-review.md).
+Newer precision-consumer and Bernoulli-consumer work is outside that review.
