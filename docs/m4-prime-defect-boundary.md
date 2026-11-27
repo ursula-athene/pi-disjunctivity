@@ -297,6 +297,96 @@ middle corners retained. None of this controls the actual real phase:
 D receives the strongest precision while its real prefixes tend to zero.
 The separate signed visitation or word-separation estimate remains missing.
 B4 still needs arbitrarily late visits, P3 still needs interval visits, and
-V/Hpi/T/M4 remain open. The next arithmetic investigation tests whether the
-new precision constrains actual canonical gaps; direct avoidance work
-continues separately.
+V/Hpi/T/M4 remain open. The following consumer tests retain the actual
+canonical floors; direct avoidance work continues separately.
+
+## Precision consumers retain the canonical carry
+
+Write G(k)=Phi(k) and Phi(k)=sum_d gamma_d*k^d after the proved boundary
+zeros. The coefficient bounds give, for distinct positive k,l,
+
+    (G(k)/k-G(l)/l)/(k-l) in p^3 Z_p,
+    (G_D(k)/k^2-G_D(l)/l^2)/(k-l) in p^4 Z_p.
+
+This is genuine extra precision, but an index-difference gain has cost:
+the prime-log mass of factors in a fixed m-index product is at most
+sum_(i<j) log|k_j-k_i|. Different primes' expressions cannot be combined
+as if they were the same auxiliary.
+
+For p=13 put M=16^(12k), so G(jk)=13*S_(13jk-1)-M^j*S_(jk-1).
+For an integer stencil Q(z)=sum_(j=1)^d a_j*z^j, cancellation of a common
+real translation is exactly Q(M)=13*Q(1). Every nonzero such stencil has
+max|a_j|>=M/d: M divides Q(1), or, if Q(1)=0, the lowest nonzero
+coefficient of Q(M)=0 is divisible by M. Primitive normalization cannot
+remove this cost. The explicit polynomial Q=z*(z-1)^2*(z-M) also cancels
+the first Taylor term and gives v_13(sum a_j*G(jk))>=4+3*v_13(k).
+But its full state-coefficient norm is
+
+    B=2*M^2*(M+1)^2+52*(M+1)>=2*M^4.
+
+Writing every S as its integer floor plus its fractional part gives
+Z=C+T with C an explicit integer stencil of those floors. The high
+valuation transfers to T only when C is divisible by the same prime
+power. Even if that additional condition held and clustered states gave
+|T|<=epsilon*B, the nonzero-rational/divisibility certificate would need
+epsilon<p^(4+3*v_p(k))/(den(T)*B). Interval avoidance does not imply
+that clustering or the required floor congruence.
+
+At actual indices n_r=13^r-1, the normalized tower has unit anchor
+W_r=13^r*F_A(13^r)=47/15 mod13^2. Thus v_13(S_(n_r))=-r.
+For r<s both a canonical gap and its complementary circle gap have
+valuation -s, independently of the integer floors or common rotation.
+For the circle product in the [positive-certificate note](m4-positive-certificates.md),
+v_13(R)=-4*sum_(r<s)s: its reduced numerator is a 13-adic unit.
+The null state has the same valuation pattern with anchor 4/105, while
+its real product tends rapidly to zero. This tested use of the precision
+therefore supplies denominator information, not a numerator lower bound.
+
+## Shared multipliers escape one cost and fail another
+
+For primes 13,17,37 choose respective lower indices 12k,9k,4k. All three
+defects have multiplier M=16^(144k). The constant primitive vector
+(-5,6,-1) balances both sums sum a_p and sum p*a_p. It escapes the
+single-prime coefficient bound above, producing the actual expression
+
+    B_A=-65*S_(156k-1)+102*S_(153k-1)-37*S_(148k-1)
+                         +M*(5*S_(12k-1)-6*S_(9k-1)+S_(4k-1)).
+
+The own-prime precision cannot be assigned to the other two defects,
+which can have poles there. More strongly, for every k=13^r, r>=0,
+
+    v_13(B_A)=v_13(B_D)=-r-2.                         (8)
+
+Here the tower comparison reduces 13^(r+2)*S_(m*13^r-1) mod13 to
+13^2*S_(m-1), for m=4,9,12,148,153,156. Their residues for both A and D
+are 0,0,0,4,10,10. Consequently the scaled B residue is
+102*10-37*4=1 mod13. This proves an infinite initialized subsequence;
+it is not extrapolation from finite tests. Scalar multiplication can
+clear the other primes' poles, but its resulting gain is common content
+and disappears from the primitive coefficient vector.
+
+If B=C+T separates the six actual floors, (8) also holds for T and T/M.
+The normalized coefficients have norm 12+204/M, but C/M is not an
+integer and cannot be deleted modulo one. Extra odd linear congruences
+alone cannot repair that dyadic carry: if an integer lattice Lambda is
+restricted to Lambda' with Q*Lambda subset Lambda' subset Lambda for
+odd Q, then C(Lambda') mod M=C(Lambda) mod M. Multiplication by Q is
+an automorphism on every subgroup of Z/MZ. This does not equate images
+of bounded-height or primitive vectors; those restrictions require their
+own estimates. A further four-prime stencil was suspended at this point.
+
+The distinction between A and D remains explicit. The latter obeys
+B_D/M=-25/(27648*k^2)+O(k^-3), while B_A/M has a nonzero exponentially
+growing pi term. Both still have the pole in (8). Neither the growth
+difference nor negative valuations bound the actual canonical numerator.
+
+Frozen reports `/tmp/pi-m4-precision-consumer-20261127/report-v1.md`
+(SHA-256 `214ff17cda22365fc99e2ecdd4e0345e1eb4fed36b48e6911af6c59fe4a39cf5`)
+and `/tmp/pi-m4-balanced-multiprime-20261127/report-v1.md`
+(`831019b307dae734f1c61b0e8a670de11e6e0728538a5dcf45170c0783ff459b`)
+retain the proofs, denominators, carry examples and modular checkers.
+The latter's append-only `reassessment-v1.md` gives the lattice argument;
+`manifest-v2.json` is authoritative. Parent full reconstruction and
+unchanged-copy replays exited 0, matching receipts apart from UTC timestamps
+and preserving originals. The checks use modular A data, not an actual
+fractional-state search. Integration review is recorded separately.

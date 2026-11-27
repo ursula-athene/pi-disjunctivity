@@ -685,3 +685,36 @@ constrains actual canonical gaps, and whether the nonsingular Bernoulli
 circle energy gives a useful arithmetic sum. The log owns their outcomes.
 V/Hpi/T/M4 remain open, B4/P3 retain their visit premises, and M5 is excluded.
 Research continues; this checkpoint is not an interruption.
+
+## Precision consumers and a bounded visit energy — 2026-11-27 UTC
+
+The boundary/product checkpoint is local commit
+`dd4476039dc0aa0677a5dae14d8bc3bce79b6e47`, with its seven paths and unchanged
+protected/unrelated files verified after commit. No push or PR occurred.
+The present documentation-only integration records five completed paper cycles.
+
+The [precision consumers](m4-prime-defect-boundary.md#precision-consumers-retain-the-canonical-carry)
+retain actual canonical floors. A shared-multiplier construction escapes one
+height cost but fails the proposed valuation transfer on an infinite actual
+subsequence. More odd congruences alone do not restrict the dyadic carry image.
+The [bounded Bernoulli energy](m4-positive-certificates.md#a-bounded-energy-removes-the-close-pair-instability)
+gives a sharp avoidance bound without a close-pair singularity. Its actual
+sorted numerator lower bound remains missing. The
+[short-sum source contracts](m4-transform-phases.md#short-sum-source-tests-retain-their-size-and-phase-hypotheses)
+fail concrete size/phase hypotheses in their tested applications, and the
+[polygon branch](m4-language-auxiliaries.md#an-isolated-algebraic-approximation-still-has-a-height-cost)
+retains a decisive degree/height cost despite good root conditioning.
+
+The parent reconstructed all five reports, inspected source pages and replayed
+the four finite checkers in unchanged copies, preserving frozen originals.
+The source-only packet requires no numerical check. Independent changed-file
+review is complete with no D/I/Q items; requested supplemental source pages
+confirmed the contract. Documentation and whitespace checks passed. The existing
+review record owns exact scope and limitations. No finite check or subagent
+agreement is a Lean proof. V/Hpi/T/M4 remain open; B4/P3 retain visitation premises.
+
+Current work tests a real inequality using the positive BBP moment density,
+and the additional height information supplied by its nonzero real period.
+The log records the 20-minute reassessment bounds and countermodel obligations.
+Further congruence stencils are suspended without a new real consumer. This
+checkpoint does not end the authorized research; M5 remains excluded.

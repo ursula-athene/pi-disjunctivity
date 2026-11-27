@@ -739,12 +739,34 @@ finite determinant and circle-product visit certificates. Actual denominator
 costs survive on square-root windows. Ordinary consecutive determinants have
 an equilibrium mismatch; the circle product fixes that but adds an
 anti-clustering demand not implied even by weak equidistribution and a scalar
-height cap. No actual A numerator lower bound has been proved. The next
-20-minute reassessment cycles test whether stronger precision controls canonical
-gaps, and whether a bounded Bernoulli circle energy admits a new arithmetic
-estimate. Neither a new arithmetic theorem nor another sufficient certificate
-alone discharges V. Production integration of these latest assessments passed
-independent review with no D/I/Q items; all target contracts and Lean status
+height cap. No actual A numerator lower bound has been proved. Production
+integration of those assessments passed independent review with no D/I/Q items.
+
+The subsequent [precision consumers](m4-prime-defect-boundary.md#precision-consumers-retain-the-canonical-carry)
+place the tested prime in actual canonical-gap denominators. Shared multipliers
+escape a single-prime coefficient cost, but an explicit infinite initialized
+subsequence defeats the proposed cross-prime divisibility transfer. Extra odd
+congruences alone leave the dyadic carry image unchanged. Further such stencils
+are suspended pending a new real consumer. The
+[Bernoulli energy](m4-positive-certificates.md#a-bounded-energy-removes-the-close-pair-instability)
+has a sharp finite avoidance gap and removes the close-pair instability.
+Its sorted numerator still requires an actual lower bound; transfer and
+complete-seed identities retain or average away the relevant carries.
+The [short-sum source tests](m4-transform-phases.md#short-sum-source-tests-retain-their-size-and-phase-hypotheses)
+identify exact nonconcentration, length, generator and forcing hypotheses
+missing in the attempted applications. The
+[isolated polygon branch](m4-language-auxiliaries.md#an-isolated-algebraic-approximation-still-has-a-height-cost)
+has good real conditioning, but bare integral polynomial evaluation is still
+too weak after the degree and digit amplification costs. Galois averaging
+does not select that branch. These are paper assessments, not Lean results.
+
+Current changed questions, with 20-minute reassessment bounds, test the positive
+moment density of the exact BBP forcing against nearby rational-period models,
+and whether the nonzero real period supplies an additional height constraint
+strong enough for the Bernoulli numerator. Each must retain initialization and
+test the null or rational model before claiming a useful distinction. No new
+arithmetic theorem, sufficient certificate or source analogy alone discharges V.
+The review record owns integration status; all target contracts and Lean status
 remain unchanged.
 
 For the recurrence defined in Step 4, seek a proof of

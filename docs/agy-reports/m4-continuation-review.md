@@ -919,3 +919,54 @@ receipts belong to the same packet. The newer precision-consumer, Bernoulli
 energy and source-connection investigations are excluded. These reviews accept
 the scoped paper assessment only; no new Lean proof, V/M4 acceptance, push or
 PR is claimed, and ongoing research continues.
+
+## Precision consumers and bounded energy integration — 2026-11-27 UTC
+
+Baseline is local commit `dd4476039dc0aa0677a5dae14d8bc3bce79b6e47`.
+The eight-path documentation scope consists of `m4-prime-defect-boundary.md`,
+`m4-positive-certificates.md`, `m4-transform-phases.md`,
+`m4-language-auxiliaries.md`, `proof-plan.md`, `research-log.md`,
+`m4-handoff.md` and this record, all under `docs/` (this record under
+`docs/agy-reports/`). No Lean, tooling, pin or unrelated workspace change
+belongs to the scope. The user-directed Codex replacement remains in effect.
+
+Five immutable packets supply the paper arguments: precision consumer,
+balanced multiprime (manifest v2), Bernoulli consumer, short-sum sources and
+fresh polygon phase, all dated `20261127` under `/tmp/pi-m4-*` as linked in
+the respective mathematical notes. The parent read the complete reports,
+checkers and separate critic passes, reconstructed their conclusions and
+inspected primary source pages. Unchanged-copy replays for the four checkers
+exited 0 and preserved originals. The precision and multiprime receipts match
+apart from UTC; Bernoulli and polygon receipts are byte-identical. Source-only
+claims have direct theorem/inequality inspection rather than numerical checks.
+Documentation validation reports 93 tracked Markdown files; working whitespace
+check exits 0. No new Lean verification is claimed for these paper results.
+
+Reviewer `/root/generating_review` completed the independent review in
+`/tmp/pi-m4-consumers-review-20261127/`. Frozen diff SHA-256 is
+`cc22301a8cf820ba2cca06d291c162d64516696ec6ee0bfd96af8e7b552ccdcf`;
+the full returned `review.md` has SHA-256
+`c7d3573df44979b4e5101fde26e132ddafa0d6411a98edd695487eb3eb80d38e`.
+**Defects:** none. **Nonblocking improvements:** none requiring a checkpoint
+change. **Open questions/missing evidence:** no additional gap in the advertised
+results; the actual canonical numerator estimate for V remains open.
+No recommendation was omitted or deferred, and no substantive fix required
+focused follow-up.
+
+The reviewer reconstructed the primitive coefficient/carry costs, infinite
+initialized pole subsequence, sharp energy bound, source parameter restrictions
+and isolated-root height comparison. It read all five full reports, four
+checkers, additional probe, critics and reassessment, and verified all eight
+file hashes and 58 evidence hashes. At its request the caller rendered/extracted
+Section 5, pages 10--11 of the frozen sliding-sum PDF, exit 0. The reviewer
+inspected that supplement and verified its four hashes; the source contract
+needed no correction. The source, command and hashes are retained in
+`supplemental-source.json`. Both full adversarial guides and their unchanged
+hashes were applied. Review consisted only of read-only inspection and
+mathematical reconstruction; no checker, probe, build, extraction, edit, service
+or delegation ran in the reviewer. All execution receipts are caller evidence.
+
+Final validation and post-commit inspection are retained in the same packet.
+Active positive-kernel and height work is outside this integration. This accepts
+the scoped paper assessments, not a Lean theorem or M4. No remote publication
+is authorized; research continues.

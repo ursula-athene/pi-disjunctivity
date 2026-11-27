@@ -2655,3 +2655,60 @@ executions remain caller evidence. Documentation (93 tracked Markdown files)
 and working/staged whitespace checks exited 0. The exact review packet and
 limitations are retained in the [review record](agy-reports/m4-continuation-review.md).
 Newer precision-consumer and Bernoulli-consumer work is outside that review.
+
+**Continuation after local commit `dd44760`:**
+the seven-path boundary/product checkpoint was committed and inspected with
+an empty index, unchanged protected/unrelated files and no remote publication.
+Research continues. The following immutable scratch packets supplied the next
+integration:
+
+- `/tmp/pi-m4-precision-consumer-20261127/`: normalized divided differences,
+  a balanced four-edge valuation, exact single-prime coefficient cost, and
+  actual prime-power canonical-gap valuations. The latter put the tested
+  prime entirely in the circle-product denominator; the null state retains
+  the same pattern while clustering. Parent full report/checker reconstruction
+  and replay passed; receipts differ only in UTC timestamp.
+- `/tmp/pi-m4-bernoulli-consumer-20261127/`: the nonsingular energy has sharp
+  avoidance gap `(b-a)^3/6` and an exact sorted-numerator formula. Its actual
+  quadratic pole survives on windows `m=o(N/log N)` without an order
+  hypothesis. Transfer, complete-seed reciprocity and a localized tent test
+  retain the missing ranks/carries. Parent reconstruction, primary-source-page
+  inspection and unchanged-copy replay passed with an identical receipt.
+- `/tmp/pi-m4-short-sums-20261127/`: a parent source-contract/critic pass
+  found concrete failures in direct applications of Bourgain's almost-subgroup
+  bound and the Fouvry–Kowalski–Michel multiplicative sliding-sum bound.
+  Full-modulus nonconcentration already fails by cardinality for the tested
+  short segments; freezing the actual forcing by raw small-error control
+  allows only logarithmic windows. Single-prime or complete-orbit replacement
+  loses the actual coupled phase. Primary PDFs and inspected pages are retained.
+
+The repeated return to actual canonical selection triggered a meta-plan reset.
+The fresh-context Archimedes investigation retained the isolated algebraic
+branch and good derivative conditioning, but its degree/amplification cost
+still defeated bare integral separation. The source's full Galois average
+does not select that coherent branch. The shared-multiplier investigation
+escaped the single-prime coefficient-height barrier, but proved a pole on
+the actual infinite subsequence k=13^r for both A and D. Further odd linear
+congruences alone leave the dyadic carry image unchanged. More stencil
+refinement is suspended unless it identifies a real consumer. These frozen
+packets are `/tmp/pi-m4-fresh-phase-20261127/` and
+`/tmp/pi-m4-balanced-multiprime-20261127/` (authoritative manifest v2).
+Parent reconstruction, source-page inspection and unchanged-copy replays
+passed, preserving originals; the multiprime receipt differs only in UTC.
+
+**Next changed questions, 20 minutes each:** exploit the actual coefficient's
+positive moment density in an avoidance-dependent signed inequality, testing
+nearby rational-period forcing before crediting positivity; independently test
+whether the nonzero real period's height contribution can give the missing
+Bernoulli numerator lower bound. The latter must distinguish full Galois
+averages and ordinary height from the actual circle state, and challenge any
+candidate on D and rational-period models. The endpoint is a new estimate or
+an exact scaling/countermodel failure, followed by another changed inquiry.
+No numerical pi/actual fractional-state search is proposed. The completed
+five packets were integrated into four existing mathematical notes plus the
+existing plan, log, handoff and review record. Separate changed-file review
+is complete with no D/I/Q items; it reconstructed the arguments and verified
+all scoped hashes. A requested supplemental source-definition inspection
+confirmed the contract without a correction. Documentation and whitespace
+checks passed. None supplies V, and no new Lean result is claimed. The
+positive-kernel and height investigations remain outside that reviewed scope.

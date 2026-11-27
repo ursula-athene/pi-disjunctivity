@@ -202,6 +202,59 @@ depend on the functions and argument. Neither evaluation at pi nor at
 exp(i/Q) meets the M hypotheses. The language equation supplies no identity
 for the selected pi branch.
 
+## An isolated algebraic approximation still has a height cost
+
+A different branch representation uses the regular-polygon approximants
+alpha_m=2^m*sin(pi/2^m), m>=3, of degree d=2^(m-1). Define
+C_2=X^2-2 and C_(m+1)=C_m^2-2. These polynomials are Eisenstein at 2,
+and
+
+    F_m(X)=2^((m-1)*d)*C_m(X/2^(m-1))
+
+is the monic minimal polynomial of alpha_m. Its conjugates are
+2^m*cos((2j+1)*pi/2^m), 0<=j<d. The chosen root is the smallest
+positive one, lies in (2,4), and has a uniform separation from all other
+roots. This isolation is retained rather than replaced by a generic
+root-separation bound.
+
+The exact tower relation is
+alpha_m^2=alpha_(m+1)^2-alpha_(m+1)^4/2^(2m+2). Elementary sine bounds give
+
+    3*2^(4n-2m)<16^n*(pi-alpha_m)<11*2^(4n-2m).
+
+A fixed-error digit transfer therefore requires m>=2n+O(1), so the
+algebraic degree already grows on the scale 4^n. More precisely, on [2,4],
+H_m=2^(-(m-1)*d)*F_m has derivative satisfying 1/2<=-H_m'<=2.
+For a rational grid point r=p/Q there, irreducibility and integrality give
+
+    |r-alpha_m|>=1/(2*2^((m-1)*d)*Q^d).
+
+At a base-16 boundary c=k+a/16^ell, put r=c/16^n and Q=16^(n+ell).
+The resulting guaranteed separation L from 16^n*alpha_m satisfies
+L/[16^n*(pi-alpha_m)]<1/24. Thus even this well-conditioned isolated
+root does not make bare nonzero-integer evaluation strong enough for the
+transfer. This compares guarantees, not the actual root distance.
+An estimate of the actual signed integer Q^d*F_m(p/Q) is still missing.
+
+[Bilu, Theorem 1.1, p.465](https://people.math.harvard.edu/~demarco/Math295/Bilu_equidistribution.pdf)
+does not supply that estimate. It concerns full Galois orbit measures of
+a strict sequence in a multiplicative algebraic torus with height tending
+to zero. For zeta_m=exp(i*pi/2^m), those hypotheses hold, but the selected
+coherent branch tends to 1 while the full conjugate mean is exactly zero.
+The readout 2^m*Im(zeta_m) also varies with unbounded Lipschitz constant.
+Directly, h(alpha_m)=(m-1+1/d)*log 2, and scaling by 16^n adds 4n*log 2;
+these heights do not tend to zero. No full-orbit conclusion selects this
+particular branch or the required moving grid.
+
+The frozen packet `/tmp/pi-m4-fresh-phase-20261127/` has report SHA-256
+`6fa18c72e979dddbbe090bc6d0a0d9762a977ab5ab4ddfee053a041731d4d6b8`.
+The parent reconstructed the report/checker/critic, visually inspected the
+source theorem page, and replayed an unchanged checker copy: exit 0,
+identical receipt, originals unchanged. Its 2,060 finite checks cover
+polynomials, cyclotomic identities and exponent inequalities, not pi digits
+or actual BBP fractional states. Generic Galois averaging and bare polynomial
+integrality are suspended for this construction; V remains open.
+
 ## Evidence boundary
 
 The frozen sine-zero report is `/tmp/pi-m4-sine-zero-report-v1.md`, SHA-256

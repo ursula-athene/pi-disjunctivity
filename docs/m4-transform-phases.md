@@ -243,3 +243,63 @@ SHA-256 `1fa76a62525c7a51a352c328a69c30c0013d33a0e7428ffc6c874d25597ee64e`,
 has checker, receipts and hash-manifest siblings. Finite consistency checks
 are not proofs of the universal statements or V. This extension passed
 independent review with no D/I/Q items; no Lean, audit, dependency or pin changes.
+
+## Short-sum source tests retain their size and phase hypotheses
+
+Two targeted source connections were tested against the actual CRT phase,
+whose full modulus has log q_N=6N+o(N), or residual modulus log q_N=2N+o(N)
+after compression. These are applicability tests, not general exclusions
+of sum-product or trace-function methods.
+
+[Bourgain, Corollary 3, p.351](https://www.numdam.org/item/10.1016/j.crma.2007.01.019.pdf)
+requires H subset (Z/qZ)^*, small multiplicative doubling, and quantitative
+nonconcentration in every fiber modulo q_1|q with q_1>q^epsilon.
+It bounds the number of frequencies with large sums; it does not bound
+each prescribed frequency. In particular its q_1=q condition, for any
+occupied fiber, forces |H|>q^gamma with a fixed gamma>0. A segment
+{16^j:0<=j<J} with J polynomial in N fails this condition for either
+exponential modulus. Letting gamma vary with N would require new uniform
+control of the theorem's parameters. The paper's separate remark about
+complete multiplicative subgroups does not supply a short-segment theorem;
+the original earlier subgroup source was not assessed in this cycle.
+
+[Fouvry--Kowalski--Michel, Proposition 6.1, p.15](https://people.math.ethz.ch/~kowalski/sliding-sum.pdf)
+requires a prime p, a generator g of F_p^*, and the trace function tau of
+an isotypic, weight-zero middle-extension sheaf of conductor c whose
+geometric irreducible components are not Kummer sheaves. For an interval
+I in Z/(p-1)Z of length greater than sqrt(p-1), it gives
+
+    |sum_(j in I) tau(g^j)|
+      <=66*c^4*|I|*(sqrt(p-1)/|I|)^(1/3).
+
+No such bounded-conductor representation of the BBP phase has been
+constructed. The whole modulus is composite; projecting to one prime
+loses other coupled CRT components. Also 16 is a square and cannot be a
+generator at an odd prime. Subgroup parametrization/pullback needs its own
+conductor and length analysis. The non-Artin--Schreier hypothesis from
+the paper's additive section is not an extra hypothesis of this proposition.
+
+In both connections the actual forcing must be retained:
+
+    S_(N+j)=16^j*S_N+B_j,
+    B_j=16^j*E_N-E_(N+j),
+    E_N=sum_(r>=1) 16^(-r)*A(N+r).
+
+For t>=1, the established rational coefficient bounds imply
+
+    5/(1638*(N+1)^2)<=E_N<=53/(1280*(N+1)^2).
+
+Consequently freezing B_j by demanding a fixed small real error permits
+only j<=2*log_16(N+1)+O(1). At a prime p comparable to N this is below
+the sliding-sum length threshold. This restricts the stated raw-error
+approximation, not every possible long shadowing modulo one; the latter
+would itself need new phase control. Neither deleting B_j nor replacing
+the selected state by a complete orbit is a valid application.
+
+The parent source-contract and separate criticism passes are retained in
+`/tmp/pi-m4-short-sums-20261127/`, report SHA-256
+`6f5c6348dadae442348fbc88d49116721f4fc7000e1a285ffc8deee187734230`.
+Both primary PDFs and relevant page images/text were inspected. These
+exact source hypotheses and elementary scaling bounds need no numerical
+digit experiment. A surviving use would need an A-specific phase
+representation retaining the forcing and initialized CRT class.

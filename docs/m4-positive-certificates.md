@@ -1,4 +1,4 @@
-# M4 positive products and the remaining numerator estimate
+# M4 positive visit certificates and the remaining numerator estimate
 
 These paper investigations work backward from permanent avoidance of an
 interval by the actual zero-initialized BBP sequence. They supply finite
@@ -228,6 +228,90 @@ The next changed test is the bounded rational circle energy t(1-t).
 It avoids exceptional-pair instability and has denominator dividing m^2Q^2.
 Whether an actual lower bound follows from any new arithmetic input, rather
 than merely restating weighted Fourier cancellation, is an open investigation.
+
+## A bounded energy removes the close-pair instability
+
+Put psi(t)=fract(t)*(1-fract(t)) and, for any m>=2 points on the circle,
+
+    E=(1/m^2)*sum_(i,j) psi(x_i-x_j).
+
+This continuous kernel is 1-Lipschitz and has no logarithmic singularity.
+For representatives x_i in [0,1), let F(t)=#{i:x_i<=t}/m,
+H(t)=F(t)-t, and hbar=integral_0^1 H=1/2-mean(x). Finite indicator
+integration gives the exact identity
+
+    E=1/6-2*integral_0^1 (H(t)-hbar)^2 dt.             (8)
+
+If the points avoid (a,b), of length ell, F is constant on that interval.
+The integral of any squared affine function of slope -1 over length ell
+is at least ell^3/12. Thus
+
+    avoidance implies E<=(1-ell^3)/6.                 (9)
+
+A strict reverse inequality for one actual block beyond every threshold
+would prove V, including endpoint intervals. This translation-invariant
+certificate is stronger than a visit to one specified interval: it
+excludes every hole of that length. Bound (9) is sharp among probability
+measures. On the allowed interval [0,1-ell], take Lebesgue density 1
+and atoms of mass ell/2 at its endpoints. This statement does not assert
+attainment by a finite empirical measure.
+
+For sorted x_0<=...<=x_(m-1), another exact form is
+
+    E=(m^2-1)/(6*m^2)
+       -(2/m)*sum_i (x_i-mean(x)-(i-(m-1)/2)/m)^2.
+
+Uniform grids maximize E; weak convergence to uniform measure gives
+E->1/6. An exceptional close pair no longer defeats that implication.
+For common denominator Q and sorted canonical integers a_i=Q*x_i,
+
+    T=Q*sum_i (2*i-m+1)*a_i-m*sum_i a_i^2+(sum_i a_i)^2,
+    E=2*T/(m^2*Q^2).
+
+The missing actual inequality is T>(m^2*Q^2/12)*(1-ell^3). Nonnegative
+integrality of T supplies no constant-size lower bound of this strength.
+
+The actual denominator can be bounded without an order hypothesis. At
+a surviving prime p>2*(N+m)+1 with no new forcing pole, write
+p*x_(N+j)=16^j*c mod p, c a unit. For p not dividing m,
+
+    p^2*E=-2*c^2/m^2 * B_m mod p,
+    B_m=m*sum_j 16^(2j)-(sum_j 16^j)^2
+       =sum_(i<j)(16^j-16^i)^2>0.
+
+Primes dividing B_m have total log mass O(m+log m). Removing these
+and the new forcing poles leaves mass 4N+o(N) for m=o(N/log N).
+Therefore log den(E)>=(8+o(1))*N. This is a denominator lower bound,
+not an upper bound on the real energy. At a complete multiplicative
+order m=ord_p(16)>2 the displayed B_m vanishes mod p instead; the
+next term depends on canonical ranks and carries.
+
+Three proposed ways to estimate T retain that missing information.
+The exact transfer of psi under multiplication by 16 contains the
+integer k=floor(16*delta+A(i+1)-A(j+1)), its square and its correlation
+with delta. Energy can either increase or decrease even without forcing.
+Complete-seed averaging gives Bernoulli distribution identities, but
+averages away the actual initialized seed. Finally, for 0<h<=1/2,
+
+    psi(t+h)+psi(t-h)-2*psi(t)+2*h^2
+        =2*max(0,h-dist(t,Z)).
+
+This local tent detects an interval, but its quadratic bulk cancels
+exactly; the required estimate again concerns actual branch crossings.
+The null state has E<=1/(16*N+18)->0 and supplies no positive lower bound.
+
+The assessed primary source is
+[Hall--Wilson--Zagier, pp.389--391](https://people.mpim-bonn.mpg.de/zagier/files/acta/73-4/fulltext.pdf).
+Its Bernoulli distribution formula averages a complete positive-integer
+residue system; its Dedekind reciprocity uses complete coprime residue sums.
+Neither is a theorem about the selected BBP seed. The formulas above have
+separate finite-indicator/polynomial derivations in the frozen packet
+`/tmp/pi-m4-bernoulli-consumer-20261127/`, report SHA-256
+`3ba29023c1cce419778a775336e10db92c29e60af388efd4b4108902171622a3`.
+The parent read the full report/checker/critic, inspected the source pages,
+and replayed an unchanged checker copy: exit 0, identical receipt and
+unchanged originals. Synthetic and principal-part checks do not establish
+the actual T inequality or V. Integration review is recorded separately.
 
 ## Evidence and research boundary
 
