@@ -7,7 +7,7 @@ The [continued research checkpoint](#continued-research-checkpoint--2026-11-26)
 records subsequent work during the user's absence; that checkpoint does not
 terminate the ongoing M4 effort.
 The latest dated continuation is the
-[Progression conductors](#progression-conductors--2026-11-27-utc); read the
+[Polynomial norms and logarithmic source limits](#polynomial-norms-and-logarithmic-source-limits--2026-11-27-utc); read the
 research log and actual checkout for subsequent results and current state.
 
 ## Baseline and authorized endpoint
@@ -1226,3 +1226,27 @@ complete-norm polynomial inquiry are active; the research log owns their
 scopes and outcomes. No unfinished result is accepted.
 No Lean, audit, pin or trust boundary changed. C_odd, V, global covering and
 M4 remain open, and the authorized research continues.
+
+## Polynomial norms and logarithmic source limits — 2026-11-27 UTC
+
+The progression checkpoint is local commit
+`f18bcb21d09dbbfc3d14f32f7361d780749b3c9e`; review, validation, exact staging
+and post-commit necessity/preservation checks passed. At that inspection the
+branch was three ahead of its remote-tracking reference; this run issued no
+push or PR. Verify volatile publication state before continuing.
+
+The [complete-norm test](m4-prime-defect-boundary.md#a-quadratic-test-retains-the-complete-dual-error)
+gives a rational quadratic lower bound with the full tail and target-phase
+conditions intact. Its coupled arithmetic estimate remains unproved; neither
+leading-only capacity nor small error alone supplies covering or actual V.
+The [logarithmic source screen](m4-language-auxiliaries.md#logarithmic-values-do-not-yet-supply-pointwise-exclusion)
+found no applicable pointwise exclusion theorem. Independent paper/source
+reviews and their focused clarifications passed, with parent replay and
+primary-page checks retained. Final production review and focused clarification
+passed, with the roadmap's separating inequality explicit. Documentation,
+process, whitespace and preservation checks passed.
+
+A fresh bounded actual-seed reset is active; the research log owns its scope
+and outcome. It has supplied no accepted new candidate. No Lean, audit, pin,
+dependency or trust boundary changed. V/C_odd/global covering and M4 remain
+open; continue the authorized research after this checkpoint.

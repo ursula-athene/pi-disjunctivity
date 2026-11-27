@@ -2123,3 +2123,76 @@ the diff-of-diffs has SHA-256
 All revised production, original evidence and guide hashes matched. The
 documentation and whitespace reruns passed; the process tests remained
 unaffected. Subsequent changes record review outcomes only.
+
+## Polynomial norms and logarithmic source limits — 2026-11-27 UTC
+
+Baseline is local commit `f18bcb21d09dbbfc3d14f32f7361d780749b3c9e`.
+Independent critic `/root/generating_review` reviewed the full polynomial
+packet, original report SHA-256
+`d1071452795ecd5bbffefaeb7f7735d5feebbb400be031ad2a4f85e0b7e7ad41`.
+Full initial and focused responses are
+`/tmp/pi-m4-dual-polynomial-paper-review-20261127.txt` and
+`/tmp/pi-m4-dual-polynomial-focused-review-20261127.txt`.
+**D: none. I1: implemented and verified:** the retained normalized row
+requires K<=ph-1<N; untruncated identities have broader scope. Immutable v2
+has SHA-256 `5b06f6a56ffb7827ece1b301ce0d490829dea2fb5d30ac737b05315666290c66`.
+**Q1: retained open:** coupled arithmetic control of the complete quadratic
+ratio. **Q2: retained open:** target-sensitive covering and actual selection.
+
+The critic reconstructed the full-tail polynomial representation, corrected
+zero-index row, period-zero test, positivity, weighted inequality, scaling,
+homogeneous leading-only counterexample and target-phase guard. Parent replay
+passed 353 exact checks with a byte-identical receipt and six originals
+preserved. The mixed fixture's large integer weights are not a primitive or
+optimality claim. The critic inspected the checker but did not execute it;
+the worker's self-criticism was not accepted as independent review.
+
+Independent `/root/logarithmic_source_review` reviewed the two source contracts,
+original report SHA-256
+`3324fb0c56db9ebe29ae2d155f963d799d1418d9720c68ae71ba83f88bf03ade`.
+Full responses are `/tmp/pi-m4-logarithmic-source-review-20261127.txt` and
+`/tmp/pi-m4-logarithmic-source-focused-review-20261127.txt`.
+**D: none. I1--I2: implemented and verified:** explicit positive word length
+and late-start domains; reverse late-transfer identity and margin, distinct
+from direct forward B4 use. Authoritative v2 SHA-256 is
+`82e071fd0256c36287d4d1760542731039fc970ebdb371dde0658ddfbd241862`.
+**Q: no blocking source-screen question; mathematical bridges remain open.**
+Complexity does not imply full language, and point membership does not give
+the required nontrivial embedding. Both full external proofs remain unaudited.
+
+Parent and source reviewer inspected all six source PNGs and relevant local
+types. All 18 original artifacts were preserved. Publisher theorem text was
+retained separately; retrieval, date and rendering provenance remain caller
+evidence. Both reviewers applied the two required full adversarial guides,
+replacement procedure and relevant skills. Neither ran checkers, probes,
+builds, extractors, services, mutations or delegation. No result supplies
+covering, actual C_odd/V or M4 acceptance. Final changed-file review completed;
+the fresh actual-seed research is outside the accepted mathematical scope.
+
+Documentation (93 tracked Markdown files), process tests (38), working
+whitespace and preservation checks passed. No Lean build was repeated for
+this documentation-only checkpoint; no protected mathematical input changed.
+
+Initial complete integration review by `/root/logarithmic_source_review`
+examined the frozen six-path diff in
+`/tmp/pi-m4-polynomial-source-review-20261127/`, SHA-256
+`aaf3ac6d608e4598eaa603c843b611a2123322ae3ee3aef3c73f4c1c0141fb8a`.
+Full response is `review-full.txt`. **D: none. I1: implemented and verified
+in focused review:** state dist(theta*delta,Z)>E_N(w,theta) explicitly in the
+roadmap, retaining that absence of a certificate does not prove covering.
+**Q1--Q2: retained** as the coupled arithmetic and target/actual-selection
+obligations. Source-domain and pointwise/embedding gaps remain explicit.
+The reviewer independently reconstructed the mathematical integration,
+verified all six production hashes and checked the authoritative report and
+replay identities. The complete 39-evidence and 28-file preservation hash
+inventories remain parent execution evidence; the reviewer inspected them
+without independently recomputing every entry. No ongoing reset result was
+adopted. Focused clarification review passed; full response is
+`focused-review-full.txt` in the same packet. The repaired six-path diff has
+SHA-256 `515d976f88f43cd6a7e93b498631db3fc88c8773a6182ddf1a67cc01b43d8eaa`,
+and the diff-of-diffs has SHA-256
+`8e876d114edffb433e765c756398ac3e4859599300f0575bc79ada9339c2731e`.
+The reviewer verified the actual diff and all revised production hashes.
+Documentation and whitespace reruns passed; process tests remained unaffected.
+Subsequent edits record review outcomes only. The cycle has no remaining
+defect or required improvement; its mathematical obligations remain open.

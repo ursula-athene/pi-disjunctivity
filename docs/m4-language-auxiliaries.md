@@ -647,6 +647,77 @@ The denominator claims concern q_N, not every unreduced replacement seed.
 It assesses these statements and their application, not the full source proofs
 or all available literature. None supplies the missing actual-grid cover.
 
+### Logarithmic values do not yet supply pointwise exclusion
+
+Choose the logarithm L=i*pi of -1. If a hexadecimal word w of length ell>=1
+has no occurrence starting at any n>=N, with N natural, block the tail into
+ell-digit groups. Then
+
+    theta=fract(16^N*pi)=-i*16^N*L-floor(16^N*pi)
+
+belongs to the base-B deleted-digit set for B=16^ell, with the digit encoding
+w removed. This is only the aligned-block implication; membership does not
+exclude overlapping occurrences. Irrationality removes terminating ambiguity.
+A usable logarithmic theorem would need this specified complex branch,
+algebraic multiplier, integer translation and every required base/word/tail.
+
+Bugeaud--Kim, [*On the b-ary expansions of log(1+1/a) and e*](https://journals.sns.it/index.php/annaliscienze/article/download/519/509/738),
+published 2017, Theorem 2.2, pp.936--937, states: for b>=2, epsilon>0 and
+fixed positive integer s, all sufficiently large integers t satisfy
+
+    liminf p(n,xi,b)/n >= 9/8-epsilon
+
+for xi=log(1+s/t) and xi=sqrt(t^2-s^2)*arcsin(s/t). Here p counts distinct
+length-n blocks; enlarge the threshold to ensure t>s. The latter value is
+-i*sqrt(t^2-s^2)*Log((sqrt(t^2-s^2)+i*s)/t), with first-quadrant argument.
+Thus this does include some algebraic multiples of complex logarithms, but
+does not cover arbitrary such values or supply the required pi specialization.
+The endpoint t=s has zero multiplier; a fixed ratio is not justified by the
+large-t statement for fixed s. Even granting the conclusion for pi would not
+give visitation: concatenating all binary words as hexadecimal digits 0,1
+gives complexity exactly 2^n while omitting fourteen digits.
+
+Algom--Hochman--Wu, [*New results on embeddings of self-similar sets via renormalization*](https://arxiv.org/pdf/2410.19648v1),
+v1 (25 October 2024), assumptions p.1 and Theorem 1.2 p.2, concerns two
+nontrivial compact self-similar sets defined by finite families of at least
+two nonconstant affine contractions with disjoint images. If all contraction
+magnitudes alpha_i,beta_j are algebraic and some log(alpha_i) is outside
+the rational span of the log(beta_j), no nonsingular affine map embeds the
+first entire set into the second. The same contract was checked in the
+[published article](https://londmathsoc.onlinelibrary.wiley.com/doi/full/10.1112/plms.70177),
+first published 6 July 2026; no full version or proof comparison is claimed.
+
+A point theta in a deleted-digit set supplies no such nontrivial embedding.
+Singletons and constant maps violate the hypotheses. Strong separation needs
+checking when digit cylinders share endpoints. Radix-power contractions have
+logarithms in Q*log B, and Log(-1)=i*pi is not a real logarithm of a contracting
+magnitude. Neither the embedding nor incompatible contractions follow from
+BBP initialization. These are missing bridges, not defects in the source.
+
+Even a future ordinary-orbit exclusion argument would need a reverse late
+transfer to the recurrence. B2 and the recurrence range give
+
+    bbpRecurrence(n+1)=fract(t_n-R_n),
+    t_n=fract(16^n*pi), R_n=bbpTail(n).
+
+For 0<=a<b<=1 take delta=(b-a)/3. B3 supplies |R_n|<delta beyond M. A
+hypothetical ordinary visit to (a+delta,b-delta) with n>=max(N,M) puts
+t_n-R_n in (a,b), so there is no wraparound. This paper argument preserves
+both the threshold and n+1 offset. It is not a direct use of forward B4 or
+a newly compiled reverse-transfer theorem, and supplies no ordinary visits.
+
+The bounded screen found no applicable pointwise exclusion theorem; it is
+not an exhaustive literature conclusion. Authoritative clarification
+`/tmp/pi-m4-logarithmic-fractal-parent-20261127/report-v2.md`, SHA-256
+`82e071fd0256c36287d4d1760542731039fc970ebdb371dde0658ddfbd241862`,
+retains the exact contracts and application failures. The original 18-artifact
+packet is preserved. Parent and independent reviewer visually inspected six
+source pages; the retained publisher receipt matches the cited contract.
+Independent review and its focused clarification passed, resolving explicit
+positive block length/late-start domains and the reverse-transfer margin.
+Neither entire external proof was audited, and no source theorem was added
+to Lean. Actual C_odd, V and M4 remain open.
+
 ## Rational gauges and endpoint-conditioned parity
 
 The shifted-coefficient inquiry first recovered archived telescoping/filter

@@ -969,11 +969,17 @@ quantity, including the original free roots. It excludes further dense
 support families but retains an unbounded primorial barrier. A uniform
 top-denominator repair is false for explicit global rows; unresolved dense
 cancellation requires control of the complete real norm. Independent paper
-review passed. A bounded follow-up tests a polynomial representation of that
-entire norm, including the resolvent tail, for a useful arithmetic inequality.
-A targeted source check asks whether a logarithmic-value theorem can exclude
-missing-digit membership for the actual constant. The log owns
-bounds, outcomes and the failed source-applicability screens.
+review passed. The [complete-norm polynomial test](m4-prime-defect-boundary.md#a-quadratic-test-retains-the-complete-dual-error)
+now gives a rational quadratic lower bound using all coefficients and the
+entire tail. It still needs a coupled arithmetic estimate; leading-only
+capacity control cannot improve the existing exponential scale. A separating
+certificate requires dist(theta*delta,Z)>E_N(w,theta). Absence of such a
+certificate supplies neither covering sufficiency nor actual-seed selection.
+The [logarithmic source screen](m4-language-auxiliaries.md#logarithmic-values-do-not-yet-supply-pointwise-exclusion)
+found complexity and whole-set embedding results, neither a pointwise
+exclusion theorem for the required transformed pi values. A fresh bounded
+actual-seed reset reassesses the next mechanism without adopting an unfinished
+candidate. The log owns bounds, outcomes and the failed applicability screens.
 V and all Lean contracts are unchanged; neither conditional wrapping nor more
 classification supplies visitation.
 

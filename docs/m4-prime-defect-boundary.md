@@ -1670,3 +1670,104 @@ asymptotic assertions remain paper mathematics. Independent paper review found
 no defect. Exact conductors with nonempty extra-zero sets are deferred; the
 complete-norm and actual-trajectory gaps remain open. The continuation review
 record owns the full findings and production-integration gate.
+
+## A quadratic test retains the complete dual error
+
+Keep fixed K>=1, rational B>0, N>K and the same comparison lattice, nu,
+orthogonal polynomials, budgets and complete tail. For w=sum q_n*a_n put
+
+    gamma_n=q_n*L_n,
+    Q_w(t)=sum_(K<=n<N)gamma_n*t^(n+1),
+    P_w(t)=[Q_w(16)-Q_w(t)]/(16-t).
+
+The prefix kernel is [16^(n+1)-t^(n+1)]/(16-t). Consequently
+
+    w_r=integral P_w*R_r dnu,
+    E_N(w,theta)=sum_(r>=K)b_r*|integral [P_w-16theta/(16-t)]*R_r dnu|.
+
+For r>=N the polynomial moment vanishes; the remaining terms are exactly
+|theta|tail_N. The sum converges by the existing tail bounds. If j is the
+actual top, deg P_w=j, deg Q_w=j+1 and both leading coefficients are gamma_j.
+Writing P_w=sum p_r*t^r gives gamma_n=p_n-16p_(n+1) and
+Q_w=(t-16)P_w+16P_w(0). Polynomials of degree below K do not change the
+functional on the zero-prefix space. The canonical numerator fixes that
+ambiguity. Values at 16 here are of finite polynomials only.
+
+The original undilated row alpha*Delta^h G_p(0), h>=1, has untruncated
+numerator, with chi=chi_4(p),
+
+    Q_row(z)=alpha*[p(z^p-1)^h-chi(16^(p-1)z-1)^h-(p-chi)(-1)^h].
+
+The constant correction is required by G_p(0)=V_(-1)=0. Its kernel is
+
+    alpha*[(p-chi)(16^p-1)^h-p(z^p-1)^h
+                    +chi(16^(p-1)z-1)^h]/(16-z).
+
+Removing prefixes n<K changes only the invisible low-degree part. For a
+retained normalized row require K<=ph-1<N. Set j=ph-1, e=v_p(L_j),
+J=h+2+v_p(h!) and alpha=L_j/p^(J+e). Original p-divisibility and integral
+coefficients at every other prime make this a global dual with top
+q_j=p^(-(J+e-1)). A row ending below K vanishes after prefix removal.
+
+For nonzero w project Q_w onto orthogonal degrees K+1 through j+1:
+
+    H=sum_(r=K+1)^(j+1)(integral Q_w*R_r dnu / h_r)*R_r,
+    S=(16-t)H=sum s_r*R_r, M=max_(r>=K)|s_r|/b_r.
+
+H retains the nonzero leading coefficient, so M>0. Orthogonality gives
+s_r=0 for r<K, sum s_r*beta_r=16 integral H dnu=0, and
+integral P_w*S dnu=-integral H^2 dnu. Pairing the full error with this
+finite vector and applying the weighted triangle inequality yields
+
+    E_N(w,theta) >= (integral H^2 dnu) / ||(16-t)H||_b,
+    ||S||_b=max_(r>=K)|s_r|/b_r.                         (quadratic test)
+
+This holds for every real theta. S is a real test, not an asserted lattice
+point. Its degree is j+2, potentially using coordinates N and N+1; the full
+tail supplies those terms. The quotient is rational and uses all high-degree
+coefficients. Scaling S does not change its pairing ratio. Scaling w and
+theta together scales the bound by the absolute factor, but rational division
+can destroy dual membership and distance to integers does not scale linearly.
+
+A homogeneous leading-only estimate cannot improve the existing analytic
+exponential scale. Start with P=R_j, K<=j<N, recover its rational q_n by the
+displayed coefficient formula, omit n<K and clear denominators by C>0.
+The q_n are now integers, hence define a global dual. Its canonical P differs
+from C*R_j only below degree K. Thus w_j=C*h_j is its only nonzero orthogonal
+coefficient and E_N(w,0)=|lead P|*h_j*b_j. Every universal bound
+inf_theta E_N>=A_j*|lead P| therefore requires A_j<=h_j*b_j, whose exponential
+rate is 8^(-j). This restricts homogeneous leading-only bounds, not every
+arithmetic function of the leading rational number. The actual CRT examples
+can have superexponentially small gamma_j=L_j/D_j while other coefficients
+make them large. Those other coefficients cannot be discarded.
+
+Interval sup-norm capacity bounds concern a different norm and do not supply
+a lower bound on the displayed weighted moments modulo low polynomials and
+the resolvent line. Clearing denominators rescales both sides. An adelic
+argument would need proved local conditions on the same polynomial retaining
+the complete mixed-prime dual module; the moment constraints do not already
+give such disk bounds. No general impossibility of richer methods is claimed.
+
+The target comparison also remains essential. For K=1, B=1/4096 and w=a_1,
+E_N(w,0)=604487760733/39854391266426880<1/2 for every N>=2, and remains
+small for sufficiently small nonzero theta. Thus excluding all nonzero short
+duals is false. For a feasible point of period delta, a separating certificate
+would need dist(theta*delta,Z)>E_N(w,theta). A small E alone does not suffice,
+nor does absence of this certificate prove covering. After shortening at
+actual top j, E_N>=|theta|tail_(j+1); if |delta|<=tail_(j+1), the certificate
+cannot separate that target. This keeps fixed small-top examples distinct
+from genuinely separating duals.
+
+Authoritative report
+`/tmp/pi-m4-dual-polynomial-clarification-20261127/report-v2.md`, SHA-256
+`5b06f6a56ffb7827ece1b301ce0d490829dea2fb5d30ac737b05315666290c66`,
+retains the full proofs and row-domain clarification. Parent unchanged-copy
+replay passed 353 exact checks with an identical receipt and six preserved
+original artifacts. The actual moments A(n)-A(n+1) were used. A three-prime
+integer combination cancels its first two orthogonal moments exactly, and
+the quadratic bound exceeds the top-only bound on that fixture. Its large
+combination coefficients supply no primitivity, optimality or uniformity
+claim. Period cancellation was checked symbolically without evaluating pi.
+Independent paper review found no defect in the inequality; the retained-row
+domain clarification passed focused review. A useful arithmetic lower bound
+on the complete quotient remains missing, as do covering and actual V.

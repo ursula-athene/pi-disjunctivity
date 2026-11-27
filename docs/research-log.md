@@ -3873,3 +3873,50 @@ controls coupled coefficients beyond the already insufficient leading
 denominator. The endpoint is a precise inequality and discriminating check,
 or the exact missing bridge. No unfinished output is accepted. V/C_odd/global
 covering and M4 remain open; work continues.
+
+**Complete norms and logarithmic source limits — 2026-11-27 UTC:** the
+progression checkpoint is local commit
+`f18bcb21d09dbbfc3d14f32f7361d780749b3c9e`. Complete/focused reviews,
+documentation/process/whitespace, exact staging and post-commit necessity
+and preservation checks passed. The index was empty, task-owned tree clean,
+and branch three ahead of its remote-tracking reference at inspection.
+No push or PR was issued by this run; protected and unrelated work is intact.
+
+The 20-minute polynomial inquiry begun at 10:45:46 UTC completed and froze
+by 11:01 UTC. The [quadratic test](m4-prime-defect-boundary.md#a-quadratic-test-retains-the-complete-dual-error)
+represents the full error exactly, including the infinite tail, and removes
+theta using a period-zero polynomial test. It retains mixed-coefficient
+information that the leading bound loses. The homogeneous leading-only
+analytic factor cannot improve the 8^(-j) scale; explicit CRT denominators
+show why that scalar is insufficient. A fixed early short dual also rules
+out unqualified all-dual norm coercivity. The target-phase mismatch must be
+retained; absence of a certificate is not a covering theorem.
+
+Parent reconstruction and unchanged-copy replay passed 353 rational checks,
+with an identical receipt and six original artifacts preserved. The three-prime
+fixture cancels two orthogonal moments, but its large integer weights imply
+no primitive/optimal/uniform claim. Independent critic `/root/generating_review`
+found no defect in the inequality; its retained-row domain clarification was
+implemented in immutable v2 and passed focused review. Complete arithmetic
+control of the quadratic ratio and a target-sensitive consumer remain open.
+
+The separate logarithmic source screen completed at 10:49:40 UTC within its
+20-minute bound. The [two source contracts](m4-language-auxiliaries.md#logarithmic-values-do-not-yet-supply-pointwise-exclusion)
+do not exclude the required point. Parent and `/root/logarithmic_source_review`
+inspected six rendered primary pages, the local declarations and retained
+publisher statement. The 18 original artifact hashes match. Focused review
+passed explicit positive block-length/late-start domains and the reverse
+transfer margin argument. No full source-proof or exhaustive literature audit
+is claimed, and no external theorem was added to Lean. Final production
+integration review and its focused clarification passed: the roadmap now
+states the exact separating inequality. Documentation (93), process tests
+(38), whitespace and preservation checks passed.
+
+At 11:05:24 UTC a fresh `/root/actual_seed_research_reset` began a **20-minute**
+meta-plan investigation, scratch `/tmp/pi-m4-actual-seed-reset-20261127/`.
+It must reassess the comparison route's relevance to V and test at most one
+materially different claim using the initialized seed, identifying exactly
+which archived countermodel lacks its proposed resource. Its endpoint is a
+discriminating claim/test or a precise negative outcome and changed next
+question, not another name for actual selection. No unfinished result is
+accepted. V/C_odd/global covering and M4 remain open; work continues.
