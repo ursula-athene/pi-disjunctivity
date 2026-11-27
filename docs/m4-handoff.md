@@ -48,6 +48,10 @@ An applicable signed character estimate for this coupled state remains missing.
 The [Chang/Wu--Xi contract check](m4-crt-phase.md#two-smooth-modulus-source-contracts-do-not-supply-the-phase-estimate)
 retains the actual finite-field zero-constant representation but finds specific
 phase, conductor and length gaps in those direct source transfers.
+The [selected actual-denominator grids](m4-prime-compression.md#explicit-actual-denominators-with-fine-complete-period-grids)
+give arbitrarily fine complete-period covering at explicit actual anchors.
+Their constructed traversal is too late for the ordinary or natural-correction
+absolute shadow windows; the actual early numerator remains uncontrolled.
 The log owns bounds and outcomes;
 this entry is not a second live status ledger.
 

@@ -4148,3 +4148,77 @@ checkers, rendering or delegation occurred. Caller checks after I1 passed
 result remains an unchanged-code receipt. Subsequent edits record this outcome
 only. This is independent model review, not human peer review or a full source
 proof/dependency audit. The exact phase estimate and M4 remain open.
+
+### Actual-denominator grid and correction paper review — 2026-11-27 UTC
+
+`finite_log_independent_review` independently reviewed the elementary grid
+argument and separate natural-correction comparison from 23:09:14 to 23:16:06,
+reassessing at 23:14:38 before its 23:21:14 deadline. The worker packet
+`/tmp/pi-m4-selected-phase-discovery-20261127-224812/` retains report SHA-256
+`87e7c6f67ef6e037b0ae9c6c6b719c1c703b0a256765e69211ae793be7b759e8` and
+12-entry manifest `a003efdfc57d1bd39bc95181fe3418186b33ca963b9cdfe893e581cb7d91913e`.
+Parent reconstruction and unchanged-copy replays are in
+`/tmp/pi-m4-actual-grid-parent-20261127-2307/`, assessment
+`0570f4c6d4f2c3777a0f082ee72408e45864089530558927ce53564cf85b4c1c`,
+34-entry manifest `38774903b65f635d12af56b013a7a094d3276fd4a4bb00134046e732b3f48e8a`,
+and complete returned review `c619b550c98e5a351504f552a6b9507604731112024db3ae0399b92c5802f541`.
+The separate packet `/tmp/pi-m4-grid-correction-comparison-20261127-2310/`
+retains report `fa956af6a6d7a6335e96d8f7b2b4bca5c17c41fc5d26f557f01603abdd92901c`
+and eight-entry manifest `4f76a92f7f26a956d86c9577d9cc111602d0a79e8ec78dd19487a4c52d236b00`.
+
+No D was found. I1 is implemented for integration verification: normalized
+unit numerators, one complete period and fixed word length before choosing the
+anchor prevent a normality or reversed-quantifier claim. I2 explicitly retains
+Kominers's m>=3, 1<|D|<m and normalized coprime source domain. I3 puts the
+moving-set toy on R/Z with every translation and recurrence modulo one. Frozen
+reports remain unchanged. Q1 retains the actual early numerator/circular-tail
+selection gap. Q2 retains the limited correction family and absolute-shadow
+comparison; other cosets, initial hits, circular coincidences and other rational
+approximants remain open. No improvement was requested for the comparison itself.
+
+The reviewer reconstructed the actual unique pole, Euler covering, every other
+prime-power order bound, LTE/CRT subgroup, unit permutation, grid counting and
+fixed-word conclusion. The separate comparison's uniform high-prime divisor,
+17-valuation, dyadic preperiod and two incompatible time scales were checked
+against the owner arguments. All 12/34/8 identities and manifest digests matched.
+The three caller replays exited zero with generated receipts byte-identical to
+the originals; reviewer read but did not execute the checkers. The comparison
+has no new finite test; its deductions are mathematical arguments from the
+stated inputs. Primary Kominers and Lin--Wu--Yang contexts were inspected, but
+the main elementary grid proof imports neither external estimate.
+
+Both full adversarial guides and the critic/source-contract skills were applied;
+guide hashes remain `798c3cc974c5296453f510ea9264aa8b5d17c813c8dc217a430de9b68b7d667c`
+and `c4a04d75a297c6ec361d31ab11e465e3c3e74a6c89eb590bddb03d95c243ad3b`.
+No writes, checker execution, network, Git or delegation occurred. No fresh
+Korobov/PNT proof audit, external Lean certification or literature-wide novelty
+determination is claimed. PNT dependence remains in the asymptotic chronology
+and correction comparison. Production integration and I1--I3 verification have
+their separate review. Actual visitation, odd-carry infinitude and M4 stay open.
+
+### Actual-denominator grid integration review — 2026-11-27 UTC
+
+`post_profile_mechanism_reset` completed the exact four-file review from
+23:23:50 to 23:27:07 UTC, reassessing at 23:26:41 before the 23:35:50 deadline.
+Packet `/tmp/pi-m4-actual-grid-integration-20261127-2313/` retains baseline
+`dbba18d2cd3649bfb00392d26ac595b793fdc636`, frozen diff
+`70a638787a6e1c249ffa620d7588ec74cee5ea74f2605791f819a9e1f6189843`,
+50-entry manifest `062b5f9e72bd17ade6c7ffa27f91dc17a5bd66f2b489a9692c0e77893688d28f`,
+and full returned review `ac5ee29f8efd9bcb76c2ff3d8e84eaebd7577bc335492fa703329dc67909f257`.
+No D was found. I1--I3 were verified implemented. New I4 is accepted, implemented
+and verified: the source-context bound explicitly requires a prime p not dividing
+m. Repair diff `7bac0eff978befd7beec38f921e1bc1440eccdd00f8aec3f38f24289eed3a566`
+and owner `50992a5ac5893b63461fb11d2ef505af821f1716e923699ecefef400e77c10af`
+preserve the original frozen artifacts. Q1 and Q2 retain actual early selection
+and the unexcluded alternative transfer mechanisms; neither blocks the stated
+paper result, and neither is discharged by it.
+
+Both full guides were read with the preceding hashes. All 50 integration,
+12 worker, 34 parent, eight comparison, 17 protected and 11 unrelated identities
+matched, using the explicit historical-owner mapping. The reviewer reconstructed
+the elementary argument and separate PNT-dependent uniform comparison and
+inspected caller receipts without executing checks. The final caller validation
+must cover I4 and these outcome-only appends. No reviewer writes, Git, services,
+builds, checker execution or delegation occurred. This is independent model
+review, not kernel checking, human peer review, a fresh PNT/Korobov audit or a
+novelty certification. No mathematical completion status changes.

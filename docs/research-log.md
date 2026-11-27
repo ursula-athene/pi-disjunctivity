@@ -5337,3 +5337,60 @@ The actual source-class and signed-estimate bridge remains open. Full evidence
 and all dispositions are in the [continuation review](agy-reports/m4-continuation-review.md#chang-and-wu--xi-contract-assessment--2026-11-27-utc).
 Post-repair documentation and whitespace checks passed; final outcome records
 are checked before publishing this checkpoint. No Lean or dependency changed.
+
+Publication receipt, 2026-11-27 23:01:11 UTC: ordinary push and remote verification
+completed for `dbba18d2cd3649bfb00392d26ac595b793fdc636` on
+`origin/feature/m4-universal-visitation` (push aa71fe, verification 97f6a2).
+Final documentation (93), working/staged whitespace, exact staged and committed
+scope/blobs, parent, empty index, owned clean tree and all preservation hashes
+passed. The earlier 38 process tests cover unchanged process code. Post-commit
+necessity inspection found no required repair. The next active cadence check
+is due by 23:16:11 UTC or at an earlier result/direction event; no PR was opened.
+
+Continuation note, 23:14 UTC: the fresh discovery report froze at 23:06:35,
+within its 22:48:12--23:08:12 bound. It proposes explicit actual-denominator
+anchors whose complete rational periods are unions of fine grids. The parent
+reconstructed the elementary Euler/LTE/CRT argument and replayed all three
+synthetic checkers unchanged; receipts matched byte-for-byte. A separate parent
+comparison, bounded 23:10:10--23:20:10 and frozen at 23:10:56, tests whether
+natural inverse-power corrections make the grid traversal usable. Both paper
+arguments are under independent review and are not adopted by this note.
+At 23:14:31, remote verification 509ac6 still matched
+`dbba18d2cd3649bfb00392d26ac595b793fdc636`; no new reviewed commit was waiting.
+
+### Actual-denominator grids and their timing — 2026-11-27 UTC
+
+The sharper radical-order question changed the discovery outcome: an explicit
+Euler covering progression excludes high 17-parts of other prime orders while
+the actual terminal pole retains the full 17-power denominator. The parent's
+elementary subgroup argument then gives complete rational orbits made of
+17^(-d) grids at infinitely many explicit actual anchors, uniformly in every
+unit numerator. The [owner](m4-prime-compression.md#explicit-actual-denominators-with-fine-complete-period-grids)
+states the fixed-d and fixed-word quantifiers. The main proof needs no external
+digit-distribution theorem. The source screen is not an originality determination.
+
+The parent read both complete arguments and all checkers. Three unchanged-copy
+replays passed and matched their original receipts: 128 leading-zero fixtures,
+four prime-power descriptions, one product counterexample, 253 coarse fixtures,
+two exponent-covering constructions, 12 pole/order fixtures, 18 blocked-base
+fixtures and 52 synthetic CRT grids. No actual prefix or denominator was evaluated.
+The separate comparison retains high-prime logarithmic mass at least 5N+o(N)
+under every finite natural tail correction. Its grid step exceeds the uniform
+absolute-shadow horizon. It uses the archived PNT-dependent denominator result;
+finite tests do not prove either universal argument.
+
+Independent paper review ran 23:09:14--23:16:06, reassessing at 23:14:38 before
+the 23:21:14 deadline. No defect was found. Three clarifications are implemented
+for integration review: complete-period normalized counts and quantifier order,
+source deleted-digit domain, and moving-set dynamics explicitly on R/Z. Actual
+early selection and other transfer mechanisms remain open. The [full cycle](agy-reports/m4-continuation-review.md#actual-denominator-grid-and-correction-paper-review--2026-11-27-utc)
+retains immutable packets, all dispositions and evidence limits. This intermediate
+result is paper mathematics, not a Lean theorem or M4 acceptance.
+
+Integration review completed at 23:27:07 UTC with no defect. All prior
+clarifications were verified; one additional source-domain condition, p not
+dividing the base m, was added and verified. The [review record](agy-reports/m4-continuation-review.md#actual-denominator-grid-integration-review--2026-11-27-utc)
+retains exact scope, hashes and all dispositions. Final affected documentation
+and whitespace validation follow before publication. At the 23:23 UTC event,
+remote verification 81139b still matched dbba18d2cd3649bfb00392d26ac595b793fdc636;
+no reviewed commit was waiting. V and M4 remain open.
