@@ -4115,3 +4115,79 @@ averaging variables and ranges to the initialized full BBP prefix. The
 endpoint is an applicable source/consumer or a worked failed transfer and
 changed question, not a generic bibliography or seed-averaged estimate.
 No unfinished source claim is adopted. C_odd, V and M4 remain open.
+
+**Reciprocal sums and a finite-ring inquiry — 2026-11-27 UTC:** the
+coupled-cycle checkpoint is local commit
+`02efb999a5d24a8588cd120636590984d1f14079`. Required reviews, checks,
+exact staging and post-commit necessity/preservation inspection passed.
+At inspection the branch was eight ahead of its remote-tracking reference,
+index empty and task-owned tree clean. This run issued no push or PR.
+
+The two-source inquiry completed at 12:57:04 UTC, within its bound.
+Denominator clearing does not yield modular inverses; an exact auxiliary
+modulus repairs that algebra but preserves the full cumulative BBP phase.
+Its individual inverse phases instead align at each fixed frequency, with
+an explicit harmonic error bound. The inspected source estimate has the
+wrong averaging statistic and an unavailable length range. The second source
+gives existential bad moduli, not control of the selected BBP sequence.
+Parent replay passed 3,612 exact checks with identical output and 15 original
+evidence files preserved; the unrelated Swift rendering cache is excluded.
+Both primary PDFs were opened and all five retained source pages visually
+inspected. Neither full external proof was independently audited.
+Separate review and focused D1 repair completed: source comparability is
+written as comparability, not asymptotic equivalence. Q1 retains the missing
+time-prefix cancellation estimate. Authoritative v2 is
+`/tmp/pi-m4-bbp-sum-source-clarification-20261127/report-v2.md`.
+This completed assessment awaits production integration; no V result follows.
+
+At 13:02:24 UTC `/root/bbp_sum_source_recovery` began a distinct
+**20-minute** finite-ring inquiry, deadline 13:22:24 UTC, scratch
+`/tmp/pi-m4-finite-ring-cocycle-20261127/`. It tests whether the actual
+rational skew recurrence admits a rational conjugacy of uniformly bounded
+degree usable on the initialized short prefix. The endpoint is such a
+consumer or a proved complexity/pole obstruction, with function-field
+identities distinguished from evaluation at poles and from total finite-ring
+maps. At most two claims and six declared primes are tested; no actual
+digits or phases are evaluated. No unfinished claim is adopted. V/M4 remain open.
+
+The finite-ring inquiry completed at 13:16:08 UTC, within its bound. The
+unique rational conjugacy has exact pole counts asymptotic to 5p/8. Canonical
+finite parts solve the evaluation issue with a polynomial of degree p-3.
+Split-prime prefixes are regular, but residue r_0=0 alone does not imply
+finite part C(0)=0. The inspected completion/conductor bound is vacuous.
+Parent replay passed 618 exact checks with identical output and 15 evidence
+files preserved; both primary PDFs and all four retained source page images
+were inspected. Deep Fourier/ramification proofs were not audited in full.
+Separate review found no defect; I1 (real-comparison sign) and I2 (finite-part
+domain) were resolved in immutable v2 and focused review. Q1 retains the
+selected short-prefix estimate; the original Q2 constant question was then
+addressed separately, not retroactively treated as proved in that packet.
+
+At 13:13:30 UTC `/root/finite_log_constant` began a **12-minute** question,
+deadline 13:25:30 UTC: prove or refute C(0)=0 for all split primes p>5,
+using the finite-log reduction. It completed at 13:20:23 UTC with a paper
+proof. The exact root filter and finite-log four-term identity prove the
+vanishing without a p-adic infinite-series substitution. Parent replay
+passed the supplied exact algebra and only the six already declared primes,
+with identical output and all five original files preserved. Independent
+`/root/finite_log_independent_review` completed at 13:25:58 UTC with no D/I
+finding; its Q1 retains short-prefix cancellation. The result is paper
+mathematics, not a new Lean theorem or visitation estimate. Its sealed
+packet is `/tmp/pi-m4-finite-log-constant-20261127/`.
+
+At 13:25:31 UTC `/root/bbp_sum_source_recovery` began a new **20-minute**
+consumer inquiry, deadline 13:45:31 UTC, scratch
+`/tmp/pi-m4-split-prefix-consumer-20261127/`. It tests at most two exact
+uses of the vanishing constant and residue geometry for the selected short
+prefix, first a low-complexity restricted representation with quantified
+degree/error. Global bounds cannot be applied to that prefix without a
+separate argument. The endpoint is an applicable estimate or worked failed
+transfer and changed question. No new prime sampling, actual digit/phase
+census or unfinished claim is adopted. V/M4 remain open.
+
+Full five-path integration review completed at 13:33:13 UTC with no defect;
+its one source-discrepancy clarification passed focused review at 13:34:34
+UTC. The actual selected-prefix estimate remains open. Documentation (93),
+process tests (38), whitespace and protected/unrelated preservation checks
+passed. This checkpoint records paper results only; unchanged Lean was not
+rebuilt. Research continues through the separate consumer inquiry.

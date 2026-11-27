@@ -2442,3 +2442,78 @@ process tests (38), whitespace and preservation checks passed. No unchanged
 Lean build was repeated. Subsequent edits record outcomes only; no substantive
 repair or focused review was needed. This diagnostic review cycle is complete.
 The separate source inquiry supplies no adopted claim in this checkpoint.
+
+## Finite-field conjugacy and its vanishing constant — 2026-11-27 UTC
+
+Baseline `02efb999a5d24a8588cd120636590984d1f14079`. This five-path
+documentation checkpoint adds an exact inverse-sum comparison, finite-field
+conjugacy and a split-prime finite-logarithm identity in `m4-transform-phases.md`,
+with plan/log/handoff/review updates. No Lean or protected interface changes.
+V/M4 remain open; the new universal statements are paper mathematics.
+
+The inverse-sum source packet received full separate review and a focused
+comparability repair by `/root/generating_review`. The complete responses
+are in `/tmp/pi-m4-bbp-sum-source-paper-review-20261127.txt`.
+**D1: resolved:** `(log p)^A` is comparable to X, not asymptotically equal
+to X. **I: none. Q1: retained open:** cancellation of the actual cumulative
+phase across time. Authoritative v2 is
+`/tmp/pi-m4-bbp-sum-source-clarification-20261127/report-v2.md`, SHA-256
+`66ccc4a38f8c13eb0605524a3f7a4e6d7495c4ec66edef8f9722674a36cf53a5`.
+The critic checked the exact objects, units, ranges and existential source
+quantifiers; it inspected all five source page images and supplied context.
+Parent unchanged-copy replay passed 3,612 checks with identical receipt and
+15 original evidence files preserved. Full external proofs were not audited.
+
+The finite-ring packet received full separate review and focused clarification
+by `/root/generating_review`; complete responses are in
+`/tmp/pi-m4-finite-ring-paper-review-20261127.txt`. **D: none. I1--I2:
+resolved:** the real comparison explicitly uses the negative modular sign,
+and B(t)=A(t) holds at every point outside A's pole set. Authoritative v2 is
+`/tmp/pi-m4-finite-ring-clarification-20261127/report-v2.md`, SHA-256
+`37c31e312c277b8f2ca9fdaa0d2c4f5e19653e42228e7c913db0727bef2cd074`.
+The critic reconstructed all residue/support tables, boundary p=7, degrees,
+finite-part recurrence, global extension bounds and source application.
+All 13 manifest artifact hashes and four source page images were inspected.
+Parent replay passed 618 checks with identical receipt and 15 originals
+preserved. Deep conductor/Fourier proofs were not independently rebuilt.
+**Q1: retained open:** selected short-prefix control. **Q2: addressed by
+the separately reviewed extension below:** universal split-prime C(0)=0.
+The original packet and its contemporaneous open question remain unchanged.
+
+Independent `/root/finite_log_independent_review` completed the constant
+review at 13:25:58 UTC. Complete response:
+`/tmp/pi-m4-finite-log-paper-review-20261127.txt`. Report
+`/tmp/pi-m4-finite-log-constant-20261127/report.md` has SHA-256
+`24a1158d2b24a1fe5349d8380f51b4bf6462eb9da9136c5a11b1d9d62fbed5b3`.
+**D/I: none. Q1: retained open:** the selected-prefix cancellation estimate.
+The critic reconstructed the Laurent finite part, exact -1/128 root filter,
+integer-polynomial four-term identity and both split classes modulo 8.
+It verified every manifest-listed size/hash and read the full checker and
+receipt. Parent replay passed the exact algebra and six previously declared
+prime audits, with identical receipt and all five originals preserved.
+The universal proof does not follow from these finite checks, and no
+convergence of a p-adic infinite BBP series was assumed.
+
+All reviewers used the current replacement procedure, critic skill and both
+adversarial guides. They performed only read-only inspection and mathematics;
+no checker/build/probe/extractor, mutation, service or delegation occurred.
+Execution receipts remain caller evidence, not independent execution or Lean
+verification. No actual digit/phase/orbit census was performed.
+
+Full integration review by `/root/finite_log_independent_review` completed
+at 13:33:13 UTC on the five-path diff SHA-256
+`9bbef4398ffd8c460cbc7f6c2103473f834fece5c741900087a814581fb88315`.
+Packet `/tmp/pi-m4-finite-field-review-20261127/` retains the initial and
+revised diffs, manifests, preservation inventory, complete `review-full.txt`
+and `review-focused.txt` responses. **D: none. I1: resolved:** the source's
+normalized discrepancy is explicitly bounded below by a positive constant
+depending on A. The focused review completed at 13:34:34 UTC, verifying
+exactly that sentence change and the complete revised diff SHA-256
+`e622d1f2b3024aebaa228443b760d425840eafb811cae35c177539c90ebf2961`.
+**Q1: retained open:** actual selected-prefix cancellation. The critic
+independently reconstructed the combined arguments, inspected all nine source
+page images and verified every 5 production, 56 evidence, 2 guide, 17 protected
+and 11 unrelated hash, plus the live exact diff. Documentation (93), process
+tests (38), whitespace and preservation checks passed. Unchanged Lean was not
+rebuilt. Subsequent edits record outcomes only. This paper/documentation
+checkpoint's review is complete; V and M4 are not accepted.

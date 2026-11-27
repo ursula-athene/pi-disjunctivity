@@ -1000,10 +1000,17 @@ explains one known finite escape using inconsistent rounded pairs. It
 retains the actual common lattice translation when cycles are consistent.
 Its simplest order-scaled extension fails at the next actual anchor; other
 cycles remain untested. No late incompatibility or lattice exclusion follows.
-A bounded primary-source inquiry now tests estimates for BBP exponential
-sums across indices, retaining the full prefix and actual initialization.
-No unfinished candidate is adopted; bounds and outcomes belong to the log.
-The log owns bounds, outcomes and the failed applicability screens.
+The [inverse-sum screen](m4-transform-phases.md#modular-inverses-retain-the-complete-initialized-prefix)
+repairs denominator clearing with auxiliary moduli but retains the entire
+weighted prefix; individual inverse-phase cancellation is the wrong statistic
+and fails in this construction. The
+[finite-field conjugacy](m4-transform-phases.md#finite-field-conjugacy-and-the-split-prime-constant)
+has linearly many poles and a canonical total representative of degree p-3.
+A separately reviewed finite-logarithm proof makes its initial finite part
+C(0) vanish for every split prime p>5, removing that initialized factor.
+The inspected completion bound remains vacuous. A bounded consumer inquiry
+now tests restricted-prefix representations and their actual estimate;
+no unfinished result is adopted. The log owns bounds and outcomes.
 V and all Lean contracts are unchanged; neither conditional wrapping nor more
 classification supplies visitation.
 

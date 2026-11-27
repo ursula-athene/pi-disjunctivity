@@ -7,7 +7,7 @@ The [continued research checkpoint](#continued-research-checkpoint--2026-11-26)
 records subsequent work during the user's absence; that checkpoint does not
 terminate the ongoing M4 effort.
 The latest dated continuation is the
-[Coupled cycles and the failed order-scaled stencil](#coupled-cycles-and-the-failed-order-scaled-stencil--2026-11-27-utc); read the
+[Finite-field conjugacy and its vanishing constant](#finite-field-conjugacy-and-its-vanishing-constant--2026-11-27-utc); read the
 research log and actual checkout for subsequent results and current state.
 
 ## Baseline and authorized endpoint
@@ -1363,3 +1363,35 @@ changed; no new visit or M4 acceptance follows.
 A distinct bounded source inquiry now tests reciprocal/exponential-sum
 estimates against the initialized full BBP prefix. The log owns its bound
 and outcome; no unfinished source claim is adopted. Continue M4 research.
+
+## Finite-field conjugacy and its vanishing constant — 2026-11-27 UTC
+
+The coupled-cycle checkpoint is local commit
+`02efb999a5d24a8588cd120636590984d1f14079`. Its reviews, checks and
+post-commit preservation/necessity inspection passed. At the latest checkout
+inspection the branch was eight ahead of its remote-tracking reference;
+this checkpoint's edits are uncommitted. This run issued no push or PR.
+
+The [inverse-sum and finite-field assessment](m4-transform-phases.md#modular-inverses-retain-the-complete-initialized-prefix)
+preserves the complete initialized phase under an exact auxiliary-prime
+comparison. Its unique rational conjugacy has about 5p/8 poles; canonical
+finite parts give a total representative of degree p-3. A separately
+reviewed finite-logarithm argument proves C(0)=0 at every prime p>5,
+p=1 mod4. This removes the initial factor on the relevant prefix, but the
+inspected completion estimate gives no saving. Short-prefix cancellation
+remains the first missing analytic implication.
+
+Parent unchanged-copy replays passed: 3,612 checks for the inverse-sum
+packet, 618 for the conjugacy, and the finite-log packet's exact algebra
+and six declared-prime audits. All outputs matched and original evidence
+was preserved. These finite checks do not prove the universal statements.
+Separate paper reviews completed, with comparability, sign and evaluation
+domain clarifications resolved. Full five-path integration review and its
+focused source-bound clarification passed. Documentation, process tests,
+whitespace and preservation checks passed; the continuation review owns
+the complete scope and dispositions. No Lean, audit, pin or dependency changed.
+
+A 20-minute consumer inquiry is testing whether this simplification yields
+a usable representation on the selected short prefix, where the global
+degree bounds do not apply automatically. The research log owns its bounds
+and outcome. Continue research; V and M4 remain open.
