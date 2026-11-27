@@ -2379,3 +2379,66 @@ passed. No unchanged Lean build was repeated. Subsequent edits record review
 outcomes only; no substantive repair or focused review was needed. This
 diagnostic review cycle is complete, with no M4 acceptance. The coupled-resonant
 inquiry remains outside this packet's accepted mathematical scope.
+
+## Coupled cycles and the failed order-scaled stencil — 2026-11-27 UTC
+
+Baseline is `ed9c0d96679cf1ee4c197e8ca12be6074fa7d8d8`.
+Independent `/root/generating_review` completed the coupled paper review;
+its full response is
+`/tmp/pi-m4-coupled-resonant-paper-review-20261127.txt`.
+Report SHA-256 is
+`55edc6090bf7f02bd39c99273412ae838451da1b31847f4a978850d2d845af60`;
+manifest SHA-256 is
+`7e73695d9714ba8fd6dc2eb19db8457737feba33243b0ec19a0c59cfdd6d3407`.
+**D/I: none. Q1: retained open:** arbitrarily late incompatibility or
+exclusion of the prescribed point from the common interval.
+
+The reviewer reconstructed unique rounding, modular cancellation, balance
+only for odd q>1, signed incidence and its integer cycle criterion, full
+clique real intersection and the separate actual lattice lift. It checked
+reflected endpoints, the synthetic positive cycle, the exact-A five-step
+forcing certificate and archived index shift. It reconstructed the short
+real solution, half-integer changed-entry fixture, and signed order30 at
+q=765765 from its factorization. The finite certificate explains known
+escape; it does not extend the arbitrary-late frontier.
+
+The critic read the complete report/checker/fixed-anchor JSON/receipts and
+verified all five bound artifact hashes. Parent unchanged-copy replay passed
+6,889 checks, identical receipt and six preserved originals. These executions
+and the earlier exhaustive grid census remain caller evidence. AGENTS,
+the replacement procedure, critic skill and both full adversarial guides
+were applied; unchanged retained guide readings were hash-verified. No
+checker, probe, build, extractor, mutation, service or delegation occurred.
+No external theorem was needed.
+
+The extension packet's authoritative report is
+`/tmp/pi-m4-actual-cycle-recovery-20261127/report-v2.md`, SHA-256
+`aa7a30b30dea7173930dce8b2a046d6a11a687bec19a0a40daee1096fac2510d`.
+Parent replay passed with an identical exact receipt and all eight originals
+preserved. Its separate paper review by `/root/generating_review` completed;
+full response is `/tmp/pi-m4-actual-cycle-paper-review-20261127.txt`.
+**D/I: none. Q1: retained open:** other triangles, additional intermediate
+constraints, an eventual variant allowing exceptional anchors, and actual
+prescribed lattice exclusion. The finite falsifier rejects only the explicit
+all-anchor stencil. The critic reconstructed the orders/indexing, strict
+rounding and zero circulation, genuine common overlap and changed-entry
+sampled lift. It verified v1/v2 and all manifest hashes, including the
+separately recorded completion hash. The v2 hypothetical consumer retains
+eventual q_N>1 from the archived denominator growth. The same guides and
+read-only restrictions were applied; replay remains caller evidence.
+
+Full integration review by `/root/logarithmic_source_review` completed on
+the frozen five-path diff, SHA-256
+`04a17f5e5a28f1095476910b50174d82b4a59db0d1082a86070ae634587b21c1`.
+Packet `/tmp/pi-m4-coupled-cycle-review-20261127/` retains `initial.diff`,
+manifest, preservation inventory and full `review-full.txt` response.
+**D/I: none. Q1: retained open:** the arbitrary-late incompatibility or actual
+lattice estimate, including eventual variants of the refuted all-anchor
+stencil. The critic independently reconstructed both arguments and fixtures,
+verified the current diff byte for byte, and verified all 5 production,
+25 evidence, 2 guide, 17 protected and 11 unrelated hashes. No prohibited
+execution, mutation, service or delegation occurred. Documentation (93),
+process tests (38), whitespace and preservation checks passed. No unchanged
+Lean build was repeated. Subsequent edits record outcomes only; no substantive
+repair or focused review was needed. This diagnostic review cycle is complete.
+The separate source inquiry supplies no adopted claim in this checkpoint.

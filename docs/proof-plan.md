@@ -995,9 +995,14 @@ weights return the known period. An exact integer-cell formulation retains
 the actual numerator. A single primitive box projection of coefficient mass
 at least 3 cannot separate; modularly resonant pairs remain an exception,
 with explicit open forcing-residue windows. No actual separating sign was
-obtained. A bounded inquiry now tests simultaneous rounded resonant pairs,
-which the single-projection result does not exclude. No unfinished candidate
-is adopted; the exact bounds and outcomes belong to the log.
+obtained. The [coupled-cycle test](m4-language-auxiliaries.md#coupled-resonant-cycles-retain-the-actual-lattice-placement)
+explains one known finite escape using inconsistent rounded pairs. It
+retains the actual common lattice translation when cycles are consistent.
+Its simplest order-scaled extension fails at the next actual anchor; other
+cycles remain untested. No late incompatibility or lattice exclusion follows.
+A bounded primary-source inquiry now tests estimates for BBP exponential
+sums across indices, retaining the full prefix and actual initialization.
+No unfinished candidate is adopted; bounds and outcomes belong to the log.
 The log owns bounds, outcomes and the failed applicability screens.
 V and all Lean contracts are unchanged; neither conditional wrapping nor more
 classification supplies visitation.

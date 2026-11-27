@@ -4064,3 +4064,54 @@ exact characterization and a discriminating countertest identifying what
 coupling adds and still lacks. It tests at most two hypotheses, preserves
 the actual numerator in the target, and does no phase/digit census or generic
 solver expansion. No unfinished claim is adopted. C_odd, V and M4 remain open.
+
+**Coupled-cycle extension inquiry — 2026-11-27 UTC:** the polynomial and
+single-projection checkpoint is local commit
+`ed9c0d96679cf1ee4c197e8ca12be6074fa7d8d8`. Required reviews, checks,
+exact staging and post-commit necessity/preservation inspection passed.
+At inspection the branch was seven ahead of its remote-tracking reference,
+index empty and task-owned tree clean; this run issued no push or PR.
+
+At 12:45:45 UTC a fresh-context `/root/actual_cycle_recovery` began a
+**20-minute** inquiry, deadline 13:05:45 UTC, scratch
+`/tmp/pi-m4-actual-cycle-recovery-20261127/`. It tests at most two explicit
+extensions of the coupled mechanism, beginning with an order-scaled version
+of the candidate finite triangle at the single next archived anchor. The
+coupled report remains unreviewed input until its separate criticism is
+complete; no unfinished conclusion is adopted. The endpoint is a symbolic
+actual-A family with a proved separating sign, a refuted concrete extension,
+or a worked new question with its exact missing bridge. No actual numerator,
+initialized states or digit census is evaluated. C_odd, V and M4 remain open.
+
+The coupled inquiry completed at 12:48:25 UTC, within its bound. Its signed
+graph argument retains the actual lattice lift after real interval
+intersection. At the single authorized forcing-only recurrence anchor N=1,
+q=15, h=5, all pairs pass but one triangle has circulation -1, explaining
+the already known finite escape. A supplied modulus check shows the method
+has no pair at the known h=15 escape for q=765765. Parent unchanged-copy
+replay passed 6,889 exact checks, identical receipt and six preserved
+originals. Independent paper review completed with no D/I finding; Q1 retains
+arbitrarily late incompatibility or prescribed lattice exclusion.
+
+The extension inquiry completed at 12:52:35 UTC, within its bound. One
+explicit proposed universal stencil, (1,1+3*tau_N,1+4*tau_N), fails at
+actual N=2,q=4095,tau=3: all three pair projections pass with zero circulation.
+An exact overlap and reduced changed-entry sampled-cell witness explain the
+failure. No other triangle or omitted intermediate carries were evaluated.
+Parent unchanged-copy replay passed with identical receipt and all eight
+originals preserved. Separate paper review by `/root/generating_review`
+completed with no D/I item; Q1 retains other cycles, actual lattice placement
+and an eventual variant allowing exceptional anchors. Full five-path
+integration review by `/root/logarithmic_source_review` completed with no
+new D/I item and that late estimate retained open. Documentation (93),
+process tests (38), whitespace and preservation checks passed. These are
+not new arbitrary-late or kernel results; unchanged Lean was not rebuilt.
+
+At 12:50:18 UTC a fresh-context `/root/bbp_sum_source_recovery` began a
+**20-minute** primary-source/mechanism inquiry, deadline 13:10:18 UTC,
+scratch `/tmp/pi-m4-bbp-sum-source-recovery-20261127/`. It examines at most
+two precise estimates for reciprocal/exponential sums and maps their objects,
+averaging variables and ranges to the initialized full BBP prefix. The
+endpoint is an applicable source/consumer or a worked failed transfer and
+changed question, not a generic bibliography or seed-averaged estimate.
+No unfinished source claim is adopted. C_odd, V and M4 remain open.

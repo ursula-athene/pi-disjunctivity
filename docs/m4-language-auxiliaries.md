@@ -1180,6 +1180,148 @@ in the continuation review report; no Lean result or actual phase census
 is added. Coupled resonant constraints are a separate inquiry, with no
 unfinished claim adopted. C_odd, V and M4 remain open.
 
+## Coupled resonant cycles retain the actual lattice placement
+
+Single-projection nonseparation does not imply that all rounded pair
+constraints are consistent. Keep the preceding actual-entry cells I_j and
+write d_j=16^j*a/(2q), I_j^F=[(F_j-b_j)/2,F_j/2], so I_j=I_j^F+d_j.
+For a resonant pair use s_ij=1 for a difference and -1 for a sum:
+16^i=s_ij*16^j modulo q. Its projection has width (b_i+b_j)/2<1.
+If it contains an integer, that integer k_ij is unique and forces
+
+```text
+L_i-s_ij*L_j=k_ij,
+k_ij=d_i-s_ij*d_j+kappa_ij,
+kappa_ij = the unique integer in I_i^F-s_ij*I_j^F.
+```
+
+An empty individual projection is already a certificate. For the coupled
+case assume q>1 and that the individual projections pass. Multiplying the
+resonances around a cycle gives product s_ij=1: otherwise q would divide 2.
+Thus choose vertex signs sigma_j, with root sign 1 per component, such that
+s_ij=sigma_i*sigma_j. The variables Z_j=sigma_j*L_j satisfy ordinary integer
+difference equations. They have integer solutions exactly when all oriented
+cycle sums of sigma_i*k_ij vanish, by assigning potentials along a spanning
+tree. Seed contributions telescope in these sums. A nonzero circulation
+of sigma_i*kappa_ij therefore excludes every entry a/q with this future A;
+that is a stronger test than exclusion of the actual selected entry.
+The q=1 case permits both signs and is outside this balanced-graph claim.
+
+The full resonance graph is a union of cliques. If all rounds and cycles
+pass, choose integer forcing potentials p_j^F satisfying
+p_i^F-p_j^F=sigma_i*kappa_ij. After reflecting intervals when sigma_j=-1,
+the closed intervals sigma_j*I_j^F-p_j^F intersect pairwise, hence have a
+nonempty common real interval H_C. Its length is less than 1/2. A sparse
+graph's cycle test alone does not guarantee this common intersection.
+For a full component with root r, sigma_j*d_j-d_r is integral, and original
+integer feasibility still requires
+
+```text
+(d_r+H_C) intersects Z,   d_r=16^r*a/(2q),
+```
+
+in every component with the SAME actual a/q. A real common translation is
+not automatically an integer one. Equivalently the signed forcing arcs
+have a common point modulo 1, but the entry prescribes the particular point
+-d_r modulo 1. Coupling can reject all phases; otherwise that placement
+remains a selected arithmetic obligation.
+
+There is a positive synthetic test with q=5 and forcing
+(4/15,2/3,11/15), all in (0,1). Its three F values are
+(4/15,74/15,239/3), and Q_j=15. Every pair passes individually, with
+kappa_12=-2, kappa_23=-37, kappa_13=-40; their circulation is 1.
+Thus coupling supplies a genuine new certificate in a valid recurrence
+model, while losing the exact BBP forcing.
+
+For the actual A, one fixed forcing-only check at recurrence anchor N=1,
+q=15, h=5 gives an exact certificate. This is the archived grid table's
+raw/orbit anchor 0; its five-step escape was already known. Since 16=1
+modulo 15, all difference pairs are resonant. All ten pair projections
+pass, but exact endpoint rounding gives
+
+```text
+kappa_14=-271,  kappa_45=-4060,  kappa_15=-4330,
+kappa_14+kappa_45-kappa_15=-1.
+```
+
+The seed contributions obey the corresponding identity with zero right
+side. This excludes an all-even block of length five for every a/15 without
+evaluating the actual numerator or initialized digits. The full rational
+endpoints, F_j and Q_j are retained in the report and fixed-anchor receipt.
+This explains an existing finite escape, not arbitrarily-late C_odd or V.
+
+Let D be the least positive d with 16^d=+1 or -1 modulo q>1. Components are
+indices modulo D, so a cycle requires h>=2D+1; also 16^D>=q-1. At the
+archived q=765765, D=30, so h=15 has no resonant pair at all and a triangle
+requires h>=61. The known grid escape there is h=15. Thus this mechanism
+does not explain all known finite escapes or supply their uniform bound.
+
+The exact-A changed-entry family 1/5 at N>=16^h also defeats all coupled
+resonant equations: only differences resonate, their unique values are
+(K_i-K_j)/2 for the odd K_j=(16^j-1)/5, and these have zero circulation.
+Integer potentials (K_j-1)/2 leave a common real translate interval contained
+strictly in (0,1) and containing 1/2. It misses Z, even though every edge
+equation has an integer solution. This illustrates the remaining lattice
+placement, not an actual initialized counterexample. More generally that
+short horizon gives F_j<1/30<b_j, so zero lies in every forcing box and
+the rounded resonant rows are consistent. The actual denominator's lag
+bound is already stronger than this short-horizon observation asymptotically.
+
+The existing identity F_j=16^j*T_A(N)-T_A(N+j) exposes the remaining issue:
+the forcing arcs still contain the amplified initialized period. No
+BBP-specific late spread estimate follows from graph consistency. The frozen
+report `/tmp/pi-m4-coupled-resonant-cuts-20261127/report-v1.md` has SHA-256
+`55edc6090bf7f02bd39c99273412ae838451da1b31847f4a978850d2d845af60`.
+Parent unchanged-copy replay passed 6,889 exact checks, with an identical
+receipt and six originals preserved. Universal arguments remain paper
+proofs; separate review belongs to the continuation review record. No new
+Lean declaration or arbitrary-late visit is claimed.
+
+### The order-scaled triangle fails at the next anchor
+
+One concrete proposed extension takes tau_N=ord_(q_N)(16) and the indices
+(1,1+3*tau_N,1+4*tau_N), asking for a failed pair or nonzero circulation
+at every actual anchor with q_N>1. Together with eventual q_N>1 from the
+archived denominator growth, that would prove C_odd, still not V.
+It reproduces the successful (1,4,5) triangle at N=1, q=15, tau=1.
+
+The next actual recurrence anchor N=2 has q=4095=16^3-1 and tau=3.
+Its order-scaled indices (1,10,13) retain exact difference resonance, but
+each forcing projection contains a unique integer strictly inside its
+endpoints, and
+
+```text
+kappa_(1,10)=-1496982155,
+kappa_(10,13)=-6130141924695,
+kappa_(1,13)=-6131638906850,
+kappa_(1,10)+kappa_(10,13)-kappa_(1,13)=0.
+```
+
+This refutes the stated all-anchor disjunction, not an eventual variant
+allowing exceptional anchors. Integer forcing potentials
+(0,1496982155,6131638906850) leave a nonempty common interval H strictly
+inside (-1,0). With the reduced CHANGED entry 53/4095, the root shift is
+d_1=424/4095 and H+d_1 contains 0 strictly. The integers
+L_t=p_t+(d_t-d_1), d_t=16^t*53/(2*4095), lie in all three sampled original
+cells. Exact endpoints and witnesses are retained in the receipt. This
+does not preserve the actual numerator or assert even carries at omitted
+indices, so it does not contradict the archived full-grid escape at h=9.
+
+Resonance and a matching repunit denominator do not select a separating
+triangle. The countertest rejects this stencil, not other cycles or a
+general coupled method. A revised selection rule must distinguish the
+explicit common overlap from the N=1 incompatible triple; repeating those
+order-scaled offsets or a fixed-index anchor congruence does not address it.
+The raw initialized prefixes were used only to return their reduced
+denominators; no actual canonical numerator, state or digit was evaluated.
+
+The authoritative report is
+`/tmp/pi-m4-actual-cycle-recovery-20261127/report-v2.md`, SHA-256
+`aa7a30b30dea7173930dce8b2a046d6a11a687bec19a0a40daee1096fac2510d`.
+Parent unchanged-copy replay passed, with an identical exact receipt and
+all eight originals preserved. This is a finite paper counterexample to a
+specific proposed extension, not a new Lean theorem or M4 acceptance.
+
 ## Evidence boundary
 
 The frozen sine-zero report is `/tmp/pi-m4-sine-zero-report-v1.md`, SHA-256

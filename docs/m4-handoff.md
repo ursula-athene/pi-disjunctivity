@@ -7,7 +7,7 @@ The [continued research checkpoint](#continued-research-checkpoint--2026-11-26)
 records subsequent work during the user's absence; that checkpoint does not
 terminate the ongoing M4 effort.
 The latest dated continuation is the
-[Polynomial telescopes and integer-path cuts](#polynomial-telescopes-and-integer-path-cuts--2026-11-27-utc); read the
+[Coupled cycles and the failed order-scaled stencil](#coupled-cycles-and-the-failed-order-scaled-stencil--2026-11-27-utc); read the
 research log and actual checkout for subsequent results and current state.
 
 ## Baseline and authorized endpoint
@@ -1332,3 +1332,34 @@ A new 20-minute inquiry tests simultaneous rounded resonant constraints,
 which the single-projection obstruction does not cover. The log owns its
 exact bounds and outcome; no unfinished result is adopted. C_odd, V, global
 covering and M4 remain open; continue research after this checkpoint.
+
+## Coupled cycles and the failed order-scaled stencil — 2026-11-27 UTC
+
+The polynomial/single-projection checkpoint is local commit
+`ed9c0d96679cf1ee4c197e8ca12be6074fa7d8d8`. Required reviews, checks,
+exact staging and post-commit necessity/preservation inspection passed.
+At inspection the branch was seven ahead of its remote-tracking reference,
+index empty and task-owned tree clean. Subsequent checkpoint edits are
+uncommitted; this run issued no push or PR.
+
+The [coupled-cycle diagnostic](m4-language-auxiliaries.md#coupled-resonant-cycles-retain-the-actual-lattice-placement)
+explains the known finite N=1,q=15,h=5 escape by three inconsistent rounded
+equations, although every individual pair passes. The signed-graph theorem
+retains q>1 and distinguishes a real common interval from its actual integer
+placement. The next-anchor test refutes one proposed order-scaled triangle:
+at N=2,q=4095 the three intervals overlap. Its changed-entry witness satisfies
+only the sampled cells, not omitted intermediate carries or actual initialization.
+Other cycles and arbitrary-late separation remain open.
+
+Parent unchanged-copy replays passed with identical receipts and preserved
+originals, including 6,889 checks for the coupled packet. The coupled paper
+review completed with no D/I finding and its late estimate retained open.
+The extension paper review also passed, retaining other cycles and eventual
+variants. Full five-path integration review passed with no new finding;
+documentation, process, whitespace and preservation checks passed.
+No Lean, audit, pin, dependency or trust boundary
+changed; no new visit or M4 acceptance follows.
+
+A distinct bounded source inquiry now tests reciprocal/exponential-sum
+estimates against the initialized full BBP prefix. The log owns its bound
+and outcome; no unfinished source claim is adopted. Continue M4 research.
