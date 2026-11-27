@@ -476,6 +476,45 @@ has version1 checker, receipt and manifest siblings. These are paper
 diagnostics reviewed with no D/I/Q items, not a bound on the actual
 positive-time average.
 
+## The actual null state has denominator exponent eight
+
+Here D=A+Ahat is the positive-index null forcing, not the unrelated
+backward coefficient called D earlier. Its ordered vector at r=1,...,7
+is (4,-4,-2,-4,-1,-1,1/2), and U_n=S_n^D. The established bounds give
+0<U_n<1/(16n+18) and U_n~1/(16n). The apparent half-denominator terms
+combine to -2(n+1)/[(4n+3)*(8n+7)], so U_n has odd denominator.
+
+The prime transform fixes D for every odd residue class. To apply the
+fixed-scale compression argument, let C_(h,l) be 16*U_(h-1) plus the
+first l ordered terms of D(h), with U_(-1)=0. Every eligible partial
+state is nonzero. The full state is U_h>0; the penultimate one is
+U_h-1/[2*(8h+7)]<0; the preceding one adds 1/(8h+6) and is positive.
+Earlier nonempty states are positive by the signs and ordered denominators.
+Only the ineligible empty state at h=0 is zero.
+
+For fixed H, compression at n=ph+s and sufficiently large n therefore gives
+v_p(U_n)=-1 for every prime n/(H+1)<p<=8n+7, p>=7. The finitely many
+partial-state numerators and denominators are independent of n; eventually
+none vanish modulo these growing primes, and p^2>8n+7. All four odd
+residue classes are eligible because D has a nonzero coefficient at each
+odd offset 1,3,5,7. The odd-lcm upper bound and ordinary PNT give
+
+    (8-1/(H+1))*n+o(n)<=log den(U_n)<=8n+o(n).
+
+Taking n to infinity before H proves log den(U_n)=8n+o(n). Moreover,
+log num(U_n)=log den(U_n)-log n+O(1). The null state's canonical numerator
+is exponentially large, while its circle energy still tends to zero.
+This distinguishes its denominator rate from A's rate 6; it does not
+bound A's canonical energy, and D also lacks A's nonzero real period.
+
+The frozen report `/tmp/pi-m4-adelic-height-20261127/report-v1.md`, SHA-256
+`6674c35892ed1d0ea1d43e77ac023e1d3e1faf19580154044795935c9c97cb7b`,
+retains the fixed-H argument, height normalization and source consumer.
+The parent reconstructed it and replayed the unchanged checker: exit 0,
+identical receipt, originals preserved. Finite partial-state and prime
+checks do not prove the asymptotic; the paper proof retains the earlier
+compression theorem and assessed PNT. No Lean result is added.
+
 ## Evidence for the positive-branch argument
 
 The parent reconstructed the proof, visually checked the PNT source page and

@@ -760,14 +760,29 @@ has good real conditioning, but bare integral polynomial evaluation is still
 too weak after the degree and digit amplification costs. Galois averaging
 does not select that branch. These are paper assessments, not Lean results.
 
-Current changed questions, with 20-minute reassessment bounds, test the positive
-moment density of the exact BBP forcing against nearby rational-period models,
-and whether the nonzero real period supplies an additional height constraint
-strong enough for the Bernoulli numerator. Each must retain initialization and
-test the null or rational model before claiming a useful distinction. No new
-arithmetic theorem, sufficient certificate or source analogy alone discharges V.
-The review record owns integration status; all target contracts and Lean status
-remain unchanged.
+The [positive-filter test](m4-rational-forcing.md#positive-filters-and-uniformly-close-eight-pole-models)
+now proves a sharp coefficient-norm limit for the stated integer-locking
+argument. Nearby rational-period models preserve the whole positive moment
+hierarchy but lose A's forward denominator rate. The
+[null-state rate](m4-prime-compression.md#the-actual-null-state-has-denominator-exponent-eight)
+is 8, compared with A's 6. A
+[fixed-pole classification](m4-logarithmic-constraints.md#rational-periods-in-every-fixed-finite-eighth-grid-pole-family)
+then proves that rational periods in every fixed finite simple negative
+eighth-grid pole family have rate 0 or 8. This distinguishes rational periods
+but does not exclude proper infinite orbit closures. Further such classification
+is suspended without an actual-phase consequence. The
+[height consumer](m4-positive-certificates.md#height-retains-a-local-selection-weight)
+also retains a necessary local field weight; its exact elliptic Bernoulli
+connection does not provide the missing numerator estimate.
+
+The current 20-minute reassessment cycle tests whether full multi-index forcing
+and forbidden-word avoidance supply simultaneous support hypotheses for a
+precise fractal Fourier theorem. A singleton CRT class has flat Fourier modulus,
+so a naive sparse-support argument is already excluded. Any proposed replacement
+must preserve the actual selected class, forcing and carry. A quantum or
+full-orbit result cannot be substituted for the exact recurrence without a
+proved bridge. The review record owns integration status; all target contracts
+and Lean status remain unchanged. Research continues within M4.
 
 For the recurrence defined in Step 4, seek a proof of
 

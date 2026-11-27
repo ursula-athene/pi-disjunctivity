@@ -2712,3 +2712,49 @@ all scoped hashes. A requested supplemental source-definition inspection
 confirmed the contract without a correction. Documentation and whitespace
 checks passed. None supplies V, and no new Lean result is claimed. The
 positive-kernel and height investigations remain outside that reviewed scope.
+
+**Continuation after local commit `c9f4fb7`:**
+the eight-path consumer checkpoint was committed and inspected with an empty
+index and unchanged protected/unrelated files; no remote publication occurred.
+The completed positive-kernel packet is
+`/tmp/pi-m4-positive-kernel-20261127/`. Its exact integer-filter norm prevents
+the tested positivity certificate from reaching arbitrary small holes. An
+eight-pole family preserves all moment/Hankel signs with uniform relative
+bounds, but has rational periods and eventually avoiding orbits; its fixed
+members lose A's denominator rate. The completed height packet is
+`/tmp/pi-m4-adelic-height-20261127/`: actual D has rate 8, A has rate 6, and
+canonical reduction removes A's extra raw-height contribution. A precise
+elliptic Bernoulli connection retains an essential selected-place weight,
+with a torsion countertest. Parent full reconstruction, source-page inspection
+and unchanged-copy replays passed; positive-kernel receipt differs only in UTC,
+height receipt is identical. The positive replay harness first expected a
+file instead of stdout JSON; corrected capture and one repeat retained exit 0.
+Originals are preserved. These are paper results, not V or Lean proofs.
+
+**Changed questions, each bounded to 20 minutes before reassessment:** classify
+whether a single rational-period forcing in the fixed finite simple eighth-grid
+pole family can have forward denominator rate 6, using the already proved
+eight-pole logarithmic kernel rather than repeating its derivation; separately,
+test whether full multi-index BBP forcing yields the simultaneous support
+hypotheses of a precise missing-digit/fractal Fourier theorem. A singleton CRT
+class has flat Fourier modulus, so naive sparse-support uncertainty is already
+excluded. Any surviving proposal must retain the actual carry and selected
+class. Endpoint outcomes are a new estimate or a precise discriminating failure,
+followed by a changed inquiry. More generic positivity or unweighted Galois
+averaging is suspended. The classification cycle completed in
+`/tmp/pi-m4-rational-period-classification-20261127/`: every rational-period
+member of the specified fixed pole family is lambda*D plus a rational
+coboundary, with denominator rate 0 or 8. The older positive thirteen-pole
+model is exactly the rate-8 alternative. Parent reconstruction and unchanged-copy
+replay passed, differing only in UTC and preserving originals. Committed input
+copies separate the pre-existing Baker/kernel and F model from concurrent draft
+integration. This answers the scoped countermodel question but supplies no
+missing-word implication. Further same-family classification is suspended;
+off-grid classification was not launched without a real consumer. The parent
+integrated the three completed packets while the distinct fractal Fourier
+investigation continued. Independent changed-file review completed with no
+D/I/Q items, reconstructing the arguments and checking every scoped hash.
+Requested supplemental source pages confirmed discrepancy nonnegativity and
+the Tate retraction without a correction. Documentation and whitespace checks
+passed. The newer fractal and word-carry work remains outside that review;
+M4 remains open.

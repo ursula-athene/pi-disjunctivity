@@ -313,6 +313,69 @@ and replayed an unchanged checker copy: exit 0, identical receipt and
 unchanged originals. Synthetic and principal-part checks do not establish
 the actual T inequality or V. Integration review is recorded separately.
 
+## Height retains a local selection weight
+
+For a reduced rational z=p/q, h(z)=log max(|p|,q). The actual period and
+denominator asymptotic give
+
+    h(S_n)=(6+log16)*n+o(n),
+    h(fract S_n)=6n+o(n).
+
+Canonical reduction removes exactly log S_n once S_n>1. Dividing by
+16^n instead moves that contribution into the dyadic denominator:
+den(S_n/16^n)=q_n*2^max(4n-v_2(n+1),0). Neither operation gives points
+of small absolute height. Normalizing the energy by n would also shrink
+the fixed avoidance gap to zero. The
+[null-state calculation](m4-prime-compression.md#the-actual-null-state-has-denominator-exponent-eight)
+gives h(U_n)=8n+o(n) despite energy tending to zero. Rational positive
+coboundaries retain nonzero raw growth but have only polynomial canonical
+denominators. These examples do not preserve all actual A data at once.
+
+There is an exact neighboring source connection:
+[Baker--Petsche, arXiv v1, Theorem 8, p.13](https://arxiv.org/pdf/math/0507228v1)
+bounds global elliptic discrepancy for m distinct algebraic points by
+4 times their average canonical height plus
+[0.5*log m+h(j_E)/12+16/5]/m. Global discrepancy weights each local
+term by [K_v:Q_v]/[K:Q], for a field containing the points and giving
+semistable reduction. At a multiplicative place its nonnegative skeleton
+term uses the periodic Bernoulli polynomial (pp.9--11).
+
+To map our kernel exactly, fix E over Q with split multiplicative reduction
+at p and Tate parameter q_E. Put c=-log|q_E|_p>0. A rational phase x=a/q
+can be represented by the torsion point with Tate parameter q_E^(a/q).
+Its coordinates are algebraic over Q because it is q-torsion, even though
+the Tate parameter is a local analytic object. Its skeleton retraction is
+x modulo 1, and the selected points have discrepancy
+
+    D_j=(c/2)*(1/6-Energy).
+
+All these points have canonical height zero. The source theorem supplies
+only
+
+    w_v*(c/2)*(1/6-Energy)
+       <=[0.5*log m+h(j_E)/12+16/5]/m,
+    w_v=[K_v:Q_p]/[K:Q].
+
+No sufficient lower bound on this selected weight has been proved. For
+an exact countertest, at one fixed p-adic embedding choose the torsion
+points represented by q_E^(j/m^2), 1<=j<=m. They are distinct, their
+energy is at most 1/m, and their canonical heights are all zero. Their
+containing number fields vary with m. Dropping w_v would contradict this
+example; taking a full Galois orbit changes the selected phases. Also a
+point with reduced retraction denominator q requires q|e_v*ord_p(q_E),
+so its containing field cannot simply be held fixed for BBP denominators.
+This degree lower bound is not itself a useful bound on w_v.
+
+The assessed v1's Proposition 9 is not used: its printed arbitrary-subset
+statement omits the Galois stability invoked in its proof. The weighted
+Theorem 8 is sufficient for the comparison above. A publisher-version fetch
+was inaccessible, so no claim about later wording is made. Parent source
+inspection covered the exact theorem, kernel, weights and surrounding proof.
+The frozen height packet cited in the null-state note retains source pages,
+contract, criticism and checker. Its unchanged-copy replay passed with an
+identical receipt. This encoding discards integer growth and does not supply
+the actual canonical numerator lower bound; an unweighted transfer is suspended.
+
 ## Evidence and research boundary
 
 The initial frozen packet `/tmp/pi-m4-direct-avoidance-20261127/` has

@@ -970,3 +970,65 @@ Final validation and post-commit inspection are retained in the same packet.
 Active positive-kernel and height work is outside this integration. This accepts
 the scoped paper assessments, not a Lean theorem or M4. No remote publication
 is authorized; research continues.
+
+## Positive kernels, null height and pole classification — 2026-11-27 UTC
+
+Baseline is local commit `c9f4fb7a310196a7f2dda949520883f86cf4a94f`.
+The eight-path documentation scope is `m4-rational-forcing.md`,
+`m4-prime-compression.md`, `m4-positive-certificates.md`,
+`m4-logarithmic-constraints.md`, `proof-plan.md`, `research-log.md`,
+`m4-handoff.md` and this record. No Lean, dependency, tool, pin or unrelated
+workspace change is included. Carbon remains disabled by the user's override.
+
+The frozen positive-kernel, adelic-height and rational-period-classification
+packets under `/tmp/pi-m4-*-20261127/` retain the complete reports, checkers,
+critic passes, source contracts and original manifests. Parent reconstruction
+and unchanged-copy replays passed, preserving originals. Positive-kernel and
+classification receipts differ only in UTC; the height receipt is identical.
+The first positive replay harness expected a written receipt, while its checker
+prints JSON. Corrected stdout capture and one repeat retained the child exit 0;
+the failure and recovery are recorded, with no frozen checker modification.
+The parent inspected Baker's original theorem page and Baker--Petsche v1
+pages 9, 11, 13 and 14. The latter's unqualified Proposition 9 is not used;
+the weighted Theorem 8 and exact kernel are the source inputs.
+
+The classification manifest's input paths were hashed after concurrent draft
+integration began. Exact committed copies under its `parent-source/` retain
+the pre-existing eight-pole/Baker calculation and F model actually needed;
+new draft conclusions are not inputs to themselves. The mathematical inputs
+and this provenance distinction are explicit. The three same-session critics
+are not independent review. Classification critic improvements I1--I3 were
+applied before freezing: old versus new result, source-based status, and no
+visitation claim. Its Q1--Q3 retain the missing word-to-rational-period bridge,
+uncontrolled canonical floors and pending independent review respectively.
+
+Reviewer `/root/generating_review` completed the required independent review
+in `/tmp/pi-m4-positive-height-review-20261127/`. Frozen diff SHA-256 is
+`15c8e40b0957736681a4f658536423b5f52da5b5e28f0f2a1f3c0977a3e64093`;
+the full returned `review.md` has SHA-256
+`c42c67440ad63457810e2b5560c06b1c17b4f7837e1aeddb3d9bfe3a48b07922`.
+**Defects:** none. **Nonblocking improvements:** none requiring a checkpoint
+change. **Open questions/missing evidence:** no additional gap in the advertised
+results; the actual canonical phase/carry estimate remains absent. No finding
+was omitted or deferred and no substantive repair required focused follow-up.
+
+Both full adversarial guides were applied with unchanged hashes verified.
+The reviewer reconstructed the sharp filter norm, uniform moment/Gram
+comparisons, actual model carries, fixed-H prime survival, height normalization,
+local field weight, Baker rational-value consequence and shifted-pole denominator
+comparison. It read all three reports/checkers/critics/contracts and verified
+all eight production and 60 evidence hashes. The pre-existing input copies
+make the classification dependency noncircular.
+
+At the reviewer's request the caller rendered/extracted Baker--Petsche pages
+7--8, exit 0, supplying the positive archimedean discrepancy and Tate retraction.
+The reviewer inspected the supplement and verified all four hashes, retained
+with the command/source in `supplemental-source.json`. No contract correction
+was needed. Review used only read-only inspection, hashing, receipt comparison
+and mathematical reconstruction; no checker, probe, build, extraction, edit,
+service or delegation ran. Execution receipts remain caller evidence.
+
+Documentation and working/staged whitespace checks, exact scope, preservation
+and post-commit necessity inspection are retained in the same packet. The newer
+fractal Fourier and word-carry investigations are excluded. These paper reviews
+do not establish a Lean theorem or V/M4 acceptance. Research continues.

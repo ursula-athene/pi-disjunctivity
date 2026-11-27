@@ -449,3 +449,81 @@ sketch review found no D/I/Q defect; integration review remains separate.
 The combined integration review subsequently resolved one kernel-name collision
 by using P_A consistently; no other findings remain. All universal results in
 this section remain paper mathematics, not Lean exports.
+
+## Positive filters and uniformly close eight-pole models
+
+The actual positive density P_A(t)=4-2t^3-t^4-t^5 permits a concrete
+avoidance-dependent test. Rotate a strict inner missing interval so that
+x_n=fract(S_n-c) lies in a closed interval of length L<1, and retain
+z_n=floor(S_n-c). For the shift E and integer h>=1, put
+W_h(u)=(u-16)*(1-u)^h. The exact recurrence gives
+
+    W_h(E)x_n=mu_(n,h)-C_(n,h),  C_(n,h)=W_h(E)z_n in Z,
+    mu_(n,h)=integral_0^1 t^(8(n+1))*(1-t^8)^h*P_A(t) dt>0.
+
+The rotation cancels because W_h(1)=0. Its coefficient norm is 17*2^h,
+so interval membership supplies only |W_h(E)x_n|<=17*2^(h-1)*L.
+For fixed h, mu tends to zero. If 17*2^(h-1)*L<1 this forces C=0
+eventually, making the bounded integer carries z_(n+1)-16*z_n eventually
+constant. Then lim 16^(-n)*z_n=pi would be rational. This is only the
+generic exclusion of a very short allowed arc, strongest at L<1/17;
+it is not an arbitrary-interval visitation proof.
+
+Degree cannot improve this particular range certificate. Every nonzero
+integer W with W(1)=W(16)=0 has coefficient norm at least 34. Remove
+initial zero coefficients and make the constant positive. It is a nonzero
+multiple of 16; balance at 16 requires another positive coefficient, so
+the positive mass is at least 17. Balance at 1 gives equal negative mass.
+Thus the norm-based bound is always at least 17L. This limits the
+certificate, not the actual filtered value. The positive rational toy
+c(n)=[16*r(n)-r(n+1)]/2040, r(n)=1/(n+1)-1/(n+2), has actual carries
+alternating 0,1 and limiting phases 1/255,16/255, at distance 1/17.
+Strict moment positivity does not remove that persistent integer variation.
+
+A quantitative perturbation preserves the whole moment-sign hierarchy.
+For each fixed integer H>=1 define
+
+    r_H(n)=sum_(j=0)^(H-1)16^(-j-1)*A(n+j),
+    c_H(n)=16*r_H(n)-r_H(n+1)=A(n)-16^(-H)*A(n+H).
+
+Its density is P_H(t)=P_A(t)*(1-16^(-H)*t^(8H)), between
+(1-16^(-H))*P_A and P_A everywhere. Consequently every signed finite
+difference obeys the same multiplicative bounds, simultaneously in its
+order and index. For every Hankel Gram determinant of size m,
+
+    (1-16^(-H))^m*det[A(n+i+j)]
+       <=det[c_H(n+i+j)]<=det[A(n+i+j)],
+
+and the determinants are positive. The integral of a squared Vandermonde
+against the product of the positive densities proves this directly.
+
+There are exactly eight simple poles, in the same four integer-shift
+classes as A: each original pole alpha has its remote partner alpha-H
+with residue -16^(-H) times the original residue. Their weighted residues
+cancel exactly. An exponentially small remote residue can therefore change
+the non-telescoping invariant while preserving every stated positivity bound.
+The actual A support, nonzero invariants and irrational period are not retained.
+
+The period Pi_H=sum_(j<H)16^(-j)*A(j)=a_H/b_H is positive rational, and
+S_n^(c_H)=16^n*Pi_H-r_H(n+1). Its reduced denominator satisfies
+b_H=16^(H-1)*q_(H-1)/2^(v_2(H)), hence
+log b_H=(6+log16)*H+o(H). For n>=b_H, the positive tail is less than
+1/(3*b_H). The actual floor is floor(16^n*Pi_H)-1 when its homogeneous
+fractional part is zero, and floor(16^n*Pi_H) otherwise. Thus the actual
+orbit avoids (1/(3*b_H),2/(3*b_H)) eventually, with eventually periodic
+integer carries. The interval depends on H. For each fixed H its forward
+denominator has logarithm O_H(log(n+2)), rather than A's exponent 6.
+Taking H depending on n would not be a single rational-forcing countermodel.
+The expanding prefix error is at most
+16^(-H)*A(H)*(16^(n+1)-1)/15, so this family does not transfer avoidance to A.
+
+Frozen packet `/tmp/pi-m4-positive-kernel-20261127/`, report SHA-256
+`8338a67b831af7dba5201653b4b0ab9cc627ac0720f0dc355a4dfc5769078df3`,
+retains the full proof, actual toy carries, checker and separate criticism.
+Parent reconstruction and unchanged-copy replay passed; the receipt differs
+only in UTC, with originals preserved. The first replay harness expected a
+file where the checker prints JSON; corrected capture retained exit 0 on
+the single repeated run. This was a harness issue, not a mathematical failure.
+The generic positivity route is suspended at its exact carry obstruction.
+Combining positivity with the actual denominator rate is a separate question;
+no V or new Lean theorem follows from these comparisons.

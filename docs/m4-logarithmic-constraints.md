@@ -181,6 +181,67 @@ representative alters the decay order. It does not make the represented
 constant's orbit dense. No finite-prefix, approximation or visitation estimate
 has been obtained from the uniqueness statement.
 
+## Rational periods in every fixed finite eighth-grid pole family
+
+The full eight-pole kernel extends exactly to integer shifts. Fix H>=0
+and rational coefficients c_(r,h), and let
+
+    g(x)=sum_(r=1)^8 sum_(h=0)^H c_(r,h)/(8x+r+8h).
+
+Thus g is proper and has only simple negative eighth-grid poles; H and
+all coefficients are fixed before taking n to infinity. Put
+B R=16R-R(.+1), f_r(x)=1/(8x+r). Finite telescoping gives
+
+    f_r(x+h)=16^h*f_r(x)
+                 -B[sum_(j=0)^(h-1)16^(h-1-j)*f_r(x+j)].
+
+Hence g=sum_r d_r*f_r+B R, where d_r=sum_h 16^h*c_(r,h) and R is
+an explicit proper rational function with at most 8H simple grid poles.
+Its period is Pi_g=16*L(d)+16*R(0), where
+L(d)=sum_(n>=0,r=1,...,8) d_r/[16^(n+1)*(8n+r)].
+Baker's already assessed theorem includes 1: choosing a
+Q-basis of the actual logarithms shows that an algebraic value of L(d)
+must be zero. Thus a rational Pi_g forces d=lambda*D, with D=4*C
+and rational lambda. Conversely this condition gives Pi_g=16*R(0).
+
+The zero-initialized prefix is exactly
+
+    S_n^g=lambda*U_n+T_n,
+    T_n=16^(n+1)*R(0)-R(n+1).
+
+The homogeneous term is required by initialization. A fixed rational
+function has log den(T_n)=O_g(log(n+2)). If lambda=a/b is nonzero in
+lowest terms, q_n=den(U_n), q'_n=den(S_n^g), and t_n=den(T_n), then
+
+    q'_n<=b*q_n*t_n,  q_n<=|a|*q'_n*t_n.
+
+The [null denominator theorem](m4-prime-compression.md#the-actual-null-state-has-denominator-exponent-eight)
+therefore proves that every rational-period g in this entire fixed-pole
+family has forward denominator exponent 0 when lambda=0 and 8 otherwise.
+Exponent 6 cannot occur. Positivity is unnecessary for the classification.
+Both alternatives occur with positive completely monotone forcing: a
+rational coboundary has exponent 0; the earlier thirteen-pole model has
+F=(15/8)*D+B(t/2-D/8), so its exponent is 8. Its known avoiding orbit
+and rational period 32/21 remain unchanged.
+
+This answers a scoped countermodel question, not visitation. The actual A
+has exponent 6 and irrational period, consistently with this classification.
+A missing word need not imply a rational period or a rational telescoper;
+that implication is still absent. Repeated poles, other pole grids and
+pole families varying with n are outside the theorem. Further classification
+in the same family is suspended without a new actual-phase consequence.
+
+Frozen packet `/tmp/pi-m4-rational-period-classification-20261127/`,
+report SHA-256
+`1e84ce8b307260f8a6de185b5b963477f05a0b4918e2805dd8f1957f98dd37c9`,
+retains the explicit correction R, uniqueness proof, denominator costs,
+source-input contract and separate criticism. Parent full reconstruction
+and unchanged-copy replay passed, with only the UTC receipt difference
+and originals preserved. The parent retained committed source copies of
+the pre-existing kernel and F model; new draft sections are not inputs
+to their own derivation. Baker and the null denominator asymptotic remain
+paper inputs, not conclusions of the finite rational checker.
+
 ## A solved dimension problem does not transfer to the fixed orbit
 
 Let nu_lambda be the law of `sum_(j>=0) epsilon_j*lambda^j`, with independent

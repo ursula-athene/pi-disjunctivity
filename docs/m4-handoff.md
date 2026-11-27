@@ -718,3 +718,36 @@ and the additional height information supplied by its nonzero real period.
 The log records the 20-minute reassessment bounds and countermodel obligations.
 Further congruence stencils are suspended without a new real consumer. This
 checkpoint does not end the authorized research; M5 remains excluded.
+
+## Positive kernels and exact height distinctions — 2026-11-27 UTC
+
+The consumer checkpoint is local commit
+`c9f4fb7a310196a7f2dda949520883f86cf4a94f`. Its eight paths, empty index,
+protected/unrelated preservation and necessity review were verified. No push
+or PR occurred. The next integration is again paper mathematics only.
+
+The [positive-filter assessment](m4-rational-forcing.md#positive-filters-and-uniformly-close-eight-pole-models)
+retains every integer carry and identifies a sharp norm limit for the tested
+range argument. Its uniformly close rational-period models preserve positive
+moment signs but lose A's denominator growth. The
+[actual null-state theorem](m4-prime-compression.md#the-actual-null-state-has-denominator-exponent-eight)
+gives rate 8, and the
+[shifted-pole classification](m4-logarithmic-constraints.md#rational-periods-in-every-fixed-finite-eighth-grid-pole-family)
+proves rate 0 or 8 for rational periods throughout that fixed finite family.
+This distinguishes A's rate 6 but does not exclude irrational avoiding orbits.
+The [elliptic energy comparison](m4-positive-certificates.md#height-retains-a-local-selection-weight)
+retains an essential field weight; a torsion example rejects deleting it.
+
+The parent reconstructed all three reports/checkers/critic passes and relevant
+source pages; unchanged-copy replays passed with originals preserved. Independent
+integration review completed with no D/I/Q items; requested supplemental source
+pages confirmed the contract. Documentation and whitespace checks passed. The
+existing review record retains full scope and limitations. No Lean export or
+audit is added; V/Hpi/T/M4 remain open and M5 is excluded.
+
+Current investigation tests a precise fractal Fourier connection against the
+exact forced multi-step evolution. It must preserve the selected initialized
+state, rather than use a quantum/full-orbit result without a bridge. The log
+owns the reassessment bound and outcomes. Generic positivity, unweighted height
+averaging and further same-family rational-period classification are suspended.
+This checkpoint does not interrupt the authorized research.
