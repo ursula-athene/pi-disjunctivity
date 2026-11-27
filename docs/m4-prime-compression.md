@@ -917,3 +917,60 @@ The [continuation review](agy-reports/m4-continuation-review.md) retains the
 elementary proof, separate PNT-dependent comparison, immutable sources and
 unchanged synthetic replays. No actual prefix, denominator, pi digit or carry
 census was used. Actual early phase selection, odd-carry infinitude and V remain open.
+
+
+### The full 17-component still does not select an early visit
+
+At the positive anchors N=(17^k-1)/8, k>=1, write q_N=17^k M. The archived
+[full-prime-component sieve](m4-transforms-and-periods.md#matching-the-full-three-component-still-permits-a-zero-prefix)
+and [actual-denominator word sieve](m4-generating-functions.md#every-finite-word-can-retain-the-dyadic-entry-precision)
+combine directly here. For each fixed 0<c<6/log16 and all sufficiently large
+anchors, every prescribed unit numerator residue modulo 17^k admits at least
+two reduced fractions a/q_N in (0,1) whose first floor(cN) ordinary hexadecimal
+digits are zero. The same denominator and whole additive 17-primary component
+are retained, including when the prescribed residue is the actual one. One
+can exclude the actual numerator. The complementary coordinate modulo M changes;
+individual complementary prime components are not controlled.
+
+More strongly, for all sufficiently large anchors, every unit residue modulo
+17^k, every dyadic residue modulo 16^N and every word in {1,...,14}^N admit
+at least two reduced fractions with those residues and that next N-letter
+canonical carry word under the exact future forcing. Combining the numerator
+congruences gives progression step 17^k*16^N. The inverse-word cell has length
+(15/16)16^(-N), so the sieve parameter interval has length
+`(15/16)q_N/(17^k*16^(2N))`, with positive logarithmic rate 6-2log16. The
+additional odd modulus costs only O(log N); the existing sieve errors remain
+subexponential. This uses the archived PNT-dependent denominator asymptotic.
+
+Choosing the actual residues and adding the actual floor preserves the stated
+raw floor, dyadic precision and full 17-component; exact forcing propagates the
+latter congruences. It does not preserve zero initialization or produce one
+coherent infinite avoiding history. This is an independently reviewed
+specialization of archived arguments, not a new mechanism, V counterexample,
+or Lean result. A 17-only early-phase selector is therefore suspended. The
+[review record](agy-reports/m4-continuation-review.md#full-17-coordinate-discriminator--2026-11-27-utc)
+retains the exact quantifiers, synthetic-only checks and evidence limits.
+
+### Lean formalization of the elementary grid theorem
+
+The [rational prefix module](../PiDisjunctivity/BBP/RationalPrefix.lean) starts
+the formalization with the exact cast to the existing real prefix and the
+n+1 recurrence bridge. Its unconditional support lemmas prove coefficient and
+prefix positivity, an explicit common denominator, oddness, coprimality with16,
+and the stronger prime-support bound p<=8n+5. Root-import types, an instantiated
+zero-index bridge and axiom guards are in [Test.lean](../Test.lean). This support
+layer has passed kernel checks and independent changed-file review.
+
+The complete elementary contract remains the theorem above: natural d,r,k,N,
+explicit anchor identity17^k=8N+1, the selected denominator valuation and prime
+order bound, grid cosets for every normalized unit numerator, and complete-period
+interval discrepancy at most17^(-d). For P=ord_q(16)>0, the count is over
+0<=t<P with fract(16^t*a/q) in [u,v), for every real0<=u<v<=1; normalization
+and all casts are real. Merely finding one grid subset does not discharge this
+counting statement. Arbitrarily large anchors and the fixed-word corollary must
+also be proved. No PNT input is needed for this elementary theorem.
+
+The exact selected valuation and general principal-unit/Carmichael components
+are being developed separately in scratch Lean; they are not yet production
+exports or a composed grid proof. The PNT-dependent timing comparison stays
+paper mathematics. Full grid formalization and actual visitation remain open.

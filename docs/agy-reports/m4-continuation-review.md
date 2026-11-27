@@ -4222,3 +4222,91 @@ must cover I4 and these outcome-only appends. No reviewer writes, Git, services,
 builds, checker execution or delegation occurred. This is independent model
 review, not kernel checking, human peer review, a fresh PNT/Korobov audit or a
 novelty certification. No mathematical completion status changes.
+
+
+### Full 17-coordinate discriminator — 2026-11-27 UTC
+
+`finite_log_independent_review` reviewed the archived-sieve specialization from
+23:25:27 to 23:27:35, reassessing at23:27:07 before its23:35:27 deadline. Worker
+packet `/tmp/pi-m4-full17-coordinate-20261127-231627/` has report
+`198841b38702a266c903001680bc867c3a6efd74145e6d877c40408ff6e68df6` and
+five-entry manifest `72527eba59c588e9d95dd4b1cdddf1e663e7b2db89825d1fe33098cbca6f0583`.
+Parent packet `/tmp/pi-m4-full17-parent-20261127-2327/` retains assessment
+`fb50fdb66b357f03f934e7a30f883a9bcfe769b1e38784d483183cb7ef6c0bef`,
+seven-entry manifest `9ac366367a0269928f3cae194869a411e801d3a28b9354b78fdf25c4957f2ea0`,
+and full review `b0d1a37b105835977e17c64ced75ab4a5678a1f4672b2fe3240bc08c47f2dea1`.
+The parent reconstructed the argument and replayed the unchanged synthetic
+checker:84 progression and36 CRT fixtures, exit0, byte-identical receipt.
+
+No D affected the eventual conclusions. I1 is accepted and implemented in the
+concise production summary: require k>=1 for the unique-pole argument. I2 is
+accepted and implemented: the complementary coordinate modulo M changes, while
+individual complementary prime components are not controlled. Q1 retains the
+missing actual complementary-numerator/history estimate. The archive-equivalence
+recommendation is implemented by cross-reference rather than a duplicate proof.
+
+Both full guides were read, with the preceding unchanged hashes. All worker and
+parent identities matched; the historical prime-owner input matches the retained
+proposed snapshot of the grid integration packet. Reviewer inspected caller
+receipts without executing the checker. No reviewer writes, Git, network, builds
+or delegation occurred. PNT remains an archived paper input. Production integration
+is a separate review; no infinite avoidance, novelty, Lean or V claim follows.
+
+### Elementary grid contract and first Lean boundary — 2026-11-27 UTC
+
+`finite_log_independent_review` reviewed the contract and frozen first support
+probe from23:37:02 to23:39:23, reassessing before midpoint and its23:47:02 deadline.
+Packet `/tmp/pi-m4-grid-lean-start-20261127-2330/` retains the root-imported v6
+probe `e6d24579ddf8e67f3aa860549913c0c53e66dbcd1ad4e7d64af73f222f4da551`,
+repaired contract `1d2d2ec4a0d3757161ba20ef39e22f10b85203f6dd1f0d6033b370076d15b124`,
+repair diff `feb3e36ed76cfa08cf00f1c27c0657d3bb0463e2c0a0b08a28bf4900f3cac399`,
+compiler receipt `b83bf928c599f7ab2a0d6d85bdbff8ea1f4f57a4f564326934bccf862b2345e1`,
+and full review `d29df8c7b159bbb1fb9014f3b95e4257e8d2f9ba40afb0ae6ee57683dbe8229c`.
+
+No D was found. I1 is implemented and verified: the final complete-period count
+quantifies every normalized unit numerator, positive period, real casts and the
+half-open interval. I2 is implemented and verified: all anchor indices are natural
+and the exact division identity must be proved. Q2's missing compiler evidence
+is resolved by the retained exact exit0/stdout/hash receipt. Q1 retains all
+unproved selected-valuation, covering, order/CRT, counting and anchor/word steps.
+The first probe proves genuine rational-prefix and denominator lemmas, not a
+wrapper around those missing conclusions.
+
+Both full guides were read with the preceding hashes. The reviewer inspected
+complete source, existing definitions, exact ten printed axiom lists and all
+contract versions. Parent compiler exits included initial cast/lemma-interface
+failures, followed by the clean accepted v6 run; failed elaborations were never
+accepted. No reviewer writes, services, Git, builds or delegation occurred.
+Production exports, guarded audits and exact changed-file review remain separate.
+
+
+### Rational-prefix production integration — 2026-11-27 UTC
+
+`post_profile_mechanism_reset` reviewed the exact nine-path change from
+23:46:33 to 23:50:48 UTC, reassessing at 23:50:26 before its 23:58:33 deadline.
+Packet `/tmp/pi-m4-rational-prefix-integration-20261127-2340/` retains baseline
+`a5aaf53d59c081bf6da27ff7cce062dd3ab45ccd`, diff
+`17ad977bb5638c6f025e68aa8a427acfb97d1b6fb9907b810a4dec196d5bdef8`,
+51-entry manifest `91ca359d0f4d71202c7b270adf9633cbc392fed678134f8a4c5f525cd0912bdd`,
+and full review `ee516e98bac23b24496c5409f9d12b6fbd46220a54ec3b302dda2d93724b2b01`.
+No D was found. I1 is accepted, implemented and verified: supplemental exact
+command bindings, hash `b9e5a644c4ed0c2093305cf7cdf66b34c55c8d2882180578474269c3fc7804d5`,
+resolve caller-receipt provenance without claiming a rerun or replacing frozen
+artifacts. The reviewer found no justified simplification of the product-based
+denominator proof. Earlier full17 and contract I/Q dispositions were verified.
+Q1 retains every unfinished full-grid production and actual-selection obligation.
+
+All nine live/proposed, 51 manifest, 15 protected and 11 unrelated identities
+matched, with both historical mappings. Both complete guides were read with
+the unchanged hashes above. The reviewer inspected every public theorem, root
+export, exact Test type/definition guards, all twelve measured axiom guards,
+and the boundary example that actually instantiates the n=0 recurrence bridge.
+Caller full build, Test, 93-document, 38-process-test and working/staged whitespace
+checks passed; no pins or old problem definitions changed. No reviewer writes,
+Git, network, build, probe, checker execution or delegation occurred.
+
+Only review-outcome/status records change after this frozen review. Final affected
+documentation/whitespace and exact staged identities are checked before commit.
+Concurrent arithmetic and terminal-valuation proofs remain separate scratch
+work; this review does not certify their production integration. The elementary
+grid theorem, V and M4 remain incomplete.

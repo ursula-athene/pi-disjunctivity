@@ -1758,3 +1758,26 @@ Further pure inverse ordering is suspended. Fresh AGM/Landen discovery asks
 whether exact algebraic initialization supplies a useful arithmetic estimate
 after precision and conjugate costs. No unfinished claim is adopted; V/M4
 and the checked frontier remain open and unchanged. Research continues.
+
+
+### Elementary grid formalization started — 2026-11-27 UTC
+
+The user asked when a sound finding would receive Lean verification. The reviewed
+[actual-denominator grid theorem](m4-prime-compression.md#explicit-actual-denominators-with-fine-complete-period-grids)
+has entered formalization. [RationalPrefix.lean](../PiDisjunctivity/BBP/RationalPrefix.lean)
+connects its exact rational prefix to the existing real definition and recurrence,
+and proves positivity, odd denominator/coprimality and bounded prime support.
+Root build, type/axiom audits and independent changed-file review passed. The
+[contract](proof-plan.md#elementary-actual-denominator-grid-formalization--2026-11-27)
+requires selected valuation, Euler covering, global grid assembly, complete-period
+counting and arbitrarily large anchors before calling the paper theorem formalized.
+Separate scratch workers have compiled valuation and general arithmetic components;
+parent replay, review and production integration remain necessary.
+
+The [full17-coordinate discriminator](m4-prime-compression.md#the-full-17-component-still-does-not-select-an-early-visit)
+is an archived-sieve specialization: retaining that whole component still permits
+other numerators with long finite avoiding words. It supplies no infinite model
+or actual digit information. Thus the eventual research consumer still needs the
+actual complementary numerator or initialized history. V/M4 remain open; continue
+past the intermediate formalization checkpoint. The research log owns publication
+receipts and exact bounded-cycle chronology.

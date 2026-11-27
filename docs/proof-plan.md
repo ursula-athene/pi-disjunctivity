@@ -1130,6 +1130,29 @@ retain an incomplete checkpoint with the remaining unproved obligation and
 next inquiry; that record does not complete M4 or authorize stopping early.
 No completion date or guaranteed method follows from the plan.
 
+### Elementary actual-denominator grid formalization — 2026-11-27
+
+The user requested that the sound intermediate finding enter Lean verification.
+The [reviewed elementary grid theorem](m4-prime-compression.md#explicit-actual-denominators-with-fine-complete-period-grids)
+is now being formalized before returning to the unresolved early-visit transfer.
+The [precise formalization boundary](m4-prime-compression.md#lean-formalization-of-the-elementary-grid-theorem)
+retains the actual inclusive prefix, natural anchor arithmetic, every unit
+numerator, complete-period counts and fixed-word quantifier order.
+
+Proceed through reviewed internal layers: rational/real prefix identity and
+odd bounded-prime denominator; exact selected 17-valuation and Euler covering;
+Carmichael/principal-unit/CRT grid; complete-period coset counting and arbitrarily
+large anchors. The first layer has kernel-checked declarations in
+[RationalPrefix.lean](../PiDisjunctivity/BBP/RationalPrefix.lean) and root audits.
+No intermediate lemma or grid-subset statement substitutes for the complete
+paper theorem. The independent contract review retains every unfinished layer.
+The separate PNT-dependent timing comparison is outside this elementary proof.
+
+These are supporting results within M4. Even the completed frozen-period theorem
+would still leave actual early selection and the exact unconditional V statement
+open. Continue the original milestone after this internal formalization checkpoint;
+do not mark V/M4 complete or begin M5.
+
 ## 6. Assemble the proof of the original conjecture
 
 Once Step 5 succeeds, use Step 4 to obtain visits of the actual pi orbit.

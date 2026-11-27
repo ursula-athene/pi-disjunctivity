@@ -16,6 +16,7 @@ public import PiDisjunctivity.OrbitCriteria
 public import PiDisjunctivity.BBP.Series
 public import PiDisjunctivity.BBP.Orbit
 public import PiDisjunctivity.BBP.Tail
+public import PiDisjunctivity.BBP.RationalPrefix
 import PiDisjunctivity.Examples
 
 /-! Hexadecimal disjunctivity: foundations, orbit criteria, BBP analytic lemmas, and examples. -/

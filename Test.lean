@@ -564,3 +564,140 @@ info: 'PiDisjunctivity.tendsto_bbpTail' depends on axioms:
 -/
 #guard_msgs (whitespace := lax) in
 #print axioms PiDisjunctivity.tendsto_bbpTail
+
+
+-- Rational arithmetic retains the existing coefficient, inclusive prefix and recurrence offset.
+example (j : ℕ) : PiDisjunctivity.bbpCoeffRat j =
+    4 / (8 * (j : ℚ) + 1) - 2 / (8 * (j : ℚ) + 4)
+      - 1 / (8 * (j : ℚ) + 5) - 1 / (8 * (j : ℚ) + 6) := rfl
+
+example (n : ℕ) : PiDisjunctivity.bbpPartialSumRat n =
+    ∑ j ∈ Finset.range (n + 1), (16 : ℚ) ^ (n - j) * PiDisjunctivity.bbpCoeffRat j := rfl
+
+example (j : ℕ) : (PiDisjunctivity.bbpCoeffRat j : ℝ) = PiDisjunctivity.bbpCoeff j :=
+  PiDisjunctivity.cast_bbpCoeffRat j
+
+example (n : ℕ) : (PiDisjunctivity.bbpPartialSumRat n : ℝ) =
+    PiDisjunctivity.bbpPartialSum n := PiDisjunctivity.cast_bbpPartialSumRat n
+
+example (n : ℕ) : PiDisjunctivity.bbpRecurrence (n + 1) =
+    Int.fract (PiDisjunctivity.bbpPartialSumRat n : ℝ) :=
+  PiDisjunctivity.bbpRecurrence_succ_eq_fract_bbpPartialSumRat n
+
+-- This boundary check consumes the new bridge at the first recurrence step.
+example : PiDisjunctivity.bbpRecurrence 1 =
+    Int.fract (PiDisjunctivity.bbpPartialSumRat 0 : ℝ) :=
+  PiDisjunctivity.bbpRecurrence_succ_eq_fract_bbpPartialSumRat 0
+
+example (j : ℕ) : PiDisjunctivity.bbpCoeffRat j =
+    (120 * (j : ℚ) ^ 2 + 151 * j + 47) /
+      ((2 * j + 1) * (4 * j + 3) * (8 * j + 1) * (8 * j + 5)) :=
+  PiDisjunctivity.bbpCoeffRat_eq_positive_fraction j
+
+example (j : ℕ) : 0 < PiDisjunctivity.bbpCoeffRat j := PiDisjunctivity.bbpCoeffRat_pos j
+
+example (n : ℕ) : 0 < PiDisjunctivity.bbpPartialSumRat n :=
+  PiDisjunctivity.bbpPartialSumRat_pos n
+
+example (j : ℕ) : (PiDisjunctivity.bbpCoeffRat j).den ∣
+    PiDisjunctivity.bbpCoeffCommonDenominator j := PiDisjunctivity.bbpCoeffRat_den_dvd j
+
+example (j : ℕ) : Odd (PiDisjunctivity.bbpCoeffCommonDenominator j) :=
+  PiDisjunctivity.bbpCoeffCommonDenominator_odd j
+
+example (n : ℕ) : (PiDisjunctivity.bbpPartialSumRat n).den ∣
+    ∏ j ∈ Finset.range (n + 1), PiDisjunctivity.bbpCoeffCommonDenominator j :=
+  PiDisjunctivity.bbpPartialSumRat_den_dvd n
+
+example (n : ℕ) : Odd (PiDisjunctivity.bbpPartialSumRat n).den :=
+  PiDisjunctivity.bbpPartialSumRat_den_odd n
+
+example (n : ℕ) : (PiDisjunctivity.bbpPartialSumRat n).den.Coprime 16 :=
+  PiDisjunctivity.bbpPartialSumRat_den_coprime n
+
+example (n p : ℕ) (hp : p.Prime) (hpd : p ∣ (PiDisjunctivity.bbpPartialSumRat n).den) :
+    p ≤ 8 * n + 5 := PiDisjunctivity.bbpPartialSumRat_den_prime_le n p hp hpd
+
+/--
+info: 'PiDisjunctivity.cast_bbpCoeffRat' depends on axioms:
+[propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms PiDisjunctivity.cast_bbpCoeffRat
+
+/--
+info: 'PiDisjunctivity.cast_bbpPartialSumRat' depends on axioms:
+[propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms PiDisjunctivity.cast_bbpPartialSumRat
+
+/--
+info: 'PiDisjunctivity.bbpRecurrence_succ_eq_fract_bbpPartialSumRat' depends on axioms:
+[propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms PiDisjunctivity.bbpRecurrence_succ_eq_fract_bbpPartialSumRat
+
+/--
+info: 'PiDisjunctivity.bbpCoeffRat_eq_positive_fraction' depends on axioms:
+[propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms PiDisjunctivity.bbpCoeffRat_eq_positive_fraction
+
+/--
+info: 'PiDisjunctivity.bbpCoeffRat_pos' depends on axioms:
+[propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms PiDisjunctivity.bbpCoeffRat_pos
+
+/--
+info: 'PiDisjunctivity.bbpPartialSumRat_pos' depends on axioms:
+[propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms PiDisjunctivity.bbpPartialSumRat_pos
+
+/--
+info: 'PiDisjunctivity.bbpCoeffRat_den_dvd' depends on axioms:
+[propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms PiDisjunctivity.bbpCoeffRat_den_dvd
+
+/--
+info: 'PiDisjunctivity.bbpCoeffCommonDenominator_odd' depends on axioms:
+[propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms PiDisjunctivity.bbpCoeffCommonDenominator_odd
+
+/--
+info: 'PiDisjunctivity.bbpPartialSumRat_den_dvd' depends on axioms:
+[propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms PiDisjunctivity.bbpPartialSumRat_den_dvd
+
+/--
+info: 'PiDisjunctivity.bbpPartialSumRat_den_odd' depends on axioms:
+[propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms PiDisjunctivity.bbpPartialSumRat_den_odd
+
+/--
+info: 'PiDisjunctivity.bbpPartialSumRat_den_coprime' depends on axioms:
+[propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms PiDisjunctivity.bbpPartialSumRat_den_coprime
+
+/--
+info: 'PiDisjunctivity.bbpPartialSumRat_den_prime_le' depends on axioms:
+[propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms PiDisjunctivity.bbpPartialSumRat_den_prime_le

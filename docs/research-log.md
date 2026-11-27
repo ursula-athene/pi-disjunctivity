@@ -5394,3 +5394,63 @@ retains exact scope, hashes and all dispositions. Final affected documentation
 and whitespace validation follow before publication. At the 23:23 UTC event,
 remote verification 81139b still matched dbba18d2cd3649bfb00392d26ac595b793fdc636;
 no reviewed commit was waiting. V and M4 remain open.
+
+Publication receipt, 2026-11-27 23:29:33 UTC: ordinary push 8770c2 and remote
+verification a17f67 confirm `a5aaf53d59c081bf6da27ff7cce062dd3ab45ccd` on
+`origin/feature/m4-universal-visitation`. Final documentation (93), working and
+staged whitespace, exact staged/committed four-path blobs, parent, empty index,
+owned clean files and all preservation identities passed. Post-commit necessity
+inspection required no repair. No PR was opened. The next active cadence check
+is due by 23:44:33 UTC or at an earlier result/direction event.
+
+The user asked when sound findings would be formalized. The elementary grid
+result now enters Lean formalization; its complete paper statement remains
+unverified by the kernel until all parts compose. The first 20-minute parent
+probe starts from the library root and tests an exact rational-prefix cast
+bridge; a separate 12-minute local-library inquiry maps Euler/LTE/CRT and orbit
+interfaces. No claim is made that these preliminary interfaces prove the grid
+theorem or V. The separate timing estimates retain their paper PNT dependencies.
+
+
+### From the reviewed grid argument to Lean — 2026-11-27 UTC
+
+The parent began a20-minute interface cycle at23:30:23, bounded to23:50:23.
+The exact rational coefficient/prefix cast and recurrence offset compiled first;
+positivity, common denominator, oddness, coprimality with16 and prime bound8n+5
+then compiled through the root. Initial cast and denominator-interface errors
+were repaired; all accepted outputs list only the permitted axioms. Independent
+contract/boundary review completed23:39:23 with no defect and two verified
+quantifier/index clarifications. Production integration began23:39 UTC with a
+25-minute reassessment bound, preserving unrelated files. Root build and expanded
+Test audit passed; the exact changed-file review follows.
+
+The full17-coordinate discriminator completed23:21:46 within its10-minute bound,
+was independently reviewed23:25:27--23:27:35, and is summarized by reference to
+archived sieve proofs. Both precision recommendations are implemented; no new
+mechanism or infinite avoiding history is claimed. The parent replay passed
+120 synthetic fixtures without evaluating an actual prefix or denominator.
+
+A separate discovery cycle,23:24:40--23:35:19 within15minutes, retained an exact
+initialized logarithmic-derivative identity but found no phase estimate from
+integer winding. Its scratch report remains exploratory and unadopted; it is
+not a reason for a Lean detour. Effort moved to the elementary grid proof.
+General principal-unit/Carmichael components and the selected actual17-valuation
+have since compiled in separate scratch packets; parent replays and independent
+review precede their production adoption. Complete-period counting remains an
+explicit unfinished obligation. V/M4 are unchanged and open.
+
+At23:42 UTC, remote verification91c009 still matched
+`a5aaf53d59c081bf6da27ff7cce062dd3ab45ccd`. New Lean work was awaiting integration
+review, with no ready commit to push. The next cadence check is due by23:57 UTC
+or at an earlier result/direction event; completed reviewed work will be pushed
+promptly rather than waiting for the whole grid theorem.
+
+
+The first rational-prefix production review completed at 23:50:48 UTC with no
+defect. Its one evidence improvement, exact command bindings for existing
+receipts, was supplied and verified. All previous paper/contract precision
+changes were confirmed. The [integration record](agy-reports/m4-continuation-review.md#rational-prefix-production-integration--2026-11-27-utc)
+retains the full cycle. Final outcome-only documentation and whitespace checks
+precede publication. The initial 20-minute interface endpoint completed at
+23:48:16; a new 20-minute composition cycle now joins the reviewed selected
+exponent, principal units and CRT. This is not a new stopping boundary for M4.
