@@ -7,7 +7,7 @@ The [continued research checkpoint](#continued-research-checkpoint--2026-11-26)
 records subsequent work during the user's absence; that checkpoint does not
 terminate the ongoing M4 effort.
 The latest dated continuation is the
-[Carry density and source bridges](#carry-density-and-source-bridges--2026-11-27-utc); read the
+[Sparse block identities and global constraints](#sparse-block-identities-and-global-constraints--2026-11-27-utc); read the
 research log and actual checkout for subsequent results and current state.
 
 ## Baseline and authorized endpoint
@@ -1000,3 +1000,26 @@ their particular rational-coefficient recurrence. It must produce a genuinely
 different implication or an informative applicability check, rather than
 rename Hypothesis A. V/Hpi/T/M4 remain open; B4/P3 retain visits and M5 remains
 excluded. Research continues under the existing authorization.
+
+## Sparse block identities and global constraints — 2026-11-27 UTC
+
+The reviewed carry/source checkpoint is local commit
+`0c666a0c335d84c25895c7565ea42dd6e4de7be4`; nothing was pushed. The
+rational-prefix inquiry found no new restriction on the actual carry defect.
+A determinant variation duplicated the existing positive-certificate analysis
+and was dropped. Neither is new progress toward V.
+
+The [research log](research-log.md) records a targeted source screen and a
+reciprocal-Fermat comparison. That source constructs individual word locations
+from controlled integer residues at sparse divisibility times. A coefficientwise
+BBP transplant into one fixed coefficient lattice is impossible; a different
+identity at the actual value is not excluded. No such identity was obtained.
+Independent integration review found no mathematical defects, with one
+navigation correction implemented and the missing actual-pi identity retained
+as open. There are no new Lean declarations or discharged visitation hypotheses.
+
+A bounded inquiry now tests general combinations of the all-prime Newton
+constraints, beyond the failed prefix/binomial families. It must address
+actual period covering or a period-aligned dual; volume surplus alone does
+not do so. The log owns the effort bound and evidence. V/Hpi/T/M4 remain open,
+B4/P3 retain visits, M5 remains excluded, and authorized research continues.

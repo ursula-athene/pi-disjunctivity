@@ -3318,3 +3318,60 @@ input. The reviewer reconstructed the mathematical claims, visually checked
 the Shallit pages and verified all scope/evidence hashes. The continuation
 review record owns the full response and limits. The rational-prefix inquiry
 continues separately; no V theorem or M4 acceptance is claimed.
+
+**Rational-prefix outcome and source reset — 2026-11-27 UTC:** the reviewed
+carry/source checkpoint is local commit
+`0c666a0c335d84c25895c7565ea42dd6e4de7be4`; nothing was pushed. The rational-prefix
+worker returned no distinct positive consumer. Its complete note at
+`/tmp/pi-m4-rational-prefix-recovery-20261127/note.md` reconstructs the
+order-two equation and the remaining integer carry defect. Neither rational
+prefixes nor minimal recurrence order constrains that defect using word
+omission. No checker or Lean result was produced. The parent read the note.
+
+The parent determinant reassessment also returned to an existing obstruction:
+`m4-positive-certificates.md` already treats both short-block denominator cost
+and long-block collision valuations. No new determinant theorem is claimed.
+That variation is suspended rather than counted as a new approach.
+
+A ten-minute, at-most-three-relevant-source screen found no applicable V
+theorem. Nieuwveld--Ouaknine's
+[prodisjunctivity theorem](https://drops.dagstuhl.de/storage/00lipics/lipics-vol345-mfcs2025/html/LIPIcs.MFCS.2025.80/LIPIcs.MFCS.2025.80.html),
+Definition 3/Theorem 4, concerns sorted positive values of simple integer
+linear recurrences with two dominant roots, not BBP carries. An unaudited
+normality research archive was screened only for ideas; none of its claims
+was adopted. A search-result arXiv identifier associated with Stoneham work
+actually resolved to an unrelated consecutive-gap paper and was discarded.
+This is not an exhaustive literature or nonexistence claim.
+
+The useful source comparison was
+[*Binary Words in the Reciprocal Fermat Constant*](https://github.com/CaptainSude/reciprocal-Fermat-constant-Nonnormal/blob/334679abee4f13d0b9e3761e221fc0df60b3fd62/fermat-reciprocal-disjunctivity.pdf),
+Theorem 2, pp.2--3. Its integer Lambert coefficients give explicit block
+residues at sparse divisibility times; a polynomial residue mesh supplies
+visits without requiring normality. The parent read all four pages' extracted
+text and visually inspected pp.1--3. A separate 15-minute worker bridge test
+finished without an actual-BBP identity. Its immutable report is
+`/tmp/pi-m4-fermat-bridge-20261127/report-v1.md`, SHA-256
+`e1c05ea211b85d6b29ef8f50345157b39d12c963da6b14b283d50c467c3909aa`.
+The parent read it completely. No external Lean archive was inspected.
+
+The coefficientwise transplant has a simple obstruction: a Lambert series
+whose coefficients lie in one fixed lattice D^(-1)Z has every Taylor
+coefficient in that lattice. Actual A(n)>0 tends to zero, so the BBP generating
+function cannot be that series plus a polynomial. This does not exclude a
+different identity at 1/16 or a null-series transformation. Literal prefix
+returns repeat the existing shadowing-time obstruction and leave possible
+modular cancellation uncontrolled. The missing bridge is still an actual-pi
+identity controlling integer block residues with a vanishing remainder.
+Independent integration review found no mathematical defects. Its one
+nonblocking navigation correction was implemented; Q1 retains the missing
+actual-pi identity. The continuation review record owns scope and limits.
+
+**Changed global-lattice inquiry, 20 minutes before reassessment:** examine
+general combinations of the actual all-prime Newton rows, beyond the already
+failed prefix and binomial-stencil families. The endpoint is a precise
+period-aligned dual or covering estimate with its actual hypotheses checked,
+or a distinct obstruction. Positive volume is not covering; no generic
+lattice theorem will be applied without its missing bounds. The worker owns
+scratch `/tmp/pi-m4-global-dual-recovery-20261127/`; production remains with
+the parent. V/Hpi/T/M4 remain open, B4/P3 retain visits, M5 is excluded, and
+research continues.

@@ -1572,3 +1572,38 @@ extractor, mutation or service call. Execution remains caller evidence.
 Both full guide readings were retained and their unchanged hashes verified.
 Subsequent changes record this outcome only. Research continues; V/Hpi/T/M4
 remain open, B4/P3 retain visitation premises, and M5 is excluded.
+
+## Sparse block source comparison — 2026-11-27 UTC
+
+Baseline is local commit `0c666a0c335d84c25895c7565ea42dd6e4de7be4`.
+Scope is the new research-log and handoff entries plus this record. No Lean,
+dependency, audit, tool or unrelated workspace change is included. Independent
+Codex review by `/root/generating_review` with both guides is complete.
+The supplied source bridge report
+is `/tmp/pi-m4-fermat-bridge-20261127/report-v1.md`; the research log records
+its hash and the inspected source. Parent reconstruction covers the integer
+Lambert coefficients, polynomial residue mesh and fixed-lattice obstruction.
+The source's external Lean archive and its separate frequency/nonnormality
+claims are not verification evidence for this application.
+
+The rational-prefix pass found no new consumer, and the determinant variation
+duplicates an existing assessment. No new result is claimed for either.
+Documentation and whitespace checks passed, and the 17 protected plus 11
+unrelated file hashes match the preceding preservation receipt. A separate
+global-dual investigation is ongoing and excluded from this review scope.
+No actual pi digits or phases were searched. V/Hpi/T/M4 remain open.
+
+Frozen scope is `/tmp/pi-m4-sparse-source-review-20261127/`, diff SHA-256
+`2a549dbccac131b5337154099c30f2047c5ce1d95b288f25ff821eaf52f48458`.
+The complete response is `review-full.txt`, SHA-256
+`8dccc623a1fceb2f379bc6d245d4e94e0221a5eb07b4ee343a80125d0387b09e`.
+**D: none. I1: implemented** by updating the handoff's latest-continuation
+link. **Q1: retained open**, the missing actual-pi integer-residue identity;
+it blocks a visitation inference, not this scoped negative application.
+The reviewer reconstructed the argument, read all four source-page texts,
+visually inspected pp.1--3 and verified all three production and eleven
+evidence hashes. Both retained full guides have unchanged verified hashes.
+Checks and preservation remain caller evidence; the reviewer performed no
+checker, build, extractor, probe, mutation or service call. Subsequent edits
+implement I1 and record this outcome only. The global-dual inquiry continues
+separately, with no result integrated here.
