@@ -475,3 +475,80 @@ methods. No actual phase, raw prefix, digit or carry census was used; finite
 checks cover only pole, order, coefficient and operator bookkeeping.
 Review evidence is in the [continuation record](agy-reports/m4-continuation-review.md).
 V, actual odd-carry infinitude and M4 remain open.
+
+## Two smooth-modulus source contracts do not supply the phase estimate
+
+The targeted source check retains the actual finite-minorant consumer above.
+For scale comparison let t be the prefix scale and L be a proportional window
+length. A natural common modulus is lcm(1,...,8(t+L)+6), which contains every
+coefficient denominator through the window. The archived actual-denominator and
+lcm estimates give log q and log rad(q) of order t and largest prime P of order t.
+This scale comparison does not identify the actual phase as a source character.
+
+[Chang, *Short character sums for composite moduli*, v2](https://arxiv.org/pdf/1201.0299v2),
+Theorem 5, p.2, requires a primitive nonprincipal multiplicative character,
+an integer interval of length L, and
+
+```text
+q > L > P^1000,
+log L > (log q)^(1-c)
+          + C*log(2*log q/log rad(q))*log rad(q)/log log q.
+```
+
+Here c,C are fixed positive source constants; nonprincipal is the convention
+on p.6. The bound is of size L*exp(-sqrt(log L)). The mixed Theorem 8, p.38,
+keeps those premises and permits a real polynomial twist of degree at most
+(log L)^c. No primitive multiplicative-character representation of the actual
+BBP phase is supplied. A general dependent complementary phase is not that
+polynomial twist. Independently, L~t and P~t fail the first length condition;
+the radical term in the second has order t/log t, exceeding log L. These are
+failed hypotheses of this transfer, not lower bounds for the true sum.
+
+[Wu--Xi, *Arithmetic exponent pairs for algebraic trace functions and applications*, v5](https://arxiv.org/pdf/1603.07060v5),
+pp.10--11 and 19--23, uses positive squarefree q, admissible local trace
+functions of uniformly bounded conductor, and the specified amiability of the
+function and its Fourier transform. Its deformation is a function W on
+Z/deltaZ with gcd(delta,q)=1, with its cost retained. The scalar estimate has form
+
+```text
+|sum_I K(n)W(n)| <<_(epsilon,c) L^epsilon*||W||_infinity
+                                  *(q/L)^kappa*L^lambda*delta^nu.
+```
+
+The natural lcm is not squarefree. A suitable squarefree/coprime factor
+separation and control of the remaining phase are additional requirements;
+taking the radical alone need not leave a coprime quotient. The composite
+denominator's coarse smoothness fits the premise that each prime
+factor is at most q^eta for each fixed eta>0; it supplies none of the remaining
+hypotheses. In particular it does not make the actual phase a controlled trace
+function. The [strongest existing actual representation](m4-transform-phases.md#a-finite-logarithm-identity-removes-c0)
+does remove the initialized exponential term: C(0)=0 for split primes and
+U_n=C(n+1) on the specified pole-free prefix. Its natural rational and polynomial
+sheaf conductors nevertheless grow linearly with the auxiliary prime. The
+[restricted-prefix bounds](m4-transform-phases.md#restricted-prefix-interpolation-and-modular-taylor-error)
+also exclude bounded-degree exact rational interpolation on long prefixes.
+Neither statement rules out every possible restricted trace representation.
+The single auxiliary prime is a different encoding and fails the coarse
+smoothness premise of Theorem 4.3, although the general trace-function framework
+allows prime q. Reduction after an actual p-pole is not licensed.
+
+Even granting a hypothetical class match, each fixed inspected scalar exponent
+pair with kappa>0 has normalized cost q^kappa*L^(lambda-kappa-1+epsilon),
+which grows when L is of order log q. The trivial pair gives no saving.
+The displayed A-process shifts must fit the interval; its fixed-pair balancing
+choice has an exponentially large factor in this regime. Growing width needs
+new uniform control of constants and conductor; Remark 9 and Theorem 8.1 retain
+weakening savings and explicit factor costs. This rejects these proposed uses,
+not all exponential-sum methods or all possible exponent pairs.
+
+The exact activated product still has its dependent complement, with all
+simultaneous activations summed. Modulus one alone does not make that complement
+a permissible W: a suitable coprime period and its cost remain to be supplied.
+A source on multiplicative-order time groups would likewise need an exact
+coupled phase identity and a useful bound at the required length. That is an
+unresolved source question, not a positive route established by this check.
+
+Primary statements and selected theorem pages were inspected; no full source
+proof, hidden-constant, external Lean or axiom audit is claimed. No theorem from
+either source is adopted. The [review record](agy-reports/m4-continuation-review.md)
+retains the scope, immutable sources and parent assessment. V/M4 remain open.

@@ -5286,3 +5286,54 @@ whitespace checks passed before review; outcome-only appends receive final
 documentation and whitespace checks before the checkpoint is committed and pushed.
 The [complete cycle](agy-reports/m4-continuation-review.md#short-difference-integration-review--2026-11-27-utc)
 does not complete M4. A separate bounded source-contract inquiry is continuing.
+
+Publication receipt, 2026-11-27 22:46:05 UTC: ordinary push completed and
+`git ls-remote` verified `29eea2b5e71c3d52569c2afa174e2b7338641803` on
+`origin/feature/m4-universal-visitation` (push 24a326, verification ef3442).
+The four-path checkpoint passed final documentation and working/staged whitespace
+checks. Post-commit parent/scope/blobs, empty index, owned clean files and all
+preservation hashes matched; necessity inspection found no required repair.
+No PR was opened. The next active cadence check is due by 23:01:05 UTC, or at
+an earlier result/direction event; this timestamp is a receipt, not live state.
+
+Continuation note, 22:48 UTC: the Chang/Wu--Xi source-contract inquiry has a
+12-minute bound from its first clock at 22:40:45, with midpoint reassessment.
+It tests exact phase, conductor and length hypotheses against both the actual
+activated product and the archived finite-field zero-constant representation.
+A fresh-context discovery pass was also launched with a 20-minute bound from
+its own first clock. Its question is which unused actual BBP structure could
+supply a signed phase or interval-exclusion estimate, rather than another size
+bound. It must compare the archive, use early prior-work checks for new routes,
+and identify the first unproved bridge. Both outputs remain pending assessment;
+no new result is adopted by this note. At the direction event, remote verification
+c3ce74 again matched `29eea2b5e71c3d52569c2afa174e2b7338641803` at 22:48:10 UTC;
+no new reviewed commit was waiting.
+
+### Chang and Wu--Xi source contracts — 2026-11-27 UTC
+
+The source inquiry ran 22:40:45--22:50:04 UTC within its 12-minute bound, with
+midpoint reassessment. Primary theorem pages and framework definitions give
+precise failed direct transfers: Chang requires primitive multiplicative
+characters, polynomial twists and much longer intervals; Wu--Xi requires
+controlled local conductors and retains an ineffective fixed-pair cost at the
+proposed logarithmic length. The strongest archived actual conjugacy, including
+C(0)=0, was retained. A proposed rational-interpolation test was matched to the
+existing stronger actual-prefix argument and excluded as new work.
+
+The parent read the full report, inspected Chang pages 2/38 and Wu--Xi pages
+19/23/32 visually, compared the remaining cited primary text, and verified all
+50 artifact and 16 input identities. The source-contract mapping and actual
+consumer are now recorded in the [owner](m4-crt-phase.md#two-smooth-modulus-source-contracts-do-not-supply-the-phase-estimate).
+No source theorem, new Lean result or visitation estimate is adopted. The
+parent's 10-minute assessment began at 22:50:32; exact-scope source/integration
+review follows. The fresh discovery pass remains separate and unadopted.
+
+Parent assessment froze at 22:53:29, before its 23:00:32 endpoint. Independent
+source/integration review completed at 22:58:42 with no blocking defect. One
+precision improvement was implemented and verified: distinguish positive
+squarefree moduli in the general framework from Theorem 4.3's smooth family,
+and state the natural lcm's additional coprime-factor/remainder obligations.
+The actual source-class and signed-estimate bridge remains open. Full evidence
+and all dispositions are in the [continuation review](agy-reports/m4-continuation-review.md#chang-and-wu--xi-contract-assessment--2026-11-27-utc).
+Post-repair documentation and whitespace checks passed; final outcome records
+are checked before publishing this checkpoint. No Lean or dependency changed.

@@ -4093,3 +4093,58 @@ and whitespace success, plus the structural replay; no checks were rerun.
 Remote verification remains caller evidence. No reviewer writes, builds, network,
 Git operations or delegation occurred. Only review-outcome records are appended
 after this frozen review. No mathematical acceptance status changes.
+
+### Chang and Wu--Xi contract assessment — 2026-11-27 UTC
+
+The source researcher `fresh_visitation_consumer_critique` completed the bounded
+primary-contract inquiry at 22:50:04 UTC. This was source research, not an
+independent review. Packet `/tmp/pi-m4-chang-phase-contract-20261127T224045Z/`
+retains full PDFs, text, rendered theorem pages, receipts, 16 input snapshots,
+report SHA-256 `c48972be94c5f2fd2077b8c5124e32ff91a6a43889d6e1640aba24ff9ad3b609`,
+and 50-entry manifest `d3c60cf6488ef9d5afecd548e52edc1283dcf849fa03f1577fda7967d1be894a`.
+Its completion records the 22:40:45 start, midpoint reassessment and 22:52:45
+deadline. No general search or originality determination is claimed.
+
+The parent verified all artifacts and snapshots and read the complete report.
+Chang pages 2/38 and Wu--Xi pages 19/23/32 were inspected visually, with the
+remaining cited framework and convention passages read in primary extracted text.
+Parent assessment is in `/tmp/pi-m4-smooth-source-integration-20261127-2254/`,
+SHA-256 `f76f62375f90b29e67ceb688532505390b9c1e02ea3e250015c8d32b6f271454`.
+The natural common-window modulus clarifies the scale comparison without
+asserting a character representation. The parent found no source-mapping defect;
+the independent exact-scope review remains separate.
+
+The actual split-prime zero constant, growing natural conductors, restricted
+interpolation limits and simultaneous activation sum are retained. The first
+unsupported bridge is still a source-class representation and useful signed
+estimate for the actual coupled phase. Full source proofs, hidden constants,
+growing-width control, external Lean builds and axiom audits remain unexamined.
+No actual pi, prefix, digit or carry census occurred. The initial Swift cache
+failure was repaired with an existing scratch cache; no installation, dependency,
+permission or production-code change occurred. This is neither V nor M4 acceptance.
+
+The combined exact four-path source/integration review by
+`post_profile_mechanism_reset` ran 22:53:58--22:58:42 UTC, reassessing at 22:57:31
+before its midpoint and 23:03:58 deadline. The integration packet retains diff
+`67edd710b23fb6a1d102702faf92ba212ee3e5dfc1166c1efda62598c654b9c2`,
+74-entry manifest `2c0091e42f28c5e5e92f223aab64d0a466f56c9c264c669325353b24f0b754b2`,
+and full returned review `44888195e99d5bcbb7426b3e21bfbfe2dd1a2fef76b768127d61f6c305bd14c1`.
+No blocking D was found. I1 is implemented and verified: Wu--Xi's general
+framework permits positive squarefree q, including primes; the smoothness
+exclusion for a single prime belongs specifically to Theorem 4.3. The natural
+lcm also needs a suitable squarefree/coprime separation with its remaining phase
+controlled. Repair diff `8421720f0cbca5ca54a3038e7e3d8102c3aba72491d7f8b6fe102434b15a226c`
+and repaired-owner hash `b9f510a8f72fe26edbfea60bcff207d02d49d39ec64eda519d516781c6038aa2`
+preserve the original frozen artifacts. Q1 retains the actual class/period,
+conductor, width and quantitative phase bridges; none is waived.
+
+Both full guides and the complete reports/diff were read. All 74 integration,
+50 worker and 28 preservation identities matched; the repaired live owner and
+three unchanged proposed files were verified. The reviewer inspected Chang
+pages 2/38 and Wu--Xi pages 11/19/20/23/28/32 visually, with remaining cited
+passages read in supplied text. No reviewer writes, Git, network, builds,
+checkers, rendering or delegation occurred. Caller checks after I1 passed
+93-document and whitespace validation (b53858/b9f902); the earlier 38-process-test
+result remains an unchanged-code receipt. Subsequent edits record this outcome
+only. This is independent model review, not human peer review or a full source
+proof/dependency audit. The exact phase estimate and M4 remain open.
