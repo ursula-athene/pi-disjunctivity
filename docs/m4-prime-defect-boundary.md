@@ -390,3 +390,80 @@ The latter's append-only `reassessment-v1.md` gives the lattice argument;
 unchanged-copy replays exited 0, matching receipts apart from UTC timestamps
 and preserving originals. The checks use modular A data, not an actual
 fractional-state search. Integration review is recorded separately.
+
+## Rational entries change raw precision but may preserve every orbit value
+
+The [rational-entry bridge](m4-generating-functions.md#rational-entries-preserve-universal-late-visitation)
+permits a fixed rational entry under the exact future forcing. At entry time
+N_c write r_c=16^(-N_c)*(e_c-S_(N_c)^c), so the future raw prefix is
+S_n^(c,r)=S_n^c+16^n*r_c. For A,H assign one fixed shift r,s respectively;
+D/R inherit r+s,r-s. Substitution into the initialized defect gives
+
+    G_p^(c,r)(k)-G_p^c(k)=16^(pk-1)*delta_p^c,
+    delta_p^c=p*r_c-r_(T_p c),
+    (delta_A,delta_H)=((p-1)r,(p-1)s), p=1 mod4,
+    (delta_A,delta_H)=(pr-s,ps-r),     p=3 mod4.
+
+Both sampled indices must lie after the corresponding entry times. At any
+precision level b supplied by the existing theorem, the shifted defect lies
+in p^b Z_p exactly when delta does. The matrix pI-T_p is invertible over Z_p,
+so simultaneous A/H precision b is equivalent to r,s in p^b Z_p. This
+criterion retains primes dividing shift denominators and does not separately
+reduce nonintegral raw summands.
+
+For r=a/d nonzero and s=b/d with fixed positive common denominator d, A's
+level-2 criteria are v_p(a)>=2+v_p(d) in the fixed class, and
+v_p(pa-b)>=2+v_p(d) in the swapping class. Away from the finitely many
+denominator primes, these can hold at only finitely many primes: the fixed
+class requires p|a; the swapping class requires p|b when b!=0 and p|a when
+b=0. A fixed finite family with nonzero A shifts has the same limitation,
+regardless of the chosen k. At a single swapping prime, s=pr preserves A
+alone, so simultaneous A/H hypotheses cannot be omitted. Full simultaneous
+precision 2+v_p(k) for all sufficiently large admissible k forces both shifts
+to zero: v_p(k) is then unbounded. Antisymmetric
+shifts still preserve D; common shifts preserve R.
+
+This is a result about raw representatives, not a density obstruction. The
+common shift r=s=1 leaves every canonical A/H state identical but changes
+each raw defect by a p-unit. More generally, replacing r by r-b/16^h preserves
+every canonical value after index h. For a finite set of odd primes not
+dividing the reduced denominator q of r=a/q, let M be their prescribed
+precision modulus. CRT chooses b with a*16^h-b*q divisible by M. A centered
+choice has
+
+    |r-b/16^h| <= M/(2*16^h),
+    r-b/16^h != 0 implies |r-b/16^h| >= M/(q*16^h).
+
+Finite compatible precision can thus coexist with arbitrarily small real
+representatives if the matching threshold h is allowed to grow. Keeping
+h<=N and a fixed normalized-height budget |r-b/16^h|<=B instead forces
+M<=B*q*16^N for every nonzero representative. For example, level 2 at all
+7<=p<=2N outside q gives log M=4N+o(N) by ordinary PNT. With a common A/H
+shift, or simultaneous A/H precision, this eventually excludes every such
+repair of a fixed non-dyadic r. A dyadic r can be repaired to zero, recovering
+the original late orbit. This modulus is not silently identified with the
+different selected CRT modulus in the phase note. The height/threshold
+conditions are essential; no general obstruction to rational-entry methods
+is claimed.
+
+For the actual canonical phase theta_n=fract(S_n), the remaining carry is
+explicit but uncontrolled. Put b_n=floor(16^n*r), rho_n=fract(16^n*r), and
+epsilon_n=floor(theta_n+rho_n) in {0,1}. Then
+
+    floor(S_n+16^n*r)-floor(S_n)=b_n+epsilon_n,
+    fract(S_n+16^n*r)=theta_n+rho_n-epsilon_n.
+
+The rational offset orbit rho_n is known; epsilon_n asks whether the actual
+phase crosses its threshold. The shifted leading residue does not estimate
+that crossing. This canonical discussion uses A/H; signed raw identities are
+linear, but floors and fractional parts require their own decomposition.
+
+Frozen evidence is `/tmp/pi-m4-entry-precision-20261127/`, report SHA-256
+`d4eee68ad8b558a7f5bdbf9c96cb4f8a52981c61aafc7a97d3c79f8d09340fe3`.
+The append-only `correction-v2.md` clarifies signed floors and normalized
+entry bounds; `budget-supplement-v3.md` proves the height/threshold corollary.
+Authoritative manifest v3 SHA-256 is
+`2ede3fcc8df0d22121db0752f250e2f6469a21be04ee2ffa9d562b926102895e`.
+Parent reconstruction and an unchanged-copy replay passed: 1,507 exact checks,
+exit 0, identical receipt, originals preserved. Universal claims remain paper
+proofs; no canonical numerator estimate, new Lean theorem or V is supplied.

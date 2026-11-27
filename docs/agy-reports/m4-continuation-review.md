@@ -1138,3 +1138,64 @@ service or delegation ran. Execution results remain caller evidence.
 Documentation, working/staged whitespace and post-commit scope/preservation
 checks are retained with the packet. The entry-precision and quantitative-entropy
 investigations are excluded. No V/M4 acceptance or new Lean theorem is claimed.
+
+## Entry precision and quantitative hole transport — 2026-11-27 UTC
+
+Baseline is local commit `358c9401e0e0a3d24050982613a92f9840bb904d`.
+The six-path documentation scope is `m4-prime-defect-boundary.md`,
+`m4-generating-functions.md`, `proof-plan.md`, `research-log.md`,
+`m4-handoff.md` and this record. No Lean, dependency, tool, pin or unrelated
+workspace change is included. The handoff's latest pointer is updated.
+
+The frozen entry-precision and entry-entropy packets retain full reports,
+input contracts, same-session critics, checkers, receipts and manifests.
+Parent full reconstruction checked the raw shift matrix, exact valuation
+criteria, canonical gauges and budget, finite-cover counts, actual order
+bound, dimension argument, Stieltjes constants and diagonal countermodel.
+Unchanged-copy replays passed: precision 1,507 checks with identical receipt;
+entropy v2 3,791 checks with UTC-only difference; both child exits 0 and all
+frozen originals preserved. These checks do not prove universal assertions.
+
+Precision v2 corrects a signed-floor linearity sentence and clarifies which
+normalized residual its bound measures. V3 contains a parent-proposed budget
+corollary reconstructed by the worker. Entropy v2 changes only the checker
+square-root endpoint to integer isqrt and restricts the countermodel's
+finite-omega claim explicitly to rational entries. The parent inspected these
+supplements; this is not independent review. Same-session critics retain the
+unknown epsilon stencil and missing hole-address/fixed-family estimate.
+Their stated scope/quantifier improvements were applied before freezing;
+the additive corrections qualify their earlier no-defect wording.
+
+Reviewer `/root/generating_review` completed the initial independent review
+with both adversarial guides under the Codex replacement procedure. The packet
+is `/tmp/pi-m4-entry-costs-review-20261127/`; frozen diff SHA-256 is
+`4400c78045614d518a67dc4dc02fc3f26ba6ac8d76391ca2110eaccce9174c06`.
+The full `review-initial.md` has SHA-256
+`9ae502251237340659383403a808dc2161b77fb486496b49a481ad09df077df1`.
+
+**D1, resolved by focused review:** production now requires the strong
+simultaneous precision for all sufficiently large admissible k, so v_p(k)
+is unbounded. Merely unbounded k was insufficient: r=s=p^2 retains level 2
+at arbitrarily large p-coprime k. The frozen worker report already had the
+correct condition; this is a production quantifier repair, requiring no new
+checker execution. **Nonblocking improvements:** none requested.
+**Open questions/missing evidence:** none additional for the scoped claims.
+The actual epsilon estimate and moving-hole/fixed-family bridge remain open.
+
+The reviewer reconstructed both complete arguments and their scope limits,
+read reports, critics, contracts, all supplements and complete checker sources,
+and verified six file and 46 evidence hashes. Both fully read guides retained
+their verified hashes. Review was read-only inspection and reconstruction;
+no executable check, extraction, mutation, service or delegation ran. Caller
+receipts and previously assessed paper inputs retain their stated limits.
+Focused follow-up inspected diff SHA-256
+`654da61ff243cd65dff2cac5b5637dca4ff85c4adf3941dd33799147bc9a6493`,
+all six file and 46 original evidence hashes, and the unchanged guide hashes.
+Its full `review-followup.md` has SHA-256
+`2b0dfb3ac6ce6441d5886ba600a3f81caed26ac8a62a8a8fbee53b248b094fb2`.
+D1 is resolved with no new findings; no review item was omitted or deferred.
+The stronger quantifier admits k=p^j for arbitrarily large j, which forces
+both shifts to zero. No executable check was needed for that repair.
+Caller documentation, working/staged whitespace and post-commit scope and
+preservation checks are retained with the packet. The quadrature investigation
+is excluded. No V/M4 acceptance or new Lean theorem is claimed.

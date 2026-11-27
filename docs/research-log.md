@@ -2825,3 +2825,45 @@ variation of the exact tail across entry times. Scratch paths are
 `/tmp/pi-m4-entry-precision-20261127/` and
 `/tmp/pi-m4-entry-entropy-20261127/`. Neither cycle assumes a new visitation
 estimate or treats a finite changing family as the fixed-family consumer.
+
+**After local commit `358c940`:** the five-path rational-entry equivalence
+checkpoint passed independent review with no findings, documentation and
+working/staged whitespace checks, exact scope and post-commit necessity and
+preservation inspection. No publication occurred. Both follow-up packets are
+now complete and parent-reconstructed. Independent integration review found one
+production quantifier defect: unbounded k does not imply unbounded v_p(k).
+The repaired condition requires all sufficiently large admissible k; focused
+review accepted it. No additional findings remain. The continuation review
+record retains the full cycle and evidence limits.
+
+`/tmp/pi-m4-entry-precision-20261127/` classifies the exact rational shift of
+the prime defect. Its main limitation is deliberately about raw representatives:
+integer shifts already preserve every canonical value while destroying raw
+precision. Finite precision can be restored by dyadic gauges; a nonzero repair
+with h<=N and normalized height B requires M<=B*q*16^N. This closes one
+specific height-budget question, not the canonical carry problem. Parent
+inspection corrected a signed-floor linearity sentence and clarified normalized
+entry bounds in immutable v2; the parent-proposed budget corollary was worker
+reconstructed in v3. The original checker replay passed 1,507 checks, exit 0,
+identical receipt, all originals preserved; no code changed for those supplements.
+
+`/tmp/pi-m4-entry-entropy-20261127/` gives exact rational-offset count
+L_N=ord_(q_N)(16), log L_N<=2N+o(N), an explicit transported-hole guarantee,
+dimension invariance, and differentiated tail bounds. It proves variable-N
+diagonal visits but separates them from the fixed-family consumer with a
+positive rational coboundary. The particular hole guarantee is below the
+sampling mesh and finite-time tail error; its changing address is uncontrolled.
+The parent corrected the rational-entry quantifier and the checker's floating
+square-root endpoint in immutable v2. Unchanged-copy v2 replay passed 3,791
+checks, exit 0, UTC-only receipt difference, originals preserved. No actual
+initialized A fractional state or pi digit was searched.
+
+**Meta-plan reset, 20 minutes before reassessment:** both cycles again require
+an actual phase estimate. A fresh-context worker now tests positive Gaussian
+quadrature and an exact-prefix consumer in
+`/tmp/pi-m4-fresh-mechanism-reset-20261127/`. A visit inside a model's segment
+of exact A agreement would transfer directly, unlike a target-dependent change
+of rational entry. Whether the spectral model provides an independent estimate
+within that segment is the discriminating question. The finite-family and
+post-prefix limits must remain explicit. This is new discovery within M4,
+not authorization to install tools or formalize a missing premise.

@@ -7,7 +7,7 @@ The [continued research checkpoint](#continued-research-checkpoint--2026-11-26)
 records subsequent work during the user's absence; that checkpoint does not
 terminate the ongoing M4 effort.
 The latest dated continuation is the
-[Rational entries and fixed families](#rational-entries-and-fixed-families--2026-11-27-utc); read the
+[Entry precision and quantitative holes](#entry-precision-and-quantitative-holes--2026-11-27-utc); read the
 research log and actual checkout for subsequent results and current state.
 
 ## Baseline and authorized endpoint
@@ -805,3 +805,28 @@ Two bounded follow-ups test the usable arithmetic precision of changed entries
 and the quantitative hole cost under rational translation. The log owns their
 bounds, scratch paths and outcomes. V/Hpi/T/M4 remain open, B4/P3 retain their
 visitation premises, and M5 is excluded. This checkpoint does not stop research.
+
+## Entry precision and quantitative holes — 2026-11-27 UTC
+
+The rational-entry equivalence is local commit
+`358c9401e0e0a3d24050982613a92f9840bb904d`; exact five-path scope, empty
+index, protected/unrelated preservation and necessity inspection passed.
+Nothing was pushed. The next two paper assessments separate usable entry
+freedom from changes of representation and target-dependent sampling.
+
+The [precision test](m4-prime-defect-boundary.md#rational-entries-change-raw-precision-but-may-preserve-every-orbit-value)
+retains every fixed-shift exception and shows that raw precision can change
+while the canonical orbit remains identical. Finite repairs retain a coupled
+height/denominator/matching-threshold cost. The
+[hole test](m4-generating-functions.md#quantitative-hole-transport-and-varying-entry-times)
+uses the actual rational-offset order and proves uniform derivative bounds,
+but its variable-N visits do not supply a fixed-family consumer or control the
+associated hole address. Both have explicit rational countertests.
+
+Parent full reconstruction, immutable corrections and unchanged-copy replays
+passed. Independent integration review and focused follow-up resolved one
+production quantifier defect; the continuation review record owns the full
+scope and dispositions. No Lean file, pin, dependency, audit
+or V contract changed. A fresh-context quadrature investigation is testing an
+exact-prefix visit consumer; the log owns its bound and outcome. V/Hpi/T/M4
+remain open, B4/P3 retain visits as premises, and M5 remains excluded.

@@ -792,11 +792,21 @@ identifies a valid broader consumer: full late visitation from any one fixed
 rational entry under the exact future forcing, or from one fixed finite family,
 is equivalent to V. Growing-grid averaging fails even when each target's seed
 is fixed before its time threshold; the family itself cannot depend on the
-target. Current 20-minute investigations test compatibility with the strong
-prime-defect precision and the quantitative cost of transporting an omitted
-word through rational entry changes. They must retain the exact forcing and
-fixed-family quantifiers. The review record owns integration status; all target
-contracts and Lean status remain unchanged. Research continues within M4.
+target. The [entry-precision test](m4-prime-defect-boundary.md#rational-entries-change-raw-precision-but-may-preserve-every-orbit-value)
+distinguishes raw initialization from the canonical orbit: finite precision
+can be repaired by integer/dyadic gauges, but its height and matching threshold
+must be retained together. The unknown threshold carries remain. The
+[quantitative hole test](m4-generating-functions.md#quantitative-hole-transport-and-varying-entry-times)
+improves the rational-offset count to ord_(q_N)(16), yet supplies neither a
+common hole address nor a valid fixed-entry consumer from variable-N sampling.
+Those scalar refinements are suspended without a new actual-phase estimate.
+
+A fresh-context 20-minute investigation now tests positive quadrature models
+that match an initial segment of the actual A coefficients exactly. The
+candidate consumer must prove a visit *inside* the matching segment; eventual
+visitation of an approximating model is insufficient. The review record owns
+integration status; all target contracts and Lean status remain unchanged.
+Research continues within M4.
 
 For the recurrence defined in Step 4, seek a proof of
 

@@ -638,3 +638,78 @@ The parent reconstructed the argument and replayed an unchanged checker copy:
 5,369 structural/parity checks passed, exit 0, identical receipt, originals
 preserved. These checks do not prove the universal topological statements.
 No Lean theorem, actual initialized digit search or V acceptance is claimed.
+
+## Quantitative hole transport and varying entry times
+
+Suppose the ordinary hexadecimal expansion of pi eventually omits a word of
+length l>=1. Its omega set K is covered by at most
+(16^l-1)^floor(h/l)*16^(h mod l) closed depth-h cylinders. Put
+tau=-log(1-16^(-l)) and delta=tau/(l*log16). Its upper box dimension is at
+most 1-delta. Rational affine phase changes preserve both upper box and
+Hausdorff dimension: rational translation gives finite translated unions in
+both directions, and integer multiplication is a finite covering. Thus this
+freedom does not amplify the dimension deficit.
+
+For a rational shift with L distinct orbit offsets, the translated K meets
+at most 3L times the preceding number of depth-h grid cells. Endpoint contacts
+are included. The strict count 3L*exp(-tau*floor(h/l))<1 certifies a disjoint
+closed cell. For E_N=16^N*pi-S_N, the power 16^N has no extra cost since it
+leaves the omega set unchanged. With q_N=den(S_N) odd, the exact offset count
+is L_N=ord_(q_N)(16), taking order 1 at q_N=1. One guaranteed hole has
+
+    h_N=l*(floor(log(3L_N)/tau)+1), epsilon_N=16^(-h_N),
+    16^(-l)*(3L_N)^(-1/delta) <= epsilon_N
+                                      < (3L_N)^(-1/delta).
+
+This describes the particular hole supplied by the cover count. Its address
+can depend on N; it is not an upper bound on the largest actual hole.
+The actual denominator support sharpens its cost. For p|q_N, ord_p16 divides
+(p-1)/gcd(4,p-1), at most 2N+1 in either prime class. Prime-power lifting adds
+only O(sqrt(N)*log N) to the logarithm. Since log q_N=6N+o(N), ordinary PNT
+and q_N|16^(L_N)-1 give
+
+    log(q_N+1)/log16 <= L_N, log L_N <= 2N+o(N).
+
+In particular the chosen epsilon_N is O_l(N^(-1/delta))=o(N^-4), whereas
+its exponential lower guarantee improves from constant 6 to 2. Neither the
+order upper bound nor the coarse denominator count is an intrinsic hole cost.
+
+The actual positive Stieltjes formula E(x)=integral(x+u)^(-2)dmu(u) has mass
+1/64 and first moment 23/1024. Dominated differentiation and positivity give
+
+    0 <= 1/(64x^2)-E(x) <= 23/(512x^3),
+    0 <= 1/(32x^3)+E'(x) <= 69/(512x^4).
+
+For x>=9, 1/(64x^3)<=-E'(x)<=1/(32x^3). At 16^j comparable to N^2,
+adjacent-N raw samples 16^j E_N-E_(N+j) therefore have spacing of order 1/N.
+For any u in (0,1), choose N_j nearest 4^j/(8sqrt(u)); then
+
+    |16^j E_(N_j)-E_(N_j+j)-u| <= 8/N_j
+
+once N_j>=1. This gives diagonal visits to every target while changing N.
+It does not supply visits from one fixed entry or fixed finite family.
+
+The positive rational coboundary t(n)=1/[(8n+1)(8n+5)],
+g(n)=16t(n)-t(n+1), separates these claims. Its exact tail t(N+1) has the
+same leading constant 1/64. Its zero-entry states satisfy the same diagonal
+convergence, but every fixed rational entry has a rational pure phase and a
+finite omega set. Even one N per target can give infinitely many later visits,
+by recurrence of a strict rational-orbit hit; no fixed finite family suffices.
+The model loses actual A and its denominator exponent 6.
+
+For actual A the changing hole address is still uncontrolled, and the supplied
+hole scale is below both the 1/N sample spacing and the N^-2 tail at
+j=O(log N). A sufficient middle-half transfer condition is
+N+j>1/(4sqrt(epsilon_N)); it is not a lower bound on every possible transfer.
+Variable-N sampling plus this cover estimate is suspended. A useful revision
+would need a common hole or a proved correlation with its changing address.
+
+The frozen `/tmp/pi-m4-entry-entropy-20261127/` report has SHA-256
+`0f052d61300a44bb4be67b1c415a2e2d1c003a3926bf81c5af5fd7521b86acd8`.
+Its immutable v2 supplement uses an integer square root in the checker and
+explicitly restricts the finite-omega claim to rational entries. Authoritative
+manifest v2 SHA-256 is
+`334b15262f12bd93b1bf65561707642712555dc422da77b343e14f09d8a63ae0`.
+Parent full reconstruction and unchanged-copy replay passed: 3,791 exact
+checks, exit 0, UTC-only receipt difference, originals preserved. These are
+paper arguments and diagnostics, not a new kernel theorem or V acceptance.
