@@ -4524,3 +4524,45 @@ initial condition alone would not advance the target. No unfinished claim
 is adopted; this research continues beyond the reviewed checkpoint. During
 the cycle it moved to a quantitative coefficient-function perturbation test,
 subject to the archived null-gauge and finite-prefix limitations.
+
+The inequality/Hankel checkpoint is local commit
+`0a213cc0588dbd2fc0bf0eae28c13451e2286a12`, parent `dace798d`.
+Exact staging and post-commit scope/blob/necessity/preservation inspection
+passed. The index was empty and task-owned tree clean; the branch was
+fourteen ahead of its remote-tracking reference. This run issued no push or PR.
+
+The selected-numerator discovery completed at 16:26:43 UTC within its bound.
+Ancestry and coefficient perturbation returned archived reconstruction/transport
+gaps and were not adopted as new results. The distinct reset-limit test yields
+an explicit R sufficient for V, but requires exceptional N^(-2) returns to 1/3
+with scale coverage. A direct measure argument gives generic exact-A visiting
+comparisons failing R, without refuting it for pi. Moving centers leave only
+the original phase identity. Parent unchanged-copy replay passed 80 synthetic
+checks, identical receipt and five preserved originals. Independent review ran
+16:28:12--16:30:20 UTC within ten minutes with no D/I item; actual fine returns
+and moving-center residual placement remain open.
+
+After a preliminary three-query source screen, a five-minute assessment ran
+16:22:09--16:25:04 UTC, deadline 16:27:09. The Fuchsian holonomic paper's
+discrete density passage has a linear-largest-phase hypothesis, excluding
+direct application to the exponential phase here. Both relevant PDF pages
+were inspected as text and images using the existing Swift renderer after
+unavailable Poppler/default-Python tools; nothing was installed. Independent
+review ran 16:25:47--16:27:21 UTC within six minutes with no D/I item. The
+full source proof was not audited. Both bounded outcomes leave V/M4 open;
+full production integration is pending.
+
+Full integration review ran 16:40:24--16:42:46 UTC within twelve minutes,
+with no D/I item and all three mathematical questions retained open. The
+frozen five-path scope and complete capture are in
+`/tmp/pi-m4-reset-source-review-20261127/`. Documentation (93), process
+tests (38), whitespace and preservation checks passed; no Lean changed.
+
+**Next discovery cycle, twenty minutes from the worker's first clock:**
+fresh-context `/root/m4_history_interaction_reset` owns scratch
+`/tmp/pi-m4-history-interaction-reset-20261127/`. It seeks one interaction
+between exact rational-function forcing and the full initialized history
+that the changed-numerator countermodels lose. The endpoint is a concrete
+discriminating claim/test or an honest failed bridge, not a list of methods
+or another denominator-only classification. The parent continues the pending
+reset/source integration independently; no unfinished candidate is adopted.

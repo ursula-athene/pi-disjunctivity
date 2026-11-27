@@ -958,3 +958,75 @@ Separate paper review found no D/I item and retained numerator placement as
 Q1. No full source-proof audit, numerical census or Lean result is claimed.
 Suspend this source consumer; the bounded search failure is not a claim
 that no applicable theorem exists elsewhere.
+
+### A discrete holonomic density passage excludes exponential phases
+
+The author-hosted [Fuchsian holonomic sequences](https://www.texmacs.org/joris/fuchsianseq/fuchsianseq.pdf)
+was checked at printed pages 19--20. Corollary 6.2 requires largest phase
+g_k(x)=x; its rounding argument uses a uniform Lipschitz bound. Theorem 6.3's
+displayed algebraic-power/logarithm field excludes exponential growth.
+These are applicability limits, not a certification of the printed results
+or their earlier dependencies. For our own sequence,
+exp(2*pi*i*S_n)=exp(i*2*pi^2*16^n)*exp(-2*pi*i*E_n).
+The leading phase has exponentially growing derivative. Normalizing raw S_n
+to a convergent sequence discards the modulo-one information. No direct
+source application or holonomicity of the character/carry sequence follows.
+The full PDF was retained and both relevant pages inspected as text and
+images. Independent review found no D/I item; a valid integer-index
+exponential-phase theorem or separate transfer remains missing.
+
+## Rational resets require exceptional fine returns to transfer
+
+Write T_N=E_(N-1), N>=1. The exact tail identity and rational coefficient
+asymptotic give 16T_N=A(N)+T_(N+1) and N^2*T_N ->1/64. Indeed
+N^2*A(N+s)->15/64 for fixed s, with majorant 1 and summable weights
+16^(-s-1). Fix rational r in (0,1) with odd denominator q, and tau with
+16^tau=1 modulo q. Reset the exact recurrence to r separately at each N.
+Its j-step state is
+
+```text
+z_j^(N)=fract(16^j*(r+T_N)-T_(N+j)).
+```
+
+For j tending to infinity through multiples of tau and N_j/4^j ->c>0,
+the circle limit is r+1/(64c^2) modulo 1. Every interior target t is
+obtained by choosing an integer k with beta=k+t-r>0 and c=(64beta)^(-1/2).
+This proves visitation for a triangular family of separately reset paths,
+not for one fixed path or the actual entries y_N.
+
+For r=1/3, the following explicit unproved condition R would suffice for V:
+for every c>0 there exist j_l ->infinity and N_l>=1 with
+
+```text
+N_l/4^(j_l)->c,  N_l^2*(y_(N_l)-1/3)->0.
+```
+
+The amplified entry discrepancy then tends to zero, so the reset limit
+transfers to actual recurrence index N_l+j_l, orbit index N_l+j_l-1.
+With y_N=a_N/Q_N reduced, the missing estimate is precisely
+N_l^2*(3*a_(N_l)-Q_(N_l))/(3*Q_(N_l))->0 along all required scale windows.
+Neither the sign/size of the denominator nor the reset calculation supplies it.
+
+R is stronger than generic visitation. In the exact-A comparison family
+u_N(alpha)=fract(16^(N-1)*alpha-T_N), alpha in [0,1], the set with
+|u_N(alpha)-1/3|<=C/N^2 has measure at most 2C/N^2. Summing tail measures
+shows that almost every alpha has only finitely many such returns for each
+integer C>0. Independently, disjoint aligned base-16 word blocks prove
+almost-everywhere arbitrarily late visitation, which transfers through T_N->0
+using interior margins. Thus almost every comparison visits but fails R.
+These parameters generally lose zero initialization and rational raw samples;
+this does not refute R for pi. No almost-everywhere conclusion is applied to pi.
+
+Moving to the nearest center r=a/(16^j-1) only gives transported error
+bound 16^j/[2*(16^j-1)], tending to 1/2, not to zero. This is an upper
+bound, not a lower bound on the actual residual. Moreover
+r+16^j*(y_N-r)=16^j*y_N modulo 1 exactly. Rounding alone returns the
+original phase; a new signed-residual estimate would be needed.
+
+Suspend this transfer without an independently justified actual fine-return
+estimate; the condition is not supported merely because it implies V.
+Frozen report `/tmp/pi-m4-selected-numerator-discovery-20261127/report.md`
+has SHA-256 `f2fb793270b5182fe414d7f7a41e7fc37ba7a7969e8bf46296d8f9f9aaa699b0`.
+Parent unchanged-copy replay passed 80 synthetic checks with identical receipt
+and five originals preserved. Separate paper review found no D/I item.
+Limits and measure arguments remain paper mathematics; R and V remain open.

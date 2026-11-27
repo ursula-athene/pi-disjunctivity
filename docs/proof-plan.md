@@ -1070,6 +1070,13 @@ quadratic-decay estimate. It does not refute an actual-history estimate or
 prove a small full determinant denominator. The next fresh-context inquiry
 must use the actual canonical numerator fixed by the zero history, beyond
 denominator and valuation data. No unfinished estimate is adopted.
+The [rational-reset test](m4-rational-forcing.md#rational-resets-require-exceptional-fine-returns-to-transfer)
+gives a controlled tail drift for separately reset paths. Its transfer to the
+actual path requires exceptional N^(-2) rational returns with quantified scale
+coverage; generic visitation does not imply those returns. Moving-center
+rounding only recovers the original phase. A source check also excludes a
+direct linear-phase holonomic density argument. These tests supply no
+surviving unconditional visitation mechanism; discovery continues.
 The log owns bounds and outcomes.
 V and all Lean contracts are unchanged; neither conditional wrapping nor more
 classification supplies visitation.

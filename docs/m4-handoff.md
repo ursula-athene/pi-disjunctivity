@@ -1573,3 +1573,22 @@ review passed with the two historical clarifications resolved and no new D/I
 item. Documentation, process, whitespace and preservation checks passed;
 unchanged Lean was not rebuilt. A fresh inquiry seeks an actual-numerator
 mechanism, with its bound and scope in the log. V/M4 remain open.
+
+## Reset drift and source boundary — 2026-11-27 UTC
+
+The inequality/Hankel checkpoint is local commit
+`0a213cc0588dbd2fc0bf0eae28c13451e2286a12`. Exact staging and post-commit
+inspection passed; the branch was fourteen ahead of its remote-tracking
+reference, with empty index and clean task-owned tree. Subsequent edits are
+uncommitted; this run issued no push or PR.
+
+The [rational-reset calculation](m4-rational-forcing.md#rational-resets-require-exceptional-fine-returns-to-transfer)
+has a precise actual-numerator transfer condition, but generic visitation
+fails to imply its exceptional fine returns. It does not refute those returns
+for pi. Moving-center rounding supplies no independent phase estimate.
+Parent replay and independent paper review passed; the separate holonomic
+source check found a linear-phase hypothesis excluding direct application.
+Full integration review passed with no D/I item and the three mathematical
+questions retained open. Documentation, process, whitespace and preservation
+checks passed. No new Lean theorem or surviving unconditional visitation
+argument was obtained. Continue discovery with V/M4 open.

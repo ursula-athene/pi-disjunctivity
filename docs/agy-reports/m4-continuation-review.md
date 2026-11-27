@@ -2998,3 +2998,72 @@ whitespace and preservation checks passed; unchanged Lean was not rebuilt.
 The prior denominator asymptotic remains a paper input. Subsequent edits
 record outcomes and research-start metadata only. The unfinished numerator
 inquiry was excluded; C_odd/V/M4 remain open.
+
+## Rational resets and holonomic source boundary — 2026-11-27 UTC
+
+The reset packet `/tmp/pi-m4-selected-numerator-discovery-20261127/`
+completed at 16:26:43 UTC within its 16:09:14--16:29:14 bound. Report
+SHA-256 `f2fb793270b5182fe414d7f7a41e7fc37ba7a7969e8bf46296d8f9f9aaa699b0`;
+SHA256SUMS hash
+`91fcd8f064881599f31677f32112a7ef53dc2fac0f4ea2e5993fc985b65a93ed`.
+Parent unchanged-copy replay passed 80 synthetic checks (63 conjugacies and
+17 coefficient checks), with identical receipt and five originals preserved;
+replay SHA-256
+`d9063f2603a3ce9547b41f43c057d067ade064e1eff0731b92769ee0536b3fd3`.
+
+Independent `/root/generating_review` ran 16:28:12--16:30:20 UTC within ten
+minutes. Complete response:
+`/tmp/pi-m4-reset-drift-paper-review-20261127.txt`.
+**D/I: none. Q1: retained open:** actual signed o(N^(-2)) returns with
+witnesses for every scale c>0. **Q2: retained open:** moving-center signed
+residual placement. Rounding gives an upper error bound tending to 1/2,
+not a lower bound or shrinking estimate. The critic reconstructed the
+reset limit, R-to-V implication with the orbit offset, and the two distinct
+measure arguments. Generic visitation fails to imply R; R is not refuted
+for pi. Ancestry/gauge preliminaries were not adopted as new results.
+
+The source packet `/tmp/pi-m4-holonomic-source-check-20261127/` completed
+at 16:25:04 UTC within its 16:22:09--16:27:09 assessment bound, after a
+preliminary three-query screen. Report SHA-256
+`d8b222d167143140e1196e21df69738c238a5d82eeff8693f402d6f4fed710a8`;
+SHA256SUMS hash
+`15032bd8712ce8280085d34cd776ee4d51cd54360a579550d6ac46993e1c4f70`
+binds nine files, including the full PDF and printed-page 19--20 text/images.
+The caller used the existing Swift renderer after unavailable extraction
+tools; nothing was installed. The full source proof was not audited.
+
+Independent `/root/finite_log_independent_review` ran
+16:25:47--16:27:21 UTC within six minutes. Complete response:
+`/tmp/pi-m4-holonomic-source-paper-review-20261127.txt`.
+**D/I: none. Q1: retained open:** an applicable integer-index exponential-phase
+result or separate transfer. The critic read the retained text and images,
+verified all nine artifacts and reconstructed the applicability mismatch.
+The narrow rejection neither certifies all printed theorems nor makes a
+literature-wide impossibility claim.
+
+Both critics applied the unchanged replacement procedure, pi-argument-critic
+and both fully read adversarial guides. They inspected caller execution
+receipts without running checks, probes, builds or extraction, changing files,
+contacting services or delegating. All universal arguments remain paper
+mathematics. Production integration is pending; V/M4 remain open.
+
+Full integration review by `/root/finite_log_independent_review` ran
+16:40:24--16:42:46 UTC within twelve minutes. Complete response and frozen
+scope are retained in `/tmp/pi-m4-reset-source-review-20261127/`.
+Baseline `0a213cc0588dbd2fc0bf0eae28c13451e2286a12`; exact diff SHA-256
+`c300ed8e30a9e501b62f8c1050ad53819f2594a4ec1c20e4026655b49bfcd2f0`;
+manifest SHA-256
+`9718a11bb83ee62c3d0fece332125b9d5f85de935e8b6d1816debeb8a3d3ec2c`.
+**D/I: none. Q1--Q3: retained open:** actual quantified fine returns,
+moving-center signed residuals, and an applicable exponential-phase result.
+The critic reconstructed both integrated arguments and verified the exact
+live/frozen diff and all 59 bound files: five production, 21 evidence,
+three context, two guides, 17 protected and 11 unrelated. All review-cycle
+findings remain open mathematical inputs, not accepted visitation premises.
+
+Both guides, critic skill and replacement procedure were applied unchanged.
+Documentation (93), process tests (38), whitespace and preservation checks
+passed as caller evidence. No reviewer execution, mutation, service or
+delegation occurred; unchanged Lean was not rebuilt. The full source proof
+remains unaudited. Subsequent production edits record outcomes only; fresh
+discovery metadata contains no adopted mathematics. V/M4 remain open.
