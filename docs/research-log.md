@@ -2758,3 +2758,44 @@ Requested supplemental source pages confirmed discrepancy nonnegativity and
 the Tate retraction without a correction. Documentation and whitespace checks
 passed. The newer fractal and word-carry work remains outside that review;
 M4 remains open.
+
+**Reviewed continuation after local commit `16f8735`:**
+the eight-path positivity/height/classification checkpoint passed its separate
+review, exact staged checks and post-commit necessity/preservation inspection.
+Only task-owned documentation was committed; no remote publication occurred.
+The frozen `/tmp/pi-m4-fractal-phase-20261127/` packet proves that exact forced
+hole propagation remains a partial permutation even with transition phases;
+its operator norm is 1 whenever any entry survives. A genuine two-coordinate
+classical Cantor lift still supplies no position/Fourier-localized wavefunction.
+The parent reconstructed the complete report/checker/critic, visually inspected
+the primary theorem/matrix pages and replayed an unchanged copy: exit 0,
+identical receipt and originals preserved. This connection is suspended at the
+missing amplitude/frequency constraint, not treated as a visitation result.
+
+The next 20-minute cycle worked directly on word-dependent carry constraints
+for the exact rational forcing. Its initial uniform-polynomial test exposed a
+denominator/window cost. A parent-proposed strengthening constructs an entire
+translated two-symbol Cantor set inside every relaxed avoidance entry set;
+the worker reconstructed a uniform logarithmic-potential bound that defeats
+this certificate for all degrees and windows. The construction keeps actual
+future forcing and can keep an admissible past-language state, but relaxes the
+exact initialized phase. A discrete denominator-grid restriction is outside
+the conclusion and must not be silently discarded. The frozen packet is
+`/tmp/pi-m4-word-carry-20261127/`. The parent read its complete report/checker,
+input contract and separate criticism and replayed an unchanged copy: exit 0,
+receipt differing only in UTC, originals preserved. No actual A phase was
+evaluated. Separate integration review found two narrow definition/domain
+defects and one coefficient-clearing improvement. All three were repaired and
+accepted by focused review; the main operator and Cantor conclusions are
+unchanged. Full captures and dispositions are in the continuation review
+record. No Lean theorem or V acceptance follows from this paper checkpoint.
+
+**Next changed question, 20 minutes before reassessment:** test rational affine
+invariance of late base-16 orbit density and its exact transfer to arbitrary
+rational entries under the same future A-forcing. If valid, this could broaden
+the consumer while preserving the ultimate V contract. Finite rational-grid
+averages can look uniform even for an irrational nowhere-dense orbit, so the
+test must retain the distinction between one globally visiting rational entry
+and changing entries for finite targets/windows. The active scratch path is
+`/tmp/pi-m4-rational-entry-20261127/`. Further support-only or uniform real-entry
+polynomial refinement is suspended. This checkpoint does not stop M4 research.

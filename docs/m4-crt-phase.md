@@ -91,6 +91,63 @@ Using pi*16^(N+j) instead costs at most
 Condition (2) is unproved. Formula (1) supplies an exact interface for a
 new estimate, not that estimate itself.
 
+## Exact hole propagation is not a quantum Fourier operator
+
+A multi-step test retains more than the singleton CRT character. For a
+block N,...,N+J let Q be the least common multiple of the reduced denominators
+of S_N and A(N+1),...,A(N+J). It is odd. The last prefix denominator divides
+Q, and the natural clearing lcm bounds Q above, so
+log Q=6*(N+J)+o(N+J). The exact canonical recursion is
+
+    a_(j+1)=16*a_j+c_j-Q*k_j,
+    c_j=Q*A(N+j+1) in Z,
+    k_j=floor((16*a_j+c_j)/Q), 0<=a_j<Q.
+
+Each map F_j(a)=(16a+c_j) mod Q is a permutation. Let U_j be its unitary
+action on the finite entry basis and P_j the diagonal projection onto states
+avoiding the hole. For V_j=U_(j-1)...U_0 and
+T_J=P_J*U_(J-1)*P_(J-1)*...*U_0*P_0, all pulled-back projections
+V_j^*P_jV_j are diagonal and commute. If W is the set of surviving entries,
+
+    T_J=V_J*1_W,  T_J^*T_J=1_W.
+
+Thus the operator norm is 1 whenever any entry survives, regardless of a
+small survival proportion. Arbitrary unit-modulus transition phases leave
+this identity unchanged: a phase on a unique path creates no interference.
+For the unitary DFT, F_Q*U_j*f(k)=e(-k*c_j/Q)*(F_Q*f)(16k mod Q).
+The forcing supplies a phase and permutes frequency labels, not a second
+Cantor support. Raw CRT, height and carry tests can instead be retained on
+the original entry labels u in [0,T]; they are still commuting diagonal tests.
+
+[Dyatlov--Jin, v3, Theorem 2 and (1.12), p.4](https://arxiv.org/pdf/1608.02238v3)
+gives a fractal uncertainty estimate for 1_Ck*F_(M^k)*1_Ck, where C_k is
+a base-M digit Cantor set with 1<|Alphabet|<M. The associated quantum baker
+contains full and block Fourier transforms and smooth cutoffs (pp.1--2).
+Its spectral gap is not a gap for the monomial operator above. Its base-power
+modulus also differs from this exact odd grid; changing moduli would not by
+itself repair the missing operator correspondence.
+
+Hypothetical permanent avoidance does supply two classical Cantor coordinates.
+Use B2/B3 with a strictly inner interval to transfer avoidance to
+fract(16^n*pi), paying the tail margin. Choose a closed base-M cylinder
+inside that interval, M=16^r. Aligned r-block digits then avoid one symbol v.
+Their future coordinate u belongs to the corresponding Cantor set C, and
+prepending these allowed digits by xi_next=(xi+d)/M keeps a second
+coordinate xi in C. This is classical trapping in C times C, not a function
+supported in both position and Fourier space. For the same alphabet an
+interior allowed digit a gives the trapped fixed point u=xi=a/(M-1), while
+the source uncertainty estimate still holds. An actual BBP-derived amplitude
+or approximate eigenvector with the needed frequency constraint is absent.
+
+Frozen packet `/tmp/pi-m4-fractal-phase-20261127/`, report SHA-256
+`a5d412a105701942dbf953e3d522e2bfe8647141b3f78dbce9d12efb35933489`,
+retains the full forcing identities, source contract/pages, criticism and
+checker. Parent reconstruction, visual source inspection and unchanged-copy
+replay passed: exit 0, identical receipt, originals preserved. The 47,504
+finite structural checks use synthetic or explicitly changed entries, not
+actual pi phases. Direct quantum-gap transfer and support-only refinements
+are suspended; no universal visit estimate or Lean result was obtained.
+
 ## Height already forces a nonzero-frequency correlation
 
 At h=0,J=1, equation (1) says

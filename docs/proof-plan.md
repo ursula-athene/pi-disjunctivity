@@ -775,14 +775,25 @@ is suspended without an actual-phase consequence. The
 also retains a necessary local field weight; its exact elliptic Bernoulli
 connection does not provide the missing numerator estimate.
 
-The current 20-minute reassessment cycle tests whether full multi-index forcing
-and forbidden-word avoidance supply simultaneous support hypotheses for a
-precise fractal Fourier theorem. A singleton CRT class has flat Fourier modulus,
-so a naive sparse-support argument is already excluded. Any proposed replacement
-must preserve the actual selected class, forcing and carry. A quantum or
-full-orbit result cannot be substituted for the exact recurrence without a
-proved bridge. The review record owns integration status; all target contracts
-and Lean status remain unchanged. Research continues within M4.
+The [full forced operator](m4-crt-phase.md#exact-hole-propagation-is-not-a-quantum-fourier-operator)
+remains a partial permutation, even after transition phases are attached.
+Its commuting entry projections do not meet a quantum Fourier uncertainty
+hypothesis. A classical two-coordinate Cantor lift supplies no wavefunction
+with both required supports. The direct correspondence is suspended.
+The [word-carry polynomial test](m4-language-auxiliaries.md#uniform-carry-polynomials-retain-an-entire-avoiding-cantor-set)
+retains actual forcing but admits a translated Cantor set in every relaxed
+real entry domain, even with a fixed past-language state. A uniform logarithmic
+integral rules out the proposed rational-lattice smallness for every degree
+and window. Restricting to the actual denominator grid is outside that result
+and still needs numerator selection at controlled cost.
+
+The current 20-minute reassessment cycle tests a possible rational-entry
+invariance bridge: whether full late visitation for any rational entry under
+the same future forcing is equivalent to V, via rational affine invariance of
+the pure base-16 orbit. It must distinguish this global statement from finite
+programming or averaging over changing entries; a useful consumer needs one
+valid quantifier arrangement. The review record owns integration status; all
+target contracts and Lean status remain unchanged. Research continues within M4.
 
 For the recurrence defined in Step 4, seek a proof of
 

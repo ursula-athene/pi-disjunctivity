@@ -1032,3 +1032,65 @@ Documentation and working/staged whitespace checks, exact scope, preservation
 and post-commit necessity inspection are retained in the same packet. The newer
 fractal Fourier and word-carry investigations are excluded. These paper reviews
 do not establish a Lean theorem or V/M4 acceptance. Research continues.
+
+## Forced propagation and uniform word-carry polynomials — 2026-11-27 UTC
+
+Baseline is local commit `16f8735acd27bd0f0ebc774c0bdf012db4631536`.
+The six-path documentation scope is `m4-crt-phase.md`,
+`m4-language-auxiliaries.md`, `proof-plan.md`, `research-log.md`,
+`m4-handoff.md` and this record. No Lean, dependency, tool, pin or unrelated
+workspace change is included. The Codex replacement remains mandatory.
+
+The frozen `/tmp/pi-m4-fractal-phase-20261127/` and
+`/tmp/pi-m4-word-carry-20261127/` packets retain full reports, source/input
+contracts, checker sources, critics, receipts and manifests. The parent read
+and reconstructed them, visually inspected Dyatlov--Jin v3 pages 1, 2 and 4,
+and replayed unchanged checker copies. Both child exits were 0; propagation
+receipt is identical, word-carry differs only in UTC, and originals are
+preserved. The Cantor strengthening was proposed by the parent, then
+reconstructed by the worker; that is not independent acceptance review.
+The worker's separate criticism applied I1--I3 before freezing: distinguish
+the superseded finite-cell bound, retain the actual versus relaxed structure,
+and label the synthetic terminal-tail checks correctly. The infinite
+logarithmic integral remains a paper proof, not a numerical certificate.
+
+Reviewer `/root/generating_review` completed the initial six-path review in
+`/tmp/pi-m4-propagation-carry-review-20261127/`, against diff SHA-256
+`09a753cabe0018e9d2acbd36a9869946cd122e847d3edec6db4527f7f0eca573`.
+Its full `review-initial.md` has SHA-256
+`31305f7400643036523702bce137f0d87c960685d1a3e0e8a5af2755a4ea75c8`.
+It reconstructed the principal operator and Cantor arguments but found two
+narrow defects and one nonblocking improvement:
+
+- **D1, resolved by focused review:** Q now explicitly denotes the
+  least common multiple of the entry and forcing reduced denominators.
+  An arbitrary clearing multiple would not justify oddness or exponent 6.
+- **D2, resolved by focused review:** the immutable word-carry
+  `correction-v2.md` restricts the superseded finite-cell Chebyshev formula to
+  d>=1 and gives the constant case separately. The main Cantor bound and
+  checker domain are unchanged. `manifest-v2.json` preserves all original
+  hashes and adds the supplement, SHA-256
+  `e829f61331550aedd8a23233d0ad8f531d881f1967d410e9b6642387b73545ad`.
+- **I1, resolved by focused review:** production explicitly declares
+  b to be a positive integer clearing the rational polynomial coefficients.
+
+No additional source or evidence gap was found. The actual numerator and
+independently constrained Fourier-amplitude estimates remain unproved.
+Both full guides were applied; all six file and 35 evidence hashes matched.
+Review covered full reports/checkers/critics/contracts, source images and
+checked Orbit/Tail interfaces through read-only inspection and reconstruction.
+No checker, probe, build, extractor, edit, service or delegation ran in review;
+execution receipts remain caller evidence.
+
+The focused review inspected diff SHA-256
+`40e9a66696f35f4e2aff87cf1e22c203981d90c71f44a08a0a63de285b8ee64f`,
+all six current files, the correction supplement and its manifest, and all
+35 original evidence hashes. Its full `review-followup.md` has SHA-256
+`6a2cb3c9a24c461ef3e1d4503002881ca0d490b6b7959b58a9fec95727a8d423`.
+Both defects and the improvement are resolved; there are no new findings or
+unresolved review items. The principal operator and Cantor conclusions are
+unchanged. The checker already restricts its Chebyshev section to positive
+degree, so the prose correction requires no broader replay. Documentation,
+whitespace, exact scope and preservation are checked by the caller before the
+local checkpoint. The rational-entry investigation is excluded. No V/M4
+acceptance is claimed; the parent continues authorized research.

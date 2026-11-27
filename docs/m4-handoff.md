@@ -751,3 +751,34 @@ state, rather than use a quantum/full-orbit result without a bridge. The log
 owns the reassessment bound and outcomes. Generic positivity, unweighted height
 averaging and further same-family rational-period classification are suspended.
 This checkpoint does not interrupt the authorized research.
+
+## Exact propagation and word-carry filters — 2026-11-27 UTC
+
+The positivity/height checkpoint is local commit
+`16f8735acd27bd0f0ebc774c0bdf012db4631536`. Its eight paths, empty index,
+protected/unrelated preservation and necessity inspection were verified.
+Nothing was pushed. The next integration contains two paper assessments.
+
+The [exact hole operator](m4-crt-phase.md#exact-hole-propagation-is-not-a-quantum-fourier-operator)
+has norm 1 whenever a seed survives, including with transition phases.
+The tested quantum uncertainty theorem does not apply to its commuting
+entry projections. A two-coordinate classical Cantor lift does not supply
+the missing position/Fourier amplitude. The
+[uniform polynomial test](m4-language-auxiliaries.md#uniform-carry-polynomials-retain-an-entire-avoiding-cantor-set)
+contains exact-forcing avoiding Cantor seeds after relaxing initialization.
+Its logarithmic integral gives a degree-independent exponential constant,
+defeating the proposed rational-lattice certificate for every window. This
+does not cover a domain restricted to the selected rational numerator.
+
+Parent full reconstruction, source inspection and unchanged-copy replays
+passed with originals preserved; the word-carry receipt differs only in UTC,
+and the propagation receipt is identical. Independent integration review and
+focused follow-up resolved two narrow defects and one nonblocking improvement;
+the review record retains the full cycle and evidence limits. No new Lean
+theorem/audit or V result exists.
+
+The current question is rational-entry invariance of full late visitation and
+whether it supports a valid new consumer. Its finite-versus-global quantifiers
+must survive a rational-grid averaging countertest. The log owns the bound and
+current outcome. V/Hpi/T/M4 remain open; B4/P3 retain visitation premises and
+M5 remains excluded. Research continues beyond this internal checkpoint.

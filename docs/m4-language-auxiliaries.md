@@ -255,6 +255,91 @@ polynomials, cyclotomic identities and exponent inequalities, not pi digits
 or actual BBP fractional states. Generic Galois averaging and bare polynomial
 integrality are suspended for this construction; V remains open.
 
+## Uniform carry polynomials retain an entire avoiding Cantor set
+
+Actual canonical carries are c_n=floor(16*fract(S_n)+A(n+1)); they can
+equal 16. Nevertheless a permanent real hole implies omission of some word
+over 0,...,15 after a further threshold. Choose its closed ordinary cylinder
+[u,u+16^(-l)] strictly inside the hole. Backward expansion of a carry block
+gives
+
+    x_n=sum_(j=1)^l c_(n+j-1)/16^j
+                      +16^(-l)*x_(n+l)-B_(n,l),
+    B_(n,l)=E_n-16^(-l)*E_(n+l), 0<B_(n,l)<E_n.
+
+Occurrence of that word would put x_n between u-E_n and u+16^(-l),
+inside the hole once the tail is smaller than the chosen margin. This
+does not identify every carry with a hexadecimal digit.
+
+For an omitted word w, let K_(N,h)(w) be the real entries in [0,1) whose
+first h canonical carries under the exact future A-forcing avoid w. A
+fixed admissible past-language state may also be imposed, including word
+occurrences crossing its boundary; the complete earlier trajectory is relaxed.
+The proposed polynomial consumer asks for nonzero P in Q[T], degree d.
+Choose a positive integer b with bP in Z[T], and seek
+
+    sup_(t in K_(N,h)(w)) |P(t)| < 1/(b*q_N^d).
+
+At the actual reduced-q_N entry this would force P(x_N)=0. Rational-root
+divisibility could then exclude the zero only with additional control of
+the primitive leading coefficient. The uniform estimate itself is impossible
+when N>=3 and q_N>=1024, for every h and d, as follows.
+
+Choose B={5,6} or {9,10} disjoint from the LAST symbol of w, and let C_B
+be its infinite base-16 Cantor set. Every shifted tail theta_j of theta in
+C_B lies in [1/3,2/3]. Define X_j=theta_j-E_(N+j). The exact tail relation
+and B3 bound give
+
+    16*X_j+A(N+j+1)=b_(j+1)+X_(j+1),
+    0<E_(N+j)<=8/495<1/48, 0<X_j<1.
+
+Thus the canonical carries are exactly the allowed symbols b_(j+1).
+No omitted word can finish in the future, even across a fixed admissible
+past boundary. Consequently C_B-E_N is contained in every K_(N,h)(w).
+The future forcing is actual; these comparison entries generally lose
+zero initialization and need not lie on the actual rational denominator grid.
+
+Give C_B its fair Bernoulli measure. Depth-k cylinders have mass 2^(-k),
+diameter 16^(-k)/15 and gaps at least (14/15)*16^(-k). A complex disk
+of radius 16^(-k)/4 meets at most one cylinder. The nonnegative layer-cake
+integral therefore gives, uniformly in complex z,
+
+    integral log^-|theta-z| <= log4+sum_(k>=0)2^(-k)*log16
+                            =log1024.
+
+This proves integrability before logarithmic factors are added. Factoring
+P over C, translating by E_N and integrating yields
+
+    sup_(K_(N,h)(w))|P| >=|lead(P)|*1024^(-d)
+                         >=1/(b*1024^d).
+
+This contradicts the proposed strict lattice bound at q_N>=1024, including
+constant polynomials. Clearing rational coefficients does not help: b occurs
+on both sides. The actual denominator asymptotic ensures the condition
+eventually, with no claimed effective threshold. The result also permits a
+different polynomial for each fixed past-language state. It does not apply
+to arbitrary separate future-branch polynomials without a common entry estimate.
+
+The discrete q_N-grid remains outside this barrier. If a strict lattice
+bound holds at M distinct reduced-q_N rational points, their primitive linear
+factors divide the cleared primitive polynomial. Gauss's lemma forces degree
+at least M and leading coefficient divisible by q_N^M. No lower bound on the
+actual number of allowed grid points is asserted. A surviving method needs
+an estimate for the selected numerator, rather than a real-entry relaxation
+or a polynomial vanishing on the allowed grid by construction.
+
+The frozen packet `/tmp/pi-m4-word-carry-20261127/` has report SHA-256
+`f1e86b09ae70ac0a1c74c64bdeae03ccb2d1c4251e9b173bfc5b4c110f3fcce7`.
+It retains the parent-proposed Cantor argument, worker reconstruction,
+superseded finite-cell cost, exact input contract and separate criticism.
+Its immutable `correction-v2.md` restricts that superseded Chebyshev formula
+to positive degree and gives the separate constant case; frozen v1 is preserved.
+Parent full reconstruction and unchanged-copy replay passed; the receipt
+differs only in UTC and originals are preserved. Synthetic finite-tail
+checks do not evaluate actual A phases or certify the infinite logarithmic
+integral. Uniform real-entry polynomial smallness is suspended for this
+class; discrete or differently constrained consumers are not ruled out.
+
 ## Evidence boundary
 
 The frozen sine-zero report is `/tmp/pi-m4-sine-zero-report-v1.md`, SHA-256
