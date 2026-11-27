@@ -12,12 +12,12 @@ and [persistence protocol](meta-proof-plan.md#persistence-and-stopping-condition
 Use Codex subagents for required reviews; Carbon remains stopped. M5, push,
 PR, new dependencies, installations and permission changes are not authorized.
 
-Read the [latest reviewed source boundary](#concordance-source-boundary--2026-11-27-utc),
+Read the [latest inverse-history assessment](#inverse-selection-and-nearby-seeds--2026-11-27-utc),
 then the end of the [research log](research-log.md) and the actual checkout.
-The active discovery tests contracted-rotation theorems against reversed BBP
-branches, including autonomy, branch selection and the zero initialization.
-Its unfinished claims are excluded from adoption. The log owns bounds and
-outcomes; this entry is not a second live status ledger.
+Pure inverse-order selection has not supplied the needed arithmetic estimate.
+Fresh discovery tests AGM/Landen approximations against their degree, height
+and conjugate costs; unfinished claims are excluded from adoption. The log
+owns bounds and outcomes; this entry is not a second live status ledger.
 
 For the immediate failure record, follow the relevant mathematical owner:
 
@@ -1687,3 +1687,23 @@ and anchor improvements. Documentation, process, whitespace and preservation
 checks passed. The contracted-rotation inquiry and its full-history follow-up
 remain excluded from adoption pending their own reviews; bounds and outcomes
 belong in the log. V/M4 remain open.
+
+## Inverse selection and nearby seeds — 2026-11-27 UTC
+
+The [contracted-inverse assessment](m4-language-auxiliaries.md#contracted-inverses-do-not-yet-select-the-actual-history)
+separates a genuine rational finite-selector obstruction from the missing
+construction of that selector along the actual history. Source rational
+rotation does not mean ordinary periodicity at discontinuity endpoints.
+The [full-history test](m4-language-auxiliaries.md#full-inverse-order-does-not-isolate-the-zero-seed)
+retains the exact-A greedy failure and the unique odd-denominator inverse.
+Conditional on V failure, a common-hole family approaches zero in the real
+and every fixed prime-adic topology while retaining each fixed carry prefix.
+It changes exact zero and exact denominators; each fixed competitor still
+retains the actual asymptotic denominator growth rate. This is a diagnostic,
+not a visitation result. Paper and integration review status is recorded in
+the [review report](agy-reports/m4-continuation-review.md#inverse-selectors-and-nearby-rational-seeds--2026-11-27-utc).
+
+Further pure inverse ordering is suspended. Fresh AGM/Landen discovery asks
+whether exact algebraic initialization supplies a useful arithmetic estimate
+after precision and conjugate costs. No unfinished claim is adopted; V/M4
+and the checked frontier remain open and unchanged. Research continues.

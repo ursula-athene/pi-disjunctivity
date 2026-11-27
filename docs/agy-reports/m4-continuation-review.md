@@ -3288,3 +3288,70 @@ focused review. Both full guides and replacement/critic context applied; no
 reviewer execution, mutation, service or delegation occurred. Documentation
 (93), process tests (38), whitespace and preservation checks passed; unchanged
 Lean was not rebuilt. Only factual outcome records follow these reviews.
+
+## Inverse selectors and nearby rational seeds — 2026-11-27 UTC
+
+Contracted-rotation worker report:
+`/tmp/pi-m4-contracted-rotation-connection-20261127/report.md`, SHA-256
+`faaffdf470df01c9b18620748b85cbca1768bd56ed2b74cce89f70f4a0ecdcdd`.
+Parent manifest SHA-256
+`7850835f566aff95c32015599ed88d733a9aa6c74edd1ca37686041ad88d22a0`
+binds 38 files. Unchanged replay passed with identical output and sixteen
+originals preserved. Independent `/root/contracted_selector_review` ran
+18:15:40--18:18:42 UTC within six minutes. Full capture:
+`/tmp/pi-m4-contracted-paper-review-20261127.txt`, SHA-256
+`784505d3ce73674ee0f9643312b6fc457f6a0e02f69dd01bd718560870261ff7`.
+**D: none. I1: implemented:** the synthetic-history obstruction requires
+continuity outside finitely many breakpoints. Focused review at
+18:20:22--18:20:28 verified the immutable clarification; full capture
+`/tmp/pi-m4-contracted-paper-review-focused-20261127.txt`, SHA-256
+`5fbc34bd52ab5c622eab2536c9c4c9c6ccfc28982bac6c9a4a7192841bc7ef4f`.
+**Q1/Q2: retained open:** actual-history-preserving selection, and a precise
+backward-chain consumer for an algebraic alternative. The source's external
+transcendence proof was not audited; the discontinuity qualification was
+inspected in source text and rendered pages. No stronger draft claim is used.
+
+Global-history worker report:
+`/tmp/pi-m4-global-inverse-history-20261127/report.md`, SHA-256
+`cd82c583b444e9dcb443465708f4ac9724acf50b981920f52efa2a187be091d0`.
+Parent packet `/tmp/pi-m4-global-inverse-parent-review-20261127/` has manifest
+SHA-256 `9e822a73b39f7ab47eb4d9ce3738bae6c992efaf91b5280bdac12c0af3416e3e`,
+binding 41 files. Unchanged replay matched 4,848 exact assertions, empty
+stderr and all 31 originals. The failed overly tight real bound is retained;
+the corrected bound is `16^(1-j)`. Parent reconstruction clarifies that each
+fixed rational competitor retains asymptotic denominator growth; exact
+profiles and uniform-in-family controls are not retained. Independent paper
+review by `/root/contracted_selector_review` ran 18:28:15--18:31:18 UTC
+within six minutes. Complete capture:
+`/tmp/pi-m4-global-inverse-paper-review-20261127.txt`. **D: none. I1/I2:
+implemented:** the original 240-root count constrains times 1 and 2 (the
+production summary omits that count); unwrapped state differences are exact,
+while normalized differences include an integer. The immutable parent
+`clarification.md` records both without editing the original evidence.
+**Q1: retained open:** actual-history arithmetic regularity. The simultaneous
+survivor-count question remains unproved and is not adopted as promising.
+
+Both full adversarial guides and the replacement procedure apply. Source
+and critic skills were applied to the assessed material. Finite checker
+fixtures do not certify the universal arguments; no Lean theorem or M4
+acceptance is claimed. The separately active AGM discovery is outside the
+adopted scope.
+
+Full four-path integration review by `/root/finite_log_independent_review`
+ran 18:34:41--18:38:28 UTC within ten minutes. Baseline `ff5a5dbc`;
+initial diff SHA-256
+`a2dac1aac0075d1bb5503af5e024d0cdd5bb658095ee9a8e852ede5a3595a857`;
+manifest SHA-256
+`0382ada59add123dcdbe43a78f827ec8420c24fd5791196797fbb1d7abdc763a`.
+All 132 bound files and the live diff matched. **D: none. Prior I items:
+verified implemented. Integration I1: implemented and verified** in focused
+review at 18:39:34--18:39:44 UTC: explicitly use circle sums and differences.
+Its complete delta SHA-256 is
+`aaf650671346bca7c1a0f6133045238ae14be2a50fc363dd2bc6cfa61a29142c`.
+**Q1/Q2: retained open.** Complete captures, frozen scope and focused delta
+are in `/tmp/pi-m4-inverse-integration-review-20261127/`. Both full guides,
+critic/source skills and replacement procedure applied. Source/receipt limits
+remain as above; no reviewer execution, mutation, service or delegation.
+Documentation (93), process tests (38), whitespace and preservation checks
+passed; unchanged Lean was not rebuilt. Only factual outcome records follow
+the focused repair.

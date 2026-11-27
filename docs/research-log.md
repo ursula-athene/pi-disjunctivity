@@ -4733,3 +4733,49 @@ its own first clock, `/root/m4_global_inverse_history`, owns only
 history ordering with exact A and the zero root, with reassessment by fifteen
 minutes. A translated survivor set or a different selected history is not a
 visitation estimate. This is ongoing discovery, not M4 acceptance.
+
+The concordance/navigation checkpoint is local commit
+`ff5a5dbc7e63fa234062420abd3957f05afe9668`, parent `ac9688f7`.
+Post-commit scope/blob/necessity inspection passed at 18:09:26 UTC, with
+empty index, clean task-owned tree and all 28 preservation hashes matched.
+The branch was eighteen ahead; no push or PR.
+
+The [contracted-inverse assessment](m4-language-auxiliaries.md#contracted-inverses-do-not-yet-select-the-actual-history)
+passed parent verification at 18:09:38--18:15:20 UTC within eight minutes.
+Unchanged replay matched output and preserved sixteen originals. Independent
+paper/source review ran 18:15:40--18:18:42 UTC within six minutes; no defect,
+one finite-breakpoint wording improvement, and two selection/consumer questions
+retained open. The immutable clarification passed focused review at
+18:20:22--18:20:28 UTC. No source application to actual avoidance was obtained.
+
+The [global inverse-history inquiry](m4-language-auxiliaries.md#full-inverse-order-does-not-isolate-the-zero-seed)
+ran 18:08:04--18:26:02 UTC within thirty minutes, with reassessment at
+18:10:15. It found an exact-A greedy failure, the essential odd-denominator
+uniqueness filter, and conditional common-hole rational competitors matching
+finite local data. Parent verification ran 18:26:29--18:27:52 within eight
+minutes; unchanged replay matched 4,848 assertions and preserved 31 originals.
+One worker real-bound failure was corrected and retained separately. Parent
+clarification preserves asymptotic denominator growth for each fixed seed;
+only exact profiles and uniform-in-family bounds are lost. Independent paper
+review ran 18:28:15--18:31:18 UTC within six minutes, with no defect and two
+wording improvements: identify the times in the finite count, and distinguish
+unwrapped from normalized states. Both are implemented in an immutable
+clarification and the production scope. Actual-history regularity remains
+open; no new Lean or visitation result is claimed.
+
+**Changed mechanism, 18:19:16--18:44:16 UTC:** fresh-context
+`/root/m4_fresh_mechanism_reset` owns only
+`/tmp/pi-m4-fresh-mechanism-reset-20261127/`. It tests AGM/Landen approximants
+with exact algebraic initialization, accounting for degree, height and
+conjugates before any digit-avoidance inference. Reassessment at 18:30:02
+changed the test from a crude full norm to successive relative traces.
+Unfinished claims are excluded from adoption; this is continued discovery,
+not M4 acceptance.
+
+Inverse-assessment full integration review ran 18:34:41--18:38:28 UTC
+within ten minutes; no defect, all prior wording items verified, and the
+selection/consumer obligations retained open. Its sole new improvement,
+explicit circle sums and differences, passed focused review at
+18:39:34--18:39:44 UTC. Exact scope and complete captures are retained in
+`/tmp/pi-m4-inverse-integration-review-20261127/`. Documentation (93),
+process tests (38), whitespace and preservation checks passed; no Lean changed.

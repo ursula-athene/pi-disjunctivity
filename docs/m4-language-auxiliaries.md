@@ -1562,3 +1562,157 @@ review found no D/I/Q items. The tested constructions separate cancellation from
 selection; they do not exclude all possible language auxiliaries. V and M4
 remain open. A next estimate must use the actual selected state to obtain
 branch-dependent cancellation or bound the resolvent at that state.
+
+## Contracted inverses do not yet select the actual history
+
+[Laurent–Nogueira, arXiv:1704.05130v3](https://arxiv.org/pdf/1704.05130v3)
+(19 March 2018), Theorem 1 p.2, gives rational rotation number for the fixed
+map `f(x)=fract(lambda*x+delta)` on `[0,1)` when both parameters are algebraic
+and strictly between zero and one. The lift is
+`F(x)=lambda*fract(x)+delta+floor(x)` (§5 p.11). The proof (§2.1 p.4) uses
+Hecke–Mahler transcendence; that external input was not independently audited.
+Rational rotation is not ordinary periodicity: §5.2 p.13 permits multivalues
+at the discontinuity. The retained Warwick PDF is the earlier three-author
+17 April 2017 draft; its stronger introductory periodicity wording is unused.
+
+For the actual carry `c_n=floor(16*y_n+A(n))`, the raw inverse is
+`y_n=(y_(n+1)+c_n-A(n))/16`. At `n>=1`, `0<A(n)<=106/819<1`, with
+`c_n` in `{0,...,16}`. Writing `D(n)=(2n+1)(4n+3)(8n+1)(8n+5)`,
+the numerator of `A(n)-A(n+1)` over `D(n)D(n+1)` has ascending coefficients
+`[110709,620136,1330440,1360896,662016,122880]`, all positive.
+Thus finitely many fixed offsets `x/16+b_i` cannot realize infinitely many
+raw inverse steps: `A(n)=c_n-16b_i` would have finite image. The offsets may
+even be irrational. A fixed contracted rotation cannot realize two distinct
+such indices, since their nonzero coefficient difference would be an integer
+of absolute value less than one. Fixed affine coordinate changes and finitely
+many bounded induced-return lengths with their natural slopes have the same
+obstruction; arbitrary slopes, nonlinear changes and unbounded returns are
+not covered.
+
+Exact centering uses `T_n=E_(n-1)` for `n>=1`, **`T_0=pi/16`**, and
+`16T_n=A(n)+T_(n+1)`. Then `x_n=fract(y_n+T_n)` obeys
+`x_(n+1)=fract(16x_n)`. The checked bridge has the same one-step index shift;
+centering does not retain rational-zero initialization or select an inverse.
+
+A useful elementary paper discriminator is stronger than the source's
+rational-rotation conclusion. Suppose `G:[0,1)->[0,1)` has finitely many
+rational breakpoints, equals `x/16+b_i` between them with rational `b_i`, and
+takes rational values at the breakpoints. Every infinite **backward** chain
+`x_n=G(x_(n+1))` is rational. Indeed, an irrational point forces the whole
+chain irrational. Choose a common denominator `q` for breakpoints and offsets.
+For `qx=u+v`, `u` integral and `0<v<1`, the branch depends only on `u`, and
+`floor(qG(x))=floor(u/16)+q*b_i`. The cell sequence is an infinite reverse
+path of a finite function, hence lies on its cycles. Its offsets are periodic,
+say with period `p`; iteration gives
+`x_n=16^(-kp)x_(n+kp)+B_n*sum_(j<k)16^(-jp)` with rational `B_n`.
+Boundedness then forces `x_n=B_n/(1-16^(-p))`, a contradiction. The grid
+argument uses the reciprocal-integer slope, not every rational contraction.
+
+There is a genuine restricted inverse construction. For the half-open circular
+arc `J={fract(c+s):0<=s<1/16}`, let `t=fract(16c)` and
+`G_J(x)=fract(c+fract(x-t)/16)`. This is the unique inverse into `J`;
+conjugating by `x->fract(x-t)` gives `fract(x/16+fract(-15c))`.
+Actual eventual confinement to this arc supplies an actual backward chain.
+Rational `c` gives the rational-selector contradiction above. Algebraic `c`
+with nonzero translation meets the source contract, but needs a separate
+backward-chain consequence before use. Arbitrary avoidance supplies neither
+confinement to length `1/16` nor a suitable endpoint. Closed or merely limiting
+arcs need separate endpoint control: `x/16+15/16` on `[0,1)` has rotation zero
+but no periodic point, with iterates of zero `1-16^(-k)`.
+
+The binary base-16 survivor set `K` has two predecessors `x/16` and `(x+1)/16`
+for every `x` in `K`. A synthetic sequence containing every binary block
+arbitrarily late forces any history-preserving selector to be discontinuous
+at every point of `K`; it cannot be continuous outside finitely many
+breakpoints. These comparisons lose the actual pi seed. A synthetic positive
+rational forcing with zero seed also defeats immediate greedy reversal;
+the exact-A test below is the stronger initialization discriminator.
+
+The first missing implication is **actual avoidance -> one fixed rational
+finite selector following every sufficiently late centered predecessor**.
+The theorem does not construct that selector. An algebraic alternative needs
+its own exact autonomous map and backward-chain consumer, with endpoints
+retained. Raw finite-branch reversal and generic hole-to-selector inference
+are suspended. This is reviewed paper mathematics, not a new Lean result;
+V/M4 and the checked frontier are unchanged.
+
+## Full inverse order does not isolate the zero seed
+
+The exact-A two-step fixture strengthens the preceding synthetic greedy test:
+
+```text
+actual:          0 -> 2/15 -> 1076/4095,       carries (3,2),
+greedy reversal: 1076/4095 -> 1/120 -> 7/128,  forward carries (4,0).
+```
+
+At depth m, all unrestricted roots of the actual terminal y_m are exactly
+`j/16^m`, `0<=j<16^m`: the composed map is `fract(16^m*x+B_m)`.
+Zero is an ambient minimum, but it is also the **unique odd-denominator
+root**. The other roots therefore cannot test a proposal retaining that
+arithmetic condition. At a single step with odd-denominator target z, exactly
+one of the sixteen canonical branches `(z+c-A(n))/16` has odd denominator:
+`c=A(n)-z mod 16`, using odd-denominator inverses in the residue ring.
+This arithmetic selector is discontinuous in the real topology. Near any
+interior target, large odd multiples Q of the denominator of A allow rational
+targets r/Q in each required residue class, with mesh 16/Q and distinct
+inverse limits. This rules out a uniform finite interval rule on its whole
+rational domain, not a special rule along the actual history.
+
+A stronger, conditional paper result retains rational nearby seeds.
+**If V fails**, there are nonzero positive rational seeds approaching zero
+in the real topology and every fixed Q_p whose exact-A trajectories all
+miss one common smaller open interval. Every fixed actual carry prefix
+eventually agrees. This does not retain the exact zero seed or necessarily
+the original full forbidden cylinder.
+
+Work on the circle R/Z; sums and differences below are modulo one.
+The omega-limit set K of the actual y sequence is a proper compact invariant
+set for `T(x)=16x mod 1`, since A(n)->0.
+An interval expands onto the circle, so K is nowhere dense. The full orbit
+closure L is K plus countably many orbit points; it is compact and, by Baire,
+nowhere dense. Define
+
+```text
+F_p={16^r/(16^p-1):0<=r<p},
+H=(union_(p>=1)F_p) union {0} union {16^-r:r>=1}.
+```
+
+H is compact and countable: as p grows, each point of F_p differs from
+`16^(-(p-r))` by at most `1/(16*(16^p-1))`. The set L+(H-H) is compact
+and a countable union of nowhere-dense translates, hence nowhere dense.
+Any initially missed open interval contains a smaller open J disjoint from
+it. For a seed delta, exact subtraction gives
+`z_n=fract(y_n+16^n*delta)`; thus every seed with all offset phases in H-H
+has its entire trajectory outside J, including the transient.
+
+For j>=2 set N=j!, P=N^2+1 and
+`delta_j=16^j*(16^N-1)/(16^P-1)`. Its offset phases belong to H-H, since
+it is a difference of two members of F_P. It has odd reduced denominator,
+`0<delta_j<16^(1-j)` and `v_2(delta_j)=4j`. For a fixed odd prime q and
+any M>v_q(15), eventually `phi(q^M)` divides j!, giving numerator zero and
+denominator 15 modulo q^M. Hence `v_q(delta_j)>=M-v_q(15)`, so delta_j
+approaches zero in each fixed Q_q. This is **not adelic convergence**:
+the reduced denominators introduce primes outside every fixed finite set.
+If `delta<min_(1<=n<=M)(1-y_n)/16^n`, positive perturbation preserves the
+first M carries and the state differences equal `16^n*delta`, even when
+some y_n=0. It follows that every fixed finite collection of local congruences
+on a fixed initial window also agrees eventually. Exact equality at zero
+is not one of these finite-precision conditions.
+
+The losses require care. For each **fixed** reduced seed a/d, the actual
+and perturbed reduced denominators satisfy `q_n/d<=q'_n<=d*q_n`. Their
+unwrapped states differ by `16^n*a/d`; normalized states differ by that
+quantity minus an integer. Each denominator therefore divides d times the
+other. Fractional parts preserve denominators.
+Thus any established exponential denominator-growth rate transfers to each
+fixed competitor. What is lost is the exact numerator/denominator history,
+uniform seed height and uniform constants/thresholds across the family.
+The construction supplies no uniform all-future local matching after carries
+diverge, no counterexample to V, and no pole-specific visitation estimate.
+
+Pure inverse-order selection is suspended: avoidance has not supplied a
+finite actual-history rule. The exact zero and four-pole arithmetic might
+still support a different estimate, but finite-precision initialization and
+root minimality do not provide one here. The topology, congruences and
+denominator comparison are paper arguments; finite rational fixtures do not
+certify them in Lean. V/M4 and the checked frontier remain unchanged.
