@@ -4225,3 +4225,72 @@ The restricted-prefix checkpoint's full integration review completed at
 remains open. Documentation (93), process tests (38), whitespace and
 preservation checks passed. No Lean change or rebuild; the ongoing
 nonlinear-period inquiry remains outside this reviewed result.
+
+**Quadratic-period enclosure and primitive cost — 2026-11-27 UTC:** the
+restricted-prefix checkpoint is local commit
+`fa00e24728bda3d391c16f8cf9dc6f4018e395ef`. Its reviews, checks, exact
+staging and post-commit scope/blob/preservation inspection passed. The index
+was empty and task-owned tree clean; the branch was ten ahead of its
+remote-tracking reference. This run issued no push or PR.
+
+The fresh reset completed at 13:46:21 UTC, within its bound. It tested a
+separate pi-squared BBP series as a costed scalar enclosure and a mixed
+quadratic period's leading-tail cancellation. Same-cutoff comparison,
+canonical-floor terms and the avoiding model's lost hypotheses remain explicit.
+Parent read the report/checker and replayed the exact-fraction checks with
+identical receipt and all four original files preserved. Independent paper
+review completed at 13:54:39 UTC with no defect. I1--I2 were resolved in v2:
+use theta_n=y_(n+1) in the floor paragraph and distinguish the Cauchy square
+from termwise squaring. Q1 retains actual placement; Q2 retains varying
+quadratic costs and possible factorization. No visitation conclusion follows.
+
+At 13:51:32 UTC `/root/m4_unused_structure_reset` began a **20-minute**
+follow-up, deadline 14:11:32 UTC, scratch
+`/tmp/pi-m4-primitive-quadratic-cost-20261127/`. Its one question is whether
+varying primitive integer combinations of the actual linear and quadratic
+prefixes can reduce the cost of the same-cutoff enclosure. It tests an exact
+prime-product divisor of the displayed primitive quadratic's leading
+coefficient, then charges the actual scale and inverse-branch derivative.
+Primitive content and possible factorization are separate issues. The
+endpoint is a proved cost statement with its actual consumer limits, or a
+counterexample; no height bound alone is treated as phase separation. The
+preceding packet completed separate paper review; this follow-up supplies no
+adopted result before its own completion and review. V/M4 remain open.
+
+The primitive-cost inquiry completed at 14:01:33 UTC within its bound.
+Its exact odd divisor survives varying primitive coefficients, zero residual
+and content removal; complete height, factorization and normalized root error
+remain separate. Parent replay passed with identical receipt and four preserved
+originals. Independent paper review completed at 14:06:20 UTC with no defect;
+I1 was resolved in immutable v2 by distinguishing scaled and normalized branch
+coordinates. Q1 retains coupled accuracy/height; Q2 retains actual placement.
+
+Using the observed clock baseline 14:02:38 UTC, the parent undertook a
+**10-minute** rational-root consumer test, deadline 14:12:38 UTC, scratch
+`/tmp/pi-m4-quadratic-root-consumer-20261127/`. It completed at 14:04:32 UTC.
+An exact parametrization puts every rational point of the actual two-sided
+enclosure on the selected positive branch of some primitive quadratic. Its
+residual still contains the unknown distance to that point. Exact checks
+passed on 96 rational stand-ins, including 32 positive-branch and 16 zero
+boundary cases. Separate `/root/finite_log_independent_review` criticism
+completed at 14:06:23 UTC with no D/I item; Q1 retains joint height and
+placement control. No universal root-cost impossibility or visit is inferred.
+
+At its first clock reading, 14:09:46 UTC, fresh-context
+`/root/m4_higher_rank_consumer` began a **20-minute** qualitative-dynamics
+consumer inquiry, deadline 14:29:46 UTC, scratch
+`/tmp/pi-m4-higher-rank-consumer-20261127/`. It assesses at most one primary
+closed-set/nonlacunary-semigroup theorem and one actual prime-7 transfer.
+The test asks whether an additional multiplicative invariance of the actual
+omega-limit set follows, retaining floors, initialization and real defects.
+An irrational initial point does not automatically put an irrational point
+in its omega-limit set; the source consumer must handle that distinction.
+No p-adic congruence is treated as a real matching estimate. The endpoint
+is an applicable qualitative bridge or a worked failed transfer with the
+exact remaining premise. No unfinished result is adopted; V/M4 remain open.
+
+The combined quadratic-family integration review completed at 14:17:20 UTC
+with no new D/I item. Coupled complete height/accuracy and actual forbidden-set
+placement remain open. Documentation (93), process tests (38), whitespace and
+preservation checks passed. Unchanged Lean was not rebuilt. The qualitative
+prime-transfer inquiry is excluded from this reviewed mathematical result.

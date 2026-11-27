@@ -228,3 +228,266 @@ arguments. Report v3 only corrects v2's phrase "interior point": C has empty
 interior; the chosen point lies inside its hull. Both versions are preserved.
 The [review record](agy-reports/m4-continuation-review.md) owns independent
 criticism and evidence limits. No production Lean, audit or pin changes.
+
+## Quadratic periods and equal-cutoff enclosures
+
+The earlier suggestion to use an independent pi-squared approximation has
+a concrete test. Retain A and S_m, and define
+
+```text
+B(n)=16/(8n+1)^2-16/(8n+2)^2-8/(8n+3)^2-16/(8n+4)^2
+     -4/(8n+5)^2-4/(8n+6)^2+2/(8n+7)^2,
+T_m=sum_(k=0)^m 16^(m-k)*B(k),
+F_m=sum_(r>=1)16^(-r)*B(m+r).
+```
+
+The [archived dilogarithm identity](m4-prime-defect-boundary.md#the-logarithmic-and-dilogarithmic-periods)
+gives T_m=16^m*pi^2-F_m. Explicitly, expand
+-(1/2)*Li_2(1/2)+Li_2(z_+)+Li_2(z_-)=pi^2/16, with
+z_+=(1+i)/2 and z_-=(1-i)/2, in absolutely convergent series. Grouping
+exponents modulo eight gives coefficients
+16*(z_+^r+z_-^r-2*1_(2 divides r)*2^(-r/2)), exactly the seven above,
+with residue-eight coefficient zero. This series has the special value of
+the Cauchy square of the A-series, but different coefficients. The latter's
+convolution is
+
+```text
+(A*A)(n)=2*sum_r c_r*H_r(n)*A(n+r/8),
+H_r(n)=sum_(j=0)^n 1/(8j+r),  (c_1,c_4,c_5,c_6)=(4,-2,-1,-1),
+```
+
+by 1/(uv)=(1/u+1/v)/(u+v). Harmonic terms in that convolution do not
+invalidate the distinct special-value identity.
+
+For every n>=1, B(n)<0. Put x=8n and u=x-8>=0. The inequality
+16/(x+1)^2-16/(x+2)^2<8/(x+3)^2 follows from the positive polynomial
+u^4+34u^3+415u^2+2100u+3502. Also 2/(x+7)^2<4/(x+6)^2, and the remaining
+terms are negative. Thus F_m<0 and T_m>16^m*pi^2 for every m>=0.
+The sum of absolute coefficients is 66, so
+|F_m|<=66/(15*(8m+9)^2). For the original positive tail,
+
+```text
+E_m=integral_0^1 t^(8m+8)*P_A(t)/(16-t^8) dt,
+P_A(t)=(1-t)*(4+4t+4t^2+2t^3+t^4).
+```
+
+The last factor is at most 16-t^8 on [0,1], giving
+0<E_m<=1/((8m+9)*(8m+10))<1/(8m+9)^2. Rational coefficient asymptotics
+and geometric domination give m^2*E_m ->1/64 and m^2*F_m ->-1/32.
+
+At the **same cutoff m**, define approximants to x=16^s*pi by
+
+```text
+L_(s,m)=16^(s-m)*S_m,
+Q_(s,m)=16^s*sqrt(16^(-m)*T_m).
+```
+
+They satisfy L<x<Q, with exact errors
+
+```text
+x-L=16^(s-m)*E_m,
+Q-x=16^(s-m)*(-F_m)/(sqrt(16^(-m)*T_m)+pi)
+    <(11/15)*16^(s-m)/(8m+9)^2.
+```
+
+Their error ratio tends to 1/pi, independently of the scale s. In
+particular sqrt(T_(2n)) and 16^(-n)*S_(2n) both approximate 16^n*pi
+with error of order 16^(-n)/n^2. Comparing only with S_n would mistake
+a longer cutoff for an improved exponential approximation rate.
+
+There is an arithmetic cost. For every odd prime 4m+6<p<=8m+1, exactly
+one denominator among B(0),...,B(m) equals p and none is a higher multiple.
+Its coefficient is 16,-8,-4 or 2, a p-unit, so v_p(T_m)=-2. If P_m is
+the product of these primes, P_m^2 divides den(T_m). The already assessed
+ordinary PNT gives log den(T_m)>=8m+o(m), versus the archived
+log den(S_m)=6m+o(m). At m=2n, the displayed primitive quadratic for
+sqrt(T_(2n)) has denominator coefficient at least exp(16n+o(n)); the
+rational lower approximant has denominator at most
+exp((12+log16)*n+o(n)). This compares the displayed representations, not
+every possible approximation. Irreducibility is not asserted; a factorization
+could change the minimal polynomial's cost.
+
+The mixed period cancels one leading term:
+
+```text
+B(n)+2A(n)=45/(256*n^3)+O(n^(-4)),
+F_m+2E_m ~3/(256*m^3).
+```
+
+Consequently -1+sqrt(1+16^(-m)*(T_m+2S_m)) approximates pi with error
+of order 16^(-m)/m^3. This improves one inverse power, not the exponential
+rate. For arbitrary integral u,v, the exact scalar consumer is
+
+```text
+W_m=u*S_m+v*T_m,
+v*16^(m-2s)*x^2+u*16^(m-s)*x-W_m=u*E_m+v*F_m.
+```
+
+An inverse-image enclosure requires a selected monotone real branch and a
+derivative lower bound. At m=2s its linear coefficient is u*16^s, whose
+scale must be charged. For v!=0 and a fresh prime not dividing v,
+v_p(W_m)=-2 because v_p(S_m)>=-1. Hence
+log den(W_m)>=2*log(P_m)-2*log|v|. Fixed coefficients retain the lower
+exponent 8m; this bound alone does not settle varying coefficients.
+
+A model limits the coarse inference. Let the archived positive avoiding
+forcing be F, with sum F(n)/16^n=q=32/21 and leading coefficient 15/64.
+Put
+
+```text
+u(n)=(1138/1323)/(8n+1)^2-(3784/1323)/(8n+2)^2,
+B_model(n)=16*u(n)-u(n+1).
+```
+
+Since u(0)=q^2/16 and the two coefficients sum to -2, telescoping gives
+sum B_model(n)/16^n=q^2 and B_model(n)+2F(n)=O(n^(-3)). Thus a squared
+period and leading cancellation alone do not force visits. This model loses
+irrationality, the exact four-pole A and the actual seven-residue B; it is
+not a counterexample to a claim retaining those hypotheses.
+
+Finally, if S_n=M_n+theta_n with M_n integral and theta_n=y_(n+1), then
+fract(S_n^2)=fract(2*M_n*theta_n+theta_n^2). The integer part cannot be
+discarded. In addition,
+
+```text
+T_(2n)-S_n^2=2*16^n*pi*E_n-E_n^2-F_(2n)
+            ~pi*16^n/(32*n^2).
+```
+
+Its growth prevents inferring circular closeness from E_n tending to zero.
+The actual inverse-image enclosure still needs separation from Z+C_w at
+selected late scales to exclude a word-avoiding tail set. No such placement
+result follows from the improved width, period relation or denominator cost.
+
+### Varying primitive coefficients retain an odd divisor
+
+For natural m and primitive integers u,v with v!=0, write
+W_m=u*S_m+v*T_m=r/a reduced, a>0. When W_m=0 use r=0,a=1. Let
+P_split and P_inert be the products of primes in (4m+6,8m+1] congruent
+to 1 and 3 modulo 4 respectively, with empty products equal to 1. Then
+
+```text
+D_m=P_split*P_inert^2 divides a*v.
+```
+
+Indeed, at a split prime the unique p denominator occurs in both prefixes,
+and B's coefficient is four times A's. Thus for a p-unit integer h and
+p-integral sigma,tau,
+
+```text
+S_m=h/p+sigma,   T_m=4h/p^2+tau.
+```
+
+At an inert prime S_m is p-integral and v_p(T_m)=-2. Put j=v_p(v).
+If j>=1, primitiveness forces u to be a p-unit. The complete cases are:
+
+| Class | j | Additional condition | v_p(a*v) |
+| --- | --- | --- | --- |
+| Split | 0 | none | 2 |
+| Split | 1 | u+4(v/p) nonzero modulo p | 2 |
+| Split | 1 | u+4(v/p)=0 modulo p | 1 |
+| Split | >=2 | none | j+1 |
+| Inert | 0 or 1 | none | 2 |
+| Inert | >=2 | none | j |
+
+For the exceptional split row, the nonintegral term is
+h*(u+4(v/p))/p; the other terms are integral. This includes arbitrarily
+high cancellation and W_m=0. The other rows follow by the unique least
+valuation. The stated divisor follows prime by prime.
+
+At m=2s, the cleared polynomial and its exact content are
+
+```text
+Q(X)=a*v*X^2+a*u*16^s*X-r,
+g=gcd(|a*v|,|a*u*16^s|,|r|)=gcd(|v|,16^s,|r|).
+```
+
+Reducedness of r/a and gcd(u,v)=1 prove the equality, including r=0.
+Thus g is a power of two and D_m divides the nonzero leading coefficient
+a*v/g of Q_prim=Q/g. The already assessed
+[fixed-modulus PNT](m4-prime-compression.md#the-evaluated-denominator-exponent)
+gives log P_split=log P_inert=2m+o(m), hence log D_m=6m+o(m).
+This lower budget bound is uniform in varying u,v. It matches the exponential
+scale of the linear prefix's odd denominator, not its complete height.
+A joint synthetic local fixture attains the divisor exactly; it does not
+claim attainment by actual BBP prefixes.
+
+Clearing factors cancel from the normalized error comparison. With
+x=16^s*pi, epsilon_m=u*E_m+v*F_m and d=u+2v*pi,
+
+```text
+Q_prim(x)=(a/g)*epsilon_m,
+Q_prim'(x)=(a/g)*16^s*d.
+```
+
+Set alpha=16^(-m)*S_m and beta=16^(-m)*T_m. The actual bracket gives
+0<alpha<pi and beta>pi^2, so
+
+```text
+Delta=u^2+4v*16^(-m)*W_m
+     =(u+2v*alpha)^2+4v^2*(beta-alpha^2)>0.
+z=(-u+sign(d)*sqrt(Delta))/(2v),   xi=16^s*z.
+```
+
+Irrationality gives d!=0, not a uniform lower bound as coefficients vary.
+Here xi is the root selected by the sign of Q_prim'(x). Its exact error is
+
+```text
+|x-xi|=2*16^(s-m)*|epsilon_m|/(|d|+sqrt(Delta)),
+|x-xi|/(x-L_(s,m))
+  =2*|u*E_m+v*F_m|/(E_m*(|u+2v*pi|+sqrt(Delta))).
+```
+
+For fixed u,v this ratio tends to |u-2v|/|u+2v*pi|. The divisor does
+not lower-bound that ratio for varying coefficients. A certified inverse
+interval must control the derivative throughout its selected branch.
+Complete coefficient height also includes a*u*16^s/g and r/g; no optimal
+accuracy-versus-height comparison follows from the leading coefficient alone.
+
+At W_m=0, the polynomial factors into X and a primitive linear factor
+(v/g)X+u*16^s/g. The zero root loses the divisor; the nonzero root
+xi=16^s*T_m/S_m retains it. Positivity of A and negativity of B past zero
+give 16^(-m)*S_m>=47/15>3 and 16^(-m)*T_m<=12104/1225<10. Thus
+T_m/S_m<10/3<2*pi, and that nonzero root is the selected branch for either
+sign of v. Its error ratio to the direct
+linear lower approximation tends to 1+2/pi. This special reducible boundary
+does not classify factors of general quadratics.
+
+### Rational roots retain the same selection problem
+
+Factorization cannot simply be excluded. At fixed m=2s put L=S_m/16^s
+and T=T_m, so 0<L<x<sqrt(T). The rational polynomial before clearing is
+
+```text
+P_(u,v)(Z)=v*Z^2+u*16^s*Z-(u*S_m+v*T_m).
+```
+
+Every rational rho!=L is a root for exactly one projective rational pair,
+
+```text
+u/v=(T-rho^2)/(16^s*(rho-L)).
+```
+
+Take its reduced numerator and positive denominator as primitive u,v. The
+other root is rho'=(L*rho-T)/(rho-L), and
+P_(u,v)(Z)=v*(Z-rho)*(Z-rho'). The value rho=L is impossible because
+T>L^2. When L<rho<sqrt(T), both coefficients u,v are positive and
+rho'<0, so rho is the unique positive root on the selected branch.
+Rational roots on that branch are therefore dense in the existing enclosure.
+The special rho=0 case instead has W_m=0 and other root T/L; the cheap
+zero root is not in the positive enclosure.
+
+Evaluating at the actual x gives
+
+```text
+u*E_m+v*F_m=v*(x-rho)*(x-rho').
+```
+
+Choosing a rational root first thus retains its unknown distance from x
+in the exact residual. Density supplies no height budget or actual placement.
+This refutes universal irreducibility of the family, not every possible
+minimum-root-height theorem. A useful quadratic consumer must couple the
+actual coefficients, full height, tail combination, derivative and selected
+root to a separation from Z+C_w. None of the three tests supplies that step.
+All statements here remain paper mathematics; the continuation review owns
+the exact artifacts, caller checks and separate criticism.

@@ -2560,3 +2560,80 @@ Documentation (93), process tests (38), whitespace and preservation checks
 passed. No unchanged Lean build was repeated. Subsequent edits record outcomes
 only; no substantive fix was needed. This checkpoint's review is complete,
 with V/M4 still open and the nonlinear-period inquiry excluded.
+
+## Quadratic-period enclosures and their cost — 2026-11-27 UTC
+
+Baseline `fa00e24728bda3d391c16f8cf9dc6f4018e395ef`. The mathematical
+owner is `m4-shared-residuals.md`, with plan/log/handoff/review updates.
+No Lean, audit, pin or dependency changes; V/M4 remain open.
+
+Independent `/root/generating_review` completed the reset packet's original
+and focused review at 13:54:39 UTC, within its 15-minute bound. Full response:
+`/tmp/pi-m4-quadratic-reset-paper-review-20261127.txt`. **D: none. I1--I2:
+resolved:** theta_n=fract(S_n)=y_(n+1) preserves the recurrence offset, and
+Cauchy square/convolution are distinguished from termwise squaring.
+Authoritative report
+`/tmp/pi-m4-quadratic-reset-clarification-20261127/report-v2.md` has SHA-256
+`caf7a89f2798b8be3bc687d24836ba6b02e21bb340843eeaa7a532d61167ad37`.
+Its delta contains only those clarifications; the original is preserved.
+
+**Q1: retained open:** actual enclosure placement outside Z+C_w at selected
+late scales. **Q2: retained open:** varying primitive quadratic costs and
+possible factorization. The critic reconstructed the dilogarithm grouping,
+sign, exact positive-kernel tail bound, equal-cutoff comparison, fresh-prime
+cost and mixed cancellation. It checked the avoiding companion's normalization
+and lost hypotheses, full checker/receipts and all bound hashes. The archived
+source assessment was used as supplied context, not newly audited in full.
+Parent unchanged-copy replay passed with identical receipt and all four
+originals preserved. It includes one structural p=17 valuation fixture,
+not a prime/digit/phase census; finite checks do not prove universal claims.
+Both adversarial guides, critic skill and replacement procedure governed
+read-only review. No execution, mutation, service or delegation occurred.
+The primitive-cost inquiry then received separate criticism as follows.
+
+Independent `/root/generating_review` completed its original and focused
+cost review at 14:06:20 UTC. Full response:
+`/tmp/pi-m4-primitive-quadratic-paper-review-20261127.txt`. **D: none. I1:
+resolved:** branch selection distinguishes Q_prim'(x), x=16^s*pi, from
+the normalized derivative at pi. Authoritative
+`/tmp/pi-m4-primitive-quadratic-clarification-20261127/report-v2.md` has
+SHA-256 `1df903ef7b080617df1a982a0649d97280ac4e475875a386dc026cea112d6a11`.
+The critic reconstructed every valuation case, primitive content, W_m=0,
+synthetic attainment, discriminant and normalized error formulas. **Q1--Q2:
+retained open:** coupled accuracy/height and actual forbidden-set placement.
+Parent replay passed all synthetic local cases, 16 normalization identities
+and four zero-residual branch checks, with identical receipt and four preserved
+originals. Fixed-modulus PNT was used as archived context, not re-audited.
+Factorization and production integration were excluded from that paper review.
+
+Independent `/root/finite_log_independent_review` completed the parent-generated
+root-parametrization review at 14:06:23 UTC. Full response:
+`/tmp/pi-m4-quadratic-root-paper-review-20261127.txt`. Sealed report
+`/tmp/pi-m4-quadratic-root-consumer-20261127/report.md` has SHA-256
+`fe3d28e07306711c245d4466c5f0098ee4b65a53993afa03c94491d5d6c90665`.
+**D/I: none. Q1: retained open:** joint coefficient/root height, residual and
+placement. The critic reconstructed the projective pair, second root,
+positive-branch signs, zero-root boundary and residual factorization. It
+verified all four manifest-bound hashes and inspected the caller's 96 exact
+rational fixtures, including the 32 positive-branch and 16 zero-boundary
+cases. No actual BBP prefix, digit or phase was evaluated in that test.
+The independent mathematical assessment does not constitute independent
+execution or a proof of the cost packet it used only as motivation.
+
+All three review passes used both guides and the replacement procedure with
+read-only tools; original and repaired packets remain preserved.
+
+Full combined integration review by `/root/finite_log_independent_review`
+completed at 14:17:20 UTC on the five-path diff SHA-256
+`fbfeba5ea7f93a0a69f30f9329d3f5c804bd6247c04f67319d820f993817ed9b`.
+Packet `/tmp/pi-m4-quadratic-family-review-20261127/` retains the frozen
+diff, manifest, preservation inventory and complete `review-full.txt` response.
+**D/I: none additional. Q1--Q2: retained open:** coupled accuracy/complete
+height and actual forbidden-set placement. The critic independently reconstructed
+all three arguments and verified the live exact diff, all 5 production,
+30 evidence, 3 archived-context, 2 guide, 17 protected and 11 unrelated hashes.
+Documentation (93), process tests (38), whitespace and preservation checks
+passed. Unchanged Lean was not rebuilt. Subsequent edits record outcomes only;
+no substantive repair was required. This checkpoint's review is complete,
+with V/M4 open. The qualitative-dynamics inquiry contributes only its
+scope/start record here, not an adopted source theorem or mathematical transfer.

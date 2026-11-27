@@ -1014,9 +1014,21 @@ also requires exact representation degree to grow with prefix length and
 excludes sufficiently accurate fixed-degree polynomial approximation at a
 fixed start. An actual pole defeats termwise Taylor smallness after modular
 reduction, leaving collective cancellation open. Suspend these tested
-consumers without a new estimate. A fresh-context meta-plan inquiry tests
-whether nonlinear period structure provides a different costed constraint;
-no unfinished result is adopted. The log owns bounds and outcomes.
+consumers without a new estimate. The
+[quadratic-period test](m4-shared-residuals.md#quadratic-periods-and-equal-cutoff-enclosures)
+supplies a separate pi-squared series and two-sided scalar enclosure. At
+equal cutoff it improves only the leading error constant; its mixed period
+cancels one inverse-power term but retains denominator and branch costs.
+The accompanying avoiding model explicitly loses irrationality and the exact
+BBP formulas. The varying-coefficient extension retains an odd divisor of
+exponent 6m in the displayed primitive quadratic. Its normalized error still
+depends on the actual tails and derivative. Every rational point inside the
+original enclosure can also be selected as a rational positive root, so
+factorization cannot be dismissed; this parametrization gives no height or
+placement bound. Suspend these simplifications without a coupled consumer.
+A bounded qualitative-dynamics inquiry now tests an additional invariance
+condition against the actual prime transform; no unfinished result is adopted.
+Actual placement remains open. The log owns bounds and outcomes.
 V and all Lean contracts are unchanged; neither conditional wrapping nor more
 classification supplies visitation.
 

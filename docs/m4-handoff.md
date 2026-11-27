@@ -7,7 +7,7 @@ The [continued research checkpoint](#continued-research-checkpoint--2026-11-26)
 records subsequent work during the user's absence; that checkpoint does not
 terminate the ongoing M4 effort.
 The latest dated continuation is the
-[Restricted-prefix consumers and a fresh reset](#restricted-prefix-consumers-and-a-fresh-reset--2026-11-27-utc); read the
+[Quadratic-period enclosures and their cost](#quadratic-period-enclosures-and-their-cost--2026-11-27-utc); read the
 research log and actual checkout for subsequent results and current state.
 
 ## Baseline and authorized endpoint
@@ -1418,3 +1418,35 @@ whitespace and preservation checks passed. No Lean or trust boundary changed.
 A fresh-context 20-minute reset now tests nonlinear period structure against
 an actual costed consumer. The log owns its bound and outcome; no unfinished
 claim is adopted. Continue M4, whose visitation estimate remains unproved.
+
+## Quadratic-period enclosures and their cost — 2026-11-27 UTC
+
+The restricted-prefix checkpoint is local commit
+`fa00e24728bda3d391c16f8cf9dc6f4018e395ef`. Its reviews, checks, exact
+staging and post-commit necessity/preservation inspection passed. At inspection
+the branch was ten ahead of its remote-tracking reference, index empty and
+task-owned tree clean. Subsequent edits are uncommitted; no push or PR was issued.
+
+The [quadratic-period test](m4-shared-residuals.md#quadratic-periods-and-equal-cutoff-enclosures)
+uses the archived dilogarithm identity as an actual scalar enclosure. The
+pi-squared prefix provides an upper bound and the pi prefix a lower bound,
+but equal-cutoff comparison removes the apparent exponential accuracy gain.
+A mixed period cancels one leading tail term. Fresh squared-prime factors
+remain in fixed-coefficient combinations, and a squared-period companion to
+an avoiding model rejects the coarse inference alone. Its lost irrationality
+and changed coefficients are explicit. No actual forbidden-set separation follows.
+
+Parent exact-fraction replay passed with identical receipt and four preserved
+original files. Separate paper review passed after index and Cauchy-square
+wording clarifications. A separately reviewed follow-up proves the odd
+coefficient divisor for varying primitive quadratics, including zero residual
+and content removal. The normalized root error retains actual tail cancellation
+and derivative conditioning. A reviewed projective calculation realizes every
+rational point in the original enclosure as a selected positive root; density
+does not give the missing cost or placement bound. Full production integration
+review passed with no new D/I item; documentation, process, whitespace and
+preservation checks passed. No Lean or trust boundary changed.
+
+A new bounded qualitative-dynamics inquiry tests whether a prime transform
+supplies additional invariance of the actual orbit limit set. The log owns its
+bound and outcome; no unfinished source or transfer is adopted. Continue M4.
