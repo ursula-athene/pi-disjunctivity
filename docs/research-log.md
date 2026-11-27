@@ -5230,3 +5230,59 @@ The next mathematical probe tests whether fixed-depth short differences retain
 an exponential denominator in the actual initialized recurrence, including all
 new forcing terms. A fresh critic supplied a candidate argument; it is not yet
 independently checked or adopted as a theorem.
+
+
+Publication receipt,2026-11-27 22:20:58 UTC: ordinary push completed and
+`git ls-remote` verified `b5a6f2c1705102942e7c46b68a61ffb05bb9ac16` on
+`origin/feature/m4-universal-visitation` (push b7a0ab, verification c48f7e).
+The seven-path commit includes the reviewed tail comparison and durable regular
+publication instruction. Post-commit scope/blobs, empty index, owned clean tree,
+17 protected files and11 unrelated-file hashes were verified; necessity inspection
+found no required simplification. No PR was opened. This receipt is an operational
+record for the next checkpoint; confirm live state after restart.
+
+### Actual short differences and prime activation — 2026-11-27 UTC
+
+The fresh-context critique supplied an elementary gcd estimate and a fixed-depth
+test for ordinary differencing. The parent reconstructed it and proved a uniform
+extension to depth at most n^(1/2-eta), with total positive shift at most delta*n,
+for fixed 0<eta<1/2 and 0<delta<1. The actual reduced denominator still has
+logarithm at least 2(1-delta)n-o(n). The common large-prime interval keeps every
+new forcing term integral at the surviving old poles. The existing PNT in the
+progression 1 modulo 4 remains a paper input. This is a denominator bound, not
+a character-sum or visitation bound; the stated operator regime is essential.
+
+The cycle began 22:22:49 and froze 22:26:22, before its 22:34:49 endpoint.
+Its unchanged structural replay passed 83,923 checks, with identical output and
+empty stderr. No actual prefix, pi value, digit or carry was computed. The
+parent also repaired the critic's singleton activation identity: two primes
+can enter at once, so the exact complement subtracts their sum. Centered CRT
+coefficients need not individually be large; the full joint conductor remains.
+Separate Codex review completed 22:30:16: the repair was verified, no new defect
+was found, and a fixed-frequency corollary was accepted for integration.
+The [mathematical owner](m4-crt-phase.md#short-ordinary-differences-retain-an-exponential-denominator)
+and [full review record](agy-reports/m4-continuation-review.md#actual-short-difference-paper-review--2026-11-27-utc)
+retain the exact statement, proof, evidence identities and limitations.
+
+The preliminary smooth-modulus source screen did not identify an estimate for
+the coupled activated-prime product at the actual initialized numerator. It is
+not an exhaustive audit or a proof input. The next source-fit question is whether
+an available incomplete-sum theorem can handle both the surviving exponential
+denominator and its dependent complement. V, odd-carry infinitude and M4 remain
+open; no Lean declarations changed.
+
+Remote synchronization was verified at 22:27:20 and again after compaction at
+22:37 UTC: the branch still matched `b5a6f2c1705102942e7c46b68a61ffb05bb9ac16`
+(latest verification result 21de24). There were no new ready commits; this
+write-up was still awaiting integration review. The post-compaction check was
+later than the 22:35:58 check target. This records the actual cadence miss rather
+than backdating it; publication remains due promptly after the required review.
+
+The exact four-path integration review completed at 22:43:05 UTC. No new D/I
+was found; the simultaneous-activation repair and both arithmetic clarifications
+were verified in production, with Q1--Q3 explicitly retained. All evidence and
+preservation identities matched. Documentation (93), process tests (38) and
+whitespace checks passed before review; outcome-only appends receive final
+documentation and whitespace checks before the checkpoint is committed and pushed.
+The [complete cycle](agy-reports/m4-continuation-review.md#short-difference-integration-review--2026-11-27-utc)
+does not complete M4. A separate bounded source-contract inquiry is continuing.

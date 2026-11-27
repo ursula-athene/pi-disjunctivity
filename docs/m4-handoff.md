@@ -41,7 +41,11 @@ gives a later circular window for selected cutoffs, but the full actual rational
 prefix already reaches that scale at every anchor. Its fixed rational correction
 reaches still farther. Selected geometric anchors also fail the tested small
 linear-recurrence representation. Further approximation or profile refinement
-requires a distinct real-visitation consumer. The log owns bounds and outcomes;
+requires a distinct real-visitation consumer. The [actual short-difference test](m4-crt-phase.md#short-ordinary-differences-retain-an-exponential-denominator)
+retains exponentially large denominators even at the stated growing depths;
+the exact prime-activation complement also cancels the leading local kicks.
+An applicable signed character estimate for this coupled state remains missing.
+The log owns bounds and outcomes;
 this entry is not a second live status ledger.
 
 For the immediate failure record, follow the relevant mathematical owner:

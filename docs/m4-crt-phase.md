@@ -356,3 +356,122 @@ the universal paper argument. A useful new consumer must retain the actual
 branch information and obtain an additional signed or avoidance-dependent
 estimate. The raw period-cancelling route above supplies neither; V remains
 open, and research continues under the unchanged contract.
+
+
+## Short ordinary differences retain an exponential denominator
+
+This paper test keeps the actual zero-initialized S_n and every new forcing
+term. It assesses one proposed use of arithmetic differencing; it is not a
+lower or upper bound for cancellation of the resulting complex phases.
+Fix0<delta<1 and positive integer shifts h_1,...,h_r with H=sum h_i<=delta n.
+For every fixed r, uniformly over these shifts,
+
+```text
+log den(Delta_(h_1)...Delta_(h_r) S_n) >=2(1-delta)n-o(n),
+Delta_h f(n)=f(n+h)-f(n).
+```
+
+In fact this holds uniformly for1<=r<=n^(1/2-eta), for each fixed0<eta<1/2.
+The denominator is reduced and logarithms are natural. The analytic input is
+the already assessed PNT in the fixed progression1 modulo4; it is not newly
+formalized or source-proof-audited here.
+
+For integer X>=2, let L_X=lcm(1,...,X). An elementary order argument gives
+
+```text
+log gcd(L_X,16^h-1)
+ <=sqrt X*((1+tau(h))*log X+tau(h)*log16),       h>=1.
+```
+
+Primes at most sqrt X contribute at most sqrt X log X, including all their
+powers. A larger prime occurs to the first power only. Its order d modulo p
+for16 divides h and p-1. For d<=sqrt X, the product of primes with that exact
+order divides16^d-1, costing at most d log16. For d>sqrt X, p=kd+1<=X
+allows at most sqrt X choices per divisor d. Summing gives the bound.
+For any epsilon>0, tau(h)<=C_epsilon h^epsilon: use a+1<=2^a<=p^(epsilon a)
+for all sufficiently large primes, and bound the finitely many remaining
+prime factors by their finite suprema. Thus no prime-order randomness is assumed.
+
+Take the common prime set
+
+```text
+P_(n,delta)={p prime: p=1 mod4,
+                       4(1+delta)n+3<p<=8n+1}.
+```
+
+Each such p occurs exactly once in the original prefix through n, with
+coefficient numerator4 or-1 and denominator p, so v_p(S_n)=-1. Every pole
+denominator at indices n+1,...,n+H lies strictly between p and2p and is
+therefore a p-unit. Expanding the differences gives exactly
+
+```text
+Delta_(h_1)...Delta_(h_r) S_n = W*S_n+C(n),
+W=product_i(16^(h_i)-1),
+```
+
+where C(n) is an integer linear combination of A(n+1),...,A(n+H).
+Consequently every prime in the common set not dividing W survives to
+valuation-1 in the actual difference. No new forcing term is omitted.
+
+The common prime product has logarithm2(1-delta)n+o(n) by the fixed-progression
+PNT. With X=8n+6, the lost primes cost at most
+`sum_i log gcd(L_X,16^(h_i)-1)`. For fixed0<epsilon<1 this is
+
+```text
+O_epsilon(sqrt n*log n*(r+r^(1-epsilon)*H^epsilon)),
+```
+
+using concavity to bound sum h_i^epsilon by r^(1-epsilon)H^epsilon.
+For r<=n^(1/2-eta), choose epsilon<eta/(1/2+eta). The powers of n are then
+at most1-eta and1-eta+epsilon*(1/2+eta), both below1. The loss is o(n),
+uniformly over the stated shifts and depths. The common fixed-delta interval
+also makes the PNT remainder independent of these choices.
+
+For a fixed nonzero integer frequency ell,
+`den(ell*x)=den(x)/gcd(den(x),abs ell)`, losing at most log(abs ell).
+The same lower bound therefore holds uniformly over a fixed finite set of
+nonzero minorant frequencies. This connects the discriminator to the existing
+finite-frequency consumer, without providing that consumer's signed estimate.
+It rules out reducing these actual differences to polynomial-size denominators
+in the specified regime. It does not rule out cancellation at large denominators,
+a different operator, or other depth and total-shift regimes.
+
+### Prime activation has a dependent complement
+
+For N>=1, take primes p=1 mod4 in(8N+6,16N+1]. Write r_p=1 or5 according
+to p modulo8, j_p=(p-r_p)/8 and c_p=4 or-1. Define, for N<=n<=2N,
+
+```text
+R_N(n)=S_n-sum_(p:j_p<=n)c_p*16^(n-j_p)/p,
+e(ell*S_n)=e(ell*R_N(n))*product_(p:j_p<=n)e(ell*c_p*16^(n-j_p)/p).
+```
+
+This is an exact factorization of the actual prefix. At N<n<=2N its complement
+satisfies
+
+```text
+R_N(n)-16R_N(n-1)=A(n)-sum_(p:j_p=n)c_p/p.
+```
+
+The sum is essential: at N=7,n=12, both97 and101 activate, giving
+`A(12)-4/97+1/101`. The earlier proposed singleton identity was false in
+general; its N=4,n=5 fixture happens to have only41. Since A(n)=O(n^-2),
+the complement cancels the whole first-order activation sum. Treating it as
+independent of the prime factors loses actual structure before any estimate.
+
+Changing the prime decomposition alone is also not a new consumer. Centered
+CRT coefficients can individually be small: for pairwise coprime prime powers
+q_p, L=product q_p, choose |a_p|<=q_p/2 with a_p*(L/q_p)=1 mod q_p.
+Then sum a_p*(L/q_p)=1+kL, so for L*S_n integral,
+`e(S_n)=product_p e(a_p*(L/q_p)*S_n)`. The cost is the growing joint product
+and its full conductor, not necessarily exponentially large individual
+Bezout coefficients. This is ordinary CRT factorization.
+
+A usable source must control the explicitly coupled activated product at the
+actual initialized numerator and in the required short window. The preliminary
+smooth-modulus screen has not supplied that estimate. It is neither a full
+source audit nor an impossibility result for all arithmetic exponential-sum
+methods. No actual phase, raw prefix, digit or carry census was used; finite
+checks cover only pole, order, coefficient and operator bookkeeping.
+Review evidence is in the [continuation record](agy-reports/m4-continuation-review.md).
+V, actual odd-carry infinitude and M4 remain open.

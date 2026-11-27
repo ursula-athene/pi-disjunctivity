@@ -4033,3 +4033,63 @@ reviewed deltas, followed only by outcome records. The cadence publishes ready
 reviewed work every15 active minutes and at milestone/result/direction events;
 no empty commit, force push, PR or background-service promise is introduced.
 Mathematical acceptance gates and the open V obligation remain unchanged.
+
+### Actual short-difference paper review — 2026-11-27 UTC
+
+Separate Codex reviewer `post_profile_mechanism_reset` read the complete parent
+paper, checker, original critique, dispositions and relevant owner arguments
+from 22:26:43 to 22:30:16 UTC, reassessing before the 22:31:43 midpoint and
+22:36:43 deadline. Packet `/tmp/pi-m4-short-differences-20261127-2222/` retains
+report SHA-256 `ca4ad33d9017877e5c55716b744d819c1ede0c6a34c8f13da64577a8a46ad29f`,
+17-entry manifest `dec046997e991b3df0d32f893aeab3e0f0d259d8b4295b217ebcb89696061ad8`,
+checker `53d7d908b8565dce49e34d21152d04d5cb10eee8076aa74fc7a66972ea5e0da8`,
+and full returned review `78bbe7079628c74b71839c62e0105c3e12eb3d4934023e70173284e3a53f3de5`.
+The complete response was requested again after compaction and captured without
+re-reviewing. Original frozen artifacts remain unchanged.
+
+No new D was found. Parent D1, the critic's false singleton activation identity,
+is verified resolved by summing all primes activating at the index; the
+N=7,n=12 two-prime fixture distinguishes the repair. I1, the fixed nonzero
+frequency denominator corollary, is implemented in the production proposal.
+Critic I1's centered-CRT correction is accepted; critic I2's ordinary-difference
+test and the parent's growing-depth extension were independently reconstructed.
+Q1 retains the missing signed finite-minorant estimate. Q2 retains the exact
+depth/total-shift restriction and permits other methods. Q3 retains the prior
+PNT paper input, absent fresh source-proof/Lean audit and limited source screen.
+None is waived as an M4 acceptance obligation.
+
+All 17 identities matched at review time, before the production owner edit.
+The integration baseline preserves that historical owner. The caller's replay
+matched its original receipt byte-for-byte, with exit zero, empty stderr and
+83,923 structural checks; the reviewer read but did not execute the checker.
+The uniform asymptotic estimates were checked as arguments, not inferred from
+finite tests. Both full adversarial guides were applied, with proof-guide hash
+`798c3cc974c5296453f510ea9264aa8b5d17c813c8dc217a430de9b68b7d667c` and
+strategy-guide hash `c4a04d75a297c6ec361d31ab11e465e3c3e74a6c89eb590bddb03d95c243ad3b`.
+No reviewer writes, checks, builds, network, Git operations or delegation occurred.
+The paper review excludes production integration and the operational publication
+receipt. It establishes no Lean theorem, originality, character cancellation,
+actual odd-carry infinitude, V or M4 acceptance.
+
+### Short-difference integration review — 2026-11-27 UTC
+
+`finite_log_independent_review` completed the exact four-path integration review
+from 22:40:24 to 22:43:05 UTC, reassessing before its midpoint and 22:50:24
+deadline. Packet `/tmp/pi-m4-short-difference-integration-20261127-2231/` retains
+baseline `b5a6f2c1705102942e7c46b68a61ffb05bb9ac16`, diff SHA-256
+`21c1b0cef153a4dc7d8fcc627dde290b0351bde0cda051e499a868a5e22ebc28`,
+33-entry manifest `598c5715918b4126b52c88a4f77e3d7ec14fd19c8fc669c8f8573c5eb8920dfb`,
+and full returned review `e296b48f94d2ff6f99cd7e609693411377781465c93ab7270d003d5a29594689`.
+No new D/I was found. Prior D1 and all I dispositions were verified integrated;
+Q1--Q3 retain the missing signed estimate, exact operator regime and source/Lean
+limits. The parent accepts those limits without treating them as M4 acceptance.
+
+Both complete guides were read. All 33 integration entries, 17 historical paper
+entries, five paper inputs and 17 protected plus 11 unrelated-file hashes matched.
+Live files matched the proposed snapshots and patch content/ranges/blob identities
+matched the saved baselines. The historical CRT-owner mapping was checked.
+The reviewer read command-bound caller receipts for 93-document, 38-process-test
+and whitespace success, plus the structural replay; no checks were rerun.
+Remote verification remains caller evidence. No reviewer writes, builds, network,
+Git operations or delegation occurred. Only review-outcome records are appended
+after this frozen review. No mathematical acceptance status changes.
