@@ -738,3 +738,72 @@ Parent reconstruction and unchanged-copy replay passed 12,890 exact finite
 checks, exit 0, identical receipt and preserved originals. The index
 asymptotic, finite existence and compactness discussion are paper arguments.
 No infinite all-prime countermodel or actual visitation theorem follows.
+
+## Two actual lattice duals fail even after period alignment
+
+A discriminating follow-up retains the off-diagonal moments rather than
+using volume. Fix a zero coefficient prefix K>=1 and budgets b_j as above.
+For an integer dual functional w on Gamma_N, define
+
+    E_N(w,theta)=sum_(K<=j<N)b_j*abs(w_j-theta*beta_j).
+
+Every permitted lattice point satisfies
+dist(theta*sum beta_j*c_j,Z)<=E_N(w,theta). An infinite continuation adds
+the tail error abs(theta)*r_N. This box certificate can exclude a period
+only when its right side is less than 1/2. Its norm is over the entire real
+coefficient box, not the smaller feasible lattice subset.
+
+The second-kind polynomials Q_j(z)=integral(R_j(z)-R_j(t))/(z-t) dnu obey
+
+    beta_j=R_j(16)*beta_0-16*Q_j(16), beta_0=752/15-15*pi,
+    Q_(j+1)*R_j-Q_j*R_(j+1)=h_j.
+
+The Wronskian identity follows by the monic three-term recurrence, starting
+with Q_1=h_0. The determinant of consecutive beta coefficient pairs in the
+irrational basis (beta_0,1) is -16h_j. Thus consecutive periods are rationally
+independent, and D_K=beta_K*R_(K+1)(1)-beta_(K+1)*R_K(1) is nonzero.
+The endpoint values R_j(1) are positive rationals. Independence makes the
+unbounded period image dense; it provides no bounded covering conclusion.
+
+Let T_(n,j)=integral t^(n+1)*R_j(t)/(16-t) dnu. The exact prefix relation is
+V_n=16^n*sum beta_j*c_j-sum T_(n,j)*c_j. In x=t^(1/8) coordinates,
+P(x)=(1-x)(4+4x+4x^2+2x^3+x^4) and elementary beta integrals give
+
+    n^3*T_(n,j) -> R_j(1)/32,
+    n^4*(T_(n,j)-T_(n+1,j)) -> 3*R_j(1)/32.
+
+The corresponding absolute bounds are U_j/32 and 3U_j/32 after multiplying
+by n^3 and n^4, with U_j=32(j+1)^3*4^(-j). Since sum b_j*U_j converges,
+these limits pass to the weighted absolute sums with growing cutoffs.
+
+At cutoff N=p, the first Newton condition and V_0=0 make
+w_p=a_(p-1)/p^3 an integer dual. Its natural period multiple is
+theta_p=L_(p-1)*16^(p-1)/p^3, with residual -L_(p-1)*T_(p-1,j)/p^3.
+Writing S_K=sum_(j>=K)b_j*R_j(1)>0 gives error asymptotic
+(S_K/32)*L_(p-1)/p^6. This scale persists even after optimizing theta:
+the determinant beta_(K+1)*w_K-beta_K*w_(K+1) eliminates theta, and its
+nonzero endpoint constant is D_K. The two-coordinate triangle inequality
+therefore supplies a matching lower bound. In particular
+
+    inf_theta E_p(w_p,theta)=Theta_(K,B)(L_(p-1)/p^6).
+
+One adjacent-prefix stencil W_n=L_(n+1)*(V_(n+1)-V_n) is also integral.
+It cancels one endpoint power, but the same determinant proves
+inf_theta E_(n+2)(W_n,theta)=Theta_(K,B)(L_(n+1)/n^4).
+Both errors grow with logarithmic rate 4, so these two certificates fail
+eventually. The first row is primitive on the full lattice; the adjacent row
+is primitive along n+2=2^s, as witnessed by a sole nonzero newest integer
+prefix. These witnesses need not meet the analytic budgets. Hidden integer
+content therefore cannot rescue the first family or that stencil subsequence.
+
+Suspend these two estimates. Growing-support row combinations and norms on
+the actual feasible subset remain untested; neither full covering nor its
+failure follows. Frozen packet `/tmp/pi-m4-actual-period-projection-20261127/`
+has report SHA-256
+`83c8ad422e65c6d9fad38ae0615f5a24a0788eaf1ba76a307c4b569e57a7d2a9`
+and manifest SHA-256
+`de4450f0342ebfe392591b748c1837b070da983ba20a0abe170333ae9f26f56f`.
+Parent reconstruction and unchanged-copy replay passed 613 rational/symbolic
+checks, exit 0, identical receipt and preserved originals. Pi was an unevaluated
+symbol; no actual phase was computed. The asymptotics and their limits remain
+paper arguments, with no Lean theorem or visitation conclusion.

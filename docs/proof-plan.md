@@ -851,14 +851,24 @@ finds favorable averaged volume for all stronger Newton constraints, but a
 triangular toy disproves the general inference to prescribed period covering
 or a nonzero infinite model. Neither result supplies actual visits.
 
-Two changed inquiries have 20-minute reassessment bounds: test an explicit
-projection or dual estimate for the actual lattice, retaining its off-diagonal
-coefficients; and work backward from an actual missing word to a restriction
-on canonical carries that can use the rational forcing equation. More volume
-alone and finite-language-to-rational-path claims are excluded as unsupported
-bridges. The endpoint is a new discriminating fact or an explicit failed
-candidate, not another renaming of V. The review record owns integration
-status; all target contracts and Lean status remain unchanged. M4 continues.
+The [actual-dual test](m4-prime-defect-boundary.md#two-actual-lattice-duals-fail-even-after-period-alignment)
+rules out the first Newton row and one adjacent-prefix stencil under the full
+coefficient-box norm, even after optimizing their period multiplier. It does
+not settle general combinations or the feasible subset. These two certificates
+are suspended. The [canonical-borrow calculation](m4-generating-functions.md#canonical-borrow-transitions-are-sparse-but-whole-corrections-need-not-be)
+gives sparse carry-16 transitions and an exact word transfer, but whole borrow
+corrections need not be sparse. Its Hadamard word indicator has no proved
+closure under the forcing's ordinary differential equation. No formalization
+of these diagnostics is proposed without a visitation consumer.
+
+The next distinct inquiry has a 20-minute reassessment bound: test the exact
+coupling pi/4=arctan(1/2)+arctan(1/3), with series scales 4 and 9. Derive
+initialized recurrences and identify whether their joint limit set supplies
+more than a scalar sum relation. A second series radix is not invariance of
+the base-16 omega set under multiplication by 9; neither component's density
+is assumed. The endpoint is a precise usable coupling or a discriminating
+failed bridge. The review record owns integration status; all target contracts
+and Lean status remain unchanged. M4 continues.
 
 For the recurrence defined in Step 4, seek a proof of
 

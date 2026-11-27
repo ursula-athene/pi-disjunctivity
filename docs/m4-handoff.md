@@ -7,7 +7,7 @@ The [continued research checkpoint](#continued-research-checkpoint--2026-11-26)
 records subsequent work during the user's absence; that checkpoint does not
 terminate the ongoing M4 effort.
 The latest dated continuation is the
-[Analytic classes and global period covering](#analytic-classes-and-global-period-covering--2026-11-27-utc); read the
+[Borrow transitions and actual lattice duals](#borrow-transitions-and-actual-lattice-duals--2026-11-27-utc); read the
 research log and actual checkout for subsequent results and current state.
 
 ## Baseline and authorized endpoint
@@ -927,3 +927,26 @@ dependency, audit or target contract changed. Two bounded follow-ups test the
 actual lattice projection and a canonical-carry restriction from avoidance;
 the log owns their bounds and outcomes. V/Hpi/T/M4 remain open, B4/P3 retain
 visitation premises, and M5 is excluded. Research continues.
+
+## Borrow transitions and actual lattice duals — 2026-11-27 UTC
+
+The preceding analytic-class checkpoint is local commit
+`088fa55b625b2c58d3bc5b8bd3017a359601e19e`; exact six-path scope, empty
+index, preservation and necessity checks passed. Nothing was pushed.
+The [actual dual estimates](m4-prime-defect-boundary.md#two-actual-lattice-duals-fail-even-after-period-alignment)
+fail even with optimized period alignment. Only those two certificate families
+are suspended; full bounded covering remains open.
+
+The [borrow calculation](m4-generating-functions.md#canonical-borrow-transitions-are-sparse-but-whole-corrections-need-not-be)
+retains actual indexing and floors, proves sparse carry-16 transitions, and
+transfers omitted carry words using a nonzero sentinel. A changed-phase example
+shows why whole corrections need not be sparse. The nonlinear word relation
+uses Hadamard multiplication and has no proved analytic consumer.
+
+Parent reconstruction and unchanged-copy replays passed. Independent
+integration review found no defects or new improvements; the word-indicator
+and full-lattice questions remain open. The continuation review record owns
+exact scope and limitations. No Lean, dependency, pin, audit or target
+contract changed. A bounded two-series inquiry tests a distinct exact
+arctangent coupling; the log owns its bound and outcome. V/Hpi/T/M4 remain
+open, B4/P3 retain visitation premises, and M5 is excluded. Research continues.

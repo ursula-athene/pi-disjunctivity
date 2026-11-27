@@ -1405,3 +1405,48 @@ evidence. An initial read used incorrect packet filenames; corrected reads
 completed without a missing packet or recovery invocation. Subsequent edits
 record this outcome only. The two follow-up inquiries are excluded from this
 checkpoint. V/Hpi/T/M4 remain open; no Lean theorem or acceptance is claimed.
+
+## Canonical borrows and actual dual estimates — 2026-11-27 UTC
+
+Baseline is local commit `088fa55b625b2c58d3bc5b8bd3017a359601e19e`.
+The six-path scope is `m4-generating-functions.md`,
+`m4-prime-defect-boundary.md`, `proof-plan.md`, `research-log.md`,
+`m4-handoff.md` and this record. No Lean, dependency, pin, audit, tool or
+unrelated workspace change is included.
+
+Frozen evidence is `/tmp/pi-m4-canonical-carry-reset-20261127/` and
+`/tmp/pi-m4-actual-period-projection-20261127/`, including complete reports,
+contracts, separate same-session critics, checker sources, receipts and
+manifests. The parent reconstructed the borrow endpoints, transition spacing,
+sentinel transfer, changed-phase discriminator and Hadamard distinction; and
+the orthogonal Wronskian, endpoint integrals, optimized determinant lower
+bounds and primitive-row scope. No new external source was introduced.
+Prior analytic/PNT results and the referenced finite-alphabet theorem retain
+their earlier paper status.
+
+Unchanged-copy replays passed 31,883 and 613 exact checks, both exit 0,
+identical receipts and preserved originals. They are synthetic or symbolic
+diagnostics, not actual pi phases, universal asymptotic proofs or kernel
+certificates. Worker improvements retain the canonical range beyond boundedness,
+whole corrections versus transitions, ordinary versus Hadamard multiplication,
+optimal versus natural period alignment, primitive witnesses versus bounded
+ones, and full-box versus feasible-subset norms. No V consumer is established.
+
+Independent changed-file review by `/root/generating_review` is complete under
+the Codex replacement procedure, retaining full readings and verified unchanged
+hashes of both adversarial guides. Frozen scope is
+`/tmp/pi-m4-borrows-duals-review-20261127/`, diff SHA-256
+`f3f760faa4ae12df246efc0b09355423b973ea3d414e4c1b734fc985435f4f87`.
+The full returned response is `review-full.txt`, SHA-256
+`f7612769ec3a6fa2d012778c8c5e0c56fa488d447e23e3255570443b7feffc90`.
+All six production hashes and 25 evidence hashes matched. **D: none. I: no
+new improvements. Q1–Q2 retained:** the missing word-indicator estimate and
+full-lattice geometry. Neither blocks the scoped diagnostic claims.
+
+The reviewer independently reconstructed the critical arguments, including
+the optimized lower bounds and primitive-witness scope. Work was read-only
+inspection, hashing and mathematics; no checker, probe, build, extractor or
+mutation ran. Execution and preservation remain caller evidence; prior analytic,
+PNT and finite-alphabet results retain their paper status. Subsequent edits
+record this outcome only. The two-series investigation is excluded. V/Hpi/T/M4
+remain open, B4/P3 retain visitation premises, and M5 is excluded.

@@ -3090,3 +3090,48 @@ unsupported finite-language-to-rational-path implication. Each worker owns
 scratch only and a separate criticism pass; the parent owns integration.
 The user received a status update distinguishing these diagnostic advances
 from a promising proof mechanism. V/M4 remain open; research continues.
+
+**Reviewed checkpoint and changed discovery source — 2026-11-27 UTC:** local
+commit `088fa55b625b2c58d3bc5b8bd3017a359601e19e` contains the six-path
+analytic-class/rationality/lattice assessment. Exact scope, empty index,
+preservation and necessity checks passed; nothing was pushed. The canonical
+carry worker has frozen a new transition/sentinel calculation, pending parent
+integration and independent review. It explicitly does not turn rare borrow
+endings into rare whole corrections or a visitation theorem.
+
+**Next distinct inquiry, 20 minutes before reassessment:**
+`/tmp/pi-m4-two-series-coupling-20261127/` tests the actual identity
+pi/4=arctan(1/2)+arctan(1/3), with component series using scales 4 and 9.
+The endpoint is an exact initialized coupling and one discriminating test of
+whether it constrains a hypothetical proper base-16 omega set. A base-9 series
+does not by itself make that set invariant under multiplication by 9; neither
+component's density is assumed. A mere scalar period reexpression will be
+reported as such. This changes the source of ideas toward unused exact
+identities; it is not evidence yet that the approach is promising. The parent
+continues checking the preceding frozen results while this scratch inquiry runs.
+
+**Borrow and actual-dual checkpoint — 2026-11-27 UTC:** the two preceding
+packets are frozen and reconstructed. The actual-dual packet proves optimized
+box errors Theta(L_(p-1)/p^6) for the first Newton row and
+Theta(L_(n+1)/n^4) for an adjacent-prefix stencil. The exact orthogonal
+Wronskian gives the nonzero determinant needed for the lower bounds; a natural
+choice of period multiplier alone would not suffice. Primitive witnesses
+exclude hidden row rescaling in the stated cases. These two estimates are
+suspended, while general combinations and feasible-subset bounds remain open.
+Unchanged-copy replay passed 613 symbolic/rational checks, exit 0, identical
+receipt and preserved originals.
+
+The canonical packet proves the exact borrow transition table, O(N/log N)
+carry-16 count and a right-sentinel word transfer. Its lacunary changed-phase
+example retains actual future forcing but shows that the full correction can
+have upper density one. It is not the selected initialized pi orbit. The
+word-indicator relation is Hadamard, not ordinary polynomial multiplication;
+canonical range inequalities remain explicit. Unchanged-copy replay passed
+31,883 synthetic checks, exit 0, identical receipt and preserved originals.
+A read initially used an incorrect contract filename; the corrected full read
+completed. No actual phase or pi digit was computed by either checker.
+Independent integration review is complete: no defects or new improvements;
+Q1–Q2 retain the word-indicator and full-lattice gaps. All six production
+hashes and 25 evidence hashes matched; the continuation review record owns
+the full response and evidence limits. These paper diagnostics clarify failed
+bridges but do not move the V proof frontier; M4 research continues.

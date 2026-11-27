@@ -808,3 +808,74 @@ All prefix/Cartier diagnostics use synthetic forcing; actual data checks use
 only coefficients. No actual phase, pi digit, source theorem or infinite
 continuation claim is certified by those checks. The same canonical K and
 an avoidance-dependent continuation estimate remain the required bridge.
+
+## Canonical borrow transitions are sparse but whole corrections need not be
+
+For the actual orbit put t_n=fract(16^n*pi), x_n=fract(S_n)=y_(n+1),
+c_n=floor(16*x_n+A(n+1)) and d_n=floor(16*t_n). Thus c_n is the original
+carry k_(n+1), while d_n is an ordinary hexadecimal digit. Once 0<E_n<1/16,
+the canonical binary borrow e_n=1_{t_n<E_n} gives exactly
+
+    x_n=t_n-E_n+e_n,
+    c_n=d_n+16*e_n-e_(n+1).
+
+Equality t_n=E_n belongs to e_n=0. If e_n=1, then d_n=0. If e_n=d_n=0,
+positivity 16E_n-E_(n+1)=A(n+1)>0 forces e_(n+1)=0. The transitions are
+therefore (0,0): c=d; (0,1): d>=1 and c=d-1; (1,1): d=0 and c=15;
+(1,0): d=0 and c=16. Irrationality of pi excludes an infinite borrow
+episode, since it would force all subsequent ordinary digits to be zero.
+
+The paper tail asymptotic gives E_n<1/n^2 eventually. A borrow starting
+inside [M,2M) forces the next floor(log_16(M^2)) ordinary digits to vanish.
+No other start can occur there, since a start requires a nonzero digit.
+The number of starts is consequently at most
+1+M/(floor(log_16(M^2))+1); endings have at most one additional episode
+crossing the left endpoint. Splitting the count at sqrt(N) gives O(N/log N)
+carry-16 occurrences below N. This is not a bound on the number of positions
+with c_n different from d_n: an entire borrow interior has c_n-d_n=15.
+
+An exact discriminator uses alpha=sum_(j>=2)16^(-j!) in place of pi and
+x_n^*=fract(16^n*alpha-E_n). It retains the actual future forcing while
+changing initialization. Before Q=(j+1)!, throughout
+[j!, Q-ceil(3 log_16 Q)-2], its fractional phase is O(Q^-3), while
+E_n>=c/Q^2 for a fixed c>0 eventually. Thus e_n^*=1 over a fraction tending
+to one of these prefixes. Whole borrow corrections can have upper density
+one even though endings have density zero. No such density is asserted for pi.
+
+There is also a useful exact word transfer. For a fixed word w of length
+ell>=1 over {0,...,15}, choose N with E_j<16^(-(ell+1)) for j>=N.
+An ordinary block w followed by the nonzero sentinel 1 puts every t_j in
+its first ell+1 positions above that bound. All corresponding borrows vanish,
+so the first ell canonical carries equal w. Eventual carry omission of w
+therefore implies eventual ordinary-digit omission of w1. This transfers an
+omission; it supplies no contradiction or new visitation theorem.
+
+To express the proposed nonlinear bridge precisely, let l_d be the Lagrange
+indicator polynomial for d in {0,...,16}, and T C=(C-c_0)/z. Evaluate l_d
+coefficientwise, with the constant polynomial 1 represented by 1/(1-z).
+The Hadamard product of T^j(l_(w_j)^Had(C)), 0<=j<ell, has coefficient 1
+exactly at occurrences of w. Eventual omission makes this indicator series
+a polynomial. For late tail series C,D,B of carries, digits and borrows,
+
+    C-D=16B-TB,
+    l_16^Had(C)=B Had (1/(1-z)-TB).
+
+The forcing's ordinary differential equation does not close these Hadamard
+products of unknown series. Replacing coefficientwise multiplication by
+ordinary multiplication is invalid, even for C=z. Neither the transition
+bound nor word transfer supplies the missing continuation or estimate for
+the indicator. Canonical range also remains essential: for the original
+carry k and reverse tails b_n=sum_(r>=0)k_(n+r)/16^(r+1),
+T_n=sum_(r>=0)A(n+r)/16^(r+1), it requires T_n<=b_n<1+T_n at every n.
+Boundedness and the scalar value K(1/16)=pi cannot replace these inequalities.
+
+Frozen packet `/tmp/pi-m4-canonical-carry-reset-20261127/` has report
+SHA-256 `d347000d11cac5abb0d0749f2000324f24cbf90dcd8b98266acf032d902f7430`
+and manifest SHA-256
+`5259981d575b2df598979880dc25e2571590b2671f4cbe03d1f1f22c1c8c9955`.
+Parent reconstruction and unchanged-copy replay passed 31,883 synthetic exact
+checks, exit 0, identical receipt and preserved originals. They evaluate no
+actual pi digits or BBP phases and do not prove the universal counting or
+asymptotic arguments. These are paper interface results, not Lean exports or
+movement of the V proof frontier. Formalization is deferred until a consumer
+uses the actual forcing beyond the retained positive tail estimates.
