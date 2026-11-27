@@ -764,3 +764,49 @@ real phase. The E-function-zero connection is outside this review scope;
 V and M4 remain open. No Lean export, audit, dependency, pin or trust change
 is included. Final exact-diff, validation and post-commit receipts belong in
 the same packet; publication is local only.
+
+The resulting checkpoint is local commit `ccb24d0ef081bbcc7f7b5ff3a05cc97fa7853170`.
+Its final patch hash is
+`fa0943ce9794e466b0602144c934dba835865c4a182249175c8065e1963f28ce`.
+The packet's final-validation and postcommit receipts verify the exact five
+paths, empty index, unchanged protected files and preservation of unrelated
+work. No unused infrastructure or substantive simplification was found.
+No push or PR occurred.
+
+## Initialized reconstruction and language-auxiliary review
+
+The separate `/root/generating_review` reviewer completed the exact six-path review against
+`ccb24d0ef081bbcc7f7b5ff3a05cc97fa7853170`: the prime-square reconstruction
+extension, new language-auxiliary assessment, proof plan, log, handoff and
+this record. Frozen diff SHA-256:
+`362af10691eac625743a34a5ddcc7d0beb5c2f02a012d63595535155df61eac7`.
+Full returned review: `/tmp/pi-m4-initialized-review-20261126/review.md`,
+SHA-256 `a2e6c6d2ed6db2e0f2ce9dfffd05c4f539fbbc7692882558218b65d894ad694d`.
+**Defects:** none. **Nonblocking improvements:** none requested.
+**Open questions/missing evidence:** none blocking this checkpoint; V remains
+unresolved. Both adversarial guides and their unchanged hashes were verified,
+with AGENTS, the replacement procedure and argument-critic limits retained.
+The reviewer used read-only file, hash and image inspection and mathematical
+reconstruction; no checks were executed, files changed or services contacted.
+
+Parent full reports/checkers, source theorem pages and manifests
+were inspected; all three checker replays passed with matching receipts,
+preserving frozen originals. The parent independently reconstructed the
+valuation lattice and PNT costs, null-state discriminator, primitive content,
+signed/simplex cancellations, resolvent poles and root-detector degree bound.
+These are paper results, not Lean certificates or a visitation estimate.
+The new CRT-consumer investigation is outside this review scope.
+
+The reviewer specifically reconstructed the individual-factor lcm and prime
+support, exact difference lattice, fixed-modulus PNT constants, strict interior
+height/equality case, and null-state half-denominator cancellation. Language
+coverage includes the product/content calculation, source argument domains,
+tensor phase, simplex factorial and reflection, resolvent pole multiplicities,
+and restricted cyclotomic claim. All scoped hashes matched; original and
+adapted replay evidence was distinguished. The first missing V implication
+remains escaping the avoidance set, which uniqueness does not prove.
+
+The 90-file documentation and both whitespace checks passed as caller evidence.
+Final exact-diff, validation and post-commit receipts are retained in the same
+packet. No new Lean, audit, pin, dependency or trust change is included.
+Publication remains local only.

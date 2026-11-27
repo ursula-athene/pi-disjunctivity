@@ -183,3 +183,105 @@ paper arguments. Independent review found no substantive defect; its sole
 wording improvement made primality explicit and passed focused follow-up.
 There is no new Lean export, audit,
 dependency, pin or trust assumption changes.
+
+## Two-anchor reconstruction from many prime endpoints
+
+The complete-block identity has a useful joint-in-index consequence. Define
+the explicit odd clearing integer
+
+    L_N=lcm{2j+1,4j+3,8j+1,8j+5 : 0<=j<=N}.
+
+This is the lcm of the individual factors. It clears every A(j), hence S_N,
+because
+
+    A(j)=4/(8j+1)-1/(8j+5)-(3j+2)/((2j+1)(4j+3))
+
+and the last two factors are coprime. The odd prime support is exactly
+p=1 mod4 with p<=8N+5, and p=3 mod4 with p<=4N+3. For the upper bound,
+a prime 3 mod4 dividing an integer 1 mod4 has cofactor at least 3.
+For the lower bound each eligible prime itself occurs in the listed factors.
+Higher prime powers have size at most 8N+5 and contribute
+O(sqrt(N)*log N). The already assessed fixed-progression PNT gives
+log L_N=6N+o(N); no reduced-denominator survival theorem is needed.
+
+For N>=10 put
+
+    P_N=product_(N<p<=6N, p prime) p,
+    G_N=gcd(P_N,L_N), M_N=P_N*G_N.
+
+For a rational entry x, define x_0=x and
+x_(j+1)=16*x_j+A(N+j+1). Impose the finite initialized constraints
+
+    p*x_(p-1-N)=16^(p-1)*a_p mod p^2, for every N<p<=6N,
+    a_p=47/15 if p=1 mod4, and -65/21 if p=3 mod4.       (5)
+
+These are the exact anchors A(0) and Ahat(0). They are not values of a
+separately altered low orbit. Every endpoint p-1 lies in [N,6N-1], and
+p>=11 gives p^2>8p-1 and p^2>8N+5. Thus v_p(L_N) is 0 or 1, and
+all actual congruence sides are p-integral. The actual S_N satisfies (5)
+by the complete-block formula with k=1.
+
+Assume L_N*x is integral and set delta=x-S_N. Exact future forcing gives
+x_j-S_(N+j)=16^j*delta. Subtraction in (5) is therefore equivalent to
+v_p(delta)>=1 at each selected prime. Writing a=L_N*delta in Z, this says
+p^(1+v_p(L_N)) divides a. Consequently the full set of constraints is
+equivalent to
+
+    x-S_N belongs to (M_N/L_N)*Z.                       (6)
+
+The converse also preserves the rational congruence domains. Hence the
+explicit finite criterion
+
+    M_N >= 4*16^N*L_N                                  (7)
+
+makes S_N the unique such x in [0,4*16^N]. The actual state is strictly
+inside this interval: A(j)>0, A(0)=47/15 and A(j)<4/9 for j>=1 give
+0<S_N/16^N<=427/135<4. This height bound uses no pi digit.
+
+The fixed-modulus PNT gives log P_N=5N+o(N) and log G_N=4N+o(N):
+the latter combines primes 1 mod4 in (N,6N] and 3 mod4 in (N,4N+3].
+Thus log(M_N/L_N)=3N+o(N), and 3>log16 makes (7) true for every
+sufficiently large N. This proves an eventual arithmetic reconstruction
+using only two anchors, explicit forcing, a denominator cap and a real
+height bound. Neither the actual integer part nor a dyadic residue is an
+assumption. No tested N is asserted to be the universal threshold.
+
+The combined numerator modulus has logarithm 9N+o(N); the allowed numerator
+height has logarithm (6+log16)N+o(N). This is why these many cross-index
+constraints eliminate the former finite-entry perturbations, while a fixed
+number of additional digits at one prime did not. The CRT residues still
+contain the actual future forcing sums. Uniqueness does not locate the
+fractional part of their canonical representative.
+
+An actual countertest isolates that last gap. For D=A+Ahat, use
+L^D_N=lcm{odd m:1<=m<=8N+7} and P^D_N=product_(N<p<=7N)p.
+The lcm clears both forcings; the two half-denominator terms combine to
+an integer after multiplication by the odd lcm. Its initialized constraints
+have the same form, with the sole anchor D(0)=4/105. They yield
+
+    z-U_N belongs to ((P^D_N)^2/L^D_N)*Z.
+
+This spacing has logarithm 4N+o(N), so the same natural-height interval
+eventually reconstructs U_N uniquely. Yet 0<U_N<1/(16N+18): its fractional
+values always miss (1/2,1). Reconstruction alone cannot imply visitation.
+D has a different forcing and zero total period; this does not refute an
+additional A-specific estimate or V.
+
+The first missing consumer is a bound showing that the reconstructed A
+state leaves every proper word-avoidance set. Counting at most one bounded
+CRT solution does not show that it lies outside the avoidance set.
+No independence of prime residues and digit cells is assumed.
+
+Frozen report `/tmp/pi-m4-global-init-20261126/report-v1.md`, SHA-256
+`b5ce63bd96bf209ab3cc57f238d5a7b15a00e8fc0f4f85c08f995ca896055703`,
+also retains the narrower-window diagnostics and coherent-pair perturbation
+formula. Its manifest hash is
+`722770c3e913c897ddcd55bbaede3abc1a349bc245ef0a485382a4d2f530fe7e`.
+Parent reconstruction and full checker inspection cover all domains, the
+explicit lcm, valuation lattice, PNT costs and actual null-state comparison.
+The parent replayed an unchanged checker copy in a separate output directory;
+it exited 0 with a byte-identical receipt and unchanged original hashes:
+10,626 A lifts, 53,130 lattice checks, 9,440 coherent-pair identities and
+1,405 D lifts. These finite checks do not certify the universal arguments.
+Independent changed-file review found no D/I/Q items. It is paper
+mathematics, not a new Lean theorem or M4 acceptance.

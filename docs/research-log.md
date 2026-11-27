@@ -2488,3 +2488,54 @@ bounds. It must retain shared arguments, numerator sets, degree/height/error
 and source hypotheses; irrationality or transcendence alone is not a bridge.
 No finite digit search, generic complexity assumption or successful estimate
 is presumed. The parent continues integration and review in parallel.
+
+**Sine-zero outcome:** the actual product over permitted prefixes is within
+exp(O(M)) of the old node polynomial at pi. Exact primitive-content removal
+leaves log-height M*log q+O(M). Roy's fully explicit theorem applies to the
+moving argument i/q, but its degree/height cost is far larger than the
+avoidance gain. Fixed-rational E-function value bounds do not cover pi as
+a transcendental argument of a zero. Parent source-page inspection, exact
+checker replay and manifest verification passed. The
+[assessment](m4-language-auxiliaries.md) retains source hypotheses and costs.
+
+**Changed investigations, each bounded to 25 minutes:** one fresh context
+tested recursive language auxiliaries that avoid the product cost; another
+tested coupled congruences across indices while retaining actual low anchors.
+The first derived both tensor and maximal-moment signed sums: substantial
+cancellation occurs without using pi's membership. A positive resolvent does
+detect membership but has exactly one uncancelled double pole per allowed
+prefix. Cyclotomic deduplication still forces degree at least M*sqrt(3Q) in
+the stated root-detector class. The parent reconstructed these arguments,
+inspected the primary theorem pages and replayed the checker with a matching
+receipt, preserving all frozen originals.
+
+The arithmetic investigation produced a positive
+[two-anchor reconstruction](m4-prime-square-lift.md#two-anchor-reconstruction-from-many-prime-endpoints).
+The parent proposed increasing the endpoint range to remove the floor and
+dyadic assumptions; the worker simplified this to primes N<p<=6N and just
+the zeroth A/Ahat anchors. Its exact difference lattice has spacing PG/L_N,
+with logarithm 3N+o(N), exceeding the natural real height scale. The actual
+prefix is therefore uniquely characterized eventually. The parent read the
+full report/checker, reconstructed the lcm and valuation/PNT argument, and
+replayed an unchanged checker copy: byte-identical receipt, 10,626 A lifts,
+53,130 lattice checks, 9,440 coherent-pair identities and 1,405 D lifts.
+An actual null-state analogue reconstructs a sequence tending to zero, so
+uniqueness alone does not supply V. Independent changed-file review of all six
+paths found no D/I/Q items. The reviewer inspected the full reports/checkers,
+source theorem images, manifests and replay differences, reconstructing the
+arguments independently; executions remain caller evidence. No Lean certificate
+or visitation estimate follows from this review.
+
+The prior prime-square checkpoint is local commit `ccb24d0`, with five-path
+scope, empty index, unchanged protected sources and necessity inspection
+verified. It has no new Lean code and no remote publication. Current paper
+integration does not change V/Hpi/T/M4 status.
+
+**Changed consumer test, bounded to 20 minutes:** derive the explicit CRT
+class for L_N*S_N from the two-anchor conditions, retaining the full future
+forcing sums. Test a forbidden-word count or the finite Fourier minorant
+against its actual canonical representative and natural-height interval.
+The endpoint is a valid estimate or a precise cost/quantifier obstruction;
+neither a random-residue assumption nor averaging over different starting
+values is allowed. The null state is a required discriminator. This work
+continues while the parent obtains independent integration review.

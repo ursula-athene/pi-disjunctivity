@@ -701,9 +701,22 @@ The [prime-square lift](m4-prime-square-lift.md) now proves exact complete-block
 closure modulo p^2: regular finite-log sums collapse to a Fermat quotient and
 cancel the pole correction. General endpoints retain an incomplete prefix;
 the precision cannot be upgraded unchanged to p^3. This new paper result
-passed independent review and supplies no real visitation bound. A fresh source connection
-tests whether the rational-coefficient sine function's zero at pi yields a
-missing-word restriction beyond generic approximation bounds.
+passed independent review and supplies no real visitation bound. Its new
+[two-anchor extension](m4-prime-square-lift.md#two-anchor-reconstruction-from-many-prime-endpoints)
+uses many endpoints to reconstruct the actual prefix from two rational anchors,
+explicit forcing, a denominator cap and a natural height bound. It removes
+the free-entry ambiguity, while the analogous null state shows that uniqueness
+still needs an A-specific visitation estimate. This extension passed review.
+
+The [language-auxiliary assessment](m4-language-auxiliaries.md) separates
+path-independent cancellation from membership detection: sine products retain
+their height costs, signed differences cancel without using avoidance, and
+the positive resolvent detects membership but retains all its poles. The
+source hypotheses and moving-argument costs are explicit; this assessment
+passed review. The next bounded consumer test derives the actual CRT residues
+and asks for a digit-cell or Fourier estimate, retaining forcing tails and the
+canonical integer representative. Neither random residues nor uniqueness alone
+may supply that estimate.
 
 For the recurrence defined in Step 4, seek a proof of
 

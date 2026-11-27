@@ -7,7 +7,7 @@ The [continued research checkpoint](#continued-research-checkpoint--2026-11-26)
 records subsequent work during the user's absence; that checkpoint does not
 terminate the ongoing M4 effort.
 The latest dated continuation is the
-[Prime-square assessment](#prime-square-assessment--2026-11-26); read the
+[Initialized reconstruction and language tests](#initialized-reconstruction-and-language-tests--2026-11-26); read the
 research log and actual checkout for subsequent results and current state.
 
 ## Baseline and authorized endpoint
@@ -574,3 +574,43 @@ on missing-word approximation numerators beyond the rejected generic height
 arguments. Its question is exact applicability and cost, not transcendence
 alone. The log owns the bound and outcome. No new Lean or audit changed;
 V/Hpi/T/M4 remain open, M5 is excluded, and no push or PR occurred.
+
+## Initialized reconstruction and language tests — 2026-11-26
+
+The prime-square checkpoint is committed locally as `ccb24d0`. Its five-path
+scope, empty index and unchanged protected files were verified; the packet
+retains the full review, resolved I1, final validation and post-commit receipt.
+No push or PR occurred. The subsequent paper mathematics passed independent
+changed-file review with no D/I/Q items; the record retains its exact scope
+and evidence limits.
+
+The [two-anchor reconstruction](m4-prime-square-lift.md#two-anchor-reconstruction-from-many-prime-endpoints)
+is the strongest new arithmetic discriminator. For primes N<p<=6N, impose
+the complete-block p^2 identity at p-1 on a candidate driven by the actual
+forcing. Only 47/15 and -65/21 occur as anchors. With explicit clearing
+integer L_N, P the selected prime product and G=gcd(P,L_N), the exact
+difference lattice is (PG/L_N)Z. Its spacing is exp(3N+o(N)), eventually
+larger than the natural height interval of width 4*16^N. Thus the finite
+conditions uniquely recover S_N without knowing its floor or dyadic class.
+The parent reconstructed the proof and replayed the full checker with a
+byte-identical receipt; the asymptotic argument remains paper mathematics.
+
+This defeats the previously free finite-entry perturbation after adding
+many coupled identities. It does not prove visits. The actual null state D
+has an analogous reconstruction while its real values tend to zero. The next
+question is an A-specific bound locating the reconstructed state outside
+each proper word-avoidance set; a fresh bounded consumer investigation is
+deriving its exact CRT and Fourier/digit-cell interface.
+
+The [language tests](m4-language-auxiliaries.md) found explicit limitations
+for the sine-zero connection. Product smallness retains the node-polynomial
+cost; positive transfer sums forget the selected path; signed and maximal
+moment differences have exact but path-independent cancellation. A resolvent
+detects membership but has uncancelled poles at every allowed prefix, and
+cyclotomic deduplication retains large forced degree in the specified class.
+Parent source-page inspection, checker replays and manifest checks passed.
+None of these results excludes all possible auxiliary constructions.
+
+No new Lean declaration or audit is included. V/Hpi/T/M4 remain open and
+M5 is excluded. The log owns the current bounds and outcomes; this checkpoint
+continues the authorized research and does not mark an interruption.
