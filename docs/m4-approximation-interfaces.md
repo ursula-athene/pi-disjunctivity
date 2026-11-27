@@ -364,3 +364,82 @@ The order-uniform tail analysis is retained in the
 and the specified dihedral test is resolved above. Subsequent inquiries seek
 a pi-specific coupling of prefixes and a usable exact transform beyond natural
 tail truncations. A failure changes the next inquiry; it does not end M4.
+
+## Two arctangent series retain an integer-carry obstruction
+
+The exact identity u+v=pi, with u=4 arctan(1/2) and v=4 arctan(1/3),
+allows two series scales without supplying another invariant action. The
+unscaled positive angles sum to pi/4 by tangent addition on its principal
+branch. Set
+
+    P_q(m)=(4/q)*sum_(j<m)(-1)^j/[q^(2j)(2j+1)], q=2,3.
+
+The finite geometric remainder is exactly
+(4/q)(-1)^m*q^(-2m)*integral_0^1 t^(2m)/(1+t^2/q^2) dt.
+Thus the native zero-initialized states q^(2m)*P_q(m) have multipliers 4
+and 9 and vanishing signed errors from the corresponding pure period orbits.
+Blocking two terms gives U_n=16^n*P_2(2n), B_n=81^n*P_3(2n), with
+
+    U_(n+1)=16U_n+a_n, a_n=32/(4n+1)-8/(4n+3),
+    B_(n+1)=81B_n+b_n, b_n=108/(4n+1)-12/(4n+3),
+    U_0=B_0=0.
+
+The positive errors r_n=16^n*u-U_n and s_n=81^n*v-B_n satisfy
+8/[5(4n+1)]<=r_n<=2/(4n+1) and
+6/[5(4n+1)]<=s_n<=4/[3(4n+1)]. In particular they tend to zero.
+For lambda_n=(16/81)^n, V_n=lambda_n*B_n obeys
+V_(n+1)=16V_n+lambda_(n+1)*b_n. Consequently
+
+    16^n*pi=U_n+V_n+r_n+lambda_n*s_n.
+
+This identifies a different forced recurrence's circle omega set with the
+same pi omega set; it does not identify finite states with the BBP recurrence.
+The joint base-16 omega set J of (u,v) projects under circle addition onto
+the pi omega set K. Continuity gives one inclusion and subsequence compactness
+the other. This scalar projection supplies no action by 9 on J or K.
+
+The exact information loss in a native-circle shortcut is visible by writing
+M_n=floor(B_n), z_n=fract(B_n):
+
+    V_n=lambda_n*M_n+lambda_n*z_n,
+    dist_circle(V_n,lambda_n*M_n)<=lambda_n ->0.
+
+The asymptotic base-16 phase therefore depends on the native integer carry.
+It is fixed, not freely chosen: d_n=floor(81z_n+b_n) gives
+M_(n+1)=81M_n+d_n and z_(n+1)=81z_n+b_n-d_n, with M_0=z_0=0.
+The full ordered native trajectory plus this forcing reconstructs M_n.
+Its density or omega set alone does not retain that ordered information.
+Nor are all d_n ordinary base-81 digits: b_0=104.
+
+At a single fixed n and native fractional coordinate z, varying an integer
+lift M gives exactly a translate of the grid {j/81^n:0<=j<81^n} after
+applying fract(lambda_n*(M+z)), since 16^n is invertible modulo 81^n.
+This pointwise ambiguity does not produce alternative actual initialized
+trajectories. It identifies the missing residue M_n modulo 81^n and its
+correlation with U_n. Choosing balanced truncations
+m_n=floor(n log16/log9) instead only changes the scale to
+tau_n=16^n/9^(m_n) in [1,9); the remainder still tends to zero and the
+native integer part modulo 9^(m_n) remains necessary.
+
+Dense marginals and rational independence do not suffice either. Fix an
+irrational nondense gamma with digits 0/1. The points visiting every arc
+arbitrarily late under multiplication by 16 form a dense G_delta, since
+preimages of each target arc at arbitrarily late times are open and dense.
+Intersect that set with its reflection about gamma, and remove the countably
+many solutions of a*u+b*(gamma-u)+c=0 with a!=b. The a=b nontrivial cases
+are impossible by irrationality of gamma. Baire's theorem gives u,v=gamma-u
+with both marginal orbits dense and 1,u,v rationally independent, while
+their sum is nondense. These are other periods; the actual arctangent
+coefficient formulas are not retained. The countertest rejects only the
+abstract additive inference.
+
+Frozen packet `/tmp/pi-m4-two-series-coupling-20261127/` has report SHA-256
+`14e025400de4719d4fbeb66604fb1d069c3fd97188bd955700c01bbe757d066e`
+and manifest SHA-256
+`7b77071f5011aad7f418ebd328b1928870700135826fdf52ac4872e07070c828`.
+Parent reconstruction and unchanged-copy replay passed 2,078 exact coefficient,
+integrand and synthetic-carry checks, exit 0, UTC-only receipt difference and
+preserved originals. No actual arctangent/pi fractional prefix was computed.
+The topology and infinite arguments remain paper results. A useful new step
+would need a constraint on the actual native integer residues from the fixed
+forcing or Gaussian identity; the period split alone supplies no visit.

@@ -807,3 +807,149 @@ Parent reconstruction and unchanged-copy replay passed 613 rational/symbolic
 checks, exit 0, identical receipt and preserved originals. Pi was an unevaluated
 symbol; no actual phase was computed. The asymptotics and their limits remain
 paper arguments, with no Lean theorem or visitation conclusion.
+
+## Growing binomial stencils cannot overcome the clearing cost
+
+Increasing the cancellation order requires a uniform argument. Fix K>=1 and
+the same budgets b_i, put m=n+d, and consider
+
+    W_(n,d)=L_m*sum_(j<=d)(-1)^(d-j)*binom(d,j)*V_(n+j).
+
+For d>=1 and m-1>=K, its actual integer content g on the full finite
+zero-prefix Newton lattice divides d. Indeed the newest-coordinate vector
+a_m=M_m, all older coordinates zero, shows g|M_m. For each p|M_m,
+the coordinate a_(m-1) is absent from every p-row: their indices are p*l-1
+or l-1, and p|m+1. Multiplying its unit vector by a p-unit clearing all
+other primes' row moduli gives a global lattice witness. Its W-value is
+-d*Q*L_m/L_(m-1). The lcm ratio is a p-unit, since its only new factors
+4m+1 and 4m+3 are -3 and -1 modulo p. Hence v_p(g)<=v_p(d).
+This accounts for older off-diagonal rows and genuine nonprimitive cases;
+for K=3,n=6,d=7 the exact finite content is 7. It does not apply to d=0.
+
+The exact residual after removing the natural period multiple
+L_m*16^n*15^d is, up to sign, L_m times the vector
+
+    J_i=integral t^(n+1)(1-t)^d*R_i(t)/(16-t) dnu(t).
+
+Let Z be the mass of this positive kernel. The optimized raw box error is
+uniformly comparable to L_m*Z. For the lower bound, three consecutive
+coordinates suffice. Their monic recurrence at t and the corresponding
+beta recurrence at 16 show that proportionality
+(R_K(t),R_(K+1)(t),R_(K+2)(t))=lambda*(beta_K,beta_(K+1),beta_(K+2))
+would imply lambda*(16-t)*beta_(K+1)=0. On [0,1] this forces lambda=0,
+contradicting the absence of a common root of consecutive R polynomials.
+Their weighted distance from the beta line therefore has a positive minimum
+delta_K on that compact interval. This handles interior concentration points
+where the earlier two-coordinate endpoint argument would not suffice.
+
+With Q(x)=4+4x+4x^2+2x^3+x^4, the kernel density in t coordinates is
+
+    F(t)*t^(n+1/8)*(1-t)^(d+2),
+    F(t)=Q(t^(1/8))/[8*(1+t^(1/8)+...+t^(7/8))*(16-t)],
+    1/256<=F(t)<=1/8.
+
+The reference beta distribution has parameters n+9/8,d+3. Its variance
+bound, multiplied by at most 32, gives concentration uniformly at its mean
+with squared deviation at most 8/(m+41/8), including endpoint regimes.
+Normalized integrals of the three fixed polynomials consequently approach
+their values at that mean uniformly. Their distance from the beta line is
+eventually at least delta_K/2. The summable bound sum b_i*sup|R_i| gives
+the matching upper estimate, so the optimized raw error is Theta_(K,B)(L_m Z).
+
+Elementary beta integrals bound Z between
+
+    (n+1)(d+1)(d+2)/[256*(m+1)(m+2)(m+3)(m+4)*binom(m,n)]
+    and 1/[8*(m+1)*binom(m,n)].
+
+The binomial-mode bounds give log Z=-m H(n/m)+O(log(m+2)) uniformly,
+where H(q)=-q log q-(1-q)log(1-q), with H(0)=H(1)=0. Dividing by the
+actual content g<=d<=m therefore yields
+
+    log(inf_theta E_(m+1)(W_(n,d)/g,theta))
+      =log L_m-m H(n/m)+O_(K,B)(log(m+2)).
+
+Its exponential rate is uniformly at least 4-log2>0. Thus every positive
+order, including orders growing with the cutoff, fails this box certificate
+eventually. Suspend that entire binomial family. This says nothing about
+arbitrary Newton-row combinations or errors measured on the feasible lattice
+subset; it proves neither coverage nor collapse of the period set.
+
+Frozen packet `/tmp/pi-m4-growing-stencil-test-20261127/` has report SHA-256
+`e8af1d372c4f56273e228e79a683c7cf603c9c263a6aeae772b009dc032dbbda`
+and manifest SHA-256
+`6d73338440bd23c2b0a912ae7eb31e26840b5f7867f4090b6cf0d8d84c0c4b0d`.
+Parent reconstruction and unchanged-copy replay passed 16,660 exact checks,
+exit 0, identical receipt and preserved originals. They include the actual
+finite off-diagonal lattice and nonprimitive examples. Uniform concentration,
+asymptotics and the content theorem remain paper proofs, not consequences of
+those finite checks. No actual pi phase or new Lean theorem is supplied.
+
+## Single-prefix content remains subexponential on the full finite lattice
+
+The omitted d=0 case has a different content argument. Fix K>=1, m>=K,
+and let g_(K,m)>0 generate the ideal of possible a_m over the finite strong
+Newton lattice with a_n=0 for n<K. Then
+
+    log g_(K,m)=O_K(log^2(m+2)).
+
+This allows all earlier free coordinates to vary. It does not bound the
+last-coordinate spacing after those coordinates are fixed, or the real size
+of any witness. The newest-coordinate vector a_m=M_m shows g|M_m, so its
+prime support consists only of p>=7 dividing m+1.
+
+For each such p, write m+1=p^a*u with p not dividing u, and set
+
+    s=ceil((K+1)/p), ell=min{b>=0:p^b>s-1}, b0=min(ell,a-1), D=s+b0,
+    P(k)=(k)_s*product_(r<b0)(k-p^r*u), G(k)=p^(D+2)*P(k).
+
+The integral polynomial P has degree D and zero constant. Since j! divides
+Delta^j P(0), G satisfies every strong Newton condition; differences above
+degree D vanish. Define V_n=0 off the p-endpoints and recursively
+p*V_(pk-1)=chi_4(p)*16^(k(p-1))*V_(k-1)+G(k). This realizes G exactly,
+preserves the zero prefix, and gives only p-power denominators of depth at
+most v_p(n+1). Thus a_n=L_n*V_n is an integer at every index.
+
+The extra roots kill low nodes in the target p-chain. If a-1>=ell, put
+F=v_p((s-1)!)+ell(ell-1)/2. The remaining terms, indexed by b>=ell, have
+valuations D+2-a+2b+F in V_m. Their unique minimum prevents cancellation,
+giving v_p(a_m)=v_p L_m+D+2-a+2ell+F. If a-1<ell, only the newest term remains;
+its argument k=p^(a-1)*u is at least s because m>=K, so it is nonzero.
+Its valuation is O_K(log_p(m+2)). For p>K the simpler exact witness value is
+v_p L_m+3-a, since s=1 and ell=0.
+
+Every other q-row is q-integral, because these local states have only
+p-power denominators. Multiplying the whole vector by the p-unit
+product_(q!=p,7<=q<=m+1) q^J_q(floor((m+1)/q)) clears all other finite
+rows and preserves the p-valuation at the target. These are therefore genuine
+full-lattice witnesses. Summing their content upper bounds gives
+
+    log g_(K,m) <= O_K(log(m+2))
+      +log(m+1)*log(4m+3)/log7+3*log(m+1).
+
+No prime number theorem is needed for this bound. Witnesses may have very
+large real coordinates, and a finite clearing multiplier is not an infinite
+realization.
+
+A proposed matching lower bound was false: an arbitrary vector can have a
+nonzero bottom p-chain state, unlike the constructed witnesses. For K=1,m=13,
+take V_1=1/7, V_13=-16^12/49 and all other states zero. Every available
+prime-defect row vanishes, but v_7(a_13)=0 rather than the proposed lower
+bound 4. Only the proved upper bound is retained.
+
+The earlier exact prefix-tail identity and two-coordinate determinant apply
+also to the raw functional a_m at arbitrary cutoffs, giving optimized box
+error Theta_(K,B)(L_m/m^3). Dividing by g_(K,m) therefore leaves logarithmic
+rate 4. This supplies the primitive zero-order conclusion separately from
+the positive-order theorem above. It is a combination of those paper
+interfaces, not a consequence of small content alone. General dual
+combinations and norms on the actual feasible subset remain open.
+
+Frozen packet `/tmp/pi-m4-prefix-content-test-20261127/` has report SHA-256
+`ec12c66da3d475a3ef241274ae888d4848ed09e61958f3ef04d42b1c23b7d046`
+and manifest SHA-256
+`324b53efccbf1f8549b93f0ccfb5d99f4f12ecf04c00316a0e735565e269b1a2`.
+Parent reconstruction and unchanged-copy replay passed 134 synthetic cases
+with 32,679 checks, exit 0, UTC-only receipt difference and preserved originals.
+Both chain regimes, finite other-prime clearing and the withdrawn lower-bound
+counterexample are included. No bounded positive model, actual pi phase,
+Lean theorem or visitation conclusion follows from these witnesses.

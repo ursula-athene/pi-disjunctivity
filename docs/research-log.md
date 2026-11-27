@@ -3135,3 +3135,83 @@ Q1–Q2 retain the word-indicator and full-lattice gaps. All six production
 hashes and 25 evidence hashes matched; the continuation review record owns
 the full response and evidence limits. These paper diagnostics clarify failed
 bridges but do not move the V proof frontier; M4 research continues.
+
+**Borrow/dual checkpoint and growing-support test — 2026-11-27 UTC:** local
+commit `f7a2d22080a80f5dbd08068cc119079924005257` contains the reviewed
+six-path result. Exact scope, empty index, preservation and necessity checks
+passed; nothing was pushed. The two-series worker is completing its separate
+criticism; no result from that packet is yet accepted here.
+
+**Changed test, 20 minutes before reassessment:**
+`/tmp/pi-m4-growing-stencil-test-20261127/` allows the finite-difference
+order d to grow with the cutoff m=n+d, testing
+L_m*sum_(j<=d)(-1)^(d-j)*binom(d,j)*V_(n+j). Its residual kernel gains
+(1-t)^d, so the fixed-order asymptotics cannot decide it. The worker must
+compare that possible exponential cancellation with denominator cost, optimize
+period alignment uniformly including interior concentration points, and account
+for the actual integer content before treating the row as primitive. A raw
+large norm alone would not rule out division by a large common factor.
+General Newton-row combinations and feasible-subset norms remain separate.
+This is a distinct scale test, not a retry of the fixed adjacent stencil.
+
+**Separate content question, 15 minutes before reassessment:** the parent
+proposed a construction for the d=0 prefix functional's integer content on
+the full finite Newton lattice with fixed zero prefix K. The candidate is
+log(content(a_m))=O_K(log^2(m+2)) for m>=K, despite the rare large newest-stage
+moduli. For each active prime, a scaled integral polynomial defect would
+vanish on the required initial indices and selected low p-chain nodes;
+its finite differences supply the strong Newton bounds, and distinct remaining
+chain valuations would prevent cancellation. Multiplication by a p-unit can
+then clear other primes' finite rows. The worker in
+`/tmp/pi-m4-prefix-content-test-20261127/` must verify or refute this construction,
+including integrality, zero initialization, threshold choices and uniform
+valuation bounds. It is not yet a proved content result or a bounded-box
+witness. The d>=1 growing-stencil packet remains separately scoped.
+
+**Fresh-context positive-consumer reset, 20 minutes before reassessment:**
+`/tmp/pi-m4-positive-consumer-reset-20261127/` starts from the exact V contract
+and a compact failure map. The source of ideas changes again: seek one actual
+visitation consumer using unused exact forcing structure, or one precise
+neighboring-theorem bridge with a discriminating check. Further finite-pole
+classification, generic countermodels, full-entropy reformulations and marginal
+density claims are not sufficient endpoints. The worker must identify the
+first unsupported implication and why the relevant comparison models lack
+its proposed input, then criticize the candidate separately.
+
+This checkpoint distinguishes learning from proof progress. The preceding
+tests have clarified failures of carry, radix and lattice shortcuts; none has
+yet supplied a surviving positive argument for V. Their negative conclusions
+do not establish impossibility. The fresh pass and the ongoing content check
+continue within the same authorized M4 objective, with no promise of a proof.
+
+**Three completed paper tests — 2026-11-27 UTC:** the two-series packet derives
+the exact native and common-base recurrences. It identifies the actual integer
+carry residue lost by marginal-circle shortcuts and gives a Baire countertest
+to dense-independent-marginals implying a dense sum. The full native trajectory
+still reconstructs its carries; the pointwise lift grid is not an alternative
+actual trajectory. Parent reconstruction and unchanged-copy replay passed
+2,078 exact checks, exit 0, UTC-only receipt difference, originals preserved.
+
+The growing-stencil packet proves actual content divides the positive order,
+then uses three-coordinate separation and uniform beta concentration to handle
+all orders and all endpoint/interior regimes. The primitive optimized error
+retains exponential rate at least 4-log2. Parent reconstruction and unchanged-
+copy replay passed 16,660 checks, exit 0, identical receipt and preserved
+originals, including genuine nonprimitive finite examples. The whole positive-
+order binomial family is now suspended for that full-box certificate.
+
+The parent-generated single-prefix candidate survived separate worker
+verification: its finite-lattice content has log size O_K(log^2(m+2)).
+The p-local polynomial construction covers both chain regimes and other-prime
+clearing. A proposed universal lower bound omitted a free bottom chain state;
+it was withdrawn and an exact counterexample retained. No witness-height bound
+is claimed. Parent combination with the earlier raw prefix-tail/determinant
+norm gives primitive zero-order logarithmic error rate 4. Unchanged-copy replay
+passed 134 synthetic cases and 32,679 checks, exit 0, UTC-only receipt difference
+and preserved originals. Independent combined integration review is complete:
+no unresolved defects or required improvements; Q1–Q2 retain the bounded
+feasible-lattice and actual joint-carry gaps. It independently reconstructed
+the new zero-order norm interface and verified all six production hashes and
+32 evidence hashes. The continuation review record owns the full response
+and limits. No actual pi phases or new Lean results occur in this checkpoint; the fresh
+positive-consumer pass continues separately.

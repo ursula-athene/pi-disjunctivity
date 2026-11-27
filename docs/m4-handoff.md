@@ -7,7 +7,7 @@ The [continued research checkpoint](#continued-research-checkpoint--2026-11-26)
 records subsequent work during the user's absence; that checkpoint does not
 terminate the ongoing M4 effort.
 The latest dated continuation is the
-[Borrow transitions and actual lattice duals](#borrow-transitions-and-actual-lattice-duals--2026-11-27-utc); read the
+[Growing stencils and native carries](#growing-stencils-and-native-carries--2026-11-27-utc); read the
 research log and actual checkout for subsequent results and current state.
 
 ## Baseline and authorized endpoint
@@ -950,3 +950,29 @@ exact scope and limitations. No Lean, dependency, pin, audit or target
 contract changed. A bounded two-series inquiry tests a distinct exact
 arctangent coupling; the log owns its bound and outcome. V/Hpi/T/M4 remain
 open, B4/P3 retain visitation premises, and M5 is excluded. Research continues.
+
+## Growing stencils and native carries — 2026-11-27 UTC
+
+The borrow/dual checkpoint is local commit
+`f7a2d22080a80f5dbd08068cc119079924005257`; exact six-path scope, empty
+index, preservation and necessity checks passed. Nothing was pushed. The
+[uniform stencil result](m4-prime-defect-boundary.md#growing-binomial-stencils-cannot-overcome-the-clearing-cost)
+includes growing order and actual integer content. The
+[single-prefix content result](m4-prime-defect-boundary.md#single-prefix-content-remains-subexponential-on-the-full-finite-lattice)
+handles zero order separately. Both reject the specified full-box certificate,
+while general row combinations and actual bounded feasibility remain open.
+
+The [arctangent split](m4-approximation-interfaces.md#two-arctangent-series-retain-an-integer-carry-obstruction)
+retains canonical native integer carries and shows why fractional marginal
+information is insufficient. Its additive countertest loses the actual
+arctangent formulas. None of these results supplies a visitation argument.
+
+Parent reconstruction and unchanged-copy replays passed. Independent
+integration review found no unresolved defects or required improvements,
+including in the zero-order norm interface; Q1–Q2 retain bounded feasibility
+and actual joint-carry estimates. The continuation review record owns scope
+and limits. A proposed content lower bound was withdrawn
+with an exact counterexample; only the upper theorem is retained. No Lean,
+dependency, pin, audit or target contract changed. A fresh-context bounded
+pass seeks an actual positive V consumer; the log owns its bound and outcome.
+V/Hpi/T/M4 remain open, B4/P3 retain visits, and M5 is excluded. Research continues.

@@ -861,14 +861,27 @@ corrections need not be sparse. Its Hadamard word indicator has no proved
 closure under the forcing's ordinary differential equation. No formalization
 of these diagnostics is proposed without a visitation consumer.
 
-The next distinct inquiry has a 20-minute reassessment bound: test the exact
-coupling pi/4=arctan(1/2)+arctan(1/3), with series scales 4 and 9. Derive
-initialized recurrences and identify whether their joint limit set supplies
-more than a scalar sum relation. A second series radix is not invariance of
-the base-16 omega set under multiplication by 9; neither component's density
-is assumed. The endpoint is a precise usable coupling or a discriminating
-failed bridge. The review record owns integration status; all target contracts
-and Lean status remain unchanged. M4 continues.
+The [growing-order test](m4-prime-defect-boundary.md#growing-binomial-stencils-cannot-overcome-the-clearing-cost)
+now rules out every positive-order binomial stencil under the same box
+certificate, after division by its actual integer content and optimization
+of the period multiplier. A [separate content bound](m4-prime-defect-boundary.md#single-prefix-content-remains-subexponential-on-the-full-finite-lattice)
+settles the primitive zero-order prefix certificate. These results leave
+arbitrary Newton-row combinations and feasible-subset estimates open; they
+do not establish or refute full-family moment models.
+
+The [two-series calculation](m4-approximation-interfaces.md#two-arctangent-series-retain-an-integer-carry-obstruction)
+derives initialized arctangent recurrences with scales 4 and 9, but conversion
+to the common base depends on native integer carries. Marginal density or
+omega sets omit that ordered information; even dense rationally independent
+marginals can have a nondense sum. The actual coefficient formulas could
+still matter, but no new invariant action or visit follows from this split.
+
+A fresh-context inquiry has a 20-minute reassessment bound: work backward
+from actual eventual avoidance to one positive consumer using unused exact
+forcing structure, or a precise neighboring-theorem bridge with a discriminating
+check. More classification without a visitation consumer and renaming V as
+full entropy are excluded as endpoints. The review record owns integration
+status; all target contracts and Lean status remain unchanged. M4 continues.
 
 For the recurrence defined in Step 4, seek a proof of
 

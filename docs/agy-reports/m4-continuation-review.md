@@ -1450,3 +1450,62 @@ mutation ran. Execution and preservation remain caller evidence; prior analytic,
 PNT and finite-alphabet results retain their paper status. Subsequent edits
 record this outcome only. The two-series investigation is excluded. V/Hpi/T/M4
 remain open, B4/P3 retain visitation premises, and M5 is excluded.
+
+## Growing stencils, prefix content and native carries — 2026-11-27 UTC
+
+Baseline is local commit `f7a2d22080a80f5dbd08068cc119079924005257`.
+The six-path scope is `m4-approximation-interfaces.md`,
+`m4-prime-defect-boundary.md`, `proof-plan.md`, `research-log.md`,
+`m4-handoff.md` and this record. No Lean, dependency, pin, audit, tool or
+unrelated workspace change is included.
+
+Frozen evidence is `/tmp/pi-m4-two-series-coupling-20261127/`,
+`/tmp/pi-m4-growing-stencil-test-20261127/` and
+`/tmp/pi-m4-prefix-content-test-20261127/`, each with complete report,
+contract, same-session critic, checker source, receipt and immutable manifest.
+The parent generated the prefix-content candidate; a separate research worker
+verified it. That is not the independent integration review. Parent full
+reconstruction covered the native carry/omega-set distinction and additive
+countertest, uniform optimized stencil error including actual content, and
+both polynomial-witness chain regimes with finite other-prime clearing.
+
+The production zero-order conclusion explicitly combines the content bound
+with the already reconstructed raw-prefix norm. The arithmetic report leaves
+that norm as an external premise; the earlier exact prefix-tail identity and
+two-coordinate determinant discharge it at arbitrary large cutoffs. No small
+content-to-bounded-feasibility inference is made.
+
+Unchanged-copy replays passed 2,078, 16,660 and 32,679 exact checks, all exit 0.
+The first and third receipts differ only in UTC; the second is identical.
+Frozen originals are preserved. All are coefficient, symbolic or synthetic
+diagnostics, not actual pi phases or certificates for the universal proofs.
+No new external source is introduced; earlier analytic/PNT inputs retain
+their paper status.
+
+Same-session corrections retain principal angle branches, omega rather than
+finite-orbit equality, full trajectory versus marginal information, and
+actual forcing lost by the additive countertest. The stencil proof accounts
+for nonprimitive rows and interior concentration. The prefix construction
+states the strict zero-prefix convention, minimal threshold and finite
+clearing horizon. Its attempted matching lower bound was withdrawn with an
+exact full-lattice counterexample; only the upper bound survives.
+Independent changed-file review by `/root/generating_review` is complete under
+the Codex replacement procedure. Full readings of both adversarial guides
+were retained and unchanged hashes verified. Frozen scope is
+`/tmp/pi-m4-stencil-content-review-20261127/`, diff SHA-256
+`cffe8845fee7be76bbe392d7a9fabe7558c717f9f2fdb6f396825e4baf1e0f95`.
+The complete returned response is `review-full.txt`, SHA-256
+`d5e556ace7e75191b4ee5791dd287d04a73444b205a44f74750f0d8d96540223`.
+All six production hashes and 32 evidence hashes matched. **D: no unresolved
+defects. I: none required. Q1–Q2 retained:** bounded feasible-lattice geometry
+and actual joint-carry distribution. The withdrawn lower bound remains excluded.
+
+The reviewer independently reconstructed all three arguments and the new
+zero-order norm interface, rereading the prior tail/determinant report. It
+also confirmed receipt equality with UTC fields removed where applicable.
+Its work was read-only inspection, hashing and mathematics; no checker, probe,
+build, extractor, mutation or service call ran. Execution and preservation
+remain caller evidence. Prior analytic, orthogonal-polynomial and PNT inputs
+retain their paper status. Subsequent edits record this outcome only. The
+fresh positive-consumer inquiry is excluded. V/Hpi/T/M4 remain open, with
+B4/P3 visitation premises unchanged.
