@@ -2906,3 +2906,77 @@ greedy selection on discrete grids, natural odd-lcm inclusion and all changed
 scope limits. An upper bound near 6 is not exact rate 6, nor the strong prime
 defect information. This inquiry tests a missing hypothesis of the countermodel;
 it does not assume an early-window visit or stop M4 research.
+
+**Controlled-height outcome and changed question — 2026-11-27 UTC:** the
+frozen Jacobi packet establishes the claimed upper ceiling and a lower
+liminf bound 4, leaving exact rate 6 and strong prime defects absent. Parent
+reconstruction and official DLMF hypothesis inspection passed; unchanged-copy
+replay passed 42,823 finite checks, exit 0, identical JSON and preserved
+originals. This remains paper mathematics pending independent integration
+review. The previous Gaussian/analytic checkpoint is local commit `9a4b896`;
+its exact five-path scope, empty index and preservation/necessity checks passed.
+
+**Two distinct 20-minute tests before reassessment:**
+`/tmp/pi-m4-exact-envelope-model-20261127/` tests direct moment grids against
+the natural odd clearing denominator, using triangular orthogonality rather
+than bounding coefficient denominators. The endpoint is a proof or obstruction
+to exact eventual denominator equality while retaining an analytic positive
+model with a nondense irrational period. Separately,
+`/tmp/pi-m4-congruence-moment-model-20261127/` tests whether stagewise CRT
+can retain the reviewed strong prime defects for A/H while fixing D, using
+their common clearing envelope. Its endpoint is exact compatibility and
+height/noncancellation bounds, with analytic existence supplied only if the
+first worker proves the required grid estimates. These are unproved parent
+proposals; neither assumes that a finite check realizes an infinite model.
+Success would isolate the exact rational-function forcing more sharply;
+failure could identify a genuinely restrictive arithmetic condition. M4
+research continues with its unchanged unconditional target.
+
+**Additional parent test, 20 minutes before reassessment:** the CRT worker
+has identified a scope distinction: its construction concerns the displayed
+pointwise prime-defect laws, not the common analytic interpolants or all
+normalized divided differences. The parent will derive the necessary Newton
+difference congruences from the already reviewed Taylor bounds and compare
+their combined modulus at indices n+1 having many prime factors against the
+moment-grid freedom. The endpoint is an explicit cost inequality or its
+failure, not a claim that excess modulus disproves existence. This tests
+whether the stronger analytic family escapes the inexpensive pointwise CRT
+construction; no real visitation consequence is assumed.
+
+**Outcomes of these tests — 2026-11-27 UTC:** direct moment-grid selection
+succeeds, with eventual reduced denominator exactly L_A,n, while retaining
+an irrational nondense period and the previous analytic properties. The
+separate arithmetic packet proves a triangular CRT and two-residue sieve on
+the common A/H envelope. Parent reconstruction of the universal-history
+interface supplies the combined model with the specified pointwise laws,
+unchanged D and denominator rate 6 for both companions. Full Taylor/Newton,
+normalized divided differences and original incomplete-block compression are
+explicitly excluded. Unchanged-copy replays passed 28,412 analytic and 10,757
+arithmetic checks, exit 0; receipts are identical except the latter's UTC,
+and frozen originals are preserved. These are finite diagnostics, not an
+instantiation of the infinite model. Two reads initially used the wrong
+contract/critic filename; corrected reads completed, with no mutation or
+mathematical failure.
+
+The parent cost packet `/tmp/pi-m4-analytic-congruence-cost-20261127/`
+derives necessary Newton precision b_p(k)+v_p(k!), between k-floor(log_p k)
+and k+1. The simultaneous modulus has log M_n/n tending to infinity along
+primorial n+1, exceeding the uniform exponential moment intervals. This
+invalidates that universal counting guarantee, not existence of aligned or
+correlated choices. It supplies no canonical numerator estimate. Two exact
+checker runs passed 24,118 finite checks, exit 0, identical receipts. Parent
+self-criticism and worker agreement are not independent review. The subsequent
+combined independent review is complete with no D/I/Q findings; it verified
+the exact six-path diff and 57 evidence hashes and reconstructed the critical
+analytic/arithmetic interfaces. The continuation review record owns its full
+response and evidence limits. No V or Lean theorem follows.
+
+**Fresh-context recovery, 20 minutes before reassessment:**
+`/tmp/pi-m4-analytic-family-consumer-20261127/` seeks an actual V consumer
+from the full analytic family and finite rational forcing, or a precise
+neighboring-theorem connection with its first missing bridge. The worker must
+check the unchanged D model, actual earlier-prefix dependence and integer
+floors, and distinguish identifying A from proving a real visit. This changes
+the source of ideas after the comparison-model sequence. No broad literature
+campaign, source-free independence claim, digit enumeration or premature
+formalization is authorized by this inquiry. Research continues.

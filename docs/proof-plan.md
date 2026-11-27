@@ -812,12 +812,29 @@ It loses finite rational-function forcing and denominator control. Generic
 positivity or quadrature refinements without a retained arithmetic distinction
 are suspended.
 
-The next 20-minute investigation tests that explicit height limitation: whether
-a modified orthogonal basis and rational coefficient grids can give such a
-countermodel a denominator upper exponent at most 6+eta for each eta>0.
-This would be an upper bound for separate models, not the actual exponent-6
-theorem or its prime defects. The review record owns integration status; all
-target contracts and Lean status remain unchanged. Research continues within M4.
+The [height refinements](m4-rational-forcing.md#controlling-the-denominator-of-the-moment-models)
+first give an upper exponent below 6+eta and then, using direct moment grids,
+give exact eventual natural denominators L_A,n and exponent 6. A separate
+[pointwise congruence construction](m4-prime-defect-boundary.md#moment-models-can-retain-the-pointwise-prime-defect-laws)
+retains the displayed 2+v_p(k) laws for A/H/R, unchanged D, and rate 6 for both
+companions, while admitting an irrational nondense period. It changes the
+rational-function forcing and does not retain the normalized divided-difference
+or full analytic families. These retained scalar and pointwise conditions
+are insufficient generic substitutes for the actual visitation argument.
+
+The [analytic-family cost test](m4-prime-defect-boundary.md#full-analytic-constraints-exceed-the-uniform-moment-grid-budget)
+derives necessary Newton congruences of precision about k. Their simultaneous
+modulus at primorial endpoints grows faster than the uniform moment-grid
+budget. This defeats that counting guarantee, not all possible correlated
+constructions, and supplies no real visit by itself.
+
+The next 20-minute fresh-context investigation seeks an actual consumer of
+the full analytic family together with the exact finite rational forcing,
+or one precise neighboring theorem connection with its first missing bridge.
+It must retain earlier-prefix dependence and canonical floors, and cannot
+count a uniqueness/classification statement alone as a visit. The review
+record owns integration status; all target contracts and Lean status remain
+unchanged. Research continues within M4.
 
 For the recurrence defined in Step 4, seek a proof of
 

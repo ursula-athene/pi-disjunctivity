@@ -467,3 +467,145 @@ Authoritative manifest v3 SHA-256 is
 Parent reconstruction and an unchanged-copy replay passed: 1,507 exact checks,
 exit 0, identical receipt, originals preserved. Universal claims remain paper
 proofs; no canonical numerator estimate, new Lean theorem or V is supplied.
+
+## Moment models can retain the pointwise prime-defect laws
+
+The [direct moment intervals](m4-rational-forcing.md#exact-natural-denominators-still-allow-a-nondense-period)
+also admit a more constrained arithmetic selection. Change A by delta and H
+by -delta, leaving D fixed, and let V_n=sum_(j<=n)16^(n-j)*delta(j), V_-1=0.
+The exact additional target is only
+
+    v_p[p*V_(pk-1)-chi_4(p)*16^(k*(p-1))*V_(k-1)]
+       >=2+v_p(k), p>=7 prime, k>=1.
+
+This retains the displayed pointwise laws for A/H/R and the unchanged D law.
+It does not assert the normalized divided-difference, Taylor/Newton or original
+incomplete-block compression families. The fix/swap action on the modified
+pair is specified by p modulo 4, not derived from a new finite-pole formula.
+
+Besides L_A,n, define L_H,n=lcm{2j+1,4j+1,8j+3,8j+7:0<=j<=n}.
+The exact common envelope is
+
+    L_n=gcd(L_A,n,L_H,n)=lcm{odd m<=4n+3}.
+
+Both contain those odd integers. A prime power beyond 4n+3 cannot divide
+both: its opposite residue class would require an odd cofactor at least 3,
+beyond the larger factor cutoff. The envelopes clear the actual coefficients;
+H's reduced product term -3(j+1)/[(2j+1)(8j+7)] has gcd at most 3, canceled
+by its numerator. Their logarithms have rates 6, 6 and 4 respectively.
+
+Choose perturbation moments delta(n)=z_n/L_n, so V_n=a_n/L_n with integral
+a_n=16*L_n*V_(n-1)+z_n. At n=pk-1, d=v_p L_(k-1), the exact endpoint
+identity v_p L_n=d+1 makes the required condition equivalent to
+
+    a_n = chi_4(p)*16^(k*(p-1))*[L_n/(p*L_(k-1))]*a_(k-1)
+          modulo p^(d+2+v_p(k)).
+
+Only p>=7 dividing n+1 impose new conditions, all on earlier known indices.
+Their coprime product M_n has log M_n=O(log^2(n+2)). There is no cyclic
+compatibility requirement: later appearances of n constrain future values.
+
+At each nonactive odd envelope prime with matching exponent, retain full
+denominator powers for both companions by excluding at most two residues of
+a_n. On the CRT progression, the exclusions remain at most two per prime.
+For s such primes, inclusion-exclusion on T consecutive progression parameters
+gives at least T*3^(-s)-3^s acceptable values. Consequently every open interval
+of length greater than M_n*(9^s+2) contains an admissible integer. This costs
+exp(o(n)), uniformly in its center and the entire earlier history.
+
+Use the analytic interval estimate with the perturbation-only moment offset
+and denominator L_n. Its rate 4+log(15/128)>0 beats that cost, so one fixed
+starting index K permits all choices and the same residual induction.
+The two reports together therefore yield a positive analytic rational-moment
+model with any prescribed finite actual prefix, the leading constants,
+zero initialization, an irrational nondense period, and these pointwise laws.
+This assembly uses the universal-history interval contract; isolated large
+intervals would not suffice.
+
+Both modified prefix denominator rates are exactly 6. Shared primes between
+sqrt(8n+7) and 4n+3, excluding active primes dividing n+1, contribute 4n+o(n)
+to both by the two-residue sieve. Untouched outer primes contribute 2n+o(n):
+class 1 modulo 4 for A through 8n+5, and class 3 for H through 8n+7. Each
+has one original basic denominator equal to p with nonzero coefficient, while
+the perturbation is p-integral there. Natural envelopes supply the upper bounds.
+No original H denominator-survival theorem is needed. Exact actual reduced
+denominators and rational-function forcing are not retained.
+
+Frozen arithmetic packet `/tmp/pi-m4-congruence-moment-model-20261127/` has
+report SHA-256 `f807f1ce49a216f7dee2051d2897449980c1d973a89ebedb8a2f8a7494c59230`
+and manifest SHA-256
+`5d4bf14fe0faff5cde642c32a3e92144ea4fbf4e513434f1e028cfa4601e4e3f`.
+The parent reconstructed its combination with the exact-envelope analytic
+packet and replayed 10,757 checks: exit 0, UTC-only receipt difference,
+originals preserved. Synthetic perturbations do not instantiate the infinite
+model. The unchanged actual forcing and its full analytic family remain
+distinctions; this is not a counterexample to actual V or a Lean theorem.
+
+## Full analytic constraints exceed the uniform moment-grid budget
+
+Pointwise valuation laws must be distinguished from the common analytic
+interpolants proved above. For fixed p>=7, write G_p=Phi_p with coefficients
+gamma_d satisfying v_p(gamma_d)>=b_p(d), gamma_0=0. Since
+Delta^k x^d at zero is k! times the integer Stirling number S(d,k),
+
+    v_p(Delta^k G_p(0)) >= B_p(k),
+    B_p(k)=b_p(k)+v_p(k!), k>=1.
+
+The power series converges on Z_p, and b_p(d) is nondecreasing, so this
+finite difference may be taken termwise. Legendre's factorial identity gives
+B_p(k)=k+ceil((p-2-s_p(k))/(p-1)), where s_p(k) is the base-p digit sum.
+Consequently k-floor(log_p k)<=B_p(k)<=k+1. These are necessary Newton
+congruences; no sufficiency for the original Taylor bounds is claimed.
+The function G(1)=p^2, G(k)=0 at other nonnegative integers satisfies every
+pointwise 2+v_p(k) bound but fails the second Newton bound. It is a separating
+function, not a comparison model of the recurrence.
+
+For opposite A/H perturbations let delta S_n=a_n/L_n with
+L_n=lcm{odd m<=4n+3}. At n=pk-1, put e=v_p L_(k-1). The exact identity
+v_p L_n=e+1 and the integer p-unit L_n/(p L_(k-1)) show that the new Newton
+condition, with earlier values fixed, is precisely
+
+    a_n = chi_4(p)*16^(k*(p-1))*a_(k-1)*L_n/(p*L_(k-1))
+          -(L_n/p)*sum_(j<k)(-1)^(k-j)*binom(k,j)*delta G_p(j)
+          modulo p^(B_p(k)+e).
+
+Every displayed cleared earlier term is integral. Different primes dividing
+n+1 constrain the same integer a_n, so the combined modulus is
+
+    M_n^an=product_(p>=7,p|n+1) p^(B_p((n+1)/p)+v_p L_((n+1)/p-1)).
+
+Take m_Y=product_(7<=p<=Y)p and n_Y=m_Y-1. The bounds on B_p and the
+envelope exponents give
+
+    log(M_(n_Y)^an)/n_Y
+      =(m_Y/n_Y)*sum_(7<=p<=Y)log(p)/p
+          +O(pi(Y)*log(4m_Y)/n_Y)
+      =(1+o(1))*log Y -> infinity.
+
+Here the same prime number theorem used for the clearing envelopes supplies
+log m_Y~Y and the elementary partial-summation estimate. This is an explicit
+subsequence statement, not an all-n lower bound.
+
+The [direct moment construction](m4-rational-forcing.md#exact-natural-denominators-still-allow-a-nondense-period)
+uses |c_n|<=B*2^n/(n+1)^6 and h_n<=C*16^(-n). Its entire allowed integer
+interval has length at most 2BC*L_n*8^(-n)/(n+1)^6, of exponential rate
+4-log8 for the common envelope, or 6-log8 for the larger A envelope.
+Eventually that length is less than one analytic CRT residue spacing along
+the displayed subsequence. The uniform guarantee for every interval center
+and earlier history therefore does not extend by the same counting argument.
+
+This is a limitation of that construction, not nonexistence of models retaining
+the full family. A shorter interval can contain its prescribed residue, and
+earlier choices might be correlated. The Newton subset is not a full
+analyticity characterization. Nor does the large modulus itself force a visit:
+its residue depends on earlier raw prefixes, and the canonical floors remain
+uncontrolled. An actual consumer or a new rigidity theorem is still required.
+
+Frozen parent packet `/tmp/pi-m4-analytic-congruence-cost-20261127/` has report
+SHA-256 `75b096f0aedfc0785692c50657589f886417b36f7817aa119480fa727363578f`
+and manifest SHA-256
+`c92266dbdb6dcbb6460d806e2718a0c49423a6f459c77bfae8833998f76ffa80`.
+Two unchanged checker runs passed 24,118 checks with identical receipts and
+exit 0. They test finite algebra and exact rational logarithm enclosures,
+not BBP prefixes, pi values or orbit states. Analytic necessity and asymptotic
+cost remain paper arguments; separate self-criticism is not independent review.

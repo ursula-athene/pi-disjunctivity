@@ -689,3 +689,108 @@ the construction and reconstructed the worker's completed argument, then
 replayed an unchanged checker: 150 exact checks, exit 0, identical JSON,
 originals preserved. The infinite choices are not instantiated by those checks.
 No V or kernel theorem is claimed; independent review is recorded separately.
+
+## Controlling the denominator of the moment models
+
+The first height refinement uses integer shifted Jacobi polynomials
+J_k(t)=P_k^(2,0)(2t-1) and the additive measure perturbation
+sum c_k J_k(t)(1-t)^2dt. Rodrigues integration makes its period coefficients
+beta_k positive, with beta_(k+1)/beta_k>=9/1024. The official
+[DLMF bound 18.14.1](https://dlmf.nist.gov/18.14.E1), at alpha=2,beta=0,
+gives polynomial real sup bounds; finite Chebyshev expansion supplies one
+fixed complex ellipse. Rational coefficient grids with denominators dividing
+3^(ceil(kappa*k)+C), for one fixed C, permit greedy period selection while
+keeping the series analytic and uniformly small.
+
+Each moment is still a finite rational sum by orthogonality. Its perturbation
+denominator through n divides 3^(ceil(kappa*n)+C)*lcm(1,...,2n+3).
+The natural A envelope L_A,n contains every odd integer at most 4n+3, so
+
+    den(S_tilde(n)) divides
+      3^(ceil(kappa*n)+C)*2^floor(log_2(2n+3))*L_A,n.
+
+For any eta>0 choose kappa*log3<eta. The resulting irrational nondense model
+has denominator limsup exponent below 6+eta. Actual eligible poles p>=7 with p>2n+3
+survive because the perturbation is p-integral there, giving liminf at least 4.
+This did not establish exact rate 6. Its relative analyticity is in x=t^(1/8),
+and finite perturbation periods are pi+a+b*log(16/15), with rational a,b;
+the previous rational-affine-pi equivalence does not apply to this basis.
+
+The frozen `/tmp/pi-m4-controlled-moment-model-20261127/` report SHA-256 is
+`6f363fb34c4ac00671b1bd00257ef682f4ad7cda1ec64a6b0faaeda448acf2b9`;
+manifest SHA-256 is
+`7668422dd73a91c11e556ca9e84a07b33e5cd9aeeb0c903da24bd6ea4376b8d2`.
+Parent reconstruction, official-source hypothesis inspection and unchanged-copy
+replay passed: 42,823 finite checks, exit 0, identical JSON, originals preserved.
+The following different construction resolves the exact-rate limitation.
+
+## Exact natural denominators still allow a nondense period
+
+Return to nu=(1-t)mu_A and its monic rational orthogonal R_n. Write
+h_n=integral R_n^2 dnu. Since nu>=(1-t)^2dt/16, the exact shifted Jacobi
+monic norm and the monic Chebyshev upper comparison give
+
+    16^(-n)/[256*(2n+3)] <= h_n <=16*16^(-n).
+
+Expanding R_n in the Jacobi basis and applying Cauchy--Schwarz gives
+sup_[0,1]|R_n|<=32(n+1)^3*4^(-n). The same finite Chebyshev argument yields
+sup_(E_rho)|R_n|<=64(n+1)^4*(rho/4)^n. Fix rho=3/2 and rational
+0<epsilon<1. With B=epsilon/512, budgets b_n=B*2^n/(n+1)^6 ensure
+f=sum c_n R_n is analytic on one fixed ellipse and |(1-t)f(t)|<=epsilon/2.
+This relative perturbation is analytic in t, including across its endpoints.
+
+The previous positive period coefficients obey the explicit lower ratio
+
+    beta_(n+1)/beta_n >= lambda_n,
+    lambda_n=15*(15/16)^n/[2^24*(2n+5)].
+
+It follows from the norm bounds and 15^n<=R_n(16)<=16^n. If the current
+residual is at most beta_n*b_n/2, every coefficient in an interval centered
+at residual/beta_n with halfwidth tau_n=lambda_n*b_(n+1)/4 stays within
+budget and leaves the next residual below beta_(n+1)*b_(n+1)/4.
+
+The new choice is made on the *moment* grid. Earlier coefficients determine
+a rational W_n, and triangular orthogonality gives
+
+    A_tilde(n)=W_n+c_n*h_n=z/L_A,n, z in Z.
+
+All later basis terms vanish in this moment. Since the envelopes are nested,
+M_n=16*L_A,n*S_tilde(n-1) is an integer and
+S_tilde(n)=(M_n+z)/L_A,n. Its reduced denominator equals L_A,n exactly when
+z avoids -M_n modulo every prime dividing L_A,n. Prime avoidance retains
+the whole prime power; this does not identify the actual reduced q_n.
+
+The admissible coefficient interval becomes an integer interval of length
+
+    H_n >= (15B/2^32)*L_A,n*(15/128)^n
+                 /[(2n+3)*(2n+5)*(n+2)^6].
+
+Its exponential rate is at least 6+log(15/128)>0. If w_n is the number of
+envelope primes, then w_n=o(n). Inclusion-exclusion gives at least
+H_n*2^(-w_n)-2^w_n acceptable integers, uniformly in the interval center
+and earlier choices. Thus one starting K, chosen before the target period
+and beyond any prescribed finite prefix, makes every subsequent step possible.
+
+Shrinking residuals realize every period in a nonempty interval around pi.
+Selecting the earlier irrational Thue--Morse target with a rational translation
+gives a nondense period. The positive analytic relative measure, O(n^-3)
+moment perturbation, leading constants 15/64 and 1/64, zero initialization and
+vanishing-tail transfer are retained. This proves at paper level
+
+    den(S_tilde(n))=L_A,n for every n>=K,
+    log den(S_tilde(n))/n ->6,
+
+while the modified recurrence eventually misses an interval. The exact actual
+q_n, finite rational-function forcing and prime-defect identities are absent.
+No actual numerator phase or V follows from full natural denominator saturation.
+
+The frozen `/tmp/pi-m4-exact-envelope-model-20261127/` report SHA-256 is
+`af1edbea7e86adf4c84386b5c37392072271cfc230868e3b90cf03cd4c4d6593`;
+manifest SHA-256 is
+`a0b4437904007492eeeb5c762de4427f15a937f2c1eb3075c5a9b06a1b0effa3`.
+Parent reconstruction and unchanged-copy replay passed 28,412 exact checks,
+exit 0, identical JSON and preserved originals. The checker uses synthetic
+sieve offsets, not actual initialized states. Infinite selection, convergence
+and asymptotics remain paper arguments. The separate congruence extension and
+its analytic-family limit are assessed in the prime-defect note; no new Lean
+result or M4 acceptance is claimed.

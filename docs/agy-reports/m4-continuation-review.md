@@ -1250,3 +1250,58 @@ Finite executions remain caller evidence and do not certify the infinite
 construction. Subsequent changes record this result only. The controlled-
 denominator follow-up is excluded. No V/M4 acceptance or new Lean theorem is
 claimed; B4/P3 premises remain unchanged.
+
+## Arithmetic moment models and the analytic-family limit — 2026-11-27 UTC
+
+Baseline is local commit `9a4b896a96d8d00f5d8a7804d3a7479013ca2d48`.
+The six-path scope is `m4-rational-forcing.md`, `m4-prime-defect-boundary.md`,
+`proof-plan.md`, `research-log.md`, `m4-handoff.md` and this record. No Lean,
+dependency, tool, pin, audit or unrelated workspace change is included.
+
+The four frozen packets are `/tmp/pi-m4-controlled-moment-model-20261127/`,
+`/tmp/pi-m4-exact-envelope-model-20261127/`,
+`/tmp/pi-m4-congruence-moment-model-20261127/` and
+`/tmp/pi-m4-analytic-congruence-cost-20261127/`. They retain complete reports,
+input/source contracts, separate same-session critics, exact checker sources,
+receipts and immutable manifests. The last is parent-generated. The parent
+read and reconstructed all four, including the universal-history interface
+needed to assemble the analytic and pointwise-congruence model. This is not
+independent review. The official DLMF Jacobi conditions and Chebyshev formula
+were inspected; no source supplies a visitation theorem.
+
+Unchanged-copy replays passed 42,823, 28,412 and 10,757 checks for the first
+three packets, all exit 0; receipts are identical except the arithmetic
+packet's UTC. Frozen originals are unchanged. The parent's cost checker and
+replay passed 24,118 checks, exit 0, identical receipts. All are finite algebra,
+synthetic perturbation/sieve and exact enclosure diagnostics. They do not
+instantiate the infinite choices or certify analytic/PNT conclusions.
+
+Worker improvements were incorporated before freezing: natural versus actual
+reduced denominators, precise analytic variable, changed finite-period relation,
+uniform coefficient intervals, two-residue sieve for both companions, exact
+initialization and the restriction to pointwise laws. Parent criticism retains
+the necessary-versus-sufficient Newton distinction and the possibility of
+correlated constructions despite the excessive modulus. Missing actual
+visitation and finite-check limits remain explicit.
+
+Independent combined review by `/root/generating_review` is complete under
+the Codex replacement procedure, with retained full readings and unchanged
+hashes of both adversarial guides. The frozen scope is
+`/tmp/pi-m4-arithmetic-models-review-20261127/`, diff SHA-256
+`8309a439749a05fa31c6651778d74fd2e3ca25a2b19f4bd1712625e846b51311`.
+The complete returned review is `review-full.txt`, SHA-256
+`c55c56440bccef069b89a10754613e0457667e1d4b0be32cdc5a4e7b96bbf40b`.
+All six production hashes and 57 evidence hashes matched. **D/I/Q: no defects,
+no requested improvements, and no missing evidence blocking the scoped claims.**
+The possibility of correlated full-family models remains explicitly open.
+
+The reviewer independently reconstructed the uniform analytic interval and
+perturbation-grid transfer, both-companion sieve and pole survival, and the
+Newton factorial/clearing/primorial calculation. Initialization, target order,
+source conditions and the pointwise/full-family distinction were checked.
+The actual real-phase/canonical-floor implication remains missing. Work was
+read-only inspection, hashing and mathematical reconstruction; no checker,
+probe, build or mutation ran. Execution and preservation remain caller evidence,
+and prior Coleman/PNT results remain paper inputs. Subsequent edits record
+this result only. The fresh analytic-family consumer inquiry is excluded.
+No V/M4 acceptance or new Lean theorem is claimed.

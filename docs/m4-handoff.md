@@ -7,7 +7,7 @@ The [continued research checkpoint](#continued-research-checkpoint--2026-11-26)
 records subsequent work during the user's absence; that checkpoint does not
 terminate the ongoing M4 effort.
 The latest dated continuation is the
-[Moment models and exact prefixes](#moment-models-and-exact-prefixes--2026-11-27-utc); read the
+[Arithmetic moment models](#arithmetic-moment-models--2026-11-27-utc); read the
 research log and actual checkout for subsequent results and current state.
 
 ## Baseline and authorized endpoint
@@ -853,3 +853,28 @@ countermodel can retain a denominator upper rate arbitrarily close to 6,
 explicitly distinguishing that from the exact A theorem and prime identities.
 The log owns the bound and current result. V/Hpi/T/M4 remain open, B4/P3
 retain visitation premises, and M5 remains excluded. Research continues.
+
+## Arithmetic moment models — 2026-11-27 UTC
+
+The Gaussian/analytic checkpoint is local commit
+`9a4b896a96d8d00f5d8a7804d3a7479013ca2d48`, with exact scope, empty index,
+preservation and necessity inspection complete. Nothing was pushed. The new
+[moment-grid construction](m4-rational-forcing.md#exact-natural-denominators-still-allow-a-nondense-period)
+retains exact natural denominators and a nondense irrational period. Its
+[arithmetic extension](m4-prime-defect-boundary.md#moment-models-can-retain-the-pointwise-prime-defect-laws)
+also retains the specified pointwise A/H/R laws and unchanged D, with both
+denominator rates 6. It does not retain the exact rational forcing, actual
+reduced denominator sequence, or the common p-adic analytic family.
+
+The [full-family cost test](m4-prime-defect-boundary.md#full-analytic-constraints-exceed-the-uniform-moment-grid-budget)
+identifies a stronger necessary Newton family that exceeds this uniform
+construction's interval budget along primorial endpoints. That is not a
+nonexistence or visitation theorem. Parent reconstruction and finite replays
+passed; independent combined integration review is complete with no D/I/Q
+findings. The continuation review record owns its exact scope, full response
+and evidence limits. No Lean, pin, dependency, audit or target contract changed.
+
+A fresh-context bounded inquiry now asks whether the full family and exact
+finite rational forcing have an actual visitation consumer or a useful
+neighboring-theorem bridge. The research log owns its bound and outcome.
+V/Hpi/T/M4 remain open, B4/P3 retain visitation premises, and M5 is excluded.
