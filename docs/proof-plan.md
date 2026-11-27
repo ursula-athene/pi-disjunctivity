@@ -989,8 +989,15 @@ extends that obstruction to algebraic functions plus constant combinations
 of the four BBP tails. Fixed branches, constant coefficients and finite
 families remain essential to the stated result. Word avoidance supplies
 no such family; further profile classification is suspended without that
-consumer. A fresh bounded inquiry seeks a direct path-sensitive inequality
-from the restricted language. No unfinished candidate is adopted.
+consumer. The [direct-consumer screen](m4-language-auxiliaries.md#polynomial-telescopes-and-exact-integer-path-cuts)
+rules out a uniform scalar polynomial telescope for carry parity; linear
+weights return the known period. An exact integer-cell formulation retains
+the actual numerator. A single primitive box projection of coefficient mass
+at least 3 cannot separate; modularly resonant pairs remain an exception,
+with explicit open forcing-residue windows. No actual separating sign was
+obtained. A bounded inquiry now tests simultaneous rounded resonant pairs,
+which the single-projection result does not exclude. No unfinished candidate
+is adopted; the exact bounds and outcomes belong to the log.
 The log owns bounds, outcomes and the failed applicability screens.
 V and all Lean contracts are unchanged; neither conditional wrapping nor more
 classification supplies visitation.

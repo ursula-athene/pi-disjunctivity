@@ -4012,3 +4012,55 @@ BBP period, with a discriminating test against the archives. The first
 question tests a path-sensitive integral/auxiliary inequality; no finite
 state-profile assumption or unfinished result is adopted. No new Lean or
 trust boundary changed. C_odd, V, global covering and M4 remain open.
+
+**Polynomial telescopes and integer-path inquiry — 2026-11-27 UTC:** the
+finite-profile checkpoint is local commit
+`7b7f83589bb3e9c85932a4a250460e1079b933b3`. Required reviews, checks,
+exact staging and post-commit necessity/preservation inspection passed.
+At inspection the index was empty, task-owned tree clean and branch six
+ahead of its remote-tracking reference. This run issued no push or PR.
+
+The language-consumer recovery begun at 11:59:04 UTC completed at 12:15:52
+UTC, within its 20-minute bound. It found no positive visitation consumer.
+The one new diagnostic rules out a uniform scalar polynomial telescope of
+the odd-carry indicator; the surviving linear weights return the known period.
+Parent replay passed 380 synthetic checks with identical receipt and five
+preserved originals. Independent paper review and focused D1/I1 repair passed:
+the even-carry sign factor equals 1, and the prospective integer-path contract
+starts at N>=1. Authoritative scratch report is
+`/tmp/pi-m4-language-consumer-clarification-20261127/report-v2.md`.
+This completed diagnostic awaits combined production integration; no new
+visitation claim or unfinished integer-cut result is adopted.
+
+At 12:17:58 UTC the worker began a distinct **15-minute** inquiry, deadline
+12:32:58 UTC, scratch `/tmp/pi-m4-integer-path-cut-test-20261127/`.
+The endpoint is one explicit symbolic integer cut retaining the actual
+numerator with a proved separating sign, or a precisely scoped obstruction
+to the tested cut family. Merely reformulating the path as an integer program
+does not qualify. The inquiry retains coordinate rounding, redundant carry
+increments, and the distinction between exact and modular seed cancellation;
+it does no actual phase/digit census. C_odd, V and M4 remain open.
+
+That inquiry completed at 12:28:29 UTC, within its bound. It proves a limited
+single-projection obstruction and retains modularly resonant pairs as a
+genuine exception, with exact open residual windows. An exact-A changed-entry
+family defeats all non-coordinate single projections; a changed-forcing
+positive fixture confirms that pair cuts can separate. No actual initialized
+sign was obtained. Parent unchanged-copy replay passed 4,136 synthetic checks,
+with identical receipt and all five originals preserved. Independent paper
+review by `/root/generating_review` completed with no D/I item; Q1 retains
+the actual residual-window estimate. Combined five-path production review by
+`/root/logarithmic_source_review` completed with no new D/I item and that
+estimate retained open. Documentation (93), process tests (38), whitespace
+and preservation checks passed. No new kernel result or M4 acceptance is
+claimed; unchanged Lean files did not require a repeated build.
+
+At 12:34:56 UTC the same worker began a distinct **20-minute** inquiry,
+deadline 12:54:56 UTC, scratch
+`/tmp/pi-m4-coupled-resonant-cuts-20261127/`. It tests simultaneous rounded
+resonant pairs, explicitly outside the preceding single-projection family.
+The endpoint is an actual initialized incompatibility certificate, or an
+exact characterization and a discriminating countertest identifying what
+coupling adds and still lacks. It tests at most two hypotheses, preserves
+the actual numerator in the target, and does no phase/digit census or generic
+solver expansion. No unfinished claim is adopted. C_odd, V and M4 remain open.

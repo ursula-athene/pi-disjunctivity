@@ -7,7 +7,7 @@ The [continued research checkpoint](#continued-research-checkpoint--2026-11-26)
 records subsequent work during the user's absence; that checkpoint does not
 terminate the ongoing M4 effort.
 The latest dated continuation is the
-[Finite algebraic and tail profiles](#finite-algebraic-and-tail-profiles--2026-11-27-utc); read the
+[Polynomial telescopes and integer-path cuts](#polynomial-telescopes-and-integer-path-cuts--2026-11-27-utc); read the
 research log and actual checkout for subsequent results and current state.
 
 ## Baseline and authorized endpoint
@@ -1302,3 +1302,33 @@ A fresh 20-minute language-consumer recovery is active. The research log owns
 its exact bound and outcome; no unfinished candidate is adopted. No Lean,
 audit, pin, dependency or trust boundary changed. C_odd, V, global covering
 and M4 remain open; continue the authorized research after this checkpoint.
+
+## Polynomial telescopes and integer-path cuts — 2026-11-27 UTC
+
+The finite-profile checkpoint is local commit
+`7b7f83589bb3e9c85932a4a250460e1079b933b3`. Required reviews, validation,
+exact staging and post-commit necessity/preservation checks passed. At the
+latest inspection the branch was six ahead of its remote-tracking reference;
+the new checkpoint changes are uncommitted. This run issued no push or PR.
+
+The [direct-consumer diagnostic](m4-language-auxiliaries.md#polynomial-telescopes-and-exact-integer-path-cuts)
+rules out uniform scalar polynomial telescopes for odd-carry parity. Its
+linear specialization returns the known period, retaining the missing
+nonlinear estimate. The subsequent integer-cell calculation shows that a
+single primitive projection with coefficient mass at least 3 cannot
+separate. Modularly resonant pairs escape exact seed-cancellation costs but
+still require an unproved hit in an explicit open forcing-residue window.
+Synthetic negative and positive fixtures delimit that family; neither uses
+the actual initialized orbit as a counterexample or proves C_odd.
+
+Parent replays passed 380 and 4,136 exact synthetic checks with identical
+receipts and preserved originals. Separate paper reviews completed, including
+the polynomial sign-factor/domain clarification. Full five-path integration
+review passed with no new finding. Documentation, process, whitespace and
+preservation checks passed, as recorded in the continuation review report.
+No Lean, audit, pin, dependency or trust boundary changed.
+
+A new 20-minute inquiry tests simultaneous rounded resonant constraints,
+which the single-projection obstruction does not cover. The log owns its
+exact bounds and outcome; no unfinished result is adopted. C_odd, V, global
+covering and M4 remain open; continue research after this checkpoint.

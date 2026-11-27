@@ -1052,6 +1052,134 @@ Laplace normalization. Independent combined paper review and its focused
 remainder/source clarification passed. The universal arguments remain paper
 proofs, not consequences of those finite checks or kernel certification.
 
+## Polynomial telescopes and exact integer-path cuts
+
+The direct language-consumer inquiry tested an additive polynomial telescope
+for q(k)=(1-(-1)^k)/2, the odd-carry indicator. For n>=1 suppose
+
+```text
+P_(n+1)(16x+A(n)-k)-P_n(x)=r_n+v_n*q(k)
+```
+
+holds throughout every nonempty carry branch. Each branch has an interval
+of interior, so the equality extends as a polynomial identity. Subtracting
+two branches shows that two distinct translates of P_(n+1) differ by a
+constant. A degree d>=2 polynomial would leave a nonzero degree d-1 term;
+therefore both polynomials are affine. The values q(0),q(1),q(2)=0,1,0 then
+force v_n=0 and the affine slope to vanish. Requiring the identity only on
+even branches also removes state dependence. This rules out that uniform
+scalar polynomial consumer, not identities sampled only at the actual state,
+analytic potentials or automaton-dependent constructions.
+
+For arbitrary finite weights, the exact linear identity is
+
+```text
+sum_(n=N)^M w_n*k_n = sum_(n=N)^M w_n*A(n)
+  +16*w_N*y_N-w_M*y_(M+1)
+  +sum_(n=N+1)^M (16*w_n-w_(n-1))*y_n.
+```
+
+Eliminating each interior coefficient requires w_n=c*16^(-n), returning
+the existing period sum pi, or y_N+T_A(N) with late normalized weights.
+The multiplicative analytic identity
+exp(pi*i*y_(n+1))=exp(pi*i*A(n))*exp(pi*i*y_n)^16*(-1)^k_n
+escapes the polynomial obstruction: its sign factor equals 1 under even
+carries. No estimate for its selected phase follows.
+
+### Single projections of the integer cells
+
+Retain the actual reduced entry y_N=a/q, with N>=1 and odd q>0. Define
+F_0=0, F_j=16F_(j-1)+A(N+j-1), and R_j=16^j*a/q+F_j. Choose
+
+```text
+Q_j=lcm(3,q,den A(N),...,den A(N+j-1)),  b_j=1-1/Q_j.
+```
+
+These odd envelopes are at least 3 and need not be reduced denominators.
+For integer L_j, the strict condition 0<=R_j-2L_j<1 is exactly
+0<=R_j-2L_j<=b_j. Thus an all-even block is equivalent to an integer point
+in the product of closed cells I_j=[(R_j-b_j)/2,R_j/2], j=1,...,h.
+With L_0=0, x_0=a/q and x_j=R_j-2L_j,
+2(L_j-16L_(j-1))=16x_(j-1)+A(N+j-1)-x_j lies in (-1,17).
+Its even integrality supplies the increment bounds 0<=L_j-16L_(j-1)<=8.
+Those bounds are redundant for integer feasibility, not for every real
+relaxation. Inflating an envelope can weaken the real box while preserving
+its integer equivalence.
+
+Writing Q_jR_j=2Q_j*m_j+t_j, 0<=t_j<2Q_j, the coordinate integer hull is
+{m_j} when t_j<Q_j and empty otherwise. Direct rounding therefore returns
+the unknown parity of floor(R_j); it supplies no new visitation estimate.
+
+The tested cut family projects only these independent unrounded boxes by
+a nonzero primitive c in Z^h. Its exact interval for sum c_jL_j has width
+
+```text
+W=(1/2)*sum |c_j|*(1-1/Q_j) >= ||c||_1/3.
+```
+
+If ||c||_1>=3, the closed interval has length at least 1 and contains an
+integer. Only coordinate and two-coordinate projections can separate.
+Exact real seed cancellation, sum c_j16^j=0, requires ||c||_1>=17:
+the first nonzero coefficient is divisible by 16, and another is nonzero.
+The adjacent pair (-16,1) attains this bound. This excludes a single
+lattice-free projection interval, not simultaneous rounded cuts, additional
+increment constraints, elimination of fixed coordinates or other integer
+proof systems. A common coefficient factor must first be divided out.
+
+For i<j, put eps=1/Q_i+1/Q_j. The two remaining pair tests separate exactly
+in these OPEN windows, with residues taken in [0,2):
+
+```text
+(R_i+R_j) mod2 in (2-eps,2),
+(R_i-R_j) mod2 in (1-1/Q_i,1+1/Q_j).
+```
+
+Equality at an endpoint leaves an integer in the projection. Because i>=1,
+the actual seed contribution disappears modulo the projection lattice iff
+q divides 16^(j-i)+1 for the plus pair, or 16^(j-i)-1 for the difference.
+These modular cancellations are genuine exceptions to exact cancellation;
+q=1 is included. The fixed L_0=0 is not another free cell. At resonance the
+same open windows apply to F_i+F_j or F_i-F_j. No actual forcing-residue hit
+or uniform separating sign is known. Away from resonance, a/q remains in
+the test. Order, denominator growth and complete-period averages do not
+supply its selected sign.
+
+In odd-denominator arithmetic A(n)=n+1 modulo 2, so Q_jR_j has parity N+j.
+This is not floor parity. With equal envelopes Q_i=Q_j=Q, each window has
+one possible grid residue, respectively 2Q-1 and Q, both odd. Equal-parity
+i,j therefore cannot separate in that subfamily; opposite parity still
+leaves an unknown exact residue. A common envelope may weaken the boxes.
+
+For a discriminator retaining exact future A but changing the entry, take
+1/5 at N>=16^h. The bound A(n)<1/(2n) gives 0<F_j<1/30 for 1<=j<=h.
+Then floor(R_j)=(16^j-1)/5 is odd and every coordinate cell is empty.
+Nevertheless every primitive non-coordinate projection contains an integer:
+large coefficient mass was settled by width; for pairs, the sum/difference
+of these odd floors is even, and each fractional part lies in [0,b_j].
+All difference pairs are resonant since 5 divides 16^d-1. This is a finite
+changed-entry countertest, not an actual initialized counterexample or a
+refutation of stronger coupled cuts.
+
+The surviving family can work for different forcing: q=3, B_0=1/5 and
+B_1=1/45 give F_1=1/5, F_2=29/9, Q_1=15 and Q_2=45. Their difference
+residue 44/45 lies strictly in (42/45,46/45), excluding every a/3 entry.
+This synthetic positive fixture loses the actual BBP forcing and proves
+no C_odd result. Its purpose is to distinguish a missing actual sign from
+an algebraically impossible certificate.
+
+The polynomial report's authoritative v2 is
+`/tmp/pi-m4-language-consumer-clarification-20261127/report-v2.md`, SHA-256
+`e15d546d3ad8203d4c9af55636b90064f78f8bbbb74abd4cc0964eb3511a2b12`.
+The integer-cut report is
+`/tmp/pi-m4-integer-path-cut-test-20261127/report-v1.md`, SHA-256
+`46c21cbe72ebc43ed11de29d9321f03af948337833d7bbd5b17ab088e3a9214a`.
+Parent unchanged-copy replays passed 380 and 4,136 exact synthetic checks,
+with identical receipts and preserved originals. These finite checks do
+not certify the universal paper arguments. Independent review is recorded
+in the continuation review report; no Lean result or actual phase census
+is added. Coupled resonant constraints are a separate inquiry, with no
+unfinished claim adopted. C_odd, V and M4 remain open.
+
 ## Evidence boundary
 
 The frozen sine-zero report is `/tmp/pi-m4-sine-zero-report-v1.md`, SHA-256

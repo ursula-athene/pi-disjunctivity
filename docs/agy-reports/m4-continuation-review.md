@@ -2317,3 +2317,65 @@ Documentation (93), process tests (38), whitespace and preservation checks
 passed. No unchanged Lean build was repeated. Subsequent edits record review
 outcomes only; no substantive repair or further focused review was needed.
 This diagnostic review cycle is complete; its V obligation remains open.
+
+## Polynomial telescopes and integer-path cuts — 2026-11-27 UTC
+
+Baseline is `7b7f83589bb3e9c85932a4a250460e1079b933b3`.
+Independent `/root/generating_review` completed both paper reviews, with
+the polynomial focused repair included. Full returned responses are retained
+in `/tmp/pi-m4-polynomial-telescope-paper-review-20261127.txt` and
+`/tmp/pi-m4-integer-path-cut-paper-review-20261127.txt`.
+
+The polynomial original report has SHA-256
+`0671f002789e7ecd05469028aae1594267a69dab8196d09db8ed0ae5c79ccf30`;
+authoritative v2 is
+`/tmp/pi-m4-language-consumer-clarification-20261127/report-v2.md`, SHA-256
+`e15d546d3ad8203d4c9af55636b90064f78f8bbbb74abd4cc0964eb3511a2b12`.
+**D1: repaired and verified:** the multiplicative sign factor equals 1,
+rather than vanishing, under even carries. **I1: implemented and verified:**
+the prospective integer-path contract explicitly starts at N>=1.
+**Q1: retained open:** a symbolic actual-numerator separating certificate.
+The reviewer reconstructed the branch-identity argument, affine/parity
+obstruction, weighted boundary terms and geometric specialization, and
+integer-path equivalence. It did not extend sampled equalities to intervals
+or reject all analytic/automaton potentials.
+
+The integer-cut report is
+`/tmp/pi-m4-integer-path-cut-test-20261127/report-v1.md`, SHA-256
+`46c21cbe72ebc43ed11de29d9321f03af948337833d7bbd5b17ab088e3a9214a`;
+manifest SHA-256 is
+`d4502a718e6d3866b1010fb5c578d0a7604687d6d318ab88ed6d1346094b07b1`.
+**D/I: none. Q1: retained open:** the actual residual-window estimate.
+The reviewer reconstructed strict-grid closure including integral coordinates,
+integer-only increment redundancy, primitive width and sharp exact-cancellation
+bounds, both open pair windows and modular resonances, the equal-envelope
+parity corollary and both synthetic fixtures. It retained the distinction
+between one projection and simultaneous/stronger constraints. All bound
+original artifact hashes matched in both reviews.
+
+Parent unchanged-copy replays passed 380 and 4,136 checks, with identical
+receipts and preserved originals. The finite executions remain caller
+evidence, not certification of universal paper arguments. The reviewer read
+complete reports/checkers/receipts and the scoped clarification, applying
+AGENTS, the replacement procedure, critic skill and both full adversarial
+guides. It executed no checker, probe, build or extractor and made no change,
+service call or delegation. No external theorem was needed.
+
+Full five-path integration review by `/root/logarithmic_source_review`
+completed on frozen diff SHA-256
+`06c3a79e5486cf90b7db6e3294f89bd29fe0ace4d3f19097ad53e3a0f649d1f4`.
+Packet `/tmp/pi-m4-polynomial-cuts-review-20261127/` retains `initial.diff`,
+manifest, preservation inventory and full `review-full.txt` response.
+**D/I: none newly identified. Q1: retained open:** the actual separating
+estimate beyond every anchor. The earlier sign-factor/domain repairs remain
+correctly integrated. The reviewer reconstructed both arguments and fixtures,
+verified the actual diff byte for byte, and verified all 5 production,
+22 evidence, 2 guide, 17 protected and 11 unrelated hashes. Caller executions
+remain distinct from its read-only inspection; no prohibited execution,
+mutation, service or delegation occurred.
+
+Documentation (93), process tests (38), whitespace and preservation checks
+passed. No unchanged Lean build was repeated. Subsequent edits record review
+outcomes only; no substantive repair or focused review was needed. This
+diagnostic review cycle is complete, with no M4 acceptance. The coupled-resonant
+inquiry remains outside this packet's accepted mathematical scope.
