@@ -1667,3 +1667,74 @@ reviewer ran no build, checker, probe, extractor, mutation or service call.
 Documentation (93 files), process tests (38), whitespace and preservation of
 17 protected plus 11 unrelated files passed. Subsequent edits record this
 review outcome only. No Lean files changed or build was repeated.
+
+## Global arithmetic and integer sampling — 2026-11-27 UTC
+
+Baseline is local commit `8155234c34be6aed22d33b6f45e0392f64ec886a`.
+Scope: `m4-prime-defect-boundary.md`, `m4-generating-functions.md`,
+`m4-transforms-and-periods.md`, `proof-plan.md`, `research-log.md`,
+`m4-handoff.md` and this record. No Lean, tool, pin, dependency, audit or
+unrelated workspace change is included. The final exact-diff Codex integration
+review is complete, with the scope and outcome recorded below.
+
+The parent read the five complete reports, critics/checkers and reconstructed
+their mathematical claims. Byte-unchanged checker replays passed with identical
+receipts: uniform dual 1,477 checks, adaptive window 3,288 original prime/order
+conditions, continuous sampling 1,137 checks, Poisson 2,589 normalization checks,
+and arcsine 36,484 coefficient/synthetic checks. All originals were preserved
+(six, six, three, four and six manifest-bound files respectively). The tests
+compute no actual pi phases and do not certify universal paper arguments.
+The parent verified DLMF 4.24.1 at the interior real point 1/2 and visually
+read Tao's original pp.6--8, including the stationary-phase proof. Its
+fixed-phase source theorem is supplemented by the explicit uniformity argument.
+
+Separate read-only paper criticism used both adversarial guides:
+
+- `/root/fermat_neighbor_bridge` reviewed the uniform-dual packet. D: none;
+  I1's uniform error-constant clarification is implemented; Q1 retains the
+  missing full-coordinate norm/value bound. Full response:
+  `/tmp/pi-m4-uniform-dual-paper-review-20261127.txt`.
+- `/root/generating_review` reviewed continuous sampling and Poisson. D: none;
+  sampling I1's integer frequency/window domains are explicit; Poisson has no
+  required improvement. Q items retain actual initialization-sensitive sampling
+  and cross-scale cancellation. Full responses:
+  `/tmp/pi-m4-sampling-paper-review-20261127.txt` and
+  `/tmp/pi-m4-poisson-paper-review-20261127.txt`.
+- `/root/actual_forcing_recovery` reviewed arcsine and the adaptive window.
+  D: none; arcsine I1's direct-to-V offset/error interface is implemented.
+  Adaptive I1 requested integer-only prime enumeration: the parent created
+  `/tmp/pi-m4-adaptive-window-isqrt-20261127/check-v2.py`, changing only the
+  import and square-root operation. Its identical receipt passed, exit 0,
+  with originals preserved. Q items retain the actual coupled arcsine remainder,
+  global older-coordinate control and period-line covering inside local fibers.
+  Full responses: `/tmp/pi-m4-arcsin-paper-review-20261127.txt` and
+  `/tmp/pi-m4-adaptive-window-paper-review-20261127.txt`.
+
+The critics inspected evidence and reconstructed arguments without running
+checkers, builds, probes, mutations or services. The Poisson critic also
+visually read the source; the arcsine critic treated page verification as
+caller evidence. Captures and raw packets remain temporary, not durable
+archives. The current global-support and fresh strategy inquiries are excluded
+from this checkpoint's results. V/Hpi/T/M4 remain open; B4/P3 retain visits.
+
+The frozen integration packet is
+`/tmp/pi-m4-global-sampling-review-20261127/`, diff SHA-256
+`3b3d7444aca90f436225898159b433b10a5766e5fbb57ad15b9a24e9fdd788ce`.
+The complete response is `review-full.txt`, SHA-256
+`52f9a4fba2ee6d843e43ae7a40282b7b1b4d071843a6e2171f29d882e1ca8f3f`.
+Reviewer `/root/generating_review` found **D: none; I: no new recommendations**.
+UD-I1, AW-I1, CS-I1 and AS-I1 are resolved as described above. **Q1 remains
+open:** global bounded covering and period-line covering inside local fibers.
+**Q2 remains open:** an actual-initialization estimate yielding arbitrarily
+late inner-interval hits. These prevent V/M4 acceptance, not this diagnostic
+checkpoint. No additional finite replay would discharge either question.
+
+The reviewer independently reconstructed the new arguments, read the complete
+diff and relevant evidence, and verified all seven production, 73 evidence
+and two guide hashes. Sampling/Poisson packets from the preceding criticism
+were confirmed unchanged. Earlier envelope/orthogonal-polynomial contracts
+remain paper inputs; source verification and execution limits are retained
+above. The reviewer ran no checker, probe, build, extractor, mutation, service
+or delegation. Subsequent edits record this outcome only. Documentation
+(93 files), process tests (38) and whitespace passed before review; final
+validation and preservation are checked again before the local commit.

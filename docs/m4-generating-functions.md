@@ -913,3 +913,133 @@ actual pi digits or BBP phases and do not prove the universal counting or
 asymptotic arguments. These are paper interface results, not Lean exports or
 movement of the V proof frontier. Formalization is deferred until a consumer
 uses the actual forcing beyond the retained positive tail estimates.
+
+## Continuous cancellation does not control integer sampling
+
+The exact tail interpolation supplies a sharp test of continuous averaging.
+Put e(t)=exp(2*pi*i*t), lambda=log16 and, with the existing positive
+P(x)=4-2x^3-x^4-x^5=(1-x)*(4+4x+4x^2+2x^3+x^4), define
+
+    E(t)=integral_0^1 x^(8t+8)*P(x)/(16-x^8) dx,
+    S_alpha(t)=alpha*16^t-E(t), t>=0.
+
+At integer n, E(n) is the actual BBP tail and S_pi(n) is the initialized
+rational prefix, with fractional part y_(n+1). Positivity and logarithmic
+moments give 0<E(t)<=1/[(8t+9)*(8t+10)], E'<0 and
+0<E''<=512/10935<1/20. Thus for every alpha in [3,4], S_alpha' is positive
+and increasing, and at least 3*lambda*16^t. Integration by parts, including
+both endpoints and the variation of 1/S_alpha', yields for real h!=0
+
+    abs(integral_M^T e(h*S_alpha(t))dt)
+      <=1/[3*pi*abs(h)*lambda*16^M], T>M>=0.
+
+This does not transfer to the integer samples. Fix h in Z with h!=0.
+For every integer M>=0 and L>=1, alpha=3 gives
+
+    abs((1/L)*sum_(M<=n<M+L)e(h*S_3(n))-1)
+      <=2*pi*abs(h)/[(8M+9)*(8M+10)].
+
+For each fixed h the discrete averages tend to one uniformly in L, while
+the normalized continuous integrals tend to zero. This model retains exact
+A at all future steps; its states are 1-E_n>89/90. It changes the initial
+state to fract((3-pi)/16) and loses rationality of the raw samples. It is
+not a counterexample to actual V. Derivative and convexity estimates alone
+do not distinguish the required initialization.
+
+A supplementary rational coboundary prevents several weaker summaries from
+being mistaken for that distinction. Put u=1927/1680 and
+
+    R(t)=1/[64*(t+2)*(t+3)]+u/[(t+2)*(t+3)*(t+4)],
+    B(t)=16*R(t-1)-R(t), C=16*R(-1)=8023/2520.
+
+B has four simple poles, is positive and completely monotone on [0,infinity),
+and has B(0)=47/15 and B(t)~15/(64t^2). Positive Laplace densities for R
+are multiplied by 16*exp(s)-1 for B. The zero-initialized raw recurrence
+is U_n=C*16^n-R(n), U_-1=0. For n>=1 the fractions of C*16^n cycle
+through 296/315,11/315,176/315. Since R(n)<=R(0)=127/2520 and
+176/315-R(0)-1/2=1/120, subtracting R(n) leaves either a fraction above
+1/2 or at most 11/315; wrapping a negative difference also places it above
+1/2. At n=0 the fraction is 2/15. All states therefore avoid (1/4,1/2).
+This retains rational samples, zero initialization and the first/leading
+coefficients, but loses exact A, its pole classes and its irrational period.
+It does not refute a rational-or-dense dichotomy.
+
+A trigonometric minorant would still require a small actual integer-sampling
+discrepancy. Once the continuous bound is supplied, that requirement is
+essentially the existing finite-frequency gap, not a weaker visitation lemma.
+Suspend derivative-only continuous averaging. Any Poisson-summation approach
+must control the nonzero sampling terms using the actual initialization;
+no such estimate is part of this result.
+
+Frozen report `/tmp/pi-m4-actual-forcing-recovery-20261127/report.md` has
+SHA-256 `d235f8bb0ce7ea7ad7404f479df6d7fb604f63456f489bb49a1a047d2f3654e5`.
+Parent reconstruction and unchanged-copy replay passed 1,137 exact checks,
+exit 0, identical receipt and three preserved artifacts. They test coefficient
+identities and synthetic samples, not actual pi phases. Independent paper
+criticism found no defect; its explicit integer-frequency and window-domain
+clarification is incorporated above. The analytic and all-time avoidance
+arguments remain paper mathematics, not Lean declarations or a V result.
+
+## Poisson sampling retains the unknown phases
+
+The follow-up keeps the exact E and fixes h in Z, h>0; negative frequencies
+follow by conjugation. Choose a nonnegative smooth bump eta supported in
+(-1/4,1/4), eta(0)=1, and define, for integer m>=2,
+
+    f(t)=h*(alpha*16^t-E(t)),
+    I_m(k)=integral eta(t-m)*e(f(t)-k*t)dt, k in Z.
+
+Periodization and absolutely convergent Fourier inversion give
+sum_k I_m(k)=e(f(m)). Parseval gives sum_k|I_m(k)|^2=integral eta^2;
+the shifted quadratic correlations likewise depend only on eta. These
+within-scale statistics contain no initialization information. Isolating
+one integer makes reconstruction automatic; it does not rule out stronger
+cross-scale or long-window arguments.
+
+There is a valid uniform stationary-phase expansion. Put K=h*alpha*16^m,
+lambda=log16, and take lambda*K/4<=k<=4lambda*K. The unique saddle t_k
+satisfies f'(t_k)=k. Set g(k)=f(t_k)-k*t_k and
+a(k)=eta(t_k-m)/sqrt(f''(t_k)). Then
+
+    g'(k)=-t_k, g''(k)=-1/f''(t_k),
+    I_m(k)=a(k)*e(g(k)+1/8)+O_(eta,h)(K^(-3/2)).
+
+The source is [Tao, Lemmas 2.6 and 2.8, printed pp.6--8](https://www.math.ucla.edu/~tao/247b.1.07w/notes8.pdf).
+Its fixed-phase result needs a uniformity argument here: after t=m+u and
+division by K, the phases have bounded derivatives, uniformly positive
+curvature, and saddles in a fixed interior interval. The quadratic change
+of variable in the source proof is therefore uniformly controlled. Two
+integrations by parts outside the band give total O(K^-1). Summing the
+O(K) stationary terms gives error O(K^-1/2), hence O_(eta,h)(4^-M) over
+any finite window m=M,...,M+L-1, uniformly in L. These are paper estimates.
+
+The leading absolute mass is of order sqrt(K), not a cancellation bound.
+Applying the reciprocal phase calculation returns the input:
+g(f'(j))+j*f'(j)=f(j), with reciprocal amplitudes and opposite stationary
+phase factors cancelling. No second global transformed-sum remainder is
+asserted. A constant-size estimate per m would still sum to O(L), not o(L).
+
+The exact real identity S_alpha(t+1)=16*S_alpha(t)+A(t+1) gives a convolution
+between I_(m+1,h) and I_(m,16h). A smooth periodic extension of
+e(h*A(m+1+u)) differs from e(h*A(m+1)) by O_h(m^-3) in C^2 norm.
+Fourier multiplication and Young's inequality consequently prove
+
+    norm_ell2(I_(m+1,h)-e(h*A(m+1))*I_(m,16h))=O_h(m^-3).
+
+The frequency changes, the constant is not uniform under repeated h->16h,
+and summation of coordinates is unbounded on ell2. Evaluating the exact
+convolution at zero just returns the original scalar recurrence. For alpha=3,
+the sum of nonzero sampling terms over L scales is
+L+O_h(1/M)+O_h(16^-M), uniformly in L. Thus no initialization-uniform
+cancellation follows. Actual initialized rational samples give roots of
+unity, but no correlation bound at different scales was obtained. Suspend
+iteration of this transform as a substitute for that missing arithmetic input.
+
+Frozen packet `/tmp/pi-m4-poisson-aliases-20261127/` has report SHA-256
+`ac16fa7eca55d71f880a5d42b5029bfc5a8747fb4850ecf2591f039f54a2600a`.
+The parent inspected the full source statement/proof on pp.6--8, reconstructed
+the argument and replayed an unchanged checker: 2,589 exact algebra checks,
+exit 0, identical receipt and four frozen inputs preserved. The checks do
+not certify analytic remainders. Independent paper criticism found no defect
+or required improvement; initialization-sensitive cross-scale cancellation
+remains open. No actual pi phase, Lean theorem or visitation result follows.

@@ -3436,3 +3436,77 @@ the completed finite results separately. This diagnostic route could identify
 which arithmetic data remain compatible with perturbations; even an infinite
 model would not retain exact A or prove V. No Lean theorem, unconditional visit,
 infinite all-prime model or M4 acceptance is claimed. Research continues.
+
+**Continuation and context decision — 2026-11-27 UTC:** the finite covering
+checkpoint is local commit `8155234c34be6aed22d33b6f45e0392f64ec886a`;
+its exact five-path scope, empty index, protected/unrelated preservation and
+post-commit necessity checks passed. Nothing was pushed. After discussing
+a fresh-session handoff, the user explicitly chose to keep working in this
+session and reassess tomorrow. No pause or reset was requested.
+
+The uniform-dual cycle completed with four paper claims in
+`/tmp/pi-m4-uniform-dual-20261127/report-v1.md`: an ordinary-stage lower
+bound including the full tail, arbitrarily long exceptional CRT blocks,
+simultaneous polynomial-prefix witnesses with controlled exponential height,
+and a p=7 obstruction forcing bounded nonzero raw-prefix polynomials to
+degree greater than N/200 eventually. Parent reconstruction and unchanged-copy
+replay passed 1,477 exact checks, exit 0, identical receipt and six preserved
+artifacts. Independent paper criticism found no defect and suggested making
+the uniform error constant explicit. Production integration review is pending;
+these are not a uniform covering result or actual V.
+
+The separate actual-forcing cycle gives exponentially small continuous
+Fourier integrals but an exact-A changed-initialization model whose integer
+averages tend to one. A rational four-pole coboundary additionally retains zero
+initialization and the first/leading coefficients, while losing exact A and
+the irrational period. Parent unchanged-copy replay passed 1,137 exact checks,
+exit 0, identical receipt and three preserved artifacts. Independent paper
+criticism found no defect and requested explicit integer frequency/window
+domains. Its packet is `/tmp/pi-m4-actual-forcing-recovery-20261127/`;
+production integration remains pending.
+
+Next bounded questions are distinct: a 20-minute adaptive logarithmic-window
+test for the Newton constraints, a 15-minute test of nonzero Poisson sampling
+terms retaining the actual tail, and a 15-minute actual arcsine-prefix
+comparison using central binomial coefficients. Each must identify a new
+quantitative consumer or a specific failure, not relabel the existing gap.
+Their scratch roots are respectively `/tmp/pi-m4-adaptive-window-20261127/`,
+`/tmp/pi-m4-poisson-aliases-20261127/` and
+`/tmp/pi-m4-arcsin-prefix-20261127/`. No results from those ongoing inquiries
+are accepted here. V/Hpi/T/M4 remain open; M5 remains excluded.
+
+**Global arithmetic and sampling reassessment — 2026-11-27 UTC:** all three
+follow-ups above completed. The adaptive-window packet proves an exact local
+content formula: sublinear frozen-history windows have a superexponential
+full-basis/all-center obstruction at primorial endpoints, even with positive
+volume surplus. This concerns the local lattice, not global fixed-K or
+period-line covering. Parent replay passed 3,288 original prime/order checks,
+exit 0, identical receipt and six preserved files. Independent criticism found
+no defect; its integer-square-root cleanup was made in a new frozen version
+with an identical passing receipt, leaving the original packet intact.
+
+The Poisson packet retains the actual tail and proves a uniform transformed
+formula with summable error, but reconstructs the sampled phases. Its exact
+cross-scale convolution changes frequency and does not furnish the required
+scalar cancellation. Parent source inspection included Tao's original pp.6--8;
+unchanged-copy replay passed 2,589 exact normalization checks, exit 0, identical
+receipt and four preserved files. Independent criticism found no defect or
+required improvement. No analytic estimate is inferred from those checks.
+
+The arcsine packet gives actual-time approximants, a vanishing tail, exact
+dyadic denominator and a local binomial residue formula. The actual odd-division
+remainder remains coupled to the real phase. Parent DLMF inspection and
+unchanged-copy replay passed 36,484 coefficient/synthetic checks, exit 0,
+identical receipt and six preserved files. Independent criticism found no
+defect; its direct-to-V error/offset clarification is included in the assessment.
+No actual prefix or pi phase was computed. Final integration status for these
+paper results is recorded separately in the continuation review record.
+
+A **40-minute global-support inquiry** now tests the parent's proposed small
+single-prefix witnesses and their consequences for integer-valued duals.
+Its scratch root is `/tmp/pi-m4-global-support-20261127/`. A separate
+**30-minute fresh-context recovery pass**, `/tmp/pi-m4-strategy-reset-20261127/`,
+seeks an actual-initialization/avoidance implication, rejecting ideas already
+covered in the archive. Both endpoints require a new precise bound or an
+informative failure, not renamed visitation. No outcome is claimed here.
+The user-directed continuation remains active; V/Hpi/T/M4 remain open.

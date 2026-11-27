@@ -1089,3 +1089,146 @@ Rare stages with many active primes still defeat uniform one-stage greedy
 estimates. Uniform covering would need a compatible infinite-model argument;
 denominator noncancellation is separate. Even such a model would discard exact
 A, so neither this reduction nor the finite certificate proves actual V.
+
+## Exceptional blocks and polynomial witness degree
+
+The uniform-dual test gives an ordinary-stage lower bound, including the
+unused tail. For an integer-valued dual w on Gamma_(K,N), let j be its
+largest nonzero c-coordinate and put
+
+    E_total=sum_(K<=i<N)b_i*abs(w_i-theta*beta_i)+abs(theta)*r_tail(N).
+
+The triangular prefix projection gives w_j in (L_j*h_j/M_j)*Z. Minimizing
+b_j*abs(w_j-theta*beta_j)+abs(theta)*r_tail(j+1), using
+r_tail(j+1)<beta_j*b_j, proves
+
+    E_total >= (L_j*h_j/M_j)*r_tail(j+1)/beta_j
+            > (15/256)*L_j*h_(j+1)*b_(j+1)/M_j.
+
+If the final lower bound exceeds 1/2, top support at j is impossible for a
+short dual. Its exponential rate is 4-log8-log(M_j)/j. Primitive prefix
+content cannot replace M_j while the older dual coordinates vary.
+
+For every fixed integer H>=1 and real R>0 there are arbitrarily late blocks
+j=n,...,n+H-1 with log M_j>=R*(j+1) everywhere. Choose disjoint finite prime
+sets P_t, all primes exceeding max(H,7), with sum log(p)/p>R in each set,
+then impose p|(n+t+1) by CRT. Prime reciprocal divergence permits the sets.
+The selected rows yield genuine duals whose newest integer-prefix coefficient
+is 1/M_selected and whose other integer-prefix coefficients lie before n.
+Their weighted c-coordinates in the fixed window have upper exponential rate
+4+log8-R. Older coordinates remain uncontrolled. These are not globally
+short duals or counterexamples to covering; H is fixed, not growing with n.
+
+A new simultaneous family has controlled exponential real height. Put
+D=K+1, H_p=floor(N/p), q_p=1 for H_p<D and otherwise
+q_p=D+2+v_p((H_p-D)!), C_N=product_(7<=p<=N)p^q_p over primes, and
+V_n=C_N*(n+1)_D, V_-1=0. These prefixes satisfy all strong Newton rows.
+Indeed for lambda=16^(p-1), the j-th difference of lambda^k*(k)_D is
+zero for j<D and (j)_D*lambda^D*(lambda-1)^(j-D) otherwise; the first
+term `Delta^j[p*(pk)_D](0)` is divisible by p^(j+1)*j!.
+The orthogonal coefficients reproducing these moments have budget norm at most
+
+    (4352/B)*C_N*N^(D+6)*(2N+1)*16^(N-1).
+
+The roots of R_i give monomial coefficient sum at most 2^i; the existing
+norm lower bound then gives this estimate. Chebyshev and Legendre bounds make
+its logarithm at most [(3+1/D)*log16+C_star]*N+O_(K,B)(log(N+2)), where
+C_star=sum_(p>=7)log(p)/[p*(p-1)]<1. It is not a bounded perturbation.
+
+More strongly, every nonzero rational raw-prefix polynomial P of degree d,
+with P(0)=0, V_n=P(n+1) and the fixed coefficient budgets, must eventually
+have d>N/200 if it satisfies all rows through N. Set H=floor(N/7).
+For H>2d, the rows j=H-d,...,H and v_7(16^6-1)=1 imply
+
+    v_7(Delta^d P(0)) >= d+2+v_7((H-d)!).
+
+Write the j>d defect as -chi_4(7)*(lambda-1)^j*Q(j), with
+Q(j)=sum_(r<=d)binom(j,r)*(lambda/(lambda-1))^r*Delta^r P(0).
+Taking the d-th difference of Q proves the valuation bound. Meanwhile
+L_(d-1)*Delta^d P(0) is a nonzero integer, and the budgets give
+abs(Delta^d P(0))<=(256B/15)*17^d. With L_(d-1)<=C*exp(5d), this requires
+
+    (log7/42)*N <= [5+log17-(5/6)*log7]*d+O_B(log(N+2)).
+
+The error constant is independent of P,d,N. If d<=N/200, then H>2d
+eventually and log7>3/2, log17<3 imply 11N/5600<=O_B(log(N+2)), a
+contradiction. Thus arbitrary rational coefficients varying with N do not
+evade the obstruction. The full lattice can have interpolation degree growing
+with N and is not excluded.
+
+Frozen report `/tmp/pi-m4-uniform-dual-20261127/report-v1.md`, SHA-256
+`97670b183d440f48620924057d97cd391a8af790980af57f608e3467f4fce592`,
+contains the full derivations. Parent unchanged-copy replay passed 1,477
+exact checks at K=31,N=497,B=1/4096, exit 0, identical receipt and six
+preserved artifacts. The last seven-adic row is sharp: removing one factor
+7 changes valuation 84 to 83. Independent paper criticism found no defect;
+its uniform-constant clarification is included above. Universal bounds are
+paper proofs, not finite-test consequences or Lean theorems. A witness v
+only gives abs(w(v)-theta*beta.v)<=E_N(w,theta)*norm_b(v); exponential
+height cannot force an integer to vanish from E_N<1/2. A useful full-coordinate
+norm/value bound, uniform covering and actual V remain open.
+
+## Logarithmic windows contain good stages but cannot repair a frozen history
+
+An adaptive window improves the ordinary-stage observation. Write
+F(m)=sum_(p>=7,p|m)log(p)/(p-1). Legendre gives
+log M_(m-1)<=m*F(m)+log^2(m)+4log(m). Counting prime multiples in an
+interval of length H gives sum F<=H*C_star+4+3log(X+H), using the
+elementary Chebyshev bound. Consequently for integer X>=2^16 and
+H=ceil(64log(X+2)), some j in [X,X+H) satisfies
+
+    log M_j/j<9/8<4-log8-1/2.
+
+Also the contribution of p>H to F(m) is at most log(m)/(H-1). Thus nearby
+ordinary stages exist and most excessive modulus mass comes from smaller
+primes. This does not provide a small full basis for the window.
+
+The exact local content supplies a countertest. Freeze all integer prefixes
+before J, with floor(N/7)<=J<=N-1, and consider homogeneous differences
+of extensions. Put j=N-1, h=j-J, t_p=floor(h/p). The ideal of possible
+last integers a_j in this local all-prime lattice has positive generator
+
+    g_(J,N)=M_j/product_(p>=7,p|N)p^[t_p+v_p(t_p!)].
+
+The hypothesis on J makes every available lower-chain index k-1 less than
+J, so its contribution actually vanishes. For p|N, set k=N/p and
+s=ceil((J+1)/p)=k-t_p. Earlier Newton coefficients vanish. Binomial
+inversion gives minimum valuation s+2+v_p(k!)-v_p((k-s)!) for G_p(k),
+attained at the first allowed Newton order s. Multiplying by L_j/p gives
+the stated exponent for a_j. A single Newton coefficient at s attains it;
+clearing other prime rows by a multiplier coprime to p preserves that
+valuation. The newest-only vector a_j=M_j bounds the prime support. These
+two directions prove the exact content formula on the entire local lattice.
+The earlier K=1,N=14 counterexample still guards the essential J hypothesis.
+
+The savings are at most h*F(N), so
+log g_(J,N)>=(N-h)*F(N)-log^2(N)/log7. Along primorial endpoints
+N=product_(7<=p<=Y)p, any h=o(N) therefore has log(g_(J,N))/N tending
+to infinity. In contrast the analytic budgets imply
+
+    abs(a_j(c)) <= A_N*norm_b(c),
+    A_N=(4096B/15)*L_j*16^j, log A_N=O_B(N).
+
+Every budgeted local point consequently has a_j=0 at those sufficiently
+late endpoints. Every full local basis has a vector of norm at least g/A_N,
+and its all-center covering radius is at least g/(2A_N). Both lower bounds
+are superexponential. This refutes subexponential full-basis repairs with
+any sublinear frozen-history window, not just a particular reduction method.
+
+For windows of length ell=ceil(64log N), the same actual lattice nevertheless
+has log(volume/covolume)>=[4-log8-17/16+o(1)]*N*ell>0. Thus large volume
+and poor covering coexist in the actual arithmetic blocks. Bounded points
+may lie in the proper hyperplane a_j=0; their periods might still cover a
+target line. Neither global fixed-K covering nor that period-line possibility
+is excluded. The local dual a_j/g is not asserted to be a global dual.
+
+Frozen report `/tmp/pi-m4-adaptive-window-20261127/report-v1.md`, SHA-256
+`5bd44ddc97062434cc6ca1e25a1c3918ab91fca6d15ed9a00cffb4050a7f8d33`,
+contains the explicit constants and proofs. Parent unchanged-copy replay
+passed 3,288 original prime/order checks at N=1001,J=900, exit 0, identical
+receipt and six preserved artifacts. Independent paper criticism found no
+defect. Its nonblocking integer-square-root cleanup was made in a new checker
+under `/tmp/pi-m4-adaptive-window-isqrt-20261127/`; the same receipt passed
+and originals remain intact. No finite basis search, actual phase or Lean
+proof was used. Further local full-basis enlargement is suspended; global
+older-coordinate control and period-specific fibers remain open.

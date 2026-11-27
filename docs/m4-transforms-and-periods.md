@@ -631,3 +631,64 @@ recovery pass seeks a positive intermediate lemma retaining exact dependence
 across approximation anchors, with a concrete consumer for V.
 Each finite bound requires
 reassessment and a changed question when needed, not an end to M4 research.
+
+## Arcsine prefixes retain an odd-division carry
+
+[DLMF 4.24.1](https://dlmf.nist.gov/4.24.E1), at the principal real value
+arcsin(1/2)=pi/6, gives pi=3*sum_(j>=0)binom(2j,j)/[(2j+1)*16^j].
+For n>=0 let T_n be this series truncated at j=2n and multiplied by16^n.
+The elementary induction binom(2j,j)<=4^j/sqrt(j+1) and a geometric sum give
+
+    16^n*pi=T_n+epsilon_n,
+    0<epsilon_n<=1/[(4n+3)*sqrt(2n+2)] ->0.
+
+This is a genuine actual-orbit approximation. To expose its exact consumer,
+write R_n=bbpTail(n). The checked BBP identity gives
+
+    bbpRecurrence(n+1)=fract(fract(T_n)+epsilon_n-R_n),
+    epsilon_n-R_n ->0.
+
+Arbitrarily late visits of fract(T_n) to every open interval would therefore
+give V by inner intervals and a threshold exceeding the requested N. No such
+visitation theorem, compiled arcsine interface or new Lean export is supplied.
+
+For m>=0 set L_m=lcm{1,3,...,2m+1} and
+Z_m=3*sum_(j<=m)16^(m-j)*binom(2j,j)/(2j+1). Legendre's formula gives
+v_2 binom(2j,j)=s_2(j). The term r positions before the last has excess
+4r+s_2(m-r)-s_2(m)>=3r, so the last term is uniquely minimal and
+v_2(Z_m)=s_2(m). For m=2n,n>=1, reduce Z_m/2^s_2(m)=u_m/q_m with
+u_m,q_m odd, q_m>0. Then
+
+    T_n=u_m/[2^d*q_m], d=4n-s_2(n)>0.
+
+The odd factor remains: q_m divides L_m, and every prime p>3 in
+(m,2m+1] survives in q_m by its unique pole and the binomial unit
+binom(p-1,(p-1)/2)=(-1)^((p-1)/2) modulo p.
+Modulo 2^h, the normalized Z_m is determined by its last ceil(h/3) terms
+(or all terms if fewer), because every omitted normalized term has valuation
+at least h. This is a residue formula, not a surjectivity statement.
+
+Let r_m=u_m mod q_m and z_m=u_m*q_m^(-1) mod2^d, with inverses used only
+in this congruence and residues chosen nonnegative. Exact Euclidean division
+gives
+
+    fract(T_n)=((z_m-r_m*q_m^(-1)) mod2^d)/2^d
+                    +r_m/(2^d*q_m).
+
+The last real term is below2^-d, but the modular-inverse contribution of
+r_m is uncontrolled. Fixed leading real words also require information near
+the high end of this growing d-bit quotient, not just fixed low precision.
+For a generic separation, the reduced fractions with q=3 and numerators
+3+2^(d+h),3+2^(d+h+1) have normalized odd parts congruent modulo2^(d+h),
+yet circular real separation 1/3 after division by2^d. They are synthetic,
+not actual arcsine numerators. An actual coupled numerator/remainder identity
+could still matter; binomial valuations alone have not provided one.
+
+Frozen report `/tmp/pi-m4-arcsin-prefix-20261127/report-v1.md` has SHA-256
+`9465a091cd31eca91041b6f78d3ea044d0f3fbbc9fe381545ba8d2a90ab0363a`.
+The parent verified the original DLMF equation/domain, reconstructed the
+argument and replayed an unchanged checker: 36,484 coefficient/synthetic
+checks, exit 0, identical receipt and six preserved artifacts. No actual
+arcsine prefix, pi phase or digit was computed. Independent paper criticism
+found no defect; its explicit direct-to-V offset/error clarification appears
+above. Universal statements remain paper mathematics, and V remains open.

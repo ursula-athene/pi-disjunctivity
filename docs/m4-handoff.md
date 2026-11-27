@@ -7,7 +7,7 @@ The [continued research checkpoint](#continued-research-checkpoint--2026-11-26)
 records subsequent work during the user's absence; that checkpoint does not
 terminate the ongoing M4 effort.
 The latest dated continuation is the
-[Finite covering and a rational period functional](#finite-covering-and-a-rational-period-functional--2026-11-27-utc); read the
+[Global arithmetic and integer sampling](#global-arithmetic-and-integer-sampling--2026-11-27-utc); read the
 research log and actual checkout for subsequent results and current state.
 
 ## Baseline and authorized endpoint
@@ -1043,3 +1043,28 @@ no larger finite basis campaign is planned. The review record owns integration
 status and all findings. There is no infinite all-prime model or actual
 visitation result. V/Hpi/T/M4 remain open, B4/P3 retain visits and M5 is excluded.
 This checkpoint does not end the authorized research.
+
+## Global arithmetic and integer sampling — 2026-11-27 UTC
+
+The preceding finite-covering checkpoint is local commit
+`8155234c34be6aed22d33b6f45e0392f64ec886a`; nothing was pushed. The user
+considered a fresh session and then explicitly chose to continue here and
+reassess tomorrow. No pause or reset was requested. The
+[proof plan](proof-plan.md#5-prove-the-missing-universal-visitation-theorem)
+links the new uniform-dual/local-content, sampling/Poisson and arcsine results.
+They sharpen failures or conditional interfaces; none supplies V.
+
+Parent reconstructions and exact-checker replays passed, with original evidence
+preserved. Separate paper criticism covered each packet; the continuation
+review record owns all dispositions and final integration status. No Lean,
+pin, dependency, audit or theorem contract changed. Raw packets and review
+captures remain under `/tmp`; their paths and hashes are evidence pointers,
+not durable archives. The mathematical records here retain the arguments.
+
+Current bounded inquiries test global dual support using small single-prefix
+witnesses and seek an actual-initialization implication in a fresh-context
+strategy pass. The research log owns their handles, bounds and latest outcomes;
+read it and verify the checkout before continuing. Full local basis repairs,
+derivative-only sampling, and valuation-only arcsine phase claims are suspended.
+Global period covering, actual carry control and V remain unproved. Hpi/T/M4
+remain open, B4/P3 retain visitation premises, M5 is excluded, and work continues.

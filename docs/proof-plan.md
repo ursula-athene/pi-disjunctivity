@@ -896,13 +896,30 @@ now succeeds for the perturbation lattice at K=31,N=50,B=1/4096. A
 gives a sufficient general consumer with a fixed positive target radius.
 Neither supplies bases at arbitrarily large cutoffs or retains the exact A.
 
-The next 20-minute inquiry tests a uniform dual or controlled-witness bound
-at stages with many simultaneous prime constraints. Larger finite basis
-searches are suspended: another successful cutoff would not answer that
-question. Existing primitive-content witnesses have no real-size control.
-The endpoint is a new bound or a precise obstruction to it, after which the
-meta-plan selects the next investigation. V and all Lean contracts remain
-unchanged; more classification without a visitation consumer remains excluded.
+The [uniform-dual test](m4-prime-defect-boundary.md#exceptional-blocks-and-polynomial-witness-degree)
+supplies exponential witness-height control and an obstruction to sublinear
+polynomial degree. An [adaptive-window calculation](m4-prime-defect-boundary.md#logarithmic-windows-contain-good-stages-but-cannot-repair-a-frozen-history)
+proves that even sublinear frozen-history windows cannot have small full bases
+at primorial endpoints, despite large volume surplus. Global fixed-K and
+period-line covering are still open. Larger local basis searches are suspended.
+
+The [continuous-sampling test](m4-generating-functions.md#continuous-cancellation-does-not-control-integer-sampling)
+and its [Poisson follow-up](m4-generating-functions.md#poisson-sampling-retains-the-unknown-phases)
+retain exact A but produce no initialization-sensitive cross-scale estimate.
+An [arcsine prefix](m4-transforms-and-periods.md#arcsine-prefixes-retain-an-odd-division-carry)
+approximates the actual orbit with vanishing error and exposes the odd-division
+carry; its binomial valuation data do not control the coupled real phase.
+All these universal arguments are paper mathematics, not new Lean exports.
+
+The next arithmetic inquiry has a 40-minute reassessment bound: test whether
+very small single-prefix witnesses at ordinary near-top indices force zeros
+in global dual coordinates, then use the actual off-diagonal rows to constrain
+the remaining support. This is distinct from the refuted local full-basis
+repair and remains a comparison-model investigation. A separate 30-minute
+fresh-context recovery pass seeks an actual-initialization/avoidance implication
+with a discriminating test; it must check the failure record before retaining
+a candidate. The log owns their outcomes. V and all Lean contracts are unchanged;
+neither conditional wrapping nor more classification supplies visitation.
 
 For the recurrence defined in Step 4, seek a proof of
 
