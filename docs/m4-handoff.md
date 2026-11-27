@@ -7,7 +7,7 @@ The [continued research checkpoint](#continued-research-checkpoint--2026-11-26)
 records subsequent work during the user's absence; that checkpoint does not
 terminate the ongoing M4 effort.
 The latest dated continuation is the
-[Quadratic-period enclosures and their cost](#quadratic-period-enclosures-and-their-cost--2026-11-27-utc); read the
+[Qualitative density and exact carry tests](#qualitative-density-and-exact-carry-tests--2026-11-27-utc); read the
 research log and actual checkout for subsequent results and current state.
 
 ## Baseline and authorized endpoint
@@ -1450,3 +1450,47 @@ preservation checks passed. No Lean or trust boundary changed.
 A new bounded qualitative-dynamics inquiry tests whether a prime transform
 supplies additional invariance of the actual orbit limit set. The log owns its
 bound and outcome; no unfinished source or transfer is adopted. Continue M4.
+
+## Qualitative density and exact carry tests — 2026-11-27 UTC
+
+The quadratic checkpoint is local commit
+`fb800d8d599295c0cb76d3d865eab3516b47e894`. Its reviews, checks, exact
+staging and post-commit necessity/preservation inspection passed. At inspection
+the branch was eleven ahead of its remote-tracking reference, index empty and
+task-owned tree clean. Subsequent edits are uncommitted; no push or PR was issued.
+
+The [qualitative consumer](m4-prime-compression.md#a-qualitative-density-consumer-retains-the-real-matching-premise)
+shows that the unproved inclusion 7K subset K union (-K) would imply V.
+It explicitly handles rational-only omega-limit sets. The exact prime-7
+extraction retains the intervening block, canonical floors and amplified
+tail. A limsup obstruction excludes only the naive same-index match.
+The missing estimate must match sevenfold actual prefixes to genuinely
+late actual prefixes with real errors tending to zero and full quantifiers.
+
+Parent replay passed 35 exact checks, with identical receipt and eleven
+preserved originals. Independent paper review found no D/I item; Q1 retains
+the real matching premise. The primary theorem's two relevant pages were
+inspected as text and images; earlier source dependencies were not fully
+audited. Combined integration review and repository checks passed, with the
+floor-contribution wording clarified. No Lean, audit, dependency or pin
+changed; V/M4 remain open.
+
+The reviewed follow-up excludes uniform matching through a finite lag set
+or through the compressed index k-1, including adaptive signs. It retains
+return-conditioned fiber coverage as an unproved sufficient condition;
+P={7} moment models show that valuation classes alone cannot imply it.
+Its replay passed 43 checks with identical receipt and preserved originals;
+paper review found no D/I item. The separate
+[exact coefficient recurrence test](m4-rational-forcing.md#exact-coefficient-recurrence-retains-integer-rounding-cost)
+retains the integer rounding error and its primitive degree-six scale.
+Actual irrationality forces normalized residual spikes; the hoped-for
+small-error consumer supplies no estimate. Its avoiding comparisons lose
+the full fractional initialization and rational raw samples explicitly.
+Parent replay passed 2,769 exact checks after removing a mislabeled actual
+zero-seed fixture. Paper review resolved that evidence defect without
+mathematical changes. Full combined integration review passed with that
+historical defect resolved and no new mathematical defect. Documentation,
+process, whitespace and preservation checks passed.
+The next research question must use a different bridge from exact BBP
+structure to actual placement; these failed uniform and small-residual
+consumers should not be retried unchanged. Continue M4 research.

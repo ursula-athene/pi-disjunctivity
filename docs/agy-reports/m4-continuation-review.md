@@ -2637,3 +2637,126 @@ passed. Unchanged Lean was not rebuilt. Subsequent edits record outcomes only;
 no substantive repair was required. This checkpoint's review is complete,
 with V/M4 open. The qualitative-dynamics inquiry contributes only its
 scope/start record here, not an adopted source theorem or mathematical transfer.
+
+## Qualitative density consumer and prime-7 transfer — 2026-11-27 UTC
+
+Paper packet `/tmp/pi-m4-higher-rank-consumer-20261127/` completed at
+14:20:18 UTC within its 20-minute bound. Its report has SHA-256
+`3a69216322b811cb8783f2181855679103631fae03e0fc9a5acdc9e70b2f98a8`;
+manifest SHA-256
+`ff35122f7cfb5cee15e21d2c3cfc0d5ac06173cf2bf2e79a87bb4aee78a4dcef`.
+It supplies a conditional consumer R7 implies V and tests the actual
+prime-7 transfer without dropping its intervening block or canonical floors.
+R7 and arbitrary late-index real matching remain unproved.
+
+Independent `/root/generating_review` began at 14:24:12 and completed at
+14:27:37 UTC within its 15-minute bound. Full returned response is
+`/tmp/pi-m4-higher-rank-paper-review-20261127.txt`. **D/I: none. Q1: retained
+open:** the complete late-index real matching estimate, with a witness m
+allowed to depend on k and required to be arbitrarily late. The critic
+reconstructed the infinite closed-set consumer, including rational-only
+limit sets, the finite-K expansion contradiction, matching quantifiers and
+residue-class reduction, all p7 block/floor/tail identities, and the exact
+limsup obstruction to the naive common-index match.
+
+Parent and critic read and visually inspected the primary scan's printed
+pages 47--48: Furstenberg Definition IV.1 and Theorem IV.1. Earlier source
+dependencies, including Proposition IV.1, were not fully audited. The
+archived alternate-state and prime-defect results remain retained paper
+inputs. All ten manifest-bound artifact hashes matched. Parent replay of
+an unchanged checker copy passed 35 exact checks, exit 0, identical receipt
+and eleven original packet files preserved; replay record
+`/tmp/pi-m4-higher-rank-parent-replay-20261127/replay.json` has SHA-256
+`d4a43f9237b5667f6a77b705bd88279adac60367cd2bec4abfc72a11a97846a9`.
+The one p=7,k=1 fixture and finite algebra checks do not prove the infinite
+claims. The critic inspected these as caller execution evidence, performed
+no execution or mutation, contacted no service and did not delegate.
+
+The critic used AGENTS, the replacement procedure, pi-argument-critic and
+both adversarial guides, verified unchanged. Production integration and
+the index-rule follow-up were excluded from this paper review. Full
+integration review is pending; no Lean or M4 acceptance is claimed.
+
+The off-index packet `/tmp/pi-m4-off-index-matching-20261127/` completed
+at 14:35:15 UTC. Report SHA-256:
+`7f453e32792f2627f0a489e5fc334f9e154540747f34e020eff86ce77b4dcf33`;
+manifest SHA-256:
+`511bef813c7ca5ef5addd2316556fb5089061f2771d5f202b0e49efa0a7ead7d`.
+Independent `/root/finite_log_independent_review` began at 14:36:26 and
+completed at 14:40:42 UTC, within its 12-minute bound. Full response:
+`/tmp/pi-m4-off-index-paper-review-20261127.txt`. **D/I: none. Q1: retained
+open:** the real matching estimate at selected returns to each first-coordinate
+cluster point. The critic reconstructed both uniform-rule limsup bounds,
+all sign/scale and block/floor identities, the fiber quantifiers, and the
+P={7} model's applicability. It checked directly that the archived period
+interval permits a nondense target different from pi, and verified the
+loss of exact defect values under a nonzero period shift.
+
+All four manifest-bound hashes and the prerequisite report matched. Parent
+unchanged-copy replay passed 43 exact checks, exit 0, identical receipt and
+five preserved originals; replay SHA-256
+`bfb80509152e6b68c8bef047f6cc474eac1b324dccee1c4602d0c9fafd46681f`.
+Those are caller execution evidence. The critic used both guides and the
+replacement procedure with read-only inspection, no execution, mutation,
+service or delegation. The full Furstenberg proof and infinite moment
+construction were retained inputs, not freshly audited. Integration and
+the separate exact-structure reset were excluded; V/M4 remain open.
+
+The exact-coefficient packet completed at 14:38:59 UTC. Parent found a
+scope-label error in its zero-seed algebra fixtures and requested an immutable
+repair. Authoritative report
+`/tmp/pi-m4-exact-structure-clarification-20261127/report.md` has SHA-256
+`9a2d83c8d95ee3a8c3399be211d533f03ce420e416958d71dd25c512b2129c38`;
+manifest SHA-256
+`bdf7545571a58c6719c6068a1f14a6ef67062cf3bba39509af62162a68e63363`.
+The repair removes only the zero seed and corrects the evidence count/label;
+the original report, checker, receipt and completion remain preserved.
+
+Independent `/root/finite_log_independent_review` began at 14:41:35 and
+completed at 14:44:32 UTC within its 12-minute bound, inspecting both original
+and corrected packets. Full response:
+`/tmp/pi-m4-exact-structure-paper-review-20261127.txt`. **D1: resolved:**
+the original blanket synthetic/no-actual-sampling label was inaccurate,
+although the actual-prefix algebra fixtures were not a digit census. The
+corrected checker removes 23 iterations times three tests and records
+2,769 checks. **I: none. Q1: retained open:** no avoidance-to-small-residual
+implication is supplied for the actual initialized sequence. The critic
+reconstructed the coefficient identity, operator and carry algebra, primitive
+content argument, universal carry-pair gap, actual limsup and both all-time
+comparison trajectories with their explicit lost hypotheses.
+
+The Bezout conclusion uses a full integer-polynomial certificate, not the
+sampled gcd checks. The critic inspected its Euclidean/convolution source;
+parent execution verified it. All five original and six repaired file hashes
+matched. Parent unchanged-copy replay passed 2,769 checks, exit 0, identical
+receipt and preservation of all eleven files; replay SHA-256
+`24acf205aae9ff0daba98f50f54096f5983083a4b34792db3f00ca5fc0da5861`.
+Both guides and the replacement procedure governed read-only review. No
+checker, probe, build, extractor, mutation, service or delegation occurred.
+Established tail facts, irrationality and elementary pi bounds remain
+inputs; no Lean certification is claimed. Production integration was
+excluded and remains pending for the combined six-path checkpoint.
+
+Full combined integration review by `/root/generating_review` began at
+14:47:40 and completed at 14:52:34 UTC, within its 15-minute bound.
+Packet `/tmp/pi-m4-density-carry-review-20261127/` retains the complete
+`review-full.txt` response, initial/focused/revised diffs and manifests.
+Baseline: `fb800d8d599295c0cb76d3d865eab3516b47e894`.
+Initial diff SHA-256:
+`35c8dd47a67bec580e6dd699fc21e8b664244b0526252bec0b8c4d2bba44fd80`.
+Revised diff SHA-256:
+`24b73cbfede6e73196284f7c54c8629e794f0ec1ddfc6107af77e9dc70d7c7a0`.
+**D1: remains resolved. I1: resolved:** the floor terms are an integer
+contribution, not necessarily floor(R_sigma), because the remaining
+fractional-part combination need not be canonical. **Q1--Q2: retained
+open:** real matching/return selection and avoidance-to-small-residual.
+No new mathematical defect was found.
+
+The critic reconstructed all three integrated arguments and verified the
+live baseline/diffs and all 83 bound files: six production, 44 evidence,
+three context, two guides, 17 protected and 11 unrelated. The index was
+empty. Source-proof and infinite-model limits remain explicit; all replay
+and repository check results are caller execution evidence. Documentation
+(93), process tests (38), whitespace and preservation checks passed; unchanged
+Lean was not rebuilt. Subsequent edits record review outcomes only. Later
+source research was excluded. V/M4 remain open.

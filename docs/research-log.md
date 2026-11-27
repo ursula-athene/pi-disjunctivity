@@ -4294,3 +4294,82 @@ with no new D/I item. Coupled complete height/accuracy and actual forbidden-set
 placement remain open. Documentation (93), process tests (38), whitespace and
 preservation checks passed. Unchanged Lean was not rebuilt. The qualitative
 prime-transfer inquiry is excluded from this reviewed mathematical result.
+
+The quadratic-family checkpoint is local commit
+`fb800d8d599295c0cb76d3d865eab3516b47e894`, parent `fa00e247`.
+Exact staged scope/diff/blobs, working/staged whitespace and post-commit
+necessity/preservation inspection passed. The index was empty and task-owned
+tree clean; the branch was eleven ahead of its remote-tracking reference.
+This run issued no push or PR. The checkpoint leaves V/M4 open.
+
+The qualitative-dynamics inquiry completed at 14:20:18 UTC within its bound.
+Its sealed report is `/tmp/pi-m4-higher-rank-consumer-20261127/report-v1.md`.
+Parent read its full argument/checker, inspected the primary theorem's printed
+pages 47--48 as text and rendered images, and replayed the unchanged checker:
+35 exact checks, identical receipt, eleven original packet files preserved.
+Independent paper review is pending; no new mathematical conclusion is adopted
+before that review. Its remaining proposed premise is arbitrary late-index
+real matching, not a p-adic congruence.
+
+At 14:25:12 UTC the same generator began a **20-minute** follow-up, deadline
+14:45:12 UTC, scratch `/tmp/pi-m4-off-index-matching-20261127/`. It tests all
+fixed finite lag choices, including negative lags and adaptive signs, then
+at most one unbounded index rule supplied by the extraction. The endpoint is
+a rigorously allowed/excluded class with the actual initialized block/tail
+terms retained, or a surviving precise estimate; finite tests cannot supply V.
+The original sealed packet remains unchanged and under separate criticism.
+
+Independent `/root/generating_review` completed the qualitative-consumer
+paper review at 14:27:37 UTC, within its 15-minute bound. No D/I item was
+found; Q1 retains the complete arbitrary late-index real matching premise.
+It reconstructed the rational-only and finite-limit-set cases, source
+contract, quantifier equivalence, exact block/tail identities and limsup
+obstruction. Source dependencies earlier than the two inspected pages were
+not fully audited. Production integration is pending; V/M4 remain open.
+
+At 14:27:45 UTC `/root/m4_exact_structure_reset` began a **20-minute**
+fresh-context discovery pass, deadline 14:47:45 UTC, scratch
+`/tmp/pi-m4-exact-structure-reset-20261127/`. Its question is whether the
+exact low-degree rational forcing or initialized period has a useful
+feature lost by the recorded nondense countermodels. It must choose one
+candidate and perform a discriminating calculation, retaining the first
+unproved bridge. It excludes the current index-matching work, repeated
+Borel/monodromy, quadratic and finite-field classifications, and numerical
+digit/prime censuses. No unfinished result is adopted.
+
+The index-rule inquiry completed at 14:35:15 UTC within its bound. The
+finite-lag and compressed-index exclusions retain adaptive signs, negative
+lags and positive limsup bounds. Return-conditioned fiber coverage is a
+separate unproved sufficient condition, not refuted by those bounds. The
+fixed-prime moment model applies at P={7}, distinguishing valuation classes
+from the exact defect values and finite-pole forcing. Parent replay passed
+43 checks, identical receipt and five preserved originals. Independent
+paper review completed at 14:40:42 UTC, with no D/I item; Q1 retains the
+real estimate at selected returns. Production integration remains pending.
+
+The exact-structure reset completed at 14:38:59 UTC. It uses the exact
+rational coefficient ratio to eliminate the homogeneous mode, retaining an
+integer rounding defect with primitive coefficients of order n^6. Its
+Bezout certificate bounds content independently of n; actual irrationality
+forces normalized residual spikes. The two avoiding comparisons keep exact
+A but lose the zero fractional seed and rational raw samples. Suspend the
+proposed local small-error consumer: no actual avoidance estimate follows.
+
+Parent found an evidence-label error in the sealed checker: zero was among
+its purported synthetic seeds, so it computed actual initialized floors
+for n<24. The immutable repair completed at 14:41:26 UTC within a five-minute
+bound, removing only that seed and recording the historical error. Parent
+unchanged-copy replay passed 2,769 checks, identical receipt, and preserved
+all five original plus six repaired files. Independent paper review completed
+at 14:44:32 UTC, resolving D1 with no new defect or improvement. Q1 retains
+the missing avoidance-to-small-residual implication; the mathematical claims
+were unchanged. Full combined integration and repository checks are pending.
+
+Full six-path integration review completed at 14:52:34 UTC. Historical D1
+remains resolved. I1 was resolved by calling the canonical-floor terms an
+integer contribution, not floor(R_sigma); the remaining fractional-part
+combination need not lie in [0,1). Q1 retains real matching/return selection,
+and Q2 retains the missing avoidance-to-small-residual implication.
+Documentation (93), process tests (38), whitespace and preservation checks
+passed. Unchanged Lean was not rebuilt. Later source research is excluded
+from this checkpoint, which leaves V/M4 open.

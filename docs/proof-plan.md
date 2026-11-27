@@ -1026,9 +1026,25 @@ depends on the actual tails and derivative. Every rational point inside the
 original enclosure can also be selected as a rational positive root, so
 factorization cannot be dismissed; this parametrization gives no height or
 placement bound. Suspend these simplifications without a coupled consumer.
-A bounded qualitative-dynamics inquiry now tests an additional invariance
-condition against the actual prime transform; no unfinished result is adopted.
-Actual placement remains open. The log owns bounds and outcomes.
+The [qualitative density consumer](m4-prime-compression.md#a-qualitative-density-consumer-retains-the-real-matching-premise)
+proves R7 implies V at paper level, where R7 is the unproved inclusion
+7K subset K union (-K) for the actual orbit's omega-limit set. It handles
+rational-only limit sets explicitly. The exact prime-7 extraction retains
+the intervening block and amplified alternate tail; a proved limsup bound
+rejects the naive same-index match. The follow-up excludes uniform matching
+through every fixed finite lag set and through the prescribed index k-1,
+even with adaptive signs. Return-conditioned joint-limit fiber coverage
+would still suffice, but remains unproved; the fixed-prime analytic model
+shows that valuation classes alone cannot supply it. Exact real placement
+and initialization remain essential. The
+[exact coefficient recurrence](m4-rational-forcing.md#exact-coefficient-recurrence-retains-integer-rounding-cost)
+annihilates the homogeneous mode but leaves an integer rounding defect with
+primitive coefficients of order n^6. Actual irrationality forces degree-six
+spikes, so primitive normalization supplies no small residual. Exact-forcing
+comparison trajectories lose the fractional zero seed and rational raw
+samples; they reject weaker avoidance inferences only. Suspend the local
+small-residual consumer without a new initialization-sensitive estimate.
+The log owns bounds and outcomes.
 V and all Lean contracts are unchanged; neither conditional wrapping nor more
 classification supplies visitation.
 

@@ -794,3 +794,126 @@ sieve offsets, not actual initialized states. Infinite selection, convergence
 and asymptotics remain paper arguments. The separate congruence extension and
 its analytic-family limit are assessed in the prime-defect note; no new Lean
 result or M4 acceptance is claimed.
+
+## Exact coefficient recurrence retains integer rounding cost
+
+A separate paper test uses the exact rational ratio of consecutive BBP
+coefficients, which the analytic moment perturbations do not retain. Put
+
+    N(n)=120n^2+151n+47,
+    D(n)=(2n+1)(4n+3)(8n+1)(8n+5), A(n)=N(n)/D(n),
+    U(n)=N(n)D(n+1), V(n)=N(n+1)D(n), Delta(n)=U(n)-V(n).
+
+Then U(n)A(n+1)=V(n)A(n). Eliminating A from the actual first-order
+recurrence, with S_-1=0, gives
+
+    U(n)S_(n+1)-(16U(n)+V(n))S_n+16V(n)S_(n-1)=0.
+
+The operator annihilates the homogeneous 16^n term for every seed. It
+alone also permits changing the amplitude of A; the comparisons below
+retain that amplitude and the full first-order forcing.
+
+Let p_n=floor(S_n), x_n=fract(S_n), with p_-1=x_-1=0, and define
+c_n=p_n-16p_(n-1). Actual p_0=3 follows from A(0)=47/15. For n>=1,
+0<A(n)<1 implies c_n in {0,...,16}; the upper carry 16 is included.
+The integer rounding defect is exactly
+
+    J_n=U(n)p_(n+1)-(16U(n)+V(n))p_n+16V(n)p_(n-1)
+       =U(n)c_(n+1)-V(n)c_n
+       =-[U(n)x_(n+1)-(16U(n)+V(n))x_n+16V(n)x_(n-1)].
+
+Bounded fractional parts give an order-n^6 bound, not a bounded integer.
+The exact normalized telescoper
+
+    J_n/[N(n)N(n+1)]=c_(n+1)/A(n+1)-c_n/A(n)
+
+only returns endpoint carries when summed; it supplies no smallness of
+individual residuals.
+
+### Primitive scale and a sharp carry-pair gap
+
+Here U~61440n^6 and Delta~122880n^5. Primitive content cannot remove this
+scale. In ascending coefficient order, the integer polynomials
+
+    B=[-22857085215,-284412609339,-964651132762,
+       -1309049214024,-738024501632,-144689303040],
+    C=[553387179618,2343220864395,3726673255090,
+       2822476287240,1027403107712,144689303040]
+
+satisfy B*U+C*V=M, M=143503234875. Direct polynomial multiplication
+checks the certificate. Thus g_n=gcd(U(n),V(n)) divides M at every natural
+n; the content of U, -(16U+V), 16V evaluated at n is exactly g_n.
+This is a polynomial identity, not an extrapolation from sampled gcds.
+
+All coefficients of Delta are positive. In ascending order the coefficients
+of U(n+64)-17Delta(n+64) are
+
+    [2285501904176274,247309497975909,10906379854150,
+     252258226792,3239167424,21949952,61440].
+
+Hence U>17Delta for n>=64. For a,b in {0,...,16},
+J=Ub-Va=U(b-a)+aDelta vanishes only when a=b=0; otherwise |J|>=Delta.
+If b=a>=1 this is immediate, if b>a then J>=U, and if b<a then
+J<=-U+16Delta<-Delta. The pair a=b=1 attains Delta. The primitive
+carry-pair gap is therefore exactly Delta/g_n, at least Delta/M. It is
+not a gap for the unrestricted integer linear form.
+
+Normalized by U, the actual residual satisfies
+
+    J_n/U(n)=c_(n+1)-c_n+[Delta(n)/U(n)]c_n,
+    Delta(n)/U(n)~2/n.
+
+Irrationality forces c_n to change infinitely often: telescoping p gives
+pi=sum_(n>=0)c_n*16^(-n), whose eventually constant tail would be rational.
+At changing indices |J_n|/U(n)>=1-16Delta(n)/U(n), so
+
+    limsup |J_n|/U(n)>=1.
+
+An eventual O(n^5) bound on actual J_n is therefore impossible. Even after
+primitive reduction, limsup |J_n/g_n|/n^6>=61440/M. These are irrationality
+consequences, not new visits or restrictions on which words occur.
+
+### Exact-forcing comparisons lose the full initialization
+
+Extend the tail by E_-1=pi/16. Positivity and monotonicity give
+0<E_n<=E_-1<1/5 for n>=-1, using pi<22/7<16/5. For rational alpha, put
+
+    R_n=alpha*16^n-E_n, n>=-1.
+
+Then R_n=16R_(n-1)+A(n) with exactly the original A. Its initial value
+is (alpha-pi)/16, irrational and nonzero, and its raw samples are
+irrational. Thus preserving the first integer floors below does not
+preserve the actual fractional seed or rational raw samples.
+
+For alpha=16/5, the fractional phase before subtracting E_n is 1/5 at
+every n>=-1. Hence floor(R_n)=(16^(n+1)-1)/5 and fract(R_n)=1/5-E_n
+lies in (0,1/5). The first floors are p_-1=0 and p_0=3, as for the actual
+sequence, but all carries are 3. This trajectory avoids (1/3,1/2) and
+has J_n=3Delta(n), J_n/U(n)~6/n->0. Small normalized defect therefore
+does not select the actual seed, even with these initial integer floors.
+
+For alpha=832/255=16*(52/255), the pre-tail phases alternate between
+52/255 and 67/255, starting at 52/255 when n=-1. The identities
+16*(52/255)=3+67/255 and 16*(67/255)=4+52/255 give carries 3,4,3,4,... .
+Both phases are between 1/5 and 1/3, so the perturbed fractional states
+stay in (0,1/3), again sharing p_-1=0,p_0=3 and avoiding (1/3,1/2).
+Here J_n=U+3Delta at even n and -U+4Delta at odd n; J_n/U tends to
++1 and -1 along the two parities. Thus such a hole does not itself
+force a small normalized residual. Neither comparison refutes a claim
+retaining the full actual initialization and rational raw values.
+
+Suspend this local-annihilator/small-residual consumer. A consequence of
+avoidance producing small actual J would need a new argument using the
+full seed; the recurrence and its initial integer floors supply none.
+The weaker facts established here do not move the visitation frontier.
+
+The authoritative repaired report is
+`/tmp/pi-m4-exact-structure-clarification-20261127/report.md`, SHA-256
+`9a2d83c8d95ee3a8c3399be211d533f03ce420e416958d71dd25c512b2129c38`.
+Parent unchanged-copy replay passed 2,769 exact checks with identical receipt
+and all five original plus six repaired packet files preserved. The original
+checker had mislabeled a zero-seed actual-floor test as synthetic; the
+immutable correction removes that test and records the earlier error.
+The corrected checks use nonzero synthetic seeds and exact algebra, not
+actual pi orbit sampling. Universal bounds and comparison trajectories
+remain paper arguments; no Lean proof or M4 acceptance follows.
