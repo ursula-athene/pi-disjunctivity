@@ -3067,3 +3067,120 @@ passed as caller evidence. No reviewer execution, mutation, service or
 delegation occurred; unchanged Lean was not rebuilt. The full source proof
 remains unaudited. Subsequent production edits record outcomes only; fresh
 discovery metadata contains no adopted mathematics. V/M4 remain open.
+
+## Initialized multiplicative history test — 2026-11-27 UTC
+
+The short inconclusive packet `/tmp/pi-m4-history-interaction-reset-20261127/`
+completed 16:54:07 UTC within its 16:39:12--16:59:12 bound. Report SHA-256
+`32ce6b2a06e95ba81a1487d7d6af0f584eff78bdb37cd8ee7b49135023750727`;
+manifest SHA-256
+`fdc40c2cda42e57b7361fd4efc003feb6b521797102f30b23bc8d29f1a4afd69`.
+Parent unchanged-copy replay SHA-256
+`5196e390ea718f8431083b8251fe2c03166f077dfdf14f83b3d69b1f907145c3`
+records exit 0, identical receipt and four originals preserved: 54 local
+identities, 18 first steps, 36 products, 54 history monomials, three unit
+checks, one initial coefficient and four synthetic sign pairs. These finite
+algebra checks contain no actual future phase census.
+
+Independent `/root/generating_review` ran 16:55:09--16:56:35 UTC within six
+minutes. Complete response:
+`/tmp/pi-m4-history-interaction-paper-review-20261127.txt`.
+**D/I: none. Q1: retained open:** an independently controlled actual signed
+history term beyond the endpoint. The critic reconstructed the complete
+product domain (zero final endpoint allowed), initial factor, lift sign and
+raw-floor relation. Sine at an integer is defined and zero, so its sign
+cannot encode parity there. The result concerns only this failed candidate;
+it does not exclude all products or algebraic-norm methods.
+
+Both fully read guides, critic skill and replacement procedure applied with
+unchanged hashes. The critic verified the four originals and parent replay,
+inspecting caller execution without running checks, probes or builds,
+mutating files, using services or delegating. No source theorem or Lean proof
+was invoked. Production integration remains pending; V/M4 remain open.
+
+## Rational-base source transfer — 2026-11-27 UTC
+
+Packet `/tmp/pi-m4-rational-base-connection-20261127/` completed at
+17:02:24 UTC within its 16:54:25--17:14:25 bound. Report SHA-256
+`41ae15b9940680d0dea843ae2c1ca6231aba1aba05faec9c54df14f9febac1b7`;
+manifest SHA-256
+`95d6e87d8dc710840cc0fae1093085ffff4540aac2fc9a493fb0ff5da4212db5`.
+Parent unchanged-copy replay SHA-256
+`8e05c1763fb26750a92be71212df382d85ed3c561706f92661d5650234f89d57`
+records exit 0, 31 checks and 23 preserved top-level originals. The original
+packet has no saved stdout, so no receipt byte-identity comparison is claimed.
+The retained DM source extract has SHA-256
+`c46dc84bbc189eb340761b644f99a374784acfcebc270e54eb67929a78020d28`.
+
+Independent `/root/finite_log_independent_review` ran
+17:07:28--17:08:38 UTC within six minutes. Complete response:
+`/tmp/pi-m4-rational-base-paper-review-20261127.txt`.
+**D/I: none. Q1: retained open:** a fixed nonzero divisible integer from
+actual word avoidance despite changing forcing/branches. **Q2: retained
+open:** a distinction using actual rational raw initialization. The critic
+reconstructed both divisibility arguments, the exact cleared recurrence,
+variable-branch defect and same-carry residual, preserving all domains.
+
+The source contract and elementary proof were inspected as text; the DM PDF
+was not available locally or visually verified. The critic also viewed
+Dubickas's printed pp.234,236,237 and read their proof passages. Full source
+dependencies, Mahler's full proof and auxiliary Akiyama/2025 conjecture screens
+were not audited or adopted as theorem inputs. Both fully read guides,
+critic skill and replacement procedure were verified unchanged. Caller checks
+were inspected without execution, mutation, network access or delegation.
+Production integration remains pending; V/M4 remain open.
+
+## Euclidean matrix consumer — 2026-11-27 UTC
+
+Packet `/tmp/pi-m4-euclidean-history-discovery-20261127/` completed at
+17:14:07 UTC within its 17:07:39--17:27:39 bound. Authoritative v2 report
+SHA-256 `df49e77c7a319631c5127c8840f47f900bf0d0006776dd15df7abba4a4985785`;
+active checksum-file SHA-256
+`186cb21d9e531a7744a305d238f180d186f7186b50cfb04669e37d2adc414d39`.
+Parent unchanged-copy replay SHA-256
+`11373a61c4dc3d0a7849091bb27f122ce708f68a13178e693c94b3d303907665`
+records exit 0, byte-identical receipt and six preserved originals: 10,030
+synthetic updates and two collision fixtures. The original v1 and exact
+v1-to-v2 notation-only delta remain available.
+
+Independent `/root/generating_review` ran 17:15:13--17:16:57 UTC within six
+minutes. Complete response:
+`/tmp/pi-m4-euclidean-history-paper-review-20261127.txt`.
+**D: none in authoritative v2; the pre-delivery notation correction was
+verified. I: none. Q1: retained open:** actual-history selection beyond the
+listed local data. The critic reconstructed the denominator-one conventions,
+integer factorization, bounds, congruences and exact collision. It does not
+exclude full input matrices, higher precision or other history constraints.
+
+Both complete guides, critic skill and replacement procedure were applied
+unchanged. The critic verified all originals and replay evidence without
+executing checks, changing files, using services or delegating. The q=1 cases
+were assessed algebraically; the finite input loop starts at q=3. No actual
+future phase or source theorem was used. Production integration is pending;
+V/M4 remain open.
+
+Full combined integration review by `/root/finite_log_independent_review`
+ran 17:19:54--17:21:26 UTC within twelve minutes. Complete response and
+frozen scope are in `/tmp/pi-m4-history-source-matrix-review-20261127/`.
+Baseline `13192550d5c9e6e47ce4bc412f396cb4473315e6`; exact diff SHA-256
+`b0c3908506cb1d533036f04e1d29decab6b723dd1d9c92dfbca075f01f8e89f0`;
+manifest SHA-256
+`177fbe015664df8a13d2bacc27d437f7f034bf8939f9ac56a6f5456ca3a1077f`.
+**D/I: none in the full review.** The author notation correction remains
+verified. The parent then made the source's conditional Z-number hypotheses
+explicit; focused review at 17:23:07--17:23:10 UTC verified that clarification
+within two minutes, with no defect. Its sole delta has SHA-256
+`63029a964e9bd2e7c5e53e845ad1493f4a88f457d2cb88ce3b08292b91a5ef61`.
+**Q1--Q4: retained open:** actual signed history control, a divisible invariant
+under omitted words, rational initialization selectivity, and a matrix-history
+constraint on the selected representative. No new visitation premise is adopted.
+
+The critic reconstructed all three integrated arguments and verified the
+live/frozen scope and all 88 bound files: five production, fifty evidence,
+three context, two guides, 17 protected and 11 unrelated. Both complete guides,
+critic skill and replacement procedure were applied unchanged. Documentation
+(93), process tests (38), whitespace and preservation checks passed as caller
+evidence; unchanged Lean was not rebuilt. No reviewer execution, mutation,
+service or delegation occurred. Source and replay limits remain as above.
+Only the separately reviewed clarification, outcome records and dated discovery
+metadata follow the frozen review; unfinished direct-pi work is excluded.

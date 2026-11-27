@@ -4566,3 +4566,85 @@ that the changed-numerator countermodels lose. The endpoint is a concrete
 discriminating claim/test or an honest failed bridge, not a list of methods
 or another denominator-only classification. The parent continues the pending
 reset/source integration independently; no unfinished candidate is adopted.
+
+The reset/source checkpoint is local commit
+`13192550d5c9e6e47ce4bc412f396cb4473315e6`, parent `0a213cc0`.
+Exact staging and post-commit scope/blob/necessity inspection passed at
+16:45:02 UTC, with empty index, clean task-owned tree and all protected and
+unrelated hashes preserved. The branch was fifteen ahead of its remote-tracking
+reference; this run issued no push or PR. The fresh discovery started at
+16:39:12 UTC with deadline 16:59:12. Its first history annihilator reduced to
+the known telescope and was suspended; the changed test concerns a
+multiplicative history identity and its zero-start boundary. No claim is adopted.
+
+The fresh history inquiry completed at 16:54:07 UTC. Its product factors
+exactly into the final phase difference divided by e(A(0))-1, on the stated
+nonzero-intermediate domain; the initial zero contributes no further term.
+The pi-phase lift exposes the unknown carry sign, which absolute values
+discard. This is failure of one proposed mechanism, not a general product
+obstruction or a new sufficient visitation estimate. Parent unchanged-copy
+replay matched all synthetic evidence and preserved four originals. Separate
+paper review ran 16:55:09--16:56:35 UTC within six minutes, with no D/I item
+and actual signed history control retained open. Full packet:
+`/tmp/pi-m4-history-interaction-reset-20261127/`; the
+[review receipt](agy-reports/m4-continuation-review.md#initialized-multiplicative-history-test--2026-11-27-utc)
+owns evidence limits. No actual future phases or new Lean results were obtained.
+
+**Changed source-led question, 16:54:25--17:14:25 UTC:**
+`/root/m4_rational_base_connection` owns
+`/tmp/pi-m4-rational-base-connection-20261127/`. Seek a proved rational-base
+orbit-exclusion mechanism using rational initialization, then test whether its
+integer-divisibility argument survives exact BBP denominator clearing and a
+multiple-branch forbidden-word language. The endpoint is one exact source
+contract and discriminating transfer check, not a broad survey or an assumed
+analogy. No source result is adopted while this inquiry is running.
+
+The rational-base assessment completed at 17:02:24 UTC. Its singleton-residue
+termination proof requires a fixed positive integer divisible by every q^n;
+the changing BBP forcing and carry branches supply no such invariant.
+Moreover floor(lambda) is integral for every real lambda, so this mechanism
+does not exploit rationality of the raw seed. Parent unchanged-copy replay
+passed 31 checks and preserved 23 top-level originals. The original packet
+has no saved stdout receipt; no byte-identity comparison is claimed. Parent
+read the selected primary source statement/proof as text; its PDF could not
+be inspected visually. The [transfer assessment](m4-rational-forcing.md#a-rational-base-termination-proof-loses-its-fixed-integer)
+retains the exact failure and source limits. Independent review is pending.
+
+Independent source/paper review ran 17:07:28--17:08:38 UTC within six
+minutes, with no D/I item. The actual branch/divisibility implication and
+rational-seed distinction remain open. It verified the source contract,
+BBP index offset and all retained originals; full integration is pending.
+
+**Next changed representation, 17:07:39--17:27:39 UTC:**
+fresh-context `/root/m4_euclidean_history_discovery` owns
+`/tmp/pi-m4-euclidean-history-discovery-20261127/`. Seek one Euclidean or
+matrix update retaining the actual canonical numerator and supplying a sign
+or interval constraint. A complete encoding of the unknown numerator, the
+archived Dedekind scalar correlation, or ordinary Padé/period shadowing is
+not a sufficient endpoint. Reject such recodings early; no candidate is adopted.
+
+The Euclidean inquiry stopped its candidate early, completing at 17:14:07 UTC.
+Its [exact matrix update](m4-language-auxiliaries.md#a-local-euclidean-matrix-factor-does-not-select-carry-parity)
+admits a synthetic collision: identical local triangular factor, denominator
+and input matrix modulo 16, with opposite carry parity. This rejects only that
+local consumer; the actual history and its denominator are not preserved.
+Parent unchanged-copy replay matched 10,030 synthetic updates and two fixtures,
+preserving six originals. The worker corrected one pre-delivery notation typo;
+independent review ran 17:15:13--17:16:57 UTC within six minutes, verified the
+correction and found no remaining D/I item. Actual-history selection stays open.
+
+The next fresh inquiry, 17:14:18--17:34:18 UTC,
+`/root/m4_direct_pi_discovery`, changes
+from BBP numerators to a direct characterization of pi and the ordinary
+hexadecimal orbit. Scratch ownership is
+`/tmp/pi-m4-direct-pi-discovery-20261127/`.
+It tests one geometric or trigonometric mechanism against exact modulo-one
+precision and the selected lacunary indices. No unfinished claim is adopted.
+
+Full five-path integration review ran 17:19:54--17:21:26 UTC within twelve
+minutes, with no D/I item. A parent clarification explicitly retaining the
+source's conditional Z-number hypotheses passed focused review at
+17:23:07--17:23:10 UTC. All four mathematical questions remain open.
+Frozen scope, complete captures and delta are in
+`/tmp/pi-m4-history-source-matrix-review-20261127/`. Documentation (93),
+process tests (38), whitespace and preservation checks passed; no Lean changed.

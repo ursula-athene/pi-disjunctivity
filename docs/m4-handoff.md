@@ -1592,3 +1592,23 @@ Full integration review passed with no D/I item and the three mathematical
 questions retained open. Documentation, process, whitespace and preservation
 checks passed. No new Lean theorem or surviving unconditional visitation
 argument was obtained. Continue discovery with V/M4 open.
+
+## Initialized-history tests and a direct reset — 2026-11-27 UTC
+
+The reset/source checkpoint is local commit
+`13192550d5c9e6e47ce4bc412f396cb4473315e6`. Post-commit inspection passed
+with empty index, clean task-owned tree and preserved unrelated work; the
+branch was fifteen ahead of its remote-tracking reference. Later changes are
+uncommitted; this run issued no push or PR.
+
+The full-history product reduced to its endpoint. The
+[rational-base source](m4-rational-forcing.md#a-rational-base-termination-proof-loses-its-fixed-integer)
+needs a fixed divisible integer absent from the tested BBP transfer. The
+[Euclidean matrix consumer](m4-language-auxiliaries.md#a-local-euclidean-matrix-factor-does-not-select-carry-parity)
+loses carry parity even with its listed exact local data. Separate reviews
+and parent replays passed with explicit comparison and source limits. Full
+integration and the focused source-domain clarification review passed; all
+mathematical questions remain open. Documentation, process, whitespace and
+preservation checks passed. None advances actual visitation or changes Lean.
+Fresh direct-pi discovery changes representation; its bounds and outcome
+belong in the log. V/M4 remain open, and research continues.

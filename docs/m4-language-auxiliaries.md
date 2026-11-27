@@ -921,6 +921,42 @@ paper mathematics; the checks are synthetic diagnostics, not actual phase
 computations. Separate paper reviews and the reset's focused repairs passed.
 No C_odd, V, global covering or M4 acceptance follows.
 
+## A local Euclidean matrix factor does not select carry parity
+
+For a reduced canonical r/q, q positive odd, complete (r,q) to
+U=[[r,s],[q,t]] in SL(2,Z), with t the inverse of r modulo q in [0,q)
+and s=(rt-1)/q. At r=0,q=1 use s=-1,t=0. For the exact coefficient
+A(n)=P/D and M=[[16D,P],[0,D]], put v=16Dr+Pq, N=Dq,
+c=floor(v/N), g=gcd(v,N), R=(v-cN)/g and Q=N/g. With
+T=[[1,1],[0,1]] and U'=U(R,Q), the exact update is
+
+```text
+T^(-c)*M*U=U'*B,  B=[[g,lambda],[0,h]],  gh=16D^2.
+```
+
+The first column and determinant prove this triangular form over the integers.
+Since g is odd, g divides D^2 and h is divisible by 16. If t' is the
+lower-right entry of U', lambda=g*t/q-h*t'/Q, hence -h<lambda<g.
+The parity equations R=P-c mod2 and lambda=t mod2 retain the unspecified
+output numerator; they do not choose the carry.
+
+At n=1, the synthetic inputs 211/819 and 499/819 have completions
+[[211,76],[819,295]] and [[499,92],[819,151]], equal modulo 16.
+Both give exactly B=[[2457,-30603],[0,39312]], but their carries are
+4 and 9 and their next fractions are 206/819 and 719/819. Thus the full
+local B, input U modulo 16, q, and canonical positivity do not determine
+carry parity. These entries do not retain the actual zero history or its
+denominator at n=1. Full U retains the entire numerator and does determine
+the next step; no contrary claim is made.
+
+The failed consumer does not exclude higher precision, additional initialized
+history or other matrix methods. No such useful additional constraint was
+obtained. Report `/tmp/pi-m4-euclidean-history-discovery-20261127/report-v2.md`
+retains the full derivation and notation correction. Parent unchanged-copy
+replay matched 10,030 synthetic updates and both collision fixtures; no actual
+future phases were computed. Separate paper review found no remaining defect
+or improvement. Actual-history selection, odd-carry visitation and V remain open.
+
 ## Finite algebraic profiles do not follow from a restricted language
 
 The exact rational forcing excludes a finite algebraic description of its

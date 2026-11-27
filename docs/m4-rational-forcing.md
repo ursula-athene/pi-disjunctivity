@@ -1030,3 +1030,41 @@ has SHA-256 `f2fb793270b5182fe414d7f7a41e7fc37ba7a7969e8bf46296d8f9f9aaa699b0`.
 Parent unchanged-copy replay passed 80 synthetic checks with identical receipt
 and five originals preserved. Separate paper review found no D/I item.
 Limits and measure arguments remain paper mathematics; R and V remain open.
+
+## A rational-base termination proof loses its fixed integer
+
+Dubickas--Mossinghoff, [Lower bounds for Z-numbers](https://www.researchgate.net/profile/Michael-Mossinghoff/publication/220576840_Lower_bounds_for_Z-numbers/links/544d447d0cf2d6347f45c4fd/Lower-bounds-for-Z-numbers.pdf),
+author preprint dated 20 January 2008, Proposition 3.2, printed p.5, proves
+termination of g ->ceil(p*g/q) restricted to one residue s modulo q, for
+coprime 2<=q<p and positive integer initial g. With t=(-p*s) mod q,
+nontermination would make H_n=(p-q)g_n+t=(p/q)^n H_0 integral forever.
+The fixed positive integer H_0 cannot be divisible by every q^n.
+The adjacent conditional Z-number correspondence starts with g_0=floor(lambda).
+This is integral for every positive real lambda and does not select a rational
+raw seed; the correspondence still requires its Z-number hypotheses.
+The relevant source statement and its elementary proof were read as text;
+no local PDF or visual verification of this author preprint was available.
+
+For BBP let L_(-1)=1 and L_n be the lcm of denominators of A(0),...,A(n).
+Then P_n=L_n*S_n is integral and
+
+```text
+P_n=(16*L_n/L_(n-1))*P_(n-1)+L_n*A(n).
+```
+
+The multiplier is integral; canonical reduction additionally subtracts
+c_n*L_n. There is no fixed q>1 denominator or fixed branch constant in this
+integer recurrence. In the source-shaped variable-branch recurrence,
+H_(n+1)-(p/q)*H_n=t_(n+1)-t_n, so its constant-integer argument is lost.
+Nor do equal carry words cancel different-time BBP forcing: their state
+difference retains sum_r16^(m-1-r)*(A(i+r)-A(j+r)). Rational local entries
+zero at times 1 and 2 both have zero carry, but their next values differ by
+A(1)-A(2)=66779/765765. These are synthetic local entries, not actual visits.
+
+An omitted word supplies neither one fixed affine branch nor an independent
+nonzero integer with growing divisibility. This rejects the tested transfer,
+not all rational-base methods. The source's integer-floor initialization also
+fails the proposed distinction from irrational changed-seed comparisons.
+The bounded source assessment is retained in
+`/tmp/pi-m4-rational-base-connection-20261127/report-v1.md`.
+No source theorem is applied to the BBP orbit; V/M4 remain open.
