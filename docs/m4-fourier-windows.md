@@ -522,7 +522,8 @@ fixed-M paper claim, while leaving the growing-M gap and Lean frontier intact.
 ### Every fixed finite column sum is normal
 
 For **every fixed integer M>=6**, T_M is 16-normal. This is a paper proof
-using the cited classical results, independently reviewed; no Lean declaration
+using the cited classical results, reviewed by a separate Codex subagent;
+no Lean declaration, external human peer review, originality determination
 or full source-dependency audit is claimed. It treats the actual signed sum
 jointly, without assuming that sums of normal numbers are normal.
 
@@ -610,6 +611,135 @@ Korobov/Niederreiter, Erdős--Turán and rational-affine preservation were not
 audited through their full proofs. Neither PNT nor the asymptotic for D_M
 is needed for this normality proof. Uniform early unscaled visits, V/M4 and
 infinitely many odd actual carries remain open.
+
+### Prior work and existing Lean machinery for the fixed-column result
+
+The argument above was developed in this session using established normality
+methods. A subsequent targeted search found no exact earlier T_M statement or
+Lean specialization; this does not establish originality. The closed gap was
+in this project's argument, not a certified open problem in the literature.
+Bailey--Crandall supply the classical orbit estimates and transfer results.
+
+Christopher Anderson's [Arithmetic Certificates for Normality and Mathematical Limitations](https://github.com/eldernos/MathematicsResearch/blob/062e66cfa698de194f8276a67e43133c560ced4f/papers/04-arithmetic-certificates-v2/paper.pdf),
+v2.0, Theorem 1.1, pp.1--2, gives another qualitative proof once our specific
+denominator theorem is supplied. Set x=D_M*T_M, P_n=X_(M,n), b=16, c=17,
+L=B=2 and d=3. At scale A=4^k, blocks have length T=2^k and starts
+n=u*A+l*T, u=1,2,3 and 0<=l<2^k. After all finitely many k=0 insertions,
+each column has at most one insertion in [A,4A), because consecutive insertion
+times satisfy e_(j+1)=17*e_j+2r. Discarding the affected blocks costs at most
+s_M blocks. On the others the raw rational prefix follows the exact power
+orbit, with zero model error. Its reduced denominator satisfies
+`(8n+6)/17<Q<=8n+6<32*A<=T^3` for k>=5. Thus denominators grow beyond
+every fixed floor while the exceptional proportion tends to zero. The real
+tail and integer dilation finish the application, for fixed M only.
+
+The inspected revision contains Lean proof bodies for
+[`normal_of_arithmetic_certificate`](https://github.com/eldernos/MathematicsResearch/blob/062e66cfa698de194f8276a67e43133c560ced4f/NormalityChecker/ArithmeticCertificate.lean#L94),
+[`fixed_support_orbit_estimate`](https://github.com/eldernos/MathematicsResearch/blob/062e66cfa698de194f8276a67e43133c560ced4f/NormalityChecker/SmoothOrbit.lean#L207)
+and [`normal_mul_nat_iff`](https://github.com/eldernos/MathematicsResearch/blob/062e66cfa698de194f8276a67e43133c560ced4f/NormalityChecker/FourierTest.lean#L119).
+Its `NormalIn` definition counts every overlapping word through all prefix
+lengths. These are generic results, not a located Lean proof about T_M.
+External sources and audit guards were read; no external build, transitive
+axiom audit, CI verification, import or adaptation was performed. The source's
+reported replay is at e4809cf, distinct from the inspected 062e66cf revision.
+
+Anderson's [signed same-prime criterion](https://github.com/eldernos/MathematicsResearch/blob/062e66cfa698de194f8276a67e43133c560ced4f/papers/03-signed-resonance-v1.2/paper.pdf),
+Theorem 3, p.3, is close prior work, but the immediate rewrite of our exponents
+requires base sqrt(2) and irrational odd-residue weights, outside its integer
+base/rational weight hypotheses. His [finite BBP ray argument](https://github.com/eldernos/MathematicsResearch/blob/062e66cfa698de194f8276a67e43133c560ced4f/notes/phase18/summation.md)
+instead requires a distinct prime on each ray; all our columns use 17.
+[Kano's 1993 Theorem 1](https://ir.library.osaka-u.ac.jp/repo/ouka/all/10356/ojm30_04_15.pdf)
+assumes coprime integers a,b>1 and strictly increasing
+denominator and radix exponents with growth/nondivisibility conditions; no
+direct application to our interlaced insertions was established. These are
+comparisons of hypotheses, not impossibility claims about further adaptations.
+The [search/review record](agy-reports/m4-continuation-review.md#fixed-column-provenance-and-lean-search--2026-11-27-utc)
+retains source identities and bounded-search limits. No formalization date is
+assigned to the exact T_M result; the missing early-visit consumer remains the
+next mathematical obligation before substantial downstream formalization.
+
+### The zero branch and what the scaled projection loses
+
+Keep the definitions above and write D=D_M, u_n=fract(S_(M,n)),
+z_n=fract(D*u_n), beta_n=floor(D*u_n), with beta_-1=z_-1=0. The exact
+integer recurrence is
+
+```text
+h_n=floor(16*z_(n-1)+D*B_M(n)),
+u_n=(beta_n+z_n)/D,
+beta_n=(16*beta_(n-1)+h_n) mod D
+      =(sum_(s=0)^n16^(n-s)*h_s) mod D.
+```
+
+It follows by subtracting D times the ordinary unscaled carry. A hit in
+(a,b) is exactly `D*a-z_n<beta_n<D*b-z_n`. This is an interface, not an
+existence argument. The actual zero condition selects one branch. Since
+v_2(D)=1, seed increments j/D nevertheless leave D/2 distinct unscaled
+branches at every n>=0 while preserving the entire projected trajectory.
+
+This loss persists even when all projected correlations and cutoff forcing
+are retained. Choose j nearest D*(1/5-T_M)/16, delta=j/D and
+alpha_M=T_M+16*delta. The changed raw history
+V_n=S_(M,n)+16^(n+1)*delta has the same B_M and every projected state z_n.
+Its raw initial value is delta, not zero. With E_(M,n)=16^n*T_M-S_(M,n),
+subtract the integer K_n=(16^n-1)/5 to obtain
+
+```text
+V_n-K_n=1/5+16^n*(alpha_M-1/5)-E_(M,n),
+|alpha_M-1/5|<=8/D,  |E_(M,n)|<=8/[15*(8n+9)].
+```
+
+The earlier PNT-dependent growth of D implies 16^W_M/D->0 for the sufficient
+window W_M=M/8+log_16 M+O(1). For all sufficiently large M and
+6<=n<=W_M, the centered representative V_n-K_n lies in (.18,.22), so it
+equals fract(V_n) and avoids (1/4,3/4). The raw states themselves are not
+close to 1/5. Each fixed alpha_M remains normal by rational translation;
+this is arbitrarily long early avoidance as M varies, not permanent avoidance
+by one normal number. Actual initialization, period and pi approximation
+are lost. Reducing j modulo D requires the matching integer adjustment to K_n.
+
+Scaled-integral insertions cannot simply be discarded while retaining zero.
+For a 17-step block n=17k,...,17k+16 with M>=136k+134, let
+
+```text
+I(k)=sum_(0<=s<17,r in R,17 does not divide 136k+8s+r)
+       16^(16-s)*c_r/(136k+8s+r).
+```
+
+These 64 contributions are scaled integers. The four other insertions occur
+at s=2r. Deleting only the 64 terms preserves every z_n but changes the
+unscaled endpoint by I(k). At k=1, the unique pole with denominator divisible
+by 137 is s=0,r=1; all others are below 274. Hence
+`v_137(I(1))=-1` and `137*I(1)=4*16^16=103 mod137`.
+Thus D*I(1) is integral but nonzero modulo D. This refutes that deletion,
+not every possible block cancellation; a nonzero residue is not a visit.
+
+Rounding instead sets I_n=floor(D*B_M(n)), P_-1=0 and
+P_n=16*P_(n-1)+I_n. Geometric summation gives
+
+```text
+0<=S_(M,n)-P_n/D<(16^(n+1)-1)/(15D).
+```
+
+This error tends uniformly to zero through W_M as M grows. Raw P_n/D lies
+in the infinite lattice (1/D)Z; its fractional part lies in the D-point grid.
+No early visit of that grid trajectory has been proved. For fixed M, after
+the finite k=0 and large-magnitude insertions, I_n is -1 at negative-column
+insertions and 0 elsewhere, with infinitely many -1 terms. Its forcing I_n/D
+therefore does not tend to zero. For the static period
+alpha_M^floor=(1/D)*sum_(n>=0)I_n*16^(-n), the scaled orbit eventually lies
+in [14/15,1), from its negative 0/1 tail digits. Integer dilation then shows
+alpha_M^floor is also nondisjunctive. Separately, its static/driven tail at
+e-1 before each late negative insertion e is at most -1/(16D), so the
+vanishing-tail transfer fails. Although `0<=T_M-alpha_M^floor<16/(15D)`,
+this changes exact forcing and period. It is no counterexample to V.
+
+The [review record](agy-reports/m4-continuation-review.md#integer-branch-and-projection-tests--2026-11-27-utc)
+retains the centering correction and grid clarification, preserved inputs and
+53,682 structural checks. Those checks compute no actual pi phases or initialized
+BBP prefixes. A successful next identity must retain the full integer insertion
+and zero anchor and actually force the target-cell inequality early enough.
+V/M4 and actual odd-carry infinitude remain open.
 
 ### Stronger fixed-prime sources retain the transfer gap
 

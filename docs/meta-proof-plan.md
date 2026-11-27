@@ -55,6 +55,29 @@ Progress reports explain learning and the next inquiry; they are not substitutes
 for that inquiry. This policy grants no new scope, tools, spend or permissions,
 and makes no claim that more effort must solve the problem.
 
+## Prior work when a direction changes
+
+For a materially new research direction or opening, do a bounded prior-work
+search early, before substantial development. Search the exact mathematical
+structure and nearby generalizations, not just the conjecture's name. Check
+primary statements and relevant public Lean developments; distinguish an exact
+prior result, an applicable general theorem, a related method, and a hypothesis
+mismatch. Inspect actual definitions and theorem types before claiming a Lean
+match, and distinguish source inspection from rebuilding and axiom auditing.
+
+Before suggesting that an intermediate result is original, search its exact
+statement and plausible alternative formulations again. Record the sources,
+remaining bridge and search limits in the existing mathematical owner/log.
+Use "new to this project" for a locally closed gap. No matching search result
+leaves originality undetermined; it does not establish a new literature result.
+Separate Codex review also does not mean external human peer review.
+
+Reuse the existing source map for small refinements of an already assessed
+route; repeat searches when the statement, mechanism or hypotheses change
+materially. A search bound is a reassessment checkpoint, not a reason to stop
+authorized research. Record unavailable evidence and continue useful independent
+work without making unsupported priority or formalization claims.
+
 ## Review the plan at each bounded endpoint
 
 1. **Choose the uncertainty that matters.** Work backward from the target and

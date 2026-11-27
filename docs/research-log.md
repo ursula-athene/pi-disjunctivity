@@ -5103,3 +5103,73 @@ Documentation (93) and whitespace passed after the repair; process (38)
 remains the earlier unchanged-code result. No Lean or dependency changed.
 The user-requested provenance search and separate joint-branch investigation
 are excluded from this review. These internal checkpoints do not accept M4.
+
+## M4 continuation: fixed-column provenance search — 2026-11-27 UTC
+
+At the user's request, an independent literature lane ran 21:24:26--21:35:48
+UTC within fifteen minutes, reporting at 21:30. It recorded 30 web queries,
+five GitHub searches and primary-source inspections; the parent separately
+searched the pinned Mathlib and inspected public Lean statements, definitions
+and proof bodies. The [comparison](m4-fourier-windows.md#prior-work-and-existing-lean-machinery-for-the-fixed-column-result)
+found no exact earlier T_M statement or Lean specialization. This is not an
+originality determination. The argument developed here applies established
+methods; a gap closed in this project is not thereby a literature open problem.
+
+Anderson's general certificate theorem gives the qualitative conclusion after
+our BBP-specific denominator proof. Its general Lean criterion, orbit estimate
+and dilation theorem are source-visible; their external dependency chain was
+not rebuilt or audited. Closely related signed same-prime and distinct-prime
+BBP results have different hypotheses. Classical Bailey--Crandall estimates
+remain the original argument's inputs. Parent inspected the certificate's two
+theorem pages and signed-sum theorem page visually. A separate Codex source
+review ran 21:32:47--21:38:50 within eight minutes, reassessing at 21:36:01:
+no defect; missing normality definitions supplied and checked; one Kano base
+hypothesis clarification implemented. The [complete record](agy-reports/m4-continuation-review.md#fixed-column-provenance-and-lean-search--2026-11-27-utc)
+retains all evidence limits and dispositions. No external human review or
+project Lean proof is claimed. The user received the search reports and links.
+
+The user identified that checking classical ingredients had not included an
+early search for this exact result and nearby generalizations. The
+[meta-plan checkpoint](meta-proof-plan.md#prior-work-when-a-direction-changes)
+now requires bounded early prior-work searches for materially new directions,
+and exact-statement checks before originality language. Small refinements can
+reuse an existing source map. The user approved retaining this for future use.
+Fixed-M formalization has no assigned date; the early-visit bridge remains
+the central mathematical gap. V/M4 remains open and research continues.
+
+## M4 continuation: projected histories and the zero branch — 2026-11-27 UTC
+
+The 20-minute inquiry begun 21:02:01 froze at 21:16:53, reassessing at 21:10:46.
+It supplied the [exact integer branch and three restricted tests](m4-fourier-windows.md#the-zero-branch-and-what-the-scaled-projection-loses).
+Complete projected histories admit changed rational seeds with arbitrarily
+long early avoidance, although every fixed comparison period is normal. The
+actual zero branch has a finite integer recurrence, but its target-cell
+existence inequality remains unproved. A unique 137-pole prevents deletion of
+the scaled-integral part of a 17-step block. Rounded forcing shadows the early
+window but does not tend to zero; its static-period tail fails to vanish.
+These tests do not refute V or rule out early visits of the actual branch.
+
+Parent read the full report/checker and replayed it unchanged at 21:33:27:
+exit zero, identical stdout, empty stderr, 53,682 structural checks with no
+actual pi phase or initialized-prefix census. Assessment finished within nine
+minutes. A literal raw-state closeness error was repaired by a separate
+integer-centering addendum, preserving the original artifacts. Independent
+review ran 21:35:38--21:38:36 within ten minutes, reassessing at completion:
+that defect verified resolved; the distinction between raw lattice and
+fractional finite grid is implemented for integration verification. The
+[full review](agy-reports/m4-continuation-review.md#integer-branch-and-projection-tests--2026-11-27-utc)
+retains every premise and open consumer. No Lean declaration changed. A new
+bounded inquiry is testing structure that retains the full forcing and zero
+anchor; unfinished results remain outside adoption.
+
+
+### Provenance/branch integration review completed — 2026-11-27 UTC
+
+The exact five-path production review completed at 21:59:45 UTC with no new
+defect or improvement. Earlier centering, grid and Kano clarifications were
+verified; all 91 evidence identities matched. The full cycle, retained early-visit,
+source/Lean and originality limits, receipt clarification and read-only Git
+procedure deviation are recorded in the [continuation review](agy-reports/m4-continuation-review.md#provenance-branch-and-prior-work-checkpoint-integration--2026-11-27-utc).
+The meta-plan now retains the user's early prior-work checkpoint. This local
+intermediate checkpoint does not complete M4; the signed-tail comparison and
+actual visit investigation continue separately.

@@ -19,7 +19,12 @@ survival and sparse late insertions supply a joint discrepancy bound; real
 tail control and rational-affine invariance give unscaled normality. No Lean
 proof or full classical source-dependency audit is claimed. The bound fails
 to provide visits in the growing-M approximation window; that joint early
-unscaled estimate remains open. The [coherent profile test](m4-generating-functions.md#coherent-seeds-can-preserve-every-forward-denominator)
+unscaled estimate remains open. The [prior-work search](m4-fourier-windows.md#prior-work-and-existing-lean-machinery-for-the-fixed-column-result)
+found applicable general normality machinery and external Lean proof bodies,
+but no exact T_M formalization; originality remains undetermined. Separate
+Codex review is not external human peer review. Follow the meta-plan's
+[early prior-work checkpoint](meta-proof-plan.md#prior-work-when-a-direction-changes)
+when a direction changes. The [coherent profile test](m4-generating-functions.md#coherent-seeds-can-preserve-every-forward-denominator)
 also retains every forward denominator for certain changed seeds. A
 [common-hole finiteness theorem](m4-generating-functions.md#fixed-odd-prime-support-limits-a-common-hole-family)
 would need an infinite bounded seed family in one fixed rationally scaled odd
@@ -27,8 +32,10 @@ localization that actual avoidance has not supplied. [Symbolic pumping](m4-gener
 gives rational phases requiring irrational BBP seeds; finite tail-preserving
 edits give an infinite dyadic family not contained in any single fixed
 rationally scaled odd localization. [Point counting](m4-generating-functions.md#definable-point-counting-does-not-exclude-the-actual-samples)
-also leaves a precise height/domain gap. Fresh research tests the exact
-connections between short orbit pieces. Further approximation or profile
+also leaves a precise height/domain gap. The [exact integer branch](m4-fourier-windows.md#the-zero-branch-and-what-the-scaled-projection-loses)
+retains zero initialization but still lacks early target-cell visits. Complete
+projected correlations lose that branch; dropping integral insertions or rounding
+the forcing fails the specified tests. Further approximation or profile
 refinement requires a real-visitation consumer. The log owns bounds and outcomes;
 this entry is not a second live status ledger.
 
@@ -51,7 +58,9 @@ For the immediate failure record, follow the relevant mathematical owner:
 - [Arithmetic windows](m4-fourier-windows.md): normal prime-power columns
   can cancel in general, but actual joint unit survival proves fixed finite
   T_M normality. Bounded early orbit pieces and a growing inverse multiplier
-  still obstruct the supplied estimates at the scale needed for pi.
+  still obstruct the supplied estimates at the scale needed for pi. The zero
+  branch recurrence, the 137-pole test and rounded-forcing tail failure identify
+  information a stronger real-visitation argument must retain.
 - [Transforms and periods](m4-transforms-and-periods.md): disk dissection
   cancels pi; fixed-frequency asymptotics do not control the remaining tail.
 - [Approximation interfaces](m4-approximation-interfaces.md): AGM unit norms,

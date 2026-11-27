@@ -3831,3 +3831,123 @@ The caller's post-fix documentation and whitespace success were inspected;
 no checks were executed by the reviewer. This closes the integration review,
 not V/M4 or the source/kernel evidence limits. Subsequent provenance searches
 and the joint-branch report are outside this frozen mathematical integration.
+
+## Fixed-column provenance and Lean search — 2026-11-27 UTC
+
+Reviewer `/root/post_profile_mechanism_reset` reviewed the parent's complete
+source comparison, pinned Lean definitions/statements/proof bodies, selected
+search evidence and the literature worker's exact-versus-generic comparisons.
+It ran 21:32:47--21:38:50 UTC within eight minutes, reassessing at 21:36:01.
+Both complete guides, replacement procedure, argument-critic and source-contract
+instructions applied. This was read-only source inspection, not external
+kernel replay, exhaustive source-chain review or originality certification.
+
+Parent packet `/tmp/pi-m4-fixed-truncation-provenance-20261127-2123/` retains
+report SHA-256 `4fb2447068000eb458e0de71ab71fde5c704ab956784ffd33305ef58f2bb2467`,
+query ledger `59c5765311c55c8daf66761a8e48b8b033f61a197a87d4c5d67fb2f8243ee074`,
+30-entry manifest `5876f83cb0504ab1269c67f66f5823bc8280d70628457f5793ac0fe7a05fe1a9`,
+and complete `review-full.txt`, SHA-256
+`29d356897d75d6ab9a16b31affb0dc82fd77e4f266fdd01ebe59ed192ece0190`.
+Supplemental `Basic.lean` is `14fa9eeb0430cba5706e962a092d454cad5f8ab4336cc2bb5e9323b9b4be1325`.
+The literature packet `/tmp/pi-m4-fixed-truncation-literature-20261127T212426Z/`
+has report `70e9c429bfd6ca75b5b62e572fd85ccaa03b99b3f98e07991f26640334ad5ccf`
+and 24-entry manifest `b6372b664b90660d91ad4885e37b2b4bdb9e0df8501d6701d92d8ed3541fc6d7`.
+It contains the query ledger, exact source identities, rendered theorem pages
+and the prior commit-date record. Parent verified every entry unchanged.
+
+**D: none found. I1: implemented, integration recheck pending.** Kano's synopsis
+now retains coprime integer bases a,b>1; the separate immutable
+`kano-hypotheses-addendum.md` has SHA-256
+`b69780ea9045f5969196208fb084d76204cdc6d559d12817531597c33667a419`.
+The correction needs no execution test. **Q1: resolved:** the previously
+missing `NormalIn`, `shift` and `frequency` definitions were supplied and
+verified as the full overlapping-word statement. **Q2: retained limit:**
+the reported replay baseline e4809cf differs from inspected 062e66cf; no
+external rebuild, full axiom audit, CI or local-pin compatibility claim.
+**Q3: retained limit:** no located exact theorem is not proof of absence or
+originality; the exact T_M theorem and arithmetic/application are not in Lean.
+
+The reviewer reconstructed the b=16,c=17,L=B=2,d=3 certificate application,
+including all denominator floors, zero error after finite integer insertions,
+the exceptional-block fraction and final integer dilation. It checked the
+same-prime theorem's base/weight mismatch and distinct-prime BBP hypothesis.
+All 30 parent entries matched; the supplemental literature report was read,
+but its searches and every cited proof were not independently repeated.
+The original local proof's separate Codex review is not external human peer
+review. V/M4 and the growing-M consumer remain open. The new meta-plan
+checkpoint and production integration require their own changed-file review.
+
+## Integer branch and projection tests — 2026-11-27 UTC
+
+Reviewer `/root/finite_log_independent_review` read and reconstructed the full
+joint-branch report, checker, parent assessment and centering addendum. Review
+ran 21:35:38--21:38:36 UTC within ten minutes, reassessing at completion.
+Both complete guides were reread; replacement, critic/source context and
+relevant checked interfaces applied. No execution checks, network, writes,
+extraction, builds or delegation were performed.
+
+Worker packet `/tmp/pi-m4-joint-branch-cocycle-20261127T210201Z/` retains
+report `eeba6e803b7e0c1c9459a13b67390512a517c960474276d620666d0a3a0715ad`
+and manifest `20c0e71ffec6e3b8ee5a9a57eb8b1061579d21996d597ff29bd91894e12724e0`.
+The separate centering addendum is
+`ae31935f8400efffe3067442afed45d95cf760149c87e3510971fa25e97ceb3d`.
+Parent packet `/tmp/pi-m4-joint-branch-parent-20261127-2134/` has assessment
+`bb22af80b1c920579844dbdd4e8a9b0569aa2c81c4cc28f631642d73d3ac46ed`,
+seven-entry manifest `8886e168800e6cf80dd795c188a6f5c4897087891ad53350e2031fb3aefd5c36`,
+and complete return `review-full.txt`, SHA-256
+`0b97891ab1bb39b8e1221d3673cf9e1146d30beb6797243325373d7b4b9685d4`.
+
+**D1: verified resolved.** The original raw-state closeness statement was
+false; subtracting the explicit integer K_n supplies the correct representative.
+The addendum also tracks reducing j modulo D. Historical artifacts remain
+unchanged. **I1: implemented, production verification pending.** Raw P_n/D
+lies in the infinite lattice (1/D)Z; only its fractional part lies in the
+D-point grid. Subsequent proofs did not use raw boundedness. **Q1: retained
+open:** no argument forces the exact zero branch into every target cell at
+the required early scale. Any proposed block identity must retain the
+137-pole contribution and give an actual interval inequality.
+
+The reviewer checked the nearest-seed kernel, D/2 branch count, integer
+recurrence, unique 137 pole, rounded forcing and separate nonvanishing-tail
+argument. All four worker artifacts, three input reports, seven parent
+entries and preserved originals matched. The caller's unchanged replay had
+exit zero, identical stdout, empty stderr and 53,682 structural checks;
+the reviewer read but did not run it. No actual pi phases, T_M values or
+initialized BBP prefixes were computed. Fixed-M normality and PNT-dependent
+D growth remain supplied paper inputs with their previous limits. No new
+source-chain or kernel audit is claimed. V/M4 and odd-carry infinitude remain
+open; this paper review alone does not review production integration.
+
+
+### Provenance, branch and prior-work checkpoint integration — 2026-11-27 UTC
+
+Separate Codex reviewer `post_profile_mechanism_reset` reviewed the exact five-path
+integration against `7867c2a80178f95f12ad9f91ef410dec7eae9886` from 21:53:32 to
+21:59:45 UTC, reassessing at 21:58:17 before its midpoint and 22:05:32 deadline.
+The packet `/tmp/pi-m4-provenance-branch-integration-20261127-2142/` retains
+`scope.diff` SHA-256 `3b8efc605f39675a2213a9d017792dab096febd016775c04cee066343c7da64b`,
+the 91-entry manifest `87f4720075fdcc6800d95a50d90fecd2bd9564fe086b5bdaa159c66d875034af`,
+and full returned review `8a9e99d0f8c07a63c004f15f5be06a4454dfa8b29e97268b58faf5c260088434`.
+Both full adversarial guides and the source-contract/critic skills were read.
+The reviewer reconstructed the certificate specialization and branch arguments;
+all frozen identities matched, including the historical owner's baseline snapshot.
+
+No new D or I was found. Earlier branch D1 (explicit integer centering), branch
+I1 (lattice versus fractional grid), provenance I1 (Kano base hypotheses) and
+provenance Q1 (actual normality definitions) were verified resolved. Integration
+Q1 retains the actual early visit gap; Q2 retains absent external rebuild, axiom
+audit, compatibility and exact specialization; Q3 retains undetermined priority.
+All are accepted limitations, not waived M4 obligations. Q4 identified missing
+command text in the original validation JSON. Fresh command-bound whitespace
+receipts at 21:59:16 show both working and staged checks exit zero; the original
+93-document and 38-test outputs remain caller evidence. Their checks were not
+rerun by the reviewer. The user-approved prior-work checkpoint preserves bounded
+reassessment, small-refinement source reuse and explicit originality limits.
+
+The reviewer disclosed one read-only Git status/HEAD inspection despite the
+request's stricter no-Git wording; no state changed and no further Git calls
+followed. No checker, build, network request or delegation was run. New signed-tail
+research was excluded. The parent accepts the review with that disclosed
+procedural deviation; no substantive repair is required. Subsequent edits here
+record only this outcome. This is an intermediate documentation checkpoint,
+not a Lean proof, external human review, V or M4 acceptance.
