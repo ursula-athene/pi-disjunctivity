@@ -842,6 +842,40 @@ E_n>=c/Q^2 for a fixed c>0 eventually. Thus e_n^*=1 over a fraction tending
 to one of these prefixes. Whole borrow corrections can have upper density
 one even though endings have density zero. No such density is asserted for pi.
 
+Even bounded partial quotients do not repair that inference. Put
+`alpha=sum_(j>=0)16^(-2^j)` instead. Shallit's
+[*Simple Continued Fractions for Some Irrational Numbers*](https://cs.uwaterloo.ca/~shallit/Papers/scf.pdf),
+Theorems 1, 3, 4, 8 and 9, gives irrationality and partial quotients at most
+18 for this base-16 value. The author-hosted version's pages 2--5 and 7 were
+visually inspected. The folding recursion starts at v=1, with `[0,15,17]`;
+the v=0 representation is not a valid input to that even-length recursion.
+Consequently alpha is badly approximable and has irrationality exponent two.
+These are properties of the comparison phase, not claims about pi.
+
+Here the whole borrow correction has **natural density one**, with an
+all-prefix exceptional count O(log^2 N). To see this, retain the same E_n and
+put t_n^*=fract(16^n*alpha), x_n^*=fract(16^n*alpha-E_n). If r(n) is the next
+power of two strictly greater than n, then
+
+    t_n^* <= (16/15)*16^(n-r(n)),
+    E_n >= A(n+1)/16 > 1/(512*(n+1)^2).
+
+The last bound follows directly from the rational expression for A: for
+m>=1 its numerator is at least 120m^2 and its denominator at most 2457m^4,
+so A(m)>1/(32m^2). Also the checked B3 bound gives E_n<1/16 for every n.
+For L_N=ceil(log_16(1024*(N+1)^2)), n<N with r(n)-n>=L_N therefore has
+t_n^*<E_n. There are at most
+`L_N*(1+floor(log_2(N+L_N)))` exceptions: each lies within L_N positions
+before a power of two at most N+L_N. Thus e_n^*=1 except O(log^2 N) times
+below N. The exact transition identity gives c_n^*-d_n^*=15 whenever
+e_n^*=e_(n+1)^*=1, hence the same density conclusion for the corrections.
+
+This example retains the exact forcing at every step with the changed initial
+state `y_0^*=fract((alpha-pi)/16)` and x_n^*=y_(n+1)^*. It does not retain
+the specified zero initialization. No rationality or irrationality claim about
+that changed initial state is needed. The density estimate is a paper result,
+not a new Lean export or an assertion about the actual canonical carries.
+
 There is also a useful exact word transfer. For a fixed word w of length
 ell>=1 over {0,...,15}, choose N with E_j<16^(-(ell+1)) for j>=N.
 An ordinary block w followed by the nonzero sentinel 1 puts every t_j in

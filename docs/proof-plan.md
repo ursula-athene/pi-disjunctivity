@@ -876,12 +876,24 @@ omega sets omit that ordered information; even dense rationally independent
 marginals can have a nondense sum. The actual coefficient formulas could
 still matter, but no new invariant action or visit follows from this split.
 
-A fresh-context inquiry has a 20-minute reassessment bound: work backward
-from actual eventual avoidance to one positive consumer using unused exact
-forcing structure, or a precise neighboring-theorem bridge with a discriminating
-check. More classification without a visitation consumer and renaming V as
-full entropy are excluded as endpoints. The review record owns integration
-status; all target contracts and Lean status remain unchanged. M4 continues.
+The fresh-context pass found no positive consumer: finite-state moments repeat
+the language/path gap, and a logarithm lift lacks coherence across canonical
+floors. A targeted source test found that the inspected logarithmic determinant
+requires exceptional rational approximations not supplied by word avoidance;
+its preprint's headline claim is not adopted. The
+[borrow calculation](m4-generating-functions.md#canonical-borrow-transitions-are-sparse-but-whole-corrections-need-not-be)
+now tests even a badly approximable comparison phase: the same forcing with
+changed initialization can have density-one corrections. Better irrationality
+bounds alone do not repair this carry argument.
+
+A distinct fresh-context inquiry has a 20-minute reassessment bound: test
+whether exact rationality of all initialized BBP prefixes and their particular
+rational-coefficient recurrence supplies a rigidity consequence of word
+omission. The endpoint is a precise implication and discriminating model or
+source check; merely restating Hypothesis A is not progress. More classification
+without a visitation consumer and renaming V as full entropy remain excluded.
+The review record owns integration status; all target contracts and Lean status
+remain unchanged. M4 continues.
 
 For the recurrence defined in Step 4, seek a proof of
 

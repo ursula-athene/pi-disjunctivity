@@ -7,7 +7,7 @@ The [continued research checkpoint](#continued-research-checkpoint--2026-11-26)
 records subsequent work during the user's absence; that checkpoint does not
 terminate the ongoing M4 effort.
 The latest dated continuation is the
-[Growing stencils and native carries](#growing-stencils-and-native-carries--2026-11-27-utc); read the
+[Carry density and source bridges](#carry-density-and-source-bridges--2026-11-27-utc); read the
 research log and actual checkout for subsequent results and current state.
 
 ## Baseline and authorized endpoint
@@ -976,3 +976,27 @@ with an exact counterexample; only the upper theorem is retained. No Lean,
 dependency, pin, audit or target contract changed. A fresh-context bounded
 pass seeks an actual positive V consumer; the log owns its bound and outcome.
 V/Hpi/T/M4 remain open, B4/P3 retain visits, and M5 is excluded. Research continues.
+
+## Carry density and source bridges — 2026-11-27 UTC
+
+The preceding checkpoint is local commit
+`062667e49a715e9c3e89d42b3d7857fa62ec4698`; nothing was pushed.
+The fresh-context positive-consumer pass supplied no positive argument.
+An inspected logarithmic determinant needs exceptional rational approximations;
+word omission supplies no replacement. The source's claimed irrationality
+exponent theorem is not adopted or refuted by this application check.
+
+The [borrow assessment](m4-generating-functions.md#canonical-borrow-transitions-are-sparse-but-whole-corrections-need-not-be)
+now gives a badly approximable comparison phase with density-one corrections,
+retaining exact BBP forcing but changing initialization. This rules out a
+specific attempted repair, not actual visitation. Its source and all-prefix
+estimate are paper mathematics; no Lean declarations changed. Independent
+integration review found no defects or required improvements; Q1--Q2 retain
+the actual initialization and missing determinant input. Scope and evidence
+limits belong to the continuation review record.
+
+A new bounded pass examines exact rationality of the initialized prefixes and
+their particular rational-coefficient recurrence. It must produce a genuinely
+different implication or an informative applicability check, rather than
+rename Hypothesis A. V/Hpi/T/M4 remain open; B4/P3 retain visits and M5 remains
+excluded. Research continues under the existing authorization.

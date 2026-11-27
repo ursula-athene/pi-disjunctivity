@@ -3215,3 +3215,106 @@ the new zero-order norm interface and verified all six production hashes and
 32 evidence hashes. The continuation review record owns the full response
 and limits. No actual pi phases or new Lean results occur in this checkpoint; the fresh
 positive-consumer pass continues separately.
+
+**Uniform-certificate checkpoint and targeted source question — 2026-11-27 UTC:**
+local commit `062667e49a715e9c3e89d42b3d7857fa62ec4698` records the reviewed
+six-path result. Exact scope, empty index, preservation and necessity checks
+passed; nothing was pushed. The fresh worker's first proposed automaton-moment
+closure was directed back to the existing language assessments before counting
+it as new; a generic continuum-of-entries obstruction is already known.
+
+**Parent source check, 15 minutes before reassessment:** seek one precise
+primary-source theorem connecting logarithmic periods or values of differential
+equations to restricted digit sequences, with a possible consumer for the
+actual canonical carries. Preserve distinctions between a missing word,
+automaticity, algebraicity, normality and almost-everywhere statements.
+The endpoint is an exact applicable implication or a specific failed hypothesis
+that changes the next test. No broad survey or unsupported period-versus-Mahler
+independence claim is authorized by this bounded question. Research continues.
+
+**Fresh-pass result and source triage — 2026-11-27 UTC:** the fresh worker
+returned no positive V consumer. Its finite-state proposal repeats the existing
+language/path gap. The parent read its complete scratch report
+`/tmp/pi-m4-positive-consumer-reset-20261127/report.md`
+(SHA-256 `f7059df16c7791e8989a95081c5320cb33c8a85fe39f166f0d60f8c8afd90cec`).
+Its logarithm-lift proposal lacks a coherent lift of the canonical floors;
+the optional rescaling diagnosis is not integrated as a reviewed result.
+The worker's finite checks have not been replayed by the parent. This pass
+did not move V or identify a distinct positive continuation question.
+
+The parent source triage found no applicable visitation theorem. Adamczewski
+and Faverjon, [2012.08283v1, Theorem 1.1](https://arxiv.org/html/2012.08283v1),
+requires Mahler functions and multiplicative independence of their arguments
+or their transformation bases. Neither a Mahler equation for the canonical
+carry series nor a second such representation of pi has been obtained.
+The existing factorial-word and language/path countertests already prevent
+deducing that equation from word avoidance. Theorem 1.1 and the introductory
+definitions were read; its proof and appendices were not assessed. Subsequent
+web searches within that page timed out and supply no additional evidence.
+Fischler--Rivoal's G-function digit theorem was rediscovered, then matched to
+the existing assessment in `m4-rational-forcing.md`; it is not new progress.
+The Mahler 1953 publisher abstract was screened, without extracting or using
+an uninspected approximation theorem.
+
+The search also surfaced an unassessed September 2026 preprint claiming
+irrationality exponent two for pi. Its
+[introduction and proof outline](https://github.com/openai/math/blob/main/preprints/The-irrationality-exponent-of-pi-is-2-September-24-2026/build/main.tex)
+were read through the GitHub connector (blob
+`fe28ac589090c44a8877aa326b60e753c863fa24`). The headline conclusion would
+still not imply V. A separate **20-minute source-bridge test** now examines
+its proposed center-uniform logarithmic jet interpolation and determinant
+mechanism: does word avoidance supply any replacement for the exceptional
+rational approximations used by that mechanism? Restricted digit entropy is
+not reduced rational height. The endpoint is an exact new consumer or a
+specific failed input, not acceptance of the preprint or a broad source audit.
+The source search ends at this reassessment; authorized M4 research continues.
+
+**Parent carry-density test, 15 minutes before reassessment:** test whether
+bounded partial quotients (stronger than irrationality exponent two) force
+the canonical borrow corrections to have density zero when the exact future
+BBP forcing is retained. The prior factorial-phase countermodel has no finite
+irrationality exponent. The new candidate phase is the base-16 Kempner sum
+`alpha=sum_(j>=0)16^(-2^j)` with the same actual E_n. Its geometric zero
+blocks may yield density-one corrections while its continued fraction remains
+bounded. Verify the original Shallit theorem's base and indexing and the
+all-prefix density estimate. An example would exclude this proposed repair
+of carry sparsity, not be a counterexample to the actual initialized V.
+
+**Source-bridge outcome:** the worker's complete assessment at
+`/tmp/pi-m4-logarithmic-determinant-bridge-20261127/assessment.md`
+(SHA-256 `1d4d913693983e7679b3548b7f9b50adbfbf0bb1d561b840e65a612bf9c235ac`)
+identifies the missing input: approximations with exponent greater than two.
+Actual raw BBP approximants miss that scale; ordinary truncations supply only
+their usual O(1/q) guarantee. The determinant counts transverse Taylor indices,
+not allowed numerator words. Rescaling weights by digit entropy also rescales
+denominator clearing. The parent read the assessment/critic, checked the
+source's approximation and gap statements, and verified all four source Git
+blob identities. No geometric theorem or headline irrationality claim is
+accepted, and no new V estimate results.
+
+**Carry-density outcome:** the separate worker reconstructed the parent
+candidate without finding a defect. Its frozen report is
+`/tmp/pi-m4-bounded-quotient-borrows-check-20261127/report-v1.md`
+(SHA-256 `6b2bdad4f53ebd329e1825d7563287c5da008ff95167678062470d0018cb3cd1`).
+The exceptional count is O(log^2 N) for every prefix, not just a subsequence.
+The continued-fraction bound 18 also yields the explicit approximation lower
+bound 1/(76q^2). The parent read the complete report, source contract, critic
+and checker, reconstructed the estimates, and replayed an unchanged checker
+copy: 5,692 exact checks passed, exit 0; receipts agree after removing UTC and
+all seven frozen files are unchanged. No actual pi phase or tail was computed.
+The optional relaxed-model application is retained in scratch, not added to
+the production claim. Independent integration review remains pending.
+
+The preceding discovery pass did not find a positive consumer. A different
+**20-minute fresh-context inquiry** now tests exact rationality of all BBP
+prefixes and their particular rational-coefficient recurrence against word
+omission, looking for a precise rigidity implication or a solved-neighbor
+bridge. A restatement of Hypothesis A or another generic rounding obstruction
+does not count as a new mechanism. V/Hpi/T/M4 remain open and research continues.
+
+Independent five-path integration review is complete: no defects or required
+improvements; Q1--Q2 retain the original initialization and missing determinant
+input. The reviewer reconstructed the mathematical claims, visually checked
+the Shallit pages and verified all scope/evidence hashes. The continuation
+review record owns the full response and limits. The rational-prefix inquiry
+continues separately; no V theorem or M4 acceptance is claimed.

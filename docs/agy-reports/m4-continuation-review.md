@@ -1509,3 +1509,66 @@ remain caller evidence. Prior analytic, orthogonal-polynomial and PNT inputs
 retain their paper status. Subsequent edits record this outcome only. The
 fresh positive-consumer inquiry is excluded. V/Hpi/T/M4 remain open, with
 B4/P3 visitation premises unchanged.
+
+## Carry density and source bridges — 2026-11-27 UTC
+
+Baseline is local commit `062667e49a715e9c3e89d42b3d7857fa62ec4698`.
+Scope: `m4-generating-functions.md`, `proof-plan.md`, `research-log.md`,
+`m4-handoff.md` and this record. No Lean, dependency, pin, audit, tool or
+unrelated workspace change is included. Independent integration review by
+`/root/generating_review` is complete under the Codex replacement procedure,
+with both adversarial guides.
+
+The parent supplied the base-16 Kempner carry-density candidate; a separate
+research worker verified its all-prefix estimate and source map. This does not
+replace independent integration review. The original Shallit paper was
+retrieved from its author's site and pages 2--5 and 7 of that version rendered
+and visually read. The claim uses the folding recursion only from v=1 and
+retains the changed initial state. No rationality claim about that state is
+made. The new source-to-contract limit is a comparison example, not V.
+
+The frozen report, source contract and separate same-session criticism are in
+`/tmp/pi-m4-bounded-quotient-borrows-check-20261127/`. The parent fully read
+them and the checker and reconstructed the argument. An unchanged-copy replay
+passed 5,692 exact finite checks, exit 0, with UTC-only receipt differences
+and all seven original files preserved. These cover constructed continued
+fractions, coefficient bounds, prefix counting and synthetic borrow algebra;
+they compute no actual pi phase or tail and do not certify the universal proof.
+Same-session I1--I3 retain the folding restriction, all-prefix count and optional
+model premises. The optional model consequence is not integrated in production;
+its scratch applicability alone is not a new visitation consumer.
+
+The separate logarithmic-determinant bridge packet is
+`/tmp/pi-m4-logarithmic-determinant-bridge-20261127/`. The parent read its
+complete assessment and criticism, verified all four Git blob/byte identities,
+and checked the required approximation and parameter-gap statements in the
+source. It does not accept or refute the preprint's claimed theorem, or review
+its geometric proof. Avoidance does not supply the determinant's approximation
+input; counting allowed numerators does not change its transverse-index count.
+Same-session D1--D4 are retained as rejected application steps; I1 is implemented
+by stopping that unnecessary proof audit, and Q1 (a new content or cancellation
+estimate) remains unsupported. These are application limits, not alleged
+defects in the source theorem.
+
+The preceding fresh pass had no positive result. Its optional geometric-sample
+interpolation diagnosis is not integrated as a reviewed mathematical claim;
+its checker has not been replayed. Documentation and whitespace checks passed
+before review preparation. All 17 protected Lean/pin files and 11 unrelated
+files match the preceding preservation receipt. Frozen scope is
+`/tmp/pi-m4-carry-source-review-20261127/`, diff SHA-256
+`9cdac694432154a8d6dc0f06e38df5abe10a7766f7c386b2ec12e3139e8d45dd`.
+The complete returned response is `review-full.txt`, SHA-256
+`ae759389ac3622ab3c2041d255f3f461933e9a33c1157aa54dde96d4ad20e356`.
+All five production hashes and 35 evidence hashes matched. **D: none.
+I: none required. Q1--Q2 retained:** the actual zero initialization and the
+missing determinant approximation/cancellation input. Neither blocks the
+scoped negative assessment; both prevent inferring V.
+
+The reviewer reconstructed the carry bounds, continued-fraction specialization
+and source-application limits, visually read the source pages, inspected the
+local Lean interfaces, and confirmed UTC-only receipt differences. Its work
+was read-only inspection and mathematics, with no checker, probe, build,
+extractor, mutation or service call. Execution remains caller evidence.
+Both full guide readings were retained and their unchanged hashes verified.
+Subsequent changes record this outcome only. Research continues; V/Hpi/T/M4
+remain open, B4/P3 retain visitation premises, and M5 is excluded.
