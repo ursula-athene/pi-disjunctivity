@@ -810,3 +810,40 @@ The 90-file documentation and both whitespace checks passed as caller evidence.
 Final exact-diff, validation and post-commit receipts are retained in the same
 packet. No new Lean, audit, pin, dependency or trust change is included.
 Publication remains local only.
+
+## Exact CRT phase and unrestricted-lift review
+
+Reviewer `/root/generating_review` completed the six-path checkpoint against
+`213003555254a8f3ea8639533f397576814e7b3d`: the new CRT-phase assessment,
+prime-square extension, proof plan, research log, handoff and this record.
+Frozen diff SHA-256:
+`f0976f003e10c1ffca9cbc384d428e7b688dc4b7908e9473a93fba310a87520b`.
+The full returned review is
+`/tmp/pi-m4-crt-lift-review-20261127/review.md`, SHA-256
+`7120dc289d0bd1e30fbd3abf9d014f9ff26d68d6f02dd40271f4dec133bec395`.
+**Defects:** none. **Nonblocking improvements:** none requested.
+**Open questions/missing evidence:** none blocking this checkpoint; the
+stronger precision and real estimate remain unproved. No recommendation was
+omitted or deferred, and no substantive fix needed focused follow-up.
+
+Caller evidence includes full reports/checkers, immutable manifests and
+unchanged-copy replays for `/tmp/pi-m4-crt-word-20261126/` and
+`/tmp/pi-m4-unrestricted-lift-20261127/`. Both replays exited 0 with identical
+receipts and preserved original hashes. The parent reconstructed the CRT
+inversion/carry/height and absolute-certificate arguments, and the divided
+binomial, unrestricted cancellation, twisted tower and mixed-prime arguments.
+The reviewer independently reconstructed these arguments, including all unit
+domains, tower indexing, p=7 exception, signs, scaling, minorant quantifiers
+and certificate-versus-actual-sum distinction. All scoped file and evidence
+hashes matched. The actual null-state comparison preserves the missing
+A-specific implication. No universal claim received a new kernel certificate.
+
+AGENTS, the replacement procedure and argument-critic instructions were read;
+both retained full adversarial guides had their unchanged hashes verified.
+Review used read-only file inspection and mathematical reconstruction. Checker
+executions, the 91-file documentation check and both whitespace checks remain
+caller evidence. No reviewer build, probe, checker execution, file edit, Git
+mutation, service contact or delegation occurred; Carbon remains disabled.
+Later precision and real-consumer investigations were excluded. Final exact
+diff, validation and post-commit receipts belong in the same packet. This
+checkpoint remains local and does not accept V/M4 or end ongoing research.

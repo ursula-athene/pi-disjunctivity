@@ -269,7 +269,158 @@ additional A-specific estimate or V.
 
 The first missing consumer is a bound showing that the reconstructed A
 state leaves every proper word-avoidance set. Counting at most one bounded
-CRT solution does not show that it lies outside the avoidance set.
+CRT solution does not show that it lies outside the avoidance set. The
+[exact Fourier consumer](m4-crt-phase.md) retains that selected class and
+identifies what is lost by taking absolute values.
+
+## Unrestricted differences and multiplicative indices
+
+The following 2026-11-26 extension removes the square restriction for complete
+blocks. Its conclusion is about a **difference**, whose two raw terms can each
+have a p-power denominator. For every prime p>=7, k>=1, and
+c in {A,Ahat,D,R},
+
+    v_p(p*S_(pk-1)^c-16^(k*(p-1))*S_(k-1)^(T_p c))>=2. (6)
+
+It is invalid to reduce the two terms separately in Z/p^2 Z when they are
+not p-integral. Use v_p(0)=infinity. This extension is paper mathematics,
+with independent review recorded separately; it is not a Lean declaration.
+
+Write F_c(k)=sum_(j<k)16^(-j)c(j), F_c(0)=0. For k>=1,
+F_c(k)=16^(-(k-1))*S_(k-1)^c. The earlier complete regular-block calculation
+has no square restriction and gives
+
+    K_c(p)-(q2/2)*sum_r(T_p c)_r in p*Z_(p).
+
+The missing ingredient was division by a pole multiplier which may itself
+be divisible by p. Put B=chi_2(p)*2^((p-1)/2) and d=B-1. Then
+d in p*Z_(p), and d=p*q2/2 modulo p^2. For every positive integer m,
+
+    (B^m-1)/m-d
+      =sum_(j=2)^m binom(m-1,j-1)*d^j/j in p^2*Z_(p).
+
+Indeed j-v_p(j)>=2 for odd p and j>=2. This accounts for the division by
+m without assuming it is a unit. Multiplying by -B^(-m) also gives
+
+    (B^(-m)-1)/m=-d modulo p^2 in Z_(p).                (7)
+
+For the earlier pole locations b_r, transformed offsets delta_r and weights
+w_r, the poles among 0<=j<pk are exactly j=b_r+p*t, 0<=t<k. With
+m=8t+delta_r, the weight identity is exact:
+
+    c_r*16^(-b_r-p*t)=w_r*16^(-t)*B^(-m).
+
+Thus subtracting the transformed pole term in
+p*F_c(pk)-F_(T_p c)(k) gives
+w_r*16^(-t)*(B^(-m)-1)/m. By (7), the sum of all these differences is
+-d*sum_(t<k)16^(-t)*sum_r w_r modulo p^2. The regular terms, grouped into
+k blocks of length p, contribute p*K_c(p)*sum_(t<k)16^(-t) modulo p^2.
+The complete-block identity cancels these contributions. Consequently
+
+    E_p^c(k):=p*F_c(pk)-F_(T_p c)(k) in p^2*Z_(p)       (8)
+
+for every k>=1. Multiplying by the p-unit 16^(pk-1) proves (6). Every
+sum is finite; cancellation happens before taking residues of any pole terms.
+At p=7,k=1,c=A, both raw terms in (6) have valuation -1 and their difference
+has valuation 2. The same nonintegrality occurs at p=7,k=11.
+
+An integral restatement retains the scaling cost. Choose e>=0 with
+8k-1<p^(e+1). All denominators in S_(k-1) have valuation at most e, and
+those in S_(pk-1) at most e+1. Therefore
+
+    p^(e+1)*S_(pk-1)^c
+      =16^(k*(p-1))*p^e*S_(k-1)^(T_p c) mod p^(e+2).
+
+Both terms are now p-integral. This scales the difference and its modulus;
+it does not raise the raw precision in (6). The p=11,k=1 counterexamples
+to an unchanged raw modulus p^3 for A and R remain valid.
+
+## Twisted prime-power towers
+
+For p>=11 and r>=0 put
+
+    Z_r^c=p^r*F_c(p^r), W_r^c=Z_r^(T_p^r c).
+
+Here Z_0^c=c(0), not the empty prefix. The integral restatement with
+k=p^(r-1), e=r-1 proves p-integrality of adjacent states for r>=1.
+Equation (8) and T_p^2=identity give
+
+    Z_r^c-Z_(r-1)^(T_p c) in p^(r+1)*Z_p,
+    W_r^c-W_(r-1)^c in p^(r+1)*Z_p.
+
+Telescoping gives W_s^c-W_r^c in p^(r+2)*Z_p for s>r. Completeness
+therefore gives a limit W_infinity^c in Z_p with
+
+    W_infinity^c-W_r^c in p^(r+2)*Z_p,
+    W_infinity^c=c(0) mod p^2.
+
+These claims about the p-adic completion are paper consequences, not newly
+checked library results. For p=3 mod4 the twist is essential: the untwisted
+A tower has two parity limits differing by R(0)=218/35 modulo p^2. For
+p>=11 in that class this is a p-unit, so the limits differ even modulo p.
+D needs no twist; R requires (-1)^r in that class. At p=7, the same
+difference estimates give a twisted Cauchy tower in Q_7, but Ahat(0)=-65/21
+is not integral. Multiplication by 7 gives an integral version. The main
+Z_p assertion deliberately retains p>=11.
+
+The null state illustrates the real limitation particularly sharply. Its
+actual bound 0<U_n<1/(16n+18) gives
+
+    0<Z_r^D<16^(-p^r)
+
+in the real absolute value, while its p-adic limit is nonzero and congruent
+to 4/105 modulo p^2 for p>=11. The two limits do not contradict each other,
+and U_n still misses (1/2,1) for every n.
+
+## Mixed-prime relations and the remaining consumer
+
+For distinct primes p,q>=7 and k>=1, the transforms commute. The complete
+four-term expression is
+
+    C_(p,q)^c(k)=pq*F_c(pqk)-q*F_(T_p c)(qk)
+                   -p*F_(T_q c)(pk)+F_(T_p T_q c)(k)
+      =q*E_p^c(qk)-E_p^(T_q c)(k)
+      =p*E_q^c(pk)-E_q^(T_p c)(k).
+
+It belongs to both p^2*Z_(p) and q^2*Z_(q), even when individual terms
+have poles. The old square restrictions at the common high index would
+require incompatible inequalities of sizes p>8qk and q>8pk. The
+unrestricted difference removes that obstruction.
+
+The middle terms are essential. At p=11,q=13,k=1,c=A, the full difference
+has valuations (2,2), whereas pq*F_A(pq)-F_(T_p T_q A)(1) has valuations
+(-1,-1). There is no two-term composite lift obtained by discarding them.
+Multiplying the commuting operators over s distinct primes gives an
+inclusion-exclusion difference divisible by each selected prime square in
+its local ring. It retains 2^s corners and a largest prefix length equal
+to k times the product of the primes. No helpful height bound, independence
+or real cancellation follows from that divisibility alone.
+
+Finite exact checks suggest the stronger bounds
+
+    v_p(E_p^c(k))>=2+v_p(k), c=A,Ahat,R,
+    v_p(E_p^D(k))>=3+2*v_p(k).
+
+These are **unproved diagnostics**. In particular the bound r+1 for a
+normalized tower increment is not asserted to be sharp. The uniform raw
+bound 2 is sharp over all k for A and R. The next bounded arithmetic
+question is a proof or counterexample for these k-dependent bounds; the
+separate real question is whether the mixed relations constrain the actual
+forbidden-word model when every intermediate state and height cost is kept.
+Neither is a visitation premise which may be silently assumed.
+
+The unrestricted report is
+`/tmp/pi-m4-unrestricted-lift-20261127/report-v1.md`, SHA-256
+`e3c95ece6c75116005170a4ed83713df2e0d0ad95bbca2ce9219f7c6fc851ac4`.
+Its exact checker covers 3,072 unrestricted differences, including 2,817
+pairs of nonintegral raw terms, 3,072 scaled integral versions, 200 mixed
+differences, 60 tower steps and 468 longer precision diagnostics. The latter
+use scaled modular arithmetic with 140 exact-rational overlap checks. Such
+finite evidence does not prove universal claims or the stronger diagnostics.
+The parent read the full report/checker and reconstructed the binomial,
+pole-cancellation, tower and mixed-index arguments. Replay and independent
+review status are retained in the checkpoint record. The actual null state
+satisfies these arithmetic relations too; V/Hpi/T/M4 remain open.
 No independence of prime residues and digit cells is assumed.
 
 Frozen report `/tmp/pi-m4-global-init-20261126/report-v1.md`, SHA-256

@@ -713,10 +713,22 @@ path-independent cancellation from membership detection: sine products retain
 their height costs, signed differences cancel without using avoidance, and
 the positive resolvent detects membership but retains all its poles. The
 source hypotheses and moving-argument costs are explicit; this assessment
-passed review. The next bounded consumer test derives the actual CRT residues
-and asks for a digit-cell or Fourier estimate, retaining forcing tails and the
-canonical integer representative. Neither random residues nor uniqueness alone
-may supply that estimate.
+passed review. The [exact CRT consumer](m4-crt-phase.md) now retains the forcing,
+canonical carry and residual denominator. It gives a sufficient finite Fourier
+estimate, but height selection already forces a large nonzero-frequency
+correlation. Both separate and combined absolute completion lose necessary
+selection information; the latter has an explicit short-window limitation.
+Neither random residues nor uniqueness supplies the missing signed estimate.
+
+The [unrestricted difference extension](m4-prime-square-lift.md#unrestricted-differences-and-multiplicative-indices)
+removes the complete-block square restriction by cancelling pole differences
+before reduction. It gives twisted p-adic towers and mixed-prime four-corner
+relations with their full middle terms. Both new assessments passed independent
+review with no D/I/Q items. The null state satisfies these relations too.
+Two new investigations, each bounded
+to 20 minutes before reassessment, test stronger k-dependent precision and
+a real consumer retaining all mixed-index heights and phases. The precision
+pattern is conjectural; even proving it would not alone discharge V.
 
 For the recurrence defined in Step 4, seek a proof of
 

@@ -614,3 +614,35 @@ None of these results excludes all possible auxiliary constructions.
 No new Lean declaration or audit is included. V/Hpi/T/M4 remain open and
 M5 is excluded. The log owns the current bounds and outcomes; this checkpoint
 continues the authorized research and does not mark an interruption.
+
+## Exact phase and unrestricted arithmetic checkpoint — 2026-11-26
+
+The initialized-reconstruction/language checkpoint is local commit `2130035`.
+Its packet retains the complete review, final validation and post-commit
+inspection; exact scope, empty index and unchanged protected sources were
+verified. No push or PR occurred. The next integration is documentation-only
+paper mathematics and passed independent review with no D/I/Q items.
+
+The [CRT consumer](m4-crt-phase.md) supplies an exact formula for actual
+finite character sums. It retains the forcing tails, residual denominator,
+height selection and canonical carry. The required signed estimate is still
+unproved. Uniform residues conflict with the selected height interval, and
+absolute completion loses the initialized class. A grid seed shadowing the
+zero phase gives a precise obstruction for combined absolute certificates
+on windows J<=(2/log16-eta)N; this says nothing negative about actual visits.
+
+The [unrestricted lift](m4-prime-square-lift.md#unrestricted-differences-and-multiplicative-indices)
+proves v_p(E_p^c(k))>=2 for all k>=1, p>=7 by cancelling differences before
+reducing poles. It yields twisted Cauchy towers and a full four-corner
+mixed-prime relation. The p=7 integrality restriction, essential middle terms,
+raw precision limit and null-state discriminator are explicit. Stronger
+k-dependent bounds have passed finite tests but remain conjectural.
+The parent independently reconstructed both reports and replayed unchanged
+checker copies with matching receipts, preserving all frozen originals.
+
+Current continuation: test a proof/counterexample for the stronger precision,
+and independently test whether mixed-prime relations constrain real word
+avoidance after retaining every corner and height cost. Each cycle has a
+20-minute reassessment bound. V/Hpi/T/M4 remain open, no Lean theorem or audit
+has been added, and M5 remains excluded. A review or checkpoint commit does
+not interrupt the ongoing authorized research.

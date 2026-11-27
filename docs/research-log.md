@@ -2539,3 +2539,55 @@ The endpoint is a valid estimate or a precise cost/quantifier obstruction;
 neither a random-residue assumption nor averaging over different starting
 values is allowed. The null state is a required discriminator. This work
 continues while the parent obtains independent integration review.
+
+**CRT consumer outcome:** the [exact formula](m4-crt-phase.md) preserves the
+future forcing, canonical CRT carry and residual denominator D with
+log D=2N+o(N). It expresses the actual orbit sum through a finite Fourier
+correlation. The height interval occupies only exp(-(3-log16)N+o(N)) of
+the modulus, so an independent-uniform-residue approximation already fails
+at frequency zero. Taking absolute values term by term costs at least J.
+Even after combining the J terms, an explicit alternative grid seed gives
+a certificate at least (1-o(1))J for J<=(2/log16-eta)N, fixed eta>0.
+This bounds the certificate, not the actual initialized sum. Longer windows
+and signed estimates remain open. Parent full-report reconstruction and
+unchanged checker replay passed with an identical receipt; finite synthetic
+shadow checks are not measurements of pi's phases.
+
+**Changed arithmetic question, bounded to 20 minutes:** the parent derived
+a divided-binomial identity that may remove the square restriction even when
+the two raw terms have p-power poles. The worker independently reconstructed
+it and established the [unrestricted difference](m4-prime-square-lift.md#unrestricted-differences-and-multiplicative-indices)
+for every k>=1 and p>=7. Complete regular terms cancel the pole correction
+after subtraction. The integral restatement scales both terms and modulus;
+it does not silently treat nonintegral terms as residues. Twisted normalized
+prime-power prefixes are Cauchy in Z_p for p>=11, with the p=7 distinction
+retained. The full mixed-prime four-corner relation has valuation at least
+two at both primes; dropping its middle terms fails in an exact p=11,q=13
+example. The null state has all these properties while tending to zero in
+the real absolute value, so no real visitation inference follows.
+
+The parent read the full unrestricted report/checker, reconstructed its
+arguments and replayed an unchanged copy in a separate directory. It exited
+0 with a byte-identical receipt: 3,072 raw and 3,072 scaled lifts, 2,817
+nonintegral raw pairs, 200 mixed differences, 60 tower steps and 468 longer
+precision diagnostics, with 140 exact/modular overlap checks. All frozen
+hashes remained unchanged. Finite tests suggest additional powers of k in
+the valuation; these remain explicitly unproved. Separate adversarial review
+of the six-path integration completed with no D/I/Q items. The reviewer
+independently reconstructed both arguments, inspected both full reports and
+checker sources, and verified all scoped hashes and replay equivalence.
+Executions remain caller evidence. No Lean declaration is introduced.
+
+The initialized-reconstruction/language checkpoint is local commit `2130035`;
+its exact six paths, empty index and protected-source preservation were verified.
+No push or PR occurred. The current two-report integration is against that
+baseline and does not alter V/Hpi/T/M4 status.
+
+**Next investigations, each bounded to 20 minutes:** the arithmetic worker
+tests a general proof or counterexample for the stronger k-dependent
+precision, including nontrivial unit cofactors. A separate consumer worker
+tests signed mixed-index differences against word restrictions while retaining
+all intermediate states, denominator growth and the actual null-state
+comparison. A successful p-adic refinement is not assumed to supply the real
+consumer. The parent continues independent reconstruction and review; these
+cycle bounds are reassessment points, not an end to authorized M4 research.
