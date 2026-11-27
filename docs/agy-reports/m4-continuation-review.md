@@ -1094,3 +1094,47 @@ degree, so the prose correction requires no broader replay. Documentation,
 whitespace, exact scope and preservation are checked by the caller before the
 local checkpoint. The rational-entry investigation is excluded. No V/M4
 acceptance is claimed; the parent continues authorized research.
+
+## Rational-entry equivalence and fixed-family quantifiers — 2026-11-27 UTC
+
+Baseline is local commit `c9a9c4646def554e5a5005534098fc496f6458dc`.
+The five-path documentation scope is `m4-generating-functions.md`,
+`proof-plan.md`, `research-log.md`, `m4-handoff.md` and this record. No Lean,
+dependency, tool, pin or unrelated workspace change is included. The latest
+handoff pointer is reconciled with its new dated section.
+
+The frozen `/tmp/pi-m4-rational-entry-20261127/` packet retains the full report,
+input contract, same-session critic, checker, receipts and manifest. The parent
+read and reconstructed the circle omega-limit and finite-cover arguments,
+fixed-family quantifiers and complete-grid identities; checked the actual
+Orbit/Tail interfaces; and replayed an unchanged checker copy. Exit was 0,
+all 5,369 checks passed, the receipt was identical and originals were preserved.
+These checks do not establish the universal topological claims. The critic's
+six improvements were applied before freezing: individual versus universal
+visits, rational division through a real lift, transient offsets/endpoints,
+exact indexing/diagonals, equivalence rather than a weaker proven premise, and
+the irrational model's limited scope. Its missing fixed-entry estimate remains
+open; same-session criticism is not independent review.
+
+Reviewer `/root/generating_review` completed independent changed-file review
+under the Codex replacement procedure in
+`/tmp/pi-m4-rational-entry-review-20261127/`. The frozen diff SHA-256 is
+`c7420b16771fc5abb72845de9e28982fba27dfd9dc344151da8e7c761059aa85`;
+the full returned `review.md` has SHA-256
+`f9f00b5d95f01803584b348830bb6d3e84f0252f85e5e1b15ca9d8d4dddf6348`.
+**Defects:** none. **Nonblocking improvements:** none requested.
+**Open questions/missing evidence:** none additional for the stated results;
+the fixed-entry/family all-target estimate remains unproved and equivalent to V.
+No finding was omitted or deferred, and no substantive repair required follow-up.
+
+The reviewer reconstructed the invariant, exact entry transfer, fixed-family
+argument, grid normalization and irrational countermodel. It inspected the full
+report, critic, source contract, checker, manifests and receipts, surrounding
+finite-entry claims and actual Orbit/Tail interfaces. All five file and 19
+evidence hashes matched. Both fully read adversarial guides were retained with
+unchanged hashes verified. Review was read-only inspection, hashing and
+mathematical reconstruction: no checker, probe, build, extractor, mutation,
+service or delegation ran. Execution results remain caller evidence.
+Documentation, working/staged whitespace and post-commit scope/preservation
+checks are retained with the packet. The entry-precision and quantitative-entropy
+investigations are excluded. No V/M4 acceptance or new Lean theorem is claimed.

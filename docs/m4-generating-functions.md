@@ -562,3 +562,79 @@ existence and the real avoidance bounds are paper arguments. Frozen evidence:
 
 No global counterexample, Lean export or M4 acceptance follows. The independent
 review record owns both this extension and the sampling extension's status.
+
+## Rational entries preserve universal late visitation
+
+Changing the rational entry does preserve the *global* visitation question.
+This paper bridge does not transfer a visit to an individual interval, and
+does not turn the preceding finite avoiding blocks into infinite avoidance.
+
+Let T(x)=16x on R/Z and K_alpha be the omega-limit set of T^n alpha.
+Compactness and continuity give T(K_alpha)=K_alpha. If K_alpha contains an
+open arc, some iterate of T maps that arc onto the circle, so K_alpha is the
+whole circle. Every proper K_alpha is therefore closed and nowhere dense.
+For rational r its T-orbit F_r is finite, including any transient part, and
+
+    K_(alpha+r) subset union_(t in F_r) (K_alpha+t).
+
+A finite union of closed nowhere-dense sets is nowhere dense. Applying the
+same argument with -r shows that universal late density is invariant under
+rational translation. For every nonzero integer m, K_(m alpha)=m K_alpha;
+the inverse image of m K_alpha under multiplication by m is the finite union
+of K_alpha+j/abs(m). Thus a proper K_alpha still has a proper image. Using
+integer multiplication twice with a real lift of alpha/q proves invariance
+under every nonzero rational affine map. Division by q is not a circle map.
+
+Fix N and one rational raw entry e. Use the exact future coefficients:
+
+    t_0=e,  t_(j+1)=16*t_j+A(N+j+1),  v_j=fract(t_j).
+    t_j=16^j*(e+E_N)-E_(N+j),
+    e+E_N=16^N*pi+(e-S_N).
+
+The checked split and tail convergence give these identities and a circle
+distance tending to zero between v_j and the pure orbit of e+E_N. Their
+omega-limit sets coincide. Since S_N is rational, full late visitation by
+this one fixed entry is equivalent to V. At e=S_N the indices are exactly
+v_j=bbpRecurrence(N+j+1). Open-circle subintervals give the original real
+interval contract, including targets adjacent to 0 or 1.
+
+More generally, ONE fixed finite nonempty family of rational entries (at
+possibly different fixed times) whose union visits every target arbitrarily
+late suffices for V. Otherwise every member has a proper nowhere-dense omega
+set, and their finite union leaves an open arc eventually avoided by all.
+The family must be fixed before both target and threshold are chosen. This
+consumer is equivalent to V, not an estimate establishing its premise.
+
+Growing rational grids do not supply that premise. For odd q and entries
+e_a=e_0+a/q, the states at each time are a translated complete q-grid, with
+all future forcing retained. Let mu be a J-state empirical measure from the
+base entry and nu the empirical measure of all qJ states. Then
+
+    nu_hat(h)=1_(q divides h)*mu_hat(h),
+    Energy(nu)=(1-q^(-2))/6+q^(-2)*Energy((x -> q*x)_*mu).
+
+Here Energy uses psi(x)=fract(x)*(1-fract(x)), probability normalization and
+all diagonal pairs. The second identity is the quadratic Bernoulli distribution
+identity; at J=1 its value is exactly (1-q^(-2))/6. It tends uniformly to 1/6
+as q grows for *every* base phase. For fixed q, the union of omega sets is
+exactly the inverse image of K_(q*(e_0+E_N)) under multiplication by q.
+The surviving q-harmonics still carry the full V obligation.
+
+Indeed, even `forall target I, exists rational entry e, forall threshold,
+exists later visit to I` holds for every phase: choose a fine enough odd grid,
+then one of its finitely many seeds hits I infinitely often. The quantifier
+swap is false. An explicit irrational test is the base-16 number with digits
+1 plus the Thue--Morse parity sequence. Its orbit stays in [1/15,2/15], and
+all its rational translates are nondense, while the grid identities still
+hold. Its translate by 1/3 always lies in (1/3,1/2), showing why individual
+interval behavior does not transfer. This model tests the averaging inference;
+it is not claimed to retain A.
+
+The frozen `/tmp/pi-m4-rational-entry-20261127/` report has SHA-256
+`36a5e8f2af6347459c619ba67c4c02aa1098f76cb88cdfaf41322bf5cb4f5b1d`;
+its manifest has SHA-256
+`8d1d86883279e610b0792d74a5f7642f7e80e12c2c08191c03fd8cae985f8e25`.
+The parent reconstructed the argument and replayed an unchanged checker copy:
+5,369 structural/parity checks passed, exit 0, identical receipt, originals
+preserved. These checks do not prove the universal topological statements.
+No Lean theorem, actual initialized digit search or V acceptance is claimed.

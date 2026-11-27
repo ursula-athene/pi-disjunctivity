@@ -7,7 +7,7 @@ The [continued research checkpoint](#continued-research-checkpoint--2026-11-26)
 records subsequent work during the user's absence; that checkpoint does not
 terminate the ongoing M4 effort.
 The latest dated continuation is the
-[Boundary precision and positive certificates](#boundary-precision-and-positive-certificates--2026-11-27-utc); read the
+[Rational entries and fixed families](#rational-entries-and-fixed-families--2026-11-27-utc); read the
 research log and actual checkout for subsequent results and current state.
 
 ## Baseline and authorized endpoint
@@ -782,3 +782,26 @@ whether it supports a valid new consumer. Its finite-versus-global quantifiers
 must survive a rational-grid averaging countertest. The log owns the bound and
 current outcome. V/Hpi/T/M4 remain open; B4/P3 retain visitation premises and
 M5 remains excluded. Research continues beyond this internal checkpoint.
+
+## Rational entries and fixed families — 2026-11-27 UTC
+
+The preceding propagation/carry checkpoint is local commit
+`c9a9c4646def554e5a5005534098fc496f6458dc`; its six paths, empty index,
+protected/unrelated preservation and necessity inspection were verified.
+No push or PR occurred. The new
+[rational-entry argument](m4-generating-functions.md#rational-entries-preserve-universal-late-visitation)
+shows that full late visitation under exact future A from any one fixed
+rational entry is equivalent to V. One fixed finite family whose union has
+that property also suffices. It does not transfer an individual interval visit.
+
+Growing rational-grid averaging is suspended. Its quantifiers fail even when
+one seed per target is chosen before every time threshold. Parent reconstruction
+and an unchanged-copy replay passed; universal assertions remain paper proofs.
+Independent integration review completed with no findings requiring changes;
+the continuation review record retains exact scope and evidence limits.
+No production Lean, dependency, audit or target contract changed.
+
+Two bounded follow-ups test the usable arithmetic precision of changed entries
+and the quantitative hole cost under rational translation. The log owns their
+bounds, scratch paths and outcomes. V/Hpi/T/M4 remain open, B4/P3 retain their
+visitation premises, and M5 is excluded. This checkpoint does not stop research.

@@ -787,13 +787,16 @@ integral rules out the proposed rational-lattice smallness for every degree
 and window. Restricting to the actual denominator grid is outside that result
 and still needs numerator selection at controlled cost.
 
-The current 20-minute reassessment cycle tests a possible rational-entry
-invariance bridge: whether full late visitation for any rational entry under
-the same future forcing is equivalent to V, via rational affine invariance of
-the pure base-16 orbit. It must distinguish this global statement from finite
-programming or averaging over changing entries; a useful consumer needs one
-valid quantifier arrangement. The review record owns integration status; all
-target contracts and Lean status remain unchanged. Research continues within M4.
+The [rational-entry bridge](m4-generating-functions.md#rational-entries-preserve-universal-late-visitation)
+identifies a valid broader consumer: full late visitation from any one fixed
+rational entry under the exact future forcing, or from one fixed finite family,
+is equivalent to V. Growing-grid averaging fails even when each target's seed
+is fixed before its time threshold; the family itself cannot depend on the
+target. Current 20-minute investigations test compatibility with the strong
+prime-defect precision and the quantitative cost of transporting an omitted
+word through rational entry changes. They must retain the exact forcing and
+fixed-family quantifiers. The review record owns integration status; all target
+contracts and Lean status remain unchanged. Research continues within M4.
 
 For the recurrence defined in Step 4, seek a proof of
 

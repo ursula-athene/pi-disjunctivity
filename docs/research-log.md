@@ -2799,3 +2799,29 @@ test must retain the distinction between one globally visiting rational entry
 and changing entries for finite targets/windows. The active scratch path is
 `/tmp/pi-m4-rational-entry-20261127/`. Further support-only or uniform real-entry
 polynomial refinement is suspended. This checkpoint does not stop M4 research.
+
+**Next continuation, after local commit `c9a9c46`:** the six-path propagation
+and word-carry checkpoint passed review, focused corrections, documentation
+and working/staged whitespace checks. Exact post-commit scope, empty index,
+17 protected and 11 unrelated file hashes were verified. Nothing was pushed.
+The rational-entry worker then delivered its immutable packet. The parent
+read the full argument, input contract, critic and checker, reconstructed the
+finite-cover and omega-limit proofs, and replayed an unchanged copy: exit 0,
+5,369 checks, identical receipt, original hashes preserved. It establishes a
+paper equivalence with V for any fixed rational entry, and for a fixed finite
+family with universally visiting union. Independent integration review completed
+with no defects, requested improvements or additional evidence gaps. Full scope,
+capture and evidence limits are retained in the continuation review record;
+there is no new Lean theorem or proof of the consumer premise.
+
+Growing-grid averaging is suspended: even one rational seed per target with
+infinitely many visits exists for every base phase, including an explicit
+irrational nondense model. The quantifier failure is therefore stronger than
+merely switching seeds at each finite horizon. **Two distinct 20-minute
+reassessment questions** now test whether the new freedom is usable: a fixed
+rational entry's compatibility with the prime-square/stronger defect identities,
+and the quantitative missing-hole cost of rational translation versus analytic
+variation of the exact tail across entry times. Scratch paths are
+`/tmp/pi-m4-entry-precision-20261127/` and
+`/tmp/pi-m4-entry-entropy-20261127/`. Neither cycle assumes a new visitation
+estimate or treats a finite changing family as the fixed-family consumer.
