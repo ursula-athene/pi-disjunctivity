@@ -647,6 +647,110 @@ The denominator claims concern q_N, not every unreduced replacement seed.
 It assesses these statements and their application, not the full source proofs
 or all available literature. None supplies the missing actual-grid cover.
 
+## Rational gauges and endpoint-conditioned parity
+
+The shifted-coefficient inquiry first recovered archived telescoping/filter
+obstructions, then tested their effect on canonical parity. Define
+B_t(x)=sum_(i=1)^t16^(t-i)A(x+i), t>=1. For fixed R in Q(x) and beta in Q,
+the exact and rational-gauge comparison endpoints from r/q_N differ by
+
+```text
+T=16^t*r/q_N+B_t(N),
+T_model=16^t*r/q_N+R(N+t)-16^t*R(N)+beta,
+D=B_t(N)+16^t*R(N)-R(N+t)-beta.
+```
+
+Each of B_t's 4t pole classes modulo tZ has a nonzero weighted residue.
+The same residue vanishes for R(x+t)-16^t R(x), so D, as a rational function
+of N, has a nonzero proper rational part. Its polynomial part takes values
+in a fixed rational lattice. Thus for some fixed c>0 and integer d>=1,
+delta_N=dist(D,2Z)>=c*N^-d at every sufficiently large N. This holds for
+fixed t,R,beta; a separately chosen gauge at each N is excluded.
+
+There is more structure than a whole-grid discrepancy bound. Write the exact
+raw endpoint as T=K+x_h, with x_h in [0,1), and compare it with T-D.
+For d_0=D mod2 in [0,2), the floors have different parity exactly when
+
+```text
+x_h in J_D=[0,d_0) if d_0<=1, or [d_0-1,1) if d_0>=1.
+```
+
+Both descriptions give the full cell at d_0=1; d_0=0 gives the empty set.
+The interval length is delta=dist(D,2Z). For ANY specified carry-parity word
+epsilon of length h>=1, its real initial seeds R_epsilon have the exact
+terminal-state identity, for measurable J contained in [0,1),
+
+```text
+Leb{x_0 in R_epsilon : x_h in J}=2^(-h)*Leb(J).
+```
+
+At each step every target has eight inverse branches of either parity,
+each of slope 1/16. The even outer branches switch at the actual forcing
+value; the half-open endpoints leave exactly one available. Iterating
+this identity proves the formula without an assumed probabilistic model.
+In particular it retains every intermediate ACTUAL parity constraint.
+
+At the matched endpoint t=h, backward preimages of J_D have at most
+m_h=(8^(h+1)-1)/7 interval components. For any odd q>1, a star restricting
+the initial r/q seeds to gcd(r,q)=1, interval counting gives
+
+```text
+abs(#(R_epsilon(q) intersect Mismatch)-q*delta/2^h)<=m_h,
+abs(#(R_epsilon(q)^* intersect Mismatch)-phi(q)*delta/2^h)
+  <=2^omega(q)*m_h.
+```
+
+For the actual q_N and fixed h=t,R,beta, the preceding residual lower bound
+and archived denominator asymptotics imply exp(6N+o(N)) mismatches even
+among all-even survivors. These are false odd endpoint labels of the
+comparison model: the qualifying ACTUAL last carries are even. They supply
+no odd actual carry and do not identify the actual initialized seed.
+
+For the archived truncation R_m(x)=-sum_(i=1)^m16^-i A(x+i), take beta=0,
+t=h and m>=h>=1. The exact error is D=16^-m B_h(N+m)>0, and
+
+```text
+(5/1638)*16^(h-m)/(N+m+1)^2 <= delta=D
+  <=16^(h-m)/(15*(N+m+1)^2)<1.
+```
+
+A fixed even beta gives the same parity counts but a different signed error.
+For m=O(N), the conditional main/error exponent gap is 6N-m*log16+o(N).
+Thus m*log16<=(6-epsilon)N, with fixed epsilon>0, gives exponentially many
+conditioned mismatches. The condition concerns m, not m-h; the latter was
+the separate whole-grid comparison. It is not uniform over adaptive beta_N.
+
+This particular bound cannot reach a permutation-resonant lag. Indeed for
+ANY delta<=1, h>=1 and q>1 with q dividing 16^h-1,
+
+```text
+phi(q)*delta/2^h <= q/2^h <8^h <=m_h <=2^omega(q)*m_h.
+```
+
+Its displayed lower bound is strictly negative at every such instance.
+This says nothing about the true count, which may be positive or zero.
+The matched-endpoint identity repairs the earlier broad claim that survivor
+correlation was entirely missing. The remaining requirements are stronger
+long-horizon arithmetic estimates, actual-seed selection, and control of
+intermediate MODEL carries if a full language transfer is attempted.
+A varying rational gauge can still cancel one chosen endpoint exactly;
+this does not supply coherent control over a whole window.
+
+The original lag report in `/tmp/pi-m4-rational-lag-correlations-20261127/`
+has SHA-256
+`64a6243355fdecfe31e598c9680b18e06d20188282fe5f86c9ca567935f93344`.
+Its authoritative correction/extension is
+`/tmp/pi-m4-endpoint-conditioned-clarification-20261127/report-v2.md`,
+SHA-256 `606c85e7b81ace8ef89882a46c7769b79198481e76e4bf959849969c874bb604`.
+It explicitly repairs the ancillary filter bound's nonzero-W domain,
+the beta specialization and the earlier overbroad survivor limitation.
+Independent initial and focused paper reviews completed with all three
+findings resolved. Parent unchanged-copy replays passed 1,971 initial cases
+and two constructions of 1,400 complete synthetic qualifying sets, with
+identical receipts and all originals preserved. No actual q_N census or
+digit search was used. General identities/asymptotics remain paper results;
+C_odd, universal grid escape, V and M4 remain unproved.
+
 ## Evidence boundary
 
 The frozen sine-zero report is `/tmp/pi-m4-sine-zero-report-v1.md`, SHA-256

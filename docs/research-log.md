@@ -3763,3 +3763,57 @@ each with a concrete consumer and discriminating test, or a precise account
 of the missing resource. New notation for an already failed mechanism is not
 a new candidate. This is bounded ideation, not review or authorization to stop;
 no output from it is accepted in this checkpoint.
+
+**Rational gauges and conditioned endpoints — 2026-11-27 UTC:** the
+grid/source checkpoint is local commit `890a4e0f2a390998c423c2235e0ee3287c24ea41`.
+Full/focused reviews, documentation/process checks, exact staged content and
+post-commit necessity/preservation checks passed. All 17 protected and 11
+unrelated files were preserved. The new commit was local, one ahead of the
+verified remote c25b656; this run issued no push or PR.
+
+The 25-minute shifted-coefficient inquiry recognized the archived telescoping
+and finite-filter obstructions and pivoted to a new parity-label consumer.
+Fixed rational lag gauges have a nonzero proper residual, bounded below
+modulo two by a power of N. Whole-grid mismatch counts and a truncated-gauge
+depth cost follow. Parent replay passed 1,971 exact cases, byte-identical
+receipt and three preserved original artifacts. These are synthetic checks,
+not actual-grid or digit searches.
+
+Parent reconstruction then found an exact matched-endpoint correlation missed
+by the initial broad survivor limitation. A **15-minute focused extension**,
+started about 09:57 UTC and completed within its bound, proved that every
+specified parity word pushes restricted Lebesgue measure to 2^-h times uniform
+terminal measure. Endpoint mismatch is a single interval in that terminal
+state. The resulting reduced-grid error is 2^omega(q)*m_h; growing truncated
+gauges have main/error gap 6N-m*log16+o(N). At every resonant lag q|16^h-1,
+the particular component-error lower bound is strictly negative, independent
+of truncation. No true-count or visitation conclusion follows from that failure.
+
+Independent critic `/root/global_dual_recovery` found three initial defects:
+the ancillary norm bound needed W nonzero, truncation formulas needed beta=0,
+and the blanket absence of survivor correlation was too broad. The authoritative
+extension/correction map and parent's signed-error clarification resolved all
+three in focused review. Parent replay of two exact constructions agreed on
+1,400 complete synthetic qualifying sets, with byte-identical receipt and
+all original packets preserved. The continuation review record owns the full
+captures and dispositions; final production integration review completed with
+no remaining finding. Documentation (93), process tests (38), whitespace and
+preservation checks passed.
+
+The changed understanding is a precise short-horizon survivor estimate and
+its failure to reach resonance, not just an absence of any correlation. It
+still leaves actual-seed selection, longer-horizon arithmetic and intermediate
+model-carry transfer open. The separate 20-minute meta-plan pass was asked
+to close at its reassessment point; no unfinished result from it is adopted
+here. These remain paper results, with no Lean/audit/dependency change and
+no claim of C_odd, universal grid escape, V or M4 acceptance. Work continues.
+
+The earlier meta-plan worker subsequently had no completed packet and no
+entry in the live-agent inventory. Its research outcome is unavailable, not
+negative or completed; no cause is inferred. After a status/closure message,
+the parent started `/root/unused_structure_reset` as a fresh **15-minute**
+recovery, scratch root `/tmp/pi-m4-unused-structure-reset-20261127/`.
+It must return at most two genuinely different exact candidates or a precise
+inconclusive outcome, using the failure archive and excluding the completed
+gauge lane. It has no production/Git/service/delegation authority. This
+operational recovery does not alter the mathematical conclusion or end M4.

@@ -955,9 +955,14 @@ C(N+1) uniform in every N; C=5 and every universal escape estimate remain
 unproved. State injectivity persists after forcing-field collapse, and the
 generic component-count error cannot certify escape. The targeted source
 screen supplies neither an outside-Cantor premise nor a full-period transfer.
-A new 25-minute inquiry tests rational shift/coboundary relations of exact A:
-can a relation connect carry constraints while retaining parity and a useful
-real error bound? Archived finite-filter and gauge failures must not be repeated.
+The [rational-gauge follow-up](m4-language-auxiliaries.md#rational-gauges-and-endpoint-conditioned-parity)
+does give an exact terminal-state correlation after any prescribed parity word,
+and quantifies model-label errors even on surviving seeds. Its component-count
+lower bound is strictly negative at every permutation-resonant lag, so it cannot
+reach that intended regime. Actual-seed selection and long-horizon arithmetic
+control remain open; the result does not transport a whole model carry word.
+A separate bounded meta-plan pass seeks genuinely different unused structure,
+with the existing failure archive and this precise range limitation retained.
 The log owns bounds, outcomes and the failed source-applicability screens.
 V and all Lean contracts are unchanged; neither conditional wrapping nor more
 classification supplies visitation.

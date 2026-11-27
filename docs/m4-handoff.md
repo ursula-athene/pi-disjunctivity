@@ -7,7 +7,7 @@ The [continued research checkpoint](#continued-research-checkpoint--2026-11-26)
 records subsequent work during the user's absence; that checkpoint does not
 terminate the ongoing M4 effort.
 The latest dated continuation is the
-[Finite-grid escape and source limits](#finite-grid-escape-and-source-limits--2026-11-27-utc); read the
+[Rational gauges and conditioned endpoints](#rational-gauges-and-conditioned-endpoints--2026-11-27-utc); read the
 research log and actual checkout for subsequent results and current state.
 
 ## Baseline and authorized endpoint
@@ -1176,3 +1176,28 @@ here. A separate 20-minute meta-plan pass seeks at most two materially different
 candidates from unused exact structure, excluding the current gauge inquiry and
 archived failures. V/C_odd/global covering and M4 remain open, B4/P3 retain their premises,
 and no Lean, audit, pin, dependency or trust boundary changed. Work continues.
+
+## Rational gauges and conditioned endpoints — 2026-11-27 UTC
+
+The grid/source checkpoint is local commit
+`890a4e0f2a390998c423c2235e0ee3287c24ea41`; full/focused reviews, checks,
+exact staging and post-commit necessity/preservation inspection passed.
+It was one commit ahead of the verified remote c25b656 at that inspection;
+this run issued no push or PR. Verify the checkout for later publication changes.
+
+The [completed gauge inquiry](m4-language-auxiliaries.md#rational-gauges-and-endpoint-conditioned-parity)
+quantifies endpoint-label errors from rational approximations. A parent-led
+refinement gives an exact correlation on surviving parity words, correcting
+an initially overbroad limitation. Independent criticism resolved the nonzero
+filter domain, beta specialization and missing matched-endpoint structure.
+Parent exact replays passed with identical receipts and preserved originals.
+Final exact changed-file review completed with no remaining finding;
+documentation/process/whitespace and preservation checks passed.
+
+The generic component error defeats its lower bound at every resonant lag;
+this is a limitation of that estimate, not of all future methods or actual
+visitation. Actual-seed selection and intermediate model-carry transfer remain
+open. The separate meta-plan pass returned no completed packet and was absent
+from the live-agent inventory at reassessment. A fresh 15-minute worker is
+recovering that inquiry; no outcome is claimed. The log owns its scope. No Lean or trust
+boundary changed. V/C_odd/global covering and M4 remain open; research continues.

@@ -2017,3 +2017,52 @@ the unchanged originals, with no further finding. Documentation (93 files),
 process tests (38), whitespace and preservation checks passed as caller
 evidence. No Lean build was repeated for this documentation-only checkpoint.
 Subsequent edits record review outcomes only; the ongoing research is excluded.
+
+## Rational gauges and conditioned endpoints — 2026-11-27 UTC
+
+Baseline is local commit `890a4e0f2a390998c423c2235e0ee3287c24ea41`.
+Independent reviewer `/root/global_dual_recovery` reconstructed the original
+lag packet, report SHA-256
+`64a6243355fdecfe31e598c9680b18e06d20188282fe5f86c9ca567935f93344`.
+Full initial response `/tmp/pi-m4-rational-lag-paper-review-20261127.txt`
+records three defects. **D1: resolved:** require nonzero W in the ancillary
+coefficient-norm bound. **D2: resolved:** specialize truncation signed errors
+to beta=0; even beta preserves parity but changes the signed error.
+**D3: resolved:** withdraw the overbroad survivor limitation and retain the
+exact matched-endpoint correlation and its finite-grid estimate.
+
+The authoritative correction/extension is
+`/tmp/pi-m4-endpoint-conditioned-clarification-20261127/report-v2.md`,
+SHA-256 `606c85e7b81ace8ef89882a46c7769b79198481e76e4bf959849969c874bb604`.
+The original lag packet and the worker's first extension remain immutable.
+Full focused response `/tmp/pi-m4-rational-lag-followup-20261127.txt`
+reconstructs the endpoint interval, uniform parity-word pushforward,
+component/Mobius count, fixed-horizon exponent, growing-truncation range
+and exact resonance-bound negativity. It finds all D1--D3 resolved and no
+new defect or required improvement. **Q1: retained, narrowed:** long-horizon
+estimates, actual-seed selection and intermediate model-carry transfer remain
+unproved. None supplies actual escape, C_odd or V.
+
+Both reviews applied the two required adversarial guides and the current
+replacement procedure. The reviewer inspected source/checkers/receipts and
+parent reconstruction but ran no checker, probe, build, extractor, service,
+mutation or delegation. Parent unchanged-copy replays passed 1,971 initial
+cases and 1,400 complete synthetic set comparisons with identical receipts;
+all bound originals were preserved. Those finite checks do not establish
+the universal or asymptotic paper claims. Final exact changed-file review
+completed as below. The separate meta-plan pass and any subsequent research are
+excluded; no Lean or M4 acceptance is claimed.
+
+The frozen five-path diff is retained in
+`/tmp/pi-m4-gauge-endpoint-review-20261127/`, SHA-256
+`05a69aae6e6d952285b9e1f00ab4f4e4f8a20d5e52ac93c26f4d6c9b3d0b4c78`.
+Full response `review-full.txt`, SHA-256
+`6916edfb0b61636a00366c287d7a2f109219173b437208c6698d415dde734fc3`,
+is retained with the manifest and caller receipts.
+Reviewer `/root/generating_review` independently reconstructed the
+integrated argument and checked all five production, 24 evidence, two guide
+and 28 preservation hashes. **D1--D3: resolved. New D/I: none. Q1: retained**
+as the narrowed mathematical obligations above. Documentation (93 files),
+process tests (38), whitespace and preservation checks passed as caller
+evidence; no Lean build was repeated for these documentation-only changes.
+Subsequent edits record outcomes only. The new bounded recovery is excluded.
