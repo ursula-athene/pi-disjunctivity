@@ -3355,3 +3355,105 @@ remain as above; no reviewer execution, mutation, service or delegation.
 Documentation (93), process tests (38), whitespace and preservation checks
 passed; unchanged Lean was not rebuilt. Only factual outcome records follow
 the focused repair.
+
+## AGM approximations and selected-root signs — 2026-11-27 UTC
+
+The mathematical owner is the
+[AGM assessment](../m4-approximation-interfaces.md#agm-units-smaller-fields-and-the-missing-interval-estimate).
+All four investigations are paper mathematics with finite exact checks.
+No new Lean result, V theorem, carry-parity theorem or M4 acceptance is claimed.
+Brent's retained primary PDF has SHA-256
+`d743c13afc9868f7795f1e8539943399d9aec70d2e656b07e24202a3bb512737`.
+Printed pages 6, 8, 9 and 10 were inspected across the source reviews; the
+complete theta/elliptic-integral dependency proof was not audited or formalized.
+
+The first AGM packet is specifically `agm-report-v1.md` in
+`/tmp/pi-m4-fresh-mechanism-reset-20261127/`, SHA-256
+`cfa9582f6ac27912018d9ed3d0787b22873ae2ea0537e288287427d7bed4b8b6`.
+The old unprefixed report there is a different Gaussian investigation.
+Two accidentally overwritten historical scratch files were exactly restored;
+all seven original manifest entries and later all 28 historical scratch
+evidence hashes matched. No repository file was affected. The new packet
+excludes old evidence; subsequent scratch directories were verified new.
+Parent packet: `/tmp/pi-m4-agm-parent-review-20261127-183733/`, manifest
+`68645ae81b9ec5c1d0bbb3ea22cb95835f5e8cfdd1f1c73a9ed5a071576347bc`.
+Unchanged replay passed 773 exact checks, preserving eleven originals.
+Independent `/root/agm_unit_review` ran 18:45:54--18:49:48 UTC within ten
+minutes. **D1: corrected and verified:** the initial D/U comparison is
+non-strict at m=1; its strict bound by 1/32 remains. **I1: implemented:**
+the residual domains are natural m,n, integer p, |p|<=4Q and 4n>=m+1;
+the odd-norm subcase additionally requires 4n>m+1 and odd p. The immutable
+`residual-domain-clarification.md` and production owner retain these.
+**Q1: unresolved:** actual window visits. **Q2: retained evidence limit:**
+complete source dependencies. Full review is `paper-review.txt` in the parent
+packet; the earlier correction is in its immutable assessment.
+
+The compensated-F packet is
+`/tmp/pi-m4-agm-compensated-trace-20261127-1845/report-v1.md`, SHA-256
+`ce89ee91c8cbea7005ad0c6a1ea9796d5a75ae682b63916b8c6caeb524c933d5`.
+Parent packet: `/tmp/pi-m4-agm-compensation-parent-20261127-185904/`, v2
+manifest `cb102612b623c048419543329ddf3a59c891dc58f1615ef4a8bcba9fb08aa969`.
+The readable assessment-v2 preserves the first assessment; no frozen evidence
+was rewritten. Unchanged replay passed 132 checks, preserving eleven originals.
+Independent `/root/agm_unit_review` ran 19:05:10--19:08:10 UTC within eight
+minutes. **D/I: none. Q1: unresolved:** interval placement. **Q2: retained
+source-audit limitation.** The reviewer distinguished the compensation
+polynomial from the exact norm polynomial, the m>=3 signed result from its
+m=1 fixture, absolute height from coefficient height, and precision gains
+from visits. Full return: parent `paper-review.txt`.
+
+The exact-norm Newton packet is
+`/tmp/pi-m4-agm-exact-norm-newton-20261127-1858/report-v1.md`, SHA-256
+`4db4bf0106688ed0e01d10d00128710cb1f88a3e0094768e77f5a43507e62ace`.
+Parent packet: `/tmp/pi-m4-agm-newton-parent-20261127-1912/`, manifest
+`aac709c903f2fe9c1c5490ef168f2e07615540471dfba1a030ca92828dc8ae2c`.
+Unchanged replay passed 200 checks, preserving seven originals. Independent
+`/root/agm_unit_review` ran 19:10:16--19:13:24 UTC within the assigned
+19:10:00--19:20:00 bound, reassessing at 19:12:03. **D/I: none. Q1:
+unresolved:** interval placement. **Q2: retained:** J!=0 must be proved or
+the zero case handled at any norm application; universal irrationality is
+not claimed. **Q3: retained source-audit limitation.** Cancellation, signs,
+full-window constants, height and degree were independently reconstructed.
+Full return: parent `paper-review.txt`. The positive sign relative to pi is
+eventual; the all-m inequality is only Y_m>gamma_m.
+
+The phase-consumer packet is
+`/tmp/pi-m4-agm-phase-consumer-20261127-1855/report-v1.md`, SHA-256
+`43a8938f10a9cf95fadb2fdeb775cab86f979cf8f320517b2fb6d48131899979`;
+manifest `e9fd97aa224047a817891b20510637d957b2e4f2b8ee78b90ad9c2c6c37eeff1`.
+Parent packet: `/tmp/pi-m4-agm-phase-parent-20261127-1915/`, manifest
+`95954010e8a19f0c918053e8b0cf6558852baf2640b75174ea7d4e0097c391f1`.
+Unchanged replay passed 143 checks, preserving seven originals. Independent
+`/root/finite_log_independent_review` ran 19:13:12--19:16:22 UTC within ten
+minutes, reassessing at 19:15:50. **D/I: none newly found.** Worker D1/D2
+are rejected candidate inferences, not defects in the final argument; those
+rejections are retained. Worker I1/I2 are implemented: distinguish field
+signature from real polynomial roots, and finite-window seeds from a fixed
+infinite avoiding seed, including all lost hypotheses. **Q1: unresolved:**
+the sign-count lower bound for exact S_0=1. **Q2: retained source-audit
+limitation.** Full return: parent `paper-review.txt`.
+
+Both full adversarial guides, the replacement procedure and critic/source
+skills applied to the respective scopes. Reviewers reconstructed arguments,
+inspected files/hashes and retained source images, and distinguished caller
+execution receipts from independent review. No reviewer executed a checker,
+probe, build, rendering or extraction, wrote files, changed Git, contacted a
+service, installed tools or delegated. Finite arithmetic does not prove the
+universal arguments, and reviewer agreement is not a kernel certificate.
+The open visit/sign-count questions block V/M4 acceptance.
+
+Full four-path integration review by `/root/finite_log_independent_review`
+ran 19:21:52--19:26:20 UTC within twelve minutes, with reassessment at
+19:25:54. Baseline `116f072d`; exact diff SHA-256
+`ef3b3df69edaefe21248ace2fa620f0f4c1db0e5fad0f90ad3fd0ffcc117b382`;
+manifest `95225e719c0665ad4c4b08557c2b7d4e5957eb2b6c4e00ea7afba09f7cdb9ae7`
+bound 81 files. The live diff and all bound files matched. **No new D/I
+items. Prior D1 and I1: verified corrected/implemented in production.**
+The finite-window distinctions were likewise verified; no consequential
+duplication was found. **Q1--Q3 remain explicit:** actual sign counts,
+nonzero Newton residuals at applications, and full analytic source dependencies.
+All 28 preservation hashes and the historical scratch restoration were
+independently checked. Complete capture and exact scope are retained in
+`/tmp/pi-m4-agm-integration-review-20261127-1922/`. Documentation (93),
+process tests (38) and whitespace checks passed; unchanged Lean was not
+rebuilt. Only factual review/outcome records follow the reviewed diff.

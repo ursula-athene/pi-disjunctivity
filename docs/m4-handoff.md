@@ -12,12 +12,14 @@ and [persistence protocol](meta-proof-plan.md#persistence-and-stopping-condition
 Use Codex subagents for required reviews; Carbon remains stopped. M5, push,
 PR, new dependencies, installations and permission changes are not authorized.
 
-Read the [latest inverse-history assessment](#inverse-selection-and-nearby-seeds--2026-11-27-utc),
+Read the [latest AGM assessment](m4-approximation-interfaces.md#agm-units-smaller-fields-and-the-missing-interval-estimate),
 then the end of the [research log](research-log.md) and the actual checkout.
-Pure inverse-order selection has not supplied the needed arithmetic estimate.
-Fresh discovery tests AGM/Landen approximations against their degree, height
-and conjugate costs; unfinished claims are excluded from adoption. The log
-owns bounds and outcomes; this entry is not a second live status ledger.
+An exact Newton correction retains a full approximation window in a smaller
+field. The tower also gives an exact selected-root norm-sign formula, but no
+positive sign-count estimate. Further approximation acceleration is suspended
+without a visitation consumer. Fresh discovery seeks initialized BBP structure
+lost by the countermodels. The log owns bounds and outcomes; this entry is not
+a second live status ledger.
 
 For the immediate failure record, follow the relevant mathematical owner:
 
@@ -34,6 +36,9 @@ For the immediate failure record, follow the relevant mathematical owner:
   needed by the qualitative density theorem remains unproved.
 - [Transforms and periods](m4-transforms-and-periods.md): disk dissection
   cancels pi; fixed-frequency asymptotics do not control the remaining tail.
+- [Approximation interfaces](m4-approximation-interfaces.md): AGM unit norms,
+  improved degree/precision and exact sign identities still lack late visits;
+  finite-window perturbations lose exact initialization and conjugate bounds.
 
 Rational-entry equivalence and small-type interpolation were just matched to
 archived failures before redevelopment. A new inquiry must identify its changed

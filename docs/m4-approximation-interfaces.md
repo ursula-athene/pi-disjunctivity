@@ -443,3 +443,202 @@ preserved originals. No actual arctangent/pi fractional prefix was computed.
 The topology and infinite arguments remain paper results. A useful new step
 would need a constraint on the actual native integer residues from the fixed
 forcing or Gaussian identity; the period split alone supplies no visit.
+
+## AGM units, smaller fields and the missing interval estimate
+
+The positive initialized Gauss--Legendre iteration exposes arithmetic absent
+from a generic rational approximation. The results below are reviewed paper
+mathematics, not Lean declarations or V/M4 acceptance. The analytic input is
+[Brent, The Borwein brothers, Pi and the AGM](https://maths-people.anu.edu.au/~brent/pd/rpb269.pdf),
+arXiv:1802.07558v1: Algorithm GL on printed page 8, equations (16)--(20)
+on page 9, and the expansion on page 10. The additional asymptotics use the
+theta formulas (13)--(15) on page 6. These pages were inspected; the complete
+analytic dependency proof has not been audited or formalized.
+
+Start a_0=1, b_0=1/sqrt(2), s_0=1/4, and put
+
+    a_(m+1)=(a_m+b_m)/2, b_(m+1)=sqrt(a_m*b_m),
+    c_(m+1)=(a_m-b_m)/2, s_(m+1)=s_m-2^m*c_(m+1)^2,
+    A_m=2^(m+1)a_m, B_m=2^(m+1)b_m,
+    U_m=(A_m+B_m)^2/2, D_m=(A_m-B_m)^2/2,
+    S_m=2^(m+2)s_m, alpha_m=U_m/(2^(m+1)S_m).
+
+Thus A_0=2, B_0=sqrt(2), S_0=1, and
+
+    A_(m+1)=A_m+B_m, B_(m+1)^2=4A_m B_m,
+    S_(m+1)=2S_m-D_m, U_m D_m=D_(m-1)^2 (m>=1).
+
+For K_(-1)=Q and K_m=Q(b_0,...,b_m), the normalized 2-adic valuations
+v(A_m)=1/2 and v(B_m)=(5*2^m-3)/2^(m+1), m>=1, force ramification index
+at least 2^(m+1). The quadratic tower gives the reverse degree bound. Hence
+[K_m:Q]=2^(m+1), with a unique prime above 2, totally ramified. U_m,D_m,S_m
+are algebraic integers and units at 2. The first two have global norm one;
+Norm(S_m) is a positive odd integer, a square for m>=1, and is generally not
+one. Since alpha_m>2, its rationality would imply
+1=(2^(m+1)alpha_m)^[K_m:Q]*Norm(S_m)>1. Thus alpha_m is irrational.
+
+This gives a genuine norm constraint, but its elementary separation bound
+has the wrong scale for the intended consumer. For natural m,n, integer p,
+Q=16^n, |p|<=4Q and 4n>=m+1, the nonzero integral residual is
+
+    R=2^(4n-m-1)U_m-pS_m=S_m(Q alpha_m-p).
+
+If additionally 4n>m+1 and p is odd, its norm is odd. No parity is asserted
+for actual pi prefixes. Bounding all other conjugates gives
+
+    |Q alpha_m-p| >= 1/[2^m*(2^(2m+5)Q)^(2^(m+1)-1)].
+
+Its logarithmic cost is O(n*2^m+m*2^m). At n proportional to 2^m this is
+quadratic in n, whereas the available approximation allowance has logarithmic
+cost linear in n. This comparison concerns these bounds; it is not a theorem
+excluding sharper norm methods, and separation alone does not supply visits.
+
+### Two traces and two distinct Newton corrections
+
+The last conjugation exchanges U_m,D_m and fixes S_m. Its first trace is
+
+    gamma_m=alpha_m+D_m/(2^(m+1)S_m)
+           =(a_m^2+b_m^2)/(2s_m) in K_(m-1).
+
+For r=2^m, both alpha_m and gamma_m approximate pi with scaled error tending
+uniformly to zero on 0<=n<=2r after multiplication by 16^n. One explicit
+allowance for gamma_j is
+
+    eps_j=2^(j+8)*(3/8)^(6*2^j)+64*18^(-2^(j+1)).
+
+The second trace does not retain this absolute precision. For m>=1 put
+a=2^(-m), U=U_(m-1), D=D_(m-1), S=S_(m-1), and
+
+    gamma=gamma_m=a(2U-D)/(2S-D),
+    gamma'=a(2D-U)/(2S-U), R=gamma+gamma', x=gamma_(m-1).
+
+The corrected initial-ratio comparison is
+D/U<=((1-b_0)/(1+b_0))^2<1/32; equality in the first comparison occurs at
+m=1. The second trace satisfies
+(15/32)a<R-pi<(79/32)a. This failure is specific to the uncorrected trace.
+
+The compensation polynomial F(t)=t^2-(R+a)t+2aR is not the exact polynomial
+of gamma. With q=D/U and v=S/U,
+
+    F(gamma)=2a^2 q(1+q-3v)/[(2v-q)(1-2v)] >0.
+
+Its larger root eta satisfies aq/10<pi-eta<9aq for m>=2. The rational
+Newton correction X=(x^2-2aR)/(2x-R-a) lies in K_(m-2), and for m>=3
+aq/20<pi-X<9aq. Its denominator is greater than one for m>=2. The elementary
+bounds give uniform scaled error for n<=r, but growing absolute scaled error
+at n=2r. The theta inputs sharpen this to
+
+    pi-X ~16*r^(-1)*exp(-pi*r),
+    (pi-X)/(pi-gamma_(m-1)) ~2/(pi^2*r^2).
+
+This is a real precision gain of m/2+O(1) hexadecimal indices at a common
+tolerance, despite the same leading exponential rate. X_1=72/23 is only a
+boundary fixture, not an instance of the m>=3 signed bound.
+
+Using the exact relative norm instead makes a stronger one-step repair.
+Set L=U+D, M=UD, H=4S^2-2SL+M. Then
+
+    P=gamma*gamma'=a^2(9M-2L^2)/H,
+    R=2a(SL-L^2+3M)/H,
+    Y=(x^2-P)/(2x-R)
+     =a[2SL^2-M(L+3S)]/[2S(SL-M)] in K_(m-2).
+
+The cancellation retains the full correction S. On the positive branch
+L>4S, M<SL/2 and H<0, so no canceled factor vanishes. The identity
+gamma_m-gamma_(m-1)=aD(L-3S)/[S(2S-D)]>0, convergence, and gamma_0=3 give
+3<=gamma_j<pi. Also 0<gamma'<2a<=1, hence 2x-R>1. Therefore
+
+    Y-gamma_m=(x-gamma_m)^2/(2x-R)>0 (m>=1).
+
+Uniformly for 0<=n<=2r,
+
+    16^n*|Y-pi| < (2^(2m+17)+2^(m+8))*(729/1024)^r
+                   +(2^15+64)*(64/81)^r ->0.
+
+Thus Y recovers the full window while halving gamma_m's field-degree upper
+bound. The additional theta inputs give Y-pi~64*pi^3*r^2*exp(-2*pi*r),
+positive eventually, not an asserted all-m sign. Relative to gamma_m its
+error is larger by ~4*pi*r, costing m/4+O(1) indices at a common tolerance.
+
+Here h is absolute logarithmic Weil height. The respective bounds are
+h(X)<=(37m+34)log2 and h(Y)<=(13m+7)log2, with degree at most 2^(m-1).
+Minimal-polynomial coefficient bounds retain an additional degree factor.
+Writing Nstar=2SL^2-M(L+3S), Dstar=2S(SL-M), the integral residual
+J=Q Nstar-2^m p Dstar gives, for integer p, |p|<=4Q, **only if J!=0**,
+
+    |QY-p| >= 1/[2^(7m+3)*(Q*2^(7m+6))^(2^(m-1)-1)].
+
+Y_1=63/20 shows why irrationality and the old denominator/unit contract
+cannot be inherited. The direct norm cost remains quadratic when n~2^m.
+No iteration of further corrections or optimality claim is made here.
+
+### Selected-root signs do not yet yield a positive visit count
+
+K_m has exactly two real embeddings. Inductively, only the real embedding
+with positive last radical extends to real embeddings at the next level;
+it has exactly two extensions. They exchange U_m,D_m and agree on S_m.
+All nonreal pairs contribute positive squared moduli to the norm of a
+nonzero rational-grid residual. This concerns field embeddings, not the
+number of real roots of a ratio's norm polynomial.
+
+Put beta_m=D_m/(2^(m+1)S_m)<1. For m>=1, n>=2^m, rational p and Q=16^n,
+
+    sign Norm((Q/2^(m+1))U_m-pS_m)
+      =sign[(Q alpha_m-p)(Q beta_m-p)].
+
+For p>Q beta_m this is sign(p-Q alpha_m). The norm is an integer when p
+is an integer. Opposite signs occur at the synthetic landmarks 3Q+1 and
+4Q+1, despite their norms sharing the full residue Norm(S_m) modulo
+2^(4n-m-1). This excludes selecting the sign from that congruence alone.
+
+For I=(A/B,C/B), B=16^k, integer 0<=A<C<=B, define
+
+    H^E_(m,n)(p)=Norm((QB/2^(m+1))U_m-(Bp+E)S_m).
+
+The exact interval indicator is
+
+    1_{fract(Q alpha_m) in I}
+      =(1/2) sum_(p=3Q,...,4Q-1)[sign H^C_(m,n)(p)-sign H^A_(m,n)(p)].
+
+There is at most one nonzero summand; irrationality excludes endpoints.
+For every such nonempty inner interval, positivity of the sum of these
+indicators over 2^m<=n<2^(m+1) for arbitrarily large m would suffice for V.
+Uniform approximation, an interior margin and the vanishing BBP tail preserve
+every threshold and recurrence index n+1. **That sign-count lower bound is
+unproved.** Positive normalized interval mass, previously called AGM-W, is
+stronger than necessary; the displayed consumer needs only a visit.
+
+The relative-norm recurrence retains U,D,S jointly:
+
+    Norm_(K_m/Q)(U_m-zS_m)
+      =Norm_(K_(m-1)/Q)((2S-D)^2 z^2-(2S-D)(4U-2D)z+D^2).
+
+At fixed m, the digit-polynomial update
+P_(n+1,16p+e)(z)=16^[K_m:Q] P_(n,p)((e+z)/16), where
+P_(n,p)(z)=Norm((16^n/2^(m+1))U_m-(p+z)S_m), holds for every synthetic
+digit e. Integrality of its coefficients does not select the actual word;
+the real-root inequalities still do that work.
+
+A finite-window stress test preserves the entire U/D tower. For L>=1,
+delta=2^L k D_0^j, j>=0, k>=1, change S_0 to 1+delta. Then
+S'_m=S_m+2^m delta remains integral and a unit at 2; for m>=1 its norm
+is a positive odd square. The norm polynomials have constant term one and
+agree with the originals modulo 2^(m+L). Nevertheless, for each sufficiently
+large M and each word of length r=2^M, some 0<delta<epsilon<=1/128 places
+that word in positions r+1,...,2r of alpha'_M. The grids of allowed delta
+become dense, and their image under alpha'_M=alpha_M/(1+delta/(4s_M)) has
+uniform positive length, hence contains a cylinder for the prescribed word.
+
+This is **a different seed for each finite window**, not a fixed nondense
+model. Exact S_0=1, its initial norm-one value and identification with pi are
+lost. The original conjugate bounds can also fail: delta's other K_0 value
+is delta*=2^L k U_0^j, with delta times delta*=2^(2L)k^2. Thus deep local agreement
+can cost large archimedean size. The test does not refute the missing estimate
+for the original seed and its conjugate bounds.
+
+The [review record](agy-reports/m4-continuation-review.md#agm-approximations-and-selected-root-signs--2026-11-27-utc)
+owns exact packets, corrections, checks and source limitations. Further
+approximation acceleration is suspended without a visitation consumer. The
+remaining question is whether exact initialization and its original conjugate
+bounds impose a joint sign restriction across scales; the tested identities
+do not provide one. Fresh discovery continues under the meta-plan.

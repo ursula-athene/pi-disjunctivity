@@ -4779,3 +4779,84 @@ explicit circle sums and differences, passed focused review at
 18:39:34--18:39:44 UTC. Exact scope and complete captures are retained in
 `/tmp/pi-m4-inverse-integration-review-20261127/`. Documentation (93),
 process tests (38), whitespace and preservation checks passed; no Lean changed.
+
+The inverse-assessment checkpoint is local commit
+`116f072de39aa7c291749e6f9b8bc2bfb053705b`, parent `ff5a5dbc`.
+Post-commit scope/blob/necessity inspection passed at 18:43:27 UTC, with
+empty index, clean task-owned tree and all 28 preservation hashes matched.
+The branch was nineteen ahead; no push or PR.
+
+The AGM discovery completed at 18:40:21 UTC within its 18:44:16 bound.
+Its immutable final packet uses `agm-` filenames in
+`/tmp/pi-m4-fresh-mechanism-reset-20261127/`. The assigned directory had
+contained a historical Gaussian packet; two overwritten scratch files were
+recovered exactly, and all seven original manifest hashes independently
+matched after restoration. Old evidence is excluded from the AGM packet.
+No repository file was affected by that collision. Future scratch ownership
+must use a verified new path, not assume a date-based name is unused.
+
+Parent source/arithmetic verification ran 18:37:33--18:44:37 UTC within ten
+minutes. The unchanged checker replay matched 773 finite exact checks with
+empty stderr and the final inventory preserved. An immutable correction
+makes the initial D/U ratio comparison non-strict at m=1; its final strict
+bound and trace conclusions are unchanged. Independent paper/source review
+by `/root/agm_unit_review` began at 18:45:54 UTC, with a ten-minute bound.
+No new Lean or visitation estimate is claimed; production integration awaits
+that review. The compensated-double-trace follow-up uses a separate verified
+new scratch directory and remains excluded from adoption.
+
+The first AGM paper review completed at 18:49:48 UTC within its bound.
+One earlier ratio defect was verified corrected; one residual-domain
+clarification was implemented. Actual window visits and the full analytic
+source audit remain open. A broader restoration check at 19:10:46 verified
+all 28 scratch hashes from the historical integration inventory; its sole
+nonmatching evidence entry was a production document changed by subsequent
+reviewed work. No additional scratch loss was found in those inventories.
+
+The compensated-F inquiry ran 18:46:07--18:57:24 UTC within fifteen minutes,
+reassessed at 18:53:15. Parent verification completed at 19:04:51 within its
+eight-minute bound; unchanged replay passed 132 exact checks with eleven
+originals preserved. Independent paper review ran 19:05:10--19:08:10 within
+eight minutes: no new defect or improvement, with interval placement and
+source dependencies retained open. The smaller-field correction improves
+precision by a polynomial factor but loses the former full window.
+
+The exact-relative-norm Newton inquiry ran 18:59:02--19:07:40 UTC within
+twelve minutes, reassessed at 19:04:02. It repairs that window loss, reduces
+the ambient degree and has an explicit O(m) absolute Weil-height bound.
+Parent verification began 19:10:27 with an eight-minute bound; unchanged
+replay at 19:10:46 passed 200 checks and preserved seven originals. Independent
+review ran 19:10:16--19:13:24 within the assigned 19:20:00 deadline; no defect
+or improvement. Nonzero norm residuals, source limits and interval placement
+remain explicit. No further approximation iteration was authorized by this
+worker scope or adopted as the next research direction.
+
+The selected-root inquiry ran 18:56:53--19:12:10 UTC within twenty minutes,
+reassessed at 19:05:49. It proves at paper level that the tower has two real
+embeddings and gives an exact norm-sign interval count. Its coefficient
+recursions hold for arbitrary candidate words; the needed positive count is
+unproved. The algebraic seed perturbation realizes arbitrary individual
+finite windows while losing exact initialization and possibly conjugate
+bounds; no fixed nondense model is obtained. Parent replay at 19:15:19 passed
+143 exact checks and preserved seven originals. Independent review ran
+19:13:12--19:16:22 within ten minutes, with no new defect or improvement and
+the sign-count/source obligations retained open. The
+[mathematical owner](m4-approximation-interfaces.md#agm-units-smaller-fields-and-the-missing-interval-estimate)
+and [review evidence](agy-reports/m4-continuation-review.md#agm-approximations-and-selected-root-signs--2026-11-27-utc)
+retain the exact distinctions; changed-file integration review is pending.
+
+Fresh discovery continues in `/tmp/pi-m4-post-agm-discovery-20261127-1914/`,
+with a twenty-minute bound from the worker's first clock and reassessment
+within ten minutes. It seeks a different implication from actual permanent
+avoidance, retaining initialized BBP structure lost by existing models.
+Approximation acceleration without a visitation consumer is suspended.
+V/M4 and even infinitely many odd actual carries remain open.
+
+AGM full integration review ran 19:21:52--19:26:20 UTC within twelve
+minutes, reassessed at 19:25:54. No new defect or improvement; the earlier
+ratio correction and residual domains were verified in production. Actual
+sign counts, conditional nonzero residuals and source-audit limits remain
+explicit. The exact four-path diff and all 81 bound files matched; all 28
+protected/unrelated hashes matched. Documentation (93), process tests (38)
+and whitespace checks passed. No Lean changed. Complete evidence is in
+`/tmp/pi-m4-agm-integration-review-20261127-1922/`.
