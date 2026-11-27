@@ -1248,3 +1248,145 @@ domain clarification. The source proof dependencies were not fully audited;
 no source application to BBP, Lean declaration or new visitation premise is
 claimed. This source consumer is suspended until a new arithmetic implication
 from actual avoidance is supplied.
+
+## Period division does not create a common hole
+
+For every alpha>0, odd integer p>1 and thresholds N,H, the set
+`{16^n*alpha/p^h : n>=N, h>=H}` is dense in the positive reals.
+Unique factorization makes log16/logp irrational; irrational rotation
+approximates the required logarithmic fractional part with arbitrarily large
+n, and the corresponding integer h tends to infinity. Thus avoidance by
+alpha cannot propagate to its entire division family. This assertion alone
+does not exclude every possible infinite subfamily.
+
+The separate rational fixture alpha=1,p=17 is stronger in that direction.
+Since v_17(16^2-1)=1, the order modulo 17^h is 2*17^(h-1). Its orbit is
+exactly the residues congruent to +1 or -1 modulo 17, with maximum circular
+gap 15/17^h. Every fixed unit-interval target wider than this gap is visited
+infinitely often, although alpha itself has constant zero fractional orbit.
+No infinite unbounded-depth subfamily inherits a fixed positive-width hole
+in this fixture. It loses the actual pi period, forcing and initialization;
+it proves nothing about pi/17^h. The previously inspected Cantor theorem
+also retains rational slope: its irrational-slope extension is conjectural
+in that source. A pi-specific common-hole construction remains missing.
+
+## Definable point counting does not exclude the actual samples
+
+[Pila--Wilkie, Theorems 1.8--1.9, printed p.5](https://people.maths.ox.ac.uk/pila/PilaWilkie.pdf),
+bound rational points of height at most H in the transcendental part of a
+fixed o-minimal definable set by C*H^epsilon for every epsilon>0. The family
+version requires one fixed definable family. Definitions 1.3 and 1.5 use
+maximum reduced coordinate height and remove every connected
+positive-dimensional semialgebraic subset, allowing real parameters.
+
+Retain the [paper denominator estimate](m4-prime-compression.md#the-evaluated-denominator-exponent)
+log q_n=6n+o(n), with its fixed-progression PNT input. Since
+S_n/16^n tends to pi, the reduced numerator of S_n has logarithm
+(6+log16)n+o(n). Subtracting its floor preserves its reduced denominator.
+Consequently the numbers of the specified points (n,S_n) and
+(n,fract(S_n)) of height at most H are respectively asymptotic to
+logH/(6+log16) and logH/6. Exponential sandwiches prove this without
+monotonicity of q_n. These counts are compatible with the source bound,
+even if the raw graph's unproved definability and transcendental-part
+conditions are granted. No classification of its other rational points is
+claimed. A forbidden word supplies no additional samples on that same graph.
+
+A complete comparison is the graph y=16^x for x>=0. Its rational points are
+(k/4,2^k), k>=0, by prime valuations. Their heights are 2^k except for
+H(1/4,2)=4; the count is floor(log2 H)+1 for H>=4 and one below 4.
+The graph is definable in R_exp and has no semialgebraic arc: a polynomial
+identity on an interval would extend analytically and contradict exponential
+dominance. Yet its integer samples have fractional part zero. This tests
+the counting implication while losing actual A and pi.
+
+Keeping the actual floor creates a different obstruction. For real x>=0,
+
+```text
+P(t)=(1-t)*(4+4t+4t^2+2t^3+t^4),
+E(x)=integral_0^1 t^(8x+8)*P(t)/(16-t^8) dt,
+G(x)=16^x*pi-E(x),  G(n)=S_n.
+```
+
+Positivity and domination make E continuous and strictly decreasing, so G
+is continuous, strictly increasing and unbounded, with G(0)=47/15. Each
+integer k>=4 has one preimage; these form an infinite discrete set.
+The graph of fract G therefore cannot be definable in any o-minimal
+expansion. The lift `G(x)=m+u`, with integer m and 0<=u<1, fails for the
+same reason. If m is instead unrestricted real, every point lies in a
+positive-dimensional semialgebraic segment at fixed x, including points
+with u=0. The relaxed lift has empty transcendental part. Restricting the
+index to integers is not a definable repair; varying digit constraints
+has not supplied one fixed definable family either.
+
+The [review record](agy-reports/m4-continuation-review.md#period-division-and-point-counting--2026-11-27-utc)
+retains exact artifacts, parent replay and independent criticism. Source
+pages 2--5 were visually inspected; the full proof, o-minimality and PNT
+dependencies were not audited. The source contract is not a Lean export.
+These are limits of direct applications, not a general impossibility result.
+A new history-dependent witness construction or a stronger applicable bound
+is still needed. V/M4 and actual odd-carry infinitude remain open.
+
+## Symbolic pumping produces the wrong arithmetic witnesses
+
+Assume V fails. An interior margin and E_n->0 give a missing ordinary
+hexadecimal word after a fixed prefix of pi. Irrationality makes the
+resulting path in the finite word-avoidance graph non-eventually periodic.
+These are ordinary digits, not the forced carries. At a state visited
+infinitely often, two nonempty return words v,w must have different infinite
+periodic repetitions; otherwise all successive return words are powers of
+one primitive word and the path is eventually periodic. Thus (v^k w)^infinity
+is legal for every k>=1. Both loops occur, excluding all-zero and all-15
+periods; the corresponding rational phase lies strictly between zero and one.
+
+Put ell=|v|, m=|w|, V=value(v), W=value(w), B=16^ell and C=16^m. Then
+
+```text
+D_k=C*B^k-1,  U_k=C*V*(B^k-1)/(B-1)+W,
+Delta=(C-1)*V-(B-1)*W != 0,
+(B-1)*U_k=V*D_k-Delta,
+r_k=U_k/D_k=V/(B-1)-Delta/[(B-1)*D_k].
+```
+
+The r_k are distinct and gcd(U_k,D_k) divides |Delta|, so their reduced
+denominators grow at least as D_k/|Delta|. For a fixed odd prime p and
+t_p=ord_p(16), elementary lifting gives zero valuation when t_p does not
+divide L=k*ell+m, and otherwise
+`v_p(16^L-1)=v_p(16^t_p-1)+v_p(L/t_p)`. The part supported on any fixed
+finite prime set P is at most C_P*L^|P|. Hence every sufficiently late
+denominator has a prime outside P. This uses the repunit denominator;
+it is not a bound for general c*B^k+d. If Delta=0 the family is constant
+and this conclusion is unavailable.
+
+The first consumer failure occurs before prime support. Making the pure
+phase of X_n=S_n+16^(n+1)delta at a fixed index M equal r_k modulo an
+integer z requires `delta=(16^(-M)*(r_k+z)-pi)/16`, which is irrational.
+Periodic rational phases are not rational seeds around the actual history.
+Support escape is a separate obstruction to applying the Cantor theorem
+directly with zero translation.
+
+Finite edits preserving the actual tail have another outcome. Infinitely
+many adjacent return-word pairs fail to commute, since eventual commutation
+would propagate one common periodic word. Swapping such a pair preserves
+legality, length, prefix and subsequent tail. A block-value change U to W
+after P digits over h positions gives
+`eta=(W-U)/16^(P+h)` and seed delta=eta/16. These nonzero dyadic changes
+tend to zero, giving infinitely many distinct bounded seeds. The shared
+missing cylinder and one tail margin give one common raw hole and threshold,
+conditional on the original V failure. Each edited canonical history rejoins
+the original after its finite edit; exact zero initialization is lost.
+
+Their reduced powers-of-two denominators are unbounded: bounded denominators
+would leave only finitely many values in a bounded interval. For any fixed
+rational r and odd p, the family rD_p has a bounded power of two in its
+denominators. Thus no single fixed slope r accommodates this infinite edit
+family. This does not exclude an individual dyadic seed from every rD_p.
+Unequal-length edits instead send the fractional part alpha to
+16^(h-h')*alpha+q, q rational, giving an irrational difference when h!=h'.
+For full period I+alpha the rational term becomes q+I*(1-16^(h-h'));
+the classification is unchanged.
+
+The [review record](agy-reports/m4-continuation-review.md#symbolic-pumping-and-seed-domains--2026-11-27-utc)
+retains the exact synthetic checks, domain clarification and independent
+criticism. A suitable infinite admissible edit with rational total change
+and fixed odd support remains unconstructed. No source dependency was newly
+audited, no Lean result was added, and V/M4 remain open.

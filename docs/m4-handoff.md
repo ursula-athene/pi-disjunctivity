@@ -12,16 +12,24 @@ and [persistence protocol](meta-proof-plan.md#persistence-and-stopping-condition
 Use Codex subagents for required reviews; Carbon remains stopped. M5, push,
 PR, new dependencies, installations and permission changes are not authorized.
 
-Read the [column unit and window test](m4-fourier-windows.md#the-unit-test-succeeds-but-the-available-orbit-pieces-stay-short)
-and [coherent profile test](m4-generating-functions.md#coherent-seeds-can-preserve-every-forward-denominator),
+Read the [fixed finite column proof](m4-fourier-windows.md#every-fixed-finite-column-sum-is-normal),
 then the end of the [research log](research-log.md) and the actual checkout.
-The 17-adic unit test succeeds but has no joint unscaled visit estimate;
-coherent changed seeds can retain every forward denominator. A
+Every fixed actual T_M, M>=6, is now 16-normal at paper level. Global unit
+survival and sparse late insertions supply a joint discrepancy bound; real
+tail control and rational-affine invariance give unscaled normality. No Lean
+proof or full classical source-dependency audit is claimed. The bound fails
+to provide visits in the growing-M approximation window; that joint early
+unscaled estimate remains open. The [coherent profile test](m4-generating-functions.md#coherent-seeds-can-preserve-every-forward-denominator)
+also retains every forward denominator for certain changed seeds. A
 [common-hole finiteness theorem](m4-generating-functions.md#fixed-odd-prime-support-limits-a-common-hole-family)
-would need an infinite bounded fixed-support seed family that actual avoidance has
-not supplied. Fresh discovery seeks a different implication from the exact
-period or initialized history. Further approximation or profile refinement
-requires a real-visitation consumer. The log owns bounds and outcomes;
+would need an infinite bounded seed family in one fixed rationally scaled odd
+localization that actual avoidance has not supplied. [Symbolic pumping](m4-generating-functions.md#symbolic-pumping-produces-the-wrong-arithmetic-witnesses)
+gives rational phases requiring irrational BBP seeds; finite tail-preserving
+edits give an infinite dyadic family not contained in any single fixed
+rationally scaled odd localization. [Point counting](m4-generating-functions.md#definable-point-counting-does-not-exclude-the-actual-samples)
+also leaves a precise height/domain gap. Fresh research tests the exact
+connections between short orbit pieces. Further approximation or profile
+refinement requires a real-visitation consumer. The log owns bounds and outcomes;
 this entry is not a second live status ledger.
 
 For the immediate failure record, follow the relevant mathematical owner:
@@ -31,7 +39,8 @@ For the immediate failure record, follow the relevant mathematical owner:
 - [Generating functions](m4-generating-functions.md): natural boundaries,
   interpolation limits, finite-word entry freedom, and the absence of a
   parity-to-continuation implication; full forward profiles do not select zero,
-  and the common-hole theorem lacks the required bounded seed family.
+  and symbolic edits do not supply the required bounded seed family in a fixed
+  rationally scaled odd localization.
 - [Two-adic reflection](m4-two-adic-reflection.md): the exact raw graph and
   zero anchor have not supplied a real-cell visitation estimate.
 - [Language auxiliaries](m4-language-auxiliaries.md) and
@@ -40,8 +49,9 @@ For the immediate failure record, follow the relevant mathematical owner:
 - [Prime compression](m4-prime-compression.md): the real matching estimate
   needed by the qualitative density theorem remains unproved.
 - [Arithmetic windows](m4-fourier-windows.md): normal prime-power columns
-  can cancel; exact unit survival leaves bounded orbit pieces and an uncontrolled
-  inverse branch. Newer fixed-prime source methods retain the transfer gap.
+  can cancel in general, but actual joint unit survival proves fixed finite
+  T_M normality. Bounded early orbit pieces and a growing inverse multiplier
+  still obstruct the supplied estimates at the scale needed for pi.
 - [Transforms and periods](m4-transforms-and-periods.md): disk dissection
   cancels pi; fixed-frequency asymptotics do not control the remaining tail.
 - [Approximation interfaces](m4-approximation-interfaces.md): AGM unit norms,

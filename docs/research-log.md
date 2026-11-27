@@ -5000,3 +5000,106 @@ serialization clarification remains verified. Exact initial scope, repair,
 hashes matched. Documentation (93), process tests (38), and whitespace passed,
 with affected documentation/whitespace rerun after repair. No Lean changed.
 All visit, branch, bounded-family and uniformity obligations remain open.
+
+## M4 continuation: period division and point counting — 2026-11-27 UTC
+
+The column-unit/profile checkpoint is local commit
+`3f354d516832eb5970402696a61607cd193bb5c5`. Post-commit scope and blob checks
+passed, with empty index, clean owned paths and all 17 protected plus 11
+unrelated hashes preserved. The branch was three ahead of upstream
+`116f072de39aa7c291749e6f9b8bc2bfb053705b` at inspection. This run made no
+push or PR. The checkpoint does not complete M4.
+
+Fresh discovery ran 20:12:20--20:28:41 UTC with a 20:32:20 deadline and
+20:21:40 reassessment. [Period division and point counting](m4-generating-functions.md#period-division-does-not-create-a-common-hole)
+supplied two scoped negative discriminators. Division does not propagate
+avoidance to a suitable common-hole family. The actual rational BBP samples
+have only logarithmic density in arithmetic height, compatible with the
+Pila--Wilkie bound; retaining the fractional graph violates o-minimality,
+while freeing the integer coordinate removes the transcendental remainder.
+No positive visitation mechanism survived. A finite fixture initially missed
+H(1/4,2)=4; the repaired result and failure are retained.
+
+Parent assessment ran 20:36:33--20:37:55 within nine minutes. The unchanged
+checker passed 257,126 exact tests with identical stdout and empty stderr;
+all nine worker artifacts and thirteen inputs matched. Parent and separate
+reviewer visually inspected original source pages 2--5. Paper review ran
+20:38:15--20:42:49 within ten minutes, reassessing at 20:41:58: no defect or
+actionable improvement; witness construction, raw-graph applicability and
+pi-specific division propagation remain open. Full evidence/dispositions are
+in the [review record](agy-reports/m4-continuation-review.md#period-division-and-point-counting--2026-11-27-utc).
+No source proof or new Lean result is certified by these checks.
+
+The next fresh-context pass seeks genuinely new arithmetic witnesses from
+actual word avoidance, with a 22-minute bound from its first clock. A distinct
+18-minute inquiry tests fixed-cutoff normality using the newly proved unit
+property and sparse late insertions. This can remove a limited conditional
+rung only; uniform visits before the approximation cutoff remain necessary.
+Unfinished worker claims are excluded from adoption. Research continues.
+
+## M4 continuation: fixed finite column normality — 2026-11-27 UTC
+
+A distinct 18-minute inquiry ran 20:39:33--20:52:37 UTC, reassessing at
+20:47:49 before its midpoint. The [fixed finite column argument](m4-fourier-windows.md#every-fixed-finite-column-sum-is-normal)
+now proves on paper that every fixed actual T_M, M>=6, is 16-normal.
+Global unit survival gives at most s_M homogeneous pieces per conductor
+level; their weighted discrepancy costs sum geometrically. The resulting
+bound tends to zero for fixed M. Real tail control and rational-affine
+normality preservation transfer it to the actual finite signed sum without
+assuming normality is additive. No new Lean theorem is claimed.
+
+Parent read/reconstructed the proof and source displays, then replayed the
+103,494 exact structural checks unchanged: exit zero, identical stdout,
+empty stderr, all 18 worker artifacts preserved. Parent assessment completed
+20:54:20 within its nine-minute bound starting 20:53:46. Independent paper
+review ran 20:54:42--21:00:57 within twelve minutes, reassessing at 21:00:02;
+no defect or corrective improvement. The [review record](agy-reports/m4-continuation-review.md#fixed-finite-column-normality--2026-11-27-utc)
+retains every source/evidence limit and the two open questions.
+
+This closes a limited paper rung, not V. The same estimate grows when the
+cutoff and averaging horizon are comparable, while the guaranteed pi-transfer
+window has that scale. Uniform early unscaled visits and inverse-branch
+control remain missing. Fresh-context research now tests the exact connections
+between short pieces rather than summing their errors independently, with a
+20-minute bound from its first clock. Unfinished results remain excluded from
+adoption; M4 and odd-carry infinitude remain open.
+
+## M4 continuation: symbolic witness domains — 2026-11-27 UTC
+
+Fresh-context discovery ran 20:35:42--20:51:09 UTC within 22 minutes,
+reassessing at 20:46:15. It dropped fixed-window algebraic amplification as
+already covered, then [tested symbolic pumping and finite tail edits](m4-generating-functions.md#symbolic-pumping-produces-the-wrong-arithmetic-witnesses).
+A hypothetical nonperiodic missing-word path does produce new rational
+periodic phases, but realizing them as BBP seeds requires irrational values.
+Their repunit denominators also escape every fixed finite prime set. Finite
+legal swaps retaining the actual tail instead produce infinitely many bounded
+dyadic seeds with a common hole, conditional on V failure. Their unbounded
+powers-of-two denominators defeat every single fixed rationally scaled odd
+localization. No infinite admissible edit with the required arithmetic was
+constructed; no positive V mechanism survived.
+
+Parent replay at 20:53:00 passed 9,268 exact synthetic checks unchanged.
+Assessment completed 20:57:23 within nine minutes. One fractional-prefix
+versus full-period domain ambiguity was clarified in a separate immutable
+addendum, preserving the original report and checker. Independent review ran
+20:57:43--21:02:44 within ten minutes, reassessing at 21:01:50: earlier
+all-15/coset defects and the domain repair verified; one fixed-slope family
+clarification implemented, awaiting integration review. The [full dispositions](agy-reports/m4-continuation-review.md#symbolic-pumping-and-seed-domains--2026-11-27-utc)
+retain the distinction between same-session criticism and independent review.
+No actual pi phases or new Lean declarations were computed. The missing
+infinite-edit construction, V/M4 and odd-carry infinitude remain open.
+
+## M4 continuation: finite-normality integration review — 2026-11-27 UTC
+
+The exact five-path integration received complete independent Codex review
+21:07:58--21:15:36 UTC, reassessing at 21:12:15 within twelve minutes.
+No new blocking defect was found. The pumping family clarification was
+verified; one handoff clarification made the fixed odd support and family
+quantifier explicit. Focused review 21:18:26--21:18:58 within six minutes
+verified that repair with no new findings. All original mathematical
+questions remain open. The [complete dispositions](agy-reports/m4-continuation-review.md#finite-normality-witnesses-and-point-count-integration--2026-11-27-utc)
+retain immutable captures, manifests, preserved inputs and evidence limits.
+Documentation (93) and whitespace passed after the repair; process (38)
+remains the earlier unchanged-code result. No Lean or dependency changed.
+The user-requested provenance search and separate joint-branch investigation
+are excluded from this review. These internal checkpoints do not accept M4.

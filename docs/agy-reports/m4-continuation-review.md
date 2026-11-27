@@ -3649,3 +3649,185 @@ and fixed one summary quantifier defect, implemented one domain clarification,
 and verified the prior source-serialization improvement. Q1--Q3 remain open
 and block V/M4, not this limited documentation checkpoint. Only factual outcome
 records follow the reviewed repair; no new mathematical claim is added.
+
+## Period division and point counting — 2026-11-27 UTC
+
+Separate Codex reviewer `/root/finite_log_independent_review` examined the
+immutable paper packet at
+`/tmp/pi-m4-post-profile-reset-20261127T201220Z/`: report SHA-256
+`b1fd31c7311eda76fe66af32444651d7558843bb972969195046d21f3b23b90a`,
+manifest `b770f7d44c3f22e34a2314a73a437da5d23bb31906999dec40c84b5b31272dc6`.
+Parent packet `/tmp/pi-m4-point-count-parent-20261127-2037/` contains assessment
+`02789cba96a6564663f7c9711e55ba80508624c7ad4ef15128ed90a4453544e5`,
+13-entry manifest `f653f465d80f09be2fcf5410031ab8873b9199406fccc796f292be0f14331675`
+and complete return `review-full.txt`, SHA-256
+`727511a576174e18020b1fae66fd203c5ef3672966f6ad84d73772a00d111b23`.
+The exact scope is the division-family discriminator, actual sample heights,
+Pila--Wilkie source contract, complete exponential fixture and floor/lift
+obstructions. No production integration or Lean theorem was reviewed here.
+
+Review ran 20:38:15--20:42:49 UTC within ten minutes, reassessing at 20:41:58.
+Both adversarial guides were read in full, with unchanged SHA-256 identities
+`798c3cc974c5296453f510ea9264aa8b5d17c813c8dc217a430de9b68b7d667c`
+and `c4a04d75a297c6ec361d31ab11e465e3c3e74a6c89eb590bddb03d95c243ad3b`.
+The replacement procedure, critic and source-contract skills applied. Review
+was read-only: no checker, build, extraction, rendering, network or mutation.
+
+**D: none. I: none requiring action.** The repaired fixture exception
+H(1/4,2)=4 and initial failed check remain recorded. **Q1: retained open:**
+actual avoidance supplies no additional witnesses contradicting an applicable
+counting bound. **Q2: retained open:** the raw BBP graph's definability and
+transcendental-part conditions remain unproved; granting them does not repair
+Q1. **Q3: retained open:** no pi-specific common-hole division subfamily is
+constructed, and the Cantor theorem's irrational-slope extension is not adopted.
+All three block a visitation conclusion, not these scoped negative assessments.
+
+The reviewer reconstructed the universal paper arguments and independently
+inspected original Pila--Wilkie pages 2--5, including the R_exp example.
+Source PDF SHA-256 is
+`f00e482c9abce4bb9c2af51a79f5595d360fcd308fb9a261c13fcde5690c70ce`.
+All eight worker artifacts plus manifest, 13 input hashes and 13 parent entries
+matched. Parent unchanged replay exited zero, byte-identical to the original
+257,126-check receipt with empty stderr. Checks exercise finite synthetic
+arithmetic, not universal density, height asymptotics or o-minimality. The
+complete source proof/dependencies, o-minimality proof and PNT source were not
+independently audited. No actual phase/carry census was performed. V/M4 and
+odd-carry infinitude remain open; production integration review follows.
+
+## Fixed finite column normality — 2026-11-27 UTC
+
+Reviewer `/root/finite_log_independent_review` independently reconstructed
+this positive paper claim using both complete adversarial guides and the
+unchanged replacement procedure. Exact worker packet:
+`/tmp/pi-m4-fixed-column-normality-20261127T203933Z/`, report SHA-256
+`d3be3ecd92e6f3ea4009a5ef366bcefabeb5a5a0660abe956acf9597abab0998`,
+manifest `818c4da118e9b6ed4d02a4c25174937b9b69e4578bb31243c8218360708ff33d`.
+Parent packet `/tmp/pi-m4-fixed-normality-parent-20261127-2055/` contains
+assessment `6bb27fe2193055f0326425278c02f2f415687ab1fec46ca3b49558b298c193fe`,
+five-entry manifest `1e73cb4b85fc46a40bc5f1da5720dfb44ba09b2782bd9b97bca6eea2ad8c65c9`,
+and complete `review-full.txt`, SHA-256
+`30c21ae9ed5a7274b41c92e58972bdb835cd9ec8b900e6d1a4bd431680b95295`.
+Review ran 20:54:42--21:00:57 UTC within twelve minutes, with reassessment
+at 21:00:02. Baseline HEAD remained `3f354d516832eb5970402696a61607cd193bb5c5`.
+
+**D: none. I: none requiring correction.** Parent's elementary
+s_M>=ceil(M/136) refinement was verified. **Q1: retained open:** every target
+and starting threshold still needs a suitable growing M with an actual
+unscaled visit before the sufficient approximation endpoint, absorbing both
+errors. **Q2: retained open:** the qualitative fixed-number rational-affine
+step supplies no uniform finite-window inverse-branch estimate. Neither
+question blocks the limited fixed-M paper result; both block transfer to V.
+
+Verified scope includes global unit survival, exact level/kick counting,
+source domain and explicit constants, weighted level summation, real and
+summable tails, circular endpoint treatment and qualitative unscaled transfer.
+The reviewer independently inspected Bailey--Crandall printed pages
+529,530,533,534. All 17 worker files plus manifest, five parent entries and
+ten source-provenance originals matched. Parent unchanged replay exited zero,
+empty stderr, byte-identical 103,494-check output. The checks are finite
+structural fixtures, not an infinite proof or actual phase census.
+
+Guide hashes remain the two full identities recorded immediately above.
+Critic/source-contract skills applied. The reviewer ran no checker, probe,
+build, extraction, rendering, service call or mutation. The classical source
+proof chains were not fully audited. No kernel proof, production integration
+or V/M4 acceptance is certified. Every fixed M>=6 actual T_M is normal at
+paper level; growing-M visits and actual odd-carry infinitude remain open.
+
+## Symbolic pumping and seed domains — 2026-11-27 UTC
+
+Separate reviewer `/root/post_profile_mechanism_reset` assessed another
+worker's packet under the read-only replacement procedure and both complete
+adversarial guides, with the unchanged full hashes recorded above. Scope:
+`/tmp/pi-m4-new-history-witness-20261127T203542Z/`, report SHA-256
+`2a3423a5c1fc58e85e63cbbe288b8119b8b016a477d41a2dc2fd05b2ee44265a`,
+original manifest `a752712d0a89bc3560aad4b42954cd6bea1a750ff6243e3c4e8a4f949d846593`,
+separate clarification `7a2f11c34a7967eb742f9c017e5f5b1c70457e61a2078b40dd08b06b8484775e`.
+Original frozen files were preserved. Parent packet
+`/tmp/pi-m4-pumping-parent-20261127-2053/` contains assessment
+`a36844d8d4850efbbc1079a765fbac30d8b885ca9574e2ca0fe4c842a2c20088`,
+five-entry manifest `27db12880b07f229f8931e6b6d5727dc21cdd6de804b02ea2f0ea37c34919ae0`,
+and complete `review-full.txt`, SHA-256
+`c8e3eae4fe9813706b79557042f38da1a98e4e2ff81a63bb4fa40eb66fa071d0`.
+
+Review ran 20:57:43--21:02:44 UTC within ten minutes, reassessing at 21:01:50.
+**D: none remaining. Earlier same-session D1: verified resolved** by k>=1
+for canonical periodic phases, excluding the all-15 endpoint.
+**Earlier D2: verified resolved:** rational phases require irrational BBP
+seeds before considering prime support. **Parent domain repair: verified:**
+the fractional-prefix splice formula needs q+I(1-a) for the full period.
+Equal-length dyadic and unequal-length irrational differences are unchanged.
+
+**Independent I1: implemented in production, integration recheck pending.**
+Nonzero dyadic seeds tending to zero have unbounded reduced powers-of-two
+denominators. Every single fixed rational slope r with odd p allows only a
+bounded power of two in rD_p denominators. Thus no fixed r accommodates the
+infinite family; an individual dyadic seed can belong to a suitable rD_p.
+This clarifies the family conclusion without a new execution test. The
+separate earlier same-session I1, deferring peripheral formalization, remains
+accepted. **Q1: retained open:** no infinite admissible-edit mechanism creates
+the needed fixed-odd-support family coupled to actual initialization.
+**Q2: unchanged:** V/M4 and odd-carry infinitude remain open.
+
+The reviewer reconstructed the symbolic return-loop argument, bounded gcd
+cancellation, repunit-specific lifting, finite swaps and uniform raw-hole
+threshold. Parent unchanged replay passed 9,268 synthetic checks with identical
+stdout and empty stderr; all six original files and the separate addendum
+were preserved. The checker does not certify the universal arguments. The
+reviewer inspected files, hashes, actual bridge/tail declarations and the
+archived consumer; it ran no checks, writes, extraction, network or delegation.
+No new audit of the Cantor source's external chain or kernel proof is claimed.
+Concurrent production edits were excluded from this paper review.
+
+## Finite normality, witnesses and point-count integration — 2026-11-27 UTC
+
+Reviewer `/root/finite_log_independent_review` read the complete five-path
+integration against `3f354d516832eb5970402696a61607cd193bb5c5`:
+`m4-fourier-windows.md`, `m4-generating-functions.md`, `m4-handoff.md`,
+`research-log.md` and this report. Packet
+`/tmp/pi-m4-finite-normality-integration-20261127-2107/` retains
+`scope.diff`, SHA-256 `8dfc7ae5fe8a6015d0620c5dfc727f25a59aff358e9144ebfe9b272be61a67d5`,
+and 88-entry manifest `a15756a5107f4502c486d624fe6b24b4083fa53709b69db94f3e6fbc07b90f9a`.
+Complete return `review-initial.txt` has SHA-256
+`961c221731651e3260c9d923ab85beef636745fd7f4ebb666ca17563a56d12a9`.
+The review ran 21:07:58--21:15:36 UTC within twelve minutes, reassessing
+at 21:12:15. Both complete guides and the replacement/critic/source procedures
+applied; no execution checks, service calls or writes were performed.
+
+**D: no new blocking defect.** Earlier pumping D1/D2 and the full-period
+clarification remain verified resolved. **Pumping I1: verified implemented.**
+The owner distinguishes a family not contained in any one fixed scaled odd
+localization from individual seeds. **Integration I2: implemented, focused
+recheck pending.** The handoff now makes odd support explicit and uses the
+same family-containment wording; support {2} alone is not the required odd
+support. The separate earlier advice to defer formalization remains accepted.
+All fixed-normality Q1--Q2, point-count Q1--Q3 and pumping Q1--Q2 remain open.
+They block V/M4, not the limited paper results. No new proof dependency is
+silently discharged.
+
+All 88 entries, five baseline snapshots and 28 preservation hashes matched,
+with unchanged HEAD and empty index. Historical source inputs matched the
+specified baseline; legitimate owned-file changes were not mistaken for
+scratch corruption. Three complete paper-review captures and caller replays
+were verified. Documentation (93) and whitespace passed; process (38) passed
+earlier with unchanged code. No Lean changed or was rebuilt. Classical
+source chains and PNT were not fully audited. The fixed-M normality claim is
+paper mathematics, not kernel certification. Fresh joint-early work is
+excluded from this integration. The original frozen diff and all records
+are preserved while the narrow handoff wording receives focused review.
+
+Focused review completed 21:18:26--21:18:58 UTC within six minutes.
+**Integration I2: verified resolved; pumping I1: remains resolved.** No new
+defect, improvement or substantive drift was found. Every original Q remains
+open. The reviewer verified all 98 current entries, all 88 original entries
+through the five before-fix snapshots, the reconstructed repair delta, live
+five-path diff, five baselines, 28 preservation hashes, unchanged HEAD and
+empty index. Complete return `review-focused.txt` in the integration packet
+has SHA-256 `e9c007252766491b11bc4a77f617697e16001027726ccd562f9d4e955019d537`.
+The repair diff is `88f865faf67529df14fb0349da4df93fd4c69fcbcef441f35160b0a9f5f38538`,
+revised diff `31e6eab6011f040c73ad2c5e8454c1c538168b3d595f457e504f4fe1d37bff72`,
+and 98-entry manifest `bb9c383b46ecc306efbb737e05bf450b26ddd9814d795af887a54fcdb6eab5d9`.
+The caller's post-fix documentation and whitespace success were inspected;
+no checks were executed by the reviewer. This closes the integration review,
+not V/M4 or the source/kernel evidence limits. Subsequent provenance searches
+and the joint-branch report are outside this frozen mathematical integration.

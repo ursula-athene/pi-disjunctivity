@@ -364,7 +364,9 @@ sampled monotonicity and 245 anchor/order denominator pairs. Those finite
 checks are sanity evidence; the infinite sums and universal inequalities
 above remain paper mathematics. No production Lean declaration changed.
 
-## Normal prime-power columns do not supply a sum estimate
+<a id="normal-prime-power-columns-do-not-supply-a-sum-estimate"></a>
+
+## Normal prime-power columns require a joint estimate
 
 A different use of the same Bailey–Crandall source decomposes the infinite
 BBP series rather than freezing one rational prefix. Put
@@ -436,8 +438,8 @@ n <= L+log_16(15*delta*(8L+1)/128)
 
 This is a sufficient window from an upper bound. It is not necessary or
 optimal, does not lower-bound the signed omitted sum, and does not exclude
-later absolute or modular coincidences. Normality of the finite sum T_M is
-unproved. Even if proved for every fixed M, it would not place a visit before
+later absolute or modular coincidences. The [fixed-M argument below](#every-fixed-finite-column-sum-is-normal)
+now proves normality of T_M at paper level. It does not place a visit before
 this cutoff uniformly as M grows. For V, every target and threshold would
 need such an early visit with an interior margin absorbing both approximation
 error and the actual E_n, retaining the recurrence n+1 versus orbit n offset.
@@ -445,10 +447,10 @@ Individual columns, finite sums, and growing-cutoff visits are distinct claims.
 
 The [review record](agy-reports/m4-continuation-review.md#prime-power-column-source-test--2026-11-27-utc)
 retains the immutable report, source, exact synthetic checks, parent replay
-and independent review. A possible insertion-valuation test has no proved
-real-visitation consumer. Further work on this representation must test a
-joint estimate at n of order M, rather than take a fixed-M limit and silently
-transfer it to pi. V/M4 and the actual odd-carry question remain open.
+and independent review. The insertion-valuation test below supplies a
+fixed-M consumer. Further work toward V still needs a joint unscaled estimate
+at n of order M; the fixed-M limit cannot silently transfer to pi.
+V/M4 and the actual odd-carry question remain open.
 
 ### The unit test succeeds but the available orbit pieces stay short
 
@@ -514,7 +516,100 @@ window; it is not a necessary bound excluding earlier cancellation.
 The [review record](agy-reports/m4-continuation-review.md#column-unit-survival-and-profile-rigidity--2026-11-27-utc)
 retains the full paper proof and checks. Unit survival is now established at
 paper level; the unscaled interval branch and a joint early-visit estimate
-remain open. No fixed-M normality or new Lean theorem is asserted.
+remain open. The following argument uses this unit survival to settle the
+fixed-M paper claim, while leaving the growing-M gap and Lean frontier intact.
+
+### Every fixed finite column sum is normal
+
+For **every fixed integer M>=6**, T_M is 16-normal. This is a paper proof
+using the cited classical results, independently reviewed; no Lean declaration
+or full source-dependency audit is claimed. It treats the actual signed sum
+jointly, without assuming that sums of normal numbers are normal.
+
+Set s_M=|S_M|, z_n=fract(X_(M,n)), and a_K=(17^K-1)/8. The exact conductor
+level I_K={a_K,...,a_(K+1)-1} has 2*17^K indices. A nonintegral scaled
+insertion occurs precisely at e(m,k)=(m*17^k-r(m))/8 with k>=1; only one
+pole can be 17-divisible at any index, so its unit contribution cannot cancel.
+Every level starts with the m=1 kick. Also
+
+```text
+K(e(m,k))=k+floor(log_17 m),  k>=1.
+```
+
+Indeed 8e+6=m*17^k+(6-r(m)), with 0<=6-r(m)<=5<17^k. Each retained
+cofactor therefore contributes at most one kick per level. The level, or its
+final partial prefix, consists of at most s_M homogeneous pieces. Late k=0
+insertions are scaled integers and do not interrupt z. The universal unit
+theorem gives a unit numerator A for each piece's orbit modulo q=17^K.
+
+The Bailey--Crandall pure-orbit estimate on p.534 gives, for every J>=1,
+
+```text
+D_J({16^j*A/q}) <= C*(sqrt(q)/J+1/sqrt(q))*log^2(q).
+```
+
+Constants depend only on bases 16,17. Explicitly, Lemmas 4.3 and 4.5 give
+c_1(q)=17 and ord_q(16)=2q/17. For K>=2, the Erdős--Turán cutoff
+H=floor(sqrt(q)/2) ensures gcd(hA,q)<=h<q/17. Splitting arbitrary lengths
+into full periods and a remainder bounds each exponential sum by
+`(sqrt(q)+(17/2)*J/sqrt(q))*(1+log q)`. The source's Theorem 2.2(9) then
+allows C=52*C_ET, with C_ET an unevaluated absolute constant. There is no
+minimum piece length and no M-dependence in this estimate.
+
+Multiplying by J cancels the 1/J term. Summing at most s_M pieces of total
+length at most 2q costs at most C*(s_M+2)*sqrt(q)*log^2(q) per level.
+Discarding n<36 and summing the geometric levels gives, for every N>=1,
+
+```text
+D_N(z) <= 36/N+C_*(s_M+2)*log^2(8N)/sqrt(N),
+C_*=sqrt(8)*52*C_ET/(1-17^(-1/2)).
+```
+
+This tends to zero for each fixed M. To recover the actual static period,
+absolute convergence gives the real identity
+
+```text
+16^n*D_M*T_M=X_(M,n)+R_(M,n),
+R_(M,n)=D_M*sum_(j>n)16^(n-j)*B_M(j),
+|R_(M,n)|<=8*D_M/[15*(8n+9)] -> 0  (M fixed).
+```
+
+Theorem 2.2(10) transfers equidistribution to the scaled static orbit;
+Theorem 2.2(5) gives normality of D_M*T_M. Apply Theorem 2.2(7) to that
+one fixed number with rational multiplier 1/D_M to obtain normality of T_M.
+This does not divide fractional states or choose an inverse branch.
+The unscaled driven prefixes fract(S_(M,n)) are also equidistributed by
+their vanishing difference R_(M,n)/D_M from the static orbit.
+
+Parameter dependence remains visible. Put W_M^abs=sum_(m in S_M)|c_r|/m,
+which is at most 4*(1+log M). Summing absolute tails in the other order gives
+`sum_n|R_(M,n)|<=L_M^tail=17*D_M*W_M^abs/240`. For
+w_n=fract(16^n*D_M*T_M) and 0<epsilon<1/4, circular interval enlargement,
+shrinkage and the number of exceptional errors give
+
+```text
+D_N(w)<=D_N(z)+2epsilon+L_M^tail/(N*epsilon).
+```
+
+Wrapping arcs are complements of ordinary intervals; endpoint coincidences
+are handled by a limiting margin. For N>8L_M^tail the additional error can
+be 2*sqrt(2L_M^tail/N). This is a scaled estimate; rational-affine preservation
+above supplies only qualitative unscaled normality for each fixed M.
+
+All m=136j+1<=M are included, so ceil(M/136)<=s_M<=M. When N is comparable
+to M, the displayed driven bound's right side grows like sqrt(M)*log^2 M.
+This is a statement about the bound, not a lower bound on true discrepancy.
+The available shadowing window remains M/8+log_16 M+O(1); its short-piece
+and inverse-branch obstructions are unchanged. Fixed-M normality cannot
+interchange the quantifiers to put a visit inside that growing-M window.
+
+The [review record](agy-reports/m4-continuation-review.md#fixed-finite-column-normality--2026-11-27-utc)
+retains the complete proof, source identities and unchanged 103,494-check
+structural replay. Source pages 529,530,533,534 were inspected visually;
+Korobov/Niederreiter, Erdős--Turán and rational-affine preservation were not
+audited through their full proofs. Neither PNT nor the asymptotic for D_M
+is needed for this normality proof. Uniform early unscaled visits, V/M4 and
+infinitely many odd actual carries remain open.
 
 ### Stronger fixed-prime sources retain the transfer gap
 
