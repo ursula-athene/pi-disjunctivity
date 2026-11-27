@@ -1901,3 +1901,58 @@ Documentation (93 files), process tests (38), whitespace and preservation
 checks passed as caller evidence. No Lean build was repeated for these
 documentation-only changes. Subsequent edits record review outcomes only;
 the checkpoint does not accept C_odd, V or M4.
+
+## Descendant costs and relative forcing — 2026-11-27 UTC
+
+Baseline is local commit `974a8f17f0693156f027ade70552356a3b639626`.
+Independent reviewer `/root/m4_strategy_reset` reconstructed the descendant
+packet: envelope divisibility, original source rows, completion-independent
+norm bound, fixed-prime infinite conclusion and full-tail consumer. Full
+response `/tmp/pi-m4-descendant-paper-review-20261127.txt` records **D1:
+resolved before review:** the strict certificate needs a nonzero witness.
+**I1: resolved:** its strict integer bound permits a certificate at most 1.
+The sole follow-up delta is captured in
+`/tmp/pi-m4-descendant-followup-20261127.txt`; corrected report v3 has SHA-256
+`deaec85f92fdfbd3ce6cc5d08fe1973f5793b4009beeb3b69e5424c7eaadf182`.
+**Q1: retained open:** realize the normalized difference using nonzero
+admissible defects within all budgets. Exact zero-defect collapse does not
+imply full-lattice collapse. Parent unchanged-copy replay passed 1,144 checks,
+identical receipt and six preserved originals.
+
+Independent reviewer `/root/generating_review` reconstructed the relative
+cyclotomic image, parity fixtures, interval counting, tail-shifted cells and
+finite/all-future stabilizer collapse. Full response
+`/tmp/pi-m4-canonical-selection-paper-review-20261127.txt` records **D: none.
+I1: resolved:** automorphisms fix rational prefixes; the chosen exponential
+relation and replacement lifts need separate treatment. The sole clarification
+passed follow-up at `/tmp/pi-m4-canonical-selection-followup-20261127.txt`.
+Corrected report v2 has SHA-256
+`f501be5671dc1f7ef543d8cc92e284e3fd3c367d97eac5cb55520b635e358338`.
+**Q1: retained open:** select the actual initialized phase. Parent replay
+passed 8,076 checks, identical receipt and four preserved originals; these
+finite checks do not prove the growing-block or asymptotic arguments.
+
+Both reviewers reused full unchanged adversarial guides, the replacement
+procedure and critic skill. They inspected sources, hashes and receipts but
+ran no checker, probe, build, extractor, mutation, service or delegation.
+Universal claims retain their paper status. The ongoing grid-escape test and
+any optional shorter field-collapse bound are excluded. Final exact task-owned
+integration review completed as below; no V/M4 or Lean acceptance is claimed.
+
+The frozen six-path packet is `/tmp/pi-m4-descendant-relative-review-20261127/`,
+diff SHA-256
+`8450567174caaeade9756dd891826907cd688d2004b16f6f6177991d589d5405`.
+Full initial response `review-full.txt` has SHA-256
+`34c6639a3c77c74abd68ca9b18f714a48a72dadaec126799f00ae9c5ff03fa28`.
+Reviewer `/root/generating_review` verified six production, 31 evidence, two
+guide and 28 preservation hashes, and reconstructed the complete integration.
+**D1 and both I1 items: resolved** as above. **I2: resolved:** the counting
+window is an interval, while each lifted divisor residue class is an arithmetic
+progression. The sole repair delta has SHA-256
+`f300f93123ecfad6a4e0370ca93c63fb006b244cc92a405dcee1eadf9d247f02`;
+`followup-full.txt` confirms it and no other drift. **Q1--Q2: retained open:**
+bounded nonzero-defect realization and actual phase selection, with global
+covering and V still separate. Documentation (93 files), process tests (38),
+whitespace and preservation checks passed as caller evidence. No arithmetic
+rerun or Lean build was required for the wording repair. Subsequent edits
+record outcomes only; the current grid inquiry remains excluded.

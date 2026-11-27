@@ -426,6 +426,105 @@ No actual canonical numerator or pi digit was evaluated. Independent criticism
 found no blocking defect and requested the replacement-only character scope
 now stated above. V, C_odd and M4 remain open; this is paper mathematics.
 
+## Relative forcing fields and canonical parity
+
+The actual rational phase z_n=exp(pi*i*S_n) encodes canonical parity:
+S_n modulo 2 belongs to [0,1) exactly when K_n is even. This half-open
+criterion includes integral boundaries. A proposed norm/trace consumer must
+retain that choice of complex phase, not just an abstract root of unity.
+
+Fix N>=0, h>=1, S_N=P/q reduced with q odd, and let
+L=lcm{den A(N+j):1<=j<=h}, g=gcd(q,L), d=q/g, Q=lcm(q,L).
+In the cyclotomic field of conductor 4Q, automorphisms with exponent
+u=1 modulo 4L fix i and every exact future forcing phase. Their complete
+image of z_N is
+
+    {exp(pi*i*r/q):0<=r<2q, r=P mod 2g, gcd(r,q)=1}.
+
+For sufficiency, choose k modulo d solving
+4*(L/g)*P*k=(r-P)/g and put u=1+4L*k. The coefficient is invertible
+modulo d, since gcd(L/g,d)=gcd(P,d)=1; for d=1 take k=0. Then
+uP=r modulo 2q and u is a unit modulo 4Q. Counting the permitted residues
+gives phi(q)/phi(g); each image keeps order 2q/gcd(P,2).
+
+Every automorphism over Q fixes the rational S_n itself. What need not be
+preserved is the analytic relation z_n=exp(pi*i*S_n). The conjugate phase
+admits a replacement real lift T_0=r/q, propagated by
+T_(j+1)=16*T_j+A(N+j+1). Its phases are the conjugates of the actual phases,
+but its raw values are not automorphic images of the rational prefixes and
+need not keep the initialized seed. Its canonical unit-cell carries satisfy
+c'_j=floor(T_(j+1))-16*floor(T_j), so their parity is read at j+1.
+
+At N=2,h=3, S_2=615863723/765765, L=333072102825, g=3465 and d=221.
+The relative image has 192 elements. Among representatives r/q<1, exactly
+13 have three even canonical carries and 12 have three odd carries. For
+r=29273, the exponent u=142554860009101 yields (0,10,2); for r=63923,
+u=201175550106301 yields (1,5,11). Both are units modulo
+4Q=294435738897300, equal 1 modulo 4L, and preserve primitive order
+1531530. These are alternative phase lifts under exact forcing, not claims
+about the original actual carry block.
+
+There is a growing finite family. Use the previously established product
+
+    R_N=product{p prime:p=1 mod4,4N+3<p<=8N+1}.
+
+Each factor occurs once in q_N and divides no forcing denominator through
+h<=floor(N/2); log R_N=2N+o(N). The subgroup u=1 modulo 4Q/R_N fixes
+the complementary conductor and all these forcing phases. Its images form
+S_N+2t/R_N modulo 2, with one forbidden t-class at each p|R_N. On any
+interval inside [0,2) of length ell, inclusion-exclusion gives the count
+phi(R_N)*ell/2 with error at most 2^omega(R_N). Each lifted divisor residue
+class is an arithmetic progression, so counting it in the interval introduces
+no extra wraparound error.
+
+Let I=[1/15,14/15] and retain the actual tail E_n with
+16E_n-E_(n+1)=A(n+1), 0<E_n<1/15. Both digit alphabets
+{2,4,6,8,10,12,14} and {1,3,5,7,9,11,13} preserve I under the inverse
+maps theta -> (b+theta)/16. For each length-h word w, the disjoint closed
+cell (p_w+I)/16^h-E_N lies strictly in (0,1), has length
+13/(15*16^h), and yields those exact canonical carries: intermediate states
+are theta_j-E_(N+j) in (0,1). Each parity therefore has at least
+
+    7^h*[13*phi(R_N)/(30*16^h)-2^omega(R_N)]
+
+conjugate branches. Since log phi(R_N)=2N+o(N) and omega(R_N)=o(N),
+this is positive uniformly for 1<=h<=floor(N/2) at large N. The exponent
+margin is 2-log16/2>0. This family is distinct from the small N2,h3 fixture.
+
+The freedom ends after finitely many future constraints. Put
+M_N=max{p^e:p^e exactly divides q_N}, or 1 if q_N=1. Then
+
+    q_N divides lcm{den A(N+j):1<=j<=M_N}, M_N<=8N+5.
+
+For each p^e select 8n+1=0 mod p^e if p>=7, 4n+3=0 if p=3,
+or 2n+1=0 if p=5. The numerator of A has residues 30,2,4 respectively;
+all other denominator factors are units at that prime. A block of p^e
+consecutive indices meets the class. Also q_N divides the odd lcm through
+8N+5, by the four-fraction expression and odd-denominator normalization.
+This proves both bounds. At h=M_N the relative image is a singleton.
+Every odd prime power similarly occurs arbitrarily late, so fixing i and
+all future forcing phases forces identity on the union of fields of
+conductor 4 times an odd integer. No higher 2-power-root claim is made.
+
+Thus finite norm/trace averages cannot import the actual half-circle condition
+to all relative conjugates; enough exact future constraints make that average
+trivial. Selecting the actual initialized phase remains the missing estimate.
+Neither finite abundance nor finite collapse proves C_odd or V.
+
+Clarified frozen report
+`/tmp/pi-m4-canonical-selection-clarification-20261127/report-v2.md`, SHA-256
+`f501be5671dc1f7ef543d8cc92e284e3fd3c367d97eac5cb55520b635e358338`,
+contains the full proof. Parent unchanged-copy replay passed 8,076 checks,
+identical receipt and four preserved originals: full fixture image, exact
+phase/carry recurrence, 15 actual denominator-collapse anchors, local poles
+and synthetic conductor images. Parent and reviewer inspected the pinned
+Mathlib cyclotomic automorphism/power-action declarations and archived
+fresh-prime argument. These are paper applications, not new Lean exports.
+Independent criticism resolved the rational-prefix versus conjugate-phase
+wording; final integration review and a counting-window clarification passed.
+A proposed shorter collapse
+constant was not adopted or needed for this result.
+
 ## Evidence boundary
 
 The frozen sine-zero report is `/tmp/pi-m4-sine-zero-report-v1.md`, SHA-256

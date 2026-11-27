@@ -7,7 +7,7 @@ The [continued research checkpoint](#continued-research-checkpoint--2026-11-26)
 records subsequent work during the user's absence; that checkpoint does not
 terminate the ongoing M4 effort.
 The latest dated continuation is the
-[Actual negative history and canonical selection](#actual-negative-history-and-canonical-selection--2026-11-27-utc); read the
+[Descendant costs and relative forcing](#descendant-costs-and-relative-forcing--2026-11-27-utc); read the
 research log and actual checkout for subsequent results and current state.
 
 ## Baseline and authorized endpoint
@@ -1129,3 +1129,23 @@ review completed with no defect. Two bounded follow-ups test earlier descendant 
 and a fresh actual-selection mechanism; the research log owns their handles,
 bounds and outcomes. Read it and verify the checkout before resuming. No
 Lean, pin, audit or dependency changed; M4 remains open and work continues.
+
+## Descendant costs and relative forcing — 2026-11-27 UTC
+
+The actual-history checkpoint is local commit
+`974a8f17f0693156f027ade70552356a3b639626`; review, checks, exact staging
+and post-commit necessity/preservation inspection passed. Nothing was pushed.
+The [descendant test](m4-prime-defect-boundary.md#descendant-witnesses-require-nonzero-defects-to-stay-bounded)
+rules out bounded completion by exact zero-defect repair while leaving the
+nonzero-defect lattice open. The
+[relative-field test](m4-language-auxiliaries.md#relative-forcing-fields-and-canonical-parity)
+retains exact finite forcing phases but permits both canonical parities;
+enough future phases collapse that conjugate freedom without proving a visit.
+
+Parent reconstructions and unchanged-copy replays passed, with originals
+preserved. Separate paper criticism and endpoint/wording clarifications passed;
+final integration review and a focused counting-window clarification passed.
+A 25-minute complete-grid escape test is
+underway; its exact scope and handle are in the research log. No new result
+from it is accepted here. V/C_odd/global covering and M4 remain open, B4/P3
+retain their premises, no Lean or trust boundary changed, and research continues.

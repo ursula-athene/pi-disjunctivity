@@ -933,11 +933,26 @@ decompositions retain the actual raw graph and its entire negative history
 when the positive canonical cell is relaxed. They exclude a boundedness-only
 consumer, not actual C_odd or V. Direct reflected-carry continuation is suspended.
 
-Two distinct 25-minute follow-ups test descendant-completed global witnesses
-below the singleton horizon and seek a fresh actual-canonical-selection
-mechanism using the exact positive unit cell. Their endpoints require a
-quantified consumer, discriminating check or precise failed implication.
-Neither a comparison witness nor a reformulated parity target supplies V.
+The [descendant follow-up](m4-prime-defect-boundary.md#descendant-witnesses-require-nonzero-defects-to-stay-bounded)
+constructs global witnesses at earlier roots, but proves an exponential norm
+cost for any completion retaining two specified exact zero defects. Even one
+prime's identically zero defect class has no nonzero infinite bounded vector.
+Nonzero admissible defects remain essential and uncontrolled; the full
+strong-Newton lattice is not shown to collapse.
+
+The [relative-field test](m4-language-auxiliaries.md#relative-forcing-fields-and-canonical-parity)
+preserves exact finite future forcing phases and primitive orders under
+cyclotomic conjugacy, yet admits both canonical parity branches. Fixing enough
+future phases instead makes the orbit a singleton within 8N+5 steps. The
+actual rational prefixes are fixed by the automorphisms; their chosen analytic
+exponential phases are the missing selection data. This is a precise failed
+averaging consumer, not an infinite countermodel or visitation estimate.
+
+A new 25-minute test asks whether all entries on a small complete denominator
+grid escape the all-even carry language within a linear horizon under actual
+future A. It must give an exact survivor recurrence and distinguish finite
+counts from the unproved uniform bound. Neither grid exhaustion nor a generic
+escape comparison establishes actual C_odd or V.
 The log owns bounds, outcomes and the failed source-applicability screens.
 V and all Lean contracts are unchanged; neither conditional wrapping nor more
 classification supplies visitation.

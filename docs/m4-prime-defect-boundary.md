@@ -1445,3 +1445,105 @@ test conclusions or Lean exports. Independent criticism completed with no
 defect; the review record retains the dense-support, global-attainment and
 actual-visitation gaps. Final integration review and its focused domain/notation
 repairs passed; the review record owns the full dispositions.
+
+## Descendant witnesses require nonzero defects to stay bounded
+
+Fix K>=1, B>0 and the preceding budgets b_j. Choose r>=K+1, i=r-1 and
+N>=r. Let D be the product over primes p>=7 dividing r of
+
+    p^[H_p+1+v_p(H_p!)+v_p(L_i)], H_p=floor(N/p).
+
+For positive d with no prime factor 2,3,5, including d=1, prescribe
+
+    V_(rd-1)=D*chi_4(d)*16^[r(d-1)]/(d*L_i), rd<=N,
+    V_n=0 at every other n<N.
+
+This is a global lattice witness. For every odd d, L_i*d divides L_(rd-1):
+each constituent prime power is at most (4r-1)*d<=4rd-1. Its first integer
+prefix is a_i=D. For p not dividing r, both descendant terms cancel exactly
+in every imposed G_p. For p dividing r, only k=(r/p)*d with p not dividing d
+has an uncancelled source, of value p*D*chi_4(d)*16^[r(d-1)]/(d*L_i).
+Its valuation is at least J_p(H_p); integer finite differences then satisfy
+every original row through H_p. This D is sufficient, not claimed minimal.
+If r has only prime factors 2,3,5, D=1 and all defects vanish; the earliest
+integer coordinate makes the witness primitive. For general r the boundary
+sources cannot all be zero with that first nonzero root.
+
+At N=11r the only multipliers are 1,7,11, and G_7(r)=G_11(r)=0.
+This completion is expensive for a reason independent of its sparse raw
+support. For any finite coefficient vector define
+
+    F(t)=sum_(K<=j<N)c_j*R_j(t), M(c)=max_j |c_j|/b_j,
+    sigma(c)=sum_j beta_j*c_j,
+    H_n(c)=integral t^(n+1)*F(t)/(16-t) dnu,
+    V_n=16^n*sigma(c)-H_n(c).
+
+The original polynomial bounds give sup|F|<=64B*M(c). Since
+nu([0,1])=A(0)-A(1)=12301/4095<4, uniformly in n,N,
+
+    |H_n(c)|<=C_B*M(c), C_B=256B/15.
+
+For ANY completion with N>=11r, root v=V_(r-1) and G_7(r)=G_11(r)=0,
+the normalized descendant values are -v/[7*16^(r-1)] and
+-v/[11*16^(r-1)]. Each differs from the same sigma by its residual. Hence
+
+    M(c)>=(4/77)*|v|*16^(6r)/[C_B*(1+16^(-4r))].
+
+If a_(r-1) is a nonzero integer, |v|>=1/L_(r-1), and this becomes
+15*16^(6r)/[4928*B*L_(r-1)*(1+16^(-4r))]. Its lower exponential rate
+per r is 6log16-4>0 for fixed B. All intervening and later coefficients
+may vary; only the two exact zero defects and the integral root are imposed.
+
+Repeated cancellation at one prime also fails. If the 7-chain vanishes
+through 7^(a+1)*r<=N, consecutive normalized descendants give
+
+    M(c)>=[8*|v|/7^(a+1)]*16^[(7^a-1)*r]
+                       /[C_B*(1+16^(-6*7^a*r))].
+
+Thus a fixed nonzero integral root cannot persist in bounded completions with
+an arbitrarily long zero-defect chain. More generally, if all imposed defects
+at a fixed p>=7 vanish, then for every pk<=N,
+
+    |sigma(c)|<=C_B*M(c)/(p-chi_4(p))
+                      *[p*16^(1-pk)+16^(1-k)].
+
+Within the budgets this added subspace's period tends to zero as N grows;
+adding any budgeted analytic tail only adds tail_N, also tending to zero.
+For an infinite budgeted series, uniform convergence on [0,1] extends these
+identities. The last bound forces sigma=0, so all V_n are bounded. But the
+homogeneous p-chain has magnitude 16^[(p^a-1)r]*|V_(r-1)|/p^a, forcing
+each root to vanish. All moments and coefficients vanish by orthogonality.
+This does not evaluate an infinite series at 16.
+
+The dual consumer retains the entire tail. For a nonzero witness z and
+E_N(w,theta)<1/2,
+
+    |w(z)|<(1/2)*max{M(z),|sigma(z)|/tail_N}.
+
+A certificate at most 1 forces the integer w(z) to vanish; once M(z)>2
+this particular bound cannot do so from E_N<1/2 alone. It does not prove
+w(z) nonzero or exclude a sharper tailored estimate. Thin raw support does
+not give a small orthogonal norm.
+
+Allowing nonzero defects changes the identity to
+
+    G_7(r)/(7*16^(6r))-G_11(r)/(11*16^(10r))
+      =(4/77)*V_(r-1)-H_(7r-1)/16^(6r)+H_(11r-1)/16^(10r).
+
+For M(c)<=1 and an integral nonzero root, the absolute normalized difference
+must eventually be at least 2/[77*L_(r-1)]. Whether admissible nonzero Newton
+values realize this difference within all budgets remains open. Exact
+zero-defect repair is suspended; no collapse of the full strong-Newton lattice,
+global covering or actual V follows.
+
+Corrected frozen report
+`/tmp/pi-m4-descendant-domain-fix-20261127/report-v3.md`, SHA-256
+`deaec85f92fdfbd3ce6cc5d08fe1973f5793b4009beeb3b69e5424c7eaadf182`,
+retains the full proof. Parent reconstruction and unchanged-copy replay passed
+1,144 checks, identical receipt and six preserved originals. Original rows
+were tested at roots 2,4,6,7,11,14,21; N22 reconstructs the orthogonal basis
+and prefixes. For r2,N22,B=1/4096 its norm lies in [2^174,2^175), while the
+completion-independent lower bound lies in [2^44,2^45). No actual period was
+evaluated. Independent criticism resolved the zero-witness endpoint and strict
+integer threshold wording. Universal claims remain paper mathematics; final
+integration review passed with those scopes and dispositions retained.

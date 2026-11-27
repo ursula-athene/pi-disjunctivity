@@ -3655,3 +3655,44 @@ pass must propose a concrete actual-selection mechanism and discriminating
 test, using the exact positive unit cell and checking the failure archive.
 No finished result from either is accepted here. The direct reflected-carry
 consumer is suspended, while V/C_odd/global covering remain open and M4 continues.
+
+**Descendant costs and relative forcing — 2026-11-27 UTC:** the actual-history
+checkpoint is local commit `974a8f17f0693156f027ade70552356a3b639626`.
+Review, documentation/process/whitespace checks, exact staging and post-commit
+necessity/preservation inspection passed; nothing was pushed or changed in Lean.
+
+The descendant inquiry completed within its 25-minute bound. It constructs a
+full all-prime witness for any root with sufficient scaling, then proves that
+any completion with a nonzero integral root and both G_7(r)=G_11(r)=0 costs
+an exponentially growing budget norm. One prime's identically zero defect
+subspace has vanishing bounded period image and only the zero infinite vector.
+A necessary normalized difference identifies what nonzero admissible defects
+must supply; the full lattice remains open. Parent replay passed 1,144 exact
+checks, identical receipt, six preserved originals. Parent criticism repaired
+the strict certificate at the zero witness. Independent criticism accepted
+the result and clarified the integer threshold; immutable v3 retains both.
+
+The fresh actual-selection inquiry also completed. Its finite cyclotomic
+orbit fixes i and actual future forcing phases, retains primitive orders,
+and includes both canonical parity branches. A fresh-prime suborbit gives
+many such branches through h<=N/2; all conjugate freedom disappears within
+8N+5 future constraints. Neither statement selects the actual initialized
+phase. The automorphisms fix rational S_n; replacement real lifts are not
+their images. Parent replay passed 8,076 checks with identical receipt and
+four preserved originals. Independent criticism and this wording clarification
+passed. Pinned Mathlib power-action declarations and archived prime inputs
+were inspected; all applications remain paper arguments. No optional smaller
+collapse constant was adopted. Final production review passed after a focused
+counting-window clarification; no mathematical formula changed. Documentation
+(93), process tests (38), whitespace and preservation checks passed.
+
+Next, `/root/actual_negative_anchor` owns
+`/tmp/pi-m4-finite-grid-escape-20261127/` under a **25-minute bound**. It tests
+a candidate linear escape horizon from all-even carries for all entries of
+small complete q_N grids under exact future A. The endpoint is an exact
+survivor recurrence, exhaustive finite diagnostics and a precise assessment
+of the missing uniform estimate, including a changed-forcing comparison.
+Partial samples cannot be reported as exhaustive; a finite result is not
+C_odd or V. No output from this new inquiry is accepted here. The zero-defect
+repair and relative norm/trace positivity inference are suspended; research
+continues toward the unchanged M4 target.
