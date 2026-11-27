@@ -4373,3 +4373,62 @@ and Q2 retains the missing avoidance-to-small-residual implication.
 Documentation (93), process tests (38), whitespace and preservation checks
 passed. Unchanged Lean was not rebuilt. Later source research is excluded
 from this checkpoint, which leaves V/M4 open.
+
+The qualitative-density/exact-carry checkpoint is local commit
+`d78b31e70a254bf90f192e676f14c79c0e713010`, parent `fb800d8d`.
+Exact staging and post-commit scope/blob/necessity/preservation inspection
+passed. The index was empty and task-owned tree clean; the branch was twelve
+ahead of its remote-tracking reference. This run issued no push or PR.
+
+From 14:48:26 to 14:52:51 UTC, within a **20-minute** bound ending 15:08:26,
+`/root/m4_recurrence_source_consumer` tested one direct arithmetic source for
+the exact rational recurrence. Scratch report:
+`/tmp/pi-m4-recurrence-source-consumer-20261127/report.md`. No applicable
+visitation contract was found. Luca's publisher abstract concerns prime
+support; the full theorem/PDF was unavailable, so no full theorem application
+is asserted. Elementary comparison with the already reviewed denominator
+rate shows that the advertised output supplies no new placement information.
+Independent review completed at 14:58:56 UTC with no D/I item; Q1 retains
+actual numerator placement. Parent checked the complete report and all four
+manifest-bound hashes. No numerical or Lean checker was required. The
+unsuccessful bounded search is not a literature-wide impossibility claim.
+
+At 15:00:53 UTC `/root/m4_nonlocal_avoidance_reset` began a **20-minute**
+fresh-context backward investigation, deadline 15:20:53 UTC, scratch
+`/tmp/pi-m4-nonlocal-avoidance-reset-20261127/`. It starts from permanent
+omission of a fixed word/interval and seeks one nonlocal consequence using
+both exact rational forcing and the actual rational zero initialization.
+The discriminating test must separate the known changed-seed and analytic
+moment models, retain the first unsupported step, and avoid another scalar
+height/divisibility reformulation. No unfinished result is adopted.
+
+That inquiry completed at 15:15:29 UTC. It found no new initialized
+avoidance consequence. Its explicit uniform rational automaton telescope
+class loses phase dependence; the displayed discounted enlargement returns
+only the known period and state endpoints. Parent unchanged-copy replay
+passed with identical evidence and five preserved originals. Independent
+paper review completed at 15:21:31 UTC; I1 requested the full endpoint sum
+and separate C=0 case. An immutable clarification completed at 15:21:18 UTC,
+and focused review at 15:22:31 resolved I1. Q1 retains a new restriction
+on the actual selected path. These are paper arguments, not Lean proofs.
+Full production integration remains pending.
+
+At 15:32:01 UTC `/root/m4_nonlocal_avoidance_reset` began a **20-minute**
+inequality inquiry, deadline 15:52:01 UTC, scratch
+`/tmp/pi-m4-zero-entry-inequality-20261127/`. It tests one discounted
+quadratic distance from an exact-forcing even-carry comparison, preserving
+the actual zero-entry difference. The discriminator is whether an even-branch
+sign inequality can accumulate from that known boundary. Eventual even carries
+are only a weaker test: C_odd and V remain open. A changed-seed comparison
+must retain its lost hypotheses explicitly. No unfinished claim is adopted.
+
+The source/automaton six-path integration review ran 15:39:55--15:42:38 UTC
+within twelve minutes, with no defects. I1's endpoint correction remains
+resolved. I2 clarified that freely chosen scalar boundaries may contain A;
+the classification removes phase/entry dependence, not every appearance of
+A. The immutable paper v3 and production delta passed focused review at
+15:44:01 UTC within six minutes. Q1 retains an actual selected-path
+restriction; Q2 retains numerator placement. All 62 revised-manifest files
+matched. Documentation (93), process tests (38), whitespace and preservation
+checks passed; unchanged Lean was not rebuilt. The unfinished inequality
+inquiry was excluded. This checkpoint leaves V, C_odd and M4 open.

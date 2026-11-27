@@ -917,3 +917,44 @@ immutable correction removes that test and records the earlier error.
 The corrected checks use nonzero synthetic seeds and exact algebra, not
 actual pi orbit sampling. Universal bounds and comparison trajectories
 remain paper arguments; no Lean proof or M4 acceptance follows.
+
+### A recurrence source gives no new placement estimate
+
+A bounded source check found no applicable visitation contract. The
+[publisher abstract for Luca, Prime divisors of binary holonomic sequences](https://www.sciencedirect.com/science/article/pii/S0196885807000061)
+(2008, DOI 10.1016/j.aam.2006.12.001) concerns rational order-two polynomial
+recurrences and prime-factor growth. Actual u_n=S_n already has that
+rational recurrence form, with coefficients U(n+1), -(16U(n+1)+V(n+1))
+and 16V(n+1); no varying denominator clearing is needed. The full theorem,
+exceptional-class definition, counting convention and proof were unavailable.
+Only publisher abstract/metadata were inspected; no full application is claimed.
+
+Even granting the advertised positive-multiple-of-log-N support conclusion,
+the established denominators give more. If q_n is the reduced denominator
+of S_n, then q_n divides lcm(1,...,8n+6) and log q_n=6n+o(n). Each
+prime power in q_n is at most 8n+6, so
+
+    log q_n<=omega(q_n)*log(8n+6),
+    omega(q_n)>=(6+o(1))*n/log n.
+
+Here omega counts distinct primes. If S_n=a_n/q_n is reduced, its
+fractional part r_n/q_n remains reduced, with 0<r_n<q_n eventually.
+Its logarithmic rational height is exactly log q_n, regardless of whether
+it avoids a selected interval. The raw height is
+h(S_n)=(6+log16)n+o(n). The small E_n approximates pi*16^n, not an integer;
+it supplies no smaller height for the fractional part.
+
+A constant-coefficient rational recurrence would keep denominator primes
+in a finite set: normalize the leading coefficient, include denominator
+primes of the resulting coefficients and initial values, and induct in
+that localization. The support bound above rules this out for actual S.
+This observation does not identify the uninspected source's exceptional
+class. In every case the missing step is control of the actual numerator's
+real position. The source's advertised output does not supply it.
+
+Frozen report `/tmp/pi-m4-recurrence-source-consumer-20261127/report.md`
+has SHA-256 `4d0926e7e1703f5cdbbe3e3176df6eb0b2b162e185d6db35f7c8fb7178fbc19b`.
+Separate paper review found no D/I item and retained numerator placement as
+Q1. No full source-proof audit, numerical census or Lean result is claimed.
+Suspend this source consumer; the bounded search failure is not a claim
+that no applicable theorem exists elsewhere.

@@ -1044,7 +1044,17 @@ spikes, so primitive normalization supplies no small residual. Exact-forcing
 comparison trajectories lose the fractional zero seed and rational raw
 samples; they reject weaker avoidance inferences only. Suspend the local
 small-residual consumer without a new initialization-sensitive estimate.
-The log owns bounds and outcomes.
+The [recurrence source check](m4-rational-forcing.md#a-recurrence-source-gives-no-new-placement-estimate)
+found only an abstract-level prime-support conclusion, weaker than the
+retained denominator consequences and without numerator placement. No full
+source theorem application is claimed. The
+[automaton telescope test](m4-language-auxiliaries.md#rational-automaton-telescopes-lose-the-initialized-boundary)
+extends the scalar obstruction to uniform rational open-cell edge identities.
+The stated discounted enlargement recovers only state endpoints and the known
+period. This rejects those equality classes, not actual-point identities or
+inequalities. The next bounded test keeps the actual zero-entry boundary in
+an inequality and uses eventual even carries as a weaker discriminator;
+neither C_odd nor V has been proved. The log owns bounds and outcomes.
 V and all Lean contracts are unchanged; neither conditional wrapping nor more
 classification supplies visitation.
 

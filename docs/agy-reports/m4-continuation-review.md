@@ -2760,3 +2760,109 @@ and repository check results are caller execution evidence. Documentation
 (93), process tests (38), whitespace and preservation checks passed; unchanged
 Lean was not rebuilt. Subsequent edits record review outcomes only. Later
 source research was excluded. V/M4 remain open.
+
+## Rational recurrence source boundary — 2026-11-27 UTC
+
+Packet `/tmp/pi-m4-recurrence-source-consumer-20261127/` completed at
+14:52:51 UTC, within the 14:48:26--15:08:26 bound. Report SHA-256
+`4d0926e7e1703f5cdbbe3e3176df6eb0b2b162e185d6db35f7c8fb7178fbc19b`;
+manifest SHA-256
+`bc526400cabe39846db830b98bcc8e6b5b6da29aa472a9d1d4b136f62a06dbee`.
+Only Luca's publisher abstract and metadata were inspected; full theorem
+retrieval failed, so no complete source contract/application is claimed.
+
+Independent `/root/finite_log_independent_review` began at 14:57:30 and
+completed at 14:58:56 UTC within an eight-minute bound. Full response:
+`/tmp/pi-m4-recurrence-source-paper-review-20261127.txt`. **D/I: none.
+Q1: retained open:** actual numerator placement. The critic reconstructed
+the recurrence shift, the prime-support and height comparisons, and the
+finite-prime-support observation for constant-coefficient recurrences. It
+verified all four manifest-bound hashes and inspected the relevant retained
+publisher results, XML and retrieval records. The full theorem's definitions
+and proof remain uninspected; the prior denominator theorem is a supplied
+reviewed input, not freshly source-audited. No checker was needed.
+
+Both guides, critic skill and replacement procedure governed read-only
+review, with no execution, mutation, service or delegation. No Lean proof
+or literature-wide impossibility result is claimed. Production integration
+remains pending; the separate nonlocal-avoidance reset is excluded.
+
+## Rational automaton telescope boundary — 2026-11-27 UTC
+
+Original packet `/tmp/pi-m4-nonlocal-avoidance-reset-20261127/` completed
+at 15:15:29 UTC within its 15:00:53--15:20:53 bound. Report SHA-256
+`f1ddeb065840b1759f186977216d7c22a5fd3a9baa97135926c889925b677abd`;
+manifest SHA-256
+`b034087fd281999a7bbcc0b30e3b150e227caaa56106ee54d845cf68ae95cc47`.
+Parent unchanged-copy replay passed with identical evidence and five
+originals preserved; replay SHA-256
+`4b0feaccbc12b2ef827aa89014ec97fbc24d5752f62baa69ed40105415e205d3`.
+The graph counts, translation differences and free-entry telescopes are
+finite caller execution evidence, not a proof of the classification.
+
+Independent `/root/generating_review` began at 15:19:19 and completed
+at 15:21:31 UTC within a twelve-minute bound. Full original and focused
+responses are captured in
+`/tmp/pi-m4-automaton-telescope-paper-review-20261127.txt`.
+**D: none. I1: resolved after clarification:** the full reward sum retains
+the state endpoints and C, treats C=0 separately, and obtains the N=0
+identity directly from the recurrence rather than extending the late
+certificate premise. **Q1: retained open:** a new restriction on the
+actual initialized path's discounted sum or boundary.
+
+The authoritative immutable clarification is
+`/tmp/pi-m4-automaton-telescope-clarification-20261127/report-v2.md`, SHA-256
+`d7dd1f16e1470c2e501f68fcfa75454468ef851431eb6e9a474fcd9b44fce50b`;
+exact-delta SHA-256
+`bba0650ba1f496bd9984417885dd63e7996ddaee6ede8ff74e9fb87d44327519`;
+manifest SHA-256
+`19a331d34cd778e4e7d522559a784ecb04fb6ef79bb1e3a1880e92082d89655e`.
+Focused review ran 15:22:27--15:22:31 UTC within six minutes, inspected
+the full delta and surrounding argument, and resolved I1 without new D/I.
+All five original files were unchanged; no checker rerun was needed.
+
+The critic reconstructed the rational identity extension, pole-set and
+degree arguments, time-slope equations, prefix propagation, inner-cylinder
+index/margin and all period normalizations. It read the complete report,
+checker, evidence, completion and parent replay, actual Lean contracts and
+relevant archived bridge. Both adversarial guides were read in full, with
+hashes `798c3cc974c5296453f510ea9264aa8b5d17c813c8dc217a430de9b68b7d667c`
+and `c4a04d75a297c6ec361d31ab11e465e3c3e74a6c89eb590bddb03d95c243ad3b`.
+AGENTS, replacement procedure and critic skill governed read-only review.
+No checker, probe, build, mutation, service or delegation occurred. Broader
+certificate classes and the subsequent inequality inquiry were excluded.
+No Lean proof or M4 acceptance is claimed; integration review is pending.
+
+Full six-path integration review by `/root/finite_log_independent_review`
+ran 15:39:55--15:42:38 UTC within twelve minutes. Packet
+`/tmp/pi-m4-boundary-source-review-20261127/` retains full and focused
+responses in `review-full.txt` and `review-focused.txt`, frozen files,
+diffs and manifests. Baseline
+`d78b31e70a254bf90f192e676f14c79c0e713010`; original diff SHA-256
+`69d95a77b27c89153cf0cb3d4ad07f326ce851a4e59914bce0805095fb9457b3`;
+revised diff SHA-256
+`4dcda5ed149faa3b17767960bb544927c31614bd475bbb1a9e37aa74ec62a658`.
+**D: none. I1: remains resolved. I2: resolved after focused clarification:**
+scalar v_s may contain A, for example v_s=A; only phase/entry dependence
+is removed. The arbitrary scalar boundary supplies no new initialized
+constraint. **Q1--Q2: retained open:** selected-path restriction and
+source-consumer numerator placement.
+
+The authoritative paper is now
+`/tmp/pi-m4-automaton-scalar-boundary-clarification-20261127/report-v3.md`,
+SHA-256 `30360e8fee4309e126cc39e336d7a55249d409c4d98fd519a36cfe1de5da7bff`.
+Focused review ran 15:43:42--15:44:01 UTC within six minutes, inspected both
+complete deltas and surrounding arguments, and found no new defect or scope
+drift. It verified all 62 revised-manifest files: six production, 23 evidence,
+three context, two guides, 17 protected and 11 unrelated. Original artifacts,
+mathematics, checker and counts were unchanged. Manifest-v2 SHA-256
+`4f8776506e87745e2be08a1d1032452d73b3636a4a82380c35ca07149dd12f2f`.
+
+The full review reconstructed both arguments rather than inheriting their
+verdicts. Both previously fully read guides, critic skill and replacement
+procedure remained applicable and unchanged. Repository and replay checks
+are caller evidence; no reviewer execution, mutation, service or delegation
+occurred. Documentation (93), process tests (38), whitespace and preservation
+checks passed; unchanged Lean was not rebuilt. Source-proof and denominator
+input limits remain explicit. Subsequent edits record review outcomes only;
+the unfinished inequality research is excluded. V/M4 remain open.

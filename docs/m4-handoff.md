@@ -1494,3 +1494,33 @@ process, whitespace and preservation checks passed.
 The next research question must use a different bridge from exact BBP
 structure to actual placement; these failed uniform and small-residual
 consumers should not be retried unchanged. Continue M4 research.
+
+## Initialized boundary and uniform telescopes — 2026-11-27 UTC
+
+The qualitative-density/exact-carry checkpoint is local commit
+`d78b31e70a254bf90f192e676f14c79c0e713010`. Its reviews, checks, exact
+staging and post-commit inspection passed; the branch was twelve ahead of
+its remote-tracking reference with empty index and clean task-owned tree.
+Subsequent changes are uncommitted; this run issued no push or PR.
+
+The [recurrence source check](m4-rational-forcing.md#a-recurrence-source-gives-no-new-placement-estimate)
+found no new placement contract. Its advertised prime-support output is
+weaker than retained denominator consequences; only abstract and metadata
+were available. Separate review found no D/I item, retaining numerator
+placement as open. This is not a full theorem application or a literature-wide
+negative conclusion.
+
+The [automaton telescope test](m4-language-auxiliaries.md#rational-automaton-telescopes-lose-the-initialized-boundary)
+shows that uniform rational edge identities lose phase dependence. The
+precisely stated discounted enlargement adds only the known recurrence
+telescope, with both endpoint terms and the C=0 case retained. Independent
+paper and focused clarification reviews passed; parent unchanged-copy replay
+matched the finite evidence and preserved the originals. These reviewed
+paper obstructions supply no new Lean declaration or actual visit.
+
+The next inquiry tests an inequality retaining the actual zero-entry boundary,
+starting with the weaker C_odd question. Its log records the bound and exact
+comparison test; no unfinished inequality is adopted. Full integration and
+focused scalar-boundary clarification reviews passed. Documentation, process,
+whitespace and preservation checks passed; unchanged Lean was not rebuilt.
+Continue M4 with V and C_odd open.

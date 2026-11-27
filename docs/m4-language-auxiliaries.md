@@ -1322,6 +1322,91 @@ Parent unchanged-copy replay passed, with an identical exact receipt and
 all eight originals preserved. This is a finite paper counterexample to a
 specific proposed extension, not a new Lean theorem or M4 acceptance.
 
+## Rational automaton telescopes lose the initialized boundary
+
+Use the actual recurrence y_0=0,
+y_(n+1)=16*y_n+A(n)-k_n with canonical k_n. For n>=1, 0<A(n)<1,
+so labels 0,...,16 each have a nonempty open phase branch; the overflow
+branch has width A(n)/16. An eventual hole yields omission of some ordinary
+word w only through the earlier inner-cylinder argument: place a closed
+cylinder strictly inside the hole and make the tail smaller than its margin.
+This does not identify arbitrary canonical carries with ordinary digits.
+
+Let the proper-prefix automaton for w have states s=0,...,ell-1, and retain
+edges that do not complete w. Test rational potentials P_s in Q(n,x) and
+rewards R_(s,d) in Q(n), required to satisfy
+
+```text
+P_t(n+1,16*x+A(n)-d)-P_s(n,x)=R_(s,d)(n)
+```
+
+on a nonempty open subset of each allowed edge's canonical branch, for all
+sufficiently large integer n. This uniform premise is essential. It is not
+an identity assumed only at the actual initialized points. Rational identity
+extension in x and then n permits comparison of different branches without
+requiring their original phase intervals to overlap.
+
+State 0 has fifteen ordinary self-loops, all labels except w_0. Subtracting
+two gives a nonzero translation difference of P_0 constant in x. Its finite
+pole set would have to be invariant under that translation, so there are
+no finite poles. Polynomial degree comparison makes P_0 affine in x. Its
+slope u(n) obeys u(n)=16*u(n+1), impossible for nonzero rational u since
+u(n+1)/u(n) tends to 1. Thus P_0 is phase independent. Reading each proper
+prefix from state 0 reaches the corresponding state, with nonzero affine
+phase slope; composing the edge identities makes every P_s phase independent.
+Consequently P_s=v_s(n) and R_(s,d)=v_t(n+1)-v_s(n). A return-word sum
+retains only a state/time boundary, independent of the initial entry.
+The freely chosen v_s may themselves contain A; such dependence remains an
+arbitrary scalar boundary, not an additional constraint forced by the recurrence.
+No overflow reset edge is used or presumed to have an infinite continuation.
+
+The precisely enlarged class
+P_s=16^(-n)*Q_s(n,x)+v_s(n), Q_s in Q(n,x), v_s in Q(n), with rewards
+in Q(n)+16^(-n)*Q(n), has only the additional common slope C:
+
+```text
+P_s(n,x)=C*16^(-n)*x+V_s(n),
+V_s(n)=16^(-n)*b_s(n)+v_s(n),  b_s,v_s in Q(n),
+R_(s,d)(n)=C*16^(-n-1)*(A(n)-d)+V_t(n+1)-V_s(n).
+```
+
+Here the same translation argument makes Q_0 affine; its rational slope
+is 1-periodic, hence constant. Ordinary-prefix paths propagate that constant
+to every state. For a finite allowed path within the certificate's range,
+
+```text
+sum_(n=N)^(M-1) R_(s_n,k_n)(n)
+  =C*(16^(-M)*y_M-16^(-N)*y_N)+V_(s_M)(M)-V_(s_N)(N).
+```
+
+Subtracting the scalar endpoints and dividing by C is legitimate only if
+C!=0; C=0 gives only those endpoints. Independently of any late certificate,
+the recurrence telescopes for every 0<=N<M:
+
+```text
+sum_(n=N)^(M-1)16^(-n-1)*(A(n)-k_n)
+  =16^(-M)*y_M-16^(-N)*y_N.
+```
+
+At N=0, boundedness and the actual zero entry recover only the known
+sum k_n/16^n=pi, or sum k_n/16^(n+1)=pi/16. General bounded entry y_0
+instead gives 16*y_0+pi and y_0+pi/16 respectively. The automaton supplies
+no further restriction on the actual path's sum or boundary. Both the exact
+forcing and initialization enter the last identity without proving visitation.
+
+Suspend these uniform equality classes as a new initialized arithmetic
+consumer. This does not exclude identities only at the actual points,
+inequalities, nonrational potentials, or other history-dependent classes.
+The authoritative report is
+`/tmp/pi-m4-automaton-scalar-boundary-clarification-20261127/report-v3.md`, SHA-256
+`30360e8fee4309e126cc39e336d7a55249d409c4d98fd519a36cfe1de5da7bff`.
+Parent unchanged-copy replay checked 4,368 short word graphs, 8,448 prefix
+edges, 65,520 ordinary self-loops, 96 translation differences, 96 free-entry
+steps and twelve telescopes, with identical receipt and five originals
+preserved. These are finite algebra fixtures, not an initialized orbit census
+or proof of the universal classification. Separate paper review resolved the
+endpoint clarification; no Lean result or progress on V is claimed.
+
 ## Evidence boundary
 
 The frozen sine-zero report is `/tmp/pi-m4-sine-zero-report-v1.md`, SHA-256
