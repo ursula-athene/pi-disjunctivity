@@ -12,21 +12,23 @@ and [persistence protocol](meta-proof-plan.md#persistence-and-stopping-condition
 Use Codex subagents for required reviews; Carbon remains stopped. M5, push,
 PR, new dependencies, installations and permission changes are not authorized.
 
-Read the [latest AGM assessment](m4-approximation-interfaces.md#agm-units-smaller-fields-and-the-missing-interval-estimate),
+Read the [finite-word entry test](m4-generating-functions.md#every-finite-word-can-retain-the-dyadic-entry-precision)
+and [prime-power column assessment](m4-fourier-windows.md#normal-prime-power-columns-do-not-supply-a-sum-estimate),
 then the end of the [research log](research-log.md) and the actual checkout.
-An exact Newton correction retains a full approximation window in a smaller
-field. The tower also gives an exact selected-root norm-sign formula, but no
-positive sign-count estimate. Further approximation acceleration is suspended
-without a visitation consumer. Fresh discovery seeks initialized BBP structure
-lost by the countermodels. The log owns bounds and outcomes; this entry is not
-a second live status ledger.
+Local entry precision permits every finite word in the tested alphabet;
+separately normal columns do not control their correlated sum or uniformly
+early visits. Further approximation acceleration is suspended without a
+visitation consumer. The next tests concern the column method's uniform cost
+and a constraint on the same initialized numerator across successive indices.
+The log owns bounds and outcomes; this entry is not a second live status ledger.
 
 For the immediate failure record, follow the relevant mathematical owner:
 
 - [Rational forcing](m4-rational-forcing.md): changed-seed comparisons,
   exceptional fine returns, and the absent fixed divisible integer.
 - [Generating functions](m4-generating-functions.md): natural boundaries,
-  interpolation limits, and the new floor-concordance/continuity obstruction.
+  interpolation limits, finite-word entry freedom, and the absence of a
+  parity-to-continuation implication.
 - [Two-adic reflection](m4-two-adic-reflection.md): the exact raw graph and
   zero anchor have not supplied a real-cell visitation estimate.
 - [Language auxiliaries](m4-language-auxiliaries.md) and
@@ -34,11 +36,16 @@ For the immediate failure record, follow the relevant mathematical owner:
   generic capacity estimates lose actual-history information.
 - [Prime compression](m4-prime-compression.md): the real matching estimate
   needed by the qualitative density theorem remains unproved.
+- [Arithmetic windows](m4-fourier-windows.md): normal prime-power columns
+  can cancel; fixed-cutoff normality would still lack uniform early visits.
 - [Transforms and periods](m4-transforms-and-periods.md): disk dissection
   cancels pi; fixed-frequency asymptotics do not control the remaining tail.
 - [Approximation interfaces](m4-approximation-interfaces.md): AGM unit norms,
   improved degree/precision and exact sign identities still lack late visits;
   finite-window perturbations lose exact initialization and conjugate bounds.
+- [Logarithmic determinant source](#carry-density-and-source-bridges--2026-11-27-utc):
+  the September 2026 exponent-two preprint was already screened; its selected
+  mechanism needs exceptional approximations not supplied by word avoidance.
 
 Rational-entry equivalence and small-type interpolation were just matched to
 archived failures before redevelopment. A new inquiry must identify its changed

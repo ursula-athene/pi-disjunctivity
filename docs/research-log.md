@@ -4860,3 +4860,81 @@ explicit. The exact four-path diff and all 81 bound files matched; all 28
 protected/unrelated hashes matched. Documentation (93), process tests (38)
 and whitespace checks passed. No Lean changed. Complete evidence is in
 `/tmp/pi-m4-agm-integration-review-20261127-1922/`.
+
+The AGM checkpoint is local commit
+`70666670dc9a017fad0fb77f0c13a8c6981340dc`, parent `116f072d`.
+Post-commit scope/blob/necessity inspection passed at 19:29:22 UTC; index
+empty, task-owned tree clean and all 28 preservation hashes matched. The
+upstream tracking ref had moved to `116f072d` at 19:27:44, with reflog reason
+"update by push"; this agent did not perform that push. The new AGM commit
+is one ahead and remains local. No PR was opened.
+
+The fresh discovery worker's actual bound is 19:14:55--19:34:55 UTC;
+reassessment at 19:23:28 found no surviving new implication. A proposed
+finite-entry test was matched to the existing generating-functions owner;
+only genuinely changed word/quantifier consequences remain under inspection.
+The parity-to-rigidity implication is still unproved. A separate parent
+source screen from 19:22:25, bounded by 19:32:25, matched the exact Bourgain
+short-sum application already recorded in the transform-phase owner and
+stopped that duplicate. It supplies no new result.
+
+A distinct fresh-context backward discovery pass,
+`/root/m4_backward_structure_reset`, owns only
+`/tmp/pi-m4-backward-structure-reset-20261127-1929/`, with twenty minutes
+from its first clock and reassessment within ten. It excludes the active
+carry-congruence branch and seeks a new exact-period constraint from permanent
+avoidance. Unfinished claims are excluded from adoption. Research continues;
+none of these checkpoints is M4 acceptance or a stopping condition.
+
+The post-AGM worker completed at 19:31:51 UTC within its bound. Its retained
+result is a word/quantifier extension of the old finite-entry sieve, together
+with the elementary radius-one obstruction to the parity shortcut; no new
+sufficient visitation implication survived. Parent replay at 19:33:19 passed
+2,586 synthetic exact assertions and preserved six originals. Independent
+review ran 19:33:13--19:34:58 within six minutes: no defect, one implemented
+open-cylinder clarification, and the same-numerator/continuation obligations
+retained open. The [owner extension](m4-generating-functions.md#every-finite-word-can-retain-the-dyadic-entry-precision)
+is pending full changed-file review.
+
+The fresh backward worker began at 19:27:48 UTC, with deadline 19:47:48 and
+reassessment at 19:36:48. Its prime-power column decomposition and normality
+source application are unfinished and excluded from adoption. The parent
+recent-source screen ran 19:35:04--19:37:28 within ten minutes. It matched
+the September 2026 logarithmic determinant to the exact previously assessed
+commit and all four source blobs; no changed hypothesis or new consumer was
+found. The preprint's theorem and external Lean scope remain unadopted here.
+A handoff navigation pointer now makes that prior source assessment easier
+to locate. Research continues under the unchanged V contract.
+
+The column report froze at 19:42:01 UTC within its twenty-minute bound;
+the worker's final unchanged replay finished at 19:43:27. Parent replay at
+19:45:00 passed 1,208 exact synthetic checks, with five originals preserved.
+Source pages and paper algebra were independently inspected by the parent
+by 19:51 within eight minutes. Separate paper review completed at 19:48:53,
+reassessed at 19:48:30; its initial clock was lost in compaction and only
+the first recovered 19:47:02 and conservative 19:54 target are certified.
+No defects or required improvements were found. Actual correlations,
+uniform early visits and the insertion test's missing consumer remain open.
+The [column assessment](m4-fourier-windows.md#normal-prime-power-columns-do-not-supply-a-sum-estimate)
+and [review record](agy-reports/m4-continuation-review.md#prime-power-column-source-test--2026-11-27-utc)
+retain the source and evidence limits. Neither this nor the finite-word
+extension moves the checked proof frontier. Full integration is pending.
+
+Two distinct follow-ups were assigned before integration: an eighteen-minute
+uniform-window cost test, reassessing within nine minutes, and a twenty-two
+minute fresh initialized-history investigation, reassessing within eleven.
+Their bounds run from each worker's first clock. The former must test the
+usable growing cutoff, not merely fixed-sum normality; the latter seeks a
+constraint linking the same actual numerator across indices. Both own only
+new scratch directories and their unfinished claims are excluded from adoption.
+The parent continues M4; no local research bound is a stopping condition.
+
+Full integration review of the finite-word and column checkpoint ran
+19:54:16--19:56:41 UTC within twelve minutes, reassessed at 19:56:24.
+No new defect or improvement; the prior open-cylinder clarification was
+verified in production. The exact five-path diff, all 52 bound files and
+28 preservation hashes matched. All same-history, analytic-continuation,
+correlation and uniform-visit obligations remain open. Documentation (93),
+process tests (38), and whitespace checks passed; no Lean changed.
+Complete scope, validation and review capture are retained in
+`/tmp/pi-m4-word-column-integration-20261127-1957/`. Research continues.

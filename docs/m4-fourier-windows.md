@@ -363,3 +363,89 @@ exit 0. It checks 30 coefficient orders, exact finite remainder identities,
 sampled monotonicity and 245 anchor/order denominator pairs. Those finite
 checks are sanity evidence; the infinite sums and universal inequalities
 above remain paper mathematics. No production Lean declaration changed.
+
+## Normal prime-power columns do not supply a sum estimate
+
+A different use of the same Bailey–Crandall source decomposes the infinite
+BBP series rather than freezing one rational prefix. Put
+`(r,c_r)=(1,4),(4,-2),(5,-1),(6,-1)`. Every denominator `8n+r` uniquely has
+the form `m*17^k`, with `17` not dividing m and `m=r mod 8`. Absolute
+convergence permits the exact partition
+
+```text
+C_(r,m)=(c_r/m)*sum_(k>=0)17^(-k)*16^(-(m*17^k-r)/8),
+pi=sum_r sum_(m>=1, 17 not dividing m, m=r mod8) C_(r,m).
+```
+
+Each column is 16-normal by a direct application of Definition 4.1 and
+Theorem 4.8 (printed pp.533,535), followed by rational-affine invariance
+in Theorem 2.2(7), p.530. For the k>=1 sum choose integer bases b=16,c=17,
+denominator exponents n_k=k and numerator exponents m_k=(m*17^k-r)/8;
+set m_0=n_0=0 separately as required by the source. Both sequences strictly
+increase. For k>=2 the gap is mu_k=2m*17^(k-1), while nu_k=1. With
+gamma=3/4 the source's normalized gap grows by 17^(1/4)>1. The k=0 term
+is rational and c_r/m is nonzero rational. This avoids an invalid appeal to
+integer-base Stoneham normality after an irrational rescaling.
+
+The text and rendered source pages, including the displayed proof of
+Theorem 4.8, were inspected. The earlier dependency chain was not fully
+audited. This is a paper source application, not a Lean theorem, and it
+does not assert normality of any sum of distinct columns.
+
+### An exact cancellation test
+
+Let t_n=1/[(8n+1)(8n+5)] and use the positive forcing
+
+```text
+F(n)=16*t_n-t_(n+1)
+    =4/(8n+1)-4/(8n+5)-1/[4(8n+9)]+1/[4(8n+13)].
+```
+
+Its leading asymptotic is the same 15/(64n^2), but its zero-initialized raw
+sum is U_n=(16/5)16^n-t_(n+1). Thus fract(U_n)=1/5-t_(n+1) lies in
+(0,1/5) and permanently avoids (1/4,3/4). Its weighted period is 16/5.
+It loses the exact A, actual pole classes, A(0), and irrational period;
+it is not a counterexample to V or to a rational-or-dense conjecture.
+
+Every individual nonzero 17-power column of these four poles is still
+normal. For r=9,13 delete the inadmissible k=0 term when necessary; all
+k>=1 exponents remain positive. At paired poles r,r+8 with coefficients
+16d,-d, the common terms cancel exactly: the second exponent is one less
+than the first. Only the unpaired terms 4 and -4/5 survive. Consequently
+individual normality, rational coefficients, absolute convergence, positive
+four-pole forcing, zero initialization and the matched leading decay do not
+justify a sum transfer. The actual classes lack this particular pairing,
+but that alone supplies no theorem controlling their correlations.
+
+### The growing cutoff has a separate quantifier problem
+
+For integer M>=6, let T_M retain in full the actual columns with m<=M.
+Set L=floor((M-6)/8)+1. An omitted monomial has 8n+r>M and therefore n>=L.
+The sum of absolute pole coefficients at n is at most 8/(8n+1), giving
+
+```text
+|pi-T_M| <= [128/(15*(8L+1))]*16^(-L).
+```
+
+For a fixed tolerance delta>0 this guarantees 16^n*|pi-T_M|<=delta when
+
+```text
+n <= L+log_16(15*delta*(8L+1)/128)
+   = M/8+log_16 M+O_delta(1).
+```
+
+This is a sufficient window from an upper bound. It is not necessary or
+optimal, does not lower-bound the signed omitted sum, and does not exclude
+later absolute or modular coincidences. Normality of the finite sum T_M is
+unproved. Even if proved for every fixed M, it would not place a visit before
+this cutoff uniformly as M grows. For V, every target and threshold would
+need such an early visit with an interior margin absorbing both approximation
+error and the actual E_n, retaining the recurrence n+1 versus orbit n offset.
+Individual columns, finite sums, and growing-cutoff visits are distinct claims.
+
+The [review record](agy-reports/m4-continuation-review.md#prime-power-column-source-test--2026-11-27-utc)
+retains the immutable report, source, exact synthetic checks, parent replay
+and independent review. A possible insertion-valuation test has no proved
+real-visitation consumer. Further work on this representation must test a
+joint estimate at n of order M, rather than take a fixed-M limit and silently
+transfer it to pi. V/M4 and the actual odd-carry question remain open.

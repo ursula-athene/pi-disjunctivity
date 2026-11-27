@@ -563,6 +563,65 @@ existence and the real avoidance bounds are paper arguments. Frozen evidence:
 No global counterexample, Lean export or M4 acceptance follows. The independent
 review record owns both this extension and the sampling extension's status.
 
+### Every finite word can retain the dyadic entry precision
+
+The same sieve mechanism has a word-uniform extension. For every sufficiently
+large N, every residue rho modulo 16^N and every word w in {1,...,14}^N,
+at least two reduced fractions x=p/q_N in (0,1) have x=rho modulo 16^N
+in Z_2 and realize w as their next N canonical carries under the exact future
+forcing A(N+j), 1<=j<=N. Here q_N is the actual reduced odd denominator of
+S_N, with the previously reviewed paper bounds log q_N=6N+o(N) and
+omega(q_N)=o(N). No actual prefix floor is evaluated.
+
+For I=[1/32,31/32], 0<A(n)<1/4 and 1<=d<=14, the inverse map
+f_(n,d)(t)=(d-A(n)+t)/16 sends I strictly inside I. Define J as the
+**interior of the composed image** for the prescribed word. It has length
+(15/16)16^(-N), and every intermediate state has the prescribed carry.
+Writing p=t_0+16^N t for the congruence p=rho*q_N modulo 16^N gives a
+t-interval of length L=(15/16)q_N/16^(2N). Each prime dividing q_N excludes
+one residue of t. The preceding open-interval sieve therefore gives
+
+    G >= L*phi(q_N)/q_N-2^omega(q_N)
+      >= L*2^(-omega(q_N))-2^omega(q_N) -> infinity,
+
+uniformly in rho and w, since log L=(6-8log2)N+o(N) and 6>8log2.
+At least two choices allow exclusion of the actual fractional entry.
+Choosing the actual rho and adding floor(S_N) preserves the initial raw
+integer part and denominator. Exact forcing propagates the difference to
+zero modulo 16^(N+j) at step j. Taking letters 2 or 4 realizes any N-bit
+parity word for the half-carries while all carries are even.
+
+This extends the archived argument to every sufficiently large N and every
+word; it does not preserve that argument's additional odd-prime component
+at prime N. Neither exact initialization, every future denominator, nor one
+coherent infinite choice is retained. It is a finite countertest, not an
+infinite avoiding model or a new visitation mechanism.
+
+### Even carries do not increase an analytic radius
+
+The exact rational formula gives A(n)=n+1 modulo 2. Thus, for formal series
+over F_2, Hbar=1/(1-z^2). If the actual carries are eventually even, Kbar
+is a polynomial P, and the existing identity gives
+
+    Ybar=z/(1-z^2)+zP.
+
+This is a finite-congruence consequence, not continuation over Q_2 or C.
+Any non-eventually-zero series over a fixed finite rational coefficient
+alphabet has 2-adic radius exactly one: its nonzero coefficient norms are
+bounded above and away from zero, so the root-test limsup is one. The actual
+K has infinitely many nonzero coefficients because K(1/16)=pi is irrational.
+Dividing by two or removing a finite prefix cannot change that radius.
+Under eventual evenness the half-carry tail has coefficients in {0,...,8},
+with both complex and 2-adic radii exactly one; the displayed Ybar also gives
+infinitely many unit coefficients of Y. This elementary observation supplies
+no parity-to-continuation or rigidity theorem.
+
+The [review record](agy-reports/m4-continuation-review.md#finite-word-and-parity-radius-extension--2026-11-27-utc)
+retains the immutable extension, parent clarification and finite synthetic
+checks. The remaining question concerns the same initialized numerator over
+unbounded nested histories, beyond the finite summaries tested here. No
+specific relation eliminating that numerator has been obtained.
+
 ## Rational entries preserve universal late visitation
 
 Changing the rational entry does preserve the *global* visitation question.

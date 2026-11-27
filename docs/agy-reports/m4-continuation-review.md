@@ -3457,3 +3457,94 @@ independently checked. Complete capture and exact scope are retained in
 `/tmp/pi-m4-agm-integration-review-20261127-1922/`. Documentation (93),
 process tests (38) and whitespace checks passed; unchanged Lean was not
 rebuilt. Only factual review/outcome records follow the reviewed diff.
+
+## Finite word and parity radius extension — 2026-11-27 UTC
+
+Frozen report `/tmp/pi-m4-post-agm-discovery-20261127-1914/report.md` has
+SHA-256 `f9bad45e609e8c2921ba798fe21f6e13d28c5d9de4e1ca99425f4a40ae196477`;
+manifest `3f7f789a162afd1b548636ffd369825df0b471a90bdd72fe624140dedd2adb29`.
+It extends an archived sieve argument in its word and entry-index quantifiers;
+it loses that argument's extra odd-prime component and supplies no new
+visitation mechanism. The radius observation is elementary general evidence,
+not an actual-specific advance. Previously reviewed denominator asymptotics
+remain paper inputs; no fresh source proof or Lean certificate is claimed.
+
+Parent packet `/tmp/pi-m4-half-carry-parent-20261127-1933/` has manifest
+`5e941058288376045d4878e804b59b77a2276b8c8ff8e4241111307f4e8bbee4`.
+Unchanged replay at 19:33:19 UTC passed 2,586 synthetic exact checks, exit
+zero, identical stdout, empty stderr and six originals preserved. The parent
+reconstructed the cylinder, open-interval sieve, uniform quantifiers, formal
+mod-2 identity and root-test argument within its five-minute bound.
+
+Independent `/root/finite_log_independent_review` ran
+19:33:13--19:34:58 UTC within six minutes. **D: none. I1: implemented and
+reviewed at packet level:** take the interior of the composed closed interval
+as J. The production owner now uses that wording. **Q1: unresolved:** a
+constraint on the same actual numerator over unbounded nested histories.
+**Q2: unresolved:** parity does not supply analytic continuation or rigidity.
+Neither question invalidates the finite extension; both leave V and the
+odd-carry target open. Full return is parent `paper-review.txt`.
+
+Both complete adversarial guides, replacement procedure and critic context
+applied. The reviewer checked five worker artifacts, six parent entries,
+replay identity and preservation; assertion counts/exits remain caller
+execution evidence. No reviewer writes, checker/probe/build execution,
+rendering/extraction, Git mutation, network, installation or delegation.
+Production integration review remains pending.
+
+## Prime-power column source test — 2026-11-27 UTC
+
+Frozen report `/tmp/pi-m4-backward-structure-reset-20261127-1929/report.md`
+has SHA-256 `b6bb6799938636f329b52125be89e6ea99499e3398c97bbb4713013f5f9b61e1`;
+worker manifest `57abbd005c4aad7d42231aba4b9769df0209f799e8611d8e402f3dd6af66e306`.
+The source PDF hash is
+`9d1510fc72b6298295a3f10ca6d314936d083bc698982e0386e02bd8c9d9108f`.
+The worker froze at 19:42:01 UTC within 19:27:48--19:47:48, reassessing
+at 19:36:48. It distinguishes a different decomposition from the earlier
+frozen-prefix source application, without claiming novelty or a new V proof.
+
+Parent packet `/tmp/pi-m4-columns-parent-20261127-1946/` retains unchanged
+replay, source pages and assessment. Replay at 19:45:00 exited zero with
+1,208 synthetic exact assertions, identical stdout, empty stderr and all
+five originals preserved. Parent reconstruction and visual source inspection
+finished at 19:51 within its eight-minute bound. The v2 manifest is
+`51d875e2a3350a8a0f054a2c4583cc3d2b196358dac848b8a6ae879fc3064076`.
+It preserves the original manifest and normalized review transcription; the
+full verbatim return is `paper-review-verbatim.txt`, SHA-256
+`30980baa483d30d3972e2d337b54527eb08bc10dab190d5feaecc72afcda83da`.
+
+Independent `/root/finite_log_independent_review` completed at 19:48:53 UTC,
+with reassessment 19:48:30, before the communicated conservative 19:54 target.
+Its initial clock output was lost during compaction; the first recovered
+clock is 19:47:02, and the missing start time is not certified.
+**D: none. I: none required. Q1: unresolved:** actual sum correlations.
+**Q2: unresolved:** uniform early visits with the BBP tail margin.
+**Q3: unresolved:** the exploratory insertion test has no proved real-visit
+consumer. These do not invalidate the limited column calculation; they
+prevent its use as an unconditional V argument.
+
+The reviewer reconstructed all three paper claims, inspected the checker,
+source text and rendered printed pages 530,533,535, and verified worker
+hashes and parent replay identity/preservation. Both full adversarial guides,
+replacement procedure and critic/source skills applied. Earlier analytic
+source dependencies were not fully audited. The reviewer ran no checker,
+probe, build, rendering or extraction and made no writes, Git mutations,
+network calls, installations or delegations. Finite checks prove neither
+normality nor universal visits; reviewer agreement is not kernel checking.
+Full changed-file integration review and checks remain pending.
+
+Full five-path integration review by `/root/finite_log_independent_review`
+ran 19:54:16--19:56:41 UTC within twelve minutes, with early reassessment
+at 19:56:24. Baseline `70666670`; exact diff SHA-256
+`a14f97c72e67c214a689ff61039ed052cef7b91a8c76ab08a5108636c537177e`;
+manifest `537e1b2b27e3e9aec374d6006adef8353ef2b9925aab032e3ee5562c0326f98a`
+bound 52 files. Live scope, nested evidence and all 28 protected/unrelated
+hashes matched. **No new D/I. Prior finite-word I1: verified implemented
+in production.** All five open questions above remain explicit; none is
+silently treated as a supplied hypothesis or a theorem. Full capture is
+`/tmp/pi-m4-word-column-integration-20261127-1957/review-full.txt`.
+Documentation (93), process tests (38), and working/staged whitespace checks
+passed. Lean is unchanged and was not rebuilt. The corrected guide-filename
+mistake occurred during packet preparation, before review; it was not a
+failed review run. Only factual review-outcome records follow the reviewed
+diff. This checkpoint does not accept V/M4 or end ongoing research.
