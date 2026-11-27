@@ -2866,3 +2866,135 @@ occurred. Documentation (93), process tests (38), whitespace and preservation
 checks passed; unchanged Lean was not rebuilt. Source-proof and denominator
 input limits remain explicit. Subsequent edits record review outcomes only;
 the unfinished inequality research is excluded. V/M4 remain open.
+
+## Zero-entry quadratic inequality — 2026-11-27 UTC
+
+Worker packet `/tmp/pi-m4-zero-entry-inequality-20261127/` completed at
+15:44:58 UTC within its 15:32:01--15:52:01 bound. Original report SHA-256
+`b6a5a9c9a49dace0cf9626fe2d71e5db8e9174fa91753dfc283d79068c1bb439`;
+manifest SHA-256
+`42f41b18a9796a25d242550beecfc1a132d3ec5d87123a33497da1b41435cd09`.
+Parent unchanged-copy replay passed, with identical evidence and five original
+files preserved; replay SHA-256
+`549cdd0ae07060e864471908aeb4b4ec6902dece3968b3c24260fe23e9b33925`.
+Finite counts are 192 synthetic branches, 384 drift identities, twelve formal
+tail steps, ten comparison steps, 64 synthetic phases and seven boundary
+assertions. No actual orbit or symbolic-ceiling value was computed.
+
+Independent `/root/generating_review` ran 15:46:29--15:48:57 UTC within ten
+minutes. Complete response:
+`/tmp/pi-m4-zero-entry-inequality-paper-review-20261127.txt`.
+**D: none. I1: resolved:** explicitly restrict finite/infinite telescopes
+to N>=1, the domain where the quantities are defined. The immutable repair
+`/tmp/pi-m4-zero-entry-domain-clarification-20261127/report-v2.md` has SHA-256
+`2e2ea7e0b5bb91b711776cd555610a98896f2350636f9236b04a142e35e25532`;
+delta SHA-256
+`6a0545239dfd39365d8a55e622f859d81d39f65751f67fc5e104ff57e577fac2`;
+manifest SHA-256
+`a39a35bcf94d31074956ab9700c69788f53b355f333ff340f91a9f339990c98f`.
+The critic separately inspected the entire repair during the full review;
+formulas, checker and original artifacts were unchanged.
+**Q1: retained open:** actual late boundary and low-even-branch contribution.
+
+The critic reconstructed both drift identities, reference/countermodel cells,
+all constants, the arbitrary-threshold boundary, and the near-zero family with
+its m+1 carry threshold and explicit lost hypotheses. Both previously fully
+read adversarial guides, critic skill and replacement procedure applied with
+unchanged hashes. It inspected source and caller receipts without executing
+checks, builds or probes, changing files, contacting services or delegating.
+No external source theorem was required. Universal arguments remain paper
+mathematics; full production integration is pending. C_odd/V/M4 remain open.
+
+## Phase Hankel capacity test — 2026-11-27 UTC
+
+Packet `/tmp/pi-m4-joint-structure-discovery-20261127/` completed at
+15:56:53 UTC within its 15:40:47--16:00:47 bound. Original report SHA-256
+`9519e2315f293668bbb834ca91ee31b731856bd7c7fd8aba204263d602743abb`;
+SHA256SUMS hash
+`506fdfc303051b7111ec6021382cd03793943aeabc1367600eba0d3b729b2359`.
+Parent replay changed only the hardcoded receipt destination, passed sixteen
+synthetic fixtures with identical receipt and five originals preserved;
+replay SHA-256
+`6eaa7cc143e3545bb29ce8594e1d519ad31806d9626b20ae0e815f719dd2a236`.
+The exact destination-only delta is retained; this was not an unchanged copy.
+The worker's pre-seal N=11 to N=12 fixture correction retained the condition
+that the fixed prime 89 not divide the local denominator lcm.
+
+Independent `/root/finite_log_independent_review` ran 15:58:13--16:01:06 UTC
+within ten minutes. Full response:
+`/tmp/pi-m4-hankel-capacity-paper-review-20261127.txt`.
+**D: none. I1: resolved:** the determinant is affine in the old state with
+its carry block fixed; no global affinity across changing canonical cells
+is asserted. Authoritative immutable report
+`/tmp/pi-m4-hankel-fixed-carry-clarification-20261127/report-v2.md` has SHA-256
+`b8560c9e0492d40b033e9f9590a0b8c3b41851acf4cdb6c026f4e6d1100377a5`;
+manifest SHA-256
+`f058573e582191da78fa6a37ee31a9f209c19ec5b7a9af4e0149e3cd01925bfc`.
+The critic separately inspected the full repair during the original review.
+**Q1--Q2: retained open:** nonvanishing/subquadratic global denominator growth,
+and actual-history quadratic decay. Old-prime exponent one requires the
+stated valuation -1; it is not a global height result.
+
+The critic reconstructed the rank-one formula, denominator bounds, bordered
+matrix, circulant determinant, exact-A perturbation and carry stability. It
+retained the countertest's varying entries and very large starting indices,
+and the loss of the actual denominator. Both guides, critic skill and
+replacement procedure were applied with unchanged hashes. Checks are caller
+evidence; no reviewer checker/probe/build/extractor execution, mutation,
+service or delegation occurred. Universal paper arguments are not kernel
+proofs. Production integration and the linear-horizon follow-up were excluded;
+V/M4 remain open.
+
+The linear-horizon packet `/tmp/pi-m4-hankel-linear-horizon-20261127/`
+completed at 16:06:08 UTC within its 16:00:00--16:15:00 bound. Report SHA-256
+`bc6152079568b293c3996643397b8d427c4baf92e89302da1c589a9c602e4fc1`;
+SHA256SUMS hash
+`ca843cc764426f991cdef22d32086b413c8053ef97a4d5942d559631d10f7f83`.
+Parent replay changed only the receipt destination and passed thirteen
+synthetic fixtures with identical receipt and five originals preserved;
+replay SHA-256
+`cb91bdd2e3a15e11df896710011c99093facaab45183f39cbbb5e54c584e9b76`.
+The seven matrix, three coprime-interval and three forced-block fixtures
+use synthetic denominators, explicitly not actual Q_N values.
+
+Independent `/root/generating_review` ran 16:07:05--16:09:24 UTC within
+ten minutes. Complete response:
+`/tmp/pi-m4-hankel-linear-horizon-paper-review-20261127.txt`.
+**D/I: none. Q1--Q2: retained open:** actual-history decay and the complete
+arithmetic contract. The construction does not supply nonzero actual
+determinants with small full denominators or refute the combined conditional
+consumer. The prior PNT-dependent denominator rate remains a retained paper
+input, not a freshly audited source proof or Lean result.
+
+The critic reconstructed the inverse norm, tail index and bound, two-choice
+coprime count, exact reduced denominator, changed numerator, canonical cell
+stability before matrix perturbation, strict singular-value bound and eventual
+threshold. It verified all original and replay artifacts, including the
+destination-only copy delta. Both guides, critic skill and replacement procedure
+were applied with unchanged hashes. Caller checks were inspected without
+execution; no mutation, service or delegation occurred. Universal asymptotic
+claims remain paper mathematics. Production integration is pending; V/M4 open.
+
+Full combined integration review by `/root/finite_log_independent_review`
+ran 16:12:10--16:15:24 UTC within fifteen minutes. Complete response and
+frozen scope are retained in `/tmp/pi-m4-inequality-hankel-review-20261127/`.
+Baseline `dace798dd2c1fd77a766f89b063629afb9125b7e`; exact diff SHA-256
+`b202c039f9ef38a9c3838c4130c2138aed64ee303a57b0a6036a888a0d403ae4`;
+manifest SHA-256
+`d5a7979aeef57c167d7bf22751787e0bff43049f6a3117a32f4ceb2846da73be`.
+**D: none. Historical I items: remain resolved; no new improvements.**
+**Q1--Q3: retained open:** actual late boundary/low-even contribution,
+nonvanishing and complete subquadratic determinant-denominator growth, and
+actual-history decay. No comparison result refutes the stronger conditional
+contract or supplies actual visitation.
+
+The critic reconstructed all three integrated arguments and checked the exact
+live/frozen diff and all 79 bound files: six production, forty evidence, three
+context, two guides, 17 protected and 11 unrelated. Both guides and the
+replacement procedure remained applicable and unchanged. Replay scopes and
+counts were verified as caller evidence; no reviewer execution, mutation,
+service or delegation occurred. Documentation (93), process tests (38),
+whitespace and preservation checks passed; unchanged Lean was not rebuilt.
+The prior denominator asymptotic remains a paper input. Subsequent edits
+record outcomes and research-start metadata only. The unfinished numerator
+inquiry was excluded; C_odd/V/M4 remain open.

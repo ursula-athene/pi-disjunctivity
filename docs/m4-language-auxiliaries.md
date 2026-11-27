@@ -1407,6 +1407,95 @@ preserved. These are finite algebra fixtures, not an initialized orbit census
 or proof of the universal classification. Separate paper review resolved the
 endpoint clarification; no Lean result or progress on V is claimed.
 
+## A zero-entry quadratic sign fails on low even carries
+
+One inequality test preserves the actual zero boundary. Extend E_-1=pi/16
+and compare with R_n=(49/15)*16^n-E_n, n>=-1. It has exact A forcing,
+first raw floors 0,3, carry 3 at n=0 and carry 4 thereafter. Its phases
+are r_0=(49/15-pi)/16 and r_n=4/15-E_(n-1) for n>=1. The bound
+0<E_n<=E_0=pi-47/15<1/105 verifies all these canonical cells.
+This comparison loses the zero fractional seed and rational raw samples.
+
+For any exact-A canonical path set e_n=y_n-r_n, h_n=k_n-4,
+a_n=16^(1-n), and Z_n=a_n*e_n, all for n>=1. Then
+
+```text
+e_(n+1)=16*e_n-h_n,  Z_(n+1)=Z_n-a_n*h_n/16,
+Z_n^2-Z_(n+1)^2=a_n^2*(h_n^2+2*h_n*e_(n+1))/256.
+```
+
+Since |e_n|<1, even k_n makes the square nonincreasing: nonzero even
+h_n has magnitude at least 2. But a square has no negative initial value.
+The tested fixed tilt, beta=2/15 and V_n=Z_n*(Z_n+beta), does:
+
+```text
+Z_1=pi-49/15=E_0-2/15,
+V_1=E_0*(E_0-2/15)<0                 (actual zero initialization),
+D_n:=V_n-V_(n+1)=(a_n*h_n/16)*(beta+Z_n+Z_(n+1)).
+```
+
+For n>=2, |Z_n|+|Z_(n+1)|<17/256<beta. Thus D_n has exactly
+the sign of k_n-4: low even labels 0 and 2 increase V, label 4 preserves
+it, and labels 6,...,16 decrease it. Evenness does not justify nonincrease.
+
+An exact countertrajectory uses alpha=391/120 and R_n*=alpha*16^n-E_n.
+It also has first raw floors 0,3, but its carries are 3 at n=0, 4 at n=1
+and 2 for every n>=2. Its phases are 31/120-E_0 at n=1 and
+2/15-E_(n-1) thereafter. Relative to the reference above,
+
+```text
+e_1*=-1/120, e_n*=-2/15 (n>=2),
+Z_1*=Z_2*=-1/120, V_1*=V_2*=-1/960,
+V_3*=-17/245760, V_3*-V_2*=239/245760>0.
+```
+
+It has a nonzero irrational seed and irrational raw samples. The same
+negative boundary sign therefore occurs in an even-tail comparison without
+contradicting the actual C_odd question. The exact drift itself supplies
+no rational-initialization distinction.
+
+The late boundary is a separate obligation. For 1<=N<M,
+
+```text
+V_N-V_M=sum_(n=N)^(M-1)D_n,
+V_N=V_1-sum_(n=1)^(N-1)D_n,
+V_N=sum_(n>=N)D_n.
+```
+
+The last sum converges absolutely and Z_n,V_n tend to zero. An even tail
+beginning at N retains the unknown finite past; V_1<0 does not imply V_N<0.
+For N>=2 its sign is that of the actual comparison y_N-r_N. Proving a
+negative late boundary and subsequent nonincrease would contradict the zero
+limit, but neither follows here.
+
+The same continuous boundary expression also fails a near-zero-entry test.
+Without evaluating the ceiling, set
+alpha_m=(ceil(16^m*pi)+2/15)/16^m for m>=1. Its exact-A trajectory starts
+at delta_m=(alpha_m-pi)/16, with
+
+```text
+2/(15*16^(m+1))<delta_m<17/(15*16^(m+1)),
+47/15<pi<alpha_m<22/7+17/240<49/15.
+```
+
+These irrational entries approach zero from above, retain first floors 0,3
+and the strict negative V_1 sign, and have carry 2 from index m+1 onward.
+They lose exact rational initialization; they do not refute a certificate
+using that arithmetic property. They do reject separation by this boundary
+sign when the eventual-tail threshold can grow.
+
+Suspend this fixed tilt, not inequalities generally. A new estimate must
+control the actual low-even-branch contribution and late boundary using
+arithmetic absent from these comparisons; changing only the tilt repeats
+the failure. C_odd and V remain open. Authoritative report
+`/tmp/pi-m4-zero-entry-domain-clarification-20261127/report-v2.md`, SHA-256
+`2e2ea7e0b5bb91b711776cd555610a98896f2350636f9236b04a142e35e25532`.
+Parent unchanged-copy replay passed 192 synthetic even branches and 384
+drift identities, 12 formal tail steps, ten comparison steps, 64 synthetic
+period phases and seven boundary assertions, with identical receipt and
+five originals preserved. No actual orbit or ceiling was sampled. Universal
+arguments remain paper mathematics; no Lean or visitation result is claimed.
+
 ## Evidence boundary
 
 The frozen sine-zero report is `/tmp/pi-m4-sine-zero-report-v1.md`, SHA-256

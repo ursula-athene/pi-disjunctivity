@@ -1524,3 +1524,52 @@ comparison test; no unfinished inequality is adopted. Full integration and
 focused scalar-boundary clarification reviews passed. Documentation, process,
 whitespace and preservation checks passed; unchanged Lean was not rebuilt.
 Continue M4 with V and C_odd open.
+
+## Zero-entry inequality and the next arithmetic test — 2026-11-27 UTC
+
+The boundary/source checkpoint is local commit
+`dace798dd2c1fd77a766f89b063629afb9125b7e`; exact staging and post-commit
+inspection passed, with empty index and clean task-owned tree. At inspection
+the branch was thirteen ahead of its remote-tracking reference. Subsequent
+edits are uncommitted; this run issued no push or PR.
+
+The [zero-entry quadratic test](m4-language-auxiliaries.md#a-zero-entry-quadratic-sign-fails-on-low-even-carries)
+keeps the actual negative boundary, but its tilt increases along valid low
+even branches. An exact-forcing comparison refutes monotonicity; a late
+threshold also retains the uncontrolled finite past. A family of irrational
+changed seeds approaching zero shares the negative boundary sign and has
+even tails, while losing rational initialization. Suspend this tilt rather
+than searching nearby coefficients. A useful next inequality would need
+an actual arithmetic selector and a controlled late boundary.
+
+Parent unchanged-copy replay passed with identical evidence and five
+originals preserved. Independent paper review found no defect and resolved
+the explicit N>=1 domain clarification. Full integration review is pending.
+The separate fresh-context inquiry tests a growing determinant against its
+exact arithmetic cost; its log owns bounds and outcomes. No unfinished
+estimate or new Lean theorem is adopted. C_odd, V and M4 remain open.
+
+The [phase Hankel test](m4-positive-certificates.md#phase-hankel-determinants-reduce-old-prime-cost-but-lose-generic-capacity-decay)
+finds an arithmetic gain with fixed carries but rejects generic quadratic
+decay under avoidance. Its exact-A finite comparisons retain rational entries
+while losing the actual selected numerator and denominator. Parent replay
+changed only the receipt destination, passed sixteen synthetic fixtures and
+preserved all originals. Independent paper review resolved the fixed-carry
+scope clarification. Both the actual-history decay and global subquadratic
+denominator bound remain unproved. The bounded follow-up tests linear
+horizons and the actual denominator grid; it remains excluded from adoption
+until reviewed. Combined production integration is still pending.
+
+The separately reviewed linear-horizon follow-up now retains m=N and exactly
+the actual reduced denominator while changing a coprime numerator. Coprime
+interval counting and the margin 6>log256 produce the comparison for every
+sufficiently large N. Cell stability precedes the matrix perturbation, giving
+the exponential determinant lower bound throughout an avoiding finite block.
+This rejects that generic real-decay step, not the actual-history contract;
+the full determinant denominator remains uncontrolled. Parent replay passed
+thirteen synthetic fixtures with only the receipt destination changed and
+all originals preserved. Paper review found no D/I item. Combined integration
+review passed with the two historical clarifications resolved and no new D/I
+item. Documentation, process, whitespace and preservation checks passed;
+unchanged Lean was not rebuilt. A fresh inquiry seeks an actual-numerator
+mechanism, with its bound and scope in the log. V/M4 remain open.

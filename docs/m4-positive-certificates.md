@@ -376,6 +376,156 @@ contract, criticism and checker. Its unchanged-copy replay passed with an
 identical receipt. This encoding discards integer growth and does not supply
 the actual canonical numerator lower bound; an unweighted transfer is suspended.
 
+## Phase Hankel determinants reduce old-prime cost but lose generic capacity decay
+
+A different determinant tests the tradeoff behind the earlier Vandermonde
+calculation. For a block z_j=y_(N+j), write c_j for its canonical carry and
+
+```text
+R_j=sum_(r<j)16^(j-1-r)*A(N+r),
+I_j=sum_(r<j)16^(j-1-r)*c_r,
+z_j=16^j*z_0+R_j-I_j.
+```
+
+The m by m phase Hankel matrix Z_ij=z_(i+j) is z_0*v*v^T+B,
+where v_i=16^i and B_ij=R_(i+j)-I_(i+j). With the carry block fixed,
+
+```text
+det Z=a*z_0+b,
+a=v^T*adj(B)*v, b=det B.
+```
+
+Multilinearity proves this even for singular B: selecting two rank-one
+columns gives zero. B changes when canonical carries change, so this is
+not a globally affine function across arbitrary entries. Let L be the lcm
+of the reduced denominators of A(N),...,A(N+2m-3). Then L^(m-1)*a and
+L^m*b are integers. At a prime p not dividing L, a nonzero determinant has
+v_p(det Z)>=min(v_p(z_0),0). Thus an old prime with v_p(z_0)=-1 has
+exponent at most one in its denominator, not the Vandermonde's quadratic
+degree. The crude global bound is den(det Z) dividing den(z_0)*L^m;
+new-prime cost, nonvanishing and actual numerator remain uncontrolled.
+
+Descending row and column differences retain every floor term and give
+the symmetric bordered matrix with top-left entry z_0, off-diagonal f and
+lower block C, where for 1<=i,j<m,
+
+```text
+f_i=A(N+i-1)-c_(i-1),
+C_ij=A(N+i+j-1)-16*A(N+i+j-2)-c_(i+j-1)+16*c_(i+j-2),
+det Z=z_0*det C-f^T*adj(C)*f.
+```
+
+No positive-moment sign for raw A transfers automatically to C. One exact
+sufficient consumer would require, under actual eventual avoidance, nonzero
+determinants at late starts N_r with m_r tending to infinity, both
+log den(H_r)=o(m_r^2) and log|H_r|<=-delta*m_r^2 for some fixed delta>0.
+A nonzero rational has magnitude at least the reciprocal of its denominator,
+so these estimates would contradict one another. Both remain unproved.
+
+The proposed generic real-side estimate is false. For m>=2, the unforced
+periodic word 0^(m-1)1 has phases t_j=16^(j mod m)/(16^m-1), all in
+(0,1/15), but
+
+```text
+abs(det[t_(i+j)]_(0<=i,j<m))=1/(16^m-1).
+```
+
+Reversing rows modulo m gives a circulant with eigenvalues
+1/(16*omega-1), omega ranging over mth roots of unity. Their product gives
+the displayed magnitude, only exponential in m despite interval confinement.
+
+This countertest also has an exact-A finite-block version. Choose
+N>=m!*16^(2m), start at the rational entry t_0, and use the actual future
+forcing. Since 0<A(n)<1/n^2 for n>=1, the accumulated R_j is less than
+epsilon=16^(2m-2)/(15*N^2) for 0<=j<=2m-2. The phases t_j+R_j remain
+in (0,1/8); induction preserves the pulse carries. Multilinearity gives
+
+```text
+|det Z-det T|<=m!*m*2^(m-1)*epsilon<1/[2*(16^m-1)],
+|det Z|>1/[2*(16^m-1)].
+```
+
+This rejects a uniform quadratic-decay estimate based only on exact A,
+rational late entry and avoidance. It changes the selected numerator and
+denominator from the actual zero history, and varies both entry and horizon.
+It proves no fixed-seed eventual avoidance and does not refute the conditional
+actual-history consumer. Its starts are very large relative to its lengths;
+the separate linear-horizon follow-up remains a distinct question.
+
+Suspend the generic Hankel-capacity inference. Any actual-history estimate
+must control the retained carry/cofactor expression; the global arithmetic
+estimate is independently open. Authoritative report
+`/tmp/pi-m4-hankel-fixed-carry-clarification-20261127/report-v2.md`, SHA-256
+`b8560c9e0492d40b033e9f9590a0b8c3b41851acf4cdb6c026f4e6d1100377a5`.
+Parent replay changed only the receipt destination and passed sixteen exact
+synthetic fixtures with identical receipt and five originals preserved.
+Independent review resolved the fixed-carry clarification. These are paper
+results, not Lean certification or progress on V.
+
+### A linear horizon and the actual denominator still leave numerator choice
+
+The scale restriction in the preceding comparison does not rescue a uniform
+finite-block decay estimate. Use the retained paper input
+Q_N=q_(N-1)=den(y_N), log Q_N=6N+o(N). For every sufficiently large N,
+there is a coprime numerator 0<a_N<Q_N, explicitly different from the actual
+numerator, whose exact-A recurrence from a_N/Q_N has
+
+```text
+1/5<z_j<1/2                    (0<=j<=2N-2),
+abs(det[z_(i+j)]_(0<=i,j<N))>34^(-N).
+```
+
+The entry denominator is exactly Q_N, not merely a divisor or a similar
+asymptotic rate. The horizon is m=N. The comparison changes the initialized
+numerator; it is not an actual zero-seed trajectory or a fixed-seed eventual
+avoidance construction. No subquadratic determinant-denominator bound follows.
+
+For m>=2 shift the pulse to t_j=4/15+16^(j mod m)/(16^m-1), whose
+phases lie in (4/15,1/3) and whose carries are 4, with 5 once per period.
+Let C be the pulse circulant, P its cyclic row shift, J the all-ones matrix
+and R row reversal. Then (16P-I)C=I and the shifted phase Hankel matrix
+T=R(C+(4/15)J). Split constants from their orthogonal complement. On the
+complement the inverse has norm at most 17; on constants its eigenvalue is
+15/(1+4m). Thus the least singular value of T is at least 1/17.
+
+With m=N, the exact-forcing real comparison x_j=t_j-E_(N+j-1) has the
+same canonical carries. The tail bound E_(N+j-1)<1/[15*(N+j)^2] gives
+1/5<x_j<1/3 and operator norm less than 1/(15N) for the Hankel tail matrix.
+
+Put k=omega(Q_N) and H=2*4^k. In any real interval (X,X+H],
+inclusion-exclusion gives at least H*phi(Q_N)/Q_N-2^k>=2^k>=2 integers
+coprime to Q_N. Apply this with X=Q_N*x_0. Under the finite threshold
+
+```text
+N>=5, Q_N>1,
+(H/Q_N)*(256^N-1)/255<1/68,
+```
+
+these candidate fractions lie in (0,1/2). Choose one different from y_N,
+so z_0=x_0+delta, 0<delta<=H/Q_N, and den(z_0)=Q_N exactly.
+For v=(1,16,...,16^(N-1)), ||v||^2=(256^N-1)/255. All candidate states
+x_j+16^j*delta lie in (1/5,1/2) on the required window. Their real recurrence
+therefore verifies the unchanged canonical carries before the matrix identity
+Z=T-B+delta*v*v^T is used. Each perturbation has norm less than 1/68,
+so every singular value exceeds 1/34 and the determinant bound follows.
+
+Finally, k!<=Q_N and log Q_N=O(N) imply k=o(N), hence log H=o(N).
+The threshold expression has logarithm (log256-6)N+o(N), tending to minus
+infinity. The strict inequality log256<6 follows, for example, from
+exp(3)>sum_(j=0)^4 3^j/j!=131/8>16. This uses the actual denominator
+asymptotic without evaluating any actual denominator or phase.
+
+Thus exact A, the actual entry denominator and linear horizons still cannot
+imply the proposed generic quadratic Hankel decay. The actual numerator or
+full initialized carry history must enter any surviving real-side estimate;
+the separate global arithmetic estimate remains unproved. Frozen report
+`/tmp/pi-m4-hankel-linear-horizon-20261127/report.md` has SHA-256
+`bc6152079568b293c3996643397b8d427c4baf92e89302da1c589a9c602e4fc1`.
+Parent replay changed only the receipt destination and passed thirteen exact
+synthetic fixtures, with identical receipt and five originals preserved.
+The fixtures use synthetic denominators, explicitly not actual Q_N values.
+The asymptotic and universal claims remain paper mathematics, not Lean proofs.
+
 ## Evidence and research boundary
 
 The initial frozen packet `/tmp/pi-m4-direct-avoidance-20261127/` has

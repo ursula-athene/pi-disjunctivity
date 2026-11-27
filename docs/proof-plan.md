@@ -1052,9 +1052,25 @@ source theorem application is claimed. The
 extends the scalar obstruction to uniform rational open-cell edge identities.
 The stated discounted enlargement recovers only state endpoints and the known
 period. This rejects those equality classes, not actual-point identities or
-inequalities. The next bounded test keeps the actual zero-entry boundary in
-an inequality and uses eventual even carries as a weaker discriminator;
-neither C_odd nor V has been proved. The log owns bounds and outcomes.
+inequalities. The [zero-entry inequality test](m4-language-auxiliaries.md#a-zero-entry-quadratic-sign-fails-on-low-even-carries)
+retains a strictly negative actual boundary, but its fixed quadratic tilt
+increases on low even branches. An exact-forcing comparison refutes the
+proposed monotonicity, and the late boundary retains an uncontrolled finite
+past. Near-zero irrational changed seeds share the boundary sign and have
+even tails, without preserving rational initialization. Suspend this tilt;
+neither C_odd nor V has been proved. A fresh bounded test now compares
+growing multitime determinant costs against a forbidden-set capacity gain.
+The [phase Hankel test](m4-positive-certificates.md#phase-hankel-determinants-reduce-old-prime-cost-but-lose-generic-capacity-decay)
+reduces old-state denominator multiplicity with carries fixed, but its generic
+quadratic-decay claim fails even for exact-A rational-entry finite blocks.
+The actual-history numerator and global denominator estimates remain open.
+The follow-up retains linear horizons and exactly the actual denominator,
+but changes its coprime numerator; it still refutes the generic finite-block
+quadratic-decay estimate. It does not refute an actual-history estimate or
+prove a small full determinant denominator. The next fresh-context inquiry
+must use the actual canonical numerator fixed by the zero history, beyond
+denominator and valuation data. No unfinished estimate is adopted.
+The log owns bounds and outcomes.
 V and all Lean contracts are unchanged; neither conditional wrapping nor more
 classification supplies visitation.
 

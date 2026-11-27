@@ -4432,3 +4432,95 @@ restriction; Q2 retains numerator placement. All 62 revised-manifest files
 matched. Documentation (93), process tests (38), whitespace and preservation
 checks passed; unchanged Lean was not rebuilt. The unfinished inequality
 inquiry was excluded. This checkpoint leaves V, C_odd and M4 open.
+
+The boundary/source checkpoint is local commit
+`dace798dd2c1fd77a766f89b063629afb9125b7e`, parent `d78b31e7`.
+Exact staging and post-commit scope/blob/necessity/preservation inspection
+passed. The index was empty and task-owned tree clean; the branch was
+thirteen ahead of its remote-tracking reference. This run issued no push or PR.
+
+At 15:40:47 UTC `/root/m4_joint_structure_discovery` began a **20-minute**
+fresh-context meta-plan pass, deadline 16:00:47 UTC, scratch
+`/tmp/pi-m4-joint-structure-discovery-20261127/`. It seeks one mechanism
+using both rational initialization and exact finite-pole forcing. Its chosen
+test compares the real capacity gain of a long avoiding block against the
+arithmetic cost of growing multitime determinants, retaining all floor terms.
+This tests whether joint cancellation changes the scale, rather than repeating
+fixed-order signs or scalar potentials. No unfinished claim is adopted.
+
+The zero-entry inequality inquiry completed at 15:44:58 UTC within its bound.
+The un-tilted square has valid even-branch nonincrease but no negative boundary;
+the fixed tilt has the actual negative boundary but a positive increment
+239/245760 in an exact-A changed-seed even-tail model. The arbitrary-threshold
+identity retains the full finite past. Near-zero irrational comparison seeds
+also retain the boundary sign while losing rational initialization. Suspend
+this tilt; a new actual low-even contribution bound and late boundary remain
+unproved. Parent unchanged-copy replay passed with identical evidence and five
+preserved originals, without actual orbit or ceiling evaluation.
+
+Independent paper review ran 15:46:29--15:48:57 UTC within ten minutes.
+No defect was found; I1's explicit N>=1 domain was resolved in a separately
+inspected immutable clarification. Q1 retains the actual late boundary and
+low-even contribution. Full production integration remains pending; these
+paper diagnostics do not discharge C_odd or V.
+
+The determinant discovery completed at 15:56:53 UTC within its bound.
+Parent read its complete report and checker and replayed a copy changing
+only the receipt destination. All sixteen synthetic fixtures passed with
+identical receipt and five original files preserved. Its proposed arithmetic
+gain and capacity countertest are under independent review; no unfinished
+claim is adopted here.
+
+At 16:00:00 UTC the same worker began one **15-minute** follow-up,
+deadline 16:15:00 UTC, scratch
+`/tmp/pi-m4-hankel-linear-horizon-20261127/`. The question is whether the
+original countertest's very late start leaves a viable linear-horizon case.
+The proposed discriminator shifts the periodic pulse away from the endpoints,
+controls its least singular value, and approximates an exact-forcing comparison
+by a coprime numerator on the actual denominator grid. It must prove canonical
+cell stability and distinguish exact denominator from the actual numerator.
+This is a test of the remaining scale issue, not a new visitation claim.
+
+Independent Hankel paper review ran 15:58:13--16:01:06 UTC within ten
+minutes, found no defects, and resolved I1 by explicitly fixing the carry
+block in the affine-state identity. Q1 retains nonvanishing and global
+subquadratic denominator growth; Q2 retains actual-history decay. The critic
+reconstructed both the rank-one arithmetic bound and finite-block countertest,
+including its large-start restriction and lost actual entry/denominator.
+The linear-horizon follow-up was excluded. Full production integration remains
+pending; no conditional estimate was promoted to a visitation result.
+
+The linear-horizon follow-up completed at 16:06:08 UTC within its bound.
+It retains the exact actual reduced entry denominator and m=N, but chooses
+a different coprime numerator. A shifted pulse and operator norm estimates
+give avoiding canonical cells and determinant magnitude >34^(-N). The
+finite threshold follows from the retained denominator rate 6N+o(N), an
+elementary coprime-interval count and log256<6. The actual selected numerator
+and full determinant-denominator estimate remain absent. Parent replay
+changed only the receipt destination, passed thirteen synthetic fixtures
+with identical receipt, and preserved five originals. No actual denominators
+or phases were evaluated.
+
+Independent paper review ran 16:07:05--16:09:24 UTC within ten minutes,
+with no D/I item. Q1 retains actual-history decay, Q2 the complete arithmetic
+contract. The prior denominator theorem remains a paper input, not a fresh
+source-proof or Lean audit. Combined production integration is pending.
+
+Full six-path integration review ran 16:12:10--16:15:24 UTC within fifteen
+minutes. The quadratic-domain and fixed-carry clarifications remain resolved;
+there were no new D/I items. Q1 retains the late boundary/low-even contribution,
+Q2 the complete determinant arithmetic, and Q3 actual-history decay. All 79
+manifest-bound files matched. Documentation (93), process tests (38), whitespace
+and preservation checks passed; unchanged Lean was not rebuilt. The unfinished
+selected-numerator inquiry was excluded; C_odd/V/M4 remain open.
+
+At 16:09:14 UTC `/root/m4_selected_numerator_discovery` began a **20-minute**
+fresh-context inquiry, deadline 16:29:14 UTC, scratch
+`/tmp/pi-m4-selected-numerator-discovery-20261127/`. Its initial discriminator
+tests backward exact recurrence with earlier odd-denominator grids, asking
+whether arithmetic ancestry supplies a real-position estimate beyond unique
+reconstruction of the zero-initialized point. Reversible CRT or a renamed
+initial condition alone would not advance the target. No unfinished claim
+is adopted; this research continues beyond the reviewed checkpoint. During
+the cycle it moved to a quantitative coefficient-function perturbation test,
+subject to the archived null-gauge and finite-prefix limitations.
