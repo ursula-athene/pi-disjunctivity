@@ -3016,3 +3016,77 @@ logarithmic A generating function as a sanity case. No finite-state language
 is assumed to imply analytic continuation, and no generic Dwork-congruence
 converse is assumed. The endpoint is a concrete applicable bridge or a
 precise failed hypothesis that changes the next decision. M4 continues.
+
+**One-prime checkpoint and changed tests — 2026-11-27 UTC:** local commit
+`9a9a0403686f235a1c862cd4743a61b12835e3e4` records the reviewed classification.
+Exact five-path scope, empty index, preservation and necessity checks passed;
+no push or PR occurred. The adelic source packet is frozen. Dwork's actual
+integral-coefficient/one-prime meromorphic-entire criterion has been inspected
+on original printed pp.41–42. The actual moment series is nonrational with
+radius 1 at every place and infinitely many denominator primes; it cannot
+be the rationality target. The canonical carry series has the right integrality
+and value pi at 1/16, but its exact defect identity retains the fractional-state
+series. An avoidance-dependent continuation theorem for that same carry
+series is missing. Parent reconstruction and primary-image inspection passed;
+unchanged-copy replay passed 1,181 exact checks, exit 0, identical receipt and
+preserved originals. Independent integration review remains pending.
+
+**Two new 20-minute bounds:**
+`/tmp/pi-m4-fixed-prime-analytic-model-20261127/` tests whether the moment
+model can retain the full Taylor valuation class at p=17, rather than only
+pointwise laws. The proposed Newton precision k+2+v_p(k!) would produce an
+analytic perturbation on |x|_p<p; the total interpolant retains only the
+common actual radius. A limited finite-prime extension requires its explicit
+cost inequality. Exact coefficients, original finite-pole forcing and the
+all-prime analytic family are not being assumed preserved.
+
+Separately `/tmp/pi-m4-global-analytic-lattice-20261127/` tests the finite-block
+lattice determinant and total cost of all those stronger constraints. A small
+average cost might survive even though rare individual stages exceed the
+greedy budget. Its endpoint includes a test of the critical logical gap:
+positive lattice volume alone need not give fixed-target covering or a
+nonzero compatible infinite model. The parent supplied a triangular toy
+system with large finite volume but only the zero infinite solution for
+verification. No volume count will be reported as visitation or a completed
+countermodel. These are changed discriminating questions within M4.
+
+**Fixed-prime and global-lattice outcomes — 2026-11-27 UTC:** both packets are
+frozen. The fixed-prime construction succeeds under the explicit budget
+sum_(p in P)log(p)/(p-1)<4+log(15/128), including P={17} and {13,17}.
+It retains the Taylor valuation class at those primes by a sufficient Newton
+condition, while keeping the earlier pointwise laws, both denominator rates
+6 and an irrational nondense period. The perturbation's analytic disk p is
+distinguished from the total interpolant's smaller guaranteed disk. Exact
+coefficients, finite-pole forcing and an all-prime extension remain excluded.
+Parent reconstruction and unchanged-copy replay passed, including 1,202
+synthetic CRT stages and 16 nonintegral raw-side cases, exit 0, UTC-only
+receipt difference and preserved originals.
+
+The global calculation proves log index=(C/2)N^2+O(N log^2 N), C<1, and
+the exact orthogonal-coordinate determinant product L_n*h_n. The resulting
+positive normalized volume gives finite nonzero vectors. The supplied toy
+has the same qualitative volume surplus but only the zero infinite bounded
+solution, with every finite weighted period projection tending to zero.
+Thus a prescribed period covering estimate, not more volume, is the next
+missing condition. Parent reconstruction and unchanged-copy replay passed
+12,890 finite checks, exit 0, identical receipt and preserved originals.
+No infinite all-prime model or actual visitation conclusion is inferred.
+Independent combined integration review of these and the Dwork source test
+is complete: no defects or new improvements, with Q1–Q3 retaining carry
+continuation, actual period covering and the omitted global denominator sieve.
+All six production hashes and 41 evidence hashes matched; the continuation
+review record owns the full response and limits. Universal results remain
+paper mathematics.
+
+**Changed 20-minute questions:**
+`/tmp/pi-m4-actual-period-projection-20261127/` tests an explicit projection
+or dual estimate using the actual lattice's off-diagonal coefficients. Its
+endpoint must distinguish covering from the toy's collapse, rather than
+repeat the determinant calculation or rename the missing estimate.
+`/tmp/pi-m4-canonical-carry-reset-20261127/` separately works backward from
+actual avoidance to a restriction on canonical carries usable with the
+rational forcing equation. It must retain floors and reject the already
+unsupported finite-language-to-rational-path implication. Each worker owns
+scratch only and a separate criticism pass; the parent owns integration.
+The user received a status update distinguishing these diagnostic advances
+from a promising proof mechanism. V/M4 remain open; research continues.

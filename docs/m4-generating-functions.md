@@ -713,3 +713,98 @@ manifest v2 SHA-256 is
 Parent full reconstruction and unchanged-copy replay passed: 3,791 exact
 checks, exit 0, UTC-only receipt difference, originals preserved. These are
 paper arguments and diagnostics, not a new kernel theorem or V acceptance.
+
+## A rationality criterion needs the same canonical carry series
+
+An adelic rationality test distinguishes the index interpolation from the
+generating series whose coefficients it samples. The selected primary input is
+[Dwork, *On the Rationality of Zeta Functions and L-Series*, printed pp.41–42](https://www.sas.rochester.edu/mth/sites/doug-ravenel/otherpapers/proc-local.pdf#page=48).
+Its specialization to Q says that one series in Z[[z]], with positive complex
+convergence radius and a representation at one finite prime as a quotient of
+two p-adic entire series, is rational. The parent inspected the original
+pages, including the same-function and integral-coefficient requirements.
+No broader finite-S/radius-product or capacity criterion is applied here.
+
+For each actual state c set
+
+    F_c(z)=sum_(n>=0)c(n)*z^n,
+    R_c(z)=sum_(k>=0)S_(k-1)^c*z^k=z*F_c(z)/(1-16z),
+    C_p(sum a_k*z^k)=sum a_(pk)*z^k.
+
+The exact defect series is
+
+    H_p^c(z)=p*C_p R_c(z)-R_(T_p c)(16^(p-1)*z).
+
+Each H_p is a different rational-coefficient series. The interpolant Phi_p(x)
+is different again: x is an index variable and its Taylor coefficients need
+not be rational. Its bounds yield the Newton continuation
+
+    H_p(z)=(1-z)^(-1)*sum_(m>=0)Delta^m G_p(0)*(z/(1-z))^m
+
+where z!=1 and |z/(1-z)|_p<p^((p-2)/(p-1)). This includes |z|_p>1 but
+omits a neighborhood of 1, for example every z=1+p^j with j>=1. It is not
+a quotient-of-entire continuation, nor a centered meromorphy radius for
+F_c or R_c. Products of the Phi_p radii would combine different functions
+and coordinates.
+
+Actual A rejects rationality of the moment series outright. Since
+A(n)~15/(64n^2)>0, F_A has complex radius 1 and finite limit at 1, while
+F_A'(z) tends to infinity as real z increases to 1. A meromorphic function
+with that bounded limit would be removable and have finite derivative.
+Thus F_A is nonrational, despite A(n) being a rational function of n.
+The same argument applies to any retained positive n^-2 leading constant;
+finite Hankel rank of these moments is too strong an intermediate target.
+
+The p-adic Taylor radius of F_A is also 1 at every prime. Negative valuations
+are O_p(log(n+2)). For odd p choose m_j in {1,3,5,7} with m_j*p^j=1 mod 8
+and n_j=(m_j*p^j-1)/8. For large j the 8n_j+1 pole has valuation
+-j-v_p(m_j), strictly below the others, whose denominator differences are
+3, 4 and 5. At p=2 the odd-denominator expression shows A(n) is a unit
+for every even n. These subsequences give the reverse radius bound.
+Moreover every prime p>=11 divides some A(n) denominator: take n=-8^(-1)
+mod p with 0<=n<p; the other three denominators are units and the selected
+pole has valuation -1. No fixed rational scaling clears all these primes.
+Natural lcm growth does not replace the selected criterion's integrality.
+
+The actual canonical carry series does have that integrality. With y_0=0 set
+
+    kappa_n=floor(16*y_n+A(n)), K(z)=sum kappa_n*z^n,
+    Y(z)=sum y_n*z^n.
+
+Here 0<=y_n<1 and 0<A(n)<4, so kappa_n is an integer in {0,...,19}.
+Both series have positive complex radius, and recurrence algebra gives
+
+    K(z)=F_A(z)-(1-16z)*Y(z)/z,
+    K(1/16)=pi.
+
+The formal quotient by z is valid because y_0=0. Consequently K is not
+rational, and Dwork's criterion implies it cannot be a quotient of p-adic
+entire series at any prime. A new theorem deriving such continuation from
+actual eventual avoidance would yield a contradiction; none is supplied.
+
+Writing M=R_A-Y=z*K/(1-16z) retains the canonical raw-prefix floors.
+Substitution into the defect identity retains both the M and Y defects.
+Integrality of M does not annihilate its defect, and real boundedness of Y
+does not imply p-adic continuation. For arbitrary synthetic integer K*, the
+formal choice Y*=R_A-z*K*/(1-16z) satisfies the same split, but need not be
+bounded or canonical. The floor constraints cannot be discarded.
+
+Missing words alone also do not supply continuation. The toy series
+sum_(j>=2)z^(j!) has integer 0/1 coefficients, positive complex radius and
+an expansion omitting hexadecimal digit 15. It is nonrational: a rational
+series over a finite coefficient set has an eventually periodic recurrence
+state, whereas factorial gaps are unbounded with infinitely many ones.
+Dwork's criterion therefore excludes its meromorphic-entire continuation
+too. It does not retain actual A or its defect family; it only separates
+generic avoidance from the missing actual-series theorem.
+
+Frozen packet `/tmp/pi-m4-adelic-rationality-test-20261127/` has report
+SHA-256 `c39545df859cd17e060d5f9da10f7138c74b57b98c63270f580da62c4fddb79a`
+and manifest SHA-256
+`2ca22738812d5454100973d18dcd50df60a62a926b0f22963af2382a64782d1c`.
+Parent reconstruction, original-source image inspection and unchanged-copy
+replay passed 1,181 checks, exit 0, identical receipt, originals preserved.
+All prefix/Cartier diagnostics use synthetic forcing; actual data checks use
+only coefficients. No actual phase, pi digit, source theorem or infinite
+continuation claim is certified by those checks. The same canonical K and
+an avoidance-dependent continuation estimate remain the required bridge.

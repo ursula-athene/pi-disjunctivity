@@ -1352,3 +1352,56 @@ ran. Execution/preservation remain caller evidence, and Brumer's full proof
 was not accessed. Earlier Coleman results remain paper inputs. Subsequent
 edits record this outcome only. The active adelic inquiry is excluded.
 No V/M4 acceptance or new Lean theorem is claimed.
+
+## Analytic classes, rationality and global period covering — 2026-11-27 UTC
+
+Baseline is local commit `9a9a0403686f235a1c862cd4743a61b12835e3e4`.
+The six-path scope is `m4-generating-functions.md`,
+`m4-prime-defect-boundary.md`, `proof-plan.md`, `research-log.md`,
+`m4-handoff.md` and this record. No Lean, dependency, pin, audit, tool or
+unrelated workspace change is included.
+
+Frozen evidence comprises `/tmp/pi-m4-adelic-rationality-test-20261127/`,
+`/tmp/pi-m4-fixed-prime-analytic-model-20261127/` and
+`/tmp/pi-m4-global-analytic-lattice-20261127/`: reports, input/source
+contracts, separate same-session critics, checker sources, receipts and
+manifests. Parent full reconstruction covered the common-function criterion,
+Newton sufficiency, uniform analytic/arithmetic construction, exact lattice
+index, coordinate determinant and the volume-to-covering counterexample.
+Dwork's original printed pp.41–42 were visually inspected, including the
+theorem's hypotheses; no broader adelic criterion or full zeta proof is claimed.
+
+Unchanged-copy replays passed 1,181 source/identity diagnostics, the fixed-prime
+diagnostics including 1,202 synthetic CRT stages, and 12,890 global-lattice
+checks, all exit 0. Receipts match except the fixed-prime UTC; originals are
+preserved. These finite calculations do not prove Dwork, analytic convergence,
+the infinite moment construction, asymptotics, compactness or visitation.
+Earlier analytic/arithmetic and PNT inputs remain explicitly paper results.
+
+Worker improvements were incorporated before freezing: exact same-function
+and continuation domains, finite rational sums for moments, fixed precision
+versus equality, separate perturbation/total radii, the full coordinate map,
+uniform cost summation and a toy with collapsing period projection. Missing
+all-prime models, denominator noncancellation in the lattice result, actual
+period covering and avoidance-dependent carry continuation remain open.
+Independent changed-file review by `/root/generating_review` is complete under
+the Codex replacement procedure. Both adversarial guides were retained in full
+and their unchanged hashes verified. Frozen scope is
+`/tmp/pi-m4-analytic-covering-review-20261127/`, diff SHA-256
+`68623c8323ce2c55a3d68420cd0c1c8349d82aa137957e063b20dc9883049243`.
+The complete returned response is `review-full.txt`, SHA-256
+`ffec638b0b547837774f7bda3332c4f193d067297a6a81df5207324681c3d4c0`.
+All six production hashes and 41 evidence hashes matched. **D: none. I: no
+new improvements. Q1–Q3 retained:** canonical carry continuation, actual period
+covering, and the omitted global denominator sieve. These are disclosed
+mathematical limits, not evidence failures for the scoped diagnostic claims.
+
+The reviewer inspected the original theorem pages and independently
+reconstructed the central arguments, including small-prime radius cases and
+closedness/rationality in the conditional compactness argument. Its work was
+read-only file, hash and image inspection plus mathematics; no checker, probe,
+build, extractor or mutation ran. Execution and preservation remain caller
+evidence. An initial read used incorrect packet filenames; corrected reads
+completed without a missing packet or recovery invocation. Subsequent edits
+record this outcome only. The two follow-up inquiries are excluded from this
+checkpoint. V/Hpi/T/M4 remain open; no Lean theorem or acceptance is claimed.

@@ -609,3 +609,132 @@ Two unchanged checker runs passed 24,118 checks with identical receipts and
 exit 0. They test finite algebra and exact rational logarithm enclosures,
 not BBP prefixes, pi values or orbit states. Analytic necessity and asymptotic
 cost remain paper arguments; separate self-criticism is not independent review.
+
+## Fixed-prime analytic classes still admit nondense moment models
+
+The preceding method obstruction concerns an unbounded set of primes. For a
+fixed finite set P of primes at least 7, the analytic moment construction can
+retain the actual Taylor valuation classes whenever
+
+    rho_P=sum_(p in P) log(p)/(p-1) < eta=4+log(15/128).
+
+In particular P={17} and P={13,17} qualify. The model retains all the earlier
+pointwise laws, unchanged D, both denominator exponents 6, any prescribed
+finite actual prefix, small positive analytic relative perturbation and the
+leading coefficient/tail constants, but has an irrational nondense period.
+It retains valuation classes, not exact Taylor coefficients or finite-pole
+forcing. The one-prime finite-pole classification does not cover these
+infinite moment perturbations.
+
+For the perturbation defect G_p and alpha_(p,k)=Delta^k G_p(0), impose the
+stronger sufficient conditions
+
+    alpha_(p,0)=0, v_p(alpha_(p,k))>=k+2+v_p(k!), k>=1.
+
+Then alpha_(p,k)/k! has valuation at least k+2. The integer coefficients of
+the falling factorial (x)_k give a uniformly convergent Newton series on
+every closed disk of radius less than p. Its Taylor coefficients eta_(p,d)
+have constant zero and v_p(eta_(p,d))>=d+2. Finite binomial inversion gives
+the exact natural values G_p(k); in particular v_p G_p(k)>=3+v_p(k).
+Adding the actual interpolant retains its Taylor class on the common disk
+|x|_p<p^((p-2)/(p-1)). Only the perturbation is guaranteed the larger disk p.
+
+At n=pk-1, put e=v_p L_(k-1). The same integer clearing above, now with
+modulus p^(k+2+v_p(k!)+e), gives one affine residue for a_n. Earlier cleared
+terms are integral by nesting of the envelopes, without assuming that their
+raw defects are integral. Selected-prime Newton conditions replace that
+prime's pointwise condition; the latter follows from the resulting series.
+Other active primes retain their pointwise moduli. Legendre's bound yields
+
+    log M_n <= rho_P*n+O_P(log^2(n+2)).
+
+The uniform analytic moment interval has logarithmic rate eta, and the
+two-residue denominator sieve costs exp(o(n)). The strict gap therefore
+permits every successive choice after a fixed starting index, uniformly in
+all allowed histories and residual centers. Orthogonality fixes all earlier
+moments, each of which is a finite rational sum. The existing period-residual
+induction realizes one chosen irrational nondense period; it does not merely
+produce unrelated finite models. Enlarging powers of active primes leaves
+the denominator-survival argument and both rates 6 unchanged.
+
+For each selected prime, replacing 2 by any fixed q_p>=2 gives
+v_p(eta_(p,d))>=d+q_p at the same leading cost. The starting index and
+realizable period interval may depend on that precision. Neither exact
+coefficient equality nor a limit over all primes/precisions follows.
+
+Frozen packet `/tmp/pi-m4-fixed-prime-analytic-model-20261127/` has report
+SHA-256 `452d9e75af35dac63d83e357161262e4ca6b897d8b409c6ed16f03deb5098798`
+and manifest SHA-256
+`63255bc1d62408d0c74f15eb2ea1247a177ec2623a9fefa2c44812e0b85db080`.
+Parent reconstruction and unchanged-copy replay passed, including 1,202
+synthetic CRT stages, 116 Newton clearings and 16 nonintegral raw-side cases;
+exit 0, UTC-only receipt difference, originals preserved. These finite tests
+do not instantiate the infinite model. The result remains paper mathematics
+using the explicit earlier analytic/arithmetic contracts, not a Lean theorem
+or a counterexample to the actual A recurrence.
+
+## The global analytic lattice has volume but no proved period covering
+
+Impose the stronger sufficient Newton conditions of the preceding section at
+every p>=7 through pk<=N, with coordinates a_0,...,a_(N-1). Each cleared row
+has newest coefficient 1 and exponent
+
+    E_p(k)=k+2+v_p(k!)+floor(log_p(4k-1)).
+
+CRT and the triangular integer parametrization give the exact lattice index
+I_N=product_(n<N) product_(p>=7,p|n+1) p^E_p((n+1)/p). Reindexing by p,k
+and using Legendre's identity with uniform errors yields
+
+    log I_N=(C/2)*N^2+O(N log^2 N),
+    C=sum_(p>=7 prime) log(p)/[p(p-1)] < 7/(3sqrt6) < 1.
+
+The last bound follows from log x<=sqrt x and a decreasing-series integral.
+This averaged cost is compatible with the earlier excessive cost at rare
+individual stages; the two statements concern different quantities.
+
+In the actual orthogonal coordinates c_n, moment formation has diagonal h_n,
+prefix formation is unipotent, and envelope scaling has diagonal L_n.
+Consequently the coordinate determinant is exactly product_(n<N)L_n*h_n.
+For the budgets |c_n|<=B*2^n/(n+1)^6 and log h_n=-n log16+O(log(n+2)),
+
+    log(volume/covolume)=[4-log8-C]*N^2/2+o(N^2).
+
+The coefficient is positive. The symmetric-box lattice argument therefore
+supplies nonzero finite rational perturbations for all sufficiently large
+cutoffs, also after any fixed zero prefix. It does not include a denominator
+noncancellation sieve, a prescribed period or compatible infinite nonzero
+choices.
+
+The distinction is necessary. In a separate triangular toy, take integral
+|a_n|<=2^n, n>=1, and impose at n=2j
+
+    a_(2j)=M_j*a_j modulo Q_j,
+    M_j=2^(2j+2), Q_j=2*M_j*2^j+2*2^(2j)+1.
+
+The bounded congruence forces equality and then a_j=a_(2j)=0. At cutoff N,
+only odd coordinates greater than N/2 are free; the only infinite bounded
+solution is zero. Nevertheless its log volume/index surplus is
+(log2/8)*N^2+O(N)>0. Every finite projection sum a_n/16^n is bounded by
+8^(-floor(N/2))/7 and tends to zero. Thus large finite volume can coexist
+with collapse of every fixed nonzero target. This toy proves no such collapse
+for the actual BBP lattice.
+
+For that actual lattice Gamma_N in c coordinates, let P_N be the set of
+sum_(k<N) beta_k*c_k within the budgets and desired zero prefix, and let
+r_N=sum_(k>=N) beta_k*b_k. A sufficient missing estimate is
+dist(delta,P_N)<=r_N for every sufficiently large N, for one fixed target
+pi+delta known to be irrational and nondense. Uniform tail convergence and
+compactness would then give an infinite rational-moment realization: each
+finite point can be completed to the exact period inside the remaining real
+budgets, and the resulting closed constraint sets are nested. Volume alone
+does not prove this covering estimate. Denominator noncancellation would
+still require its own argument.
+
+Frozen packet `/tmp/pi-m4-global-analytic-lattice-20261127/` has report
+SHA-256 `cb4fd03043455b8db38c839790c46254156f4693cdb7463a629b0a75b18b5eb9`
+and manifest SHA-256
+`5aee5cf940a686205153b35d5a61aa2a155bdd765d0afa0aaa177ced2edfa047`.
+Parent reconstruction and unchanged-copy replay passed 12,890 exact finite
+checks, exit 0, identical receipt and preserved originals. The index
+asymptotic, finite existence and compactness discussion are paper arguments.
+No infinite all-prime countermodel or actual visitation theorem follows.

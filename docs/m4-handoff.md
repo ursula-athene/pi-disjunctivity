@@ -7,7 +7,7 @@ The [continued research checkpoint](#continued-research-checkpoint--2026-11-26)
 records subsequent work during the user's absence; that checkpoint does not
 terminate the ongoing M4 effort.
 The latest dated continuation is the
-[One-prime finite-family classification](#one-prime-finite-family-classification--2026-11-27-utc); read the
+[Analytic classes and global period covering](#analytic-classes-and-global-period-covering--2026-11-27-utc); read the
 research log and actual checkout for subsequent results and current state.
 
 ## Baseline and authorized endpoint
@@ -899,3 +899,31 @@ contract changed. The next bounded inquiry tests an adelic rationality
 criterion, beginning with a common function and its exact local hypotheses.
 The log owns that investigation. V/Hpi/T/M4 remain open, B4/P3 retain visits,
 and M5 is excluded; research continues.
+
+## Analytic classes and global period covering — 2026-11-27 UTC
+
+The fixed-family checkpoint is local commit
+`9a9a0403686f235a1c862cd4743a61b12835e3e4`; its exact five-path scope, empty
+index, preservation and necessity checks passed. Nothing was pushed. The new
+[Dwork source test](m4-generating-functions.md#a-rationality-criterion-needs-the-same-canonical-carry-series)
+isolates a missing continuation theorem for the same canonical carry series.
+Its integrality is available, but neither word avoidance alone nor the
+prime-dependent defect interpolants supplies that continuation.
+
+The [fixed-prime model](m4-prime-defect-boundary.md#fixed-prime-analytic-classes-still-admit-nondense-moment-models)
+retains selected Taylor valuation classes under an explicit budget inequality,
+including {13,17}, and all the preceding pointwise/denominator properties,
+while retaining a nondense irrational period. It changes exact forcing and
+Taylor coefficients. The [global lattice](m4-prime-defect-boundary.md#the-global-analytic-lattice-has-volume-but-no-proved-period-covering)
+has positive averaged volume, but a separate toy proves why that is insufficient
+for a prescribed period or infinite nonzero continuation. The actual projected
+covering question remains open.
+
+Parent reconstruction, Dwork primary-page inspection and unchanged-copy
+replays passed. Independent integration review found no defects or new
+improvements; Q1–Q3 remain the disclosed continuation, covering and sieve
+obligations. The continuation review record owns exact scope and limits. No Lean, pin,
+dependency, audit or target contract changed. Two bounded follow-ups test the
+actual lattice projection and a canonical-carry restriction from avoidance;
+the log owns their bounds and outcomes. V/Hpi/T/M4 remain open, B4/P3 retain
+visitation premises, and M5 is excluded. Research continues.

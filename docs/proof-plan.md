@@ -835,14 +835,30 @@ does not reconstruct a competing finite-pole vector from word avoidance;
 that consumer remains missing. More same-family classification and Brumer
 formalization are suspended without an actual real-position consequence.
 
-The next 20-minute inquiry tests one adelic rationality/continuation criterion
-as a possible reconstruction bridge. It must identify the same function at
-all places, retain integrality, denominators, domains and radii, and explain
-how the actual floors enter. Prime-dependent Phi_p cannot be substituted for
-one global series without proof. A precise failed hypothesis or one genuinely
-new applicable check is the endpoint; generic G-function or Dwork terminology
-is not a consumer. The review record owns integration status; all target
-contracts and Lean status remain unchanged. Research continues within M4.
+The [rationality-criterion test](m4-generating-functions.md#a-rationality-criterion-needs-the-same-canonical-carry-series)
+identifies the actual integer carry series as a possible contradiction target,
+but the required avoidance-dependent p-adic continuation is missing. The
+prime-dependent interpolants do not supply it; their exact generating-function
+identity retains the fractional-state series. Generic missing-word series can
+also fail that continuation hypothesis.
+
+The [fixed-prime refinement](m4-prime-defect-boundary.md#fixed-prime-analytic-classes-still-admit-nondense-moment-models)
+retains Taylor valuation classes for selected finite prime sets satisfying an
+explicit cost bound, including {17} and {13,17}, while still admitting a
+nondense irrational period. Exact coefficients and finite rational forcing
+are not retained. The [global lattice test](m4-prime-defect-boundary.md#the-global-analytic-lattice-has-volume-but-no-proved-period-covering)
+finds favorable averaged volume for all stronger Newton constraints, but a
+triangular toy disproves the general inference to prescribed period covering
+or a nonzero infinite model. Neither result supplies actual visits.
+
+Two changed inquiries have 20-minute reassessment bounds: test an explicit
+projection or dual estimate for the actual lattice, retaining its off-diagonal
+coefficients; and work backward from an actual missing word to a restriction
+on canonical carries that can use the rational forcing equation. More volume
+alone and finite-language-to-rational-path claims are excluded as unsupported
+bridges. The endpoint is a new discriminating fact or an explicit failed
+candidate, not another renaming of V. The review record owns integration
+status; all target contracts and Lean status remain unchanged. M4 continues.
 
 For the recurrence defined in Step 4, seek a proof of
 
