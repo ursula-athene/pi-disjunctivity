@@ -2261,3 +2261,59 @@ the reviewer did not independently recompute all entries. No checker, probe,
 build, extractor, mutation, service or delegation occurred. No substantive
 repair was required; subsequent changes record outcomes only. The review
 cycle is complete, with its mathematical obligations unchanged.
+
+## Finite algebraic and tail profiles — 2026-11-27 UTC
+
+Baseline is `f09cf5d382d16078118f97659d5cceb67ed872ef`.
+Independent `/root/generating_review` reviewed the complete worker packet and
+parent extension, with full combined/focused response retained in
+`/tmp/pi-m4-finite-profile-paper-review-20261127.txt`.
+The original report SHA-256 is
+`aaaf45bc62a7f2f22992a223e1f8a99dd3f3efa1e869a8f2b1c9f4fb8abf3699`;
+the extension v1 is
+`e987bb2baf3cebfa941b5e25d2dd8c513ee24e97496a1fdf83b1b1fa5e15fb67`.
+Authoritative extension v2 is
+`/tmp/pi-m4-tail-profile-zero-clarification-20261127/report-v2.md`, SHA-256
+`47c47e0caa7e1b0bb7a3206b509cea324e26b79ff71b5c3af279494054644e37`.
+
+**D1: repaired and verified:** the zero theorem annihilates the complete
+algebraic remainder, including -sum c_(t,r)/(8x+r), not its first line alone.
+**I1: implemented and verified:** the source supplement retains the already
+read finite negative-power paragraphs omitted from the first capture.
+**Q1: retained open:** avoidance does not produce a finite profile family.
+No effective or parameter-uniform zero threshold is claimed. Fixed branches,
+constant tail coefficients and finite families are retained throughout.
+
+The critic reconstructed the recurrent graph and pole proofs, minimal
+polynomial coefficient argument, F carries and weighted residue, Laplace
+interchange/remainders, uncancelled pole, Puiseux comparison, complete sampled
+residual and initialized lift. It checked both full reports/checkers, manifests,
+receipts, source extracts and exact correction. All bound hashes matched.
+Parent worker replay passed 492 checks with an identical receipt and five
+preserved originals; 136 separate coefficient comparisons passed. These
+executions remain caller evidence and do not certify the analytic arguments.
+
+The source application after w=1/x and inversion for a pole was checked;
+the full Newton--Puiseux proof was not audited. No external Lean theorem was
+imported or new project theorem claimed. The reviewer applied AGENTS, the
+replacement procedure, critic skill and both previously fully read adversarial
+guides with unchanged hashes. No checker, probe, build, extractor, mutation,
+service or delegation occurred. Production integration review completed as
+recorded below; the ongoing language inquiry supplies no adopted result.
+
+Full integration review by `/root/logarithmic_source_review` completed on
+the frozen five-path diff, SHA-256
+`d9195fc7aa7c492822f1dd0146bb428d27155bba0e2e1488f2641daedbff531d`.
+Packet `/tmp/pi-m4-finite-profile-review-20261127/` retains `initial.diff`,
+the 5-production/18-evidence manifest, preservation inventory and full
+`review-full.txt`. **D/I: none newly identified. Q1: retained open:**
+avoidance supplies no finite profile family. Earlier D1/I1 repairs remain
+correctly integrated. The reviewer reconstructed both arguments and their
+consumer, checked the source application and verified the actual diff,
+five production hashes and authoritative reports. Complete artifact and
+preservation inventories remain caller evidence, not an independently
+recomputed inventory. No prohibited execution, mutation or service occurred.
+Documentation (93), process tests (38), whitespace and preservation checks
+passed. No unchanged Lean build was repeated. Subsequent edits record review
+outcomes only; no substantive repair or further focused review was needed.
+This diagnostic review cycle is complete; its V obligation remains open.

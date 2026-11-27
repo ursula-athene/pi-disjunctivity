@@ -7,7 +7,7 @@ The [continued research checkpoint](#continued-research-checkpoint--2026-11-26)
 records subsequent work during the user's absence; that checkpoint does not
 terminate the ongoing M4 effort.
 The latest dated continuation is the
-[Ordered reciprocity and exact affine updates](#ordered-reciprocity-and-exact-affine-updates--2026-11-27-utc); read the
+[Finite algebraic and tail profiles](#finite-algebraic-and-tail-profiles--2026-11-27-utc); read the
 research log and actual checkout for subsequent results and current state.
 
 ## Baseline and authorized endpoint
@@ -1276,3 +1276,29 @@ A fresh 20-minute exact-function recovery is active; the research log owns
 its handle, bound and outcome. No unfinished result is accepted. No Lean,
 audit, pin, dependency or trust boundary changed. C_odd, V, global covering
 and M4 remain open; continue authorized research after this checkpoint.
+
+## Finite algebraic and tail profiles — 2026-11-27 UTC
+
+The ordered-reciprocity checkpoint is local commit
+`f09cf5d382d16078118f97659d5cceb67ed872ef`. Complete/focused reviews,
+checks, exact staging and post-commit necessity/preservation inspection passed.
+At inspection the branch was five ahead of its remote-tracking reference,
+with an empty index and clean task-owned tree. This run issued no push or PR.
+
+The [finite-profile result](m4-language-auxiliaries.md#finite-algebraic-profiles-do-not-follow-from-a-restricted-language)
+uses algebraic zero rigidity and exact poles to rule out finite state formulas.
+A parent extension proves eventual nonvanishing for an algebraic function
+plus a constant combination of the four tails, closing the sampled-edge gap
+in that limited class. The full initialized orbit still admits no such finite
+profile cover. Avoidance does not imply a cover; this is no visitation proof.
+The archived F model has periodic carries but no finite algebraic profiles.
+Parent synthetic replay and separate coefficient checks passed. Combined
+paper review and focused remainder/source clarification completed; final
+integration review is recorded in the continuation review report.
+The full integration review passed with no new finding. Documentation,
+process, whitespace and preservation checks passed.
+
+A fresh 20-minute language-consumer recovery is active. The research log owns
+its exact bound and outcome; no unfinished candidate is adopted. No Lean,
+audit, pin, dependency or trust boundary changed. C_odd, V, global covering
+and M4 remain open; continue the authorized research after this checkpoint.

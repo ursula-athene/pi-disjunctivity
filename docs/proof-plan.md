@@ -983,8 +983,14 @@ derives an exact affine update with a weighted carry correlation. Synthetic
 collisions rule out closure on the specified old/scaled sums and finite raw
 precision, even with denominator reduction supplied. The actual initialized
 correlation remains uncontrolled; richer reciprocity methods are not excluded.
-A fresh bounded inquiry tests the finite rational-function identity against
-an entire restricted carry language. No unfinished candidate is adopted.
+The [finite-profile inquiry](m4-language-auxiliaries.md#finite-algebraic-profiles-do-not-follow-from-a-restricted-language)
+excludes finite algebraic state covers, and an eventual-nonvanishing theorem
+extends that obstruction to algebraic functions plus constant combinations
+of the four BBP tails. Fixed branches, constant coefficients and finite
+families remain essential to the stated result. Word avoidance supplies
+no such family; further profile classification is suspended without that
+consumer. A fresh bounded inquiry seeks a direct path-sensitive inequality
+from the restricted language. No unfinished candidate is adopted.
 The log owns bounds, outcomes and the failed applicability screens.
 V and all Lean contracts are unchanged; neither conditional wrapping nor more
 classification supplies visitation.

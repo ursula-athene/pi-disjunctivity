@@ -921,6 +921,137 @@ paper mathematics; the checks are synthetic diagnostics, not actual phase
 computations. Separate paper reviews and the reset's focused repairs passed.
 No C_odd, V, global covering or M4 acceptance follows.
 
+## Finite algebraic profiles do not follow from a restricted language
+
+The exact rational forcing excludes a finite algebraic description of its
+states, but this does not exclude a finite forbidden-word language. More
+precisely, for any finite set D of complex constants and any sequence
+u_(n+1)=16u_n+A(n)-d_n with d_n in D, there is no finite family of functions
+algebraic over C(z), each with a fixed analytic branch on a sufficiently large
+positive real ray, whose values cover u_n at every sufficiently large integer
+n. This statement needs neither boundedness nor initialization. Actual
+canonical carries lie in {0,...,19}, since 0<A(n)<4 and 0<=y_n<1.
+
+A nonzero algebraic function has finitely many zeros on such a branch:
+its minimal polynomial has a nonzero rational constant coefficient, which
+must vanish at each zero outside finitely many exceptional points. Thus each
+infinitely recurring triple (s,t,d) in a proposed finite cover forces the
+identity f_t(z+1)=16f_s(z)+A(z)-d. Discard finitely occurring triples.
+The remaining infinite path in a finite graph has a directed cycle of length
+L>=1, giving
+
+```text
+f(z+L)=16^L*f(z)+B_L(z)-C,
+B_L(z)=sum_(j=0)^(L-1)16^(L-1-j)*A(z+j),
+C=sum_(j=0)^(L-1)16^(L-1-j)*d_j.
+```
+
+If algebraic f satisfies f(z+L)=a*f(z)+b(z) with nonzero constant a and
+rational b, let its monic minimal polynomial start Y^d+c_1(z)Y^(d-1).
+The monic degree-d annihilator a^(-d)M(z+L,aY+b) equals M by minimality.
+Its next coefficient gives c_1(z+L)+d*b(z)=a*c_1(z). Therefore the rational
+R=-c_1/d satisfies the same affine equation.
+
+This is impossible for the displayed B_L. With q=16^L, a rational R's
+principal-part coefficients t_j at beta+jL give coefficients
+t_(j+1)-q*t_j for R(z+L)-qR(z). Their finite weighted sum with weights
+q^(-j) vanishes, separately at every pole order. In the class
+beta=-1/8 modulo L, B_L has just one pole, residue 16^(L-1)/2. The
+other three fractional pole classes are distinct modulo integers. The
+nonzero weighted residue contradicts the rational equation, proving the claim.
+
+The archived rational-period model F makes the missing language implication
+concrete. Its phases 11/21,8/21,2/21 and tail bound 0<E_n<1/150 show that
+its canonical carries from index n=1 repeat exactly 8,6,1. Its states need
+not be periodic. Yet its L-block weighted residue in the same class is
+16^(L-1)*(15/16), so the same proof excludes finite algebraic state profiles.
+Thus even a periodic carry language under fixed rational forcing need not
+produce algebraic state formulas. F still lacks the actual four-pole forcing
+and irrational period; it refutes no rational-or-dense theorem.
+
+### A zero theorem closes the sampled tail-profile gap
+
+For r in {1,4,5,6} define T_r(z)=sum_(j>=0)16^(-j-1)/(8(z+j)+r), with
+local uniform convergence off its negative pole ladder. Then
+16T_r(z)-T_r(z+1)=1/(8z+r). For any algebraic branch R on an eventual
+positive ray and constant complex c_r, the expression R(x)+sum c_r T_r(x)
+is nonzero for every sufficiently large positive real x unless R=0 and all
+c_r=0. In particular infinitely many integer zeros force those trivial data.
+The threshold is neither effective nor uniform over R and c.
+
+Here is the analytic argument. Set N(X)=sum c_r X^r and
+
+```text
+F_c(t)=N(exp(-t/8))/(8*(16-exp(-t))),
+sum c_r*T_r(x)=integral_0^infinity exp(-xt)*F_c(t) dt,
+sum c_r*T_r(x)=sum_(m=0)^(M-1) F_c^(m)(0)*x^(-m-1)
+                 +O_M(x^(-M-1)),  for each fixed M>=1.
+```
+
+Absolute integrals are bounded by sum |c_r|/[15(8x+r)]. Taylor expansion
+on [0,epsilon] gives an O_M(t^M) remainder, whose integral is
+O_M(x^(-M-1)); tails beyond epsilon are exponentially small because F_c
+decays on the positive ray. If N is nonzero, degree N<=6 prevents it from
+canceling all eight roots of 16-X^8. Hence F_c has a genuine complex pole.
+Its derivatives at zero cannot have an exponential bound: otherwise their
+exponential generating series would be entire and remove that pole.
+
+An algebraic branch at infinity has a convergent Laurent-Puiseux expansion.
+The classical branch statement is recorded in Canino--Gimigliano--Ida,
+[*The Newton--Puiseux Algorithm and Triple Points for Plane Curves* (2023),
+section 1](https://www.mdpi.com/2227-7390/11/10/2324).
+Apply it with w=1/x, allowing a finite principal part or inverting a pole.
+If the combined asymptotic expansion has a first nonzero term d*x^alpha,
+that term makes the expression eventually nonzero, including for complex d.
+If all terms cancel, the Puiseux series has only integer negative powers
+and its convergent coefficients equal -F_c^(m)(0), an exponential bound
+contradicting the pole argument. Therefore N=0; the algebraic zero argument
+then forces R=0. This does not discard flat terms by an invalid uniqueness
+claim. Source statement/application were inspected, not the full Puiseux proof;
+no corresponding Lean declaration is claimed.
+
+Now suppose the actual states eventually have finite profiles
+f_s=R_s+sum c_(s,r)T_r, with algebraic R_s on fixed eventual branches and
+constant coefficients. On a recurrent sampled triple, apply the zero theorem
+to the complete algebraic remainder
+
+```text
+E_(s,t,k)=R_t(z+1)-16R_s(z)-A(z)+k-sum_r c_(t,r)/(8z+r),
+E_(s,t,k)+16*sum_r(c_(t,r)-c_(s,r))*T_r(z).
+```
+
+The second line vanishes at infinitely many integers, so c_t=c_s and
+E_(s,t,k)=0 as a germ. The rational correction is essential. Vectors c
+therefore agree along the eventual path. A cycle and the four pole classes
+force c=-(4,-2,-1,-1). The algebraic remainder on that cycle is constant:
+a nonzero algebraic h with h(z+L)=16^L h(z) would make its nonzero rational
+minimal-polynomial constant coefficient scale by 16^(Ld) under translation,
+whereas its asymptotic ratio must be 1. Integer labels make the cycle's
+constants rational. At an actual occurrence of a cycle state this contradicts
+
+```text
+T_A=4T_1-2T_4-T_5-T_6,  T_A(0)=pi/16,
+y_n+T_A(n)=16^n*(pi/16)-integer.
+```
+
+The lift need not lie in [0,1). The result excludes sampled finite profiles
+of precisely this form. It supplies no finite-profile cover from word
+avoidance: a finite recognizer still retains an arbitrary infinite path.
+Further profile classification without that consumer is suspended. C_odd,
+V, global covering and M4 remain open; B4/P3 retain their visitation premises.
+
+The original report in `/tmp/pi-m4-exact-function-recovery-20261127/` has
+SHA-256 `aaaf45bc62a7f2f22992a223e1f8a99dd3f3efa1e869a8f2b1c9f4fb8abf3699`;
+its tail extension explicitly required edge identities. The authoritative
+sampled-zero extension is
+`/tmp/pi-m4-tail-profile-zero-clarification-20261127/report-v2.md`, SHA-256
+`47c47e0caa7e1b0bb7a3206b509cea324e26b79ff71b5c3af279494054644e37`.
+Parent replay passed 492 exact synthetic checks with identical receipt and
+preserved originals; 136 separate exact coefficient comparisons check the
+Laplace normalization. Independent combined paper review and its focused
+remainder/source clarification passed. The universal arguments remain paper
+proofs, not consequences of those finite checks or kernel certification.
+
 ## Evidence boundary
 
 The frozen sine-zero report is `/tmp/pi-m4-sine-zero-report-v1.md`, SHA-256

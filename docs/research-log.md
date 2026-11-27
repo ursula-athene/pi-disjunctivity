@@ -3967,3 +3967,48 @@ the archived raw homogenization, natural-boundary and source-complexity
 failures. The endpoint is a discriminating claim/test or a precise changed
 question, not a renamed selection hypothesis. No unfinished result is adopted.
 C_odd, V, global covering and M4 remain open; work continues.
+
+**Finite algebraic and tail profiles — 2026-11-27 UTC:** the
+ordered-reciprocity checkpoint is local commit
+`f09cf5d382d16078118f97659d5cceb67ed872ef`. Reviews, validation, exact
+staging and post-commit necessity/preservation checks passed. At inspection
+the branch was five ahead of its remote-tracking reference, index empty and
+task-owned tree clean; this run issued no push or PR.
+
+The 20-minute exact-function reset begun at 11:33:11 UTC completed at
+11:48:35 UTC. It proves the [finite algebraic-family obstruction](m4-language-auxiliaries.md#finite-algebraic-profiles-do-not-follow-from-a-restricted-language)
+and the periodic-carry F countertest. Its constant-tail extension deliberately
+retains an edge-identity hypothesis: infinitely many samples alone do not
+give an identity for a transcendental expression. Parent unchanged-copy
+replay passed 492 exact synthetic checks with an identical receipt and all
+five original artifacts preserved. No actual digit or phase was computed.
+
+At 11:46:36 UTC the parent began a separate **10-minute** repair of that
+sampled-tail gap, freezing the packet at 11:51:34 UTC. The full Laplace
+remainder and an uncancelled complex pole force divergent tail coefficients;
+convergent algebraic Puiseux coefficients cannot match them to every order.
+This proves eventual nonvanishing and supplies the previously missing edge
+identities for the specified finite profiles. The 136 exact coefficient
+checks verify normalization only; the universal argument is a paper proof.
+The primary Puiseux statement was read, including its finite negative-power
+convention. Its full classical proof was not audited or formalized.
+
+Independent `/root/generating_review` reviewed both packets and the focused
+repair. D1 corrected the consumer's algebraic remainder to include its
+rational tail term; I1 retained the missing source paragraph in a supplement.
+Both are resolved in immutable v2. The language-to-profile implication is
+still unsupported, and further profile classification without a consumer is
+suspended. The result supplies no C_odd/V or M4 acceptance.
+Final five-path integration review by `/root/logarithmic_source_review`
+completed with no new finding and the language-to-profile gap retained.
+Documentation (93), process tests (38), whitespace and preservation checks
+passed; no Lean build was repeated for unchanged Lean files.
+
+At 11:59:04 UTC a fresh-context `/root/language_consumer_recovery` began a
+**20-minute** inquiry, deadline 12:19:04 UTC, scratch
+`/tmp/pi-m4-language-consumer-recovery-20261127/`. It seeks at most two exact
+positive consumers of eventual language restriction using the initialized
+BBP period, with a discriminating test against the archives. The first
+question tests a path-sensitive integral/auxiliary inequality; no finite
+state-profile assumption or unfinished result is adopted. No new Lean or
+trust boundary changed. C_odd, V, global covering and M4 remain open.
