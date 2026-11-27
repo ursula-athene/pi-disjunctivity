@@ -886,14 +886,23 @@ now tests even a badly approximable comparison phase: the same forcing with
 changed initialization can have density-one corrections. Better irrationality
 bounds alone do not repair this carry argument.
 
-A distinct fresh-context inquiry has a 20-minute reassessment bound: test
-whether exact rationality of all initialized BBP prefixes and their particular
-rational-coefficient recurrence supplies a rigidity consequence of word
-omission. The endpoint is a precise implication and discriminating model or
-source check; merely restating Hypothesis A is not progress. More classification
-without a visitation consumer and renaming V as full entropy remain excluded.
-The review record owns integration status; all target contracts and Lean status
-remain unchanged. M4 continues.
+The rational-prefix inquiry supplied no new carry restriction. A sparse-block
+source comparison identified a controlled integer-residue mechanism, but its
+fixed-lattice coefficient identity cannot hold for A; no actual-value substitute
+was obtained. The log records that failed bridge. A separate
+[finite bounded covering certificate](m4-prime-defect-boundary.md#a-finite-bounded-covering-certificate)
+now succeeds for the perturbation lattice at K=31,N=50,B=1/4096. A
+[single rational functional](m4-prime-defect-boundary.md#a-single-rational-functional-suffices-for-future-covering-certificates)
+gives a sufficient general consumer with a fixed positive target radius.
+Neither supplies bases at arbitrarily large cutoffs or retains the exact A.
+
+The next 20-minute inquiry tests a uniform dual or controlled-witness bound
+at stages with many simultaneous prime constraints. Larger finite basis
+searches are suspended: another successful cutoff would not answer that
+question. Existing primitive-content witnesses have no real-size control.
+The endpoint is a new bound or a precise obstruction to it, after which the
+meta-plan selects the next investigation. V and all Lean contracts remain
+unchanged; more classification without a visitation consumer remains excluded.
 
 For the recurrence defined in Step 4, seek a proof of
 

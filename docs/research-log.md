@@ -3375,3 +3375,64 @@ lattice theorem will be applied without its missing bounds. The worker owns
 scratch `/tmp/pi-m4-global-dual-recovery-20261127/`; production remains with
 the parent. V/Hpi/T/M4 remain open, B4/P3 retain visits, M5 is excluded, and
 research continues.
+
+**Global-lattice reassessment — 2026-11-27 UTC:** the sparse-source checkpoint
+is local commit `b114f4bd2fd46cecf8bf26bdb81d7d0015c8c44f`; exact scope,
+empty index and preservation checks passed, with no push. The new worker
+tested the finite rational-period slice, not another prefix stencil. Its
+report `/tmp/pi-m4-global-dual-recovery-20261127/report-v1.md` has SHA-256
+`f7551487bdedc9d85eee8bf36c004b3312e42ca8827965c8ddad03a77d7d75a6`.
+It derives a sufficient bounded-lift criterion and exact slice-spacing and
+covolume formulas. At six tested cutoffs the rational period grid is too
+coarse for its all-center certificate. These are finite results; small slice
+volume is not emptiness, and no eventual failure is claimed. The parent read
+the complete report, criticism and checker, then replayed an unchanged copy:
+2,547 exact checks, exit 0, identical receipt, all six frozen files unchanged.
+
+The parent's **15-minute thin-strip test** relaxes that exact-zero slice.
+Its frozen report `/tmp/pi-m4-thin-strip-20261127/report-v1.md` has SHA-256
+`5ea680e350ab87487d99b81f360ddc6e5df97efb92fd41c7f627c226d7e56fdc`.
+Exact two-dimensional basis reduction certifies unrestricted projected
+coverage at the same six cutoffs; 2,460 assertions passed, exit 0. It supplies
+no bounded preimages, asymptotic estimate or infinite model. A separate real
+hyperplane calculation is scratch-only. Both packets await independent
+review and are not new Lean or accepted visitation results.
+
+A **20-minute follow-up** now tests bounded preimages in the full coefficient
+space. An exact early-coordinate obstruction rejects the proposed full-basis
+certificate with K=1, while leaving actual feasible-set coverage unresolved.
+The worker is removing the coefficients forced to zero and screening a later
+finite cutoff. One targeted basis-reduction trial may run with a three-minute
+execution cap after that screen; no tools are installed. Neither volume nor
+an unbounded projected image is treated as bounded covering. The unchanged
+M4 objective continues; any diagnostic model would still differ from actual A.
+
+**Bounded covering checkpoint — 2026-11-27 UTC:** the K=1 full-basis test
+fails for an exact early-coordinate reason, while bounded points can remain
+in a lower-rank section. A later N=48 exact-rational reduction trial reached
+its 180-second cap during initial Gram--Schmidt; no mathematical failure was
+inferred. Changing the search representation produced a K=31,N=50,B=1/4096
+basis in 8.8 seconds. Approximation chose the integer transformation only.
+The independent original-data verifier and parent output-path-only replay
+both passed 2,680 exact checks; JSON and certificate bytes match, and all
+frozen inputs remain unchanged. The verified result is a finite all-target
+bounded-covering certificate, now stated in the
+[prime-defect assessment](m4-prime-defect-boundary.md#a-finite-bounded-covering-certificate).
+
+The parent's separate 15-minute calculation found a
+[single-functional consumer](m4-prime-defect-boundary.md#a-single-rational-functional-suffices-for-future-covering-certificates)
+with a fixed positive target interval and an absolute error bounded by the
+remaining period tail. Independent Codex criticism found two minor ambiguities
+(rational B and determinant sign), both corrected, and an explicit zero-prefix
+clarification was adopted. It found no remaining defect in the conditional
+implication. Suitable basis widths at arbitrarily large cutoffs remain unproved.
+The N50 certificate is not claimed to satisfy this different coordinate frame.
+
+A distinct **20-minute uniform-dual inquiry**, begun at 06:48 UTC, tests
+controlled witnesses or dual support at rare many-prime stages. Another finite
+cutoff would not settle the issue, so larger basis searches are suspended.
+Scratch ownership is `/tmp/pi-m4-uniform-dual-20261127/`; the parent integrates
+the completed finite results separately. This diagnostic route could identify
+which arithmetic data remain compatible with perturbations; even an infinite
+model would not retain exact A or prove V. No Lean theorem, unconditional visit,
+infinite all-prime model or M4 acceptance is claimed. Research continues.

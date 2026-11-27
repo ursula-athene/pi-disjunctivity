@@ -953,3 +953,139 @@ with 32,679 checks, exit 0, UTC-only receipt difference and preserved originals.
 Both chain regimes, finite other-prime clearing and the withdrawn lower-bound
 counterexample are included. No bounded positive model, actual pi phase,
 Lean theorem or visitation conclusion follows from these witnesses.
+
+## A finite bounded covering certificate
+
+The general-dual investigation now has one positive finite result. It concerns
+the perturbation lattice, not the exact BBP forcing or visitation. Fix K=31,
+N=50, B=1/4096 and b_j=B*2^j/(j+1)^6. Let Gamma_(K,N) be the rational
+coefficient vectors with c_j=0 for j<K whose moment prefixes a_n=L_n*V_n
+are integers and satisfy every strong Newton condition through cutoff N:
+
+    G_p(k)=p*V_(pk-1)-chi_4(p)*16^(k(p-1))*V_(k-1), G_p(0)=0,
+    v_p(Delta^j G_p(0)) >= j+2+v_p(j!), p>=7 prime, pj<=N.
+
+Use the preceding R_j,Q_j,h_j,beta_j and write e_j=R_j(16), p_j=-16Q_j(16).
+With m=49, put
+
+    eta=p_31-e_31*p_49/e_49>0, delta0=eta*b_31/4>0,
+    r_lower=B/[256*(2N+3)*(N+1)^6*128^N].
+
+An exact rational basis certifies that **for every real |delta|<=delta0**
+there is c in Gamma_(31,50), with every |c_j|<=b_j, such that
+
+    abs(sum_(j<50) beta_j*c_j-delta) <= r_lower
+        <= sum_(j>=50) beta_j*b_j.
+
+The rational radius has numerator/denominator lengths 27,863/28,126 bits.
+It is small but positive and independent of delta. This is a finite
+all-target statement, not a collection of numerical target tests.
+
+For the certificate, define lambda(c)=sum e_j*c_j and sigma(c)=sum p_j*c_j.
+Then the exact period is beta_0*lambda(c)+sigma(c), with 0<beta_0<6. A center
+for target delta has c*_31=delta/eta, c*_49=-e_31*delta/(e_49*eta), and all
+other coordinates zero. Its lambda is zero and sigma is delta. Rounding its
+coordinates in the certified full lattice basis changes each basis coordinate
+by at most 1/2. The resulting rational lattice vector meets all budgets:
+the sum of center size and cell halfwidth is less than b_31/2 at index 31,
+less than b_49/512 at index 49, and at most b_j at intermediate indices.
+The cell's period error is less than r_lower/8. The lower tail bound follows
+from beta_N>=h_N/e_N, h_N>=16^(-N)/[256*(2N+3)] and e_N<=16^N.
+
+The search used approximate Gram--Schmidt decisions only to choose an integer
+transformation. Independent exact reconstruction checked det(U)=+/-1, all
+1,225 original moment orthogonality equations through degree 49, and 494
+original uncleared Newton conditions on each of the old and new bases.
+It also checked the actual moment maps, full triangular lattice index,
+symbolic center identities and rational cell widths. Approximate reduction
+properties are not assumptions of the certificate. No pi value was evaluated.
+
+The verification packet is
+`/tmp/pi-m4-n50-certificate-verification-20261127/`, report SHA-256
+`588d67f478dc657e5b81c89f082f8d76bdafee7ca2e638107f35eca73dc0d66d`.
+The parent replay passed 2,680 exact checks, exit 0, with identical JSON and
+exact-certificate artifacts and all 11 frozen verification files preserved.
+Only the replay script's output directory was changed, as recorded in
+`/tmp/pi-m4-n50-parent-replay-20261127/adaptation.json`; the frozen report's
+phrase "unchanged-copy replay" is corrected here to this precise description.
+The heuristic search was not rerun. These are paper and exact-arithmetic
+results, not Lean declarations.
+
+Two earlier diagnostics clarify the scope. Unrestricted two-dimensional period
+projections can cover while their preimages violate coefficient budgets.
+Conversely, a full-basis box certificate starting at K=1 is impossible even
+though feasible points may occupy a lower-rank section: integrality gives
+a_1=105*h_1*c_1, and 105*h_1*b_1<1/2 for B<=1. Thus every full basis has
+c_1 halfwidth at least 1/(210*h_1)>b_1, whereas bounded feasible points have
+c_1=0. Neither fact decides period covering. An initial exact-rational
+reduction trial at N=48 hit its 180-second cap during Gram--Schmidt; that
+algorithmic outcome was not a mathematical obstruction. The N50 certificate
+addresses actual bounded preimages at one later cutoff only.
+
+## A single rational functional suffices for future covering certificates
+
+A paper reduction removes the need to control lambda and sigma separately.
+Keep fixed K>=1, rational B>0, and the zero-prefix lattice Gamma_(K,N).
+For N>K define
+
+    rho_N=b_N*h_N/e_N <= r_tail(N)=sum_(j>=N) beta_j*b_j,
+    theta_N=16*Q_N(16)/e_N,
+    u_(j,N)=p_j+theta_N*e_j, mu_N(c)=sum_(K<=j<N)u_(j,N)*c_j.
+
+All these coefficients and rho_N are rational. The exact error is
+
+    sum_(j<N) beta_j*c_j-mu_N(c)
+        =(beta_N/e_N)*sum_(j<N)e_j*c_j.
+
+Interlacing gives 15<e_(j+1)/e_j<16. Monic minimization with competitor
+(t-1/2)*R_j gives h_(j+1)<=h_j/4. The positive integral identity gives
+h_j/e_j<=beta_j<=(16/15)*h_j/e_j. Consequently
+
+    beta_(j+1)/beta_j <= 4/225,
+    (beta_(j+1)/e_(j+1))/(beta_j/e_j) <= 4/3375,
+    beta_(j+1)*b_(j+1)/(beta_j*b_j) <= 8/225.
+
+In particular (3371/3375)*beta_j<=u_(j,N)<beta_j for j<N. The Wronskian
+makes u_(j,N) increase with N. For every finite vector within the budgets,
+the absolute error is at most (16/15)*rho_N*T_N, where
+
+    T_N=sum_(k=1)^N 30^(-k)*((N+1)/(N-k+1))^6.
+
+Here T_4=9637175/53747712<1/5 and
+T_(N+1)=((N+2)/(N+1))^6*(T_N+1)/30. For N>=4 its multiplier is at most
+(6/5)^6/30, whose product with 6/5 is less than 1/5. Induction therefore
+gives an absolute period error at most (16/75)*rho_N for all N>=4.
+This uses finite polynomials only, never an infinite evaluation at 16.
+
+Fix N0>=max(K+1,4) and the positive rational radius delta0=u_(K,N0)*b_K/2.
+For any N>=N0, suppose a full basis of Gamma_(K,N) has cell halfwidths
+
+    w_j<=b_j for K<j<N, and w_mu<=rho_N/4
+
+in coordinates (c_(K+1),...,c_(N-1),mu_N). The frame determinant has
+absolute value u_(K,N)>0. Rounding the center (0,...,0,delta) for
+|delta|<=delta0 gives those bounds and abs(mu_N(c)-delta)<=rho_N/4.
+The inverse coordinate c_K stays within budget because
+
+    sum_(K<j<N)u_(j,N)*b_j < u_(K,N)*b_K/27,
+    rho_N/[4*u_(K,N)] <= (30/3371)*b_K,
+    delta0/u_(K,N) <= b_K/2.
+
+The first follows by summing the geometric ratio 8/225 and using
+(8/217)*(3375/3371)=27000/731507<1/27; the second uses N>=K+1 and the
+same ratios. Hence |c_K|/b_K<=1/2+1/27+30/3371<3/5. All budgets now hold,
+and the actual period is within (139/300)*rho_N<r_tail(N)/2 of delta.
+The same delta0 applies to every qualifying cutoff.
+
+The independently criticized sketch is
+`/tmp/pi-m4-one-functional-consumer-20261127.md`, SHA-256
+`c7544104acd0e64ab6dc2c77e70f238f645b3c3bf97cb80f4f9fedb47805f45d`.
+Its original rationality and determinant-sign ambiguities were corrected;
+the zero-prefix section is explicit. This proves a sufficient consumer only.
+No qualifying basis family for arbitrarily large N is supplied, and the N50
+basis above was not tested in this new frame. Positive volume, primitive
+prefix content and small projected cells do not furnish the missing bound.
+Rare stages with many active primes still defeat uniform one-stage greedy
+estimates. Uniform covering would need a compatible infinite-model argument;
+denominator noncancellation is separate. Even such a model would discard exact
+A, so neither this reduction nor the finite certificate proves actual V.

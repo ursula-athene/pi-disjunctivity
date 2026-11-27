@@ -7,7 +7,7 @@ The [continued research checkpoint](#continued-research-checkpoint--2026-11-26)
 records subsequent work during the user's absence; that checkpoint does not
 terminate the ongoing M4 effort.
 The latest dated continuation is the
-[Sparse block identities and global constraints](#sparse-block-identities-and-global-constraints--2026-11-27-utc); read the
+[Finite covering and a rational period functional](#finite-covering-and-a-rational-period-functional--2026-11-27-utc); read the
 research log and actual checkout for subsequent results and current state.
 
 ## Baseline and authorized endpoint
@@ -1023,3 +1023,23 @@ constraints, beyond the failed prefix/binomial families. It must address
 actual period covering or a period-aligned dual; volume surplus alone does
 not do so. The log owns the effort bound and evidence. V/Hpi/T/M4 remain open,
 B4/P3 retain visits, M5 remains excluded, and authorized research continues.
+
+## Finite covering and a rational period functional — 2026-11-27 UTC
+
+The preceding checkpoint is local commit
+`b114f4bd2fd46cecf8bf26bdb81d7d0015c8c44f`; nothing was pushed. The
+[finite certificate](m4-prime-defect-boundary.md#a-finite-bounded-covering-certificate)
+gives bounded perturbation-lattice vectors for an entire positive target
+interval at K=31,N=50,B=1/4096. Independent reconstruction and the parent's
+output-path-only replay passed 2,680 exact checks with identical artifacts.
+Approximate basis search was used only to propose an exactly checked integer
+transformation. This is paper mathematics with exact finite evidence, not Lean.
+
+The [general consumer](m4-prime-defect-boundary.md#a-single-rational-functional-suffices-for-future-covering-certificates)
+uses one rational functional and preserves a fixed positive target interval.
+It retains the unproved basis-width hypotheses at arbitrarily large cutoffs.
+The next bounded inquiry tests controlled duals/witnesses at many-prime stages;
+no larger finite basis campaign is planned. The review record owns integration
+status and all findings. There is no infinite all-prime model or actual
+visitation result. V/Hpi/T/M4 remain open, B4/P3 retain visits and M5 is excluded.
+This checkpoint does not end the authorized research.

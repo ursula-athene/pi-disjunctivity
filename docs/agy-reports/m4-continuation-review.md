@@ -1607,3 +1607,63 @@ Checks and preservation remain caller evidence; the reviewer performed no
 checker, build, extractor, probe, mutation or service call. Subsequent edits
 implement I1 and record this outcome only. The global-dual inquiry continues
 separately, with no result integrated here.
+
+## Finite covering and rational functional — 2026-11-27 UTC
+
+Baseline is local commit `b114f4bd2fd46cecf8bf26bdb81d7d0015c8c44f`.
+Scope: `m4-prime-defect-boundary.md`, `proof-plan.md`, `research-log.md`,
+`m4-handoff.md` and this record. No Lean, tool, dependency, pin or unrelated
+workspace change is included. Independent exact-diff Codex review by
+`/root/generating_review` is complete, using both adversarial guides; the
+separate research verifications below do not replace it.
+
+The N50 verifier independently reconstructed the original moments, every
+orthogonality equation, both full-lattice bases, original uncleared Newton
+conditions and all-target rounding argument. Its D1--D5 are resolved by those
+checks and the finite-only statement. I1's simpler direct-coordinate bounds
+are used. Q1--Q2 remain open: uniform future covering and subsequent infinite
+model/denominator obligations. The parent read the full report, criticism and
+checker, then replayed it with only the output-directory line changed:
+2,680 checks, exit 0, identical receipt/certificate and 11 frozen files intact.
+The original report's "unchanged-copy" phrase is inaccurate about that path
+change; the production assessment explicitly corrects it. No search heuristic
+was replayed or accepted as proof. The exact independent verifier is
+`/tmp/pi-m4-n50-certificate-verification-20261127/verify-v1.py`, SHA-256
+`a859f37de557dc0f31be69f74b29eb22a37fea141fe2b2cd82ff60746ee7887f`.
+
+The single-functional sketch received separate read-only criticism from
+`/root/fermat_neighbor_bridge`, captured in full at
+`/tmp/pi-m4-one-functional-review-20261127.txt`. D1 (rationality of B) and D2
+(determinant sign) were corrected; I1 explicitly defines the zero-prefix
+lattice. Q1 retains the unproved uniform basis family. The reviewer reconstructed
+the general bounds and found no remaining defect, with no checker execution.
+These are sufficient conditions, not a successful infinite construction.
+
+The earlier rational slice and thin projection remain diagnostics. Parent
+unchanged-copy replay of the slice passed 2,547 exact checks with an identical
+receipt; the projection's 2,460 exact assertions are caller evidence, not an
+independent verification. The original forced-prefix/reduction packet's
+180-second cap was not rerun. Only its elementary K=1 obstruction and measured
+timeout enter the mathematical assessment. No asymptotic conclusion is inferred
+from finite thresholds or volumes. The current uniform-dual investigation is
+excluded from this checkpoint's mathematical claims. V/Hpi/T/M4 remain open.
+
+Frozen scope is `/tmp/pi-m4-finite-cover-review-20261127/`, diff SHA-256
+`31741eeaedad9e47618df153f540034576f88562c21ab95d37f8a4d1ef0c5656`.
+The complete response is `review-full.txt`, SHA-256
+`8dd7b37905322c3b0982eecfc56eee3b8fbaa1084500a4d105fdb5d376777a5d`.
+**D: none. I: none required. Q1: resolved:** the reviewer requested an explicit
+matrix dimensions/types check; the caller confirmed 19 rows of 19 Python
+integers, with source hash unchanged. The supplemental receipt is
+`integer-transform-check.json`. **Q2--Q3: retained open:** uniform future
+covering, infinite realization/denominator obligations and the absent actual-V
+bridge. No search rerun or frozen artifact modification was needed.
+
+The reviewer reconstructed both arguments, verified all five production and
+54 evidence hashes, and confirmed the output-path-only replay difference.
+The retained full guides have unchanged verified hashes. Binary artifacts were
+hash-inspected; exact execution and preservation are caller evidence. The
+reviewer ran no build, checker, probe, extractor, mutation or service call.
+Documentation (93 files), process tests (38), whitespace and preservation of
+17 protected plus 11 unrelated files passed. Subsequent edits record this
+review outcome only. No Lean files changed or build was repeated.
