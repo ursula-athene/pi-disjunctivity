@@ -775,3 +775,116 @@ requires new uniform estimates. The complete two-sum TeX and the localized
 finite-prime argument were read, but neither external Lean development was
 built, audited or imported. The source screen rejects these direct transfers;
 it does not reject all possible adaptations of their methods.
+
+
+## Signed cutoff tails and their full-prefix comparison
+
+For the actual aligned cutoffs M=8L+6, L>=1, put
+F_L=16^L*(pi-T_M). The following paper refinement retains both original
+periods and zero-initialized prefixes. It introduces no new source theorem,
+Lean result or originality claim. Let d be17-periodic with
+`d_2=4, d_8=-2, d_10=d_12=-1`, zero elsewhere, and define
+
+```text
+Gamma_s=(sum_(j=1)^17 d_(s+j)*16^(-j))/(1-16^(-17)),
+C_s=-Gamma_s/8,  c0=349/1800.
+```
+
+Then, uniformly for every L>=1,
+
+```text
+|F_L-C_(L mod17)/L| <= c0/L^2,
+|C_s| >= 59/(480*16^7) > 0       (s=0,...,16).
+```
+
+Here is the infinite-tail argument. All poles through index L are retained.
+For L<n<=17L+12, the retained sum is exactly
+`J(n)=sum_(r in R,17 divides8n+r) c_r/(8n+r)`; afterwards it is a sub-sum
+of J(n). Thus F_L is the geometrically weighted sum of A(L+j)-J(L+j), j>=1,
+up to error at most `16^(-(16L+12))/(15L)`. Since 0<A(n)<1/n^2, its A-part
+is at most1/(15L^2). Replacing each reciprocal in J by1/(8L) costs at most
+109/(1800L^2); the remaining geometric error is at most1/(15L^2).
+The nonzero d terms have cyclic gaps6,2,2,7. The first dominates the entire
+subsequent geometric tail, proving the stated nonzero lower bound. The
+137 pole at n=17 is retained in both periods for every L>=17; cancellation
+in their difference does not delete its nonzero contribution to either period.
+
+Consequently, for any fixed delta>0, the last n with
+`16^n*|pi-T_(8L+6)|<=delta` is `L+log_16 L+O_delta(1)` as L tends to infinity.
+This is the actual ordinary absolute-error horizon for this aligned family;
+it is not a lower bound for distance to an integer.
+
+A later circular window is possible. Fix s, a=|C_s|, sigma=sign(C_s), and choose
+L_k congruent to s modulo17 nearest to a*16^k. Then |L_k-a*16^k|<=17/2.
+For sufficiently large k, L_k>=17, set M_k=8L_k+6 and n0=L_k+k. For every j>=0,
+
+```text
+|16^(n0+j)*(pi-T_(M_k))-sigma*16^j| <= B_s*16^j/L_k,
+B_s=17/2+3*c0/(2a).
+```
+
+The center sigma*16^j is an explicit integer. For any fixed0<epsilon<1,
+all j from0 to J_k=floor((1-epsilon)log_16 L_k) therefore have circular
+error at most B_s*L_k^(-epsilon), tending uniformly to zero. The last index
+is L_k+(2-epsilon)log_16 L_k+O_s(1). A sufficiently late cutoff visit to
+(a0+2eta,b0-2eta), with4eta<b0-a0, transfers to the actual recurrence target
+(a0,b0) once this error and E_n are each below eta. This retains every target
+0<=a0<b0<=1, threshold and recurrence offset n+1. No such visit is supplied.
+
+### The simpler actual prefix already reaches this window
+
+The established positive-tail representation gives, for every L>=1,
+
+```text
+0<E_L=16^L*pi-S_L <=1/(64L^2),
+0<=1/(64L^2)-E_L <=23/(512L^3).
+```
+
+Therefore the full rational prefix continued homogeneously shadows pi for
+h<=(2-epsilon)log_16 L at every anchor. The rational correction
+S_L+1/(64L^2) already extends this to (3-epsilon)log_16 L. Higher fixed-order
+corrections were assessed above; more approximation accuracy alone gives no visit.
+For the selected L=L_k write r_k=16^k F_L-sigma. The exact comparison is
+
+```text
+16^(L+k+j)*T_M + sigma*16^j -16^(k+j)*S_L
+  =16^(k+j)*E_L-16^j*r_k.
+```
+
+Its absolute value is at most `(3/(128a)+B_s)*16^j/L`. The selected cutoff,
+frozen full-prefix, pi and actual driven phases thus have the same circle
+limit set along these moving windows. Every fixed margined hit transfers
+between them, and averages of any fixed finite trigonometric polynomial
+differ by o(1). The entire selected window eventually lies within the simpler
+prefix window after arbitrarily slightly reducing epsilon. This selected-window
+visitation property is not asserted equivalent to V: V could obtain visits
+elsewhere. Fixed-M normality has supplied no new estimate for these early
+phases. Suspend further window tuning without a distinct real-phase consumer.
+
+### Selected anchors do not yield a small linear recurrence
+
+The explicit C_s have denominators dividing8q, where q=17112760831,
+q divides16^17-1 and q=1 modulo17. For k>=1,
+`|C_s|*16^k*(16^34-1)` is a multiple of17. Nearest-class rounding then has
+an exactly34-periodic offset. Fixing k=k0+34t, k0>=1, gives
+`L_k=alpha*Q^t+b`, with Q=16^34, alpha>0 and rational b.
+
+The actual rational phase `x_t=fract(16^k*S_(L_k))` cannot eventually satisfy
+any nontrivial fixed-order linear recurrence
+`sum_(i=0)^r a_i(Q^t)*x_(t+i)=0`, with a_i in Q(X) and a_r nonzero.
+Indeed clear denominators to integer polynomials A_i. A single cumulative
+product of the nonzero leading coefficients A_r(Q^u) clears all subsequent
+sequence denominators, so their logarithms are O(t^2). The earlier all-anchor
+prime-product argument instead supplies an odd denominator divisor with
+logarithm2L_k+o(L_k), of order Q^t. Multiplication by16^k and taking fractional
+parts cannot cancel it. The contradiction retains that argument's unformalized
+PNT-in-a-fixed-progression input; it also covers fixed rational-function
+corrections by the existing denominator bound. Nonlinear, floor-dependent or
+growing-order recurrences are not excluded.
+
+The [Bostan–Yurkevich q-holonomic paper](https://arxiv.org/abs/2012.08656)
+provides bibliographic context for this recurrence class; no algorithm or
+external theorem from it is used in the elementary denominator argument.
+The [review record](agy-reports/m4-continuation-review.md) owns the exact proof,
+comparison, structural replay and review evidence. None supplies actual odd-carry
+infinitude or V; M4 remains open.

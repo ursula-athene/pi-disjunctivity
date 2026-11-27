@@ -9,8 +9,9 @@ the continuing paper investigations have supplied no new unconditional
 visitation theorem. Even infinitely many odd actual carries remains open.
 Research continues under the invoked [current prompt](session-prompts.md#current-prompt-m4-universal-visitation)
 and [persistence protocol](meta-proof-plan.md#persistence-and-stopping-conditions).
-Use Codex subagents for required reviews; Carbon remains stopped. M5, push,
-PR, new dependencies, installations and permission changes are not authorized.
+Use Codex subagents for required reviews; Carbon remains stopped. Regular pushes
+are authorized under the [standing cadence](../AGENTS.md#remote-publication-cadence).
+M5, PRs, new dependencies, installations and permission changes remain outside scope.
 
 Read the [fixed finite column proof](m4-fourier-windows.md#every-fixed-finite-column-sum-is-normal),
 then the end of the [research log](research-log.md) and the actual checkout.
@@ -35,8 +36,12 @@ rationally scaled odd localization. [Point counting](m4-generating-functions.md#
 also leaves a precise height/domain gap. The [exact integer branch](m4-fourier-windows.md#the-zero-branch-and-what-the-scaled-projection-loses)
 retains zero initialization but still lacks early target-cell visits. Complete
 projected correlations lose that branch; dropping integral insertions or rounding
-the forcing fails the specified tests. Further approximation or profile
-refinement requires a real-visitation consumer. The log owns bounds and outcomes;
+the forcing fails the specified tests. The [signed-tail comparison](m4-fourier-windows.md#signed-cutoff-tails-and-their-full-prefix-comparison)
+gives a later circular window for selected cutoffs, but the full actual rational
+prefix already reaches that scale at every anchor. Its fixed rational correction
+reaches still farther. Selected geometric anchors also fail the tested small
+linear-recurrence representation. Further approximation or profile refinement
+requires a distinct real-visitation consumer. The log owns bounds and outcomes;
 this entry is not a second live status ledger.
 
 For the immediate failure record, follow the relevant mathematical owner:

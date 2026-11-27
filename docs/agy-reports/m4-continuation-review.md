@@ -3951,3 +3951,85 @@ research was excluded. The parent accepts the review with that disclosed
 procedural deviation; no substantive repair is required. Subsequent edits here
 record only this outcome. This is an intermediate documentation checkpoint,
 not a Lean proof, external human review, V or M4 acceptance.
+
+
+### Signed tail and full-prefix comparison — 2026-11-27 UTC
+
+The first worker packet is `/tmp/pi-m4-signed-tail-modular-window-20261127T213937Z/`:
+report SHA-256 `acf2f29479d3f485e02e750aa2a00e20b8bfa3776caf827facaabd7561b6540b`,
+manifest `4659304538c9d937aa9e65a1e6939d4670384c5270ab7e129e3449ad723702cb`.
+Parent assessment and unchanged148027-check replay are in
+`/tmp/pi-m4-signed-tail-parent-20261127-2156/`; its assessment is
+`328e34dbdf8e94255e2a6acc068c4aef1aefb383e7dc67c7812537c57b909923`,
+and full returned review is
+`8a1629052f4602bb2d30563a55666e55f59e7afb5e42347799ea50ae1aa6286f`.
+Separate reviewer `finite_log_independent_review` ran21:55:31–21:57:48,
+reassessing before its midpoint and22:05:31 deadline. No D/I was found.
+The reviewer reconstructed the infinite mask/remainder, nonzero17 constants,
+integer-centered rounding window and margined transfer; finite tests do not
+prove those infinite claims. Q1 retains the absent visit; Q2 requested the
+strongest simpler-prefix comparison. Both were accepted for investigation.
+
+The resulting comparison packet is
+`/tmp/pi-m4-window-prefix-comparison-20261127T215441Z/`, report
+`9b3a69c8f650e27c2bc9141fcddfdee559a876b4fb4909a856fdc0da133d2c4a`, manifest
+`f09766b919d5d16e04a4348851a1e4d59dad8be75f2900d5c2b953b6380c6e21`.
+Parent complete proof/checker inspection and5983-check unchanged replay are in
+`/tmp/pi-m4-prefix-comparison-parent-20261127-2204/`, assessment
+`ac7f2279baf2d5d33a65c597740a4c271b4e0a14cbeefe368c51397a4fd8ce0c`, full review
+`94ac4d0b5abe0ebb940e6decae8b2b9307fb228a64db0e0febea93620582543f`.
+The same separate reviewer ran22:05:15–22:07:38, reassessing before its midpoint
+and22:13:15 deadline. No D/I was found. Prior Q2 is resolved within the tested
+scope: the selected cutoff window supplies no new transfer or finite-frequency
+estimate beyond the actual full prefix; the existing first correction is stronger.
+Q1 remains actual phase placement, not a failed compiler or missing library lemma.
+The tested fixed-order recurrence exclusion retains the prior PNT input and does
+not exclude nonlinear, floor-dependent or growing-order representations.
+
+Both full adversarial guides and the critic/replacement procedure were applied.
+Worker, input and parent hashes were verified: respectively6/5/17 and6/5/21;
+the second review uses the frozen baseline Fourier-owner snapshot after legitimate
+production edits. Both replays were byte-identical with empty stderr and caller
+exit0. No actual pi period, cutoff value, raw prefix, digit or carry census was
+computed. Reviewers read the checkers without running them; no writes, builds,
+network, Git operations or delegation occurred. The q-holonomic primary record
+was bibliographic context only. No full source audit, Lean proof, originality
+claim, positive visit estimate or M4 acceptance follows. Production integration
+has its own exact-diff review; these are the completed scratch-paper reviews.
+
+
+### Tail-comparison integration and publication cadence — 2026-11-27 UTC
+
+`post_profile_mechanism_reset` completed the exact four-path mathematical
+integration review from22:12:02 to22:16:07, before its midpoint and22:24:02
+deadline. Packet `/tmp/pi-m4-tail-comparison-integration-20261127-2206/` retains
+diff `f3154be1b03fc2b4fabd867b6371de55f015f4e86caf301d2dd646e936689669`,
+45-entry manifest `f06889d6bbce44a54f6e956e7775a61db5e0e8978643b3609ca4270c952bdcd1`,
+and full review `4bddd2f2029116a8f033940a09b19659d5830140b0e21beb49dac51d3c39c33c`.
+No D was found. I1 proposes deriving period34 directly from the defining
+geometric denominator; the parent accepts its validity and defers optional
+cleanup to retain correspondence with the already verified numerical-q proof
+packets. Q1 remains actual phase placement; prior Q2 is resolved for this
+comparison; Q3 retains source/PNT and representation limits. Q4 identifies the
+new user-authorized push cadence, resolved by the separately reviewed policy.
+Both full guides were read; all45 manifest and17 protected-file hashes matched.
+No writes, checker execution, builds, network, Git or delegation occurred.
+
+The user's regular-push request is implemented in AGENTS, the workflow, current
+prompt and handoff. `finite_log_independent_review` reviewed their exact
+prospective delta from22:15:39 to22:17:09, before its midpoint and22:23:39 deadline,
+using the full strategy/tooling guide. Packet
+`/tmp/pi-m4-push-cadence-policy-20261127-2215/` retains diff
+`243de775ea1b773489850add37e51963a80db1b46077dad46467424374fca593`, nine-entry
+manifest `6d0b5c901ab54f842f8929f6860468d7da2d22346103e6bdfa822cf7e8bca58f`,
+and full review `ab67488203028b7851b0d3d44d6c49af9f3f67bb40b8d8425cd52a2c128398fe`.
+No D/I was found. Q1, application validation, is resolved: the parent applied
+the exact reviewed bytes, preserving the mathematical handoff content, and
+observed93-document,38-process-test and whitespace checks exit0. No reviewer
+ran checks or changed files. Neither review certifies the other's excluded scope.
+
+The combined seven-path finalization is the verified composition of those two
+reviewed deltas, followed only by outcome records. The cadence publishes ready
+reviewed work every15 active minutes and at milestone/result/direction events;
+no empty commit, force push, PR or background-service promise is introduced.
+Mathematical acceptance gates and the open V obligation remain unchanged.

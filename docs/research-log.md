@@ -5173,3 +5173,60 @@ procedure deviation are recorded in the [continuation review](agy-reports/m4-con
 The meta-plan now retains the user's early prior-work checkpoint. This local
 intermediate checkpoint does not complete M4; the signed-tail comparison and
 actual visit investigation continue separately.
+
+
+### Signed-tail windows and the simpler-prefix test — 2026-11-27 UTC
+
+The bounded actual-tail investigation ran21:39:37–21:50:37 UTC, before its
+21:57:37 endpoint. It proved a nonzero periodic leading coefficient for
+16^L*(pi-T_(8L+6)), a sharp ordinary horizon on that family, and selected
+integer-centered circular windows ending near L+(2-epsilon)log_16 L.
+The exact forcing and zero entry were preserved; no visit was inferred.
+The parent read the complete proof/checker, reconstructed the infinite bounds
+and replayed148027 structural checks unchanged. Separate Codex review completed
+21:57:48 with no D/I; Q1 retained the moving-window visit gap, and Q2 asked
+whether the new window improved the full rational-prefix alternative.
+
+The comparison cycle ran21:54:41–22:01:39, before22:06:41. Its exact centered
+identity resolves Q2 for the present proposal: cutoff, full-prefix, pi and
+driven phases have the same selected-window limit sets and fixed finite-frequency
+averages. Existing ordinary prefix shadowing already reaches that scale at every
+anchor, and its first rational correction reaches3log_16 L. The selected anchors
+are exactly affine-geometric after fixing k modulo34, but their actual rational
+phases cannot satisfy a fixed-order linear recurrence rational in the geometric
+index: cumulative recurrence denominators grow logarithmically as O(t^2), while
+the archived odd-prime denominator bound grows as a positive multiple of16^(34t).
+The existing PNT dependency remains explicit. Parent replay passed5983 structural
+checks; separate review completed22:07:38, no D/I, retaining actual phase placement.
+
+The [mathematical owner](m4-fourier-windows.md#signed-cutoff-tails-and-their-full-prefix-comparison)
+and [review record](agy-reports/m4-continuation-review.md#signed-tail-and-full-prefix-comparison--2026-11-27-utc)
+retain proofs, packet identities and limits. Pure tail-window refinement is
+suspended until a distinct visit consumer is supplied. A brief five-query
+logarithmic/missing-digit source screen found no changed bridge beyond the
+archived pointwise/whole-embedding gap; it is not counted as mathematical
+progress. Its exact limits are in `/tmp/pi-m4-log-missing-digit-screen-20261127-2158/`.
+A fresh-context critique now tests actual phase consumers and the strongest
+simpler alternatives. M4, actual odd-carry infinitude and V remain open.
+
+
+### Regular remote publication authorized — 2026-11-27 UTC
+
+The user requested pushes every15 minutes during active work and at milestones,
+results or new research directions. This is now a standing repository instruction,
+with execution details in the [publication workflow](proof-workflow.md#regular-remote-publication);
+the current prompt and handoff supersede their old no-push wording. Existing
+review and validation gates remain, and pending research is not marked complete.
+The five reviewed commits through `10cf104d9ece5467a0b49aa91885fa9a361e4957`
+were pushed normally to `origin/feature/m4-universal-visitation`; the remote hash
+was verified with `git ls-remote` (push result b08788, verification80fb88).
+No PR was opened and unrelated working-tree material remained local.
+
+Both the tail-comparison integration and prospective publication policy passed
+separate exact-scope reviews. The applied composition passed93-document,
+38-process-test and whitespace checks at22:19:07 UTC. Final publication receipts
+follow in the same records; no Lean declarations or dependencies changed.
+The next mathematical probe tests whether fixed-depth short differences retain
+an exponential denominator in the actual initialized recurrence, including all
+new forcing terms. A fresh critic supplied a candidate argument; it is not yet
+independently checked or adopted as a theorem.

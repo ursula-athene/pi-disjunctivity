@@ -37,6 +37,17 @@ For Lean changes, run `lake build`, `lake env lean Test.lean`, and
 MIT SPDX headers, and enabled linters. Copyright and author attribution must
 use only Ursula Athene.
 
+## Remote publication cadence
+
+The user authorizes regular pushes of reviewed, task-owned commits to the
+current branch on its configured remote during active authorized work. Push
+at least every 15 minutes, and at a milestone, a result, or the start of a new
+research direction. This standing instruction supersedes older no-push wording
+for the active work; do not ask for permission again. Follow the
+[publication cadence](docs/proof-workflow.md#regular-remote-publication) while
+preserving required checks, reviews and unrelated work. Pull-request creation
+and force pushes are not authorized by this cadence.
+
 ## Pull request creation
 
 Always use the GitHub CLI (`gh pr create`) to create pull requests for this

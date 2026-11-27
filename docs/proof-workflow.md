@@ -240,6 +240,28 @@ have also been tested; the [capability record](b2-tool-evaluation.md#persistent-
 owns their availability and remaining limits. Preserve the shell fallback.
 CI retains the Lean build and axiom audit alongside offline process checks.
 
+## Regular remote publication
+
+The user's standing instruction in [AGENTS.md](../AGENTS.md#remote-publication-cadence)
+authorizes pushes during active work at least every 15 minutes and whenever a
+milestone or result is recorded or a new research direction starts. At each
+trigger, push all ready, reviewed task-owned commits on the current branch to
+its verified configured remote. Do not wait for M4 completion or ask again.
+If there are no new commits, verify that the branch is synchronized; do not
+create an empty commit. This cadence applies while an agent is actively working,
+not as an unattended background service after a session ends.
+
+Preserve the existing validation and review gates before committing. If new
+work is still under review at a trigger, push any already reviewed commits,
+retain the pending work and publish it promptly once its checks pass. Do not
+mark partial research complete in order to publish it. Run Git mutations as
+standalone commands, use ordinary non-force pushes, and verify the remote branch
+hash after success. Record the verification time and commit in the existing
+research log or handoff. After a restart or compaction, check those receipts,
+the current clock and actual local/remote state before continuing the cadence.
+On a failed or rejected push, retain the commits locally, report the actual
+cause and continue useful authorized work without bypassing host rules.
+
 ## Milestone and intermediate changed-file reviews
 
 The [proof-plan policy](proof-plan.md#changed-file-reviews-with-gemini-carbon)

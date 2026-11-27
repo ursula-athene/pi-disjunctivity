@@ -26,7 +26,8 @@ Invoking this prompt authorizes the entire **M4 Universal Visitation milestone**
 ([Step 5, obligation V](proof-plan.md#5-prove-the-missing-universal-visitation-theorem)):
 mathematical research, targeted literature/library search, necessary supporting
 lemmas, Lean formalization, exports/audits, required reviews, local commits,
-post-commit necessity inspection and a durable handoff. Carry useful work
+post-commit necessity inspection, regular remote publication under the
+[standing cadence](../AGENTS.md#remote-publication-cadence), and a durable handoff. Carry useful work
 through those internal checkpoints without asking again between authorized
 steps. Do not stop after a plan, candidate sketch or intermediate lemma.
 Saving this prompt does not invoke it or begin research.
@@ -60,8 +61,8 @@ the tooling milestone. Final export/assembly of `PiHexadecimalDisjunctivity`
 belongs to M5 and is outside this prompt. Keep all new work directed at V;
 optional modular-sum machinery is justified only by a specific M4 obligation.
 Do not install tools, change dependencies/pins/permissions, contact people,
-use new paid services, rewrite Git history, push or open a PR without separate
-authorization.
+use new paid services, rewrite Git history or open a PR without separate
+authorization. Regular pushes are authorized by the standing cadence above.
 
 ### 1. Verify the checkout and establish the contract
 
@@ -220,8 +221,9 @@ actual target before continuing. On incomplete work, keep the current entry
 pointing to the precise M4 continuation question; on acceptance, archive this prompt
 and record the stopping boundary without automatically starting M5.
 
-Commit only task-owned, validated and reviewed work locally, including any
-clearly labelled partial results at useful checkpoints. Such a commit or handoff
+Commit only task-owned, validated and reviewed work, including clearly labelled
+partial results at useful checkpoints, and push under the
+[regular publication workflow](proof-workflow.md#regular-remote-publication). Such a commit or handoff
 does not end the ongoing research. At an actual interruption that prevents
 review/validation, preserve uncommitted continuation notes under the
 [workflow's memory rules](proof-workflow.md#records-and-project-memory), report
