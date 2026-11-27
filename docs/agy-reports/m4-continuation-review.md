@@ -3229,3 +3229,62 @@ skills applied. Source and caller-execution limits remain as above. No
 checker execution, mutation, service or delegation occurred. Documentation
 (93), process tests (38), whitespace and preservation checks passed; unchanged
 Lean was not rebuilt. Only factual outcome records follow the frozen review.
+
+## Concordance source and positive-index regularity — 2026-11-27 UTC
+
+Worker `/root/m4_initialized_arithmetic_reset` completed at 17:47:21 UTC
+within its 17:34:30--17:59:30 bound. Frozen report
+`/tmp/pi-m4-initialized-arithmetic-reset-20261127/report.md`, SHA-256
+`07d7b80acf797f6d8ad9e7fb6743b242e68287d307f8453149f8981d8ff4acd9`;
+inventory SHA-256
+`726ffea303c30171f971d336beeb4762c0bc44dcd105948427f00c87ec028661`.
+Parent packet `/tmp/pi-m4-concordance-parent-review-20261127/` has manifest
+SHA-256 `1ca43e4692ae773d8d9d09ef9966228e1653e5186e1764b2613542410d2ccef7`,
+binding nineteen files. Unchanged-copy replay passed with identical stdout,
+empty stderr and all seven worker originals preserved. Its finite synthetic
+checks and rational threshold comparison do not certify universal claims.
+
+Independent `/root/generating_review` ran 17:50:05--17:53:54 UTC within six
+minutes. Complete capture: `/tmp/pi-m4-concordance-paper-review-20261127.txt`.
+**D: none. I1/I2: implemented and verified:** separate the checker's threshold
+comparison from the pi bound, and restrict odd denominators to integer
+arguments. The independently inspected addendum `clarification-v2.md` has
+SHA-256 `e29177dd1e93649bc8037cb454117d79689d796c015415e1c0225e837b97f038`;
+originals remain unchanged. Production retains both corrections and explicitly
+identifies the coefficient g as the isometry, not the initialized forward graph.
+**Q1: retained open:** a new arithmetic implication from actual word avoidance.
+
+The critic reconstructed the source contract, floor-concordance contradiction,
+positive carry-tail continuity obstruction and synthetic comparison. Both full
+guides, critic/source skills and replacement procedure applied. All nineteen
+bound files matched. Pila's printed pp.2--4 were read and visually inspected;
+the full source proof/dependencies were not audited. The pinned Mathlib pi
+bound was inspected, with no new Lean execution. Caller evidence was inspected
+without checker/probe/build execution, rendering, extraction, service, mutation
+or delegation. Production integration is pending; V/M4 remain open.
+
+Full four-path integration review by `/root/finite_log_independent_review`
+ran 18:00:11--18:02:02 UTC within ten minutes. Baseline `ac9688f7`; exact
+diff SHA-256 `0ef4fea97b92572d2deba6592f4a17ba99e9fd3ecc7067b5b3749568e4c61927`;
+manifest SHA-256
+`af316a5e0a0b22f18ee795f6727e17442558763aba197351718c771c0363a98e`.
+All sixty bound files and the live scoped diff matched. **D: none. Source
+I1/I2: verified implemented. Q1: retained open.** The critic reconstructed
+the corrected arguments, found no consequential duplication, and preserved
+all source/checker limits. Complete captures and frozen scope are in
+`/tmp/pi-m4-concordance-integration-review-20261127/`.
+
+The parent then corrected the stale opening navigation in the handoff,
+without removing historical sections. Focused review ran
+18:03:45--18:07:14 UTC within four minutes. **Focused I1/I2: implemented
+and verified:** replace an overstatement about determining the canonical
+cell with the absence of a visitation estimate, and preserve the former H1
+anchor explicitly. These are separate from the source I1/I2 above. No
+remaining defect or new mathematical question was reported. The final entry
+delta `handoff-entry-fix-v3.diff` has SHA-256
+`fe8626140d8483bd9f74cba434b63872bb81435b9fdf55dd88e544880e744e81`;
+earlier versions are preserved. The rest of the handoff was unchanged at
+focused review. Both full guides and replacement/critic context applied; no
+reviewer execution, mutation, service or delegation occurred. Documentation
+(93), process tests (38), whitespace and preservation checks passed; unchanged
+Lean was not rebuilt. Only factual outcome records follow these reviews.

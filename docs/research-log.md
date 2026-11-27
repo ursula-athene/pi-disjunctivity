@@ -4682,3 +4682,54 @@ minutes, with no D/I item and uncancelled phase control retained open. The
 frozen four-path scope and complete capture are in
 `/tmp/pi-m4-disk-integration-review-20261127/`. Documentation (93), process
 tests (38), whitespace and all preservation checks passed; no Lean changed.
+
+The disk-count checkpoint is local commit
+`ac9688f7bea43233bc45f7ee4bfc51474dd43750`, parent `5d25c546`.
+Post-commit scope/blob/necessity inspection passed at 17:44:08 UTC, with
+empty index, clean task-owned tree and all 28 preservation hashes matched.
+The branch was seventeen ahead of its remote-tracking reference; no push or PR.
+
+The arithmetic-reset discovery completed early at 17:47:21 UTC. Its
+[higher-order concordance source](m4-generating-functions.md#higher-order-concordance-needs-a-new-arithmetic-hypothesis)
+allows greater analytic growth but requires new integer congruences. Even
+eventual first-order concordance of actual floors would force constant
+carries; a continuous carry-tail extension to Z_2 would force periodicity.
+Neither restriction follows from word avoidance. A synthetic rational-zero
+comparison loses exact A and the reflected-zero anchor. Parent source and
+algebra verification ran 17:48:37--17:49:46 UTC within five minutes; the
+unchanged checker replay matched its output and preserved seven originals.
+
+Independent paper/source review ran 17:50:05--17:53:54 UTC within six
+minutes, including focused clarification inspection. No defect was found;
+two wording improvements were implemented in an immutable addendum: the
+checker certifies only the threshold comparison with 22/7, and odd denominators
+are asserted at integer arguments. The new arithmetic implication from
+actual avoidance remains open. Full production integration is pending; no
+new Lean or visitation result is supplied.
+
+**Changed source-led discovery, 17:51:37--18:16:37 UTC:**
+`/root/m4_contracted_rotation_connection` owns
+`/tmp/pi-m4-contracted-rotation-connection-20261127/`. Compare a proved
+algebraic-parameter contracted-rotation theorem with exact reversed BBP
+branches, preserving time dependence, branch selection and initialization.
+The parent and worker are testing an autonomous inverse selector, including
+its rational-partition special case. No unfinished source application or
+selector theorem is adopted. V/M4 remain open and research continues.
+
+Concordance full integration review ran 18:00:11--18:02:02 UTC within ten
+minutes, with no defect, both source wording items resolved and the actual
+avoidance implication retained open. A parent correction to the handoff's
+stale opening pointer passed focused review at 18:03:45--18:07:14 UTC; its
+two wording/anchor improvements were implemented and verified. The full
+captures and deltas are in `/tmp/pi-m4-concordance-integration-review-20261127/`.
+Documentation (93), process tests (38), whitespace and preservation checks
+passed; no Lean changed.
+
+The contracted-rotation worker completed at 18:03:59 UTC before its bound.
+Its frozen packet awaits parent replay/source assessment and independent
+review; no mathematical claim is adopted yet. A thirty-minute follow-up from
+its own first clock, `/root/m4_global_inverse_history`, owns only
+`/tmp/pi-m4-global-inverse-history-20261127/`. It investigates full inverse
+history ordering with exact A and the zero root, with reassessment by fifteen
+minutes. A translated survivor set or a different selected history is not a
+visitation estimate. This is ongoing discovery, not M4 acceptance.

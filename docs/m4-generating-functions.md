@@ -1043,3 +1043,55 @@ exit 0, identical receipt and four frozen inputs preserved. The checks do
 not certify analytic remainders. Independent paper criticism found no defect
 or required improvement; initialization-sensitive cross-scale cancellation
 remains open. No actual pi phase, Lean theorem or visitation result follows.
+
+## Higher-order concordance needs a new arithmetic hypothesis
+
+[Pila, *Entire functions having a concordant value sequence*](https://people.maths.ox.ac.uk/pila/Supercon.pdf),
+author preprint 2002.12.16, Definition 1.1 and Theorem 1.3 on printed pp.2--4,
+requires an entire f whose values on every set of at most k+1 nonnegative
+integers admit interpolation by a polynomial in Z[X]. If its global
+exponential type is strictly below log(exp(H_k)+1), where
+H_k=sum_(j=1)^k 1/j, its integer samples agree with a polynomial in Q[X].
+This need not imply equality of entire functions. For k=12 the threshold
+exceeds pi, so the archived small-type obstruction alone does not exclude
+this theorem. The required congruences are an additional hypothesis.
+
+For the actual p_n=floor(S_n), let c_n=p_(n+1)-16*p_n=k_(n+1), n>=0.
+The coefficient bound 0<A(n)<1 for n>=1 gives 0<=c_n<=16; carry 16 is
+retained. If, eventually, m-n divides p_m-p_n for every pair m,n, the same
+divisibility holds for c. Steps 17 and 18 then force
+c_(n+17)=c_n=c_(n+18), hence adjacent equality. The carries would be
+eventually constant, contradicting pi=k_0+sum_(n>=1)k_n/16^n and
+irrationality. Thus even eventual order-one concordance is incompatible
+with the actual floors. No implication from omitted words to concordance
+has been established.
+
+Likewise no actual carry tail extends continuously to Z_2: compactness
+makes a continuous finite-valued function depend on a fixed finite residue
+quotient, yielding periodic carries and a rational period. A hypothetical
+continuous floor extension would give such a carry extension by its shifted
+difference; density of the nonnegative integers puts that difference's
+image in the finite carry alphabet. This positive-index obstruction uses
+irrationality, not a new four-pole estimate or a visitation argument.
+
+A synthetic comparison in the frozen packet uses
+h(x)=(x+1/17)/[(2x+1)(4x+1)(8x+1)] and g(x)=16h(x)-h(x+1).
+Its zero-initialized raw state is R_n=16^(n+1)/17-h(n+1); the phases
+avoid (1/4,3/4) and the carries alternate 15,0 after an initial 0. The
+coefficient g is positive at nonnegative integers, has leading term
+15/(64n^2), and is a 2-adic isometry. Its integer-indexed rational values
+have odd denominator; this is not asserted for every rational argument.
+The floor interpolator 16^(z+1)/17-1/2-(15/34)cos(pi*z) has type pi
+but fails concordance. This comparison loses exact A and the reflected-zero
+anchor; its initialized forward samples are not the backward analytic graph.
+
+Packet `/tmp/pi-m4-initialized-arithmetic-reset-20261127/` and parent packet
+`/tmp/pi-m4-concordance-parent-review-20261127/` retain the proof and source.
+The unchanged checker replay certifies synthetic arithmetic and the threshold
+comparison with 22/7; the separate pi bound comes from inspected pinned
+Mathlib source. It proves no universal analytic assertion. Independent paper
+review resolved both that evidence attribution and the integer-argument
+domain clarification. The source proof dependencies were not fully audited;
+no source application to BBP, Lean declaration or new visitation premise is
+claimed. This source consumer is suspended until a new arithmetic implication
+from actual avoidance is supplied.

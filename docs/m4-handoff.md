@@ -1,14 +1,49 @@
-# M4 universal visitation handoff — 2026-11-26
+# M4 universal visitation handoff
 
-This records the initial attempt. Its stopping/restart proposals were superseded
-by the [persistence follow-up](#persistence-follow-up--2026-11-26) below; its
-mathematical results and validation receipts remain historical evidence.
-The [continued research checkpoint](#continued-research-checkpoint--2026-11-26)
-records subsequent work during the user's absence; that checkpoint does not
-terminate the ongoing M4 effort.
-The latest dated continuation is the
-[Qualitative density and exact carry tests](#qualitative-density-and-exact-carry-tests--2026-11-27-utc); read the
-research log and actual checkout for subsequent results and current state.
+<a id="m4-universal-visitation-handoff--2026-11-26"></a>
+
+## Current continuation — 2026-11-27
+
+**V/M4 remain open.** B1–B3 and conditional B4/P3 remain the checked frontier;
+the continuing paper investigations have supplied no new unconditional
+visitation theorem. Even infinitely many odd actual carries remains open.
+Research continues under the invoked [current prompt](session-prompts.md#current-prompt-m4-universal-visitation)
+and [persistence protocol](meta-proof-plan.md#persistence-and-stopping-conditions).
+Use Codex subagents for required reviews; Carbon remains stopped. M5, push,
+PR, new dependencies, installations and permission changes are not authorized.
+
+Read the [latest reviewed source boundary](#concordance-source-boundary--2026-11-27-utc),
+then the end of the [research log](research-log.md) and the actual checkout.
+The active discovery tests contracted-rotation theorems against reversed BBP
+branches, including autonomy, branch selection and the zero initialization.
+Its unfinished claims are excluded from adoption. The log owns bounds and
+outcomes; this entry is not a second live status ledger.
+
+For the immediate failure record, follow the relevant mathematical owner:
+
+- [Rational forcing](m4-rational-forcing.md): changed-seed comparisons,
+  exceptional fine returns, and the absent fixed divisible integer.
+- [Generating functions](m4-generating-functions.md): natural boundaries,
+  interpolation limits, and the new floor-concordance/continuity obstruction.
+- [Two-adic reflection](m4-two-adic-reflection.md): the exact raw graph and
+  zero anchor have not supplied a real-cell visitation estimate.
+- [Language auxiliaries](m4-language-auxiliaries.md) and
+  [positive certificates](m4-positive-certificates.md): local selectors and
+  generic capacity estimates lose actual-history information.
+- [Prime compression](m4-prime-compression.md): the real matching estimate
+  needed by the qualitative density theorem remains unproved.
+- [Transforms and periods](m4-transforms-and-periods.md): disk dissection
+  cancels pi; fixed-frequency asymptotics do not control the remaining tail.
+
+Rational-entry equivalence and small-type interpolation were just matched to
+archived failures before redevelopment. A new inquiry must identify its changed
+hypothesis or consumer. Do not interpret a completed review, a partial local
+commit, or the next individual cycle bound as M4 acceptance or a stopping point.
+
+The dated sections below retain historical evidence and incoming links. Their
+checkout counts and pending-review statements describe their dates, not the
+current tree. The initial stopping proposals were superseded by the
+[persistence follow-up](#persistence-follow-up--2026-11-26).
 
 ## Baseline and authorized endpoint
 
@@ -1631,3 +1666,24 @@ Documentation, process, whitespace and preservation checks passed. No new Lean
 theorem or actual visitation result was obtained.
 The fresh arithmetic discovery and its bound are in the research log;
 unreviewed work is excluded from adoption. V/M4 remain open.
+
+## Concordance source boundary — 2026-11-27 UTC
+
+The disk-count checkpoint is local commit
+`ac9688f7bea43233bc45f7ee4bfc51474dd43750`. Post-commit inspection passed
+with empty index, clean task-owned tree and preserved unrelated work; the
+branch was seventeen ahead of its remote-tracking reference. Subsequent edits
+are uncommitted; this run issued no push or PR.
+
+The [concordance source assessment](m4-generating-functions.md#higher-order-concordance-needs-a-new-arithmetic-hypothesis)
+rejects inheritance of integer congruences from rational forcing. The actual
+floors cannot be eventually order-one concordant, and actual carry tails
+cannot extend continuously to Z_2. These use irrationality and supply no
+visitation estimate. Parent source/replay checks and separate criticism
+passed, with two wording corrections resolved in the immutable addendum.
+Full integration passed with both source wording corrections verified. The
+opening navigation correction also passed focused review after two wording
+and anchor improvements. Documentation, process, whitespace and preservation
+checks passed. The contracted-rotation inquiry and its full-history follow-up
+remain excluded from adoption pending their own reviews; bounds and outcomes
+belong in the log. V/M4 remain open.
