@@ -7,7 +7,7 @@ The [continued research checkpoint](#continued-research-checkpoint--2026-11-26)
 records subsequent work during the user's absence; that checkpoint does not
 terminate the ongoing M4 effort.
 The latest dated continuation is the
-[Rational gauges and conditioned endpoints](#rational-gauges-and-conditioned-endpoints--2026-11-27-utc); read the
+[Progression conductors](#progression-conductors--2026-11-27-utc); read the
 research log and actual checkout for subsequent results and current state.
 
 ## Baseline and authorized endpoint
@@ -1201,3 +1201,28 @@ open. The separate meta-plan pass returned no completed packet and was absent
 from the live-agent inventory at reassessment. A fresh 15-minute worker is
 recovering that inquiry; no outcome is claimed. The log owns its scope. No Lean or trust
 boundary changed. V/C_odd/global covering and M4 remain open; research continues.
+
+## Progression conductors — 2026-11-27 UTC
+
+The gauge/endpoint checkpoint is local commit
+`390730c8b88922a55dd0306e1f49ce6e9b06029c`; its review, validation and
+post-commit necessity/preservation checks passed. The branch was two ahead
+of the remote-tracking reference at the next inspection. This run issued
+no push or PR; verify live publication state before continuing.
+
+The [progression-support result](m4-prime-defect-boundary.md#progression-support-gives-a-rescaled-conductor)
+retains original free roots and all prime rows while sharpening the top
+denominator. Its complete-norm consumer excludes more dense support families,
+but explicit rows retain an unbounded rescaled primorial conductor. Their
+failure to be short does not exclude arbitrary cancellations. Parent exact
+replay passed with preserved originals; independent paper review passed with
+the complete-norm and actual-selection obligations retained. Final production
+review and focused repair passed, restoring the growing-top hypothesis in
+the compressed liminf statement. Documentation/process/whitespace checks passed.
+
+The recovered meta-plan screen completed without a surviving candidate.
+A bounded logarithmic-value/missing-digit source check and a distinct
+complete-norm polynomial inquiry are active; the research log owns their
+scopes and outcomes. No unfinished result is accepted.
+No Lean, audit, pin or trust boundary changed. C_odd, V, global covering and
+M4 remain open, and the authorized research continues.

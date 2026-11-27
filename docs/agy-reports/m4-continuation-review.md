@@ -2066,3 +2066,60 @@ as the narrowed mathematical obligations above. Documentation (93 files),
 process tests (38), whitespace and preservation checks passed as caller
 evidence; no Lean build was repeated for these documentation-only changes.
 Subsequent edits record outcomes only. The new bounded recovery is excluded.
+
+## Progression conductors and recovered ideation — 2026-11-27 UTC
+
+Baseline is local commit `390730c8b88922a55dd0306e1f49ce6e9b06029c`.
+Independent reviewer `/root/generating_review` reviewed the completed packet
+`/tmp/pi-m4-progression-dual-support-20261127/`, report SHA-256
+`81f529634d63eb7650a2a0daa58f83c65ff6b1857ba63399c49e0a2dd45b4166`,
+and the compact recovered meta screen, SHA-256
+`a083329fa7f9644c347b2029a66da3bdba0322c537e569b57788d5cdbc8c4ad6`.
+Full response is `/tmp/pi-m4-progression-paper-review-20261127.txt`.
+
+**D: none. I1: deferred:** determining the exact conductor when extra prefix
+zeros remain would improve a finite interface, but is unnecessary for the
+proved sandwich/asymptotics and does not remove the primorial barrier.
+**Q1: retained open:** a complete-norm bound for arbitrary cancellations at
+exceptional progression tops. **Q2: retained open:** comparison-class results
+do not select the fixed initialized BBP trajectory or establish V. These are
+limits of the claimed result, not missing validation of its conditional math.
+
+The reviewer reconstructed the root adjustment, all-prime localization,
+finite-prefix isolator, p|Q sampled row, exact-conductor primitivity,
+asymptotic/full-tail consumer and exposed-coefficient normalization. It also
+checked the raw homogenization and quadratic-norm counterfixture in the meta
+screen. Both required adversarial guides and the critic skill were applied.
+The worker's self-criticism was explicitly not treated as independent review.
+
+Parent unchanged-copy replay passed 8,430 checks, including 2,968 original
+uncleared rows, with a byte-identical receipt and all six original artifacts
+preserved. The meta receipt covers only the symbolic polynomial identity and
+A(1) counterfixture, not the worker's unstored checks. The reviewer inspected
+the sources and hashes but ran no checker, probe, build, extractor, service,
+mutation or delegation. No Lean, actual phase, covering or V claim follows.
+Final exact changed-file review completed as below. The two new bounded inquiries
+are excluded from the accepted mathematical scope.
+
+Documentation (93 tracked Markdown files), process tests (38) and working
+whitespace checks passed. No Lean build was repeated for this documentation-only
+checkpoint; protected Lean, audit and dependency files remain unchanged.
+
+Initial exact integration review completed against the five-path frozen diff
+`03c6269b3842c3f6e1ebbea75b63bd3a18b4de78a6ed4334f51772da191013bf`
+in `/tmp/pi-m4-progression-review-20261127/`; full response is
+`review-full.txt`. All 22 manifest-bound and 28 preservation hashes matched.
+**D1: resolved in focused review:** restore fixed K,Q,B and actual tops
+ell tending to infinity in the liminf consequence. Merely increasing the
+ambient cutoff permits a fixed short small-top dual; the authoritative paper
+report already retained the growing-top hypothesis. **I2: implemented:** update
+the handoff's latest-continuation link. **I1: deferred; Q1--Q2: retained** as
+above. No original scratch artifact changed. Focused repair review passed with
+no further finding. Its full response is `focused-review-full.txt` in the same
+packet. The repaired full diff has SHA-256
+`caed1d6eeea7d1a7ac0e8e76493c0f50fed03caa61aa89b51640e9380ccae239`;
+the diff-of-diffs has SHA-256
+`e2ce3f415f5bcaddc7f6bd17da05ddaf664387c03ad6b0d6ae05188f1b4f70ab`.
+All revised production, original evidence and guide hashes matched. The
+documentation and whitespace reruns passed; the process tests remained
+unaffected. Subsequent changes record review outcomes only.

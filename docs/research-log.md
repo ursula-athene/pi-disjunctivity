@@ -3817,3 +3817,59 @@ It must return at most two genuinely different exact candidates or a precise
 inconclusive outcome, using the failure archive and excluding the completed
 gauge lane. It has no production/Git/service/delegation authority. This
 operational recovery does not alter the mathematical conclusion or end M4.
+
+**Progression conductors and recovered ideation — 2026-11-27 UTC:** the
+gauge/endpoint checkpoint is local commit
+`390730c8b88922a55dd0306e1f49ce6e9b06029c`. Its full review, checks, exact
+staging and post-commit necessity/preservation inspection passed. At this
+inspection the branch is two commits ahead of its remote-tracking reference;
+the run has issued no push or PR. All 17 protected and 11 unrelated hashes
+still match the preceding preservation snapshot.
+
+The fresh 15-minute meta recovery completed at 10:18:35 UTC with no surviving
+candidate. The raw second-order recurrence retains the archived floor/carry
+gap. The exact identity (240n+151)^2-241=480*(120n^2+151n+47) does not make
+A(n) a quadratic norm: A(1)=106/819 has odd 7-valuation, while 241 is a
+nonsquare modulo 7. Parent symbolic expansion and this single counterfixture
+passed; the worker's unstored finite checks were not replayed. The report at
+`/tmp/pi-m4-unused-structure-reset-20261127/report-v1.md` retains the limits.
+This is a completed negative screen, not an exhaustion result.
+
+At 10:21:46 UTC, `/root/global_dual_recovery` began a **25-minute** inquiry
+into comparison duals supported where Q divides i+1, with Q fixed. It completed
+before the bound with the [rescaled conductor](m4-prime-defect-boundary.md#progression-support-gives-a-rescaled-conductor).
+Explicit original-root adjustment improves the ambient ancestor estimate;
+primes dividing Q alone cannot appear in the top denominator. Genuine global
+rows attain the leading scale, and the finite-prefix surcharge is only
+polynomial. The full-tail bound excludes further dense support families,
+while rescaled primorial tops and arbitrary cancellation remain open.
+The particular CRT constructions still fail shortness after normalization.
+
+Parent reconstruction and unchanged-copy replay passed 8,430 checks with an
+identical receipt and six preserved originals. These include 2,968 original
+uncleared Newton rows, not just a replaced sampled module. Independent paper
+review by `/root/generating_review` passed with no defect, including the
+negative meta screen. The optional exact finite-prefix conductor refinement
+is deferred; complete-norm cancellation and actual selection remain open.
+Final production review and its focused repair passed: the compressed liminf
+statement now explicitly retains growing actual tops, and the handoff's
+latest-continuation link is updated. Documentation (93), process tests (38)
+and whitespace checks passed. There is no Lean change or actual visitation claim.
+
+A separate **20-minute** source inquiry by `/root/unused_structure_reset`,
+started 10:42:24 UTC, tests logarithmic values against missing-digit membership
+theorems. Its
+scratch root is `/tmp/pi-m4-logarithmic-fractal-screen-20261127/`. It must
+retain complex branch and algebraic-multiplier conditions for pi=log(-1)/i,
+and distinguish whole-set exclusion from approximation or low-complexity
+results. At most two primary results will be assessed; no unfinished source
+claim is adopted here.
+
+At 10:45:46 UTC, `/root/global_dual_recovery` began a distinct **20-minute**
+follow-up at `/tmp/pi-m4-dual-polynomial-capacity-20261127/`. It must derive
+the exact polynomial representation of a general dual with theta and the
+infinite tail, then test whether a product-formula or polynomial-norm method
+controls coupled coefficients beyond the already insufficient leading
+denominator. The endpoint is a precise inequality and discriminating check,
+or the exact missing bridge. No unfinished output is accepted. V/C_odd/global
+covering and M4 remain open; work continues.

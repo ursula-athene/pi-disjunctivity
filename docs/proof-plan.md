@@ -961,9 +961,19 @@ and quantifies model-label errors even on surviving seeds. Its component-count
 lower bound is strictly negative at every permutation-resonant lag, so it cannot
 reach that intended regime. Actual-seed selection and long-horizon arithmetic
 control remain open; the result does not transport a whole model carry word.
-A separate bounded meta-plan pass seeks genuinely different unused structure,
-with the existing failure archive and this precise range limitation retained.
-The log owns bounds, outcomes and the failed source-applicability screens.
+A recovered meta-plan pass rejected raw homogenization as an archive match
+and a quadratic numerator norm as an invariant of the actual forcing.
+The [progression-support inquiry](m4-prime-defect-boundary.md#progression-support-gives-a-rescaled-conductor)
+now lowers the comparison dual's top conductor to a rescaled arithmetic
+quantity, including the original free roots. It excludes further dense
+support families but retains an unbounded primorial barrier. A uniform
+top-denominator repair is false for explicit global rows; unresolved dense
+cancellation requires control of the complete real norm. Independent paper
+review passed. A bounded follow-up tests a polynomial representation of that
+entire norm, including the resolvent tail, for a useful arithmetic inequality.
+A targeted source check asks whether a logarithmic-value theorem can exclude
+missing-digit membership for the actual constant. The log owns
+bounds, outcomes and the failed source-applicability screens.
 V and all Lean contracts are unchanged; neither conditional wrapping nor more
 classification supplies visitation.
 

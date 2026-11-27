@@ -1547,3 +1547,126 @@ completion-independent lower bound lies in [2^44,2^45). No actual period was
 evaluated. Independent criticism resolved the zero-witness endpoint and strict
 integer threshold wording. Universal claims remain paper mathematics; final
 integration review passed with those scopes and dispositions retained.
+
+## Progression support gives a rescaled conductor
+
+Fix K>=1, Q>=1 and rational B>0 before taking a limit. Keep the original
+strong-Newton comparison lattice, orthogonal data and complete error E_N.
+Suppose a nonzero global integer dual w=sum q_i*a_i has support only where
+Q divides i+1. Write its actual top j=Q*ell-1 and assume ell>K. The dual
+descends to cutoff j+1 with its full tail, as above. These restrictions are
+on the dual; the p-local witnesses below may have other nonzero prefixes.
+
+For p>=7 write Q=p^e*q0, with p not dividing q0, and W_a=V_(Qa-1).
+The original recurrence gives
+
+    p*W_(pa)-chi_4(p)*16^[Qa(p-1)]*W_a=G_p(Qa).
+
+If p does not divide ell, the original p-free root q0*ell>K has only its
+top descendant on this progression. Taking G_p=0 and that root at its
+allowed envelope value makes a_j a p-unit and all earlier progression
+prefixes zero. A p-unit clears every other prime condition. Thus q_j is
+p-integral even when p divides Q. The existing index argument supplies
+integrality at 2,3,5. Only primes p>=7 dividing ell can divide its denominator.
+
+For such a prime put H=ell/p, k=QH, lambda_p=v_p(L_j), and define the finite
+sets
+
+    Z_p={0,...,floor(K/p)} union
+        {q0*p^v*t : 1<=t<=floor(K/q0), p does not divide t, 0<=v<e},
+    A_H={0,Q,...,(H-1)Q}, Z_extra=Z_p minus A_H,
+    d=H+|Z_extra|,
+    P(x)=product_(a=0)^(H-1)(x-Qa)*product_(z in Z_extra)(x-z).
+
+Every root is a distinct integer below k, so d<=k. The polynomial
+G_p(x)=p^(d+2)*P(x) satisfies the original Newton conditions and prefix
+zeros. The restricted p-free roots W_a can all be zeroed: when q0*a<=K,
+Z_p zeros the intervening forcing nodes; otherwise choose the free original
+root to cancel them. The required adjustment is
+
+    R_(q0*a)=-sum_(u=0)^(e-1)
+      p^u*chi_4(p)^(u+1)*16^[-(p^(u+1)-1)*q0*a]*G_p(p^u*q0*a).
+
+It is p-integral and lies in the allowed root range. Other roots can be
+zero. Clearing non-p denominators and the other original prime rows by a
+p-unit preserves the resulting top valuation; no real-size bound on this
+multiplier is claimed. The sampled defects vanish below H, giving
+W_a=0 for a<ell and W_ell=G_p(k)/p. Define
+
+    E_minus(p)=lambda_p+(e+1)H+v_p(H!)+1,
+    E_plus(p)=E_minus(p)+sum_(z in Z_extra)[1+v_p(k-z)],
+    D_minus=product_(p>=7,p|ell)p^E_minus(p),
+    D_plus=product_(p>=7,p|ell)p^E_plus(p).
+
+Since P(k)=Q^H*H!*product_(z in Z_extra)(k-z), the isolated top a_j has
+valuation E_plus(p). Consequently D_plus*q_j is a nonzero integer.
+The roots lie in [0,k), so E_plus(p)<=lambda_p+k+1+v_p(k!): this improves
+the old bound without contradicting it.
+
+There is also genuine global attainment of the lower conductor. Set
+J=2+(e+1)H+v_p(H!). The functional
+
+    U_p=[L_j/p^(J+lambda_p)]*Delta_Q^H G_p(0)
+
+is integer-valued on the original lattice. Indeed G_p(x)=p^2*F(px) with
+p-integral polynomial coefficients; its step-Q difference has valuation at
+least J, including when p divides Q. L_j clears every other denominator.
+Its support lies at pQa-1 and Qa-1, and its top coefficient is
+p^(-E_minus(p)). Integer Bezout combinations therefore attain top 1/D_minus.
+For an empty product use a_j. No independence of sampled defects is assumed.
+
+If every Z_extra is empty, the image of all progression-supported duals
+under w -> q_j is exactly (1/D_minus)Z. This includes K=1 and Q not a pure
+positive power of a prime >=7, as well as Q=1. A dual attaining 1/D_minus
+in this exact case is primitive. In the general case only the conductor
+sandwich is asserted; dividing the constructed dual by its integer content g
+forces g*D_minus to divide D_plus.
+
+For fixed K,Q, Legendre's formula gives
+
+    log D_±=ell*[F(ell)+sum_(p>=7,p|gcd(Q,ell))v_p(Q)*log(p)/p]
+               +O_(K,Q)(log^2(ell+2)),
+    0<=log(D_plus/D_minus)=O_(K,Q)(log(ell+2)),
+    C_Q(ell)=[F(ell)+sum_(p>=7,p|gcd(Q,ell))v_p(Q)*log(p)/p]/Q.
+
+Only the fixed primes p<=K or p|Q can contribute extra prefix zeros.
+The full-tail estimate remains
+
+    E_N(w,theta)>(15/256)*L_j*h_(j+1)*b_(j+1)/D_plus.
+
+Its logarithmic lower bound is
+[4-log8-C_Q(ell)]*Q*ell+o_(K,Q,B)(ell). Thus any sequence of such short
+duals E_N<1/2, with fixed K,Q,B and actual tops ell tending to infinity,
+must have liminf C_Q(ell)>=4-log8. This covers potentially
+dense progression support beyond the earlier sparse theorem. For example,
+fix the archived odd Q with F(Q)>2 and take ell=2^a. Then D_plus=1 and
+C_Q=0, although every top Q*ell remains exceptional for the old F(Q*ell)
+test. The permitted support has order j/Q, not o(j/log^2 j).
+
+This is not a uniform exclusion. Along primorial products ell outside Q,
+F(ell)/Q diverges, and the explicit global rows attain that leading scale.
+Their familiar exposed coefficient at i=Q*ell-p0*Q-1, for fixed smallest
+active prime p0, is
+
+    q_i=-A_p0*(ell/p0)*L_j/[p0^E_minus(p0)*L_i],
+    |q_i|>=p0^(-E_minus(p0)).
+
+The polynomial content bound above leaves its exponential rate unchanged
+after primitive normalization. That rate is
+[v_p0(Q)/p0+1/(p0-1)]*log(p0)/Q < 8/7 < tau, so these particular CRT
+combinations fail the archived near-top necessary bound for shortness.
+Arbitrary further combinations might cancel their exposed coefficients;
+the required complete-norm estimate remains open. Neither global period
+covering nor actual C_odd/V follows from this comparison-lattice result.
+
+Frozen report `/tmp/pi-m4-progression-dual-support-20261127/report-v1.md`,
+SHA-256 `81f529634d63eb7650a2a0daa58f83c65ff6b1857ba63399c49e0a2dd45b4166`,
+contains the complete argument. Parent unchanged-copy replay passed 8,430
+exact checks, including 2,968 original uncleared Newton rows, with an identical
+receipt and six preserved artifacts. Original-row fixtures have cutoff at
+most 539; scalar conductor checks reach 3080. No basis search, actual phase
+evaluation, real-norm experiment or Lean proof was used. Universal and
+asymptotic assertions remain paper mathematics. Independent paper review found
+no defect. Exact conductors with nonempty extra-zero sets are deferred; the
+complete-norm and actual-trajectory gaps remain open. The continuation review
+record owns the full findings and production-integration gate.
