@@ -6545,3 +6545,32 @@ unchanged-hash checks. Read-only limits held. The screen's mathematics and
 external source applications remain unadopted; executed checks and remote
 state are caller evidence. Parent integrity verification preceded I1 and
 factual updates. Final affected checks/publication remain due.
+
+## Timing discovery checkpoint — 2026-11-28 UTC
+
+Scope: two evidence records against fbb14d0. The 73-line timing screen and
+full worker return record failure to obtain actual complementary-phase
+control from total charge. The screen's calculations remain unadopted;
+no mathematical-owner or Lean change is included. Parent af2bb3/bd62cd
+read the report in full. The separate logarithmic point-exclusion inquiry
+is prospective and retains the exact branch and single-orbit requirement.
+
+The frozen packet is `/tmp/pi-m4-timing-checkpoint-20261128T1508Z/`, with
+the source report, full worker return and preceding publication receipt
+inventoried. Exact record review and affected checks remain due; no
+mathematical certification or C_odd/V/M4 acceptance is claimed.
+
+Exact record review by `/root/dyadic_grid_independent_review_0649` completed
+15:08:01–15:08:39 with no D/I. Q1 same-window full complement, Q2 actual
+entry/branch mechanism and Q3 C_odd/V/M4 remain open. All 63 diff lines
+reconstructed both postimages; eight manifest entries, three sources,
+147 protected and 10 untracked hashes matched. Manifest
+6f86fe8acabd8445cddc916c5b93287e33264cf2d17f29859ec57d4f0e4e169c;
+full return in the 1508 packet:
+efc54cac6eb5ba7d978f397806f97430ff85fb3df528600232cb493cb1b64af4.
+Both complete guides, procedure and critic instructions were reused after
+unchanged-hash checks. Read-only limits held. The screen's mathematics
+remains unadopted; check executions, later remote observations and early
+worker observations remain caller evidence. Parent 9a12ef reverified all
+inventories and live owners before factual updates. Final checks/publication
+remain due; no mathematical-owner change or milestone acceptance is supplied.

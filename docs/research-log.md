@@ -7784,3 +7784,44 @@ in the 1447 packet:
 463051627ebfe0160d0051dd37bd141bed8162ede89054105e9e203a68af4125.
 Parent integrity verification preceded the I1 and factual updates. Final
 checks and publication remain due; no mathematical-owner change was made.
+
+## 2026-11-28 — Timing screen and logarithmic point exclusion
+
+The preceding discovery checkpoint is published as
+`fbb14d08adb8eb1a707348616dbbd4b6463962ae`, parent f88a742. Docs 838918,
+whitespace 5602a9/2688a3 and exact stage c49854 passed; commit 575542,
+post-commit b87da5, push 850041/c183dc and remote 6f507d verified publication
+at 14:52 UTC. The 1447 packet retains `publication.json`; remote fe6aa2
+still matched at 15:05 UTC. No reviewed task-owned commit is waiting to push.
+
+The fresh timing screen finished at 14:54, before its stated checkpoints.
+Its 73-line report is
+`/tmp/pi-m4-actual-time-coupling-20261128T1454Z-report-v1.md`, hash
+d0b34f47d723add2c5655e50bb45f181ba4833372c914e143c915547625b2898.
+Parent af2bb3 and bd62cd read it completely. The proposed total-charge
+criterion did not supply same-window control of the full actual complement;
+the report's packet countertest distinguishes completed cancellation from
+partial activation. The backward-entry revision returned to the retained
+entry-matching gap. Its calculations remain an unadopted screen, with no
+new mathematical-owner theorem, Lean change or V proof.
+
+Recovery now tests a different representation: pi as the specified logarithm
+of an algebraic number. The fresh-context worker's 15:15/15:30 checkpoints
+require a pointwise exclusion of a proper radix orbit closure, retaining
+the actual branch. Early exponentiation alone still contains the unknown
+digit selector; a coherent-root argument is under investigation. Generic
+logarithm bounds or whole-set embedding theorems are not substitutes for
+this particular point. No surviving mechanism is claimed. The full failure
+map was supplied, and no actual-digit or orbit census is authorized.
+
+The timing worker's complete return and preceding publication receipt are
+retained in `/tmp/pi-m4-timing-checkpoint-20261128T1508Z/`. Exact record
+review and affected checks remain due. C_odd, V and M4 remain open.
+
+Exact record review 15:08:01–15:08:39 found no D/I. Q1 full-complement
+phase control, Q2 actual-entry/branch mechanism and Q3 C_odd/V/M4 remain.
+All 63 diff lines, eight frozen entries, three sources, 147 protected and
+10 untracked files matched. Full return in the 1508 packet:
+efc54cac6eb5ba7d978f397806f97430ff85fb3df528600232cb493cb1b64af4.
+Parent 9a12ef reverified integrity and live owners at 15:09 before these
+factual updates. The screen remains unadopted. Final checks/publication remain.
