@@ -6055,3 +6055,57 @@ whitespace580bdd and pin/formulation diff826f8b passed. Only factual review
 completion is added after that review; final affected checks gate publication.
 The supported equivalence is accepted mathematically and kernel checked;
 it supplies no visitation premise and leaves the original M4 task active.
+
+## 2026-11-28 — Published affine support and continued discovery
+
+The affine support commit is `aa4dc115b1cd1feda40d37357fd99f06f13521a9`,
+parent b441c39. Commit40979a, post-commit b8c90a, push7b0a42/d74f0f and
+remote1daeff confirm publication at05:07:47 UTC. All eight committed blobs
+matched exact staged scope; the index was empty, and135 protected plus11 unrelated
+identities were preserved. Final documentation d71584, working/staged
+whitespace416d25/e02776 and exact staging726eea passed. No repair or PR.
+The receipt remains in `/tmp/pi-m4-affine-integration-20261128T0453Z/publication.json`.
+Remote a594ca and checkout485e0c at05:21:49 still matched, before the05:22:47
+cadence deadline, with only the preserved unrelated work present.
+
+A narrow provenance screen for the new formal component ended05:14, before
+its05:15 reassessment and05:18 endpoint. The bound was set after initial
+queries, at05:11:42; no earlier bound is retroactively claimed. Bugeaud's
+2012 book pages92,96,97 were read and viewed. The limited search located
+related richness/density and normality results, but no exact prior
+visitation-affine statement. This is not an originality or exhaustive
+literature claim, and no original source proof was adopted. The report is
+`/tmp/pi-m4-affine-priorwork-20261128T0510Z/report.md`, hash
+`718e66089140ab84c8047a42b9e1b3fa585dfea04fae98d6b929cb796ed73fc6`;
+ten-entry manifest `df7ab039bc7888995acf5384ffa4cb01ea761ccdeae24ea1a1dfd7ae4e5ad2b8`.
+
+The coefficient-height discovery pass began05:08:43, reached a decisive
+source mismatch05:13:25 and froze05:14:29, before its05:18/05:28 bounds.
+It found no new positive visitation mechanism. Its unadopted report is
+`/tmp/pi-m4-coefficient-height-reset-20261128-0508/report.md`, hash
+`d3a3ec68d9eb1db5b98f953b70d797c362f4f69cc748159c5711c7efefa90406`.
+Parent8f3688 read it. Its source-fit/pole-height mathematics has not received
+independent review or production adoption. No new countermodel was developed.
+
+A fresh-context positive-route reset began near05:17, with midpoint05:27
+and endpoint05:37. It receives the expanded failure map and the completed
+formal bridge, and seeks a changed positive mechanism with an actual-seed
+consumer. A parent normalized17-adic numerator idea immediately collided
+with the archived full17-component sieve at05:19:58. No complementary-coordinate
+consumer was found and no limit was calculated. That unadopted outcome is
+`/tmp/pi-m4-prime17-limit-screen-20261128T0520Z/report.md`, hash
+`cfad5bc5738b996ca3b6bbde788d9892034eff7a8998e763191d5810eb0c74e9`.
+No actual prefix, denominator, digit, carry, orbit or convergent census occurred.
+
+The compact restart pointer is being refreshed at05:22, with reassessment
+05:27 and endpoint05:32, to include the accepted affine support theorem.
+This changes navigation and factual outcomes only, not mathematics or the
+research policy. Separate review and affected documentation/scope checks gate
+publication. V/M4 remains open, and the positive-route investigation continues.
+
+The three-path restart review completed05:25:18 UTC with no defects,
+requested improvements or blocking questions. The accepted mathematical owner
+and Lean proofs were unchanged. All140 protected and11 unrelated identities
+matched; only factual review completion follows the frozen diff. The05:27
+reassessment retains final affected checks/publication, while the separate
+positive-route research remains active under its05:37 bound.

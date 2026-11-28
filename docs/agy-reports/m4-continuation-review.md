@@ -5122,3 +5122,33 @@ fc967a/b0cb5c, documentation3388aa, staged whitespace580bdd and empty
 pin/formulation diff826f8b passed. Review-completion edits change factual
 status only; Lean sources and audit contracts are unchanged. Affected final
 documentation, whitespace, scope and exact-stage checks still gate commit.
+
+## Affine restart pointer and discovery outcomes — 2026-11-28 UTC
+
+Scope: the compact current section of `docs/m4-handoff.md`, factual outcomes
+in the research log and this record. Baseline aa4dc11. The accepted affine
+module, root export, audits and mathematical owners are unchanged. The pointer
+states the exact support boundary: universal late visitation invariance and
+the pure BBP phase consumer, with no normality or actual-visitation claim.
+Three unadopted inquiry packets support factual outcomes only; their
+mathematics, source proofs and checker results are not adopted.
+
+Separate reviewer `/root/affine_independent_review` inspected05:23:42–05:25:18
+UTC, before its05:27/05:30 progress/completion bounds. Both complete guides
+were reread and their existing hashes verified. D/I/Q categories contain no
+items requiring disposition. The reviewer matched owner/theorem/BBP-consumer
+fidelity, publication facts and every stated outcome without adopting the
+unreviewed inquiry mathematics.
+
+Packet `/tmp/pi-m4-affine-handoff-20261128T0522Z/`, baseline aa4dc11;
+nine-entry manifest `01728298515251f7ac5604a8c015a6cb41e8a4317287af7639725cb83b90b8b1`;
+diff `e8674d1bbfb75111d7359e311f5e5ad95ea2d94e9a8de705f588b693924994a2`.
+All nine entries, three live postimages,140 protected and11 unrelated
+identities, three unadopted report hashes and ten provenance entries matched
+independently. The full return is `review-full.txt`, hash
+`d0e241c0c4b911a48632b802c9c9bac32b550b1cf35dc7026cff19731d9808f2`.
+Caller documentation95ff04, whitespace07f002 and preservation188a97 passed.
+The reviewer made no writes, Git/network calls, builds/probes/checker runs,
+installation, delegation or actual-orbit census. No new formal or paper
+theorem is proposed; factual review-completion edits require affected final
+checks before publication.

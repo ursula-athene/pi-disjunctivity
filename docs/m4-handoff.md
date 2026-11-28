@@ -52,6 +52,12 @@ The [selected actual-denominator grids](m4-prime-compression.md#explicit-actual-
 give arbitrarily fine complete-period covering at explicit actual anchors.
 Their constructed traversal is too late for the ordinary or natural-correction
 absolute shadow windows; the actual early numerator remains uncontrolled.
+The [rational-affine visitation component](m4-generating-functions.md#lean-formalization-of-rational-affine-late-visitation)
+is now kernel checked, independently reviewed and published. Its exact
+all-interval/all-threshold equivalence includes negative rational multipliers;
+the library-root audit also consumes the actual BBP pure entry phase
+e+bbpTail N. This does not formalize the full fixed-column normality argument,
+the forced-entry error transfer, or supply any visitation premise.
 The log owns bounds and outcomes;
 this entry is not a second live status ledger.
 
@@ -99,9 +105,10 @@ For the immediate failure record, follow the relevant mathematical owner:
   the September 2026 exponent-two preprint was already screened; its selected
   mechanism needs exceptional approximations not supplied by word avoidance.
 
-Rational-entry equivalence and small-type interpolation were just matched to
-archived failures before redevelopment. A new inquiry must identify its changed
-hypothesis or consumer. Do not interpret a completed review, a partial local
+Small-type interpolation was matched to archived failures before redevelopment;
+the rational-entry paper bridge now has the scoped formal component above.
+A new inquiry must identify its changed hypothesis or consumer. Do not
+interpret a completed review, a partial local
 commit, or the next individual cycle bound as M4 acceptance or a stopping point.
 
 The dated sections below retain historical evidence and incoming links. Their
