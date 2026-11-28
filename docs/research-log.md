@@ -6109,3 +6109,77 @@ and Lean proofs were unchanged. All140 protected and11 unrelated identities
 matched; only factual review completion follows the frozen diff. The05:27
 reassessment retains final affected checks/publication, while the separate
 positive-route research remains active under its05:37 bound.
+
+## 2026-11-28 — Exact entry transfer and source boundaries
+
+The restart-pointer commit is `278e35543d537fa6f873211240ee5a41b050aefd`,
+parent aa4dc11. Post-commit6787a2, push5b96a0/d7a82d and remote406e28
+verified publication at05:27:25 UTC. Final documentation1c2bbe,
+working/staged whitespace dc1b9e/5c1d7d and exact staging4d11ac passed;
+140 protected and11 unrelated identities were preserved. No PR or repair.
+Its receipt is `/tmp/pi-m4-affine-handoff-20261128T0522Z/publication.json`.
+Remote bcc424 at05:39:48 still matched; there were no unpublished commits.
+
+The positive-route worker froze05:27:48, before its05:37 bound. Its entropy
+source comparison found no arithmetic support for the required actual-remainder
+entropy premise, so that route is suspended. Report
+`/tmp/pi-m4-positive-route-reset-20261128-0517/report.md`, hash
+`24f08381958a58d0186502a9bcdca6527aa76fa1b38997ab5bdd1f06be679b94`,
+was read by parent65fd21/a6593a and hash-checked1929db. This records a factual
+discovery outcome only, not mathematical adoption or an independent source audit.
+A subsequent small logarithm-parameter check collided with the already assessed
+[linear-complexity source boundary](m4-language-auxiliaries.md#logarithmic-values-do-not-yet-supply-pointwise-exclusion).
+No pi identity or stronger digit conclusion was obtained.
+
+A fresh-context exact-logarithmic-value inquiry began near05:35, with05:44
+midpoint and05:53 endpoint. Archive checking rejected the previously assessed
+exponential-product construction immediately. It is testing only genuinely
+different analytic-image source contracts; a metric result is not pointwise
+exclusion. Its outcome remains unadopted pending the completed report.
+
+The separate Lean worker began near05:39 with05:49 midpoint and05:59 endpoint.
+Its bounded target is the remaining forced-entry part of the reviewed
+rational-entry equivalence, not a new route supplying visits. The initial
+library-root probe passed; candidate compilation is in progress. Parent
+integration preparation began05:42:10, with05:52 reassessment and06:02 endpoint,
+in `/tmp/pi-m4-forced-entry-integration-20261128T0542Z/`. Ten owned paths,
+134 protected and11 unrelated identities are recorded. Production Lean edits
+await the worker's explicit immutable completion. V/M4 stays open, and research
+continues through these internal checkpoints under the existing authorization.
+
+The exact-value worker completed05:43:16, before its midpoint, with no new
+visitation candidate. Report `/tmp/pi-m4-exact-exp-reset-20261128-0535/report.md`,
+hash `9b440cfe3ca290341f78614a8c0de82c5383f14926533013fbdb01d06a3852eb`,
+was read in54bf45; parent5dede7 verified all18 manifest entries. Its nonlinear
+image and manifold source comparisons did not give fixed-point exclusion.
+These source-fit arguments remain unadopted; only the completed inquiry's
+outcome is recorded. No actual phase or digit census was performed.
+
+The Lean worker delivered its immutable candidate before the05:45:08 parent
+clock. All five entries of manifest
+`92be4f19f321947da37068688277a690cf1a0cee34c7873f1f42ca71fa6f02e7`
+matched in a80493. Candidate `ForcedEntry.lean`, hash
+`4fbbd8a9c8f16bb6ef7ceb7ac91e92ce3a6e8115680a899be2614b434fe7711a`,
+is under `/tmp/pi-m4-forced-entry-lean-20261128T0539Z/`. Only after completion,
+parent integrated two general transfer lemmas and the seven BBP theorems with
+one genuine raw-entry definition. Existing definitions and theorem statements
+are unchanged. The root export-chain build f4f514/287409 and early root probe
+697c04/fc7f81 passed. All nine public theorem axiom lists are exactly the three
+permitted axioms. Native diagnostics returned success with no items.
+
+Full build07baa3/582567 and38 offline process tests f56a7b passed. The first
+Test run4700e9/c9a50f found an audit-generation name-prefix error at line1708;
+correcting its full rational-entry contract left proof sources unchanged.
+The repaired Test run7de247/0daba9 passed without warnings. Documentation805f82,
+pin/formulation diff362dd9 and preservation5dede7 passed. Separate exact-diff
+review and final affected checks gate publication. No visitation premise has
+been discharged; the next research question must add actual-orbit information,
+not another generic metric-to-point inference.
+
+Separate review completed05:50:57 UTC, before its midpoint, with no defects,
+requested improvements or open questions. All23 packet entries, ten postimages,
+134 protected and11 unrelated identities matched independently. At the05:53
+parent reassessment, after the planned05:52 checkpoint, retain final affected
+checks and publication within the06:02 bound. Post-review edits change factual
+completion status only. The accepted equivalence remains support for an open V,
+and the authorized research continues.

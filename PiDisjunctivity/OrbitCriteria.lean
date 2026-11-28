@@ -36,6 +36,46 @@ theorem hitsOpenIntervals_fract_add_of_tendsto_zero (u r : ℕ → ℝ)
   rw [Int.fract_eq_self.mpr ⟨ha.trans hinside.1.le, hinside.2.trans_le hb⟩]
   exact hinside
 
+/-- Vanishing signed errors preserve arbitrarily late interval hitting. -/
+theorem hitsOpenIntervals_late_fract_add_of_tendsto_zero (u r : ℕ → ℝ)
+    (hr : Filter.Tendsto r Filter.atTop (nhds 0))
+    (hu : ∀ a b : ℝ, 0 ≤ a → a < b → b ≤ 1 →
+      ∀ N : ℕ, ∃ n ≥ N, u n ∈ Set.Ioo a b) :
+    ∀ a b : ℝ, 0 ≤ a → a < b → b ≤ 1 →
+      ∀ N : ℕ, ∃ n ≥ N, Int.fract (u n + r n) ∈ Set.Ioo a b := by
+  intro a b ha hab hb M
+  let δ := (b - a) / 4
+  have hδ : 0 < δ := by dsimp [δ]; linarith
+  obtain ⟨N, hN⟩ := Metric.tendsto_atTop.mp hr δ hδ
+  obtain ⟨n, hn, hlo, hhi⟩ := hu (a + δ) (b - δ)
+    (by linarith) (by dsimp [δ]; linarith) (by linarith) (max M N)
+  have herr : |r n| < δ := by
+    simpa only [Real.dist_eq, sub_zero] using hN n ((le_max_right M N).trans hn)
+  obtain ⟨hrlo, hrhi⟩ := abs_lt.mp herr
+  have hinside : u n + r n ∈ Set.Ioo a b := ⟨by linarith, by linarith⟩
+  refine ⟨n, (le_max_left M N).trans hn, ?_⟩
+  rw [Int.fract_eq_self.mpr ⟨ha.trans hinside.1.le, hinside.2.trans_le hb⟩]
+  exact hinside
+
+/-- A signed error tending to zero preserves universal late visitation in both directions. -/
+theorem hitsOpenIntervals_late_fract_add_iff_of_tendsto_zero (u r : ℕ → ℝ)
+    (hr : Filter.Tendsto r Filter.atTop (nhds 0)) :
+    (∀ a b : ℝ, 0 ≤ a → a < b → b ≤ 1 →
+      ∀ N : ℕ, ∃ n ≥ N, Int.fract (u n + r n) ∈ Set.Ioo a b) ↔
+    (∀ a b : ℝ, 0 ≤ a → a < b → b ≤ 1 →
+      ∀ N : ℕ, ∃ n ≥ N, Int.fract (u n) ∈ Set.Ioo a b) := by
+  constructor
+  · intro h
+    have hneg : Filter.Tendsto (fun n => -r n) Filter.atTop (nhds 0) := by
+      simpa only [neg_zero] using hr.neg
+    have hback := hitsOpenIntervals_late_fract_add_of_tendsto_zero
+      (fun n => Int.fract (u n + r n)) (fun n => -r n) hneg h
+    simpa only [Int.fract_fract_add, add_neg_cancel_right] using hback
+  · intro h
+    have hforward := hitsOpenIntervals_late_fract_add_of_tendsto_zero
+      (fun n => Int.fract (u n)) r hr h
+    simpa only [Int.fract_fract_add] using hforward
+
 /-- Hitting every open interval inside `[0,1]` suffices to hit every hexadecimal cell.
 This includes length zero and the first and last cells, with no range hypothesis on `t`. -/
 theorem hitsHexadecimalIntervals_of_hitsOpenIntervals (t : ℕ → ℝ)

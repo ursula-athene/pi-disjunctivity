@@ -1652,3 +1652,163 @@ example : ¬ (∀ a b : ℝ, 0 ≤ a → a < b → b ≤ 1 →
   norm_num at hn
 
 end RationalAffineAudit
+
+namespace ForcedEntryAudit
+
+open PiDisjunctivity
+-- Full exported contracts retain the signed-error premise and all visitation quantifiers.
+example (u r : ℕ → ℝ)
+    (hr : Filter.Tendsto r Filter.atTop (nhds 0))
+    (hu : ∀ a b : ℝ, 0 ≤ a → a < b → b ≤ 1 →
+      ∀ N : ℕ, ∃ n ≥ N, u n ∈ Set.Ioo a b) :
+    ∀ a b : ℝ, 0 ≤ a → a < b → b ≤ 1 →
+      ∀ N : ℕ, ∃ n ≥ N, Int.fract (u n + r n) ∈ Set.Ioo a b :=
+  hitsOpenIntervals_late_fract_add_of_tendsto_zero u r hr hu
+
+example (u r : ℕ → ℝ)
+    (hr : Filter.Tendsto r Filter.atTop (nhds 0)) :
+    (∀ a b : ℝ, 0 ≤ a → a < b → b ≤ 1 →
+      ∀ N : ℕ, ∃ n ≥ N, Int.fract (u n + r n) ∈ Set.Ioo a b) ↔
+    (∀ a b : ℝ, 0 ≤ a → a < b → b ≤ 1 →
+      ∀ N : ℕ, ∃ n ≥ N, Int.fract (u n) ∈ Set.Ioo a b) :=
+  hitsOpenIntervals_late_fract_add_iff_of_tendsto_zero u r hr
+
+example :
+    (∀ a b : ℝ, 0 ≤ a → a < b → b ≤ 1 →
+      ∀ N : ℕ, ∃ n ≥ N, bbpRecurrence (n + 1) ∈ Set.Ioo a b) ↔
+    (∀ a b : ℝ, 0 ≤ a → a < b → b ≤ 1 →
+      ∀ N : ℕ, ∃ n ≥ N, Int.fract ((16 : ℝ) ^ n * Real.pi) ∈ Set.Ioo a b) :=
+  bbpRecurrence_hitsOpenIntervals_late_iff_pi
+
+example (N : ℕ) (e : ℝ) : bbpRawEntry N e 0 = e :=
+  bbpRawEntry_zero N e
+
+example (N : ℕ) (e : ℝ) (j : ℕ) :
+    bbpRawEntry N e (j + 1) = 16 * bbpRawEntry N e j + bbpCoeff (N + j + 1) :=
+  bbpRawEntry_succ N e j
+
+example (N : ℕ) (e : ℝ) (j : ℕ) :
+    bbpRawEntry N e j =
+      (16 : ℝ) ^ j * (e + bbpTail N) - bbpTail (N + j) :=
+  bbpRawEntry_eq_pow_mul_phase_sub_tail N e j
+
+example (N j : ℕ) :
+    Int.fract (bbpRawEntry N (bbpPartialSumRat N : ℝ) j) =
+      bbpRecurrence (N + j + 1) :=
+  fract_bbpRawEntry_partialSumRat N j
+
+example (N : ℕ) (e : ℝ) :
+    (∀ a b : ℝ, 0 ≤ a → a < b → b ≤ 1 →
+      ∀ M : ℕ, ∃ j ≥ M, Int.fract (bbpRawEntry N e j) ∈ Set.Ioo a b) ↔
+    (∀ a b : ℝ, 0 ≤ a → a < b → b ≤ 1 →
+      ∀ M : ℕ, ∃ j ≥ M,
+        Int.fract ((16 : ℝ) ^ j * (e + bbpTail N)) ∈ Set.Ioo a b) :=
+  bbpRawEntry_hitsOpenIntervals_late_iff_phase N e
+
+example (N : ℕ) (e : ℚ) :
+    (∀ a b : ℝ, 0 ≤ a → a < b → b ≤ 1 →
+      ∀ M : ℕ, ∃ j ≥ M, Int.fract (bbpRawEntry N (e : ℝ) j) ∈ Set.Ioo a b) ↔
+    (∀ a b : ℝ, 0 ≤ a → a < b → b ≤ 1 →
+      ∀ M : ℕ, ∃ n ≥ M, bbpRecurrence (n + 1) ∈ Set.Ioo a b) :=
+  bbpRawEntry_hitsOpenIntervals_late_iff N e
+
+-- The exposed definition denotes the complete future raw evolution.
+example (N : ℕ) (e : ℝ) (j : ℕ) :
+    bbpRawEntry N e j = (16 : ℝ) ^ j * (e - bbpPartialSum N) + bbpPartialSum (N + j) := rfl
+
+/--
+info: 'PiDisjunctivity.hitsOpenIntervals_late_fract_add_of_tendsto_zero' depends on axioms:
+[propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms PiDisjunctivity.hitsOpenIntervals_late_fract_add_of_tendsto_zero
+
+/--
+info: 'PiDisjunctivity.hitsOpenIntervals_late_fract_add_iff_of_tendsto_zero' depends on axioms:
+[propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms PiDisjunctivity.hitsOpenIntervals_late_fract_add_iff_of_tendsto_zero
+
+/--
+info: 'PiDisjunctivity.bbpRecurrence_hitsOpenIntervals_late_iff_pi' depends on axioms:
+[propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms PiDisjunctivity.bbpRecurrence_hitsOpenIntervals_late_iff_pi
+
+/--
+info: 'PiDisjunctivity.bbpRawEntry_zero' depends on axioms:
+[propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms PiDisjunctivity.bbpRawEntry_zero
+
+/--
+info: 'PiDisjunctivity.bbpRawEntry_succ' depends on axioms:
+[propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms PiDisjunctivity.bbpRawEntry_succ
+
+/--
+info: 'PiDisjunctivity.bbpRawEntry_eq_pow_mul_phase_sub_tail' depends on axioms:
+[propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms PiDisjunctivity.bbpRawEntry_eq_pow_mul_phase_sub_tail
+
+/--
+info: 'PiDisjunctivity.fract_bbpRawEntry_partialSumRat' depends on axioms:
+[propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms PiDisjunctivity.fract_bbpRawEntry_partialSumRat
+
+/--
+info: 'PiDisjunctivity.bbpRawEntry_hitsOpenIntervals_late_iff_phase' depends on axioms:
+[propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms PiDisjunctivity.bbpRawEntry_hitsOpenIntervals_late_iff_phase
+
+/--
+info: 'PiDisjunctivity.bbpRawEntry_hitsOpenIntervals_late_iff' depends on axioms:
+[propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms PiDisjunctivity.bbpRawEntry_hitsOpenIntervals_late_iff
+
+-- Anchor zero retains an arbitrary rational raw entry, without evaluating it.
+example (e : ℚ) :
+    (∀ a b : ℝ, 0 ≤ a → a < b → b ≤ 1 →
+      ∀ M : ℕ, ∃ j ≥ M, Int.fract (bbpRawEntry 0 (e : ℝ) j) ∈ Set.Ioo a b) ↔
+    (∀ a b : ℝ, 0 ≤ a → a < b → b ≤ 1 →
+      ∀ M : ℕ, ∃ n ≥ M, bbpRecurrence (n + 1) ∈ Set.Ioo a b) :=
+  bbpRawEntry_hitsOpenIntervals_late_iff 0 e
+
+-- The inclusive original prefix tests the `N+j+1` recurrence offset explicitly.
+example (N j : ℕ) :
+    Int.fract (bbpRawEntry N (bbpPartialSumRat N : ℝ) j) =
+      bbpRecurrence (N + j + 1) :=
+  fract_bbpRawEntry_partialSumRat N j
+
+example (N : ℕ) :
+    (∀ a b : ℝ, 0 ≤ a → a < b → b ≤ 1 →
+      ∀ M : ℕ, ∃ j ≥ M, bbpRecurrence (N + j + 1) ∈ Set.Ioo a b) ↔
+    (∀ a b : ℝ, 0 ≤ a → a < b → b ≤ 1 →
+      ∀ M : ℕ, ∃ n ≥ M, bbpRecurrence (n + 1) ∈ Set.Ioo a b) := by
+  have h := bbpRawEntry_hitsOpenIntervals_late_iff N (bbpPartialSumRat N)
+  simpa only [fract_bbpRawEntry_partialSumRat] using h
+
+-- Both endpoint-adjacent open cells retain the selected arbitrary threshold.
+example (N : ℕ) (e : ℚ) (M : ℕ)
+    (hV : ∀ a b : ℝ, 0 ≤ a → a < b → b ≤ 1 →
+      ∀ K : ℕ, ∃ n ≥ K, bbpRecurrence (n + 1) ∈ Set.Ioo a b) :
+    (∃ j ≥ M, Int.fract (bbpRawEntry N (e : ℝ) j) ∈ Set.Ioo (0 : ℝ) (1 / 16)) ∧
+    (∃ j ≥ M, Int.fract (bbpRawEntry N (e : ℝ) j) ∈ Set.Ioo (15 / 16 : ℝ) 1) := by
+  have h := (bbpRawEntry_hitsOpenIntervals_late_iff N e).mpr hV
+  exact ⟨h 0 (1 / 16) (by norm_num) (by norm_num) (by norm_num) M,
+    h (15 / 16) 1 (by norm_num) (by norm_num) (by norm_num) M⟩
+
+end ForcedEntryAudit

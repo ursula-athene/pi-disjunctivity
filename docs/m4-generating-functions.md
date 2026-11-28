@@ -770,11 +770,40 @@ consumer uses r=16^N and s=e-bbpPartialSumRat N to prove late visitation of
 `fract(16^n*(e+bbpTail N))` equivalent to late visitation of
 `fract(16^n*pi)` for every fixed N and rational e.
 
-The Lean checks and independent changed-file review are complete. This
-formalizes the pure entry-phase equivalence, not the additional vanishing-error
-transfer for the forced entry recurrence. It supplies neither side's visitation
-premise, an early hit, nor rational-affine preservation of normality. The full
-fixed-column normality proof and V/M4 remain unformalized/open respectively.
+The affine Lean checks and independent changed-file review are complete. This
+supplies neither side's visitation premise, an early hit, nor rational-affine
+preservation of normality. The following extension completes the additional
+vanishing-error transfer for the forced entry recurrence. The full fixed-column
+normality proof and V/M4 remain unformalized/open respectively.
+
+### Lean transfer for exact forced entries
+
+[RationalEntry.lean](../PiDisjunctivity/BBP/RationalEntry.lean) defines the genuine
+raw evolution `bbpRawEntry N e j = 16^j*(e-S_N)+S_(N+j)` for real e. Its
+proved initialization and step are t_0=e and t_(j+1)=16*t_j+A(N+j+1).
+The exact identity t_j=16^j*(e+bbpTail N)-bbpTail(N+j) retains the future
+forcing and the inclusive coefficient anchor. At the original rational entry
+S_N, its fractional part is exactly bbpRecurrence(N+j+1).
+
+Two general additions to [OrbitCriteria.lean](../PiDisjunctivity/OrbitCriteria.lean)
+preserve universal late open-interval visitation under a signed error tending
+to zero. The equivalence compares fractional parts in both directions; the
+negative error is handled explicitly. A strict inner margin and the maximum
+of the requested and error thresholds preserve targets adjacent to0 or1.
+No global range premise on the unwrapped sequence is introduced.
+
+`bbpRecurrence_hitsOpenIntervals_late_iff_pi` consumes the checked BBP split
+and tail convergence. `bbpRawEntry_hitsOpenIntervals_late_iff` then combines
+this equivalence with the accepted affine theorem: for every fixed N and
+rational e, full late visitation by the exact forced entry is equivalent to
+V. Neither direction supplies its visitation premise. The entry is fixed
+before all targets and thresholds; no assertion about one specified target,
+a varying family of entries or early visit follows.
+
+The production root, exact type/definition/axiom audits and explicit anchor,
+offset and endpoint consumers passed. Independent changed-file review is
+complete with no findings. This extension adds no normality or actual-visitation
+claim and leaves V/M4 open.
 
 ## Quantitative hole transport and varying entry times
 

@@ -56,8 +56,11 @@ The [rational-affine visitation component](m4-generating-functions.md#lean-forma
 is now kernel checked, independently reviewed and published. Its exact
 all-interval/all-threshold equivalence includes negative rational multipliers;
 the library-root audit also consumes the actual BBP pure entry phase
-e+bbpTail N. This does not formalize the full fixed-column normality argument,
-the forced-entry error transfer, or supply any visitation premise.
+e+bbpTail N. The [forced-entry extension](m4-generating-functions.md#lean-transfer-for-exact-forced-entries)
+is also kernel checked and independently reviewed, retaining the exact future
+recurrence and both vanishing-error directions; publication evidence is in the log.
+Neither component supplies a visitation premise or formalizes the full
+fixed-column normality argument.
 The log owns bounds and outcomes;
 this entry is not a second live status ledger.
 

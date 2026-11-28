@@ -1209,6 +1209,22 @@ owns its checks and limits. Kernel checks and independent review are complete.
 This support layer leaves V/M4
 open and calls for continued research on the actual early orbit.
 
+### Forced-entry visitation transfer — 2026-11-28
+
+This checked formal component completes the same reviewed paper bridge:
+for each fixed anchor N and rational raw entry e, let t_0=e and
+t_(j+1)=16*t_j+A(N+j+1). Universal late open-interval visitation by
+fract(t_j) is equivalent to V. The exact identity
+t_j=16^j*(e+bbpTail N)-bbpTail(N+j), vanishing signed-error transfer in
+both directions, and the accepted rational-affine theorem supply the proof.
+At e=S_N the fractional states must be bbpRecurrence(N+j+1).
+
+All interval bounds and thresholds remain explicit. Root-interface probes,
+the exact recurrence/anchor identities and endpoint consumers passed;
+kernel checks and independent review are complete. This component asserts
+no visitation premise, normality or early-hit estimate.
+The research log owns its bounds and outcomes. V/M4 remains open.
+
 ## 6. Assemble the proof of the original conjecture
 
 Once Step 5 succeeds, use Step 4 to obtain visits of the actual pi orbit.

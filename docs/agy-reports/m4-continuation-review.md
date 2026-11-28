@@ -5152,3 +5152,53 @@ The reviewer made no writes, Git/network calls, builds/probes/checker runs,
 installation, delegation or actual-orbit census. No new formal or paper
 theorem is proposed; factual review-completion edits require affected final
 checks before publication.
+
+## Forced-entry late-visitation formalization — 2026-11-28 UTC
+
+Scope: two generic signed-error lemmas added to `OrbitCriteria.lean`, the new
+`BBP/RationalEntry.lean`, root export, exact audits and accompanying mathematical
+status in the plan, blueprint, generating-functions owner, handoff and log.
+Baseline278e355; ten owned paths in
+`/tmp/pi-m4-forced-entry-integration-20261128T0542Z/scope.json`.
+The fixed original recurrence, coefficient, inclusive prefix, formulation,
+dependency pins and all earlier theorem statements remain unchanged.
+
+The claimed result is an equivalence, not a visitation proof. A vanishing
+signed perturbation preserves all late open-interval visits in both directions.
+The actual BBP obligation at n+1 is equivalent to the pure pi orbit contract.
+The new raw evolution has proved t_0=e, t_(j+1)=16*t_j+A(N+j+1), exact tail
+identity and original-entry offset. For one fixed rational e at fixed N,
+its full fractional-part visitation contract is equivalent to V. All endpoints
+and thresholds are retained; no individual-target or varying-entry conclusion
+is claimed. The paper bridge was previously reviewed; this scope supplies
+its remaining kernel-checked transfer component, not the full fixed-column
+normality argument or M4 acceptance.
+
+The worker's five-entry immutable manifest and all134 protected plus11 unrelated
+identities matched. Parent root-chain build f4f514/287409, early root consumer
+697c04/fc7f81, full build07baa3/582567 and native diagnostics passed. All nine
+public theorem axiom queries return exactly propext, Classical.choice,
+Quot.sound. Exact types, the exposed definition equation, nine guards and
+four boundary/offset consumers are in Test.lean. The initial audit-generation
+error4700e9/c9a50f was repaired without changing proof sources; repaired Test
+7de247/0daba9 passed without warnings. Process tests f56a7b, documentation805f82
+and pin/formulation diff362dd9 passed. Final staged/scope checks remain required.
+
+The entropy and exact-value reports are cited only for factual discovery
+outcomes. Their mathematics, source proofs and candidate comparisons are not
+adopted by this scope. Separate reviewer `/root/forced_entry_independent_review`
+inspected05:48:29–05:50:57 UTC, before its05:53/05:58 bounds, using both complete
+guides at their recorded hashes. Defects, nonblocking improvements and open
+questions are all empty; there are no recommendations requiring disposition.
+
+Frozen diff `3ea38ef54cc058c6e53e55daae1ebf821df8598fbed154fe96bc37fc791e9ce2`;
+23-entry manifest `f451194e869f0111da0e27f45253f3bac4115224990337a9e37f40499eb53bfc`.
+The reviewer independently matched all entries, ten live postimages,
+134 protected and11 unrelated identities and both discovery-report hashes.
+It inspected the full proof/consumer/status scope and retained caller execution
+receipts as such. Full return `review-full.txt`, hash
+`8de2e53a4c15364ee9655580149d3574276678a0ee1a3f24943eb462ce6f6776`.
+No Git, network, builds, probes, checkers, writes, installations, delegation or
+actual-orbit census was performed by the reviewer. The whole review cycle
+had no D/I/Q items. Post-review edits record factual completion only; the
+reviewed Lean sources and audits are unchanged. Final affected checks gate commit.
