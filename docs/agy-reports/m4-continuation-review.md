@@ -5623,3 +5623,60 @@ checker 37881c and preservation 60a950 remain caller execution evidence.
 Caller 9ef506 reverified all frozen entries, owned postimages, 145 protected
 and 11 unrelated files. Only factual completion records changed afterward.
 The required scoped review cycle is complete; V/M4 remains open.
+
+## Second anchor family and compatibility prior work — 2026-11-28 UTC
+
+Scope: three documents against baseline 657bd34, adding the reviewed
+five-times-dyadic first-block/grid family and the bounded originality search.
+No Lean implementation, all-h extension, target hit or priority claim.
+
+Paper critic `/root/dyadic_grid_independent_review_0649` inspected the full
+99-line report, symbolic checker, receipt and actual tail/grid interfaces in
+the 0803 packet during 08:11:17–08:12:36 UTC. It found no defects, improvements
+or acceptance-blocking questions. The unresolved actual-hit premise remains
+explicit. Both complete adversarial guides, replacement procedure and critic
+instructions were read at unchanged hashes. No writes, Git, network, builds,
+probes, checker execution, installation, delegation or census occurred.
+
+The critic verified the polynomial divisibility, exact sign and error,
+conditional recurrence index N+j+1 and the common-anchor selection. It
+distinguished the local integer-multiple density theorem from the paper's
+natural late-time argument. Report, checker and receipt hashes matched the
+log's inventory. Checker bb37b9 is caller execution evidence. Full return
+`five-anchor-review-full.md` in the 0818 integration packet has hash
+`0bc03a4484ee0b2fc8b2bc23be796e478407d758674e747cb2bce425981ab987`.
+
+The separate originality search supplied source comparisons, not an independent
+proof review or priority certification. Its complete report and primary pages,
+fixed public Lean revisions and explicit search limits accompany the current
+integration. The original BBP expansion is credited as prior work; no inspected
+source supplies the precise common-anchor conjunction. Source inspection is
+distinguished from rebuilding and axiom auditing external Lean projects.
+
+Independent exact-diff review is complete as recorded below; final affected
+checks gate publication. The filtered-tail review is separate and its
+mathematical findings are not adopted here.
+
+Production reviewer `/root/anchor_source_integration_review_0822` inspected the
+entire 228-line frozen diff during 08:21:56–08:24:09 UTC, before both review
+bounds. It found no defects or acceptance-blocking questions and one
+nonblocking navigation improvement. **I1: implemented.** Parent moved the
+existing `normal-prime-power-columns-do-not-supply-a-sum-estimate` anchor back
+immediately before its intended heading; no mathematical text changed.
+
+Exact diff `ffe5e0ef31f137c9d2435ea04d384e90af1d4fd976e8122d48125080f56be8fc`,
+manifest `f3f67f6417f49a700e999f53e15203122c7dd0b819e239bf2e5bbf4eb7d5a833`
+and external inventory `20bd34fa2df524acfce93bffc17b7fdcea145f701080688f71e4657338f30e1b`
+matched, covering all 13 integration and 15 external source entries. Full
+verbatim capture `review-full.md` in the 0818 packet has hash
+`e00d9b861a9ec4d2943563bc9e12231d0a0040d3e3d0874da5580fef76b06762`.
+
+Both complete guides, replacement procedure, critic context and relevant
+interfaces were read. The reviewer checked the source distinctions against
+primary pages and public code, without rerunning the search or rebuilding
+external Lean. All checker, documentation, staging, preservation and publication
+execution remains caller evidence. No writes, Git, network, builds, probes,
+checker execution, installations, delegation or actual-state census occurred.
+Caller 67e01b reverified all frozen/source entries and protected/unrelated
+files before the navigation repair. Final affected checks verify that repair
+and factual completion records; no substantive mathematical repair was needed.

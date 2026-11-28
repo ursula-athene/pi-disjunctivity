@@ -6653,3 +6653,74 @@ protected-file preservation remain caller evidence. Caller 9ef506 assessed
 the midpoint at 08:06:58, verifying all ten entries, three owned files,
 145 protected and 11 unrelated identities. Only factual completion records
 changed after review; no mathematical claim or proof changed.
+
+## 2026-11-28 — A second anchor family and the compatibility prior-work search
+
+The rational-tail clearing record was committed and pushed as
+`657bd34ac3a7193e9027c7bf9247e56e7b2d03dc`, parent db3baef. Commit e5f80a,
+post-commit 735188, push 7d8a08/f8e655 and remote 851eb4 verified publication
+by 08:09:03 UTC; receipt c23707 saved it in the 0800 integration packet.
+All three committed blobs matched, the index was empty and 145 protected
+plus 11 unrelated files were preserved. Final docs b79adb, whitespace
+8abc49/587640 and stage 17e3f9 passed. No repair, new Lean changes or PR.
+
+The parent tested an actual odd-factor anchor family. Its first external
+clock was 08:03:32, following the algebraic candidate; the 08:12 endpoint
+was met by freeze 08:10:55. The
+[paper result](m4-fourier-windows.md#moving-the-first-block-to-five-times-a-dyadic-anchor)
+uses one universal polynomial certificate to move the first signed block to
+N=5*2^s, s=5 mod100. Classical irrational rotation then selects arbitrarily
+large anchors in this family satisfying the existing nearby-grid conditions.
+It supplies neither all original h blocks nor actual target placement.
+
+Report `1f2db990324b5cb245bc6824d451d73da2df416ba9b938fc1b95bf70c9c08667`,
+checker `24bd0657519fe8e96cad7b529fbc9bf8b6bbb9b9ce4f7d262191602158afbc86`
+and receipt `d2602424b4c072641aa20e5749683e5e895843270ffeeae3bb79de63173360a3`
+are in `/tmp/pi-m4-five-dyadic-anchors-20261128T0803Z/`. Checker bb37b9
+passed without actual-state evaluation. Pinned source 8c6b35/a164dc supplies
+an integer-multiple density declaration; the natural late-time bridge remains
+explicit paper reasoning. Independent criticism ran 08:11:17–08:12:36, before
+its 08:15/08:18 bounds, with no D/I/Q findings. Full return hash
+`0bc03a4484ee0b2fc8b2bc23be796e478407d758674e747cb2bce425981ab987`
+is captured in the current 0818 integration packet.
+
+The user asked whether the already formalized compatibility theorem is original.
+A separate targeted search ran within 08:05–08:18 and froze at 08:15:07.
+It found close published analytic work and public Lean approximation/denominator
+proofs, but no exact conjunction or stronger inspected theorem implying it.
+The [owner's comparison](m4-fourier-windows.md#prior-work-and-originality-of-the-compatibility-statement)
+now credits Chen–Zhang's actual BBP expansion, the public corrected-shadow
+results, and the Gregory/Wallis method precedents. Originality remains unknown.
+Search report `7f161bc00bd2c922811aadecd1cf2dbbf786dfa8e58db6ac46f4cf71b236e243`
+is in `/tmp/pi-compatibility-originality-20261128-0805/`; parent read it fully
+in 9df819 and visually inspected the two Chen–Zhang theorem pages at 08:13:45.
+Public theorem signatures, corrected-prefix definition and date provenance
+were inspected in 91e820. No external Lean build or axiom replay was performed.
+One guessed local filename failed in 87d0b8; the actual saved public-prefixed
+paths were found and read in b390f8/91e820. No mathematical evidence was lost.
+
+Three-document integration began 08:18:08, with 08:27 reassessment and 08:38
+endpoint, in `/tmp/pi-m4-anchor-literature-integration-20261128T0818Z/`.
+Scope 5edb97 protects 145 tracked and 11 unrelated files. Exact production
+review is complete as recorded below; final affected checks gate publication. No new Lean proof or V premise
+is claimed. Separately, the tail-filter inquiry finished 08:13:28, with its
+source-backed analytic result still under independent review; it is not
+adopted in this scope.
+
+Production review ran 08:21:56–08:24:09 UTC, before its 08:27/08:32 bounds.
+The 228-line diff has hash
+`ffe5e0ef31f137c9d2435ea04d384e90af1d4fd976e8122d48125080f56be8fc`;
+the 13-entry manifest is
+`f3f67f6417f49a700e999f53e15203122c7dd0b819e239bf2e5bbf4eb7d5a833`.
+All entries and the 15-entry source inventory matched independently. No
+defects or blocking questions; one nonblocking I1 identified a displaced
+existing section anchor. Parent moved that unchanged anchor back before its
+original Normal prime-power heading in 67e01b, without changing mathematics.
+Full review capture `review-full.md` has hash
+`e00d9b861a9ec4d2943563bc9e12231d0a0040d3e3d0874da5580fef76b06762`.
+Caller midpoint 67e01b at 08:25:42 verified all 13 frozen entries, 15 source
+entries, three owned, 145 protected and 11 unrelated files before that repair.
+Remote d6ec76 reverified 657bd34 near 08:24 UTC during the required review;
+no ready reviewed commit was withheld. Only navigation and factual completion
+records changed after review. Originality, natural-time Lean formalization
+for this new family and actual selected-time hits remain unresolved.

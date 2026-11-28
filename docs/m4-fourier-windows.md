@@ -780,6 +780,49 @@ The full compatibility and finite transfer statements are now implemented;
 the missing selected-time visits are still missing mathematics. Neither
 complete periods nor modular error bounds imply V/M4 on their own.
 
+### Prior work and originality of the compatibility statement
+
+The exact common-anchor statement was developed in this session. A targeted
+literature and public-Lean search found no earlier exact statement or stronger
+result shown to imply it. **Originality remains unestablished.** Neither the
+kernel checks nor agent review settles priority, and the ingredients have
+substantial precedents.
+
+Chen and Zhang, [*Error estimates of BBP- and Ramanujan-type series*](https://fs.unm.edu/ScientiaMagna17no1.pdf),
+Scientia Magna 17(1) (2022), pp.22–35, Theorem 2.1 on p.24 already gives the
+actual inclusive BBP tail expansion with the same coefficients, including
+`1/64,-23/512,415/4096`, and an all-order recurrence. Theorem 2.2 on p.25
+gives finite strict lower/upper bounds. The expansion is therefore prior work.
+The inspected BBP section does not supply the present uniform growing-order
+factorial bound, modular block theorem, 17-adic grid or their common anchor.
+A fixed-order asymptotic does not by itself justify growing-order estimates.
+
+The public repository `eldernos/MathematicsResearch`, inspected at commit
+`062e66cfa698de194f8276a67e43133c560ced4f` dated 2026-11-26, contains related
+[corrected-shadow bounds](https://github.com/eldernos/MathematicsResearch/blob/062e66cfa698de194f8276a67e43133c560ced4f/NormalityChecker/BBPShadow.lean)
+and [large-prime denominator survival](https://github.com/eldernos/MathematicsResearch/blob/062e66cfa698de194f8276a67e43133c560ced4f/NormalityChecker/BBPDenominator.lean).
+The former adds rational finite-difference corrections to the actual prefix;
+the latter does not establish high fixed-17-power period coverage. Both files
+last changed at `8bf9f042706fa1d928dc88114460b2ee35098002`, dated 2026-11-24.
+Their complete signatures and proofs were inspected, without rebuilding or
+replaying axiom audits. No identity is inferred from the repository handle.
+No equivalent conjunction was located in the inspected public Lean sources.
+
+Borwein–Borwein–Dilcher's [Gregory-tail expansion](https://www.cecm.sfu.ca/~pborwein/PAPERS/P45.pdf)
+(1989), Theorem 1, is a precedent for integer asymptotic coefficients and
+separated radix-aligned digit agreement. Stoneham's
+[Wallis-product approximants](https://matwbn.icm.edu.pl/ksiazki/aa/aa42/aa4233.pdf)
+(1983), Theorem 5 on p.276 and discussion on p.277, provide a rational-period
+distribution precedent and explicitly retain the stable-window placement
+problem. Neither inspected result states the present BBP conjunction.
+
+The search inspected these primary pages and the closest public theorem
+contracts, not all indexed code, unpublished work or every equivalent proof.
+Its detailed comparison is `/tmp/pi-compatibility-originality-20261128-0805/report.md`,
+hash `7f161bc00bd2c922811aadecd1cf2dbbf786dfa8e58db6ac46f4cf71b236e243`.
+The defensible description is: developed here; exact combination not found
+in this targeted search; originality and first-formalization priority unknown.
+
 ### Both resources alone do not supply selected target hits
 
 The existing [13-pole comparison forcing F](m4-rational-forcing.md) retains
@@ -979,6 +1022,71 @@ Local source inspection confirms `mahler`, `mahler_apply` and
 integers. These are contextual connections, not an imported proof of (PB)
 or a result controlling the real floor branch. No exhaustive novelty or Lean
 absence claim follows from this small search.
+
+### Moving the first block to five times a dyadic anchor
+
+A separately reviewed paper extension moves one accurate block to
+`N=5*2^s`, where `s>=32` and `s=5 mod100`. It has no Lean implementation
+and does not supply the full original all-h family or a target hit.
+
+The actual first three coefficients and signed finite remainder give
+
+```text
+R_3(N)=P(N)/(4096*N^4), P(X)=64X^2-184X+415,
+0<R_3(N)-E_N<24/N^5.
+P(5*(32+125Y))=625*(2575+20296Y+40000Y^2).
+```
+
+Since `2^100=1 mod125`, the exponent progression implies `2^s=32 mod125`.
+At `J=s+3`, it follows that `16^J*R_3(N)=P(N)/625` is an integer. Thus
+`16^J*E_N=z-delta`, with `0<delta<98304/(3125*2^s)`. For every natural
+`v<=floor(s/16)` and `j=s+3+v`, multiplication by `16^v` gives
+
+```text
+16^j*E_N=z_v-epsilon, 0<epsilon<32*2^(-3s/4)<=2^(-s/4).
+```
+
+The strict inequality uses `98304/3125<32`; the last bound uses `s>=32`.
+This is compatible with the rational-clearing obstruction above: `R_3(5X)`
+is a Laurent polynomial, whose odd coefficient denominators can cancel upon
+evaluation along a subsequence.
+
+The nearby-anchor grid declarations accept arbitrary N. To select a common
+anchor here, fix `d>0`, put `L=bbpCoverLcm(d+1)>0` and `s=5+100t`, and set
+
+```text
+x_t=(log40+(5+100t)*log2-(d+1)*log17)/(L*log17).
+```
+
+The increment `100*log2/(L*log17)` is irrational, since a rational ratio would
+equate a positive power of 2 with a positive power of 17. Classical irrational
+rotation density supplies arbitrarily late natural t with
+`fract(x_t)` in `(0,log2/(L*log17))`. The natural-time assertion follows from
+positive near-returns converting dense integer multiples to dense nonnegative
+multiples; every tail is a translate of that dense orbit. For large t take
+`q=floor(x_t)>0` and `r=1+L*q`. Then
+`L*log17*fract(x_t)=log(8N)-(r+d)*log17`, so
+`17^(r+d)<8N<2*17^(r+d)`. The existing nearby-grid argument gives arbitrarily
+fine complete-period grids at arbitrarily large anchors in this same family.
+This density bridge is paper mathematics; the inspected local AddCircle
+declaration concerns integer multiples, not an already implemented late
+natural-time consumer.
+
+The exact prefix identity remains
+`S_(N+j)=16^j*S_N+z_v-epsilon-E_(N+j)`. Consequently the explicit premise
+`fract(16^j*S_N)` in `(a+2^(-s/4)+1/(64*N^2),b)`, with `0<=a<b<=1`,
+transfers to `bbpRecurrence(N+j+1)` in `(a,b)`. That premise is unproved.
+More anchor flexibility supplies neither an improved time scale nor the
+required intersection with target-hit times.
+
+Frozen report `/tmp/pi-m4-five-dyadic-anchors-20261128T0803Z/report-v1.md`,
+hash `1f2db990324b5cb245bc6824d451d73da2df416ba9b938fc1b95bf70c9c08667`,
+was independently reviewed with no D/I/Q findings. Symbolic checker `bb37b9`
+passed; it verifies polynomial and constant congruence certificates, not
+actual states or the universal analytic/density proof. No novelty claim or
+new Lean framework is made. The existing tail/grid source map supplies the
+inputs; a bounded Hensel search was motivational, and the explicit certificate
+does not require Hensel's lemma.
 
 <a id="normal-prime-power-columns-do-not-supply-a-sum-estimate"></a>
 
