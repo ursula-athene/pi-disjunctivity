@@ -69,8 +69,10 @@ frozen-prefix target hits inside those blocks. The separately reviewed
 [nearby-anchor extension](m4-fourier-windows.md#compatible-fine-grids-at-nearby-dyadic-anchors)
 gives arbitrarily large dyadic anchors with both fine complete grids and the
 shadow blocks. Complete-period covering still does not locate a hit within
-the blocks. Both new bridges are paper results; no Lean or visitation
-conclusion is claimed for them at this checkpoint.
+the blocks. The [arithmetic grid bridge](m4-fourier-windows.md#lean-formalization-of-the-nearby-dyadic-grid)
+now has a kernel-checked implementation with root export and exact audits;
+independent code review is complete. The analytic shadow bound remains a paper
+result, and neither component supplies selected-time visitation.
 The log owns bounds and outcomes;
 this entry is not a second live status ledger.
 

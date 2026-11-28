@@ -529,8 +529,43 @@ hash `57134a94c5a024ba5d6608fd534980f43e0077d19e8d0da643931c466d334ef6`,
 passed separate review with no D/I/Q items. Parent checker e79413 passed
 130,816 abstract cutoff pairs and288 rational identities using synthetic
 coefficients, with no actual prefix/denominator computation. The existing
-generic Lean theorems are checked; this new bridge and the analytic shadow
-bound remain paper results at this checkpoint.
+generic Lean theorems are checked; the new arithmetic bridge is formalized
+below. The analytic shadow bound remains a paper result.
+
+### Lean formalization of the nearby dyadic grid
+
+[DyadicGrid.lean](../PiDisjunctivity/BBP/DyadicGrid.lean) implements the reviewed
+arithmetic component in eleven public theorems. The valuation theorem retains
+both bounds17^k<=8N<2*17^k and proves the actual prefix's17-adic valuation is-k.
+Its denominator multiplicity and decomposition are derived, not assumed.
+The grid and strict discrepancy theorems retain r>1, d>0 and the enlarged
+cover congruence at d+1; they use the actual reduced numerator throughout.
+
+`exists_dyadic_nearby_anchor` discharges the power-of-two bracket.
+`bbpNearby_exists_dyadic_anchor` supplies s>B for every prescribed B,
+together with an admissible r and both inequalities. The ensuing grid,
+discrepancy and word theorems use that same actual prefix at2^s. In particular,
+`bbpNearby_arbitrarily_large_dyadic_words` states that for each fixed length w
+and bound B, some s>B has every length-w word with a start below its positive
+complete rational period. Words may cross the period boundary. This asserts
+neither all lengths for one fixed rational prefix nor a word in pi.
+
+The unchanged candidate imports only the existing denominator-grid module and
+Mathlib. No new definition, parameter-selected numerator, visitation premise
+or axiom is introduced. Root export, eleven complete-type audits, eleven
+exact axiom guards and six explicit boundary consumers are in
+[Test.lean](../Test.lean). They exercise zero and full-grid translations,
+the first and last grid cells, the empty word and a symbolic all15 word.
+All axiom lists are exactly propext, Classical.choice and Quot.sound.
+
+The parent root-only probe, full build, Test audit and native diagnostics
+passed. The worker packet is
+`/tmp/pi-m4-nearby-anchor-lean-20261128-0632/`; its candidate hash is
+`8917e301b35c7d90e4a96367ce9a2f6c368365f3a059c2a7475ed51d31fc32cc`.
+Independent production review is complete. This formalization verifies
+the arithmetic/complete-period half of the compatible-anchor result. The
+analytic modular-shadow estimate remains paper mathematics and the selected
+target-time intersection remains unproved; V/M4 is open.
 
 Early prior-work searches found a related radix-cancellation mechanism in
 Borwein--Borwein--Dilcher, [*Pi, Euler Numbers, and Asymptotic Expansions*](https://www.cecm.sfu.ca/~pborwein/PAPERS/P45.pdf).

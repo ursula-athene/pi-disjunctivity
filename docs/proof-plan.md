@@ -1240,8 +1240,12 @@ preserves the unique high17 pole after the terminal index and uses the existing
 cover at depth d+1. It supplies arbitrarily large actual dyadic anchors with
 depth-d complete grids and the same shadow blocks. The remaining question is
 target placement within those blocks, retaining the full initialized prefix
-and N+j+1 recurrence offset. The new denominator bridge is a concrete Lean
-formalization target; the log owns that cycle and the independent research.
+and N+j+1 recurrence offset. The
+[new denominator/grid component](m4-fourier-windows.md#lean-formalization-of-the-nearby-dyadic-grid)
+is kernel checked through the root export and exact audits; independent code
+review is complete. Its arbitrary-dyadic-exponent and fixed-word consequences
+retain complete-period scope. The analytic shadow estimate is still paper
+mathematics. The log owns the formalization cycle and independent research.
 
 ## 6. Assemble the proof of the original conjecture
 

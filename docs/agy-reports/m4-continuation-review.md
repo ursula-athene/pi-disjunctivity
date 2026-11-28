@@ -5340,3 +5340,63 @@ the reviewer. No writes, network, build, probe, checker execution, install,
 delegation or census occurred. All three review stages are complete without
 requested repairs; post-review edits record factual outcomes only. Final
 affected checks gate publication.
+
+## Nearby-dyadic grid formalization — 2026-11-28 UTC
+
+Scope: the new BBP/DyadicGrid.lean module, root export, exact Test audits,
+and compact owner/plan/blueprint/handoff/log evidence. Baseline7923f1b; nine
+owned paths in `/tmp/pi-m4-dyadic-grid-lean-integration-20261128T0643Z/scope.json`.
+All existing definitions, theorem statements, dependency pins and the actual
+initialized recurrence remain unchanged. The accepted paper argument is the
+compatible-anchor extension reviewed above; its analytic shadow component
+is not part of this formalization.
+
+Eleven public theorems establish nearby-anchor valuation, denominator
+multiplicity/decomposition, actual-prefix grid witnesses and strict complete
+period discrepancy, dyadic existence with unbounded exponent, and the
+fixed-word consequence. All bracket and enlarged-sieve hypotheses remain
+explicit in the general lemmas and are discharged by the existential family.
+The actual reduced numerator is retained. No visitation, normality or small
+modular-error premise is hidden in a definition or theorem parameter.
+The complete-period word result is about rational prefixes at2^s, not pi.
+
+Worker packet `/tmp/pi-m4-nearby-anchor-lean-20261128-0632/` froze06:43:07.
+The ten-entry manifest
+`6e8101d0a869b93f48701cdd2d1fd39d1484697cd92539a068497d77f5cf6780`
+and all entries matched in parent d8f6b2. The production module is byte-identical
+to candidate hash `8917e301b35c7d90e4a96367ce9a2f6c368365f3a059c2a7475ed51d31fc32cc`.
+The root-chain build8633db/0c31ad and early root-only audit005141/77b160 passed.
+Test.lean contains all eleven complete types and actual guarded axiom lists,
+plus six consumers invoking the new theorems at zero/full-grid translations,
+first/last cells, the empty word and arbitrary all15 words. Each axiom list
+is exactly propext, Classical.choice, Quot.sound. Native diagnostics were clean.
+
+Full build6867e8/d0744b, Test0e8cb7/7db5e0,38 process tests37b1c6 and empty
+pin/formulation diff1d2634 passed. All136 protected and11 unrelated identities
+matched94fc2b. The completed placement inquiry supplies only a factual negative
+discovery outcome; its mathematics and source analysis are not adopted. New
+comparison-model and analytic-contract inquiries remain separate scratch work.
+Independent exact-diff review and final affected checks are pending.
+
+Separate reviewer `/root/dyadic_grid_independent_review_0649` inspected
+06:49:21–06:51:56 UTC, before its06:56/07:01 bounds. It read both complete
+guides at the recorded hashes, the complete705-line diff, all eleven proof
+bodies/types and six boundary consumers, and the relevant existing dependency
+interfaces. It found no defects, warranted nonblocking improvements or blocking
+questions; no D/I/Q disposition is outstanding. The whole review cycle required
+no repair. The first unsupported implication toward V remains selected-time
+target placement, and the analytic shadow proof is outside this Lean scope.
+
+Frozen diff `0bbf0a92bd9ab5d27345a99b9824300a2b6ae828fb7e095017f58acb1fce52af`;
+21-entry manifest
+`3e2fcfc10eb5fc14036a186dd0c21c1ad22d51df98a7028adb6203579ef2bbc9`.
+All entries, the nine production postimages and all ten worker entries matched
+independently. The full returned review is `review-full.md` in the integration
+packet, hash `aaed195ea798d8d96ce2e13ad40f29ae695dcf2b6c4f055a97d2348ff3c636bc`.
+Caller documentation64e04a, working/staged whitespace8e2c30/9440a2 and
+exact-stage/preservation a096dd passed; parent checkpoint6d726b rechecked all
+136 protected and11 unrelated identities. The reviewer retained builds,
+diagnostics, executable checks and protected-file preservation as caller evidence.
+It made no writes, Git/network calls, builds, probes, checker runs, installations,
+delegation or actual census. Review is complete; subsequent edits record factual
+completion only. Final affected checks gate publication.

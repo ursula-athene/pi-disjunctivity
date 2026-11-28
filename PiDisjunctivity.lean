@@ -25,6 +25,7 @@ public import PiDisjunctivity.PrimeGrid17
 public import PiDisjunctivity.ShiftedGrid
 public import PiDisjunctivity.RationalHexOrbit
 public import PiDisjunctivity.BBP.DenominatorGrid
+public import PiDisjunctivity.BBP.DyadicGrid
 public import PiDisjunctivity.FiniteWordDiscrepancy
 public import PiDisjunctivity.RationalGridDiscrepancy
 import PiDisjunctivity.Examples

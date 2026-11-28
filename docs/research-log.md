@@ -6312,3 +6312,63 @@ with narrow reads; no unavailable earlier clock is claimed. The mathematical
 owner is unchanged after review. Only factual review-completion records and
 final affected checks remain before publication; scratch Lean and actual
 target-placement work continue under their separate bounds.
+
+## 2026-11-28 — Checked nearby-dyadic grid component
+
+The paired paper results were committed as
+`7923f1badbe76d0c293659525eaa5daaa692b6e2`, parent61837e1. Commit d0019a,
+post-commit2f3bf8, push853ac9/bf529d and remote65544a verified publication
+at06:42:11 UTC. All six owned blobs matched; the index was empty and
+138 protected plus11 unrelated identities were preserved. Final documentation
+065bc4, working/staged whitespace661cdf/56ff02 and exact-stage2e4053 passed.
+No repair or PR. Receipt:
+`/tmp/pi-m4-dyadic-shadow-integration-20261128T0622Z/publication.json`.
+
+The Lean worker's first clock was06:32:42, with06:44 midpoint and06:55 endpoint.
+It froze06:43:07 after all eleven declarations, guarded audits and replay
+passed, before the midpoint. Packet
+`/tmp/pi-m4-nearby-anchor-lean-20261128-0632/`, ten-entry manifest
+`6e8101d0a869b93f48701cdd2d1fd39d1484697cd92539a068497d77f5cf6780`,
+matched completely in d8f6b2. Candidate hash
+`8917e301b35c7d90e4a96367ce9a2f6c368365f3a059c2a7475ed51d31fc32cc`
+was integrated unchanged as BBP/DyadicGrid.lean after explicit completion.
+Compiler repairs in scratch were local-instance naming, nonzero sums, casts
+and r+d versus d+r normalization; there was no missing mathematical step.
+
+Parent integration began06:43:04, with06:52 reassessment and07:03 endpoint,
+in `/tmp/pi-m4-dyadic-grid-lean-integration-20261128T0643Z/`: nine owned,
+136 protected and11 unrelated identities. The early library-root build
+8633db/0c31ad and root-only probe005141/77b160 passed. Native diagnostics
+returned success, partial=false and no items. The exact audit adds eleven
+complete types, eleven guarded axiom lists and six explicit boundary consumers.
+Every new theorem uses exactly the three permitted axioms. Full build
+6867e8/d0744b passed7243 jobs; Test0e8cb7/7db5e0 and38 process tests37b1c6
+passed. Pin/formulation diff1d2634 was empty and protection94fc2b passed.
+Independent production review and final affected checks gate acceptance.
+
+The separate target-placement inquiry completed06:42:53, before its06:49
+bound. Its report `/tmp/pi-m4-dyadic-anchor-placement-20261128-0630/report-v1.md`,
+hash `0a4f85ccda3dce5b977045431c58e52eb3177957c988141dbb8dc4b9c37da8b4`,
+was read d31191 and checked94fc2b. It found no new actual target-hit estimate;
+the fixed-modulus source comparison did not control the varying actual phases.
+Only that factual outcome is recorded; its mathematical observations and
+source analysis remain unadopted. A changed comparison-model inquiry began
+near06:45 with06:54 midpoint and07:04 endpoint, testing the new combined
+resources against an existing avoiding forcing without rebuilding that model.
+
+An independent analytic-contract/Lean inquiry began near06:44, with06:52
+midpoint and07:02 endpoint. It is mapping the reviewed modular-shadow proof
+to actual existing declarations and testing a first stronger BBP tail bound.
+Its scratch results are unadopted. The grid formalization does not formalize
+the analytic remainder or supply selected-time target hits. V/M4 remains open,
+and these independent inquiries continue within the authorized milestone.
+
+The06:52 checkpoint was assessed early at06:51:21 in6d726b: all21 frozen
+entries, nine live postimages,136 protected and11 unrelated identities still
+matched. Required executable checks were complete and review was finishing.
+The subsequently received independent review records06:49:21–06:51:56 and
+no D/I/Q items. It matched the production/worker sources, full audit contracts
+and every packet entry, and retained caller execution/preservation receipts
+as such. The code and audits are unchanged after review; only factual status
+updates and final affected checks follow. The07:03 endpoint is retained for
+publication while both independent scratch inquiries continue.

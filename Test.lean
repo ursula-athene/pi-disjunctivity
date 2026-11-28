@@ -1812,3 +1812,177 @@ example (N : ℕ) (e : ℚ) (M : ℕ)
     h (15 / 16) 1 (by norm_num) (by norm_num) (by norm_num) M⟩
 
 end ForcedEntryAudit
+
+namespace DyadicGridAudit
+
+open PiDisjunctivity
+
+-- Complete exported types retain every nearby-anchor and sieve premise.
+
+example (k N : ℕ) (hk : 0 < k)
+    (hlo : 17 ^ k ≤ 8 * N) (hhi : 8 * N < 2 * 17 ^ k) :
+    padicValRat 17 (bbpPartialSumRat N) = -(k : ℤ) :=
+  bbpPartialSumRat_val17_nearby k N hk hlo hhi
+
+example (k N : ℕ) (hk : 0 < k)
+    (hlo : 17 ^ k ≤ 8 * N) (hhi : 8 * N < 2 * 17 ^ k) :
+    multiplicity 17 (bbpPartialSumRat N).den = k :=
+  bbpPartialSumRat_den_val17_nearby k N hk hlo hhi
+
+example (k N : ℕ) (hk : 0 < k)
+    (hlo : 17 ^ k ≤ 8 * N) (hhi : 8 * N < 2 * 17 ^ k) :
+    ∃ M : ℕ, (bbpPartialSumRat N).den = 17 ^ k * M ∧ M.Coprime 34 ∧ 0 < M :=
+  bbpPartialSumRat_den_decomposition17_nearby k N hk hlo hhi
+
+example (d r N j : ℕ) (hd : 0 < d) (hr : 1 < r)
+    (hcong : r ≡ 1 [MOD bbpCoverLcm (d + 1)])
+    (hlo : 17 ^ (r + d) ≤ 8 * N) (hhi : 8 * N < 2 * 17 ^ (r + d)) :
+    ∃ t : ℕ, Int.fract ((16 : ℝ) ^ t * (bbpPartialSumRat N : ℝ)) =
+      Int.fract ((bbpPartialSumRat N : ℝ) + j / (17 : ℝ) ^ d) :=
+  bbpNearby_prefix_grid d r N j hd hr hcong hlo hhi
+
+example (d r N j : ℕ) (hd : 0 < d) (hr : 1 < r)
+    (hcong : r ≡ 1 [MOD bbpCoverLcm (d + 1)])
+    (hlo : 17 ^ (r + d) ≤ 8 * N) (hhi : 8 * N < 2 * 17 ^ (r + d)) :
+    ∃ t < orderOf (16 : ZMod (bbpPartialSumRat N).den),
+      Int.fract ((16 : ℝ) ^ t * (bbpPartialSumRat N : ℝ)) =
+        Int.fract ((bbpPartialSumRat N : ℝ) + j / (17 : ℝ) ^ d) :=
+  bbpNearby_prefix_grid_in_period d r N j hd hr hcong hlo hhi
+
+example (d r N : ℕ) (hd : 0 < d) (hr : 1 < r)
+    (hcong : r ≡ 1 [MOD bbpCoverLcm (d + 1)])
+    (hlo : 17 ^ (r + d) ≤ 8 * N) (hhi : 8 * N < 2 * 17 ^ (r + d))
+    (u v : ℝ) (hu : 0 ≤ u) (huv : u ≤ v) (hv : v ≤ 1) :
+    |(hexadecimalPrefixIcoCount (bbpPartialSumRat N : ℝ)
+        (orderOf (16 : ZMod (bbpPartialSumRat N).den)) u v : ℝ) /
+      (orderOf (16 : ZMod (bbpPartialSumRat N).den) : ℝ) - (v - u)| <
+      1 / (17 : ℝ) ^ d :=
+  bbpNearby_prefix_discrepancy d r N hd hr hcong hlo hhi u v hu huv hv
+
+example (k : ℕ) (hk : 0 < k) :
+    ∃ s : ℕ, 17 ^ k ≤ 8 * 2 ^ s ∧ 8 * 2 ^ s < 2 * 17 ^ k :=
+  exists_dyadic_nearby_anchor k hk
+
+example (d B : ℕ) (hd : 0 < d) :
+    ∃ s r : ℕ, B < s ∧ 1 < r ∧ r ≡ 1 [MOD bbpCoverLcm (d + 1)] ∧
+      17 ^ (r + d) ≤ 8 * 2 ^ s ∧ 8 * 2 ^ s < 2 * 17 ^ (r + d) :=
+  bbpNearby_exists_dyadic_anchor d B hd
+
+example (d B : ℕ) (hd : 0 < d) :
+    ∃ s : ℕ, B < s ∧ ∀ j : ℕ, ∃ t : ℕ,
+      Int.fract ((16 : ℝ) ^ t * (bbpPartialSumRat (2 ^ s) : ℝ)) =
+        Int.fract ((bbpPartialSumRat (2 ^ s) : ℝ) + j / (17 : ℝ) ^ d) :=
+  bbpNearby_arbitrarily_large_dyadic_grids d B hd
+
+example (d B : ℕ) (hd : 0 < d) :
+    ∃ s : ℕ, B < s ∧ ∀ u v : ℝ, 0 ≤ u → u ≤ v → v ≤ 1 →
+      |(hexadecimalPrefixIcoCount (bbpPartialSumRat (2 ^ s) : ℝ)
+          (orderOf (16 : ZMod (bbpPartialSumRat (2 ^ s)).den)) u v : ℝ) /
+        (orderOf (16 : ZMod (bbpPartialSumRat (2 ^ s)).den) : ℝ) - (v - u)| <
+        1 / (17 : ℝ) ^ d :=
+  bbpNearby_arbitrarily_large_dyadic_discrepancy d B hd
+
+example (w B : ℕ) :
+    ∃ s : ℕ, B < s ∧ ∀ word : Fin w → Fin 16,
+      ∃ t < orderOf (16 : ZMod (bbpPartialSumRat (2 ^ s)).den),
+        ∀ i : Fin w, baseDigit 16 (bbpPartialSumRat (2 ^ s) : ℝ)
+          (t + i.val) = (word i).val :=
+  bbpNearby_arbitrarily_large_dyadic_words w B
+
+/-- info: 'PiDisjunctivity.bbpPartialSumRat_val17_nearby' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms bbpPartialSumRat_val17_nearby
+/-- info: 'PiDisjunctivity.bbpPartialSumRat_den_val17_nearby' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms bbpPartialSumRat_den_val17_nearby
+/-- info: 'PiDisjunctivity.bbpPartialSumRat_den_decomposition17_nearby' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms bbpPartialSumRat_den_decomposition17_nearby
+/-- info: 'PiDisjunctivity.bbpNearby_prefix_grid' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms bbpNearby_prefix_grid
+/-- info: 'PiDisjunctivity.bbpNearby_prefix_grid_in_period' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms bbpNearby_prefix_grid_in_period
+/-- info: 'PiDisjunctivity.bbpNearby_prefix_discrepancy' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms bbpNearby_prefix_discrepancy
+/-- info: 'PiDisjunctivity.exists_dyadic_nearby_anchor' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms exists_dyadic_nearby_anchor
+/-- info: 'PiDisjunctivity.bbpNearby_exists_dyadic_anchor' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms bbpNearby_exists_dyadic_anchor
+/-- info: 'PiDisjunctivity.bbpNearby_arbitrarily_large_dyadic_grids' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms bbpNearby_arbitrarily_large_dyadic_grids
+/-- info: 'PiDisjunctivity.bbpNearby_arbitrarily_large_dyadic_discrepancy' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms bbpNearby_arbitrarily_large_dyadic_discrepancy
+/-- info: 'PiDisjunctivity.bbpNearby_arbitrarily_large_dyadic_words' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms bbpNearby_arbitrarily_large_dyadic_words
+
+-- Explicitly invoke grid translation at zero; do not discharge by choosing t=0.
+example (d r N : ℕ) (hd : 0 < d) (hr : 1 < r)
+    (hc : r ≡ 1 [MOD bbpCoverLcm (d + 1)])
+    (hlo : 17 ^ (r + d) ≤ 8 * N) (hhi : 8 * N < 2 * 17 ^ (r + d)) :
+    ∃ t : ℕ, Int.fract ((16 : ℝ) ^ t * (bbpPartialSumRat N : ℝ)) =
+      Int.fract ((bbpPartialSumRat N : ℝ) + 0 / (17 : ℝ) ^ d) :=
+by
+  simpa only [Nat.cast_zero] using bbpNearby_prefix_grid d r N 0 hd hr hc hlo hhi
+
+-- The full grid length wraps back around, still through the theorem.
+example (d r N : ℕ) (hd : 0 < d) (hr : 1 < r)
+    (hc : r ≡ 1 [MOD bbpCoverLcm (d + 1)])
+    (hlo : 17 ^ (r + d) ≤ 8 * N) (hhi : 8 * N < 2 * 17 ^ (r + d)) :
+    ∃ t : ℕ, Int.fract ((16 : ℝ) ^ t * (bbpPartialSumRat N : ℝ)) =
+      Int.fract ((bbpPartialSumRat N : ℝ) + (17 ^ d : ℕ) / (17 : ℝ) ^ d) :=
+  bbpNearby_prefix_grid d r N (17 ^ d) hd hr hc hlo hhi
+
+-- The first and last grid cells consume the strict complete-period discrepancy.
+example (d r N : ℕ) (hd : 0 < d) (hr : 1 < r)
+    (hc : r ≡ 1 [MOD bbpCoverLcm (d + 1)])
+    (hlo : 17 ^ (r + d) ≤ 8 * N) (hhi : 8 * N < 2 * 17 ^ (r + d)) :
+    |(hexadecimalPrefixIcoCount (bbpPartialSumRat N : ℝ)
+      (orderOf (16 : ZMod (bbpPartialSumRat N).den)) 0 (1 / (17 : ℝ)^d) : ℝ) /
+      (orderOf (16 : ZMod (bbpPartialSumRat N).den) : ℝ) - (1 / (17 : ℝ)^d - 0)| <
+      1 / (17 : ℝ)^d := by
+  apply bbpNearby_prefix_discrepancy d r N hd hr hc hlo hhi
+  · norm_num
+  · positivity
+  · simpa only [div_one] using (one_div_le_one_div_of_le
+      (by norm_num : (0 : ℝ) < 1)
+      (show (1 : ℝ) ≤ 17 ^ d from one_le_pow₀ (by norm_num : 1 ≤ (17 : ℝ))))
+
+example (d r N : ℕ) (hd : 0 < d) (hr : 1 < r)
+    (hc : r ≡ 1 [MOD bbpCoverLcm (d + 1)])
+    (hlo : 17 ^ (r + d) ≤ 8 * N) (hhi : 8 * N < 2 * 17 ^ (r + d)) :
+    |(hexadecimalPrefixIcoCount (bbpPartialSumRat N : ℝ)
+      (orderOf (16 : ZMod (bbpPartialSumRat N).den)) (1 - 1 / (17 : ℝ)^d) 1 : ℝ) /
+      (orderOf (16 : ZMod (bbpPartialSumRat N).den) : ℝ) - (1 - (1 - 1 / (17 : ℝ)^d))| <
+      1 / (17 : ℝ)^d := by
+  apply bbpNearby_prefix_discrepancy d r N hd hr hc hlo hhi
+  · have h : 1 / (17 : ℝ)^d ≤ 1 := by
+      simpa only [div_one] using (one_div_le_one_div_of_le
+        (by norm_num : (0 : ℝ) < 1)
+        (show (1 : ℝ) ≤ 17 ^ d from one_le_pow₀ (by norm_num : 1 ≤ (17 : ℝ))))
+    linarith
+  · have h : 0 ≤ 1 / (17 : ℝ)^d := by positivity
+    linarith
+  · norm_num
+
+-- Empty words pass through the new arbitrarily-large dyadic theorem.
+example (B : ℕ) : ∃ s : ℕ, B < s ∧ ∀ word : Fin 0 → Fin 16,
+    ∃ t < orderOf (16 : ZMod (bbpPartialSumRat (2 ^ s)).den),
+      ∀ i : Fin 0, baseDigit 16 (bbpPartialSumRat (2 ^ s) : ℝ) (t + i.val) = (word i).val :=
+  bbpNearby_arbitrarily_large_dyadic_words 0 B
+
+-- A symbolic all-last-digit word also retains its arbitrary length.
+example (w B : ℕ) : ∃ s : ℕ, B < s ∧
+    ∃ t < orderOf (16 : ZMod (bbpPartialSumRat (2 ^ s)).den),
+      ∀ i : Fin w, baseDigit 16 (bbpPartialSumRat (2 ^ s) : ℝ) (t + i.val) = 15 := by
+  obtain ⟨s, hs, hw⟩ := bbpNearby_arbitrarily_large_dyadic_words w B
+  exact ⟨s, hs, hw (fun _ => 15)⟩
+
+end DyadicGridAudit
