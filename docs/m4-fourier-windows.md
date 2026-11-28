@@ -1570,6 +1570,75 @@ families, grouped-tail estimates and actual visitation remain open. The
 retains external discrepancy, transfer, entropy and PNT inputs; no full source
 proof audit, Lean theorem or originality determination is claimed.
 
+### Actual-weight packets with small upper entropy
+
+Actual unequal weights can also resonate in selected finite packets. Let
+M=34t+1, t>=1, L=M^2+4, and
+
+```text
+a=(M-2)L, b=(M+2)L, c=ML, d=M(M^2-4).
+```
+
+These are distinct odd integers prime to 17, with a<d<c<b<17a.
+For chi4(u)=(-1)^((u-1)/2), the identities
+1/a+1/b=1/c+1/d and chi4(a)=chi4(b)=-chi4(c)=-chi4(d) give zero signed
+reciprocal sum. Thus
+`X_M=-(1/2)*sum_(u in {a,b,c,d}) U_(4u)/u`
+uses four actual residue-4 column weights, each once.
+
+Put D=lcm(a,b,c,d), Y_M=2D*X_M, and e(u,k)=(u*17^k-1)/2.
+After n>=e(b,k), the completed depth-k contribution to 16^n*Y_M is
+
+```text
+-16^(n-e(b,k))*F(16^(17^k))/17^k,
+F(Z)=sum_u(D/u)*Z^((b-u)/2), F(-1)=0.
+```
+
+The integer factor Z+1 and 17^(k+1) dividing 16^(17^k)+1 make this
+contribution integral. Since b<17a, the active intervals [e(a,k),e(b,k))
+are separated. Outside them every started depth is complete, and the future
+tail has circle distance from zero tending to zero. This is convergence in
+R/Z: negative tails can have fractional representatives approaching 1.
+
+The active lengths are (b-a)*17^k/2. Summing them and maximizing the ratio
+over all initial segments gives asymptotic upper fraction
+rho=17(b-a)/(16b)=17/[4(M+2)]. Every empirical limit measure of Y_M has
+an atom at the circle's fixed point zero of mass at least 1-rho. Invariance
+and entropy affinity, followed by rational-scaling invariance, therefore give
+
+```text
+Hup(X_M)<=17/[4(M+2)] -> 0.
+```
+
+Only an entropy upper bound is used here; density of the individual packet
+orbits is not settled. The entropy source and its retained dependencies are
+the same as above. No orbit discrepancy estimate is needed here.
+
+The whole-tail consumer remains missing. Among eligible residue-4 cofactors,
+a zero-charge packet containing 4p, p an odd prime other than 17, cannot
+have max/min<2: its p-denominator term would be unique. More generally,
+there is no complete partition of the residue-4 cofactor tail into disjoint
+finite zero-charge packets with shrinking relative widths. Precisely, the
+excluded condition is that for every epsilon>0, all but finitely many packets
+P satisfy max(P)/min(P)<=1+epsilon. Here charge is
+`sum_(m in P)(-2/m)*(-1)^((m-4)/8)`.
+
+For large cutoff X, after all exceptional packets have completed, unfinished
+packets contribute only from [X/(1+epsilon),X]. Disjointness bounds their
+absolute harmonic charge by O(log(1+epsilon))+O(1/X); completed charges are
+zero. Taking X to infinity and then epsilon to zero would force the entire
+tail charge to vanish. Its actual value is -2*pi/17 minus a finite rational
+sum, hence nonzero. This argument concerns the stated residue-4 partition.
+
+A residual core is therefore required for that mechanism. No normal residual
+or whole-orbit entropy bound for the remaining sum has been supplied. Finite
+entropy subadditivity does not pass through arbitrary real limits: even an
+absolutely convergent sum of entropy-zero rationals can equal any real number.
+The clearing denominators also vary between packets. The
+[separate review](agy-reports/m4-continuation-review.md#actual-weight-packet-entropy--2026-11-28-utc)
+accepts the finite resource and restricted partition argument at paper level;
+no Lean, originality or actual selected-time visitation claim follows.
+
 ### The zero branch and what the scaled projection loses
 
 Keep the definitions above and write D=D_M, u_n=fract(S_(M,n)),

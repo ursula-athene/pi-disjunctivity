@@ -7599,3 +7599,44 @@ matched. Full return in the 1340 packet has hash
 b0998cdf91fdebef8fa34794146130f45ea51af74cd254737c63ff159eb5d709.
 Parent 6ee894 reverified integrity at 13:43:17 before factual updates.
 This accepts the record, not the unadopted calculations. Final checks remain.
+
+## 2026-11-28 — Actual-weight packets and an infinite-core test
+
+The discovery record is published as
+`ab4f96b76baa5a6c7bc12452d27d4ef820988f97`, parent ddbb0b4. Docs a263e3,
+whitespace fce32f/fbf554 and exact stage 01ba51 passed; commit a6d0d2,
+post-commit 32ac37, push 2146ce and remote 354a17 verified publication at
+13:44:11 UTC. The 1340 packet holds `publication.json`. Remote 466d59 still
+matched at 14:00:19 when the infinite-core source test began.
+
+The fresh-context pass found [actual-weight finite resonant packets](m4-fourier-windows.md#actual-weight-packets-with-small-upper-entropy)
+with upper entropy tending to zero, while retaining a residual-core and
+whole-tail gap. Its 130-line report is
+`/tmp/pi-m4-resonant-packet-20261128-fresh-time-selection.md`, hash
+c08f8ee14f3ca51762ba0a913faf2a042f4703fc92f6c4b134143b306e27b80e.
+Parent 4ce9aa read it completely. Separate paper review 13:56:56–13:59:41
+found no blocking defect. I1 circle convergence and I2 the exact residue-4
+shrinking-width partition scope are implemented in production. Q1 normal
+residual/decomposition, Q2 infinite sums and Q3 actual hits/C_odd/V/M4 remain.
+Full return in `/tmp/pi-m4-resonant-packet-integration-20261128T1403Z/paper-review-full.md`
+has hash b12729276cbb44c00b5510e0788b4604eea3c16a7776dd23268abbb3228cadaf.
+Parent 4ae497 verified four source entries and all protected/untracked files.
+Exact integration review and affected checks remain due; no Lean or census.
+
+The next source-fit test considers infinite cores whose cofactors use a fixed
+finite set of primes and retain all eight top-level cofactors. A polynomial
+denominator bound and sparse insertions may meet the existing arithmetic
+certificate directly. The source contract is being checked with 14:20/14:35
+checkpoints. No infinite-core theorem or transfer to pi is adopted yet; even
+normality of such a core would leave the remaining-sum consumer open.
+
+
+Exact production review 14:06:40–14:08:04 found no defect or additional
+improvement. I1/I2 are closed. The original paper return's overbroad normality
+question is corrected: the bound below one excludes normality; packet density
+and Q1–Q3 remain open. All 150 diff lines, 10 frozen entries, six sources,
+146 protected and 10 untracked files matched. Full return in the 1403 packet:
+b690739f94773e1de631c7fd4c57cc4ab661b1355ad3e88d245f293fa3538c0d.
+Parent 4ed43e reverified all inventories and live owners at 14:11:45 before
+these factual updates. The mathematical owner is unchanged. Final affected
+checks and publication remain due.

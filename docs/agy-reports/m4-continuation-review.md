@@ -6394,3 +6394,42 @@ Both complete guides, procedure and critic instructions were reused after
 unchanged-hash checks. Read-only limits held; worker execution and caller
 checks remain supplied evidence. Parent 6ee894 reverified integrity before
 factual updates. The screen calculations remain unadopted; final checks remain.
+
+## Actual-weight packet entropy — 2026-11-28 UTC
+
+Paper scope: `/tmp/pi-m4-resonant-packet-20261128-fresh-time-selection.md`,
+130 lines, hash c08f8ee14f3ca51762ba0a913faf2a042f4703fc92f6c4b134143b306e27b80e.
+Reviewer `/root/dyadic_grid_independent_review_0649` completed
+13:56:56–13:59:41. D: none within the finite-packet/residue-4 scope.
+I1 circle convergence and I2 eligible residue-4 packets with the explicit
+all-but-finitely-many width condition are implemented; the original remains
+frozen. Q1 residual/decomposition, Q2 infinite sums/common grid and Q3 actual
+hits, C_odd/V/M4 and density of individual packet orbits remain open.
+
+The reviewer reconstructed the reciprocal identity, integrality, all-prefix
+activity fraction, fixed-point atom/entropy bound and partition limit. All
+four sources matched inventory
+36fa5355f21b4cee60538476faa64323b1f36b3225724d5d14c04749d4cc939b.
+Full return in `/tmp/pi-m4-resonant-packet-integration-20261128T1403Z/paper-review-full.md`:
+b12729276cbb44c00b5510e0788b4604eea3c16a7776dd23268abbb3228cadaf.
+Both complete guides, procedure and critic instructions were reused after
+unchanged-hash checks. Read-only limits held; the worker's symbolic-check
+execution remains reported evidence, and full external entropy proof chains
+were not audited. Parent 4ce9aa/4ae497 read and verified the report and review.
+Exact three-document production review against ab4f96b and affected checks
+remain due. No Lean, originality or actual time-selection result is claimed.
+
+
+Exact production review 14:06:40–14:08:04 passed with no D or additional I.
+I1/I2 are resolved; the original Q3 normality wording was too broad because
+Hup below one excludes normality. The corrected density question and Q1–Q3
+remain. All 150 diff lines reconstructed the three postimages; 10 manifest
+entries, six sources, 146 protected and 10 untracked files matched. Manifest
+1d50786c62b7df99ed55138c433a7bec028f2db06c32144a1644692dbfbc0681;
+full return in the 1403 packet
+b690739f94773e1de631c7fd4c57cc4ab661b1355ad3e88d245f293fa3538c0d.
+Both complete guides, procedure and critic instructions were reused after
+unchanged-hash checks. Read-only limits held. External entropy proof chains
+were not newly audited; check executions and later remote observations remain
+caller evidence. Parent 4ed43e reverified integrity before factual updates.
+Final affected checks and publication remain due; C_odd/V/M4 stay open.
