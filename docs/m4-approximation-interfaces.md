@@ -642,3 +642,185 @@ approximation acceleration is suspended without a visitation consumer. The
 remaining question is whether exact initialization and its original conjugate
 bounds impose a joint sign restriction across scales; the tested identities
 do not provide one. Fresh discovery continues under the meta-plan.
+
+## Arctangent convergents and a partial period obstruction
+
+This separate rational family tests whether the BBP full-period timing
+obstruction persists for a different approximation to the same pi. It gives
+an exact comparison to investigate, not a new visitation mechanism. The
+calculation is paper mathematics; no Lean declaration or originality claim
+is made.
+
+Use the Gauss fraction in [DLMF 4.25.4](https://dlmf.nist.gov/4.25.E4):
+U_-1=U_0=1, V_-1=0, V_0=1 and
+
+    X_n=(2n+1)X_(n-1)+n^2 X_(n-2), n>=1.
+
+Then 4V_n/U_n tends to pi. Set m=n+1, rho=1+sqrt(2), and let P_m be
+the Legendre polynomial normalized by P_m(1)=1. With
+
+    S_m=i^m P_m(-i),
+    W_(m-1)(z)=sum_(k=1..m) P_(k-1)(z) P_(m-k)(z)/k,
+    R_m=i^(m-1) W_(m-1)(-i),
+
+the recurrences give U_(m-1)=m! S_m and V_(m-1)=m! R_m. The companion
+formula is [DLMF 14.7.4](https://dlmf.nist.gov/14.7.E4); the denominator
+normalization also appears in [Bala, theorem p.2](https://oeis.org/A003881/a003881.pdf).
+Here S_0=S_1=1 and (m+1)S_(m+1)=(2m+1)S_m+mS_(m-1), so S_m>0.
+
+### The real shadow window
+
+For E_m=|pi-4V_(m-1)/U_(m-1)|, orthogonality gives the exact formula
+
+    E_m=(2/S_m^2) integral_(-1)^1 P_m(t)^2/(1+t^2) dt,
+    2/((2m+1)S_m^2) <= E_m <= 4/((2m+1)S_m^2).
+
+Indeed, for F(z)=(1/2) integral_(-1)^1 1/(z-t) dt and
+Q_m=P_m F-W_(m-1), orthogonality annihilates
+(P_m(z)-P_m(t))/(z-t), a polynomial of degree m-1 in t. Consequently
+Q_m(z)/P_m(z)=[1/(2P_m(z)^2)] integral P_m(t)^2/(z-t) dt.
+At z=-i, F(-i)=i*pi/4 and the odd part of the integrand vanishes.
+Taking absolute values and using integral P_m^2=2/(2m+1) proves the bounds.
+This integral argument avoids a choice of complex logarithm branch.
+
+The integer-degree Laplace formula gives
+S_m=(1/pi) integral_0^pi (1+sqrt(2)cos(theta))^m dtheta.
+The positive peak at zero has quadratic decay, while the negative part has
+absolute base at most rho^-1. Thus S_m=Theta(rho^m/sqrt(m)) and
+E_m=Theta(rho^(-2m)). For fixed margin epsilon>0 the exact endpoint for
+absolute error 16^t E_m<=epsilon is floor(log_16(epsilon/E_m)); a sufficient
+endpoint replaces E_m by the displayed upper bound. They differ by at most
+one, and both equal 2m log_16(rho)+O_epsilon(1). A negative endpoint supplies
+no nonnegative exponent. These statements do not exclude later closeness
+modulo one and do not supply an interior visit for transfer.
+
+### Reduced arithmetic, transient and period
+
+Put L_m=lcm(1,...,m). Rodrigues' formula and the companion formula give
+positive integers
+
+    A_m=2^m S_m
+       =sum_(j=0..floor(m/2)) binom(m,j) binom(2m-2j,m),
+    C_m=sum_(k=1..m) (L_m/k) A_(k-1) A_(m-k),
+    4V_(m-1)/U_(m-1)=8C_m/(L_m A_m).
+
+The full reduced denominator is therefore
+
+    q_m=L_m A_m/gcd(L_m A_m,8C_m).
+
+The continuant determinant is
+U_n V_(n-1)-V_n U_(n-1)=(-1)^(n+1)(n!)^2. Hence every **odd** prime p>m
+dividing A_m survives in q_m with its full valuation: m!, 2 and L_m are
+p-units, and simultaneous divisibility of the two continuants is impossible.
+This gives no exponential lower bound on the retained radical.
+
+[Ben David et al., Theorem 5, Appendix D](https://doi.org/10.1007/s40598-024-00250-z)
+applies with its exact conventions p_n=U_n, q_n=V_n: the coefficient
+polynomials satisfy a_n=-a_(-1-n), b_n=b_(-n), b_0=0. It proves
+n!/lcm(1,...,n) divides 2^n gcd(U_n,V_n). This is a lower bound on common
+content and an upper bound on primitive height. It does not supply the
+opposite inequality needed for a timing obstruction. The source's proposed
+exponentially tight content formulas in section 2.5 remain conjectural.
+
+Write q_m=2^nu_m ell_m with ell_m odd. For the circle orbit
+t |-> fract(16^t a_m/q_m), where a_m/q_m is reduced, the exact transient is
+tau_m=ceil(nu_m/4). Its eventual period is ord_(ell_m)(16) when ell_m>1,
+and 1 when ell_m=1. Thus the period is at least log_16(ell_m+1), and at
+least log_16(rad(ell_m)+1). Traversing that period uses exponents through
+tau_m+period-1. This is a complete-period comparison, not a lower bound on
+the first visit to a target interval.
+
+One sufficient asymptotic obstruction to fitting a full period inside the
+absolute shadow window would be
+
+    liminf_m [tau_m log16+log rad(ell_m)]/m > 2 log rho.
+
+It has not been established. In particular, factorial growth of U_n and
+upper bounds on q_m do not imply it. Let J_m be the product of odd primes
+dividing ell_m but not A_m. Those primes come from L_m and are at most m.
+The elementary inequalities 4tau_m<=nu_m+3,
+nu_m<=v_2(A_m)+v_2(L_m), and v_2(L_m)=floor(log_2 m) give
+
+    tau_m log16+log rad(ell_m)
+      <= log A_m+log m+3log2+log J_m.
+
+Since log A_m=m log(2rho)+O(log m) and log(2rho)<2log rho, the entire
+possible radical supplied by A_m together with the permitted dyadic
+transient is insufficient by itself for that lower-bound method. The method
+requires additional surviving lcm support beyond m log(rho/2), with a
+positive linear surplus for the strict liminf criterion. This is a necessary
+input requirement, not proof that the actual period is too long. The next
+argument bypasses this unresolved criterion by using where the primes lie.
+
+### Small-prime support forces long periods on a fixed set of indices
+
+The generating series F(t)=sum A_m t^m=(1-4t-4t^2)^(-1/2) gives a short
+symbolic congruence proof. For an odd prime p put g=1-4t-4t^2 and h=(p-1)/2.
+In F_p[[t]], F^2=g^-1 and F(t)^p=F(t^p), so F=g^h F(t^p). Since g^h
+has degree p-1, its coefficients through that degree are A_0,...,A_(p-1).
+Its leading coefficient is (-4)^h=(-1)^h. Comparing degree p+r gives
+
+    A_(p+r)=2A_r mod p, 0<=r<p,
+    A_(p-1)=(-1)^((p-1)/2) mod p.
+
+This specializes the classical Legendre Schur congruence, stated in
+[Cullinan--Hajir, Theorem 6.1, pp.11–12](https://faculty.bard.edu/cullinan/papers/legendre.pdf).
+The displayed proof needs no square root of -1 in F_p and no Galois-group
+or irreducibility conjecture from that paper.
+
+For an odd prime m/2<p<=m, put r=m-p. Exactly one denominator index in
+C_m is a multiple of p, and v_p(L_m)=1. Therefore
+
+    C_m=(L_m/p) A_(p-1) A_r mod p,
+    p divides J_m iff p does not divide A_(m-p).
+
+In the nonvanishing case v_p(q_m)=1. In the vanishing case p divides A_m
+and hence is excluded from J_m by definition; no claim about its higher
+valuation in q_m is made. Thus no evaluation gcd is discarded.
+
+The scaled recurrence is
+(r+1)A_(r+1)=2(2r+1)A_r+4rA_(r-1). For 0<=r<=p-2 two consecutive A's
+cannot both vanish modulo p: backward propagation using the units 4r
+would reach A_0=0. It does not divide by the possibly vanishing 2r+1.
+For every m>=4 this proves the exact inequality
+
+    log J_m+log J_(m+1) >= theta(m)-theta((m+1)/2),
+
+where theta(x)=sum_(p<=x) log p: each prime (m+1)/2<p<=m occurs in at
+least one of the two products. Using the classical PNT only at this step,
+for every 0<eta<1/4, every sufficiently large pair {m,m+1} contains k with
+log J_k>=(1/4-eta)k. In particular the fixed set
+
+    G={k>=4: log J_k>=k/8}
+
+meets every sufficiently large adjacent pair. This is not a bound on J_k
+at every individual index.
+
+Now reuse the [previously proved order estimate](m4-crt-phase.md#short-ordinary-differences-retain-an-exponential-denominator):
+for integers X>=2 and t>=1,
+
+    log gcd(lcm(1,...,X),16^t-1)
+      <=sqrt(X)*[(1+d(t))log X+d(t)log16],
+
+where d(t) counts divisors and d(t)<=C_delta*t^delta for every delta>0.
+The proof separates primes at sqrt(X), then separates the orders of16 at
+sqrt(X); it assumes no randomness of orders. Let T_k be the eventual
+period above, with T_k=1 if ell_k=1. Since J_k is squarefree, supported
+on primes at most k, and divides ell_k, it divides gcd(L_k,16^T_k-1).
+For any fixed real K>0, if T_k<=k^K, choose delta=1/(4K). The bound gives
+
+    log J_k=O_K(k^(3/4)log k)=o(k).
+
+It follows that **for every K>0, all sufficiently large k in the same fixed
+set G satisfy T_k>k^K**. In particular T_k>k^2 eventually on G, while the
+absolute shadow endpoint is O_epsilon(k). A complete cycle cannot fit in
+that window, even before accounting for the dyadic transient.
+
+This closes a paper-level subsequence full-period comparison. The PNT input
+is explicit; no Lean proof or new priority claim is made. It leaves the
+complementary indices and the earlier radical-size criterion unresolved.
+Most importantly, a long full period does not imply a late first visit:
+the prescribed numerator might enter a desired word cell much earlier.
+An applicable estimate for that initial orbit segment remains missing.
+The [review record](agy-reports/m4-continuation-review.md#arctangent-primitive-timing--2026-11-28-utc)
+owns source limits, corrections and verification. V/M4 remain open.

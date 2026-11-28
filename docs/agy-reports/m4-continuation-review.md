@@ -4909,3 +4909,119 @@ documentation3d097a, whitespace9b0d49 and preservationb174d3 passed.
 Final factual outcome edits still require affected documentation and
 working/staged whitespace checks. No additional mathematical claim or
 source audit follows from this integration review.
+
+## Arctangent primitive timing — 2026-11-28 UTC
+
+Separate paper reviewer: `/root/finite_log_independent_review`, assigned
+03:43:35–03:53:35 UTC, first clock03:43:48, completed03:47:44 before its
+midpoint. Both complete current guides were applied: Lean adversarial
+`798c3cc974c5296453f510ea9264aa8b5d17c813c8dc217a430de9b68b7d667c`
+and strategy/tooling
+`c4a04d75a297c6ec361d31ab11e465e3c3e74a6c89eb590bddb03d95c243ad3b`.
+The read-only replacement procedure applied; Carbon remained stopped.
+
+Exact original scope: `/tmp/pi-m4-cf-height-20261128T032657Z/report.md`,
+hash `df683654618953afa1f276e8f501b7e97b73655c0ad15f5e6d03f3b80fe96b8a`,
+46-entry manifest
+`5408b3add98b2cf620a86ca3eecd0b2a8825807a1b5739914e1f0c40955747e8`.
+Parent451f93 and the reviewer independently verified all46 entries.
+
+- D1, resolved: the claimed retention for every prime p>m failed at m=1,
+  p=2. The proof and statement now require an odd prime. The review checked
+  this boundary directly from definitions, without a convergent census.
+- I1, resolved: the transient and period now explicitly concern
+  fract(16^t a_m/q_m), distinct from the raw absolute-error comparison.
+- Q1, open at this review: the exact gcd formula and the available content
+  bounds do not establish the proposed radical-size timing criterion. The
+  bound on radical plus transient supplies a necessary extra-input
+  requirement, not a late-traversal conclusion.
+
+The focused repair is frozen separately in
+`/tmp/pi-m4-cf-repair-20261128T0347Z/`: report-v2 hash
+`8d1cab31ec42f5ed72ad09c158fe20c605ae6715d3206950f5c9ca8784a81e0e`,
+repair diff `be9854068c5d358d3f4d56f5691d5a0f477cd931d9b130f7ef5f7c43f3b3b4e5`.
+The reviewer verified both entries, the exact D1/I1-only comparison, and
+preservation of the original packet.
+
+The independent reconstruction covered Legendre normalization, the signed
+error before absolute values, orthogonality, two-sided error and shadow
+endpoints, integer pair/evaluation gcd, corrected prime retention, exact
+transient, period/traversal endpoints, and the direction of the source's
+factorial-reduction theorem. The relevant retained DLMF formulas, Bala
+pp.2–4 (p.2 visually), Ben David et al. conventions/Theorem5/Conjecture2,
+and Wang Proposition4.2 were inspected. The error proof does not depend on
+Wang's rate citation. No complete source-dependency or PNT proof audit was
+performed; none of this is a verified external Lean proof.
+
+The source worker's default Python HTTPS verification failed; ordinary curl
+succeeded without disabling verification. Two guessed scalar DLMF TeX URLs
+returned404; the full HTML supplied the equations. An overrequested sixth
+PDF render failed after producing the five available pages. These retrieval
+limits are retained, not treated as mathematical failures. Root visually
+checked Bala p.2 and read the exact factorial-reduction convention and
+theorem. No installation or permission change occurred.
+
+Full return: `paper-review-full.txt` in
+`/tmp/pi-m4-cf-integration-20261128T0349Z/`. Review used only read-only
+file/shell/hash/image inspection: no Git, network, writes, builds, probes,
+checkers, rendering, delegation or actual-sequence census. It does not
+certify production integration, originality, Lean, or V/M4. The separate
+follow-up arithmetic claim and changed-file integration remain review gates.
+
+The same separate reviewer completed the new small-prime/order-consumer
+paper review03:55:10–03:57:33 UTC (first clock03:55:20), before its midpoint
+and04:03:10 deadline. Both complete guides and all read-only restrictions
+remained in force. Exact scope:
+`/tmp/pi-m4-cf-small-primes-20261128T034440Z/report.md`, hash
+`1316136ce2195800b263833bf4fa6047f72a41582290c71c3f440b2e313670b2`,
+20-entry manifest
+`9ad4734b3c9790c9108793541d0a346ee52269b32a309b93e1cda71103ea7298`.
+Parent d06e9e and the reviewer independently verified all20 entries. The
+captured CRT owner matched the live owner; its bound was reconstructed.
+
+No defect or material improvement was found. Supplement Q1 preserves the
+missing initial word-location estimate. Supplement Q2 preserves the absence
+of a bound at every index and the unresolved earlier radical criterion.
+These remain open. The new consumer partially advances original Q1 by
+settling full-period timing on G through prime locations and orders; it
+does not silently claim the earlier criterion was proved.
+
+The reviewer reconstructed the generating-series congruences, valuation-one
+criterion, backward nonvanishing, adjacent-pair/PNT quantifiers, fixed G,
+and divisor-count contradiction. The proof uses the same G for every fixed
+K; only the eventual threshold may depend on K. The exact period of the
+primitive circle orbit and comparison with the number of available shadow
+indices were checked separately from first visits.
+
+Cullinan--Hajir Theorem6.1 pp.11–12 was read, with p.12 visually checked
+by the source worker, parent and reviewer. Its congruence has no
+irreducibility or Stieltjes-conjecture premise. The required specialization
+is also proved directly. The DOI redirect failed through the web tool;
+the author PDF succeeded. No historical source chain, unrelated Galois
+result or PNT proof was audited. Full return: `supplement-review-full.txt`
+in the same integration packet. No actual convergent/orbit census, numerical
+checker or Lean work occurred. Changed-file integration remains required.
+
+The same separate reviewer completed the three-path integration review
+03:59:25–04:00:57 UTC (first clock03:59:36), before its midpoint and
+04:07:25 deadline. D1 and I1 were verified repaired in production; no new
+defect or material improvement was found. Integration Q1 preserves the
+first-word question; Q2 preserves complementary indices and the unresolved
+crude radical criterion. All12 frozen entries, live postimages, before/after
+diff hunks,30 protected/11 unrelated hashes,46 original paper entries,
+two repair entries,20 supplement entries and the3/4 unadopted packet
+entries matched independently. The unadopted packets support factual
+outcomes only. No additional source audit or mathematical adoption follows.
+
+Baseline `b400d754d9117cb7e4b651e337fc8bbec10f9fe7`; frozen integration
+diff `925baf3631d216f6d787bad4b5c94f909b6067eb1b25deb54061bad878e3c084`;
+manifest `9f409c9442d9536681509ee59802a0c2990c772872f09bcdbc614290fd96b81f`.
+The two full paper-return hashes are
+`f67ce99bcde1f7e7fdc0991d1433c15c48f99c3712d389f1ab750ee1ff6feaf6`
+and `aaa3cb8b37fb92940a6e4cf96816852996e63f670fb96ac425c488d63bb4aea7`.
+Full integration return: `integration-review-full.txt` in the same packet,
+hash `364f8596707c95c6a237e420e3efc0ffdbdc51bf8d76722f0a48729034d27e70`.
+Both complete guides and read-only constraints remained in force. Caller
+documentation5734d3, whitespacee4e60a and preservation194517 passed;
+final factual outcome edits require affected documentation and working/staged
+whitespace checks before commit. No Lean or process source changed.

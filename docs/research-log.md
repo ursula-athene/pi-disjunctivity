@@ -5844,3 +5844,90 @@ follow-up began03:20:57, midpoint03:26:57, endpoint03:32:57, seeking one
 specified disjunctive constant from a rational polynomial-coefficient linear
 recurrence with an actual digit-transfer argument. Finding no matching source
 would not prove nonexistence. This discovery continues under the unchanged V.
+
+Publication receipt, 2026-11-28 03:23:06 UTC: commit9d1f6b, post-commit
+afd962, push2e40e8 and remote669ddb confirm
+`b400d754d9117cb7e4b651e337fc8bbec10f9fe7`. Final documentation61cd41,
+working/staged whitespace2cb719/869c91, preservation410fc8 and exact
+staging55472e passed. The three committed paths/blobs, parent, empty index
+and29 protected/11 unrelated identities matched. This check was18 seconds
+after the preceding03:22:48 deadline while final checks completed; the receipt
+does not conceal that overrun. Later synchronization59e334 at03:27:03 and
+9bd16f at03:42:53 matched the same head, with no unpublished task commit.
+The latter check was50 seconds after its03:42:03 deadline. No Lean source
+or PR changed.
+
+## 2026-11-28 — Arctangent primitive arithmetic and its timing consumer
+
+The general holonomic source-fit pass ended03:28:14 UTC without a qualifying
+solved neighbor; the irrational nondisjunctive countermodel screen ended
+03:37:34 without a qualifying example. These are bounded search outcomes,
+not nonexistence results. The unadopted packets are respectively
+`/tmp/pi-m4-holonomic-neighbor-20261128-032057/` (report-v2
+`63c750777aa475e963f9ed4333315902ab1485aacb01bb57b6b3c4a419cd04b5`)
+and `/tmp/pi-m4-holonomic-countermodel-20261128-033016/` (report-v2
+`b83fac2ea3f67c310aab73516cbb73ad9e21bfc1bc29b2083c1ab9e966dcc3df`).
+Parent d972f8 and451f93 verified their3 and4 manifest entries. Their
+mathematical examples are not adopted. Generic minimality and value-class
+questions are suspended without a new actual-specific consumer.
+
+The exact Gauss arctangent family supplied a different, discriminating
+question: how does its reduced denominator compare with its real shadow
+window? The first inquiry ran03:26:57–03:40:03, reassessing03:34:16 and
+03:36:42 before its03:46:57 endpoint. Its
+[owning calculation](m4-approximation-interfaces.md#arctangent-convergents-and-a-partial-period-obstruction)
+proves the two-sided error, exact primitive pair and an input limitation for
+the crude radical-size method. It did not settle timing. Parent451f93
+verified all46 entries. No actual convergent, prefix, digit, carry or orbit
+census was performed.
+
+Separate paper review ran03:43:35–03:47:44. It found a prime2 boundary
+defect and requested an explicit circle-orbit domain; both were repaired
+and independently rechecked before the midpoint. The original packet stays
+frozen; the repaired report is separate. The review's remaining question
+concerns primitive arithmetic sufficient for timing. Three-path documentation
+integration began03:48:27, with reassessment04:00 and endpoint04:10;
+changed-file review and final affected checks gate publication. The
+[review record](agy-reports/m4-continuation-review.md#arctangent-primitive-timing--2026-11-28-utc)
+retains exact scope and dispositions. V/M4 remain open.
+
+A changed follow-up began03:44:40, with midpoint03:52:10 and endpoint
+03:59:40: test which small primes survive the lcm factor, rather than infer
+primitive height from factorial growth. Its midpoint reassessment was
+03:52:29. An adjacent-index survival calculation exposed a possible consumer
+of the already reviewed gcd/order bound in the CRT owner. That generic
+lemma is reused, not claimed as new. The follow-up and its independent
+review must finish before any resulting timing claim is adopted.
+
+The follow-up froze03:54:36, before its03:59:40 endpoint. It proves exact
+small-prime survival and an adjacent-index support inequality. With explicit
+PNT, one fixed set G meets every sufficiently large adjacent pair. The
+archived order bound then forces eventual periods to exceed every fixed
+power of the index on G, while the real shadow horizon is linear. This
+closes a subsequence full-period comparison without proving late first hits
+or the earlier radical-size criterion. Parent d06e9e verified all20 entries.
+Independent paper review ran03:55:10–03:57:33, before its midpoint, with no
+defect or required improvement. Its questions retain first-word location,
+complementary indices and the crude radical criterion. The three-path
+integration and final checks remain pending; no Lean theorem is claimed.
+
+Remote481491 at03:55:30 confirmed the published b400d75 head while the new
+result was under review. The changed initial-segment source-fit inquiry
+began03:56:45, with midpoint04:02:45 and endpoint04:08:45. It seeks a
+prescribed-numerator estimate in the actual linear shadow window; complete
+periods, average numerators and generic holonomic values do not satisfy
+that contract. No positive visit is presumed. Research continues under V.
+
+The three-path integration review completed04:00:57 UTC, before its
+midpoint, with no new defect or material improvement. Both earlier repairs
+were verified in production; first-word location, complementary indices
+and the crude radical criterion remain open. The04:00 integration
+reassessment therefore retained publication after final affected checks.
+Initial documentation5734d3, whitespacee4e60a and preservation194517 passed.
+
+Under the meta-plan, a fresh-context positive-mechanism reset was assigned
+04:01:00, with midpoint04:11 and endpoint04:21. It receives the exact target,
+failure record and early-phase obstruction, and must identify one changed
+mechanism or an honest no-new-mechanism outcome. It does not duplicate the
+ongoing prescribed-numerator source-fit inquiry or presume a breakthrough.
+Neither cycle boundary is an M4 stopping point.
