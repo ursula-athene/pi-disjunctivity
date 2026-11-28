@@ -805,6 +805,51 @@ offset and endpoint consumers passed. Independent changed-file review is
 complete with no findings. This extension adds no normality or actual-visitation
 claim and leaves V/M4 open.
 
+### Fixed-anchor height bounds have an approximation ceiling
+
+Fix one N>=1 and use exact future forcing A(N+j), j>=1, with rational
+entry x_0=e. Write E_n=bbpTail(n). The irrational entry
+e*=4/15-E_N=S_N+4/15-16^N*pi has states x_j*=4/15-E_(N+j) and canonical
+carry 4. Indeed 16E_n=A(n+1)+E_(n+1), and the checked bound
+0<E_(N+j)<=1/[64(N+j)^2]<1/16 keeps every x_j* in (1/8,4/15).
+
+Let mu be the actual irrationality exponent of pi, unchanged by this
+nonconstant rational affine transformation. For every 0<nu<mu there are
+infinitely many reduced p/q with |p/q-e*|<q^(-nu). Along these approximants,
+put L=floor(log_16(q^nu/8)). For large q, L>=0 and p/q is in (0,1).
+For 0<=j<=L the amplified error is less than 1/8. Canonical induction gives
+x_j(p/q)=x_j*+16^j(p/q-e*), with carry 4 at every step 1 through L:
+the candidate states stay in (0,47/120), so their next floors are exactly 4.
+Thus they avoid the fixed hole (1/2,3/4).
+
+Consequently a bound den(e)>=exp(cL-C_N), uniform over all rational entries
+with L even carries or L steps avoiding this hole, would require
+c<=log(16)/mu(pi)<=log(16)/2. Substitute the displayed L, divide by log q
+and let nu increase to mu. An upper bound on mu cannot strengthen this
+ceiling. Unlike the earlier moving-anchor sieve, this comparison fixes N;
+entries and horizons still vary along a subsequence. It gives no positive
+lower slope, bound at every horizon or infinite avoiding rational entry.
+
+The assessed approximation sources leave that missing separation unchanged.
+[Fischler–Rivoal 2010](https://www.imo.universite-paris-saclay.fr/~stephane.fischler/eddzero.pdf),
+Theorem 3 on p.802, makes its density exponent zero for every non-Liouville
+irrational. Theorem 2 on p.800 supplies multipliers asymptotic to prescribed
+scales under its approximation threshold; it does not prescribe exact powers
+of 16 or control the remaining circle phase. In
+[Fischler 2009](https://www.imo.universite-paris-saclay.fr/~stephane.fischler/divisibility.pdf),
+Definition 1 on p.202 allows unreduced pairs, and Remark 2 on p.205 makes
+the fixed-divisor restriction phi=2 identical to the ordinary exponent.
+For m_n=floor S_n, eventual even carries make m_n even, but the initialized
+history gives |1/pi-16^n/m_n|=(y_(n+1)+E_n)/(pi*m_n). Its exponent in the
+unreduced denominator m_n tends to 1, using E_n~1/(64n^2) and m_n~pi*16^n.
+Reduction can remove the factor 2. Neither source excludes the actual
+restricted-digit points. A uniform separation of the actual translated
+survivor set from rational grids remains unproved.
+
+These compact paper assessments passed separate review; the
+[review record](agy-reports/m4-continuation-review.md#fixed-entry-height-and-approximation-sources--2026-11-28-utc)
+retains the frozen reports, source pages and limitations. No Lean or V result.
+
 ## Quantitative hole transport and varying entry times
 
 Suppose the ordinary hexadecimal expansion of pi eventually omits a word of

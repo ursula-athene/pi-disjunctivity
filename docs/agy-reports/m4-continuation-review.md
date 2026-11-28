@@ -6228,3 +6228,46 @@ checks. Read-only limits held; remote and execution observations remain caller
 evidence. Parent83c0e7 reverified all inventories before factual updates.
 No old source theorem or mathematical proof was newly audited. Final affected
 checks remain due; this is not a new mathematical result or M4 acceptance.
+
+## Fixed-entry height and approximation sources — 2026-11-28 UTC
+
+Reviewer `/root/dyadic_grid_independent_review_0649` separately reviewed the
+two compact paper packets. Source review11:54:38–11:56:09 found no D;
+I1, replacing ambiguous "initialized period" by "initialized history", is
+implemented in the owner while preserving the frozen original. Q1 actual
+restricted-digit exclusion, Q2 exact-radix control and Q3 C_odd/V/M4 remain.
+All40 source entries matched. The reviewer read89 report lines, all ten page
+extracts and the retained inputs, and visually inspected the four central
+pages (Fischler–Rivoal pp.800,802; Fischler pp.202,205).
+
+Height review12:03:28–12:04:51 found no D/I. Q1 actual setwise Diophantine
+separation, Q2 positive slope/every-horizon control and Q3 C_odd/V/M4 remain.
+The reviewer reconstructed the strict tail margin, canonical carry induction,
+reduced approximation subsequence, rational-affine exponent invariance and
+ceiling using the actual mu(pi). The anchor and hole stay fixed, but rational
+entries vary; no infinite avoiding rational trajectory follows.
+Report6d314ad632630bedaa51ef5d57a2769126bd083d53c5d0a90f8661f573fc3ceb
+and completion2c94193f03268fa640df410b8f81f0da73cecd6e8616659f379a5b239f8a9a26
+matched. BMPS is contextual, unused and only caller-inspected.
+
+Full returns in `/tmp/pi-m4-fixed-entry-integration-20261128T1204Z/`:
+source fd49c893380b3772683d56cb4c2cad6e8ef8f2882a9263d13524910d22483e28;
+height c43001fb41744b53f356c2e040b4fc8eda529b8ce8d7f0f3c628d4276ae9b9a2.
+Both complete guides/procedure/critic reads were reused after unchanged-hash
+checks. Read-only restrictions held; no numerical checker was needed.
+Source proof chains, originality and Lean are unaudited. These are scoped
+paper reviews; exact production review and affected checks remain required.
+
+Exact three-document review12:09:09–12:10:05 completed with no defects or
+additional improvements. Source I1 is closed; both source Q1/Q2, height
+Q1/Q2 and common Q3 remain as stated above. The reviewer read the full138-line
+diff, both full returns and surrounding context, reconstructing every hunk.
+All12 manifest entries,44 sources,146 protected files,10 untracked files
+and three live postimages matched. Manifest
+e7f621a90c765f5a95c8ed8146bbb327a666f792508bdb72a6d75551e50a3cfe;
+full return `production-review-full.md` in the1204 packet:
+063b5b2494345d21758d1c329cd7d39b2158e2f83ce92c6bde27518d4b9d0c60.
+Parent a43610 independently reverified those inventories, baseline and empty
+index before these factual completion updates. Read-only limits held;
+execution and remote observations remain caller evidence. Final affected
+checks remain due. This is neither a new Lean result nor M4 acceptance.

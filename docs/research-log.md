@@ -7399,3 +7399,48 @@ full return in the1131 packet
 `bcab9bdf93ff6c192b7de7edf397e6ef5f7005cb3fb53bc4fc290f478d27b200`.
 Parent83c0e7 reverified integrity at11:34:06 before factual completion
 updates. This review accepts the recording, not the unadopted calculations.
+
+## 2026-11-28 — Fixed-entry height calibration and source limits
+
+The discovery checkpoint is published as
+`5cd3885ec43cf57b0d277225d5d7fdd855661dba`, parent7e9bf7f: commit09f57b,
+post-commit e4835e, push9da4a9 and remote7a0cb6 at11:35:32.
+Docs12c40d, whitespace6b41ef/8bbc31 and exact stage d73973 passed.
+The1131 packet contains the publication receipt; remote240e05 still
+matched at the12:00:52 clock observation.
+
+The [fixed-anchor calibration](m4-generating-functions.md#fixed-anchor-height-bounds-have-an-approximation-ceiling)
+distinguishes a fixed anchor from the earlier moving-anchor comparisons,
+but supplies only a ceiling on a proposed height bound. The11:44 discovery
+cycle completed11:54:59 before11:57/12:10. Parent dc3df8/324da8 read and
+verified the two-file packet `/tmp/pi-m4-fixed-entry-height-20261128T1144Z/`,
+report6d314ad632630bedaa51ef5d57a2769126bd083d53c5d0a90f8661f573fc3ceb.
+Separate review12:03:28–12:04:51 found no D/I; actual setwise separation,
+a positive slope and C_odd/V/M4 remain open. No finite checker was needed.
+
+The11:29 source screen completed11:39:19 before11:40/11:52. Packet
+`/tmp/pi-m4-logarithm-source-test-20261128T1134Z/` has report
+e273c1c217bab0e7e425a832baee2e4effc9fd1a4d5c4edf155339c5b60eb6f1
+and40-entry inventory
+ba6553f33c851ad68c95abf8e8a8b739a21d89b142fc97912399ada29f9449da.
+Parent f10253 read it, inspected four central source pages and verified
+all entries in43230a. Review11:54:38–11:56:09 found no defects; I1 is
+implemented as "initialized history" in the owner, preserving the frozen
+original. Source applicability, exact-radix phase and M4 questions remain.
+
+Full reviews are retained in `/tmp/pi-m4-fixed-entry-integration-20261128T1204Z/`:
+source fd49c893380b3772683d56cb4c2cad6e8ef8f2882a9263d13524910d22483e28;
+height c43001fb41744b53f356c2e040b4fc8eda529b8ce8d7f0f3c628d4276ae9b9a2.
+Three-document integration began12:03:53 with12:11/12:24 checkpoints;
+exact production review and affected checks remain. Independent12:00
+geometry screening of the existing 1/n null gauge found no noncancellation
+mechanism; its comparison is not adopted as a new theorem. No Lean change
+or actual-state census. Research continues; V/M4 remain incomplete.
+
+Exact integration review12:09:09–12:10:05 is complete with no defects or
+additional improvements. Source I1 is closed; all source/height questions
+and C_odd/V/M4 remain open. Full return in the1204 packet:
+063b5b2494345d21758d1c329cd7d39b2158e2f83ce92c6bde27518d4b9d0c60.
+Parent a43610 independently reverified the frozen/source/protected/live
+inventories before factual updates. Remote822ca4 matched5cd3885ec43cf57b0d277225d5d7fdd855661dba
+after the12:14:26 clock observation. Final affected checks remain due.
