@@ -5400,3 +5400,55 @@ diagnostics, executable checks and protected-file preservation as caller evidenc
 It made no writes, Git/network calls, builds, probes, checker runs, installations,
 delegation or actual census. Review is complete; subsequent edits record factual
 completion only. Final affected checks gate publication.
+
+## Combined-resource comparison — 2026-11-28 UTC
+
+Scope: the existing thirteen-pole F, its positive assembled tail measure,
+all-order integer clearing, unchanged shadow blocks, odd denominators and
+common-anchor complete-period grids, and the selected-time miss. The constant
+remains32/21 and pi's irrationality excludes it. This is a paper diagnostic
+of the two resources alone, not a result about actual target placement.
+
+Separate reviewer `/root/dyadic_grid_independent_review_0649` inspected
+07:01:02–07:03:29 UTC, before its07:07/07:12 bounds. It read both full guides,
+the replacement procedure, pi-argument-critic, the complete report/checker,
+inherited model and Borel derivations, actual-shadow contract and relevant
+Lean interfaces. It found no defects, warranted improvements or blocking
+questions; no D/I/Q item remains. The rational comparison leaves the need for
+additional actual-BBP arithmetic explicit. No sketch repair was required.
+
+Report `c5be0b1372c287d7189d1df6de96487213863a7c2020fff024ec5c79dc6592f0`,
+checker `89d38bf8c9bf69335d14a1f9935df869868f28aacd8a35d4d392686f6756ef10`,
+output `81a6f045b15435915d7d30c89e7c85562757bc4724587167ae2df5860efdb62f`,
+receipt `87866777a739428ed46b222df9155ddf2f699c9df74e8770fd38e9a9bb1ea01a`
+reside in `/tmp/pi-m4-combined-resource-test-20261128-0645/`.
+All five inventory hashes in the receipt matched independently; there is no
+separate manifest. Both guide hashes were verified unchanged. Reviewer
+execution evidence remains read-only source/output inspection, distinct from
+caller rerunb61fb3 and hash check665fb8. No reviewer writes, Git, network,
+builds, probes, checker execution, installs, delegation or census occurred.
+
+The verbatim returned review is `sketch-review-full.md` in
+`/tmp/pi-m4-combined-resource-integration-20261128T0709Z/`, hash
+`6b8d586c255d60ff5797cd472c29b9c3cd792b43f92a8662354e68da1213d8a8`.
+The production integration contains only the owning mathematical extension,
+this review record and the research log, against baseline0049319. Separate
+exact-diff review and affected documentation/whitespace/preservation checks
+gate publication. The concurrently developing analytic Lean scratch is not
+adopted by this documentation change.
+
+Production review by the same separate critic ran07:13:37–07:14:57 UTC,
+before its07:18/07:22 bounds. It reread both full guides and replacement
+procedure, the complete217-line diff and relevant postimage context. No
+defect, warranted improvement or blocking question was found; the entire
+review cycle required no repair. All nine manifest entries and three live
+postimages matched. Concurrent scratch correctness was outside this review.
+
+Manifest `d8e62605c034eb19f03e4e6653d22508ecea2b15c9efa4979df49d25a029e51b`;
+diff `8c07bcdcdd5c4e4a5580ac9362984686ed56a31538e21a5fd7685a9a63f3d854`.
+The full verbatim return is `production-review-full.md` in the integration
+packet, hash `c804b71973f924ebea68b4ae409a846d7eb6cd4d04b1db518dad46aee4132539`.
+Documentationdcd696, whitespace77a2b3 and preservation53ba4e are caller
+evidence; reviewer permissions and execution limits were unchanged. Subsequent
+edits only record this completion. Affected checks gate publication; no Lean
+or actual selected-time result is added.

@@ -584,6 +584,110 @@ bounds. These are finite symbolic diagnostics, not actual-state or digit
 observations and not a proof of the universal result. Full review evidence is
 in the [continuation record](agy-reports/m4-continuation-review.md).
 
+### Both resources alone do not supply selected target hits
+
+The existing [13-pole comparison forcing F](m4-rational-forcing.md) retains
+the original shadow blocks (DS) and arbitrarily fine complete-period grids
+at the same nearby dyadic anchors, while every selected frozen-prefix phase
+misses (3/4,7/8). This independently reviewed paper result refutes an inference
+from those two resources alone. Its constant is C=32/21; pi's irrationality
+excludes this model. It does not refute the actual-A statement, a rational-or-dense
+dichotomy, or the resources together with additional actual-BBP arithmetic.
+
+Keep the original F, seed zero and inclusive prefix
+`W_N=sum_(n<=N)16^(N-n)*F(n)`. Its tail is
+`E_F(N)=16^N*C-W_N`. No recurrence or prefix values are sampled below.
+
+Write F(n)=sum c_r/(8n+r), with the coefficients in the linked owner, and
+let w(t)=sum_(r<=t)c_r on [1,15], zero elsewhere. The fourteen unit-interval
+values of 16w are
+
+```text
+24,32,36,44,14,16,15,15,21,13,9,1,1,-1.
+```
+
+Thus individual layers are signed. Define the finite signed measure by
+`integral f dmu_F=(1/64)sum_(r>=0)16^(-r-1) integral_1^15 w(t)f(r+1+t/8)dt`.
+Collect overlapping layers at u=R+1+t/8, 1<=t<9. The initial layer is positive;
+for R>=1 the density is `(1/8)*16^(-R-1)*(w(t)+16w(t+8))`.
+The eight values of 16 times the bracket are
+
+```text
+360,240,180,60,30,0,15,15.
+```
+
+Consequently the assembled measure is positive, nonzero, supported in
+[9/8,infinity), and has mass1/64. The total variation integral of w is121/8,
+so its exponential moment is at most
+`(121/8192)*exp(23/8)/(1-exp(1)/16)<3267/6656<1`.
+Absolute convergence justifies the representation
+`E_F(N)=integral (N+u)^(-2)dmu_F` and its moments. The finite signed remainder
+therefore has exactly the same strict bound
+`0<d_K(N)<(K+1)!/N^(K+2)` for every finite K and N>0.
+
+All-order integer clearing also holds. In the archived
+[Borel formula](m4-transforms-and-periods.md), set H_F=8B_F,
+`D(x)=(2-x^2)(x^2-2x+2)` and
+`L0=(2-x^2)'/(2-x^2)-(x^2-2x+2)'/(x^2-2x+2)`. Then
+
+```text
+32H_F=4x^9(1-x^4)-x^9(1-x^8)L0 in Z[x,D(x)^(-1)], D(1)=1.
+```
+
+Every Taylor coefficient of 32H_F(1+y) is integral. The ordinary derivatives
+of H_F at1 through order7 are
+`0,-1,-27,-546,-9966,-176250,-3150810,-58837590`, all integers.
+For every order i>=8,32 divides i!, proving integrality at all higher orders.
+The integer Stirling change of basis proves every Euler derivative integral.
+Hence the actual coefficients of this model satisfy
+`a_l=(-1)^(l+1)*[(x*d/dx)^(l+1)H_F](1)/8^(l+2)` with integer numerator.
+No oddness is asserted. Taking K=4h-1 repeats the finite remainder argument
+above and gives precisely (DS), with its original h,v ranges and error bound.
+
+Odd prefix denominators follow from the universal rational identity
+
+```text
+F(n)=(96n^2+260n+157)/[(8n+1)(8n+7)(8n+15)]
+     -3(4n+5)/[(8n+5)(8n+9)] +1/[(4n+1)(4n+5)]
+     +2/[(8n+3)(8n+11)]
+     +(5n^2+12n+6)/[(2n+1)(2n+3)(4n+3)(4n+7)].
+```
+
+Every denominator prime is at most8N+15. At the same anchors
+Q=17^(r+d)<8N<2Q, N=2^s, the Q-pole pair contributes
+`(15/2)*16^(N-n0)` to QW_N, where n0=(Q-1)/8. The possible2Q pair is at
+n2=(Q-1)/4 and n2-1. Both N and n2 are even and N<=n2, so either neither
+term or both terms are included. In the latter case their contribution is
+`(-15/4)*16^(N-n2)`. All other terms vanish modulo17. The exponents are even,
+so QW_N is15/2 or15/4 modulo17, both nonzero. Thus its odd reduced denominator
+has exact17-valuation r+d. The cutoff
+`8N+15<2Q+15<=17Q+5` fits the existing depth-(d+1) Euler cover.
+The generic grid theorem applies to this model's actual reduced numerator
+and coprime complement, giving all fixed depths at arbitrarily large anchors.
+
+Nevertheless, (DS) gives the exact sign
+
+```text
+fract(16^j*W_N)=fract(16^(N+j)*C+epsilon).
+```
+
+The rational part has one of the three phases2/21,8/21,11/21. For s>=64,
+adding epsilon<2^(-s/4) leaves it below3/4 without wrap. Every selected time
+therefore misses (3/4,7/8), despite fine complete-period grids. The original
+recurrence consumer still has index N+j+1. F differs from A in its pole
+coefficients, complex residues, exact coefficient parity and rational constant.
+The next actual-phase argument must use an additional distinguishing input;
+this comparison does not identify a sufficient one. V/M4 remains open.
+
+Frozen report `/tmp/pi-m4-combined-resource-test-20261128-0645/report-v1.md`,
+hash `c5be0b1372c287d7189d1df6de96487213863a7c2020fff024ec5c79dc6592f0`,
+and its symbolic checker were independently reviewed with no D/I/Q items.
+The parent rerun passed: density tables, universal rational identity, finite
+all-order integrality certificate and noncancelling pole coefficients.
+These checks are not actual-state observations or universal analytic proofs.
+No Lean theorem or originality claim is made for this comparison. The existing
+source map suffices for this extension of the same recorded model.
+
 <a id="normal-prime-power-columns-do-not-supply-a-sum-estimate"></a>
 
 ## Normal prime-power columns require a joint estimate

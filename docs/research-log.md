@@ -6372,3 +6372,61 @@ and every packet entry, and retained caller execution/preservation receipts
 as such. The code and audits are unchanged after review; only factual status
 updates and final affected checks follow. The07:03 endpoint is retained for
 publication while both independent scratch inquiries continue.
+
+## 2026-11-28 — Testing the combined resources against the existing model
+
+The nearby-dyadic Lean grid component was committed and pushed as
+`0049319b74fa28e9afda81ed9ca7288094b76a06`, parent7923f1b. Commit91e5c2,
+post-commit91251e, pushd4e995/fd4087 and remote9b5b2e verified publication
+at06:54:38 UTC. Nine owned blobs matched;136 protected and11 unrelated
+identities were preserved, with an empty index. Final documentationeb6b76,
+working/staged whitespacea6f410/4826ae and exact-stage6575e0 passed.
+No repair or PR. The publication receipt remains in the0643 integration packet.
+Remote1b797a reverified0049319 at the next cadence; no ready commit was withheld.
+
+The changed comparison test began06:45:17, reassessed06:54:06 and froze
+06:59:06 before its07:04 endpoint. It proved the existing13-pole F retains
+both original shadow blocks and common-anchor fine grids, while its selected
+frozen phases all miss(3/4,7/8). The [owning argument](m4-fourier-windows.md#both-resources-alone-do-not-supply-selected-target-hits)
+preserves the rational constant32/21, which pi's irrationality excludes.
+This separates the two resources from the missing placement implication;
+it does not refute actual V or identify a sufficient additional hypothesis.
+
+Frozen report hashc5be0b1372c287d7189d1df6de96487213863a7c2020fff024ec5c79dc6592f0
+is in `/tmp/pi-m4-combined-resource-test-20261128-0645/`.
+The receipt's five hashes matched665fb8; caller checkerb61fb3 passed with
+exit0 after source inspection. It checks universal polynomial identities,
+the finite all-order integrality certificate, density tables and pole residues;
+it computes no actual state. Separate paper review07:01:02–07:03:29 found
+no D/I/Q items. The whole sketch cycle required no repair.
+
+Documentation integration began07:10 UTC in
+`/tmp/pi-m4-combined-resource-integration-20261128T0709Z/`, with07:16
+reassessment and07:24 endpoint. Three owned paths,142 protected and11
+unrelated identities were frozen3fc674. The exact source map is reused for
+this extension of the same comparison; no new source theorem or priority claim.
+Production-diff review and affected checks remain required before publication.
+
+The independent analytic Lean worker froze its first packet07:00:12:
+`/tmp/pi-m4-shadow-contract-20261128T0644Z/manifest-v1.sha256`, hash
+`ce39c493b0800dd1557c22210807908cc4deb4b0f9cd8539577220aa870be458`.
+It reports checked actual quadratic tail bounds, integral representation and
+all-order numerator integrality. The successor inquiry, with07:12 midpoint
+and07:22 endpoint, reports actual moment and signed factorial-remainder proofs
+compiling in scratch. These are worker receipts, not adopted production or
+independent code-review claims. The final modular-shadow theorem and selected
+target visits remain outside the checked production result.
+
+A changed actual-A inquiry tests the exact odd numerator residues just before
+the integer-clearing times, asking whether they supply useful translated
+comparisons or only another target-placement reformulation. Its07:24 midpoint
+and07:34 endpoint require a justified use or a precise failure, not a further
+countermodel taxonomy. No actual-state census is authorized. V/M4 stays open.
+
+The07:16 integration checkpoint completed early: independent exact-diff review
+ran07:13:37–07:14:57 and found no D/I/Q items. All nine frozen entries and
+three live postimages matched; executable and protected-file receipts were
+correctly retained as caller evidence. Documentationdcd696, whitespace77a2b3
+and freeze/preservation53ba4e passed. No substantive repair followed; final
+edits record review completion only. The mathematical owner is unchanged.
+Final affected checks and publication complete this checkpoint, not M4.
