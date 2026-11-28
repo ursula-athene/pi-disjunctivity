@@ -364,6 +364,191 @@ sampled monotonicity and 245 anchor/order denominator pairs. Those finite
 checks are sanity evidence; the infinite sums and universal inequalities
 above remain paper mathematics. No production Lean declaration changed.
 
+## Dyadic anchors give later modular shadow blocks
+
+The preceding absolute-error obstruction leaves room for cancellation modulo
+integers. The actual BBP tail has such cancellation at explicit dyadic anchors.
+This is an independently reviewed paper result, not a Lean theorem or a
+visitation assertion. Use the inclusive prefix S_N and tail E_N above, and the
+[exact coefficient denominators](m4-transforms-and-periods.md#an-exact-transform-explains-the-dyadic-tail-coefficients).
+For integers s>=32 define
+
+```text
+N=2^s, H_s=floor(s/(16*log_2(s+2))), V_s=floor(s/16).
+```
+
+For every 1<=h<=H_s and 0<=v<=V_s, set j=h(s+3)+v. There is an integer z
+and a real epsilon satisfying
+
+```text
+16^j*E_N=z-epsilon,  0<epsilon<2^(-s/4).                 (DS)
+```
+
+At v=0 the bound improves to2^(-s/2). Thus the fractional part is1-epsilon,
+not epsilon; the estimate concerns circular distance to an integer. The h-range
+is nonempty for s>=128, and can be empty at smaller s. Its blocks are disjoint,
+each has floor(s/16)+1 shifts, and their maximum shift is asymptotic to
+s^2/(16*log_2(s)). This extends the ordinary O(s) uncorrected comparison at
+selected times, not throughout a continuous window or beyond the earlier
+O(N) absolute horizon for corrected rational prefixes.
+
+### Uniform remainder bound and integer cancellation
+
+The positive measure already displayed above has an exponential moment bounded by
+
+```text
+integral exp(u) dmu(u)
+ <=(15/1024)*exp(7/4)/(1-exp(1)/16)
+ <(15/1024)*9/(1-3/16)=135/832<1.
+```
+
+Here u<=r+7/4 in its r-th summand, integral w=15, exp(1)<3 and exp(7/4)<9.
+Positivity justifies the geometric estimate and proves integrability. Since
+u^K<=K!*exp(u), every moment satisfies mu_K<K!. Also
+`((K+1)+K*x)/(1+x)^2<=K+1` for x>=0: the numerator of the difference is
+`(K+2)*x+(K+1)*x^2`. The finite remainder identity therefore gives, for
+every finite K>=0 and N>0,
+
+```text
+0<d_K(N)<(K+1)!/N^(K+2).
+```
+
+No convergence of the infinite asymptotic series is used. Write
+a_l=B_l/8^(l+2), B_l an integer. For K>=1,
+
+```text
+(8N)^(K+1)*R_K(N)=sum_(l<K)B_l*(8N)^(K-l-1) is integral.
+```
+
+Take K=4h-1, which is odd. Then16^[h(s+3)]=(8N)^(K+1), so
+
+```text
+16^[h(s+3)]*E_N=integer-delta,
+0<delta<8^(4h)*(4h)!/2^s <=(32h)^(4h)/2^s.
+```
+
+The permitted h and s>=32 imply h<=s and
+`4h*log_2(32h)<=8h*log_2(s+2)<=s/2`. Hence delta<2^(-s/2).
+Multiplying by16^v preserves integrality and gives
+`epsilon=16^v*delta<2^(4v-s/2)<=2^(-s/4)`, proving (DS).
+For nonvacuity, log_2(130)<8 and s/16-log_2(s+2) is increasing for s>=128.
+
+### Exact target-placement obligation
+
+The actual split, including the original initialization, yields
+
+```text
+16^(N+j)*pi-16^j*S_N=z-epsilon,
+S_(N+j)-16^j*S_N=z-epsilon-E_(N+j).
+```
+
+The measure's mass1/64 gives0<E_(N+j)<=1/(64*N^2). Thus with
+`e_s=2^(-s/4)+1/(64*2^(2s))`, any selected j satisfying
+
+```text
+fract(16^j*S_N) in (a+e_s,b),  0<=a<b<=1,
+```
+
+gives bbpRecurrence(N+j+1) in(a,b), with no wrap. Taking s arbitrarily large
+would also ensure N+j>=M for any prescribed orbit threshold M. The checked
+weaker B3 estimate can replace the stronger paper mass bound and still tends
+to zero. **The selected-time target hits themselves remain unproved.**
+The estimate supplies no normality, disjunctivity or V conclusion, and these
+restricted hits are not asserted to follow from V either.
+
+The original exact grid anchors N=(17^k-1)/8 coincide with2^s only at k=s=1:
+odd k>1 leaves an odd factor in(17^k-1)/16; even k would force two powers of
+two differing by2 around17^(k/2)>=17. This does not exclude extending that
+grid argument to nearby anchors. Independently, complete-period coverage has
+no bound placing a hit in these blocks: the archived denominator estimate
+and q_N dividing16^T-1 give T=Omega(N), whereas their maximum shift is o(N).
+That is a period comparison, not a lower bound on actual first-hit times.
+
+### Compatible fine grids at nearby dyadic anchors
+
+The original anchor formulas differ, but the grid argument extends to a nearby
+dyadic anchor. This separate paper extension is independently reviewed. Fix
+d>0 and choose arbitrarily large r>1 with
+`r=1 mod bbpCoverLcm(d+1)`. Set k=r+d and Q=17^k. Let8N be the least power
+of two greater than Q, so
+
+```text
+N=2^s, Q<8N<2Q, s=ceil(k*log_2(17))-3.
+```
+
+The existing admissible-exponent theorem gives unbounded r; hence s is
+unbounded and can exceed128 and any prescribed threshold. The new denominator
+argument uses only Q<=8N<2Q. Since Q=1 mod8 and8N is a multiple of8,
+
+```text
+8N<=2Q-2, 8N+6<=2Q+4<3Q.
+```
+
+Of the positive multiples of Q in this range, Q occurs exactly once among
+the four actual pole families, at8n0+1 with n0=(Q-1)/8. The other possible
+multiple2Q has residue2 modulo8, so none of the families1,4,5,6 contains it.
+After multiplying S_N by Q, every other pole term is divisible by17 in the
+17-localization. The exceptional term contributes4*16^(N-n0), nonzero modulo17.
+Therefore
+
+```text
+v_17(S_N)=-k, v_17(q_N)=k,
+q_N=17^(r+d)*M, gcd(M,34)=1.
+```
+
+The last assertion also uses the checked all-N odd-denominator theorem.
+For every prime p dividing q_N, the checked cutoff gives
+`p<=8N+5<=2Q+3<17^(r+(d+1))+5`. The existing
+`bbpCover_prime_factorization_le`, at depth d+1 and the chosen congruence,
+gives v_17(p-1)<=r-1. These are precisely the hypotheses of
+`PrimeGrid17.rationalGrid17` at grid depth d. Its generic interface requires
+no terminal-anchor equality. Every unit numerator modulo q_N therefore has
+the full17^(-d) translated grid in its hexadecimal orbit. The actual reduced
+numerator is a unit, so `RationalHexOrbit.rational_period_grid_contract` also
+gives positive period and strict half-open interval discrepancy<17^(-d).
+
+Thus for every fixed d there are arbitrarily large actual dyadic anchors
+with both the fine complete-period grid and (DS). **Anchor compatibility is
+established; target-time intersection remains open.** The constructed
+principal-unit traversal has step at least2*17^(r-1), eventually larger than
+the selected block range for fixed d. This limits that traversal argument;
+it does not rule out earlier actual target hits.
+
+The failed direct-clearing question explains the change of anchor. For
+N=2^s*m with m odd, put `P_K(N)=sum_(l<K)B_l*(8N)^(K-l-1)`, which is odd.
+Once4j>=(s+3)(K+1),
+`16^j*R_K(N)=2^[4j-(s+3)(K+1)]*P_K(N)/m^(K+1)`.
+It is integral exactly when m^(K+1) divides P_K(N), implying m divides
+B_(K-1). Before that threshold, its dyadic denominator cannot clear either.
+Moving forward while preserving the high17 pole permits m=1 and avoids this
+extra divisibility obligation. This is an exact-clearing condition, not an
+obstruction to other small circular residues.
+
+Frozen extension `/tmp/pi-m4-dyadic-grid-compatibility-20261128-0622/report-v1.md`,
+hash `57134a94c5a024ba5d6608fd534980f43e0077d19e8d0da643931c466d334ef6`,
+passed separate review with no D/I/Q items. Parent checker e79413 passed
+130,816 abstract cutoff pairs and288 rational identities using synthetic
+coefficients, with no actual prefix/denominator computation. The existing
+generic Lean theorems are checked; this new bridge and the analytic shadow
+bound remain paper results at this checkpoint.
+
+Early prior-work searches found a related radix-cancellation mechanism in
+Borwein--Borwein--Dilcher, [*Pi, Euler Numbers, and Asymptotic Expansions*](https://www.cecm.sfu.ca/~pborwein/PAPERS/P45.pdf).
+Borwein--Choi--Pigulla's [*Continued Fractions of Tails of Hypergeometric Series*](https://carmamaths.org/resources/jon/cftail.pdf),
+Theorem1 and pp1--2, restates the Gregory-tail Euler expansion and explains
+digit agreement at decimal-power truncations. These are contextual analogues,
+not imported proof inputs. Bounded public Lean searches found no exact candidate;
+no absence, originality or external proof audit is claimed.
+
+Frozen report `/tmp/pi-m4-modular-shadow-20261128-0609/report-v1.md`, SHA-256
+`99e7056e00299d572eb4f91fdd62c30bb16e2b8c0acc7c683a47093222f54a89`,
+was independently reviewed with no D/I/Q items. The parent reran check-v1.py,
+hash `270009360e8b52664fc0d40a3d234f56a9636fa52aaafb81940499741793f44a`:
+exit0,32 remainder identities,32 moment/coefficient checks and797 parameter
+bounds. These are finite symbolic diagnostics, not actual-state or digit
+observations and not a proof of the universal result. Full review evidence is
+in the [continuation record](agy-reports/m4-continuation-review.md).
+
 <a id="normal-prime-power-columns-do-not-supply-a-sum-estimate"></a>
 
 ## Normal prime-power columns require a joint estimate

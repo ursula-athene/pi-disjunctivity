@@ -61,6 +61,16 @@ is also kernel checked and independently reviewed, retaining the exact future
 recurrence and both vanishing-error directions; publication evidence is in the log.
 Neither component supplies a visitation premise or formalizes the full
 fixed-column normality argument.
+The [dyadic modular comparison](m4-fourier-windows.md#dyadic-anchors-give-later-modular-shadow-blocks)
+is independently reviewed at paper level. Exact integer cancellation gives
+separated comparison blocks at N=2^s, extending to shifts of order s^2/log(s),
+with an explicit error tending to zero. The remaining consumer requires actual
+frozen-prefix target hits inside those blocks. The separately reviewed
+[nearby-anchor extension](m4-fourier-windows.md#compatible-fine-grids-at-nearby-dyadic-anchors)
+gives arbitrarily large dyadic anchors with both fine complete grids and the
+shadow blocks. Complete-period covering still does not locate a hit within
+the blocks. Both new bridges are paper results; no Lean or visitation
+conclusion is claimed for them at this checkpoint.
 The log owns bounds and outcomes;
 this entry is not a second live status ledger.
 

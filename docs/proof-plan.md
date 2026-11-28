@@ -1225,6 +1225,24 @@ kernel checks and independent review are complete. This component asserts
 no visitation premise, normality or early-hit estimate.
 The research log owns its bounds and outcomes. V/M4 remains open.
 
+### Modular comparison at dyadic anchors — 2026-11-28
+
+The [dyadic shadow argument](m4-fourier-windows.md#dyadic-anchors-give-later-modular-shadow-blocks)
+supplies a reviewed paper estimate for the actual tail. For N=2^s, selected
+shifts j=h(s+3)+v remove an integral asymptotic truncation and leave a signed
+error below2^(-s/4). The separated blocks reach order s^2/log(s); they are
+not a continuous window. The exact consumer requires a frozen-prefix hit
+in(a+e_s,b) at one of those shifts, with e_s tending to zero. Such hits for
+all targets and arbitrarily large anchors are still missing. No new Lean
+theorem or V premise has been proved. A separately reviewed
+[compatible-anchor extension](m4-fourier-windows.md#compatible-fine-grids-at-nearby-dyadic-anchors)
+preserves the unique high17 pole after the terminal index and uses the existing
+cover at depth d+1. It supplies arbitrarily large actual dyadic anchors with
+depth-d complete grids and the same shadow blocks. The remaining question is
+target placement within those blocks, retaining the full initialized prefix
+and N+j+1 recurrence offset. The new denominator bridge is a concrete Lean
+formalization target; the log owns that cycle and the independent research.
+
 ## 6. Assemble the proof of the original conjecture
 
 Once Step 5 succeeds, use Step 4 to obtain visits of the actual pi orbit.

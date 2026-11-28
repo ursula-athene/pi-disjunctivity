@@ -6228,3 +6228,87 @@ publication facts. At06:05 reassessment, before the planned06:06 checkpoint,
 retain final affected checks and publication. The mathematical owner is unchanged
 after review; only factual completion status follows. The weaker-correlation
 inquiry retained its separate06:10 bound; no result from it is adopted here.
+
+## 2026-11-28 — Actual modular comparison at dyadic anchors
+
+The actual-column dependence commit is
+`61837e1db23bf9911e365fed338354ee927e7882`, parent4fa0f76. Commit838055,
+post-commit b123e6, push721d44/32266c and remote414ff3 verified publication
+at06:07:43 UTC. All three owned blobs matched, the index was empty, and
+141 protected plus11 unrelated identities were preserved. Final documentation
+7f2db2, working/staged whitespace fbaaa2/21280f and scope666b66 passed.
+No PR or repair. Receipt:
+`/tmp/pi-m4-column-resonance-integration-20261128T0600Z/publication.json`.
+Remote431fcd, checked before the06:21:32 clock, still matched; there were
+no unpublished commits.
+
+The weaker-correlation inquiry completed06:05:26, before its06:10 endpoint.
+Report `/tmp/pi-m4-resonance-remainder-20261128-0600/report.md`, hash
+`10a7fadf1d84c0ed9d06ef03139198546a9b8e610eb7ce78f250fec51edb816d`,
+was read bcc776 and hash-checked87dce5. It found no new positive input:
+the proposed square-summability estimate still loses integer parts modulo
+the cofactors. This records its completed discovery outcome only; its
+unreviewed mathematical formulation is not adopted.
+
+A new modular-comparison cycle began near06:09, with06:16 midpoint and06:23
+endpoint. Parent redirected the question before06:14:36 to exact dyadic
+coefficient cancellation in the actual tail. The worker froze06:19:09 in
+`/tmp/pi-m4-modular-shadow-20261128-0609/`. Report hash
+`99e7056e00299d572eb4f91fdd62c30bb16e2b8c0acc7c683a47093222f54a89`;
+manifest `797f536951fdb04d9e71a9854c9c2a868ce1a44d8f5d615b2034d6e5901c8902`.
+All four entries matched in7b424d. Parent checker0d6868 passed32 symbolic
+remainder identities,32 moment/coefficient checks and797 parameter bounds;
+no actual phase, prefix, denominator, digit or orbit census was performed.
+
+The [owner](m4-fourier-windows.md#dyadic-anchors-give-later-modular-shadow-blocks)
+records the new actual-tail estimate and exact remaining target-placement
+premise. Separate argument review completed06:23:41 with no D/I/Q items.
+Early primary-source inspection found related Gregory-tail radix cancellation;
+root's subsequent bounded public Lean queries found no exact candidate.
+Source formulas are contextual, not imported into the proof, and originality
+remains undetermined. The new result is paper mathematics, not kernel checked.
+
+Production integration began06:22:46, with06:31 reassessment and06:40 endpoint,
+in `/tmp/pi-m4-dyadic-shadow-integration-20261128T0622Z/`. Six owned,
+138 protected and11 unrelated identities were recorded before edits. Exact-diff
+review and affected checks gate publication. A separate follow-up started
+near06:21, with06:31 midpoint and06:39 endpoint, testing whether the actual
+grid construction extends to nearby dyadic anchors. Its candidate remains
+unadopted pending a frozen report and separate review. No target placement
+or V/M4 acceptance has been obtained; authorized research continues.
+
+At06:31:30 reassessment524eaf, all138 protected and11 unrelated identities
+still matched. Documentation42bd0d and whitespace7d0109 had passed. The
+compatible-anchor worker had completed06:28:32, before its midpoint, and
+separate criticism was underway. Its report
+`/tmp/pi-m4-dyadic-grid-compatibility-20261128-0622/report-v1.md`, hash
+`57134a94c5a024ba5d6608fd534980f43e0077d19e8d0da643931c466d334ef6`,
+was read7dbdd3; all three manifest entries matched abe9a1. Parent e79413
+reran its synthetic cutoff/odd-part checker successfully. Separate review
+completed06:31:45 with no D/I/Q items. The accepted extension moves the
+anchor forward while preserving the unique high17 pole, then consumes the
+existing sieve at depth d+1. This establishes common anchors; it supplies
+no selected-time hit. Both reviewed paper results belong in the same owner
+and six-path integration; the06:40 publication checkpoint is retained.
+
+A fresh target-placement inquiry began near06:30, with06:40 midpoint and06:49
+endpoint. It tests whether freedom among the compatible anchors supplies a
+new actual-numerator estimate, rejecting complete-period and generic-numerator
+shortcuts already known to fail. After paper review completed, a separate
+Lean cycle began near06:32, with06:44 midpoint and06:55 endpoint, to formalize
+the nearby-anchor valuation, generic-grid application and unbounded dyadic
+family. It owns scratch files only; production Lean adoption awaits explicit
+immutable completion, root-interface checks and separate review. Neither cycle
+changes the open selected-time intersection or V/M4 status at this checkpoint.
+
+At06:40:02 reassessment8816a6, the full production review return had not yet
+arrived, so its completion checkpoint was explicitly extended to06:46 rather
+than bypassing review. The subsequently received return records recoverable
+inspection clocks06:37:59–06:39:38; it had completed before the original bound.
+All17 frozen entries, six live postimages,138 protected and11 unrelated
+identities matched independently. No D/I/Q items were raised. The initial
+broad read was truncated and the reviewer restored full guide/diff coverage
+with narrow reads; no unavailable earlier clock is claimed. The mathematical
+owner is unchanged after review. Only factual review-completion records and
+final affected checks remain before publication; scratch Lean and actual
+target-placement work continue under their separate bounds.

@@ -5251,3 +5251,92 @@ The reviewer performed only read-only file/hash inspection, not the caller's
 execution checks, Git or remote verification. Both review stages had no defects,
 improvements or open questions. Only factual review completion follows this
 frozen diff; final affected checks gate publication.
+
+## Actual dyadic modular shadow blocks — 2026-11-28 UTC
+
+The sketch proves exact near-integrality of16^j*E_(2^s) for the stated
+separated blocks j=h(s+3)+v, with negative error below2^(-s/4). Its consumer
+retains the actual inclusive prefix, original initialization, one-sided
+interior margin and N+j+1 recurrence index. Selected-time target hits remain
+unproved. The paper proof supplies no Lean, normality, originality or V claim.
+
+Separate reviewer `/root/affine_independent_review` inspected06:21:01–06:23:41
+UTC, before its06:26/06:30 bounds. It applied the argument-critic skill,
+replacement procedure and both complete guides at hashes
+`798c3cc974c5296453f510ea9264aa8b5d17c813c8dc217a430de9b68b7d667c`
+and `c4a04d75a297c6ec361d31ab11e465e3c3e74a6c89eb590bddb03d95c243ad3b`.
+The independent reconstruction covered the positive measure, all-order strict
+moment/remainder bound, exact integer clearing, sign, parameter bounds,
+nonvacuity, block geometry, conditional consumer and original anchor mismatch.
+The review has no defects, nonblocking improvements or blocking questions;
+there are no D/I/Q recommendations awaiting disposition. The first open
+implication toward V is exactly the displayed selected-time hit premise.
+
+Report `/tmp/pi-m4-modular-shadow-20261128-0609/report-v1.md`, hash
+`99e7056e00299d572eb4f91fdd62c30bb16e2b8c0acc7c683a47093222f54a89`;
+four-entry manifest
+`797f536951fdb04d9e71a9854c9c2a868ce1a44d8f5d615b2034d6e5901c8902`.
+The reviewer independently matched every entry and read the entire checker
+and saved output without executing them. Parent checker0d6868 passed the
+32/32/797 symbolic diagnostics; these finite checks are not the universal
+proof. Contextual Gregory-tail references were not source-proof audited or
+imported. Full returned review:
+`/tmp/pi-m4-dyadic-shadow-integration-20261128T0622Z/sketch-review-full.md`,
+hash `b3d5054c45cd24d56bc011407fe3e14f5c96092a56cb94dfa77e07e5739175ff`.
+No reviewer writes, Git, network, builds, probes, checker execution, installs,
+delegation or actual-state census occurred.
+
+Production scope is the mathematical owner, compact plan/blueprint/handoff
+contracts, factual research log and this record, baseline61837e1. All Lean,
+pins and previous proofs remain protected. The six-path packet is
+`/tmp/pi-m4-dyadic-shadow-integration-20261128T0622Z/`; separate integration
+review and affected checks remain pending. The compatible-grid extension below
+has now completed its own paper criticism and joins the same integration scope.
+
+### Compatible actual dyadic grids
+
+The same reviewer inspected the separate frozen compatibility packet
+06:29:08–06:31:45 UTC, before its06:34/06:38 bounds. Both full guides, skill,
+procedure and actual generic Lean theorem bodies/types were read again.
+No defects, nonblocking improvements or blocking questions were found; all
+D/I/Q categories are empty. The review reconstructs the unique high17 pole,
+noncancellation, nearby dyadic existence, enlarged existing cover, actual
+reduced numerator and complete-period contract. It also checks the exact
+odd-part formula and explicitly retains the selected-time intersection gap.
+This paper review is not a Lean or production-diff check.
+
+Packet `/tmp/pi-m4-dyadic-grid-compatibility-20261128-0622/`, report
+`57134a94c5a024ba5d6608fd534980f43e0077d19e8d0da643931c466d334ef6`,
+three-entry manifest
+`fc59185fac0dc8315eb38d95c0b659cf329738f4409219bc5fea16d131fb2513`:
+all entries and the unchanged original shadow report matched independently.
+Parent e79413 passed130,816 abstract cutoff checks and288 synthetic rational
+identities; the reviewer read but did not execute the checker. Full returned
+review `compatibility-review-full.md` in the production packet, hash
+`4ebae497864aee9e3f6bc5302278bdc72d9a1b292278b15615f7bfc91ea1c53e`.
+No reviewer writes, Git, network, builds, probes, checker execution, installs,
+delegation or actual-state census occurred. Both paper review stages completed
+without requested repairs or recommendations. Separate exact-diff review and
+affected final checks still gate production publication.
+
+### Production integration outcome
+
+Separate exact-diff review by `/root/affine_independent_review` completed with
+no D/I/Q items. Recoverable clocks are06:37:59–06:39:38 UTC; a truncated
+broad read was replaced with narrow reads before completion. Both full guides
+were reread at their recorded hashes. The full returned review is
+`integration-review-full.md` in the production packet, hash
+`c790e84febd26c0bcc77d593ade701d6cf1246beeb1a221451aeb154cf9f5adc`.
+Frozen diff `d62149eae8c2c7b39813cb6d9c56ab8410e54b693b4c3bd604c6569654726bc6`;
+17-entry manifest
+`744e61e44349d2e30a4578d0e7c3712fb1607b321132de58b652fe6d65b2a538`.
+The reviewer independently matched all entries, six live postimages,
+138 protected and11 unrelated identities, both full paper-review captures,
+publication facts and the unadopted inquiry's factual outcome. It reconstructed
+every diff hunk against its before/after files using read-only inspection.
+Caller documentation287a0c, whitespace3b803e/640d7b and exact-stage/preservation
+9eb9c9 passed. Git/remote and executable checks were not independently run by
+the reviewer. No writes, network, build, probe, checker execution, install,
+delegation or census occurred. All three review stages are complete without
+requested repairs; post-review edits record factual outcomes only. Final
+affected checks gate publication.
