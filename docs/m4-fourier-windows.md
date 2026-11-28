@@ -888,3 +888,85 @@ external theorem from it is used in the elementary denominator argument.
 The [review record](agy-reports/m4-continuation-review.md) owns the exact proof,
 comparison, structural replay and review evidence. None supplies actual odd-carry
 infinitude or V; M4 remains open.
+
+
+### A small-grid occupancy proof does not transfer to the growing columns
+
+The [Strong Hot Spot Theorem](https://www.davidhbailey.com/dhbpapers/dhb-mm-hotspot.pdf)
+of Bailey–Misiurewicz gives a different mechanism from complete-period coverage.
+Its Stoneham application uses unscaled approximants on a Q-point grid with
+Q<=N through time N, point multiplicity at most3, and error less than1/(2n).
+The source's Theorem1.1 uses a single constant for every interval and a limsup
+over all prefix lengths; Theorem3.5 has its stated liminf/limsup order. Neither
+permits replacement by an arbitrary good subsequence. The arithmetic pattern
+cited by its application is a source input, not a freshly audited proof chain.
+
+Here is a finite consumer. Let b>=2 be an integer, alpha real,
+x_n=fract(b^n*alpha), and let w have
+positive length ell, with canonical half-open cell I_w. Fix integers
+0<=n0<N, r>=1, k=r*ell and Q>=1. Suppose for n0<=n<N that z_n belongs to
+G_Q={a/Q:0<=a<Q}, its circular distance from x_n is at most epsilon>=0,
+and no grid point is used more than mu>=1 times. Put L=(b^ell-1)^r. Then
+
+```text
+(no x_j in I_w for n0<=j<N+k)
+    implies N-n0 <= mu*L*[Q*(b^(-k)+2*epsilon)+2].
+```
+
+Each x_n has r aligned blocks different from w, giving L half-open k-digit
+cylinders. Their closed epsilon-enlargements contain at most
+Q*(b^(-k)+2*epsilon)+2 grid points each, including wrap and endpoint cases.
+Summing and applying multiplicity proves the bound. Its strict reversal
+certifies a word start in [n0,N+k); it uses one fixed orbit throughout.
+
+For the source's binary Stoneham number, choose rho=1-2^(-ell), r with
+rho^r<=1/12, k=r*ell, epsilon=1/(4*2^k), n0=max(B,2*2^k), and
+N>=max(12*2^k,4*n0). Its Q<=N and mu=3 give the strict certificate, since
+[n0+mu*L*(Q*(2^(-k)+2*epsilon)+2)]/N<=1/4+6*rho^r<=3/4.
+Thus this mechanism locates a word beyond any threshold B in the solved
+neighbor. No such conclusion is inferred for pi.
+
+For M>=6 and our actual unscaled z_n=fract(S_(M,n)), 0<=n<N, one can take
+K=floor(log_17(8N-2)), Q=D_M*17^K. All retained denominators divide Q, and
+17^(K+1)>8N-2>=6N gives Q/N>=(6/17)*D_M. Scaling by D_M does not remove
+this factor from the unscaled grid; the integer branch must still be retained.
+The discrepancy between small and large grids is not merely over-clearing:
+for M=8L+6, forcing and initialized raw states agree with actual A and S
+through index L. Any origin-based common grid must have denominator divisible
+by q_L, whose logarithm is6L+o(L). More generally the least common denominator
+of a finite zero-initialized recurrence's states equals that of its forcing,
+since each family is an integer linear combination of the other. Fractional
+parts preserve reduced denominators. Approximate coarse grids are not excluded.
+
+Put a=log15/log16. Every aligned avoidance cover includes all15^k words
+omitting one digit occurring in w. Even granting mu=1, epsilon=0 and n0=0,
+the displayed counting bound is at least
+
+```text
+Q*(15/16)^k+2*15^k >= Q^a.
+```
+
+Split into16^k<=Q and16^k>=Q to prove this. Hence THIS certificate requires
+N>Q^a, and therefore N>((6/17)*D_M)^(log15/log(16/15)). Using the existing
+PNT-dependent log D_M=3M/4+o(M), the logarithm of its required sample count
+is at least[3*log15/(4*log(16/15))]*M+o(M), approximately31.4702M.
+This is a cost of the stated upper-bound method, not an actual first-hit bound.
+
+The same problem remains with exact grid counting in the known sufficient
+window W_M=M/8+O(log M). Define A_k as the union of length-k half-open
+cylinders whose finite words avoid w at every start wholly contained in that
+prefix, or the larger aligned cover. It contains15^k disjoint cylinders, so
+#(G_Q intersect A_k)>=15^k*floor(Q/16^k). Uniformly for1<=N,k<=W_M,
+D_M/16^W_M tends to infinity and
+
+```text
+#(G_Q intersect A_k)/N >=(3/17)*D_M*(15/16)^W_M -> infinity.
+```
+
+Thus counting the entire unscaled grid with a multiplicity bound cannot
+certify a visit in this window, even with zero error. This does not count
+actual occupancy or exclude other/later approximation windows. A useful
+replacement must control which grid subset the actual initialized sequence
+occupies. The [review record](agy-reports/m4-continuation-review.md#finite-occupancy-source-test--2026-11-28-utc)
+retains source contracts, exact checks and limits. No Lean declaration,
+originality claim or V/M4 conclusion follows.

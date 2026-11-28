@@ -1169,9 +1169,13 @@ scale, and the
 retains the original pi phase as its selected fiber. These are paper
 discriminators with stated source dependencies, not new visitation declarations.
 Further work must obtain information about the actual early segment or change
-the transfer mechanism. A bounded comparison with explicit normality proofs
-tests whether their interval-occupancy estimates have an applicable analogue;
-no such estimate for the actual sequence is assumed.
+the transfer mechanism. The [finite occupancy test](m4-fourier-windows.md#a-small-grid-occupancy-proof-does-not-transfer-to-the-growing-columns)
+is a valid word-location implication, but its literal full-grid counting bound
+requires exponentially many samples for the growing columns. It does not bound
+actual first-hit times. A replacement needs information about the selected
+unscaled subset; no such estimate is assumed. The next source investigation
+asks whether the actual rational-in-index coefficient recurrence supplies a
+mechanism beyond these grid and multiplicity arguments.
 
 ## 6. Assemble the proof of the original conjecture
 

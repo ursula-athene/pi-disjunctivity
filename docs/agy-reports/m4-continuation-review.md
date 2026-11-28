@@ -4521,3 +4521,59 @@ permission or unrelated file changed. Both full guides and all read-only review
 constraints were applied. This accepts the documented research findings only,
 not V/M4. Final scope and publication receipts are retained outside the original
 immutable manifest.
+
+
+## Finite occupancy source test — 2026-11-28 UTC
+
+This paper/source comparison follows the three post-grid discriminators. It
+proves a finite word-location implication and evaluates a specific grid-count
+certificate, without bounding actual first-hit times or adding Lean results.
+`/root/fresh_visitation_consumer_critique` reviewed the immutable scratch packet
+from01:05:59 to01:10:42 UTC, within its12-minute bound, with intermediate
+reassessment. Both full adversarial guides, AGENTS and replacement constraints
+were applied; their hashes are unchanged from the preceding review.
+
+No defect was found. I1 explicitly defined A_k as a union of finite-prefix
+half-open cylinders, with occurrences wholly contained in that prefix; it is
+not an infinite survivor set. The exact sole repair was independently verified.
+No additional question blocks this paper assessment. The actual selected-subset
+occupancy estimate remains open. The reviewer reconstructed the finite lemma,
+endpoint/wrap cases, Stoneham parameters, unscaled grid and forcing/state lcm,
+method-cost algebra and exact capacity bound. It visually inspected source
+pages2,6,7,8 and retained their limit quantifiers. PNT and prior arithmetic
+source proofs were identified inputs, not freshly audited proof chains.
+
+Packet: `/tmp/pi-m4-stoneham-location-20261128T004944Z/`. Original report:
+`eb4b95bcaf95fd8078c3a01c3e6a916c48933569b86ee05947839423acb03781`;
+38-entry manifest `703c2d6320fcc7a549c9b14a00b2ee4767cf5ba31e4e76c6e28695268402e953`.
+Accepted report-v2: `f0dc5e90863307edea610ead341b5dab093563c98c1110490c3d7fa0690c3692`;
+exact I1 diff: `8d3c8930035049710b6c5bd50cdc272624d0d8bef2199cb7aedc8812de6d4eb6`.
+Full review `paper-review-full.txt` is in
+`/tmp/pi-m4-hotspot-integration-20261128T0112Z/`, hash
+`1750f316ccfe59fb257404ea8ec184edeeb3845bd8b630d4144700772e9bfffa`.
+Parent756fc2 and the reviewer independently matched all38 original entries.
+Parent inspected the generic checker and replayede2cb41:35,050 assertions
+passed, exit0, with no actual BBP data. These checks are diagnostics, not
+proofs. The reviewer executed no tests, probes, builds, Git/network operations,
+writes or delegation. No originality or external Lean declaration is claimed.
+Exact changed-file integration is complete as recorded below; final checks
+gate publication. V/M4 remains open.
+
+
+The separate five-path integration review ran01:15:39–01:17:58 UTC, with
+intermediate reassessment. No defect or new improvement was found; I1 remains
+implemented. The reviewer verified every changed hunk, all14 frozen integration
+entries, the exact baseline/proposed correspondence and27+11 preservation
+identities. Its Q1 requires the caller's affected documentation and working/
+staged whitespace checks after outcome edits, before publication. The initial
+93-file documentation check7f9ef3,38 process testsa4f95b and whitespace6ac694
+passed. No Lean or process source changed. Paper/source limits remain unchanged.
+
+Baseline: `210de58f5a1e407dc2329652e251f4de706f3888`. Exact five-path diff:
+`e0f9c828051c0adf4e1883a02ea7a8f197ba8e224c7643dc67ec452f56678edc`;
+manifest: `7520df467312c536d94532356f5e41448d75763a1c78c6238f284175bb4b1113`.
+Full integration return hash: `f12c9ec8d43f88f3f160f1504ff20ec168dbceb1639b49af4368268836b4042b`.
+The same integration directory retains scope, baseline/proposed snapshots,
+validation and later final publication receipts outside the frozen manifest.
+Both complete guides and the replacement procedure were applied. This accepts
+research documentation, not V/M4.

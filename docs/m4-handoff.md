@@ -1829,7 +1829,11 @@ Neither calculation supplies an actual visit or a new Lean result. Their
 retains the precise source limits and clarification history.
 
 Continue with a mechanism controlling the actual initial orbit segment. The
-current source comparison tests bounded interval occupancy in known explicit
-normality constructions; separate normality of fixed truncations still cannot
-be transferred to the growing approximation. The log owns this cycle's bound
+[finite occupancy comparison](m4-fourier-windows.md#a-small-grid-occupancy-proof-does-not-transfer-to-the-growing-columns)
+now isolates the small unscaled grid in the known Stoneham proof and the
+exponential cost of the literal growing-column counting certificate. It gives
+no actual first-hit lower bound; a sharper method must control the selected
+unscaled subset. Separate normality of fixed truncations still does not transfer.
+The current source investigation examines the actual rational coefficient
+recurrence; no new applicable mechanism is claimed. The log owns its bound
 and outcome. V/M4 remains open under the unchanged contract.

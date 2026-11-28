@@ -5588,3 +5588,35 @@ record. The initial validation receipts remain valid for unchanged process and
 Lean sources; final affected documentation and working/staged whitespace checks
 now gate publication. The checkpoint records three limited paper findings;
 actual early visitation and V/M4 remain open.
+
+
+Publication receipt, 2026-11-28 01:11:39 UTC: pushcfd8d7 and remote check33286b
+confirm `210de58f5a1e407dc2329652e251f4de706f3888` on the existing M4 branch.
+Final documentation7d73de, working/staged whitespace5fd565/dcece5 and exact
+stagingbb1a0b passed. Post-commit253a59 matched the seven committed paths/blobs,
+parent, empty index,27 protected and11 unrelated identities; no repair was
+needed. No Lean source or PR changed. Next active cadence check is due by
+01:26:39 UTC or an earlier ready result/direction event. V/M4 remains open.
+
+The 00:49:44–01:09:44 normality-source investigation froze01:03:39 and
+verified01:03:52. It isolated Stoneham's small unscaled grid and bounded
+multiplicity, proved a finite word-location implication, and quantified why
+this literal counting bound does not transfer within the growing-column
+approximation window. Independent paper review ran01:05:59–01:10:42 and
+found no defect; its finite-prefix-cylinder clarification was applied and
+verified. These are bounds on the method, not actual first-hit lower bounds.
+The five-path documentation integration has a01:27 UTC reassessment endpoint.
+
+A changed discovery question began01:07:03, with midpoint01:17:03 and
+deadline01:27:03: inspect digit results that use differential/recurrence
+structure of G-functions or rational-in-index forcing. Existing non-D-finite
+carry arguments, repetition bounds and local recurrence failures were screened
+out before new source work. No new positive mechanism is yet claimed.
+
+
+The finite-occupancy five-path integration review completed01:17:58 UTC,
+with no defect or new improvement and the prior cylinder clarification intact.
+Documentation7f9ef3,38 process testsa4f95b and whitespace6ac694 passed before
+the factual outcome additions. Final affected checks follow before publication.
+No Lean or actual-visitation claim was added; the recurrence-source discovery
+continues independently under its01:27:03 bound.
