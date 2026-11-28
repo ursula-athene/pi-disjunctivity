@@ -970,3 +970,130 @@ replacement must control which grid subset the actual initialized sequence
 occupies. The [review record](agy-reports/m4-continuation-review.md#finite-occupancy-source-test--2026-11-28-utc)
 retains source contracts, exact checks and limits. No Lean declaration,
 originality claim or V/M4 conclusion follows.
+
+
+### Exact rescaling equations require growing polynomial degree
+
+The finite columns have a functional structure different from the actual
+coefficient series. Fix M>=6. For r in {1,4,5,6}, with c_r=4,-2,-1,-1, set
+
+```text
+F_(r,M)(z)=sum_(0<m<=M,17∤m,m=r mod8) (c_r/m)
+              *sum_(k>=0)17^(-k)*z^((m*17^k-r)/8),
+R_(r,M)(z)=sum_(0<m<=M,17∤m,m=r mod8) (c_r/m)*z^((m-r)/8),
+H_M=sum_r F_(r,M).
+```
+
+All exponents are nonnegative integers, and
+
+```text
+F_(r,M)(z)=R_(r,M)(z)+(z^(2r)/17)*F_(r,M)(z^17).
+```
+
+This retains the signs and k=0 insertions. T_M=H_M(1/16), while the
+zero-initialized raw-state series is formally H_M(z)/(1-16z); that formal
+identity does not evaluate the raw-state series at its pole. Adjoining the
+constant1 gives a five-component system with determinant z^32/17^4. Its
+invertible matrix shows that H_M(z^(17^j)), j=0,...,5, lie in one
+Q(z)-span of dimension at most five. Hence each H_M has a nonzero polynomial-coefficient
+base17 Mahler relation of scalar order at most5. A leading-zero relation can
+be separated by exponent residues to obtain the usual nonzero first coefficient.
+This structure alone is not a normality theorem.
+
+For fixed M the forcing B_M has O_M(log X) possible nonzero positions through
+X and infinitely many nonzeros from the m=1 tower. Its arbitrarily long zero
+runs rule out any eventual nonzero polynomial-coefficient recurrence: beyond
+the last root of its leading coefficient, a sufficiently long zero run would
+propagate forever. Thus H_M is not D-finite. This is a recurrence argument,
+not a natural-boundary or digit-language argument.
+
+For the actual H(z)=sum_(n>=0) A(n)z^n, put theta=z*d/dz and
+D(n)=(8n+1)(8n+4)(8n+5)(8n+6). Direct expansion gives
+
+```text
+D(theta)H=(376+1416z+128z^2)/(1-z)^3.
+```
+
+It follows that H is D-finite. It is nonrational: an eventual constant-
+coefficient recurrence would make sum_j c_j A(x+j) identically zero, whereas
+each nonzero c_j contributes its unique pole at x=-j-1/8. The
+[Bell–Coons–Rowland statement of Bézivin's theorem](https://cs.uwaterloo.ca/journals/JIS/VOL16/Bell/bell2.pdf),
+definition(2) and Theorem1, then excludes H being k-Mahler for any integer
+k>=2. This all-base conclusion retains that external paper input; its full
+proof chain was not audited. It says nothing about another representation
+of pi as a Mahler value.
+
+For base17 an elementary proof removes that source dependency and supplies a
+finite bound. Let P_j(z)=sum_(e=0)^h p_(j,e)z^e, j=0,...,d, with complex
+coefficients not all zero and integers d,h>=0. Put R=17^d and s=(d+1)(h+1).
+Choose the smallest active j0 and an e with p_(j0,e) nonzero; take rho=e modR.
+On n congruent to rho modulo R, the coefficient of the proposed relation for
+H, at every integer n>h, is the rational function
+
+```text
+G_rho(n)=sum_(j,e':e'=rho mod17^j) p_(j,e')*A((n-e')/17^j).
+```
+
+The selected term has a pole at n*=e-17^j0/8, with nonzero residue
+p_(j0,e)*17^j0/2. Since17=1 mod8, the four pole types have different
+fractional parts. A higher-level term could share this pole only at
+e_j=e+(17^j-17^j0)/8. But e_j is not congruent to e modulo17^j, so it is
+absent from G_rho. Smaller levels are inactive, and at j0 only the chosen
+exponent shares the pole. Thus G_rho is nonzero, excluding every nonzero
+base17 relation for H, including ones with initial zero polynomials.
+
+Now suppose the same polynomials give a relation for H_M. Its coefficients
+agree with H through L=floor((M-6)/8). A common-denominator numerator of
+G_rho has degree at most4s-2, since A has numerator degree2 and denominator
+degree4 and at most s summands are present. If L>=h+R(4s+1), the selected residue class
+supplies4s+1 distinct zeros in h<n<=L, away from all poles because the A
+arguments are positive integers. This contradicts nonzero G_rho. Therefore
+
+```text
+L < h+17^d*(4(d+1)(h+1)+1),
+h > [L-17^d*(4d+5)]/[1+4*17^d*(d+1)].
+```
+
+At fixed scalar order the relation degree must grow at least linearly with
+M. This bound is elementary and independent of PNT and Bézivin. It is NOT
+a word-location or timing bound, and it does not exclude effective estimates
+whose constants depend on the growing degree. Avoidance has not supplied a
+functional equation for the actual digit path. The
+[review record](agy-reports/m4-continuation-review.md#finite-column-functional-structure--2026-11-28-utc)
+retains the exact source, supplement and verification limits. These are paper
+results, with no Lean declaration or originality claim; V/M4 remains open.
+
+
+#### A prior differential zero estimate
+
+[Fischler, section3.1, Theorem5, pp.7–8](https://arxiv.org/pdf/1609.09770)
+gives a sharper asymptotic coefficient after an explicit system bridge. Put
+G_(r,j)(z)=sum_(n>=0)z^(17^j*n)/(8n+r), for r in {1,4,5,6} and0<=j<=d.
+Then
+
+```text
+G'_(r,j)=-(r*17^j)/(8z)*G_(r,j)+17^j/[8z*(1-z^(17^j))].
+```
+
+Adjoining1 yields a fixed rational differential system of dimension Q=4d+5.
+For the remainder R=sum_j P_j(z)H(z^(17^j)), all coordinate coefficients have
+degree at most h. The elementary pole proof gives R!=0. The singleton family
+of remainders at zero is therefore independent, and R is holomorphic there.
+The source permits zero to be a system singularity outside a chosen cut plane.
+Rational derivative rows supply an annihilator of order at most Q.
+
+The theorem yields C_d>=0, depending only on this fixed system and {0}, with
+
+```text
+ord_0 R <=(4d+5)*(h+1)+C_d,
+L+1 <=(4d+5)*(h+1)+C_d  for any relation for H_M.
+```
+
+The last step uses coefficient agreement through L, even when h>L. The
+constant is uniform in h, M and the coefficient tuple, but is not numerically
+specified in the inspected source. The coefficient of h is strictly smaller
+than in the explicit elementary bound for d>=1; both are5 at d=0. No
+finite-M improvement threshold or uniform estimate in d is established.
+This separately assessed prior theorem is a source input, not a new proof of
+its dependency chain. Neither estimate gives a digit visit or a timing bound;
+the explicit elementary estimate remains available without this input.

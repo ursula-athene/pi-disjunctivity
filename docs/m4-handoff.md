@@ -1834,6 +1834,9 @@ now isolates the small unscaled grid in the known Stoneham proof and the
 exponential cost of the literal growing-column counting certificate. It gives
 no actual first-hit lower bound; a sharper method must control the selected
 unscaled subset. Separate normality of fixed truncations still does not transfer.
-The current source investigation examines the actual rational coefficient
-recurrence; no new applicable mechanism is claimed. The log owns its bound
-and outcome. V/M4 remains open under the unchanged contract.
+The [functional-structure test](m4-fourier-windows.md#exact-rescaling-equations-require-growing-polynomial-degree)
+now gives an exact finite-column rescaling system and an elementary linear
+lower bound on relation degree at fixed order, using the actual coefficient's
+poles. It gives no visit-time bound. A fresh-context pass seeks a different
+actual-initialization mechanism; no positive conclusion is assumed. The log
+owns its bound and outcome. V/M4 remains open under the unchanged contract.

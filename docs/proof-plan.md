@@ -1173,9 +1173,12 @@ the transfer mechanism. The [finite occupancy test](m4-fourier-windows.md#a-smal
 is a valid word-location implication, but its literal full-grid counting bound
 requires exponentially many samples for the growing columns. It does not bound
 actual first-hit times. A replacement needs information about the selected
-unscaled subset; no such estimate is assumed. The next source investigation
-asks whether the actual rational-in-index coefficient recurrence supplies a
-mechanism beyond these grid and multiplicity arguments.
+unscaled subset; no such estimate is assumed. The [exact functional-structure test](m4-fourier-windows.md#exact-rescaling-equations-require-growing-polynomial-degree)
+retains scalar order at most5 for finite columns but proves that relation degree
+must grow at least linearly with the cutoff. The elementary base17 obstruction
+uses the actual rational coefficient's poles. It does not locate a word or
+exclude estimates with growing-complexity constants. Continue discovery of a
+mechanism selecting the actual early orbit, retaining this source distinction.
 
 ## 6. Assemble the proof of the original conjecture
 

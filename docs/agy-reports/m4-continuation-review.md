@@ -4577,3 +4577,106 @@ The same integration directory retains scope, baseline/proposed snapshots,
 validation and later final publication receipts outside the frozen manifest.
 Both complete guides and the replacement procedure were applied. This accepts
 research documentation, not V/M4.
+
+
+## Finite-column functional structure — 2026-11-28 UTC
+
+The exact finite-column Mahler systems and actual-germ obstruction are paper
+research, not visitation results or Lean declarations. Independent reviewer
+`/root/finite_log_independent_review` completed the original report and both
+supplements from01:25:53 to01:32:31 UTC, before01:40:53, with early reassessment.
+No defect or required improvement was found. The final supplement simplifies
+the residue choice to rho=e mod17^d; it changes no claim or original artifact.
+
+The reviewer reconstructed the cleared differential equation, unique-pole
+nonrationality argument, exact four-component system and scalar order at most5,
+zero-initialized interfaces, sparse-zero-run argument, and elementary pole
+isolation/quantitative bound. The bound covers complex coefficients, leading-
+zero polynomials, d=0 and h=0. L=floor((M-6)/8) is the last guaranteed
+matching coefficient, not the first omitted index. Matrix invertibility is
+over Q(z), not at z=0. No timing conclusion is inferred from growing degree.
+
+Q1 retains the missing effective digit/occupation estimate and the absence of
+an avoidance-to-functional-equation implication. Q2 retains the paper/source
+limits: Bézivin, as stated by Bell–Coons–Rowland, supplies the all-integer-bases
+claim, while the base17 nonrelation and quantitative degree bound are elementary.
+The reviewer inspected the primary definition/theorem page visually and the
+proof passage; the full external dependency chain was not audited. No claim
+about another representation of pi as a Mahler value or originality follows.
+
+Core packet: `/tmp/pi-m4-dfinite-mahler-20261128T010703Z/`. Report:
+`680433b9ec656539c38029851c8748ae4e5c64840a035511f8a8a734e2220df7`;
+25-entry manifest `c589d2af39bb7a42afe9191730f8081aad8a28c1edf4315422537982c1c22ad7`.
+Final `pole-isolation-addendum-v2.md`:
+`2755c4ee9e46d5088fa6f376d5c81e381ecbc3f0fdda5be5308239ed451f9c07`;
+final supplement manifest `31c8d7ab88857e7bd7e61f59466bc7bc0bcc76fd5f3af393a2bab0f7735276dd`.
+The earlier supplement and its manifest remain preserved. Parentb24ebd and
+the reviewer matched all25 original,one earlier andthree final supplement
+entries. Both initially encountered the older manifest's different key; their
+schema-aware checks passed. This was a metadata-reader issue, not a failed
+mathematical check. Parentfed177 replayed the inspected universal polynomial
+checker successfully; it evaluates no actual prefix, denominator or digits.
+
+The full `paper-review-full.txt` is in
+`/tmp/pi-m4-mahler-integration-20261128T0130Z/`, hash
+`2d6f6399f40bdccb85639c0e5cfcba51213fe7765e4679592dd9c3b265f759df`. Both complete adversarial
+guides, current AGENTS and replacement constraints were applied. The reviewer
+ran no checker, probe, build, extraction, Git, network or actual-sequence
+computation. The original report, final supplement and caller replay have
+distinct evidence roles. Changed-file integration and final publication checks
+remain pending until recorded below. V/M4 remains open.
+
+
+### Prior zero-estimate source follow-up
+
+The same independent reviewer assessed the separate source packet from01:35:13
+to01:38:38 UTC, before01:43:13, with early reassessment. No defect remained.
+Source I1 clarified strict coefficient improvement for d>=1 and equality at
+d=0; the exact sole repair was verified. Source Q1 retains the unspecified
+constant C_d, absent finite-M numerical comparison and absent uniform control
+in d. Source Q2 retains actual visitation and the lack of an avoidance
+consequence. The source theorem's zero evaluation, holomorphic singleton
+remainder, independence, derivative-row annihilator and uniform constant
+hypotheses were all reconstructed, including coefficient agreement for h>L.
+
+Source packet: `/tmp/pi-m4-mahler-zero-source-20261128T013018Z/`, original
+report `ce8de541c5e2e21583e8959d84103f3bf2c8fd2bbcb2c7f812a095c363f7e298`;
+16-entry manifest `45890341411272f3f5a85b2d81024035c66af0038067771923c4b074fe62b425`.
+Accepted report-v2: `42e48368a4c0aaea9bc7113b43384525de6d2057b2fe72949733ec06d538d9e9`;
+I1 diff `7713a68b0160f0054b143331cde5c817fcb3bd941948056889a74a06ee15c2a0`.
+Full source-review return is retained in the integration packet, hash
+`f95039e7eab632747e27a089be3760659125ef527de0fb29ec117aec4c6c5b15`. Parent e43eb7 and reviewer
+checks matched the original16 entries; the core and supplements remain intact.
+Fischler's assumptions/Theorem5 and nearby Coons contracts were visually
+inspected; Zorin coverage was the retained extracted statement only. The
+nearby Mahler estimates require different hypotheses and are not applied.
+No full external proof audit, numerical constant, Lean proof or novelty claim
+is made. Both full guides and the read-only replacement procedure applied.
+
+### Final five-path functional-structure integration review
+
+The independent reviewer completed the full integration review from 01:42:26
+to 01:49:02 UTC, before 01:52:26. No defect remained. Integration I1 changed
+the asserted five-dimensional span to a span of dimension at most five; the
+reviewer verified the exact repair. Prior source I1 remains resolved, including
+the d=0 comparison. No further material improvement was recommended.
+
+Integration Q1 requires final affected documentation and working/staged
+whitespace checks after these outcome edits. The initial documentation check
+483ffd (93 files), process tests 59b944 (38 tests), and whitespace 5e0102 passed.
+No Lean or process source changed. Q2 retains the missing visitation consumer
+and unspecified source constant; Q3 retains the external source and unformalized
+paper-proof limits. Neither question is discharged by this documentation review.
+
+The packet is `/tmp/pi-m4-mahler-integration-20261128T0130Z/`, baseline
+`5bbd0989e5baf49fc3251bccd740992b5c0835eb`. Frozen five-path diff:
+`c08648b3ec11330358ac4e97ef4314747103a58c2e9d6cc6030c7bbe44dce2f0`;
+16-entry manifest `7bbb460a8340526aae33b6703cfcee045d4c2cfa36a079b691df75f1b534fba4`.
+The exact I1 diff is `877259f9a9a3f1ffde8ed138376691ee57a7341076503564db98bdba84d30cac`.
+Full `integration-review-full.txt` hash:
+`d65a55e3925b98c53da06e59af3cbcb902f816e0d2c61f07d9be47a60eeba972`.
+The reviewer verified all original integration, core/supplement and source
+entries, the five live postimages, and 27 protected/11 unrelated identities.
+Both complete adversarial guides and the read-only replacement constraints
+were applied. Final checks and publication receipts are retained outside the
+immutable manifest. This accepts research documentation only; V/M4 remain open.

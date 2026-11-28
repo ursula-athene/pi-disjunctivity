@@ -5620,3 +5620,69 @@ Documentation7f9ef3,38 process testsa4f95b and whitespace6ac694 passed before
 the factual outcome additions. Final affected checks follow before publication.
 No Lean or actual-visitation claim was added; the recurrence-source discovery
 continues independently under its01:27:03 bound.
+
+
+Publication receipt, 2026-11-28 01:20:31 UTC: push7c5bc1 and remote0e17dc
+confirm `5bbd0989e5baf49fc3251bccd740992b5c0835eb`. Final documentationf1dd56,
+working/staged whitespace14a90c/7b7dad and exact staging81bc06 passed. Commit
+5702b6 and post-commitc32bdc verified the five exact paths/blobs, parent, empty
+index and27 protected/11 unrelated identities; no repair was needed. The
+finite-occupancy checkpoint is published. No Lean or PR changed. Next active
+cadence check is due by01:35:31 UTC or an earlier ready event. V/M4 remains open.
+
+The recurrence-source cycle reassessed01:18:11, slightly after its midpoint.
+The selected opening is an exact base17 functional system for finite columns
+and the D-finite/Mahler source contract for the actual coefficient series.
+A quantitative finite-prefix refinement is being checked: bounded-order
+functional relations would require polynomial degree growing with the cutoff.
+This is exploratory paper work pending independent review; no actual word
+visit, normality transfer or new Lean result is claimed.
+
+
+The functional-structure packet froze01:23:06; a separate elementary pole
+supplement and simplification completed01:24:33, before01:27:03. Independent
+review completed01:32:31, before01:40:53, with no defect or required improvement.
+It confirms an elementary base17 nonrelation and finite-prefix degree bound,
+while the all-base result retains the cited external theorem. Neither gives
+a digit/occupation or timing estimate. The exact five-path integration has a
+01:50 UTC reassessment endpoint and remains unpublished pending its own review.
+
+Remote check7f4ba9 at01:32:27 still matched `5bbd098`; no reviewed unpublished
+commit was ready. Next active cadence check is due by01:47:27 or an earlier
+ready event. A separate five-minute source follow-up began01:30:18 and
+completed01:33:51. It found a potentially sharper differential-system zero
+estimate, with an unspecified additive constant; its source/bridge review is
+pending and no production bound is adopted yet.
+
+The meta-plan's fresh-context discovery pass began01:28:00, with midpoint
+01:38 and endpoint01:48. It receives the exact forcing, zero seed and archived
+failures, and excludes repeating the current rescaling/occupancy routes. Its
+purpose is a different mechanism or an exact new discriminator, not another
+conditional wrapper. V/M4 remains open throughout these internal checkpoints.
+
+
+The zero-estimate source bridge review completed01:38:38, before01:43:13.
+It accepted the Q=4d+5 rational-system application and retained the unspecified
+C_d. The sole d=0 coefficient-comparison clarification was applied and
+verified. The source bound now accompanies the independent elementary bound
+in the owner; both remain paper results without a digit or timing consequence.
+The combined five-path integration proceeds to its exact changed-file review.
+
+The integration review completed at 01:49:02 UTC with no defect and one
+verified precision repair: the rational-function span has dimension at most
+five. Full dispositions are in the review record. Final affected documentation
+and working/staged whitespace checks now gate publication. The 01:50 root
+checkpoint was reassessed at 01:52:52 after context restoration; the remaining
+work is final checks and publication, not further mathematical revision.
+Remote check ccd8bf still matched `5bbd098`; the 01:47:27 cadence checkpoint
+was late, and no reviewed unpublished commit was ready. Next active check is
+due by 02:07:52 UTC or an earlier ready result/direction event.
+
+The fresh-context discovery pass completed at 01:45:28, before its 01:48 bound.
+It found no surviving new mechanism and recommends no production theorem or
+Lean work. Its unadopted source-screen report is retained in
+`/tmp/pi-m4-nonlinear-decay-reset-20261128/`; the parent is checking its receipt.
+The earliest gap is still deterministic selection of the actual initialized
+orbit. Secondary generic curvature calculations are not promoted as new pi
+progress. The next inquiry will examine the actual finite-sum numerator rather
+than extend that metric argument. V/M4 remain open.
