@@ -1986,3 +1986,217 @@ example (w B : ℕ) : ∃ s : ℕ, B < s ∧
   exact ⟨s, hs, hw (fun _ => 15)⟩
 
 end DyadicGridAudit
+
+section TailAsymptoticsAudit
+
+open PiDisjunctivity PiDisjunctivity.BBPAsymptotics
+
+example : ∀ (n : ℕ),
+    bbpCoeff n = 6 / ((8 * (n : ℝ) + 1) * (8 * n + 4)) +
+      4 / ((8 * (n : ℝ) + 1) * (8 * n + 5)) +
+      5 / ((8 * (n : ℝ) + 1) * (8 * n + 6)) :=
+  @PiDisjunctivity.BBPAsymptotics.bbpCoeff_eq_posFractions
+
+example : ∀ (n : ℕ),
+    0 < bbpCoeff n :=
+  @PiDisjunctivity.BBPAsymptotics.bbpCoeff_pos
+
+example : ∀ (n : ℕ),
+    bbpCoeff n ≤ 15 / (8 * (n : ℝ) + 1) ^ 2 :=
+  @PiDisjunctivity.BBPAsymptotics.bbpCoeff_le_quadratic
+
+example : ∀ (n : ℕ),
+    0 < bbpTail n :=
+  @PiDisjunctivity.BBPAsymptotics.bbpTail_pos
+
+example : ∀ (n : ℕ),
+    bbpTail n ≤ 1 / (8 * (n : ℝ) + 9) ^ 2 :=
+  @PiDisjunctivity.BBPAsymptotics.bbpTail_le_quadratic
+
+example : ∀ (n : ℕ) (_hn : 0 < n),
+    bbpTail n ≤ 1 / (64 * (n : ℝ) ^ 2) :=
+  @PiDisjunctivity.BBPAsymptotics.bbpTail_le_mass_bound
+
+example : ∀ (n : ℕ),
+    bbpCoeff n =
+      2 * (∫ t in (1 : ℝ)..4, 1 / (8 * (n : ℝ) + t) ^ 2) +
+      (∫ t in (1 : ℝ)..5, 1 / (8 * (n : ℝ) + t) ^ 2) +
+      (∫ t in (1 : ℝ)..6, 1 / (8 * (n : ℝ) + t) ^ 2) :=
+  @PiDisjunctivity.BBPAsymptotics.bbpCoeff_eq_stieltjes
+
+example : ∀ (N : ℕ),
+    HasSum (stieltjesTerm (fun u => 1 / ((N : ℝ) + u) ^ 2)) (bbpTail N) :=
+  @PiDisjunctivity.BBPAsymptotics.hasSum_bbpTail_stieltjes
+
+example : ∀ (K : ℕ) (x : ℝ) (_hx : 0 ≤ x),
+    1 / (1 + x) ^ 2 -
+      ∑ k ∈ Finset.range K, (-1 : ℝ) ^ k * ((k : ℝ) + 1) * x ^ k =
+    (-1 : ℝ) ^ K * x ^ K * (((K : ℝ) + 1) + (K : ℝ) * x) / (1 + x) ^ 2 :=
+  @PiDisjunctivity.BBPAsymptotics.finite_inv_sq_remainder
+
+example : ∀ (k : ℕ),
+    numeratorMomentShift k 0 + ∑ i ∈ Finset.range k,
+      (Nat.choose k i : ℝ) * (denomMoment (k - i) : ℝ) * numeratorMomentShift i 0 =
+    (9 : ℝ) ^ k - (10 : ℝ) ^ k :=
+  @PiDisjunctivity.BBPAsymptotics.numeratorMoment_recurrence
+
+example : ∀ (k : ℕ),
+    ∃ z : ℤ, numeratorMomentShift k 0 = (z : ℝ) :=
+  @PiDisjunctivity.BBPAsymptotics.numeratorMoment_integer
+
+example : ∀ (k : ℕ),
+    HasSum (stieltjesTerm (fun u => u ^ k))
+      (-numeratorMomentShift (k + 1) 0 / (((k : ℝ) + 1) * (8 : ℝ) ^ (k + 2))) :=
+  @PiDisjunctivity.BBPAsymptotics.hasSum_moment
+
+example : ∀ (k : ℕ),
+    coefficient k = (-1 : ℝ) ^ (k + 1) * numeratorMomentShift (k + 1) 0 /
+      (8 : ℝ) ^ (k + 2) :=
+  @PiDisjunctivity.BBPAsymptotics.coefficient_eq_numeratorMoment
+
+example : ∀ (k : ℕ),
+    ∃ B : ℤ,
+    coefficient k = (B : ℝ) / (8 : ℝ) ^ (k + 2) :=
+  @PiDisjunctivity.BBPAsymptotics.coefficient_dyadic
+
+example : ∀ (k : ℕ),
+    0 < moment k :=
+  @PiDisjunctivity.BBPAsymptotics.moment_pos
+
+example : ∀ (k : ℕ),
+    moment k < (Nat.factorial k : ℝ) :=
+  @PiDisjunctivity.BBPAsymptotics.moment_lt_factorial
+
+example : ∀ (N K : ℕ) (_hN : 0 < N),
+    HasSum (stieltjesTerm (remainderKernel K N))
+      ((-1 : ℝ) ^ K * (bbpTail N - correction K N)) :=
+  @PiDisjunctivity.BBPAsymptotics.hasSum_remainder
+
+example : ∀ (N K : ℕ) (_hN : 0 < N),
+    0 < (-1 : ℝ) ^ K * (bbpTail N - correction K N) :=
+  @PiDisjunctivity.BBPAsymptotics.remainder_pos
+
+example : ∀ (N K : ℕ) (_hN : 0 < N),
+    (-1 : ℝ) ^ K * (bbpTail N - correction K N) <
+      (Nat.factorial (K + 1) : ℝ) / (N : ℝ) ^ (K + 2) :=
+  @PiDisjunctivity.BBPAsymptotics.remainder_lt_factorial
+
+/-- info: 'PiDisjunctivity.BBPAsymptotics.bbpCoeff_eq_posFractions' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms PiDisjunctivity.BBPAsymptotics.bbpCoeff_eq_posFractions
+
+/-- info: 'PiDisjunctivity.BBPAsymptotics.bbpCoeff_pos' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms PiDisjunctivity.BBPAsymptotics.bbpCoeff_pos
+
+/-- info: 'PiDisjunctivity.BBPAsymptotics.bbpCoeff_le_quadratic' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms PiDisjunctivity.BBPAsymptotics.bbpCoeff_le_quadratic
+
+/-- info: 'PiDisjunctivity.BBPAsymptotics.bbpTail_pos' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms PiDisjunctivity.BBPAsymptotics.bbpTail_pos
+
+/-- info: 'PiDisjunctivity.BBPAsymptotics.bbpTail_le_quadratic' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms PiDisjunctivity.BBPAsymptotics.bbpTail_le_quadratic
+
+/-- info: 'PiDisjunctivity.BBPAsymptotics.bbpTail_le_mass_bound' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms PiDisjunctivity.BBPAsymptotics.bbpTail_le_mass_bound
+
+/-- info: 'PiDisjunctivity.BBPAsymptotics.bbpCoeff_eq_stieltjes' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms PiDisjunctivity.BBPAsymptotics.bbpCoeff_eq_stieltjes
+
+/-- info: 'PiDisjunctivity.BBPAsymptotics.hasSum_bbpTail_stieltjes' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms PiDisjunctivity.BBPAsymptotics.hasSum_bbpTail_stieltjes
+
+/-- info: 'PiDisjunctivity.BBPAsymptotics.finite_inv_sq_remainder' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms PiDisjunctivity.BBPAsymptotics.finite_inv_sq_remainder
+
+/-- info: 'PiDisjunctivity.BBPAsymptotics.numeratorMoment_recurrence' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms PiDisjunctivity.BBPAsymptotics.numeratorMoment_recurrence
+
+/-- info: 'PiDisjunctivity.BBPAsymptotics.numeratorMoment_integer' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms PiDisjunctivity.BBPAsymptotics.numeratorMoment_integer
+
+/-- info: 'PiDisjunctivity.BBPAsymptotics.hasSum_moment' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms PiDisjunctivity.BBPAsymptotics.hasSum_moment
+
+/-- info: 'PiDisjunctivity.BBPAsymptotics.coefficient_eq_numeratorMoment' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms PiDisjunctivity.BBPAsymptotics.coefficient_eq_numeratorMoment
+
+/-- info: 'PiDisjunctivity.BBPAsymptotics.coefficient_dyadic' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms PiDisjunctivity.BBPAsymptotics.coefficient_dyadic
+
+/-- info: 'PiDisjunctivity.BBPAsymptotics.moment_pos' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms PiDisjunctivity.BBPAsymptotics.moment_pos
+
+/-- info: 'PiDisjunctivity.BBPAsymptotics.moment_lt_factorial' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms PiDisjunctivity.BBPAsymptotics.moment_lt_factorial
+
+/-- info: 'PiDisjunctivity.BBPAsymptotics.hasSum_remainder' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms PiDisjunctivity.BBPAsymptotics.hasSum_remainder
+
+/-- info: 'PiDisjunctivity.BBPAsymptotics.remainder_pos' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms PiDisjunctivity.BBPAsymptotics.remainder_pos
+
+/-- info: 'PiDisjunctivity.BBPAsymptotics.remainder_lt_factorial' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms PiDisjunctivity.BBPAsymptotics.remainder_lt_factorial
+
+-- Explicit consumers instantiate the new theorem, including the tail's zero index.
+example : 0 < bbpTail 0 := bbpTail_pos 0
+example : bbpTail 0 ≤ (1 : ℝ) / 81 := by
+  have h := bbpTail_le_quadratic 0
+  norm_num at h ⊢
+  exact h
+example : bbpTail 1 ≤ (1 : ℝ) / 64 := by
+  simpa using bbpTail_le_mass_bound 1 (by decide)
+example : HasSum (stieltjesTerm (fun u => 1 / ((0 : ℝ) + u) ^ 2)) (bbpTail 0) :=
+  by simpa only [Nat.cast_zero] using hasSum_bbpTail_stieltjes 0
+example : ∃ z : ℤ, numeratorMomentShift 0 0 = (z : ℝ) := numeratorMoment_integer 0
+example : ∃ z : ℤ, numeratorMomentShift 1 0 = (z : ℝ) := numeratorMoment_integer 1
+example : 1 / (1 + (2 : ℝ)) ^ 2 -
+    ∑ k ∈ Finset.range 3, (-1 : ℝ) ^ k * ((k : ℝ) + 1) * (2 : ℝ) ^ k =
+    (-1 : ℝ) ^ 3 * (2 : ℝ) ^ 3 * (((3 : ℝ) + 1) + (3 : ℝ) * 2) / (1 + (2 : ℝ)) ^ 2 :=
+  finite_inv_sq_remainder 3 2 (by norm_num)
+
+
+
+example : 0 < bbpTail 1 := by
+  have h := remainder_pos 1 0 (by decide)
+  simpa only [pow_zero, correction, Finset.range_zero, Finset.sum_empty, sub_zero, one_mul] using h
+example : 0 < correction 1 1 - bbpTail 1 := by
+  have h := remainder_pos 1 1 (by decide)
+  norm_num at h
+  linarith
+example : correction 1 1 - bbpTail 1 < 2 := by
+  have h := remainder_lt_factorial 1 1 (by decide)
+  norm_num at h
+  linarith
+example : HasSum (stieltjesTerm (fun u => u ^ 0))
+    (-numeratorMomentShift 1 0 / ((0 + 1) * (8 : ℝ) ^ 2)) := by
+  simpa only [Nat.cast_zero] using hasSum_moment 0
+example : ∃ B : ℤ, coefficient 0 = (B : ℝ) / (8 : ℝ) ^ 2 := coefficient_dyadic 0
+example : ∃ B : ℤ, coefficient 1 = (B : ℝ) / (8 : ℝ) ^ 3 := coefficient_dyadic 1
+
+
+-- Definition bodies are visible to a separate importing consumer.
+example (k : ℕ) : moment k = ∑' r : ℕ, stieltjesTerm (fun u => u ^ k) r := rfl
+example (k : ℕ) : coefficient k = (-1 : ℝ) ^ k * ((k : ℝ) + 1) * moment k := rfl
+example (K N : ℕ) : correction K N = ∑ k ∈ Finset.range K, coefficient k / (N : ℝ) ^ (k + 2) := rfl
+
+end TailAsymptoticsAudit

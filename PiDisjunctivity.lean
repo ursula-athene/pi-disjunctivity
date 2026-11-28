@@ -17,6 +17,7 @@ public import PiDisjunctivity.AffineOrbit
 public import PiDisjunctivity.BBP.Series
 public import PiDisjunctivity.BBP.Orbit
 public import PiDisjunctivity.BBP.Tail
+public import PiDisjunctivity.BBP.TailAsymptotics
 public import PiDisjunctivity.BBP.RationalPrefix
 public import PiDisjunctivity.BBP.RationalEntry
 public import PiDisjunctivity.BBP.PrimeDenominator

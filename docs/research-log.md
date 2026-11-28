@@ -6430,3 +6430,76 @@ correctly retained as caller evidence. Documentationdcd696, whitespace77a2b3
 and freeze/preservation53ba4e passed. No substantive repair followed; final
 edits record review completion only. The mathematical owner is unchanged.
 Final affected checks and publication complete this checkpoint, not M4.
+
+## 2026-11-28 — Formalizing the actual finite tail expansion
+
+The combined-resource comparison was committed and pushed as
+`cb4a184b34cd4f9c81356930e3c0c479addead20`, parent0049319. Commit45ba40,
+post-commit7e8b3b, pushf7e9b6/4e698b and remote6c8d40 verified publication.
+All three owned blobs,142 protected and11 unrelated identities matched;
+the index was empty. Final documentation62ac97, whitespace129786/31b211
+and exact-stage7b4ef2 passed. No repair or PR; publication receipt is in the
+0709 integration packet. The comparison limits a generic inference, not V.
+
+The analytic worker's successor ran07:03:17–07:16:17, completing before its
+07:22 endpoint. Its eight-entry manifest
+`bf10a911b177948efa102e53c9f5206038903954d31fac39bc17e67de0b0d9a8`
+in `/tmp/pi-m4-shadow-core-20261128T0703Z/` matched197687. Source
+`a74bd1fb2b5d4817422e50dd7a719b661063e4a3c6f3ba22db14d05ac86bb5b8`
+proves actual coefficient integrality, moment positivity/factorial bounds and
+the signed remainder for all finite K at N>0. Parent read the complete source,
+separate importing probe and report. These instantiate the previously reviewed
+paper argument, using a finite integer recurrence rather than differentiating
+an infinite transform. No new source theorem or originality claim is involved.
+
+Production integration began07:18 UTC, with07:29 reassessment and07:40
+endpoint, in `/tmp/pi-m4-tail-asymptotics-integration-20261128T0718Z/`.
+Scope385af7 records nine owned,137 protected and11 unrelated identities.
+The new BBP/TailAsymptotics module uses the actual existing Tail module;
+nineteen public theorems and nine exposed definitions have concrete consumers.
+Twenty-six helpers are private. The production namespace is BBPAsymptotics;
+scratch diagnostics moved to Test.lean. No existing definition or proof changed.
+
+The early root buildcb5508/19f365 succeeded but enabled style linters found
+long lines and two `show` uses. Wrapping lines and using `change` cleared them:
+a2c3f6/f19df3 passed7247 jobs without warnings, and native diagnostics returned
+success with partial=false and no items. Root probe5afb5a/428f40 passed with
+unused binder-name warnings; underscore names repaired those, and b3d3b7/ed38ea
+passed silently. These were compiler/style repairs, not missing mathematics.
+
+Full build30cf15/a6ad01 and38 process testscf1c81 passed. Initial full Test
+1246ec/ef2759 failed because the new audit section opened only the inner
+namespace; adding PiDisjunctivity locally repairs lookup of the actual tail
+and coefficient. The theorem source and contracts were unchanged. The required
+Test rerun and independent exact-diff review gate acceptance. Pina958d7 is
+4.37.0-rc1; pin/formulation/old-tail diffa439c8 is empty.
+
+The next arithmetic inquiry has07:28 midpoint and07:40 endpoint, using only
+the immutable core in scratch. It reports integer clearing and the complete
+original shadow bound compiling, pending a frozen packet and independent
+review. This is not an adopted production result. The separate actual-residue
+inquiry retains its07:24/07:34 bounds and the joint target-placement obstacle.
+The analytic core closes concrete proof obligations; selected visits and M4
+remain open.
+
+The corrected full Test73cfba/f5f956 passed silently. Documentationa7c9b7,
+whitespace1caecf and protectiondf723d passed; all137 protected and11 unrelated
+identities match. The35 new examples are19 exact types,13 explicit theorem
+consumers and3 definition consumers. All19 axiom guards passed. These checks
+prepare the frozen production review; they do not replace it.
+
+The07:29 checkpoint was assessed early at07:27:18 in076124: all23 frozen
+entries, nine live postimages,137 protected and11 unrelated identities matched.
+Independent review ran07:24:49–07:29:47 and found no D/I/Q items. It inspected
+all716 source lines and the complete1187-line diff, exact audits and consumers,
+and matched the worker/integration inventories. Execution and protected-file
+checks remained caller evidence. No substantive repair was required; final
+edits record factual acceptance only, followed by affected checks/publication.
+
+The full-shadow worker separately froze v3 at07:26:37 and completed the
+general s>=128 nonvacuity successor. Parent read v3 and verified all seven
+entriesef9661. These packets remain unadopted pending their own integration
+and review. The next worker slice checks the same-anchor combined statement
+and exact finite target-transfer consumer, with07:43/07:55 bounds. It must
+retain actual selected-time target hits as an explicit missing input. This
+does not enlarge the accepted analytic-core scope or close V.

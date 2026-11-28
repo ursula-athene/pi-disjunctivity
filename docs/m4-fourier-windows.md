@@ -584,6 +584,56 @@ bounds. These are finite symbolic diagnostics, not actual-state or digit
 observations and not a proof of the universal result. Full review evidence is
 in the [continuation record](agy-reports/m4-continuation-review.md).
 
+### Lean formalization of the actual tail expansion
+
+[TailAsymptotics.lean](../PiDisjunctivity/BBP/TailAsymptotics.lean) proves the
+analytic core in `PiDisjunctivity.BBPAsymptotics`. Its concrete `stieltjesTerm`
+is the weighted sum of the three fixed interval integrals above; `moment`,
+`coefficient` and `correction` are their actual moments, signed coefficients
+and first K inverse-power terms. They are exposed definitions, not parameters
+standing for assumed estimates.
+
+The nineteen public theorems include strict coefficient/tail positivity,
+`bbpTail N <= 1/(8*N+9)^2` including N=0, the actual tail's convergent integral
+sum, and a finite integer recurrence for the numerator moments. The recurrence
+comes from convolution with D(X)=4-4X+2X^3-X^4 and telescoping geometric sums;
+D(1)=1 gives integer moments by strong induction. Polynomial integration
+identifies the actual coefficient and proves, for every k,
+
+```text
+coefficient k = B/8^(k+2) for some integer B,
+0 < moment k < k!.
+```
+
+The moment bound uses the summable majorant
+`k!*(135/1024)*(3/16)^r`, with sum `k!*135/832 < k!`.
+The finite kernel identity, positivity and checked interval integrability give
+the exact actual-tail conclusion for every natural K and every N>0:
+
+```text
+0 < (-1)^K*(bbpTail N - correction K N) < (K+1)!/N^(K+2).
+```
+
+K=0 is included. No condition u/N<1, infinite asymptotic-series convergence,
+fixed-order limit or visitation premise is used. Coefficient integrality,
+moment convergence and remainder estimates are proved from the actual BBP
+coefficients. Exact numerator oddness is not part of this formalization.
+
+The root export and [Test.lean](../Test.lean) check nineteen complete theorem
+types, nineteen guarded axiom lists, thirteen explicit theorem consumers and
+three exposed definition bodies. All axiom sets are exactly propext,
+Classical.choice and Quot.sound. The N=0 tail, k=0/1 moments and coefficients,
+N=1 with K=0/1, and finite inverse-square identity at x=2 are exercised.
+Twenty-six internal proof helpers remain private. The worker packet
+`/tmp/pi-m4-shadow-core-20261128T0703Z/` is immutable; production changes
+rename its namespace, restrict helper visibility, move audits out of the
+library and satisfy enabled linters without changing the mathematics.
+
+Root-interface and full production checks passed; independent code review
+is complete with no D/I/Q items. This component does not yet check finite integer
+clearing or the logarithmic estimates proving (DS). Those are the next
+specific formalization consumers. Selected-time target hits and V remain open.
+
 ### Both resources alone do not supply selected target hits
 
 The existing [13-pole comparison forcing F](m4-rational-forcing.md) retains

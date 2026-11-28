@@ -1233,8 +1233,8 @@ shifts j=h(s+3)+v remove an integral asymptotic truncation and leave a signed
 error below2^(-s/4). The separated blocks reach order s^2/log(s); they are
 not a continuous window. The exact consumer requires a frozen-prefix hit
 in(a+e_s,b) at one of those shifts, with e_s tending to zero. Such hits for
-all targets and arbitrarily large anchors are still missing. No new Lean
-theorem or V premise has been proved. A separately reviewed
+all targets and arbitrarily large anchors are still missing. No V premise
+has been proved. A separately reviewed
 [compatible-anchor extension](m4-fourier-windows.md#compatible-fine-grids-at-nearby-dyadic-anchors)
 preserves the unique high17 pole after the terminal index and uses the existing
 cover at depth d+1. It supplies arbitrarily large actual dyadic anchors with
@@ -1244,8 +1244,16 @@ and N+j+1 recurrence offset. The
 [new denominator/grid component](m4-fourier-windows.md#lean-formalization-of-the-nearby-dyadic-grid)
 is kernel checked through the root export and exact audits; independent code
 review is complete. Its arbitrary-dyadic-exponent and fixed-word consequences
-retain complete-period scope. The analytic shadow estimate is still paper
-mathematics. The log owns the formalization cycle and independent research.
+retain complete-period scope. The [actual tail expansion](m4-fourier-windows.md#lean-formalization-of-the-actual-tail-expansion)
+now has a checked Lean component for all-order coefficient integrality,
+strict factorial moments and the signed finite remainder at every N>0 and K.
+Production audits and independent review passed. Finite integer
+clearing and final logarithmic shadow estimates remain outside this component;
+the full shadow theorem is still paper level. The existing
+[comparison model](m4-fourier-windows.md#both-resources-alone-do-not-supply-selected-target-hits)
+retains both resources with a rational constant and misses all selected times
+in a fixed target. Additional actual-BBP input is therefore necessary.
+The log owns the formalization cycle and independent research.
 
 ## 6. Assemble the proof of the original conjecture
 

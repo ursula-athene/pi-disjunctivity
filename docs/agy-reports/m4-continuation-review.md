@@ -5452,3 +5452,57 @@ Documentationdcd696, whitespace77a2b3 and preservation53ba4e are caller
 evidence; reviewer permissions and execution limits were unchanged. Subsequent
 edits only record this completion. Affected checks gate publication; no Lean
 or actual selected-time result is added.
+
+## Actual finite-tail asymptotics formalization — 2026-11-28 UTC
+
+Scope: BBP/TailAsymptotics.lean, root export, Test.lean and six owning/status
+documents against baselinecb4a184. The prior independently reviewed paper
+shadow argument supplies the mathematical contract. This component checks the
+actual positive tail representation, integer numerator moments, coefficient
+integrality, strict factorial moments and finite signed remainder for all K
+and N>0. No full modular-shadow or selected-time visitation result is claimed.
+
+Worker source `a74bd1fb2b5d4817422e50dd7a719b661063e4a3c6f3ba22db14d05ac86bb5b8`,
+eight-entry manifest
+`bf10a911b177948efa102e53c9f5206038903954d31fac39bc17e67de0b0d9a8`,
+resides in `/tmp/pi-m4-shadow-core-20261128T0703Z/`; all entries matched197687.
+Parent inspected the whole source and importing probe. Production restricts
+26 helper theorems to private, renames the namespace and moves diagnostics
+to Test.lean, with style-only line wrapping and `show` to `change` repairs.
+Nineteen public theorem types and guarded axiom lists, thirteen explicit
+boundary consumers and three definition-body consumers form the new audit.
+
+Root builda2c3f6/f19df3, root-only probeb3d3b7/ed38ea and native diagnostics
+passed. Full build30cf15/a6ad01 and38 process testscf1c81 passed. The first
+full Test failed on a missing outer namespace in the audit; its local opening
+was repaired without a theorem change. The rerun, affected documentation and
+whitespace checks, preservation checks and independent exact-diff review are
+required before acceptance. No review is inferred from compilation.
+
+Corrected Test73cfba/f5f956 passed silently, with all19 exact axiom guards.
+Documentationa7c9b7, whitespace1caecf and protectiondf723d passed. All137
+protected and11 unrelated identities matched. The complete production diff
+and postimages are being frozen for separate review; all executable evidence
+remains caller evidence.
+
+Independent production review by `/root/dyadic_grid_independent_review_0649`
+ran07:24:49–07:29:47 UTC. Both complete guides, replacement procedure and
+pi-argument-critic were read; the guide/procedure hashes matched the established
+values. The reviewer inspected the full716-line module,19 public theorems,
+nine definitions,26 private helpers, every type/axiom guard,13 theorem consumers,
+three definition consumers and the full1187-line diff. It found no defects,
+warranted improvements or blocking questions. No D/I/Q disposition or repair
+remains; final shadow arithmetic and V were explicitly outside this scope.
+
+All23 frozen integration entries, eight worker entries and nine live postimages
+matched independently. Manifest
+`b1afc28ed225242875a17dd1c63dec113f0f39213f94b5b99bca1cb0f74f1775`, diff
+`fd3f4666d59f59bde5bd0fdb6dee0748b438464e8f5b36cd84ee61a78c5a6d52`,
+source `b6ea361b4a8445dc6fb88f0e871e325606a4f7bafd9b76c5bcf594007c37c066`.
+The verbatim return is `review-full.md` in the0718 integration packet, hash
+`f1ea9fb8d0219bf34c408c67e7bace48e633250cdb98c0a33c8b042f751746a7`.
+The reviewer did not reexecute checks or independently re-audit all137 protected
+and11 unrelated files; caller checkpoint076124 reverified them. No writes,
+Git/network, builds/probes/checkers, installs, delegation or census occurred.
+The whole review cycle is complete. Only factual completion edits and final
+affected checks follow; proof source, root export and audits stay unchanged.
