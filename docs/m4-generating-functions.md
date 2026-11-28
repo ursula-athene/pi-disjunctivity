@@ -1502,3 +1502,166 @@ that same path; no such bridge is supplied. Source/search limits and the
 independent paper review are in the [review record](agy-reports/m4-continuation-review.md#prime-defect-and-exponential-integrality--2026-11-28-utc).
 No new Lean or visitation theorem, full source audit, or originality claim
 is made. V/M4 remain open.
+
+## Formal squares can retain a transcendental radial exponent
+
+This 2026-11-28 test uses the ordinary Euler product, distinct from the
+preceding exponential ghost series. For the exact actual canonical carries
+k_n=16y_n+A(n)-y_(n+1), retain y_0=0 and define, on |z|<1,
+
+```text
+Q_k(z)=product_(n>=0)(1-z^(n+1))^k_n,
+P_A(z)=product_(n>=0)(1-z^(n+1))^A(n),
+J_y(z)=product_(n>=0)(1-z^(n+1))^(16y_n-y_(n+1)).
+Q_k=P_A*J_y.
+```
+
+The logarithms use their Taylor branches at zero. Bounded exponents give
+normal convergence on compact subsets of the disk. The actual states are
+rational, so coefficientwise identities over Q also hold. If F_N removes
+the finitely many carry factors with n<N, then all later k_n are even iff
+Q_k/F_N is a square in 1+z Z[[z]]. Indeed every integral formal unit has unique
+integer Euler exponents: after lower factors are removed, its degree-m
+coefficient c forces exponent -c for (1-z^m); squaring doubles all exponents.
+Carry16 remains allowed. This is an exact parity encoding, not a parity proof.
+
+[Pomerat–Straub, *Criteria for the integrality of nth roots of power series*](https://arminstraub.com/downloads/pub/integrality-powerseries.pdf),
+17 June2024, Theorem1.1 on p.1, states for f=1+sum a_n z^n, a_n in Z_p,
+and positive integer r that f^(1/p^r) is p-integral iff
+
+```text
+f(z)=(1+sum_(n>=1)a_(n*p^r)*z^n)^(p^r) mod p^(r+1).
+```
+
+Its p=2,r=1 specialization is a formal congruence modulo4. It supplies
+neither complex continuation nor a rational/algebraic radial exponent.
+The actual odd-denominator states give 2-integral binomial factors.
+Since A(n)=n+1 modulo2, the eventual-even condition becomes
+y_(n+1)=n+1 modulo2. This restates the selected-state assertion; the source
+does not remove J_y or give an independent A-only congruence.
+
+There is nevertheless a concrete four-pole radial calculation. Positivity
+and A(n)=O(n^-2) give the unweighted convergent sum
+
+```text
+L=sum A(n)=integral_0^1 (4-2x^3-x^4-x^5)/(1-x^8) dx
+ =(1/4+5sqrt(2)/16)*pi+(5/8)*log2+(5sqrt(2)/8)*log(1+sqrt(2)).
+```
+
+The exact rational partial fraction identity is
+
+```text
+(4-2x^3-x^4-x^5)/(1-x^8)
+ =3/[4(x+1)]+(x+3)/[4(x^2+1)]+(5/2+x/2-x^3)/(x^4+1).
+```
+
+A zero-normalized primitive of 1/(1+x^4) on 0<=x<1 is
+`log((x^2+sqrt(2)x+1)/(x^2-sqrt(2)x+1))/(4sqrt(2))`
+plus `arctan(sqrt(2)x/(1-x^2))/(2sqrt(2))`.
+The latter arctangent tends to pi/2 and the logarithm's argument to
+(1+sqrt(2))^2. This fixes the branches and endpoint in the formula for L.
+
+L is transcendental by the assessed [Baker statement](https://www.mathunion.org/fileadmin/ICM/Proceedings/ICM1970.1/ICM1970.1.ocr.pdf),
+*Effective methods in the theory of numbers*, section2, printed p.20
+(PDF page58). The logarithms Log(-1)=i*pi, log2 and log(1+sqrt(2)) are
+Q-independent: imaginary parts separate the first, and the quadratic norm
+of 2^m(1+sqrt(2))^n=1 gives 4^m(-1)^n=1, then m=n=0.
+Baker includes1 in their independence over algebraic numbers, excluding an
+algebraic L with the displayed algebraic coefficients. This is a paper use
+of a primary statement, not a Lean or full source-proof audit.
+
+Dominated convergence gives the full radial asymptotic
+`P_A(r)~C_A*(1-r)^L`, with `C_A=product(n+1)^A(n)` finite and positive:
+the logarithmic ratios lie between0 and A(n)log(n+1), a summable majorant.
+But formal squareness cannot contradict even this full asymptotic.
+
+For any real alpha>0, symbolically set
+
+```text
+b_0=0, b_n=floor(n*alpha)-floor((n-1)*alpha),
+e_n=2*(b_n-b_(n-1)), P_alpha(z)=product_(n>=1)(1-z^n)^e_n.
+```
+
+The exponents are bounded integers and the product is an integral formal
+square, holomorphic and nonzero inside the disk. For nonintegral alpha its
+exponents have both signs; it is not a canonical carry sequence.
+With f_n={n*alpha}, two summations by parts give
+
+```text
+log(P_alpha(r)/(1-r)^(2alpha))=2*sum_(n>=1) f_n*D_n(r),
+D_n(r)=log((1-r^(n+1))^2/[(1-r^n)(1-r^(n+2))])>=0.
+```
+
+The first boundary term is b_N log(1-r^N), tending to zero. Positivity follows
+from the exact difference r^n(1-r)^2 of the two products inside the logarithm.
+The weights sum to log(1+r); their limits
+`d_n=log((n+1)^2/[n(n+2)])` sum to log2. Pointwise convergence plus equality
+of limiting total masses gives convergence in l1, by a finite-cutoff/tail
+argument. Therefore
+
+```text
+P_alpha(r)~C_alpha*(1-r)^(2alpha),
+C_alpha=exp(2*sum {n*alpha}*d_n), 1<=C_alpha<=4.
+```
+
+This includes alpha=L/2 without evaluating its floors. It disproves the
+proposed implication from an integral square to a rational/algebraic radial
+exponent. It does not match C_alpha to C_A, retain the actual recurrence or
+initialization, or refute C_odd/V.
+
+The actual Q_k has nonnegative integer exponents and infinite support:
+otherwise pi=sum k_n/16^n would be rational. For any such product,
+`log Q(r)/log(1-r)->infinity`: finitely many nonzero factors already give
+arbitrarily large lower bounds for that ratio. Eventual evenness changes
+nothing. Thus Q_k and J_y both have infinite radial order; L appears only
+after their cancellation in Q_k/J_y. Neither can be replaced by P_A.
+Infinite-order vanishing also excludes a nonzero meromorphic germ at1 for
+Q_k, regardless of parity. The product with every exponent2 is an integral
+square exhibiting the same behavior.
+
+### The forcing product itself has a natural boundary
+
+For a primitive mth root zeta, m>=3, set L_m=sum_(j>=1)A(mj-1). Then
+
+```text
+P_A(r*zeta)~C_(m,zeta)*(1-r)^L_m,
+C_(m,zeta)!=0, 0<L_m<2/(m-1)^2<=1/2.
+```
+
+For resonant k=n+1 divisible by m, subtract L_m log(1-r); the remaining
+logarithms lie between0 and log k. For nonresonant k, the finite set of
+nonidentity mth roots gives a uniform positive lower bound on
+|1-r^k*zeta^k|. Its logarithm is the principal branch, since the real part
+of 1-r^k*zeta^k is positive; its argument is bounded by pi/2.
+Dominated convergence yields the nonzero constant
+
+```text
+exp(sum_(m divides n+1) A(n)*log(n+1)
+    +sum_(m does not divide n+1) A(n)*Log(1-zeta^(n+1))).
+```
+
+Both series converge absolutely, with m fixed before taking the radial limit.
+For D(n)=(2n+1)(4n+3)(8n+1)(8n+5), the identity
+`D(n)-n^2*(120n^2+151n+47)=392n^4+873n^3+665n^2+194n+15`
+gives 0<A(n)<n^-2 for n>=1. Since mj-1>=(m-1)j and sum j^-2<2 by an
+integral comparison, the asserted strict bound follows without evaluating pi.
+A nonzero meromorphic extension at zeta has integer Laurent order, contradicting
+0<L_m<1. These primitive roots are dense, so no extension through any boundary
+arc exists. This also forbids holomorphic extension.
+
+The mechanism is generic for positive summable coefficients with summable
+logarithmic weights and positive resonant mass at sufficiently large orders.
+Those masses tend to zero. The positive F model also satisfies it; there is
+no actual-phase distinction. The bounded primary search found Delabarre's
+[prime-indexed Estermann extension](https://numdam.org/item/10.24033/bsmf.2647.pdf)
+(2013, introductory p.226) contextual: its integer-polynomial factors in
+p^(-s) are a different product. No theorem from it is invoked or exact
+priority conclusion drawn.
+
+The finite-radial-order/square-root consumer and unqualified continuation of
+P_A are suspended. A different normalization, sector estimate or selected-state
+object needs independent control of the same J_y factor. This remains open.
+The [review record](agy-reports/m4-continuation-review.md) retains source scope,
+the immutable original and supplement, and1,700 plus1,057 exact algebraic
+checks. These are paper arguments; no actual-state census, Lean certification,
+originality determination, C_odd or V/M4 conclusion is supplied.

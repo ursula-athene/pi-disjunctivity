@@ -6008,3 +6008,55 @@ Vojta's preserved source pages. Full-guide/procedure/critic hashes were unchange
 Read-only limits held; recorded Git and execution facts remain caller evidence.
 Caller eda1bf reverified all frozen/source/protection entries before I2 and
 completion updates. Final affected checks gate publication; no V/M4 acceptance.
+
+## Euler radial orders and natural boundary — 2026-11-28 UTC
+
+Scope: generating-function owner and two evidence records against ecc01ae.
+The paper results reject formal-square/radial and unqualified-continuation
+consumers. They give no actual carry-parity, C_odd, V or M4 conclusion.
+
+Reviewer `/root/anchor_source_integration_review_0822` inspected the full
+original report, checker, receipts and evidence, then the separate supplement
+after receiving immutable hashes, during09:57:29–09:59:45. Both primary theorem
+images, the Baker PDF hash, all seven original and all three supplement
+entries matched. Full guides, procedure and critic hashes remained unchanged.
+
+**Defects: none. Improvements: none required. Q1/Q2: retained.** Quantitative
+control of the same selected-state factor J_y is missing; other specified
+normalizations, sector estimates and selected-state objects remain outside
+the negative conclusions. The exact Q_k=P_A*J_y identity is retained.
+
+The review checked normal convergence, unique Euler exponents and the parity
+equivalence; formal Pomerat–Straub hypotheses; exact partial fractions and
+branches; Baker's logarithm independence including1; the dominated radial
+limit; both summations by parts and l1 convergence for arbitrary-order squares;
+infinite radial order for the nonnegative actual carry product; and the
+supplement's resonant/nonresonant bounds, nonzero constant, strict exponent
+bound and dense-root obstruction. Mixed-sign exponents and lost initialization
+in the synthetic square are explicit, without a leading-constant match.
+The natural-boundary mechanism also applies to F and supplies no phase selection.
+
+Full return in `/tmp/pi-m4-euler-integration-20261128T0959Z/` has hash
+`8b5e6e5f3838ea5aec817215b2be12080121eaee1f30596ec50a4b722b0002de`.
+Only reads, hashes, preserved images and clocks were used: no writes, Git,
+network, builds, probes, checkers, installations, delegation or actual-state
+census. Parent be6ede/6dbf17 provide the separately copied replay evidence:
+1,700 plus1,057 assertions, exit0 and byte-identical receipts. The original
+files stayed unchanged, reverified cd95d0. These finite checks do not certify
+the analytic limits, Baker or universal visitation. Exact production review
+and affected checks remain due; no source-proof-chain or originality claim.
+
+Exact production review ran10:05:58–10:07:19, before10:11/10:17. All279 diff
+lines reconstructed the three postimages, with all previous contents intact.
+All11 frozen entries,17 sources,145 protected and11 unrelated hashes matched.
+No D/I; Q1/Q2 retained. The owner preserves the full selected-path factor,
+all source hypotheses and branches, both radial limits, mixed signs and
+initialization distinctions, dense-root argument and generic F applicability.
+
+Full return in the0959 packet has hash
+`2da7e8de140ca6ab804e53336bac508cca71053236d05b2f8ed683843fc79757`.
+Complete guides/procedure/critic context were reused after unchanged-hash
+verification. Source images remained those of the accepted paper review.
+Read-only limits held; Git relationships and executed checks remain caller
+evidence. Caller3dc171 reverified the inventory before factual updates only;
+the mathematical owner is unchanged. Final affected checks gate publication.

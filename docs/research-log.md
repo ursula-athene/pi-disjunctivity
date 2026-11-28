@@ -7119,3 +7119,70 @@ in the0941 packet has hash
 Caller eda1bf reverified every frozen/source/protection entry at09:50:42
 before the exact I2 clarification and factual status updates. This early
 review completion serves the09:51 reassessment; final checks/publication remain.
+
+## 2026-11-28 — Euler squares, radial periods and the retained state factor
+
+The variation/moving-target record was committed and pushed as
+`ecc01aec2108dd80e51be9ac700ec3f0c58a4e1b`, parent4951e00. Commit02d6ae,
+post-commit318681, push a7d39c/07084b and remote837b01 verified publication
+by09:51:47. Docs c7af86, whitespace a32366/fe8f3e, exact stage cda4a8 and
+exact I2 owner replacement95f38f passed. Receipt701c87 records publication;
+four committed blobs,144 protected and11 unrelated files matched. Remote
+equality was rechecked at09:56:37 in b9622b for the subsequent result.
+
+The [changed Euler-product test](m4-generating-functions.md#formal-squares-can-retain-a-transcendental-radial-exponent)
+ran09:39:23–09:55:30, observed midpoint09:49:06, endpoint10:01. The earlier
+09:47:52 update prematurely used the planned midpoint label and was corrected.
+An exact four-pole integral gives a transcendental unweighted exponent L,
+but an integral formal square can have exactly that radial exponent and a
+finite positive leading constant. Actual Q_k=P_A*J_y retains the whole
+selected-state factor; Q_k and J_y both have infinite radial order. The
+candidate fails before it can distinguish the actual phase or positive F.
+
+The parent proposed a separate [root-of-unity continuation test](m4-generating-functions.md#the-forcing-product-itself-has-a-natural-boundary),
+independently reconstructed and frozen09:57:41. At each primitive root of
+order m>=3, P_A has a noninteger radial exponent between0 and1/2, ruling
+out meromorphic extension through the dense set. This generic positive-weight
+mechanism also holds for F; it supplies no parity or visitation conclusion.
+The remaining consumer needs independent control of the same J_y quotient.
+
+Packet `/tmp/pi-m4-euler-radial-test-20261128T0948Z/` has original report
+`e3b95a17f63f1e8bae9be3fcf7f12dcc01f142836ea64d3c8f0ff47aa362ce96`
+and seven-entry manifest
+`515d37406fe09622276b444f6bf0a659b3d9ec56382afe1cba8462f3892d1ea2`.
+Supplement `3809911afc8dc1d95a5cda5a4a093975f9405cb83be13605f252f6a6088e2e33`
+has three-entry manifest
+`f72e0c9736a0554b9ac693d03994d78949b0a72bb7c913d74145af272cb03a08`.
+Parent read both reports23f942/dde48c/221783, checkers fdde30/db9358 and
+visually inspected Pomerat–Straub p.1 and Baker printed p.20. Because both
+checkers write receipts, unchanged copies ran in
+`/tmp/pi-m4-euler-parent-check-20261128T0958Z/`. Replays be6ede and6dbf17
+passed1,700 and1,057 exact assertions, exit0, with byte-identical receipts.
+cd95d0 verified every original/supplement entry remained unchanged.
+The finite checks certify neither convergence nor Baker nor actual visits.
+
+Independent paper review ran09:57:29–09:59:45, before10:05/10:12.
+No D/I. Q1 selected-state control and Q2 other specified normalizations remain
+open. Full return in `/tmp/pi-m4-euler-integration-20261128T0959Z/` has hash
+`8b5e6e5f3838ea5aec817215b2be12080121eaee1f30596ec50a4b722b0002de`.
+The Baker PDF identity and both theorem pages were checked, without auditing
+their full proof chains or claiming Lean certification or originality.
+
+Three-document integration began09:58:48, scope6dbf17, midpoint10:09 and
+endpoint10:24, protecting145 tracked and11 unrelated files. Exact production
+review is complete; affected checks gate publication. No Lean or dependency changes.
+The next bounded investigation checks an exact global adelic/radius-product
+source against the actual coefficient denominators and forbidden-word premise,
+midpoint10:12 and endpoint10:23. Its claims are unadopted. C_odd/V/M4 remain open.
+
+Production review ran10:05:58–10:07:19, before10:11/10:17. All279 diff lines,
+11 packet entries,17 source files, three postimages,145 protected and11
+unrelated hashes matched. No D/I; Q1/Q2 remain. Manifest
+`10cb4ad06ee293e538eccc770322647fecd9e3cfdd1a39bceff046aca77e3465`;
+diff `0820b983d66dc51e7add35474073ee7251b5bbb313bd2751401090206ced2712`.
+Full production return in the0959 packet has hash
+`2da7e8de140ca6ab804e53336bac508cca71053236d05b2f8ed683843fc79757`.
+Caller3dc171 reverified every frozen/source/protection entry at10:09:22
+before factual completion updates; the mathematical owner is unchanged.
+Early review completion serves the10:09 reassessment. Final affected checks
+and publication remain; the global adelic inquiry continues independently.
