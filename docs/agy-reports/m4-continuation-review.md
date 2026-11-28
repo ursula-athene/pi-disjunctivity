@@ -6159,3 +6159,49 @@ Source-page and full-guide reads were reused after unchanged-hash checks.
 Read-only limits held; Git/check claims remain caller evidence. Parent00c5ad
 reverified all inventories before factual completion updates. No mathematical
 owner change followed review; final affected checks gate publication.
+
+## Even binomial differences and primitive rounding cost — 2026-11-28 UTC
+
+Scope: rational-forcing owner and evidence records against91dcf04.
+Reviewer `/root/dyadic_grid_independent_review_0649` read the original262-line
+report/114-line checker, ledger and receipt, and inspected Bell–Chen p.2
+during10:50:58–10:55:19. All six frozen entries matched. Both complete
+guides/procedure/critic reads were reused after unchanged-hash checks.
+
+No defects or required improvements. Q1 actual correlated-error control
+and Q2 growing-order nonvanishing/consumer remain open. The review verified
+all a/b endpoints and signs, zero sums, mass17B, exact gcd transfer,
+primitive parity budget and explicit overlap with the archived norm>=34
+lemma. The even exact-A comparator has carries6,4 from n=1 and an irrational
+nonzero seed. Neither the box bound nor that comparison determines the
+actual initialized error. Fixed-order recurrence use does not apply to d(n).
+
+Full original-paper return in `/tmp/pi-m4-stencil-integration-20261128T1053Z/`
+has hash `a2ef4f027d475dd8a2a2c068b83af71d6e217195fe57b801aa439ec527464d00`.
+Parent replay3e6e06 passed886 assertions, with4a0864 preservation evidence;
+the reviewer read the checker but did not run it. Read-only limits held.
+No source proof-chain, Lean, originality or actual-state certification.
+The elementary supplement arrived after that verdict and needs a separate
+focused review; exact production review and final checks remain due.
+
+The separate elementary supplement passed focused review10:58:29–10:59:05,
+with no D/I and all open obligations retained. The reviewer read all76 lines,
+verified its manifest and the unchanged original packet, and reconstructed
+the Newton formula, d=0 case, degree bound, convergent integer differences
+and rational-tail contradiction. No external theorem is needed for this
+fixed-order conclusion; no varying-order transfer is supplied.
+Full focused return in the1053 packet has hash
+`65dae70ed62525dc0128e747d14fd0d96d11bd5def222bf3f1cabdda5f2c277d`.
+Read-only limits held; no checker, build, probe or census was run. Parent66ab20
+read the full supplement. Exact production review and affected checks remain.
+
+Exact production review11:00:50–11:02:23 passed with no D/I, all open
+obligations retained. All187 diff lines reconstructed three postimages;
+12 frozen entries,11 sources,145 protected and11 unrelated hashes matched.
+Manifest `61518e6e668da73beb83a1f526f37c0b6d23743decdddce3c8254518f0497b12`;
+full return in the1053 packet
+`ff3a846e53a38c49642d647fa808cf2a1cc1c72428bfd4f36e0c1513e0c1c210`.
+Complete guides were reused after hash checks. Read-only restrictions held;
+Git and execution claims remain caller evidence. Parent c43315 reverified
+all inventories before factual updates only. The mathematical owner is
+unchanged; final affected checks gate publication. No discovery claims adopted.

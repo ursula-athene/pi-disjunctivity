@@ -7291,3 +7291,69 @@ full return in the1041 packet
 Parent00c5ad reverified all inventories at10:46:57 before factual updates
 only; the mathematical owner is unchanged. Early completion serves the10:49
 reassessment. Final affected checks and publication remain.
+
+## 2026-11-28 — Even carries and the cost of growing differences
+
+The counting addendum is published as
+`91dcf04cc3ad23d991fbfc1ca0944340361dd37c`, parent77aae52. Commit ccd000,
+post-commit987ecf, push d5a486 and remote d73c57 verified publication
+at10:49:57. Docs491b07, whitespace ee8ec3/1e4d90 and exact stage9628ca
+passed; publication receipt4a0864 retains the evidence. Three owned blobs
+and145 protected/11 unrelated files matched.
+
+The [even-stencil inquiry](m4-rational-forcing.md#even-carries-do-not-repair-growing-binomial-differences)
+ran10:37:11–10:47:35, ahead of10:49/11:01. Archive screening found the
+adjacent recurrence already assessed, narrowing the test to even carries
+and one growing binomial-difference family. Root63e2ec then identified
+that the universal17/2 barrier also followed the earlier norm lemma.
+The author incorporated that overlap before freezing. Added evidence is
+the family's exact all-order mass/content and an even exact-A comparison
+that loses rational zero initialization; no new general barrier or V advance.
+
+Packet `/tmp/pi-m4-even-adjacent-stencil-20261128T1041Z/` has report
+`aa7f96eac19066366cddac2daeda100bf31ae79924ae66e8bc89adf198cb43cb`
+and six-entry manifest
+`34876bc178ecf4569fe2819c844cd8cde9312785743b8217eac66446cc1e0dc9`.
+Parent2aa6d0/99b886 read report/checker and inspected Bell–Chen p.2.
+An unchanged checker copy in separate scratch passed886 assertions3e6e06,
+exit0;4a0864 verified byte-identical receipts and unchanged originals.
+These are unevaluated polynomial identities and synthetic fixtures, not
+certification of all orders, actual states, analytic limits or Lean.
+
+Paper review10:50:58–10:55:19 found no defects or required improvements.
+Q1 actual correlated error and Q2 selected growing-order nonvanishing remain
+open. Full return in `/tmp/pi-m4-stencil-integration-20261128T1053Z/` has
+hash `a2ef4f027d475dd8a2a2c068b83af71d6e217195fe57b801aa439ec527464d00`.
+The parent proposed an elementary fixed-order argument removing Bell–Chen
+as a necessary dependency. The separately frozen supplement completed
+10:55:23, report97f5ce768cca54cea5851b6c15f5e87d1622972bd2ef8b141115fbadba440353;
+its focused review is separate from the original verdict.
+
+Three-document integration began10:52:03, scope96b849, midpoint11:05,
+endpoint11:19. Exact production review and affected checks remain due.
+Another fresh discovery cycle is authorized with11:11/11:26 checkpoints;
+it must preserve actual initialization and identify a materially different
+consumer before substantial development. Its ideas are unadopted. No Lean
+change, actual-state census or C_odd/V/M4 acceptance is claimed.
+
+Separate supplement review10:58:29–10:59:05 passed with no D/I. It checks
+the Newton identity including d=0, polynomial degree cap, integer convergence
+and rational constant-tail contradiction. Q1/Q2 and M4 remain open. Full
+return in the1053 packet has hash
+`65dae70ed62525dc0128e747d14fd0d96d11bd5def222bf3f1cabdda5f2c277d`;
+supplement manifest
+`079b1cfb2e26f202d83d795b5fd9040ffe238003fd638713e956df8f5705f9e8`.
+Parent66ab20 read the complete supplement; no numerical check was needed.
+The elementary proof removes the external finite-alphabet theorem dependency
+for fixed-order nonvanishing, without adding an actual-history bound.
+
+Exact production review11:00:50–11:02:23 passed with no D/I; Q1/Q2 and
+M4 remain open. All187 diff lines,12 frozen entries,11 sources,145 protected
+and11 unrelated files matched. Manifest
+`61518e6e668da73beb83a1f526f37c0b6d23743decdddce3c8254518f0497b12`;
+full return in the1053 packet
+`ff3a846e53a38c49642d647fa808cf2a1cc1c72428bfd4f36e0c1513e0c1c210`.
+Parent c43315 reverified all inventories and owned postimages at11:03:59
+before factual updates only; the mathematical owner is unchanged. Early
+completion serves the11:05 reassessment. Final affected checks/publication
+remain; the fresh discovery pass continues independently.

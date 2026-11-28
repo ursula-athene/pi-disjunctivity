@@ -918,6 +918,76 @@ The corrected checks use nonzero synthetic seeds and exact algebra, not
 actual pi orbit sampling. Universal bounds and comparison trajectories
 remain paper arguments; no Lean proof or M4 acceptance follows.
 
+### Even carries do not repair growing binomial differences
+
+A 2026-11-28 refinement keeps the above U,V,Delta=U-V,J and tests only
+forward differences W_(n,d)=Delta_forward^d J_n. Under a hypothetical even
+tail, adjacent nonzero even carry pairs have |Ub-Va|>=2Delta for n>=64,
+with equality at(2,2); changing pairs have magnitude at least2U-16Delta.
+Irrationality still forces infinitely many changes, so limsup|J_n|/U(n)>=2
+under that hypothesis. Evenness doubles the integer spacing, not the decay.
+
+For n>=1,d>=6, put B=sum_(j=0)^d binom(d,j)(U+V)(n+j). Then
+
+```text
+W_(n,d)=sum_(l=0)^(d+1) a_l(n)c_(n+l),
+a_l=(-1)^(d+1-l)[binom(d,l-1)U(n+l-1)+binom(d,l)V(n+l)],
+sum a_l=0, sum |a_l|=B.
+```
+
+Terms with binomial index outside0..d are omitted. The signs alternate.
+The zero sum is the dth difference of the degree-five polynomial Delta.
+Every a_l has degree6; B has leading coefficient122880*2^d. If C is the
+sum of the positive coefficients of U+V, then
+`122880*2^d*n^6<=B<=C*2^d*(n+d+1)^6`, and each a_l has coefficient
+height at most C*2^d*(d+1)^6. Growing order retains its arithmetic cost.
+
+On raw floors p_(n-1),...,p_(n+d+1), the row is
+`b_0=-16a_0`, `b_r=a_(r-1)-16a_r`, `b_(d+2)=a_(d+1)`.
+It has sum0 and absolute mass17B. Its evaluated gcd is exactly
+g=gcd(a_0,...,a_(d+1)): recover the a's backwards from the final b with
+unit coefficient. The exact raw recurrence gives W=-sum b_r*x_(n-1+r).
+Under evenness W/(2g) is integral, but its independent-box error budget is
+
+```text
+sup_(0<=x_r<1) |sum b_r*x_r|/(2g)=17B/(4g)>=17/2.
+```
+
+Indeed the primitive a-row has equal positive integer masses, so B/g>=2.
+This is not a bound attained by the actual correlated states. It rules out
+only a subunit certificate from this box estimate, including growing d.
+The numerical floor17/2 was already implied by the earlier [integer-filter
+norm lemma](#positive-filters-and-uniformly-close-eight-pole-models): the
+primitive polynomial sum(b_r/g)t^r has roots1,16 and norm at least34.
+The added calculation gives this family's exact mass/content; it establishes
+no new general norm barrier.
+
+There is an even comparison retaining exactly A. Set alpha=173/51 and
+R_n=alpha*16^n-E_n, with E_-1=pi/16. The rational phases alternate between
+14/51 and20/51, and 0<E_n<1/5 changes no floor for n>=0. Its first raw
+floors are0,3 and later carries are c_n^*=5-(-1)^n in{4,6}. Thus
+`J_n^*=5Delta(n)+(-1)^n(U+V)(n)` and, for every d>=6,
+`W_(n,d)^*=(-1)^(n+d)B_(n,d)`. The primitive residual has magnitude
+B/(2g)>=1. Its seed (alpha-pi)/16 is irrational and nonzero, so it does
+not refute a claim retaining actual rational zero initialization.
+
+For every fixed d>=0, the actual W_(n,d) is nonzero arbitrarily late by an
+elementary argument. Eventual dth-difference vanishing makes J eventually
+polynomial: expand E^t=(I+Delta_forward)^t and truncate at d-1; d=0 means
+J is eventually zero. Since bounded carries give J=O(n^6), this polynomial
+has degree at most6, so J/U converges. The integer differences
+`c_(n+1)-c_n=J/U-(Delta/U)c_n` then converge and are eventually constant.
+Bounded carries force that constant to be0. An eventually constant carry
+tail would make sum c_n/16^n=pi rational, a contradiction. This proof uses
+no evenness and needs no Bell–Chen rationality theorem. It supplies neither
+nonvanishing at prescribed growing pairs (n,d(n)) nor a small actual error.
+
+The first missing implication remains an actual-history bound under
+avoidance that beats the integer spacing. Further orders of this binomial
+family do not supply it. The frozen paper and886 symbolic/synthetic checks
+are recorded in the [review ledger](agy-reports/m4-continuation-review.md).
+No actual-state census, new Lean theorem, C_odd or V/M4 conclusion follows.
+
 ### A recurrence source gives no new placement estimate
 
 A bounded source check found no applicable visitation contract. The
