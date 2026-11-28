@@ -1459,8 +1459,9 @@ and beta_(m-1)-beta_m=C_m imply
 limsup_(M->infinity) Hup(beta_M)>=1/2.
 ```
 
-This excludes convergence to zero along all cutoffs, not a sparse subsequence.
-It uses no entropy value or normality assertion for pi.
+This inequality alone excludes convergence to zero along all cutoffs, not a
+sparse subsequence. The stronger argument below also excludes sparse cutoffs.
+Neither uses an entropy value or normality assertion for pi.
 
 Resonant pairs also require care. Fix r in{1,4,5,6}, and extend
 U_l=sum_(k>=0)17^(-k)*16^(-(l*17^k-r)/8) to all positive l congruent to r
@@ -1492,10 +1493,82 @@ boundary multiplier and every d_j are irrational, outside rational-affine
 preservation. Alternatively the zero-boundary coefficient-matching recurrence
 p_0=w_0, p_(j-1)+p_j=w_j uniquely gives rational
 p_j=(-1)^j*sum_(i<=j)(-1)^i*w_i, with nonzero parity limits +/-alpha_4.
-Neither representation supplies an infinite-sum entropy bound. Sparse cutoffs
-and a controlled grouped remainder remain open. The
+Neither representation supplies an infinite-sum entropy bound. A controlled
+grouped remainder remains open; the sparse-cutoff question is resolved below. The
 [separate review](agy-reports/m4-continuation-review.md#resonant-column-entropy--2026-11-28-utc)
 accepts these paper diagnostics only; V, C_odd and M4 remain incomplete.
+
+### Separated cutoff differences rule out small-entropy remainders
+
+Let integers 0<=A<B admit a prime p>17 with p=1 mod8 and
+max(A,B/2)<p<=B. Then the actual difference T_B-T_A is 16-normal at paper
+level. This uses the retained Bailey–Crandall orbit estimate and transfers;
+all constants may depend on A,B. It does not cover arbitrary close cutoffs
+or give an early visit. The following argument supplies the noncancellation
+that normality of the two endpoints alone would not establish.
+
+Let S be the eligible cofactors in (A,B], D clear their c_r/m denominators,
+and X_n=D*S_n their scaled zero-initialized driven prefix. Hensel lifting
+gives lambda in 1+17Z_17 with lambda^8=-16. Its degree over Q is eight:
+eta=lambda^2/2 has order eight; s=eta+eta^(-1) satisfies s^2=2, and
+lambda/s is a primitive sixteenth root of unity. Thus the four powers
+lambda^r for r in{1,4,5,6} are rationally independent.
+
+For every tuple of nonnegative integers h_m, define
+
+```text
+L_h=-(D/16)*sum_(m in S)(c_r/m)*(-1)^((m-r)/8)*lambda^r*17^h_m.
+```
+
+Its lambda coefficient before multiplication by -D/16 has a unique term
+with p-adic valuation -1, at m=p; all others are p-integral since 2p>B.
+Hence L_h is nonzero. Also L_h is 17-adically integral.
+
+On I_K={(17^K-1)/8,...,(17^(K+1)-1)/8-1}, let k_m be the latest included
+depth and d_m=floor(log_17 m). Once all columns have started,
+h_m=K-k_m belongs to {d_m,d_m+1}. There are finitely many such tuples.
+The exact identity
+
+```text
+16^(-e(m,k))=(-1)^((m-r)/8)*lambda^r*lambda^(-m*17^k)
+```
+
+and lambda^(17^t)=1 mod17^(t+1) give
+`17^K*16^(-n)*X_n-L_h in 17^(K+1)Z_17` uniformly on I_K.
+Indeed, reversing the depth sum gives terms
+17^h*lambda^(-m*17^(K-h)); replacing each power by1 has that error,
+as does completing the geometric tail. Put C_S=max_h v_17(L_h).
+For sufficiently large K the reduced denominator is exactly
+q_n=17^(K-v_17(L_h)), so 17^(K-C_S)<=q_n<=17^K.
+
+Every retained column inserts at most once per level. Partitioning a level
+or its final partial prefix therefore gives at most |S|+1 homogeneous pieces.
+The retained pure-orbit bound gives piece count error
+C*(sqrt(q)+J/sqrt(q))*log^2(q). The denominator bounds make the total
+O_S(17^(K/2)*K^2); geometric summation gives whole-prefix discrepancy
+O_S(log^2(8N+8)/sqrt(N))+O_S(1/N), tending to zero.
+The exact static/driven tail is at most 8D/[15*(8n+9)], also tending to zero.
+The existing perturbation and rational-affine transfers prove normality of
+T_B-T_A, without selecting an inverse fractional-part branch.
+
+The existing [fixed-progression PNT](https://math.mit.edu/~drew/PrimeGapsOberwolfach1.pdf#page=3)
+gives theta(B;8,1)-theta(B/2;8,1)~B/8. Thus the prime hypothesis holds for
+every fixed A and all sufficiently large B>2A. For ANY fixed real x, set
+f(M)=Hup(x-T_M) and L=liminf_M f(M). Entropy subadditivity gives
+1<=f(A)+f(B). First taking liminf in B with A fixed yields f(A)>=1-L;
+only then taking liminf in A gives
+
+```text
+liminf_(M->infinity) Hup(x-T_M)>=1/2.
+```
+
+No unbounded cutoff subsequence can therefore provide upper remainder entropy
+tending to zero. This closes that proposed normal-core transfer for these
+complete cutoffs, for any x, without computing the entropy of pi. Other core
+families, grouped-tail estimates and actual visitation remain open. The
+[separate paper review](agy-reports/m4-continuation-review.md#separated-cutoff-entropy--2026-11-28-utc)
+retains external discrepancy, transfer, entropy and PNT inputs; no full source
+proof audit, Lean theorem or originality determination is claimed.
 
 ### The zero branch and what the scaled projection loses
 

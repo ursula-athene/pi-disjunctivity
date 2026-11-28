@@ -7523,3 +7523,45 @@ in the1302 packet has hash
 Parent893c20 reverified inventories and live owners at13:13:08 before
 these factual completion updates. The owner remains unchanged; final
 affected checks and publication remain due.
+
+## 2026-11-28 — Sparse cutoffs do not repair the entropy transfer
+
+The entropy diagnostics are published as
+`51de45a44c5e64c79caf0ca168e096d1b4314c2c`, parent 6c77cce.
+Docs 5db4e5, whitespace ab23c8/b8a448 and exact stage cfa798 passed;
+commit fd8478, post-commit 1d5a04, push efbd70 and remote 6cea13 verified
+publication at 13:14:15 UTC. The 1302 packet contains `publication.json`.
+Remote 2931d9 still matched at 13:21:24, when the next direction began.
+
+The [separated-cutoff argument](m4-fourier-windows.md#separated-cutoff-differences-rule-out-small-entropy-remainders)
+completed early, before its 13:25/13:40 checkpoints. The frozen 178-line report
+is `/tmp/pi-m4-separated-cutoff-entropy-20261128T1318Z-report-v1.md`, hash
+f957ae04f2b689fedea877e6b897716f12b130f65bf25870d3619d566b676cde.
+Parent fc61b5 read it completely. The unique-prime and algebraic-phase
+argument gives normality of sufficiently separated actual cutoff differences;
+its entropy consumer rules out small remainders along any unbounded cutoff
+subsequence. This applies to every fixed real x, so infers no entropy of pi.
+
+Separate paper review 13:19:10–13:22:42 found no D/I. Prior Q1 is closed
+for these complete cutoffs; other cores, close intervals, individual pairs,
+early visits and C_odd/V/M4 remain open. Full return in
+`/tmp/pi-m4-separated-cutoff-integration-20261128T1322Z/paper-review-full.md`:
+99f929eb0f5b9411c77066d6c63de082886b5c3e39f5401abc31055a8ffc0988.
+Parent ef95b3 reverified four source entries and all protected/untracked files.
+Exact production review and affected checks remain due; no Lean or census.
+
+The next bounded test asks whether an actual logarithmic identity can construct
+a variable subsequence approaching q*pi for q multiplicatively independent
+of 16. The [archived symmetry gap](m4-approximation-interfaces.md#a-second-radix-action-and-the-finite-blocking-test)
+already excludes treating a second action as established. The worker must
+produce a subsequence construction, not just restate orbit-closure invariance.
+Its 13:40/13:55 checkpoints reassess this unproved candidate. Research continues.
+
+Exact production review 13:25:32–13:26:57 found no D/I. Prior Q1 is closed
+only for these complete cutoffs; Q2–Q4 remain. All 176 diff lines, 10 frozen
+entries, 6 sources, 146 protected and 10 untracked files matched. Full return
+in the 1322 packet has hash
+9e60d22cbab348dfc91d71d0016d286342328010d7c3fbfa29c3c5b3e2892239.
+Parent 2464f2 reverified the inventories and live owners at 13:28:46 before
+these factual updates. The mathematical owner is unchanged. Final affected
+checks and publication remain due.

@@ -6335,3 +6335,40 @@ Both complete guides/procedure/critic were reused after unchanged-hash checks;
 read-only restrictions held. Parent893c20 reverified the inventories and
 owners before factual updates. Check executions and remote state remain
 caller evidence. Final affected checks and publication remain due.
+
+## Separated-cutoff entropy — 2026-11-28 UTC
+
+Paper scope: the 178-line report
+`/tmp/pi-m4-separated-cutoff-entropy-20261128T1318Z-report-v1.md`, hash
+f957ae04f2b689fedea877e6b897716f12b130f65bf25870d3619d566b676cde.
+Reviewer `/root/dyadic_grid_independent_review_0649` completed
+13:19:10–13:22:42, with no D/I. Prior Q1 is closed: no unbounded subsequence
+of these complete cutoffs has upper remainder entropy tending to zero.
+Q2 other core families, Q3 close interval sums and individual pair estimates,
+Q4 pi entropy/normality, early hits and C_odd/V/M4 remain open.
+
+The reviewer reconstructed degree eight, unique-prime nonvanishing, the uniform
+17^(K+1) error, exact reduced conductors, |S|+1 pieces, full-prefix discrepancy,
+static transfer and the ordered liminf deduction. All four source entries
+matched inventory 4b960535711102d97baba1e4a5dc8801e6d718b43f17e3755de3d1e602d80891.
+Full return in `/tmp/pi-m4-separated-cutoff-integration-20261128T1322Z/paper-review-full.md`
+has hash 99f929eb0f5b9411c77066d6c63de082886b5c3e39f5401abc31055a8ffc0988.
+Both complete guides, procedure and critic instructions were reused after
+unchanged-hash checks. External discrepancy/transfer, entropy and PNT inputs
+remain retained; no complete proof-chain audit was added. Zhang/Anderson are
+contextual, not imported conclusions. Read-only limits held: no writes, Git,
+network, builds, probes, checker, census, installation or delegation.
+Parent fc61b5/ef95b3 read and verified the report and full return. Exact
+three-document production review against 51de45a and affected checks remain.
+
+Exact production review 13:25:32–13:26:57 passed with no D/I. Prior Q1 is
+closed within scope; Q2–Q4 remain. All 176 diff lines reconstructed the three
+postimages; 10 manifest entries, 6 sources, 146 protected and 10 untracked
+files matched. Manifest
+e9080bf725d84e32c373400169aca77f58e614514ba5ff4e5f3c3be1e7928aea;
+full return in the 1322 packet
+9e60d22cbab348dfc91d71d0016d286342328010d7c3fbfa29c3c5b3e2892239.
+Both complete guides, procedure and critic instructions were reused after
+unchanged-hash checks; read-only limits held. Parent 2464f2 reverified all
+inventories and owners before factual updates. Executed checks and remote
+state remain caller evidence. Final affected checks and publication remain.
