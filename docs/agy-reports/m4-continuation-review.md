@@ -6372,3 +6372,25 @@ Both complete guides, procedure and critic instructions were reused after
 unchanged-hash checks; read-only limits held. Parent 2464f2 reverified all
 inventories and owners before factual updates. Executed checks and remote
 state remain caller evidence. Final affected checks and publication remain.
+
+## Time-selection discovery record — 2026-11-28 UTC
+
+Scope: two evidence records against ddbb0b4, with no mathematical owner or
+Lean change. The monodromy and prescribed-pole screens supplied no new
+finite-hit consumer; their calculations remain unadopted. Sources and full
+returns are retained in `/tmp/pi-m4-discovery-checkpoint-20261128T1340Z/` and
+the linked 70-line report. This record preserves publication, the corrected
+denominator concern, and the next bounded discovery question. It asserts no
+new impossibility theorem. Exact record review and affected checks remain;
+C_odd, V and M4 stay open.
+
+Exact record review 13:42:09–13:42:39 passed with no D/I; Q1–Q3 remain.
+All 53 diff lines reconstructed both postimages; 8 manifest entries,
+5 sources, 147 protected and 10 untracked files matched. Manifest
+4968a845711f6eced90670d72f2e4323479db8798f99e774b40f3ce3fb914160;
+full return in the 1340 packet
+b0998cdf91fdebef8fa34794146130f45ea51af74cd254737c63ff159eb5d709.
+Both complete guides, procedure and critic instructions were reused after
+unchanged-hash checks. Read-only limits held; worker execution and caller
+checks remain supplied evidence. Parent 6ee894 reverified integrity before
+factual updates. The screen calculations remain unadopted; final checks remain.

@@ -7565,3 +7565,37 @@ in the 1322 packet has hash
 Parent 2464f2 reverified the inventories and live owners at 13:28:46 before
 these factual updates. The mathematical owner is unchanged. Final affected
 checks and publication remain due.
+
+## 2026-11-28 — Two discovery screens and a fresh time-selection pass
+
+The separated-cutoff result is published as
+`ddbb0b47dc09185f7397e9b11e264b1832f5c0dd`, parent 51de45a. Docs 1908ea,
+whitespace 476067/192943 and exact stage 09e9da passed; commit 374bde,
+post-commit b0a6d5, push 98a458 and remote 87c993 verified publication at
+13:29:38 UTC. The 1322 packet contains `publication.json`; remote a156ed
+still matched at 13:33:56, when the next approximation test began.
+
+The variable-subsequence screen completed early at 13:27. Its logarithmic
+monodromy construction returned to the actual initialization/normalization
+gap and supplied no orbit-closure inclusion. Full worker return is retained
+in `/tmp/pi-m4-discovery-checkpoint-20261128T1340Z/monodromy-return.md`.
+The prescribed-pole screen also completed early, before 13:45/14:00. Its
+complete interpolant cancels the initially suspected weight-denominator
+factors, but no new finite-hit consumer survived the error/period comparison.
+Its unadopted report is `/tmp/pi-m4-prescribed-pole-screen-20261128T1341Z-v2.md`,
+hash 749d75299ecb50ee66e7133f7c4bd348474ec642b29b681a5bd7a28c98000594.
+Parent ea3002 read all 70 lines. Neither screen is adopted as a new theorem,
+nor as an exclusion of every modular coincidence or alternative construction.
+
+A fresh-context worker is testing a different actual time-selection mechanism,
+with 13:55/14:10 checkpoints and the archived failures supplied. These screens
+add no Lean change, actual-state census or C_odd/V/M4 acceptance. Keep the
+record compact; exact record review and affected checks remain due.
+
+Exact record review 13:42:09–13:42:39 completed without D/I. Q1 actual
+initialization, Q2 selected-time hits and Q3 C_odd/V/M4 remain. All 53 diff
+lines, 8 frozen entries, 5 sources, 147 protected and 10 untracked files
+matched. Full return in the 1340 packet has hash
+b0998cdf91fdebef8fa34794146130f45ea51af74cd254737c63ff159eb5d709.
+Parent 6ee894 reverified integrity at 13:43:17 before factual updates.
+This accepts the record, not the unadopted calculations. Final checks remain.
