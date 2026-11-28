@@ -7870,3 +7870,48 @@ files, 147 protected and 10 untracked files matched. Full return in the
 1523 packet: ca0ec6cdb97c4da774471e173cf5797dafed2d83e3c0267010b020a25f10f3d3.
 Parent cdc15c reverified all inventories and live owners before these
 factual updates. Both screens remain unadopted; final checks/publication remain.
+
+## 2026-11-28 — Reciprocal-series encoding screen
+
+The preceding checkpoint is published as
+`a03c155f1b37aa4f97ca62777c1d905c35e1adf4`, parent 5d56dfd. Docs e2899d,
+whitespace 3d6308/fa4268 and exact stage 58eb62 passed; commit 45ca52 and
+post-commit 1a96d1 verified scope. The push response crossed compaction;
+remote c3136c and parent 11d3f3 confirmed the matching remote HEAD without
+retrying the push. The 1523 packet now holds its publication receipt.
+
+The reciprocal-series worker completed its 58-line report at
+`/tmp/pi-m4-lambert-reciprocal-fit-20261128T1522Z/report.md`, hash
+e0040efce63cc3a9fa2ba5d406934b250f2cfd16ef693b73a41463498d70a239.
+Parent 0ec05c read it completely and c1c586 replayed its scalar checks
+successfully, without actual coefficient samples. Its termwise-integrality
+test forces omitted tails too large for the source's encoding mechanism.
+
+The root refinement tests cancellation within the whole local block:
+`/tmp/pi-m4-reciprocal-summed-block-20261128T1535Z/report.md`, hash
+32a58ae5df99b7b21143121347052f353083e63ec3eb8d764f1ed18c5972b3a4.
+The candidate uses the unique least valuation of the last term to exclude
+exact dyadic-grid encoding together with tail smaller than the grid spacing,
+also when target depth grows. It retains the precise thresholds, normalization
+and preceding-prefix caveat; it does not exclude approximate encoding, later
+tail wrap or visitation. Scalar checks 6644f8 passed. Both reports remain
+paper screens pending this review, with no Lean or mathematical-owner change.
+
+A fresh-context discovery worker now tests a distinct mechanism or identifies
+a discriminating failure, with checkpoints 15:47/16:02 UTC. The full actual
+phase and prior failure map were supplied; branch selection cannot be replaced
+by a finite algebraic elimination. No mechanism is yet adopted. The user's
+originality question was answered with the existing bounded comparison:
+developed here, no equivalent found, priority unconfirmed. C_odd, V and M4
+remain open. The 1536 packet retains the complete reciprocal worker return,
+source hashes and preceding publication receipt; review and checks remain due.
+
+The separate review completed 15:36:39–15:39:29 with no D. Its I1 natural
+parameter clarification is applied in immutable `report-v2.md` beside the
+root report, hash 4276ca127446993658d8367f3e62b859b0b5a8ad7a295d50f56bd9ee9f067ce6.
+Q1 approximate encoding/large-tail wrap, Q2 actual prefix and Q3 inversion/
+C_odd/V/M4 remain. The reviewer assessed the narrow universal paper argument,
+not only scalar checks, and found no unsupported step within that scope.
+Parent 98893a verified all eight frozen entries, five sources, 147 protected
+and 10 untracked files before the clarification and factual updates.
+No mathematical-owner or Lean theorem is added; final checks/publication remain.

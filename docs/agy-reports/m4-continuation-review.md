@@ -6604,3 +6604,37 @@ the Fischler source assessment nor the full external proof chain was
 independently certified. Retrievals, check executions and remote observations
 remain caller evidence. Parent cdc15c reverified all inventories and live
 owners before factual updates. Final affected checks/publication remain due.
+
+## Reciprocal-series encoding checkpoint — 2026-11-28 UTC
+
+Scope: two evidence records against a03c155, with the complete 58-line
+worker report and root's summed-block refinement. No Lean or mathematical
+owner changes. The narrow question is whether exact dyadic encoding of a
+contiguous block can coexist with a positive tail smaller than its grid
+spacing in the specified reciprocal-pi families. General phase distribution,
+large-tail wrap, actual preceding-prefix control and inversion transfer
+remain outside the claimed exclusion. The fresh discovery inquiry is
+prospective; no V or novelty conclusion is claimed.
+
+The packet `/tmp/pi-m4-reciprocal-checkpoint-20261128T1536Z/` retains exact
+pre/postimages, diff, scope and source inventories, complete worker return
+and preceding publication receipt. Parent c1c586/6644f8 replayed scalar
+checks only, with no actual coefficient samples. Review must distinguish
+those checks from the universal paper argument. Exact review and affected
+checks remain due; C_odd, V and M4 are still open.
+
+Review by `/root/dyadic_grid_independent_review_0649` completed
+15:36:39–15:39:29: no D; I1 explicit natural indices/normalization/depth
+applied in immutable root-report v2, hash
+4276ca127446993658d8367f3e62b859b0b5a8ad7a295d50f56bd9ee9f067ce6.
+Q1 approximate encoding/large-tail wrap, Q2 actual prefix and Q3 nonlinear
+transfer/C_odd/V/M4 remain. The complete return is `review-full.md` in the
+1536 packet. Both reports' narrow universal arguments were checked against
+the retained identities, separately from caller scalar-check receipts.
+All 69 diff lines reconstructed; eight manifest entries, five sources,
+147 protected and 10 untracked hashes matched. Manifest
+e4ddf9e3248c410f543c18f3eaacc5bd0e1e3f3959998e8ab8b8e8bfe411f904.
+Both complete guides, procedure and critic instructions were reused after
+unchanged-hash checks. Read-only limits held; no fresh external-source proof
+audit or Lean certification is supplied. Parent 98893a verified inventories
+and live owners before I1/factual updates. Final checks/publication remain.
