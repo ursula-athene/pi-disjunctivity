@@ -6271,3 +6271,30 @@ Parent a43610 independently reverified those inventories, baseline and empty
 index before these factual completion updates. Read-only limits held;
 execution and remote observations remain caller evidence. Final affected
 checks remain due. This is neither a new Lean result nor M4 acceptance.
+
+## Additive and projected discovery records — 2026-11-28 UTC
+
+This two-document scope records the published dd161b2 checkpoint and two
+inconclusive discovery returns. The Iyer consumer and periodic projection
+tests are not adopted mathematical results; their full returns are frozen
+in `/tmp/pi-m4-discovery-checkpoint-20261128T1240Z/`. No source proof-chain
+audit, original result, new Lean proof or V/M4 acceptance is requested.
+The review concerns accurate attribution, preserved limitations, actual
+publication evidence and exact task-owned scope. It must retain the
+missing single-time selection and actual integer-history obligations.
+Preparation began12:39:29 with12:47/12:58 checkpoints; exact review and
+affected validation remain required.
+
+Reviewer `/root/dyadic_grid_independent_review_0649` completed12:40:32–12:41:03
+with no D/I; Q1 single-time selection, Q2 actual joint branch/history and
+Q3 C_odd/V/M4 remain. It read all57 diff lines, both returns and the supplied
+publication receipt. All10 manifest entries, the separate source receipt,
+147 protected files,10 untracked files and both live postimages matched.
+Manifest0be73c4395fafec6bede808a6d441000b865939449573db4aef5ef8918d3ef43;
+full return `production-review-full.md` in the1240 packet:
+f51b6d0e15482a1bb78a2154a320528137e7f021225163f9d5d278f7ac762e7d.
+Parent714fed independently reverified integrity before factual updates.
+Both full guides/procedure/critic reads were reused after unchanged-hash
+checks. Read-only limits held. This is a record review; the calculations
+and source proofs remain unadopted, and execution/remote observations are
+caller evidence. Final affected checks remain due.

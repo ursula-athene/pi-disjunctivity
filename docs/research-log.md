@@ -7444,3 +7444,39 @@ and C_odd/V/M4 remain open. Full return in the1204 packet:
 Parent a43610 independently reverified the frozen/source/protected/live
 inventories before factual updates. Remote822ca4 matched5cd3885ec43cf57b0d277225d5d7fdd855661dba
 after the12:14:26 clock observation. Final affected checks remain due.
+
+## 2026-11-28 — Additive and projected screens retain initialization
+
+The fixed-anchor/source checkpoint is published as
+`dd161b2d8167838f8e80fad99bf2b311d745406c`, parent5cd3885e. Docs34f637,
+working/staged whitespace dc8b50/25370e and exact stage6ec65b passed;
+commit2a0202, post-commit d19c08, push9b64ff and remote6f335e verified
+publication. The1204 packet holds `publication.json`; remote865512 still
+matched after the12:38:28 UTC clock observation. No Lean changes.
+
+Two bounded discovery screens completed early, without a surviving M4
+candidate. `/root/restricted_multiplier_bridge_1224` checked the proposed
+consumer of [Iyer's digit-restricted multiplier theorem](https://arxiv.org/html/2312.01076):
+its subset-sum approximation supplies no single-time selection. The
+existing fixed-anchor comparison already distinguishes those claims.
+`/root/early_column_recovery_1225` tested a periodic correction for
+bounded-depth17-adic insertions; the projected construction still loses
+the actual integer branch described in the
+[owner](m4-fourier-windows.md#the-zero-branch-and-what-the-scaled-projection-loses).
+Neither calculation is adopted as a new theorem or source application.
+
+Full discovery returns are retained in
+`/tmp/pi-m4-discovery-checkpoint-20261128T1240Z/`. No production proof,
+actual-state census or Lean check was added. A fresh-context recovery
+worker now seeks a different test retaining the exact initialized history,
+with12:50/13:05 checkpoints. V, C_odd and M4 remain open; this recording
+checkpoint does not end research. Exact record review and affected checks
+remain due.
+
+Exact record review12:40:32–12:41:03 completed without D/I. Q1 single-time
+selection, Q2 actual integer history and Q3 C_odd/V/M4 remain. This accepts
+the attribution and limitations, not either unadopted calculation. Full
+return in the1240 packet:
+f51b6d0e15482a1bb78a2154a320528137e7f021225163f9d5d278f7ac762e7d.
+Parent714fed reverified all frozen/source/protected/live inventories before
+factual completion updates. Final affected checks remain due.
