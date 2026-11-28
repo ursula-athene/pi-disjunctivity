@@ -1781,3 +1781,30 @@ or actual digit information. Thus the eventual research consumer still needs the
 actual complementary numerator or initialized history. V/M4 remain open; continue
 past the intermediate formalization checkpoint. The research log owns publication
 receipts and exact bounded-cycle chronology.
+
+
+### Complete elementary grid in Lean — 2026-11-28 UTC
+
+The [elementary grid contract](m4-prime-compression.md#lean-formalization-of-the-elementary-grid-theorem)
+now composes in Lean. Its [actual consumers](../PiDisjunctivity/BBP/DenominatorGrid.lean)
+prove grid witnesses inside a positive complete period, strict normalized interval
+discrepancy for every unit numerator and for the actual rational prefix, and
+infinitely many actual prefix indices containing every word of each fixed length.
+The word length is chosen before the grid/anchor; no fixed rational is claimed
+to contain every word length. The existing digits and trailing-zero convention
+are unchanged. The prefix retains the inclusive index and original initialized
+BBP definition. All arithmetic conditions are discharged at the chosen anchors.
+
+The component reviews found no defect; exact trust/type/definition and boundary
+checks are in [Test.lean](../Test.lean). Final changed-file review is complete; publication
+receipts follow in the [review record](agy-reports/m4-continuation-review.md#elementary-grid-production-integration--2026-11-28-utc).
+The research log owns check/publication receipts. The complete-period proof uses
+finite translation invariance and double counting, so no unproved partition
+assumption remains. Historical compiled-root inputs unavailable during concurrent
+integration are explicitly distinguished from fresh successful replays.
+
+V and M4 remain open. The separate timing comparison still blocks transferring
+the guaranteed complete-period traversal through the available shadowing window.
+Resume the meta-plan's search for an estimate retaining the actual initialized
+numerator/complementary component; do not repeat generic-unit or 17-only phase
+selection. This internal formalization checkpoint is not a stopping boundary.

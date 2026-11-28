@@ -17,6 +17,14 @@ public import PiDisjunctivity.BBP.Series
 public import PiDisjunctivity.BBP.Orbit
 public import PiDisjunctivity.BBP.Tail
 public import PiDisjunctivity.BBP.RationalPrefix
+public import PiDisjunctivity.BBP.PrimeDenominator
+public import PiDisjunctivity.BBP.EulerCover
+public import PiDisjunctivity.PrimeGrid17
+public import PiDisjunctivity.ShiftedGrid
+public import PiDisjunctivity.RationalHexOrbit
+public import PiDisjunctivity.BBP.DenominatorGrid
+public import PiDisjunctivity.FiniteWordDiscrepancy
+public import PiDisjunctivity.RationalGridDiscrepancy
 import PiDisjunctivity.Examples
 
 /-! Hexadecimal disjunctivity: foundations, orbit criteria, BBP analytic lemmas, and examples. -/

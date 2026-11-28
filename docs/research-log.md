@@ -5454,3 +5454,74 @@ retains the full cycle. Final outcome-only documentation and whitespace checks
 precede publication. The initial 20-minute interface endpoint completed at
 23:48:16; a new 20-minute composition cycle now joins the reviewed selected
 exponent, principal units and CRT. This is not a new stopping boundary for M4.
+
+
+Publication receipt, 2026-11-27 23:54:30 UTC: ordinary push f8c8e5 and remote
+verification 77e9b7 confirm `a0597c124329e3a25b5c4c0b628c05da5187100e` on
+`origin/feature/m4-universal-visitation`. The nine-path rational-prefix checkpoint
+passed full build, Test, documentation, process and working/staged whitespace
+checks. Exact committed paths/blobs, parent, empty index, owned clean files,
+15 unchanged protected and 11 unrelated identities matched; the reviewed root
+and Test changes were intentional. Post-commit necessity inspection found no
+required repair. The next active cadence check is due by 00:09:30 UTC or at an
+earlier result/direction event. No PR was opened. The complete grid and V remain open.
+
+
+### Completing the elementary grid layers — 2026-11-28 UTC
+
+The 23:48:16 composition cycle reached its endpoint at 00:04:41, before
+00:08:16: exact LTE, selected Carmichael exponent, principal units, CRT and
+real fractional-part grid translations all compiled. Separate actual denominator
+decomposition and exact shifted-grid counting also compiled. Independent
+component review, 00:05:43–00:09:19, found no defect or added improvement; its
+remaining full-period consumer is retained. Euler covering had already received
+its complete independent review at 23:56:42.
+
+Production integration began 00:06:44 with a 00:31:44 reassessment bound. The
+first root build exposed missing public imports and tactic availability; these
+were repaired. No failed build is acceptance evidence. The first six modules
+then passed root build and 32 exact public type/axiom probes. Actual BBP numerator
+and denominator substitution compiled at 00:09 UTC. Finite-set averaging and
+period/cardinality interfaces passed parent replays; their independent review
+completed 00:14:04 with no defect. The historical root compiled artifact was not
+retained; the exact intermediate source was reconstructed and hash-matched, and
+fresh replays supply the new compilation evidence. A literal coset partition is
+unnecessary: finite translation invariance and double counting give the same
+complete-period count. The final actual consumer and word consequences still
+require composition, checks and changed-file review before publication.
+
+Remote verification 8531de at 00:15 UTC still matched
+`a0597c124329e3a25b5c4c0b628c05da5187100e`. No reviewed unpublished commit was
+waiting; the new modules remain in integration. Next active cadence check is
+due by 00:30 UTC or an earlier result/direction event. V and M4 remain open.
+
+
+At 00:20:57 UTC, the assembled actual-denominator discrepancy, actual-prefix
+discrepancy, fixed-word consumer, arbitrary-anchor consequence and explicit
+infinitely-many-prefix theorem all compiled cleanly (5b9776), using only the
+permitted axioms. The positive-period/grid-witness consumer had compiled at
+00:17 UTC (191689). The generic full-period composition was independently
+reviewed to completion at 00:22:33, and the fixed-word branch at 00:19:58;
+neither review found a defect or added improvement. Prior missing-composition
+questions are now discharged by these compiled consumers, subject to the final
+integration review. Root build 1875bd passed with 7237 jobs. The first expanded
+Test run caught a generated type-check fragment truncated at a let-binding;
+that test syntax was repaired and is being rerun. This was not a mathematical
+proof failure. V/M4 remain open.
+
+
+Expanded Test rerun09c694 passed cleanly; all49 new public axiom lists match the
+permitted three in a separate root audit a82e3c. Documentation6c12a1, process
+tests820c57, working/staged whitespace0a50e4/50dfe5 and pin/definition preservation
+de0392 passed. The final exact16-path integration packet now enters independent
+review. No acceptance or publication is inferred from the component reviews alone.
+
+
+Final integration review completed00:32:00 UTC with no defect. Its sole
+improvement—a stale “No Lean proof” clause—was repaired and independently
+verified00:33:38. The [review record](agy-reports/m4-continuation-review.md#elementary-grid-production-integration--2026-11-28-utc)
+retains every disposition and full captures. The25-minute integration cycle was
+reassessed at00:30:45 while review continued; it was not used to stop the task.
+All mathematics and root audits were already complete. Final outcome-only docs
+and whitespace checks follow before commit/push; no Lean source changed after
+the accepted review. The elementary grid is formalized, while V/M4 remain open.

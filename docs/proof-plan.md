@@ -1142,10 +1142,15 @@ numerator, complete-period counts and fixed-word quantifier order.
 Proceed through reviewed internal layers: rational/real prefix identity and
 odd bounded-prime denominator; exact selected 17-valuation and Euler covering;
 Carmichael/principal-unit/CRT grid; complete-period coset counting and arbitrarily
-large anchors. The first layer has kernel-checked declarations in
-[RationalPrefix.lean](../PiDisjunctivity/BBP/RationalPrefix.lean) and root audits.
-No intermediate lemma or grid-subset statement substitutes for the complete
-paper theorem. The independent contract review retains every unfinished layer.
+large anchors. These layers now compose into kernel-checked declarations in
+[DenominatorGrid.lean](../PiDisjunctivity/BBP/DenominatorGrid.lean), with root
+exports, [exact audits](../Test.lean) and completed independent integration review.
+The actual-denominator and actual-prefix discrepancy bounds are strict, count
+every exponent in one positive complete period, and assume only the explicit
+d,r covering conditions (plus numerator coprimality for the arbitrary-numerator
+version). For every fixed word length, infinitely many actual prefixes contain
+all words of that length. Finite translation invariance and double counting
+supply the complete-period statement; no grid-subset substitution is used.
 The separate PNT-dependent timing comparison is outside this elementary proof.
 
 These are supporting results within M4. Even the completed frozen-period theorem

@@ -836,7 +836,8 @@ anchors. Every length-w hexadecimal cylinder has an interior orbit point, so
 every length-w word occurs in the complete period of fract(S_N) for infinitely
 many such N. This is not normality of one rational number, simultaneous coverage
 of arbitrary word lengths at one anchor, or occurrence in the future forced
-BBP sequence. No Lean proof or originality determination is claimed.
+BBP sequence. The [Lean formalization](#lean-formalization-of-the-elementary-grid-theorem)
+is now kernel checked. Originality remains undetermined.
 
 ### Source context and the actual timing gap
 
@@ -970,7 +971,32 @@ and all casts are real. Merely finding one grid subset does not discharge this
 counting statement. Arbitrarily large anchors and the fixed-word corollary must
 also be proved. No PNT input is needed for this elementary theorem.
 
-The exact selected valuation and general principal-unit/Carmichael components
-are being developed separately in scratch Lean; they are not yet production
-exports or a composed grid proof. The PNT-dependent timing comparison stays
-paper mathematics. Full grid formalization and actual visitation remain open.
+The complete elementary statement is now kernel checked in
+[DenominatorGrid.lean](../PiDisjunctivity/BBP/DenominatorGrid.lean), with completed
+independent integration review. `bbpCover_den_discrepancy` proves the stronger strict
+error bound for every natural numerator coprime to the actual denominator;
+`bbpCover_prefix_discrepancy` substitutes the actual positive prefix itself.
+`bbpCover_prefix_grid_in_period` bounds the grid witnesses by its positive
+multiplicative period. `bbpCover_infinitely_many_prefix_words` proves that, for
+each fixed length w, infinitely many actual prefixes contain every such word
+with starting index inside one complete period. Words may cross its boundary.
+
+The proof joins exact terminal valuation and decomposition in
+[PrimeDenominator.lean](../PiDisjunctivity/BBP/PrimeDenominator.lean), elementary
+[Euler covering](../PiDisjunctivity/BBP/EulerCover.lean), and the
+[Carmichael/principal-unit construction](../PiDisjunctivity/PrimeGrid17.lean).
+[Finite-orbit indexing](../PiDisjunctivity/RationalHexOrbit.lean) and
+[translation averaging](../PiDisjunctivity/ShiftedGrid.lean) give the
+[complete-period count](../PiDisjunctivity/RationalGridDiscrepancy.lean).
+This finite invariance/double-counting proof replaces an explicit coset partition
+without weakening the counting statement. The existing digit/cylinder convention
+is consumed by [the fixed-word implication](../PiDisjunctivity/FiniteWordDiscrepancy.lean).
+
+The root exports and exact definitions, theorem types, boundary consumers and
+permitted-axiom guards are checked in [Test.lean](../Test.lean). The selected
+parameters remain d>0, r>1 and r congruent to1 modulo the defined covering lcm;
+no distribution premise is added to the actual-prefix results. Independent
+component and final changed-file reviews are complete, as recorded in the
+[review report](agy-reports/m4-continuation-review.md#elementary-grid-production-integration--2026-11-28-utc).
+The PNT-dependent timing comparison remains paper mathematics. This theorem
+still does not locate an actual early visit or establish V/M4.

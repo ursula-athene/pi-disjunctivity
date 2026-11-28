@@ -701,3 +701,699 @@ info: 'PiDisjunctivity.bbpPartialSumRat_den_prime_le' depends on axioms:
 -/
 #guard_msgs (whitespace := lax) in
 #print axioms PiDisjunctivity.bbpPartialSumRat_den_prime_le
+
+
+-- Elementary actual-denominator grid theorem: exact exported interfaces and trust audits.
+section ElementaryGridChecks
+open PiDisjunctivity PiDisjunctivity.PrimeGrid17 PiDisjunctivity.RationalHexOrbit
+
+example : ∀ (k N : ℕ) (_hk : 0 < k)
+    (_hN : 8 * N + 1 = 17 ^ k),
+    padicValRat 17 (bbpPartialSumRat N) = -(k : ℤ) :=
+  PiDisjunctivity.bbpPartialSumRat_val17
+
+example : ∀ (k N : ℕ) (_hk : 0 < k)
+    (_hN : 8 * N + 1 = 17 ^ k),
+    multiplicity 17 (bbpPartialSumRat N).den = k :=
+  PiDisjunctivity.bbpPartialSumRat_den_val17
+
+example : ∀ (k : ℕ),
+    8 * ((17 ^ k - 1) / 8) + 1 = 17 ^ k :=
+  PiDisjunctivity.bbpAnchor17_eq
+
+example : ∀ (k : ℕ) (_hk : 0 < k),
+    multiplicity 17 (bbpPartialSumRat ((17 ^ k - 1) / 8)).den = k :=
+  PiDisjunctivity.bbpPartialSumRat_den_anchor17
+
+example : ∀ (k N : ℕ) (_hk : 0 < k)
+    (_hN : 8 * N + 1 = 17 ^ k),
+    ∃ M : ℕ, (bbpPartialSumRat N).den = 17 ^ k * M ∧ M.Coprime 34 ∧ 0 < M :=
+  PiDisjunctivity.bbpPartialSumRat_den_decomposition17
+
+example : ∀ (k : ℕ) (_hk : 0 < k),
+    ∃ M : ℕ, (bbpPartialSumRat ((17 ^ k - 1) / 8)).den = 17 ^ k * M ∧
+      M.Coprime 34 ∧ 0 < M :=
+  PiDisjunctivity.bbpPartialSumRat_den_anchor_decomposition17
+
+example : ∀ (d : ℕ),
+    0 < bbpCoverLcm d :=
+  PiDisjunctivity.bbpCoverLcm_pos
+
+example : ∀ (d r ell : ℕ) (_hd : 0 < d) (_hr : 1 < r)
+    (_hcong : r ≡ 1 [MOD bbpCoverLcm d]) (_hp : ell.Prime)
+    (_hle : ell ≤ 17 ^ (r + d) + 5),
+    ¬17 ^ r ∣ ell - 1 :=
+  PiDisjunctivity.bbpCover_prime_exclusion
+
+example : ∀ (d r ell : ℕ) (_hd : 0 < d) (_hr : 1 < r)
+    (_hcong : r ≡ 1 [MOD bbpCoverLcm d]) (_hp : ell.Prime)
+    (_hle : ell ≤ 17 ^ (r + d) + 5),
+    (ell - 1).factorization 17 ≤ r - 1 :=
+  PiDisjunctivity.bbpCover_prime_factorization_le
+
+example : ∀ (d B : ℕ),
+    ∃ r : ℕ, B < r ∧ 1 < r ∧ r ≡ 1 [MOD bbpCoverLcm d] :=
+  PiDisjunctivity.bbpCover_admissible_exponent_gt
+
+example : ∀ (d r ell : ℕ) (_hd : 0 < d) (_hr : 1 < r)
+    (_hcong : r ≡ 1 [MOD bbpCoverLcm d]) (_hp : ell.Prime)
+    (_hdiv : ell ∣ (bbpPartialSumRat ((17 ^ (r + d) - 1) / 8)).den),
+    (ell - 1).factorization 17 ≤ r - 1 :=
+  PiDisjunctivity.bbpCover_prefix_prime_factorization_le
+
+example : ∀ (d B : ℕ),
+    ∃ r : ℕ, 1 < r ∧ r ≡ 1 [MOD bbpCoverLcm d] ∧ B < (17 ^ (r + d) - 1) / 8 :=
+  PiDisjunctivity.bbpCover_admissible_anchor_gt
+
+example : ∀ (M r d a j : ℕ) (_hM : M.Coprime 34) (_hr : 1 ≤ r)
+    (_hb : ∀ p : ℕ, p.Prime → p ∣ M → (p - 1).factorization 17 ≤ r - 1)
+    (_ha : a.Coprime 17),
+    ∃ t : ℕ, Int.fract ((16 : ℝ) ^ t * ((a : ℝ) / (17 ^ (d + r) * M))) =
+      Int.fract ((a : ℝ) / (17 ^ (d + r) * M) + j / (17 : ℝ) ^ d) :=
+  PiDisjunctivity.PrimeGrid17.rationalGrid17
+
+example : ∀ (m : ℕ) (x u v : ℝ)
+    (_hu : 0 ≤ u) (_huv : u ≤ v) (_hv : v ≤ 1),
+    (shiftedGridIcoCount m x u v : ℤ) = ⌊(m : ℝ) * (x - u)⌋-⌊(m : ℝ) * (x - v)⌋ :=
+  PiDisjunctivity.shiftedGridIcoCount_eq_floor
+
+example : ∀ (m : ℕ) (x u v : ℝ)
+    (_hu : 0 ≤ u) (_huv : u ≤ v) (_hv : v ≤ 1),
+    |(shiftedGridIcoCount m x u v : ℝ) - (m : ℝ) * (v - u)| < 1 :=
+  PiDisjunctivity.shiftedGridIcoCount_discrepancy_lt_one
+
+example : ∀ (m : ℕ) (_hm : 0 < m) (x u v : ℝ)
+    (_hu : 0 ≤ u) (_huv : u ≤ v) (_hv : v ≤ 1),
+    |(shiftedGridIcoCount m x u v : ℝ) / m - (v - u)| < 1 / (m : ℝ) :=
+  PiDisjunctivity.shiftedGridIcoCount_normalized_discrepancy
+
+example : ∀ (m : ℕ) (x : ℝ),
+    shiftedGridIcoCount m x 0 1 = m :=
+  PiDisjunctivity.shiftedGridIcoCount_full
+
+example : ∀ (m : ℕ) (x u : ℝ) (_hu : 0 ≤ u) (_hu1 : u ≤ 1),
+    shiftedGridIcoCount m x u u = 0 :=
+  PiDisjunctivity.shiftedGridIcoCount_self
+
+example : ∀ (S : Finset ℝ) (_hSne : S.Nonempty)
+    (m : ℕ) (_hm : 0 < m)
+    (_hS : ∀ x ∈ S, x ∈ Set.Ico (0 : ℝ) 1)
+    (_hinv : ∀ j < m, ∀ x ∈ S, Int.fract (x + (j : ℝ) / m) ∈ S)
+    (u v : ℝ) (_hu : 0 ≤ u) (_huv : u ≤ v) (_hv : v ≤ 1),
+    |(finiteIcoCount S u v : ℝ) / (S.card : ℝ) - (v - u)| < 1 / (m : ℝ) :=
+  PiDisjunctivity.finiteCircle_grid_discrepancy
+
+example : ∀ (a q t : ℕ),
+    orbitPoint a q t = Int.fract (((16 ^ t * a : ℕ) : ℝ) / q) :=
+  PiDisjunctivity.RationalHexOrbit.orbitPoint_eq_fract_nat
+
+example : ∀ (a b q : ℕ) (_hq : 0 < q),
+    Int.fract ((a : ℝ) / q) = Int.fract ((b : ℝ) / q) ↔ a ≡ b [MOD q] :=
+  PiDisjunctivity.RationalHexOrbit.fract_nat_div_eq_iff
+
+example : ∀ (q : ℕ) (_hb : Nat.Coprime 16 q),
+    0 < orderOf (16 : ZMod q) :=
+  PiDisjunctivity.RationalHexOrbit.period_pos
+
+example : ∀ (a q : ℕ) (_hq : 0 < q) (_ha : a.Coprime q),
+    Set.InjOn (orbitPoint a q) (Set.Iio (orderOf (16 : ZMod q))) :=
+  PiDisjunctivity.RationalHexOrbit.orbitPoint_injOn
+
+example : ∀ (a q t : ℕ) (_hq : 0 < q),
+    orbitPoint a q (t % orderOf (16 : ZMod q)) = orbitPoint a q t :=
+  PiDisjunctivity.RationalHexOrbit.orbitPoint_mod_period
+
+example : ∀ (a q t : ℕ),
+    orbitPoint a q t ∈ Set.Ico (0 : ℝ) 1 :=
+  PiDisjunctivity.RationalHexOrbit.orbitPoint_mem_Ico
+
+example : ∀ (a q : ℕ),
+    (orbitSet a q : Set ℝ) ⊆ Set.Ico 0 1 :=
+  PiDisjunctivity.RationalHexOrbit.orbitSet_subset_Ico
+
+example : ∀ (a q : ℕ) (_hq : 0 < q) (_ha : a.Coprime q),
+    (orbitSet a q).card = orderOf (16 : ZMod q) :=
+  PiDisjunctivity.RationalHexOrbit.orbitSet_card
+
+example : ∀ (a q t : ℕ) (_hq : 0 < q) (_hb : Nat.Coprime 16 q),
+    orbitPoint a q t ∈ orbitSet a q :=
+  PiDisjunctivity.RationalHexOrbit.orbitPoint_mem_orbitSet
+
+example : ∀ (a q : ℕ) (_hq : 0 < q) (_hb : Nat.Coprime 16 q) (x : ℝ),
+    x ∈ orbitSet a q ↔ ∃ t : ℕ, orbitPoint a q t = x :=
+  PiDisjunctivity.RationalHexOrbit.mem_orbitSet_iff
+
+example : ∀ (a q : ℕ) (_hq : 0 < q) (_ha : a.Coprime q)
+    (A : ℝ → Prop) [DecidablePred A],
+    ((orbitSet a q).filter A).card =
+      ((Finset.range (orderOf (16 : ZMod q))).filter (fun t => A (orbitPoint a q t))).card :=
+  PiDisjunctivity.RationalHexOrbit.orbitSet_filter_card
+
+example : ∀ (x : ℝ) (_hx : 0 ≤ x)
+    (P : ℕ) (_hP : 0 < P) (w : ℕ) (epsilon : ℝ)
+    (_hepsilon : epsilon < 1 / (16 : ℝ) ^ w)
+    (_hdisc : ∀ u v : ℝ, 0 ≤ u → u < v → v ≤ 1 →
+      |(hexadecimalPrefixIcoCount x P u v : ℝ) / (P : ℝ) - (v - u)| ≤ epsilon)
+    (s : Fin w → Fin 16),
+    ∃ t < P, ∀ i : Fin w, baseDigit 16 x (t + i.val) = (s i).val :=
+  PiDisjunctivity.word_occurs_before_of_discrepancy
+
+example : ∀ (w : ℕ),
+    1 / (17 : ℝ) ^ (w + 1) < 1 / (16 : ℝ) ^ w :=
+  PiDisjunctivity.grid17_mesh_lt_cylinder
+
+example : ∀ (w : ℕ),
+    ∃ d : ℕ, 0 < d ∧ 1 / (17 : ℝ) ^ d < 1 / (16 : ℝ) ^ w :=
+  PiDisjunctivity.exists_grid17_mesh_lt_cylinder
+
+example : ∀ (x : ℝ) (_hx : 0 ≤ x)
+    (P : ℕ) (_hP : 0 < P) (w : ℕ)
+    (_hdisc : ∀ u v : ℝ, 0 ≤ u → u < v → v ≤ 1 →
+      |(hexadecimalPrefixIcoCount x P u v : ℝ) / (P : ℝ) - (v - u)| ≤ 1 / (17 : ℝ) ^ (w + 1))
+    (s : Fin w → Fin 16),
+    ∃ t < P, ∀ i : Fin w, baseDigit 16 x (t + i.val) = (s i).val :=
+  PiDisjunctivity.word_occurs_before_of_grid17_discrepancy
+
+example : ∀ (x : ℝ) (_hx : 0 ≤ x)
+    (P : ℕ) (_hP : 0 < P) (epsilon : ℝ) (_hepsilon : epsilon < 1)
+    (_hdisc : ∀ u v : ℝ, 0 ≤ u → u < v → v ≤ 1 →
+      |(hexadecimalPrefixIcoCount x P u v : ℝ) / (P : ℝ) - (v - u)| ≤ epsilon)
+    (s : Fin 0 → Fin 16),
+    ∃ t < P, ∀ i : Fin 0, baseDigit 16 x (t + i.val) = (s i).val :=
+  PiDisjunctivity.empty_word_occurs_before_of_discrepancy
+
+example : ∀ (x : ℝ) (_hx : 0 ≤ x)
+    (P : ℕ) (_hP : 0 < P) (w : ℕ) (epsilon : ℝ)
+    (_hepsilon : epsilon < 1 / (16 : ℝ) ^ w)
+    (_hdisc : ∀ u v : ℝ, 0 ≤ u → u < v → v ≤ 1 →
+      |(hexadecimalPrefixIcoCount x P u v : ℝ) / (P : ℝ) - (v - u)| ≤ epsilon),
+    ∃ t < P, ∀ i : Fin w, baseDigit 16 x (t + i.val) = 0 :=
+  PiDisjunctivity.zero_word_occurs_before_of_discrepancy
+
+example : ∀ (M r d a : ℕ) (_hM : M.Coprime 34) (_hr : 1 ≤ r)
+    (_hb : ∀ p : ℕ, p.Prime → p ∣ M → (p - 1).factorization 17 ≤ r - 1)
+    (_ha : a.Coprime (17 ^ (d + r) * M)) (j : ℕ) (x : ℝ)
+    (_hx : x ∈ orbitSet a (17 ^ (d + r) * M)),
+    Int.fract (x + (j : ℝ) / (17 : ℝ) ^ d) ∈ orbitSet a (17 ^ (d + r) * M) :=
+  PiDisjunctivity.RationalHexOrbit.orbitSet_grid_invariant
+
+example : ∀ (M r d a : ℕ) (_hM : M.Coprime 34) (_hr : 1 ≤ r)
+    (_hb : ∀ p : ℕ, p.Prime → p ∣ M → (p - 1).factorization 17 ≤ r - 1)
+    (_ha : a.Coprime (17 ^ (d + r) * M))
+    (u v : ℝ) (_hu : 0 ≤ u) (_huv : u ≤ v) (_hv : v ≤ 1),
+    |(((Finset.range (orderOf (16 : ZMod (17 ^ (d + r) * M)))).filter
+        (fun t => orbitPoint a (17 ^ (d + r) * M) t ∈ Set.Ico u v)).card : ℝ) /
+      (orderOf (16 : ZMod (17 ^ (d + r) * M)) : ℝ) - (v - u)| < 1 / (17 : ℝ) ^ d :=
+  PiDisjunctivity.RationalHexOrbit.rational_period_grid_discrepancy
+
+example : ∀ (M r d a : ℕ) (_hM : M.Coprime 34) (_hr : 1 ≤ r)
+    (_hb : ∀ p : ℕ, p.Prime → p ∣ M → (p - 1).factorization 17 ≤ r - 1)
+    (_ha : a.Coprime (17 ^ (d + r) * M))
+    (u v : ℝ) (_hu : 0 ≤ u) (_huv : u ≤ v) (_hv : v ≤ 1),
+    let q : ℕ := 17 ^ (d + r) * M
+    let P : ℕ := orderOf (16 : ZMod q)
+    0 < P ∧
+      |(((Finset.range P).filter
+          (fun t => Int.fract ((16 : ℝ) ^ t * ((a : ℝ) / q)) ∈ Set.Ico u v)).card : ℝ) /
+        (P : ℝ) - (v - u)| < 1 / (17 : ℝ) ^ d :=
+  PiDisjunctivity.RationalHexOrbit.rational_period_grid_contract
+
+example : ∀ (d r a j : ℕ) (_hd : 0 < d) (_hr : 1 < r)
+    (_hcong : r ≡ 1 [MOD bbpCoverLcm d])
+    (_ha : a.Coprime (bbpPartialSumRat ((17 ^ (r + d) - 1) / 8)).den),
+    ∃ t : ℕ,
+      Int.fract ((16 : ℝ) ^ t * ((a : ℝ) /
+        (bbpPartialSumRat ((17 ^ (r + d) - 1) / 8)).den)) =
+      Int.fract ((a : ℝ) / (bbpPartialSumRat ((17 ^ (r + d) - 1) / 8)).den +
+        j / (17 : ℝ) ^ d) :=
+  PiDisjunctivity.bbpCover_den_grid
+
+example : ∀ (d r j : ℕ) (_hd : 0 < d) (_hr : 1 < r)
+    (_hcong : r ≡ 1 [MOD bbpCoverLcm d]),
+    ∃ t : ℕ, Int.fract ((16 : ℝ) ^ t *
+        (bbpPartialSumRat ((17 ^ (r + d) - 1) / 8) : ℝ)) =
+      Int.fract ((bbpPartialSumRat ((17 ^ (r + d) - 1) / 8) : ℝ) + j / (17 : ℝ) ^ d) :=
+  PiDisjunctivity.bbpCover_prefix_grid
+
+example : ∀ (n : ℕ),
+    0 < orderOf (16 : ZMod (bbpPartialSumRat n).den) :=
+  PiDisjunctivity.bbpPartialSumRat_period_pos
+
+example : ∀ (d r a j : ℕ) (_hd : 0 < d) (_hr : 1 < r)
+    (_hcong : r ≡ 1 [MOD bbpCoverLcm d])
+    (_ha : a.Coprime (bbpPartialSumRat ((17 ^ (r + d) - 1) / 8)).den),
+    ∃ t < orderOf (16 : ZMod (bbpPartialSumRat ((17 ^ (r + d) - 1) / 8)).den),
+      Int.fract ((16 : ℝ) ^ t * ((a : ℝ) /
+        (bbpPartialSumRat ((17 ^ (r + d) - 1) / 8)).den)) =
+      Int.fract ((a : ℝ) / (bbpPartialSumRat ((17 ^ (r + d) - 1) / 8)).den +
+        j / (17 : ℝ) ^ d) :=
+  PiDisjunctivity.bbpCover_den_grid_in_period
+
+example : ∀ (d r j : ℕ) (_hd : 0 < d) (_hr : 1 < r)
+    (_hcong : r ≡ 1 [MOD bbpCoverLcm d]),
+    ∃ t < orderOf (16 : ZMod (bbpPartialSumRat ((17 ^ (r + d) - 1) / 8)).den),
+      Int.fract ((16 : ℝ) ^ t * (bbpPartialSumRat ((17 ^ (r + d) - 1) / 8) : ℝ)) =
+      Int.fract ((bbpPartialSumRat ((17 ^ (r + d) - 1) / 8) : ℝ) + j / (17 : ℝ) ^ d) :=
+  PiDisjunctivity.bbpCover_prefix_grid_in_period
+
+example : ∀ (d r a : ℕ) (_hd : 0 < d) (_hr : 1 < r)
+    (_hcong : r ≡ 1 [MOD bbpCoverLcm d])
+    (_ha : a.Coprime (bbpPartialSumRat ((17 ^ (r + d) - 1) / 8)).den)
+    (u v : ℝ) (_hu : 0 ≤ u) (_huv : u ≤ v) (_hv : v ≤ 1),
+    |(hexadecimalPrefixIcoCount
+        ((a : ℝ) / (bbpPartialSumRat ((17 ^ (r + d) - 1) / 8)).den)
+        (orderOf (16 : ZMod (bbpPartialSumRat ((17 ^ (r + d) - 1) / 8)).den)) u v : ℝ) /
+      (orderOf (16 : ZMod (bbpPartialSumRat ((17 ^ (r + d) - 1) / 8)).den) : ℝ) - (v - u)| <
+      1 / (17 : ℝ) ^ d :=
+  PiDisjunctivity.bbpCover_den_discrepancy
+
+example : ∀ (d r : ℕ) (_hd : 0 < d) (_hr : 1 < r)
+    (_hcong : r ≡ 1 [MOD bbpCoverLcm d])
+    (u v : ℝ) (_hu : 0 ≤ u) (_huv : u ≤ v) (_hv : v ≤ 1),
+    |(hexadecimalPrefixIcoCount (bbpPartialSumRat ((17 ^ (r + d) - 1) / 8) : ℝ)
+        (orderOf (16 : ZMod (bbpPartialSumRat ((17 ^ (r + d) - 1) / 8)).den)) u v : ℝ) /
+      (orderOf (16 : ZMod (bbpPartialSumRat ((17 ^ (r + d) - 1) / 8)).den) : ℝ) - (v - u)| <
+      1 / (17 : ℝ) ^ d :=
+  PiDisjunctivity.bbpCover_prefix_discrepancy
+
+example : ∀ (w r : ℕ) (_hr : 1 < r)
+    (_hcong : r ≡ 1 [MOD bbpCoverLcm (w + 1)]) (s : Fin w → Fin 16),
+    ∃ t < orderOf (16 : ZMod (bbpPartialSumRat ((17 ^ (r + (w + 1)) - 1) / 8)).den),
+      ∀ i : Fin w, baseDigit 16 (bbpPartialSumRat ((17 ^ (r + (w + 1)) - 1) / 8) : ℝ)
+        (t + i.val) = (s i).val :=
+  PiDisjunctivity.bbpCover_prefix_words
+
+example : ∀ (w B : ℕ),
+    ∃ N : ℕ, B < N ∧ ∀ s : Fin w → Fin 16,
+      ∃ t < orderOf (16 : ZMod (bbpPartialSumRat N).den),
+        ∀ i : Fin w, baseDigit 16 (bbpPartialSumRat N : ℝ) (t + i.val) = (s i).val :=
+  PiDisjunctivity.bbpCover_arbitrarily_large_prefix_words
+
+example : ∀ (w : ℕ),
+    Set.Infinite {N : ℕ | ∀ s : Fin w → Fin 16,
+      ∃ t < orderOf (16 : ZMod (bbpPartialSumRat N).den),
+        ∀ i : Fin w, baseDigit 16 (bbpPartialSumRat N : ℝ) (t + i.val) = (s i).val} :=
+  PiDisjunctivity.bbpCover_infinitely_many_prefix_words
+
+/--
+info: 'PiDisjunctivity.bbpPartialSumRat_val17' depends on axioms:
+[propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms PiDisjunctivity.bbpPartialSumRat_val17
+
+/--
+info: 'PiDisjunctivity.bbpPartialSumRat_den_val17' depends on axioms:
+[propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms PiDisjunctivity.bbpPartialSumRat_den_val17
+
+/--
+info: 'PiDisjunctivity.bbpAnchor17_eq' depends on axioms:
+[propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms PiDisjunctivity.bbpAnchor17_eq
+
+/--
+info: 'PiDisjunctivity.bbpPartialSumRat_den_anchor17' depends on axioms:
+[propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms PiDisjunctivity.bbpPartialSumRat_den_anchor17
+
+/--
+info: 'PiDisjunctivity.bbpPartialSumRat_den_decomposition17' depends on axioms:
+[propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms PiDisjunctivity.bbpPartialSumRat_den_decomposition17
+
+/--
+info: 'PiDisjunctivity.bbpPartialSumRat_den_anchor_decomposition17' depends on axioms:
+[propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms PiDisjunctivity.bbpPartialSumRat_den_anchor_decomposition17
+
+/--
+info: 'PiDisjunctivity.bbpCoverLcm_pos' depends on axioms:
+[propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms PiDisjunctivity.bbpCoverLcm_pos
+
+/--
+info: 'PiDisjunctivity.bbpCover_prime_exclusion' depends on axioms:
+[propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms PiDisjunctivity.bbpCover_prime_exclusion
+
+/--
+info: 'PiDisjunctivity.bbpCover_prime_factorization_le' depends on axioms:
+[propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms PiDisjunctivity.bbpCover_prime_factorization_le
+
+/--
+info: 'PiDisjunctivity.bbpCover_admissible_exponent_gt' depends on axioms:
+[propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms PiDisjunctivity.bbpCover_admissible_exponent_gt
+
+/--
+info: 'PiDisjunctivity.bbpCover_prefix_prime_factorization_le' depends on axioms:
+[propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms PiDisjunctivity.bbpCover_prefix_prime_factorization_le
+
+/--
+info: 'PiDisjunctivity.bbpCover_admissible_anchor_gt' depends on axioms:
+[propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms PiDisjunctivity.bbpCover_admissible_anchor_gt
+
+/--
+info: 'PiDisjunctivity.PrimeGrid17.rationalGrid17' depends on axioms:
+[propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms PiDisjunctivity.PrimeGrid17.rationalGrid17
+
+/--
+info: 'PiDisjunctivity.shiftedGridIcoCount_eq_floor' depends on axioms:
+[propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms PiDisjunctivity.shiftedGridIcoCount_eq_floor
+
+/--
+info: 'PiDisjunctivity.shiftedGridIcoCount_discrepancy_lt_one' depends on axioms:
+[propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms PiDisjunctivity.shiftedGridIcoCount_discrepancy_lt_one
+
+/--
+info: 'PiDisjunctivity.shiftedGridIcoCount_normalized_discrepancy' depends on axioms:
+[propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms PiDisjunctivity.shiftedGridIcoCount_normalized_discrepancy
+
+/--
+info: 'PiDisjunctivity.shiftedGridIcoCount_full' depends on axioms:
+[propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms PiDisjunctivity.shiftedGridIcoCount_full
+
+/--
+info: 'PiDisjunctivity.shiftedGridIcoCount_self' depends on axioms:
+[propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms PiDisjunctivity.shiftedGridIcoCount_self
+
+/--
+info: 'PiDisjunctivity.finiteCircle_grid_discrepancy' depends on axioms:
+[propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms PiDisjunctivity.finiteCircle_grid_discrepancy
+
+/--
+info: 'PiDisjunctivity.RationalHexOrbit.orbitPoint_eq_fract_nat' depends on axioms:
+[propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms PiDisjunctivity.RationalHexOrbit.orbitPoint_eq_fract_nat
+
+/--
+info: 'PiDisjunctivity.RationalHexOrbit.fract_nat_div_eq_iff' depends on axioms:
+[propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms PiDisjunctivity.RationalHexOrbit.fract_nat_div_eq_iff
+
+/--
+info: 'PiDisjunctivity.RationalHexOrbit.period_pos' depends on axioms:
+[propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms PiDisjunctivity.RationalHexOrbit.period_pos
+
+/--
+info: 'PiDisjunctivity.RationalHexOrbit.orbitPoint_injOn' depends on axioms:
+[propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms PiDisjunctivity.RationalHexOrbit.orbitPoint_injOn
+
+/--
+info: 'PiDisjunctivity.RationalHexOrbit.orbitPoint_mod_period' depends on axioms:
+[propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms PiDisjunctivity.RationalHexOrbit.orbitPoint_mod_period
+
+/--
+info: 'PiDisjunctivity.RationalHexOrbit.orbitPoint_mem_Ico' depends on axioms:
+[propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms PiDisjunctivity.RationalHexOrbit.orbitPoint_mem_Ico
+
+/--
+info: 'PiDisjunctivity.RationalHexOrbit.orbitSet_subset_Ico' depends on axioms:
+[propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms PiDisjunctivity.RationalHexOrbit.orbitSet_subset_Ico
+
+/--
+info: 'PiDisjunctivity.RationalHexOrbit.orbitSet_card' depends on axioms:
+[propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms PiDisjunctivity.RationalHexOrbit.orbitSet_card
+
+/--
+info: 'PiDisjunctivity.RationalHexOrbit.orbitPoint_mem_orbitSet' depends on axioms:
+[propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms PiDisjunctivity.RationalHexOrbit.orbitPoint_mem_orbitSet
+
+/--
+info: 'PiDisjunctivity.RationalHexOrbit.mem_orbitSet_iff' depends on axioms:
+[propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms PiDisjunctivity.RationalHexOrbit.mem_orbitSet_iff
+
+/--
+info: 'PiDisjunctivity.RationalHexOrbit.orbitSet_filter_card' depends on axioms:
+[propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms PiDisjunctivity.RationalHexOrbit.orbitSet_filter_card
+
+/--
+info: 'PiDisjunctivity.word_occurs_before_of_discrepancy' depends on axioms:
+[propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms PiDisjunctivity.word_occurs_before_of_discrepancy
+
+/--
+info: 'PiDisjunctivity.grid17_mesh_lt_cylinder' depends on axioms:
+[propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms PiDisjunctivity.grid17_mesh_lt_cylinder
+
+/--
+info: 'PiDisjunctivity.exists_grid17_mesh_lt_cylinder' depends on axioms:
+[propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms PiDisjunctivity.exists_grid17_mesh_lt_cylinder
+
+/--
+info: 'PiDisjunctivity.word_occurs_before_of_grid17_discrepancy' depends on axioms:
+[propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms PiDisjunctivity.word_occurs_before_of_grid17_discrepancy
+
+/--
+info: 'PiDisjunctivity.empty_word_occurs_before_of_discrepancy' depends on axioms:
+[propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms PiDisjunctivity.empty_word_occurs_before_of_discrepancy
+
+/--
+info: 'PiDisjunctivity.zero_word_occurs_before_of_discrepancy' depends on axioms:
+[propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms PiDisjunctivity.zero_word_occurs_before_of_discrepancy
+
+/--
+info: 'PiDisjunctivity.RationalHexOrbit.orbitSet_grid_invariant' depends on axioms:
+[propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms PiDisjunctivity.RationalHexOrbit.orbitSet_grid_invariant
+
+/--
+info: 'PiDisjunctivity.RationalHexOrbit.rational_period_grid_discrepancy' depends on axioms:
+[propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms PiDisjunctivity.RationalHexOrbit.rational_period_grid_discrepancy
+
+/--
+info: 'PiDisjunctivity.RationalHexOrbit.rational_period_grid_contract' depends on axioms:
+[propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms PiDisjunctivity.RationalHexOrbit.rational_period_grid_contract
+
+/--
+info: 'PiDisjunctivity.bbpCover_den_grid' depends on axioms:
+[propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms PiDisjunctivity.bbpCover_den_grid
+
+/--
+info: 'PiDisjunctivity.bbpCover_prefix_grid' depends on axioms:
+[propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms PiDisjunctivity.bbpCover_prefix_grid
+
+/--
+info: 'PiDisjunctivity.bbpPartialSumRat_period_pos' depends on axioms:
+[propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms PiDisjunctivity.bbpPartialSumRat_period_pos
+
+/--
+info: 'PiDisjunctivity.bbpCover_den_grid_in_period' depends on axioms:
+[propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms PiDisjunctivity.bbpCover_den_grid_in_period
+
+/--
+info: 'PiDisjunctivity.bbpCover_prefix_grid_in_period' depends on axioms:
+[propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms PiDisjunctivity.bbpCover_prefix_grid_in_period
+
+/--
+info: 'PiDisjunctivity.bbpCover_den_discrepancy' depends on axioms:
+[propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms PiDisjunctivity.bbpCover_den_discrepancy
+
+/--
+info: 'PiDisjunctivity.bbpCover_prefix_discrepancy' depends on axioms:
+[propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms PiDisjunctivity.bbpCover_prefix_discrepancy
+
+/--
+info: 'PiDisjunctivity.bbpCover_prefix_words' depends on axioms:
+[propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms PiDisjunctivity.bbpCover_prefix_words
+
+/--
+info: 'PiDisjunctivity.bbpCover_arbitrarily_large_prefix_words' depends on axioms:
+[propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms PiDisjunctivity.bbpCover_arbitrarily_large_prefix_words
+
+/--
+info: 'PiDisjunctivity.bbpCover_infinitely_many_prefix_words' depends on axioms:
+[propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms PiDisjunctivity.bbpCover_infinitely_many_prefix_words
+
+
+-- Definition checks preserve the exact anchor selection and the three counting conventions.
+example (d : ℕ) : bbpCoverIndices d = (Finset.Icc 2 (17 ^ d - 1)).filter Even := rfl
+
+example (d : ℕ) : bbpCoverLcm d = (bbpCoverIndices d).lcm
+    (fun a => (17 * a + 1).totient) := rfl
+
+example (m : ℕ) (x u v : ℝ) : shiftedGridIcoCount m x u v =
+    ((Finset.range m).filter (fun j : ℕ => Int.fract (x + (j : ℝ) / m) ∈ Set.Ico u v)).card := by
+  classical
+  rfl
+
+example (S : Finset ℝ) (u v : ℝ) : finiteIcoCount S u v =
+    (S.filter (fun x => x ∈ Set.Ico u v)).card := by
+  classical
+  rfl
+
+example (a q t : ℕ) : orbitPoint a q t = Int.fract ((16 : ℝ) ^ t * ((a : ℝ) / q)) := rfl
+
+example (a q : ℕ) : orbitSet a q =
+    (Finset.range (orderOf (16 : ZMod q))).image (orbitPoint a q) := by
+  classical
+  rfl
+
+example (x : ℝ) (P : ℕ) (u v : ℝ) : hexadecimalPrefixIcoCount x P u v =
+    ((Finset.range P).filter (fun t => Int.fract ((16 : ℝ) ^ t * x) ∈ Set.Ico u v)).card := by
+  classical
+  rfl
+
+-- These boundary checks consume the actual theorems, without evaluating a BBP prefix.
+example (d r : ℕ) (hr : 1 ≤ r) :
+    ∃ M : ℕ, (bbpPartialSumRat ((17 ^ (d + r) - 1) / 8)).den = 17 ^ (d + r) * M ∧
+      M.Coprime 34 ∧ M ≠ 0 := by
+  obtain ⟨M, hq, hM, hpos⟩ := bbpPartialSumRat_den_anchor_decomposition17 (d + r) (by omega)
+  exact ⟨M, hq, hM, Nat.ne_of_gt hpos⟩
+
+example : (orbitSet 0 1).card = 1 := by
+  rw [orbitSet_card 0 1 (by norm_num) (by norm_num)]
+  have h : (16 : ZMod 1) = 1 := Subsingleton.elim _ _
+  rw [h, orderOf_one]
+
+example (m : ℕ) (x : ℝ) : shiftedGridIcoCount m x 0 1 = m :=
+  shiftedGridIcoCount_full m x
+
+example (m : ℕ) (x u : ℝ) (hu : 0 ≤ u) (hu1 : u ≤ 1) :
+    shiftedGridIcoCount m x u u = 0 := shiftedGridIcoCount_self m x u hu hu1
+
+example (B : ℕ) : ∃ N : ℕ, B < N ∧ ∀ s : Fin 0 → Fin 16,
+    ∃ t < orderOf (16 : ZMod (bbpPartialSumRat N).den),
+      ∀ i : Fin 0, baseDigit 16 (bbpPartialSumRat N : ℝ) (t + i.val) = (s i).val :=
+  bbpCover_arbitrarily_large_prefix_words 0 B
+
+example (w r : ℕ) (hr : 1 < r) (hc : r ≡ 1 [MOD bbpCoverLcm (w + 1)]) :
+    ∃ t < orderOf (16 : ZMod (bbpPartialSumRat ((17 ^ (r + (w + 1)) - 1) / 8)).den),
+      ∀ i : Fin w, baseDigit 16 (bbpPartialSumRat ((17 ^ (r + (w + 1)) - 1) / 8) : ℝ)
+        (t + i.val) = 0 := by
+  simpa only [Fin.val_zero] using bbpCover_prefix_words w r hr hc (fun _ => 0)
+
+end ElementaryGridChecks

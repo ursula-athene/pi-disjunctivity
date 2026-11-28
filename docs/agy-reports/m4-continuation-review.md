@@ -4310,3 +4310,104 @@ documentation/whitespace and exact staged identities are checked before commit.
 Concurrent arithmetic and terminal-valuation proofs remain separate scratch
 work; this review does not certify their production integration. The elementary
 grid theorem, V and M4 remain incomplete.
+
+
+## Elementary grid production integration — 2026-11-28 UTC
+
+**Status:** complete elementary statement kernel checked and independently
+reviewed; publication follows final affected checks. Baseline `a0597c124329e3a25b5c4c0b628c05da5187100e`. The task-owned
+scope is eight new Lean modules (`PrimeDenominator`, `EulerCover`, `PrimeGrid17`,
+`ShiftedGrid`, `RationalHexOrbit`, `FiniteWordDiscrepancy`, `RationalGridDiscrepancy`,
+`DenominatorGrid`), the root export, Test, proof plan/blueprint, prime-compression
+owner, M4 handoff, research log and this record. Unrelated files and the sixteen
+protected source/pin identities are preserved. The exact baseline/proposed
+files, diff, preservation identities and validation receipts are retained in
+`/tmp/pi-m4-grid-production-20261128-0007/`.
+
+The intended claim is the complete elementary contract: actual inclusive BBP
+prefix, selected 17-valuation and prime-order bound, positive complete rational
+period, every unit numerator, all grid translates within that period, normalized
+Ico-count discrepancy strictly below17^(-d), and infinitely many actual prefix
+indices containing every word of each fixed length. The actual result assumes
+d>0, r>1 and the explicitly defined Euler-cover congruence; the arbitrary
+numerator additionally retains coprimality with the full denominator. Neither
+actual-prefix result assumes discrepancy, visitation or normality. Words start
+inside the period and may cross its boundary. V and M4 remain open.
+
+### Independent component review cycle
+
+All reviews used the current replacement procedure and both full guides: Lean
+`798c3cc974c5296453f510ea9264aa8b5d17c813c8dc217a430de9b68b7d667c`,
+strategy/tooling `c4a04d75a297c6ec361d31ab11e465e3c3e74a6c89eb590bddb03d95c243ad3b`.
+Reviewers inspected files/receipts read-only; they ran no builds, probes, network
+or Git operations. Parent replays are caller evidence, not independent execution.
+
+| Scope | Reviewer and completion | Disposition |
+| --- | --- | --- |
+| Earlier arithmetic and terminal valuation | `/root/finite_log_independent_review`, 23:46:23 | No D/I; assembly question carried forward. Full capture in the initial grid-start packet. |
+| Euler covering | Same reviewer, 23:56:42 | No D/I; actual consumer and arbitrary anchors verified. Full capture in grid-assembly packet. |
+| LTE/CRT/real grid, actual decomposition, local grid count | Same reviewer, 00:05:43–00:09:19, within12minutes | No D/I. Q1 full-period/actual composition subsequently supplied by the new consumers; subject to final integration review. |
+| Finite averaging and period/index interface | Same reviewer, completed00:14:04 before conservative00:21:19 deadline | No D/I. Q1 closure/count composition supplied; literal coset partition unnecessary. Q2 historical compiled-root limitation documented below. |
+| Fixed-word consumer | Same reviewer, 00:18:51–00:19:58, within8minutes | No D/I. Q1 actual discrepancy application is supplied by `bbpCover_prefix_words`; subject to integration review. |
+| Five complete-period composition declarations | `/root/fresh_visitation_consumer_critique`, completed00:22:33 within10minutes | No D/I/Q. Reviewer authored counting helpers but reviewed only the other agent's new composition, using separately reviewed dependencies. |
+
+Full returned successor reviews are preserved as `component-review-full.txt`,
+`averaging-period-review-full.txt`, `word-review-full.txt` and
+`composition-review-full.txt` in the integration packet; their exact identities
+are in `component-review-capture-hashes.json`. Frozen worker manifests and
+accepted source files are linked by the validation packet. No recommendation
+is dropped: every D/I category was empty; the stated open application questions
+are closed only by the separately checked consumers, and V remains open.
+
+### Evidence and remaining acceptance
+
+Parent replays of the accepted worker sources all exited zero with only the
+permitted three axioms. Intermediate root source hashes were reconstructed
+exactly where needed and explicitly labelled reconstructions. Some historical
+root `.olean` files were overwritten by ongoing integration and are unavailable;
+no claim of retained historical compiled-input verification is made. Fresh
+replays and final production checks provide new kernel evidence. Failed
+elaboration, transient missing-build-input and malformed test-fragment outputs
+are excluded from acceptance. No placeholder or bypass was written.
+
+The final root build and expanded Test passed. Test guards every new public
+theorem's exact axiom list and type, the seven new definition bodies, and
+actual theorem instantiations at endpoint/empty-word/zero-word/trivial-modulus
+boundaries. Documentation/process/working and staged whitespace checks also passed. The
+immutable changed-file review remains before final staged inspection, commit
+and remote push.
+The elementary proof uses no PNT or Korobov assumption. Timing comparisons stay
+paper mathematics, and no π visitation or M5 assembly is claimed.
+
+
+### Final review and dispositions
+
+`/root/finite_log_independent_review` reviewed the immutable16-path diff from
+00:27:01 to00:32:00 UTC, before its00:47:01 deadline. It reconstructed the full
+statement and verified all72 manifest entries, exact diff application,49 public
+type/axiom guards,seven definition checks, all ten actual-consumer theorems and
+16+11 preservation identities. No mathematical, interface or trust defect was found.
+
+The sole improvement I1 corrected the owner's obsolete “No Lean proof” sentence
+while retaining originality as undetermined. The focused verification ran
+00:33:33–00:33:38, before00:38:33, and confirmed the exact repair and unchanged
+original packet. No new finding was raised. Q1 prior composition is resolved;
+Q2 historical compiled-input limitations remain disclosed; Q3 final affected
+documentation/whitespace validation is completed before committing; Q4 actual
+early visitation remains open. This completes the elementary formalization
+review, not M4.
+
+Initial diff SHA-256:
+`57bb4dcaec7cf8cf18b4eea42acd3b491e5c8b99989e7486895c5533e2e3f6d3`;
+72-entry manifest:
+`4a47148b4d7631e74c8e441a4a00de1ccf164799221221a935108b2309c9b7a8`.
+Full review `integration-review-full.txt`:
+`a6dc941a426ee0c549385ae7ae6c2022bffcb62be710f4ad163117fa6fb77fc3`.
+I1 diff `fix-I1.diff`:
+`4e41d53e5b8be5fe38edd3835ad317c62808070b8f051eca67958e78b422ac3d`;
+repaired owner:
+`01fbe0547478f4e19ffca4c4ebf60c987e30e2904db6aa865276dce8cee77420`.
+The full focused return is `fix-I1-review-full.txt` in the same packet. Final
+status edits describe these outcomes only; no Lean source changed after review.
+Final scope/validation/publication receipts are retained separately without
+altering the original manifest.
