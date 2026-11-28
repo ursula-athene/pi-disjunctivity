@@ -6574,3 +6574,33 @@ remains unadopted; check executions, later remote observations and early
 worker observations remain caller evidence. Parent 9a12ef reverified all
 inventories and live owners before factual updates. Final checks/publication
 remain due; no mathematical-owner change or milestone acceptance is supplied.
+
+## Logarithmic and Lambert source checkpoint — 2026-11-28 UTC
+
+Scope: two evidence records against 5d56dfd; no mathematical-owner or Lean
+change. Parent f935d2/167e3c read the full 155-line logarithmic and 73-line
+Lambert reports. Both screens remain unadopted. The new external Lean
+theorem's analytic hypotheses and absent build/audit remain explicit.
+The reciprocal-series follow-on is prospective, not an adopted mechanism.
+
+The frozen packet `/tmp/pi-m4-source-checkpoint-20261128T1523Z/` retains
+both full returns, report/source inventories and the preceding publication
+receipt. Exact record review and affected checks remain due; no C_odd/V/M4
+acceptance or new mathematical certification is claimed.
+
+Exact record review by `/root/dyadic_grid_independent_review_0649` completed
+15:23:18–15:24:40 with no D/I. Q1 selected branch, Q2 actual prefix/residual
+and Q3 reciprocal transfer/C_odd/V/M4 remain. The explicit external Lean
+hypotheses were checked in the complete Main/PrimeInputs files and READMEs.
+All 66 diff lines reconstructed both postimages; nine manifest entries,
+six sources, five nested pinned files, 147 protected and 10 untracked
+hashes matched. Manifest
+813a63f05d8f73fff2bf08ede09d722c271b2786b28e70ea740edc53af0b0baf;
+full return in the 1523 packet:
+ca0ec6cdb97c4da774471e173cf5797dafed2d83e3c0267010b020a25f10f3d3.
+Both complete guides, procedure and critic instructions were reused after
+unchanged-hash checks. Read-only limits held. Neither screen calculation,
+the Fischler source assessment nor the full external proof chain was
+independently certified. Retrievals, check executions and remote observations
+remain caller evidence. Parent cdc15c reverified all inventories and live
+owners before factual updates. Final affected checks/publication remain due.

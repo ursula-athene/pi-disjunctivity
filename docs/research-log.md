@@ -7825,3 +7825,48 @@ All 63 diff lines, eight frozen entries, three sources, 147 protected and
 efc54cac6eb5ba7d978f397806f97430ff85fb3df528600232cb493cb1b64af4.
 Parent 9a12ef reverified integrity and live owners at 15:09 before these
 factual updates. The screen remains unadopted. Final checks/publication remain.
+
+## 2026-11-28 — Logarithmic and Lambert source tests
+
+The timing checkpoint is published as
+`5d56dfd1528cc72b0ca59fe32fc8852322a2a1e6`, parent fbb14d0. Docs 6d6e7f,
+whitespace baadf0/c3bc1e and exact stage 0a37a6 passed; commit 0ef30a,
+post-commit c1a1c8, push 936afb/8e1000 and remote 23af14 verified publication
+at 15:10 UTC. The 1508 packet holds `publication.json`; remote e4e330
+matched when the Lambert source inquiry began. Unrelated work is preserved.
+
+The logarithmic candidate closed early with no selected-branch estimate.
+Its authoritative 155-line v2 report is
+`/tmp/pi-m4-logarithmic-point-exclusion-20261128T151400Z-report-v2.md`, hash
+bb76f9725b608b9da555a348de5493ebd05a83762cc6bccabc4f4793dae5c84d;
+parent f935d2 read it completely. Finite word-component elimination leaves
+the actual short-arc restriction unused. The component calculation and
+Fischler source assessment remain unadopted, not a general exclusion of
+algebraic methods. No new mathematical-owner or Lean theorem follows.
+
+A separate [Erdős–Borwein source](https://github.com/CaptainSude/erdos-borwein-disjunctivity/blob/bd98789a177470cc4b3e33e6769e859f6144c906/paper/erdos-borwein-disjunctivity.tex)
+encodes arbitrary words in one divisor count while earlier terms are
+integers. Its Lean conclusion explicitly retains AGP and prime-supply
+hypotheses; no external build or transitive audit was run. Five complete
+pinned files are saved in `/tmp/pi-m4-lambert-source-20261128T1514Z/`.
+The 73-line adaptation screen
+`/tmp/pi-m4-lambert-source-bridge-20261128T1515Z/report.md`, hash
+445b4b3d40c5a67ac09dc38ad2a6688c0c5bc2b38415a343bcad7fce5ff2092d,
+was read completely by parent 167e3c. Adding that core leaves a residual
+whose local block cancels the encoded midpoint; its full prefix phase is
+still uncontrolled. This screen also remains unadopted.
+
+The follow-on test now compares the source's integer-coefficient mechanism
+with the already-owned Ramanujan/Catalan reciprocal-pi series, retaining
+their growth, exact valuations and the separate nonlinear transfer gap.
+Checkpoints are 15:28/15:38; no result about pi or its reciprocal is assumed.
+The 1523 checkpoint packet retains both full worker returns and inventories.
+Exact record review and affected checks remain due. C_odd, V and M4 stay open.
+
+Exact record review 15:23:18–15:24:40 found no D/I. Q1 selected branch,
+Q2 actual prefix/residual and Q3 reciprocal transfer/C_odd/V/M4 remain.
+All 66 diff lines, nine frozen entries, six sources, five nested source
+files, 147 protected and 10 untracked files matched. Full return in the
+1523 packet: ca0ec6cdb97c4da774471e173cf5797dafed2d83e3c0267010b020a25f10f3d3.
+Parent cdc15c reverified all inventories and live owners before these
+factual updates. Both screens remain unadopted; final checks/publication remain.
