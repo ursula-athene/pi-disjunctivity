@@ -1000,3 +1000,49 @@ component and final changed-file reviews are complete, as recorded in the
 [review report](agy-reports/m4-continuation-review.md#elementary-grid-production-integration--2026-11-28-utc).
 The PNT-dependent timing comparison remains paper mathematics. This theorem
 still does not locate an actual early visit or establish V/M4.
+
+
+### Every exact additive grid retains a slow return
+
+The traversal limit extends beyond the selected 17-primary construction. Let
+Q,g>0, g divide Q, h=Q/g, B be squarefree with B dividing Q, and gcd(a,B)=1.
+Then every a+j*h, 0<=j<g, is coprime to B if and only if B divides h. For if
+p divides B but not h, it divides g; some j<p<=g makes a+j*h zero modulo p.
+The reverse direction is immediate prime by prime. Thus a complete additive
+grid of units modulo Q has g dividing Q/rad(Q).
+
+More generally assume gcd(16*a,B)=1 and the whole circle grid
+G={fract(a/Q+j/g):0<=j<g} lies in the forward base16 orbit of a/Q. Membership of
+j=1 forces g to divide Q when g>1; g=1 is automatic. Orbit numerators are
+coprime to B, so B divides h. Any positive return time t to this SAME grid
+satisfies a*(16^t-1)=j*h modulo Q, hence B divides 16^t-1 and
+
+```text
+t >= log(B+1)/log16.
+```
+
+Only coprimality modulo B is used; Q may be even and the orbit may have a
+transient. For actual q_N, the original lcm bound gives
+log(q_N/rad(q_N))<=sqrt(8N+6)*log(8N+6)=o(N). The evaluated denominator
+asymptotic therefore gives log rad(q_N)=6N+o(N). Every choice of exact grids
+and positive same-grid return times along unbounded actual indices obeys
+liminf t_N/N>=6/log16. Combining prime components cannot move a noninitial
+point of such a complete grid into the ordinary O(log N) absolute shadow window.
+
+For the natural R_K(N)=sum_(j<K) a_j/N^(j+2), every finite K>=0 is covered.
+For N>=10 let B_N be the product of primes p>N dividing q_N. They have
+exponent one and survive in the FULL reduced denominator of S_N+R_K(N),
+since R_K(N) belongs to Z[1/(30N)]. The same PNT inputs give log B_N>=5N+o(N),
+independently of K. The lemma yields liminf t_(N,K)/N>=5/log16>1, uniformly
+in K and the selected grids. The absolute approximation horizon remains
+N+2*log_16 N+O(1), uniformly in K, so it contains no positive same-grid return
+for large N. Removing a dyadic transient cannot improve this comparison.
+
+This is a paper/PNT-dependent timing result, not a Lean theorem or an
+impossibility result for V. Time zero, early visits in other grid cosets,
+circular coincidences and other approximants remain possible. The related
+[fixed-prime missing-digit criterion](https://arxiv.org/html/2604.11282v1)
+uses radical/order comparisons for complete orbits; it is context, not a proof
+input here. Originality remains undetermined. The
+[review record](agy-reports/m4-continuation-review.md#post-grid-mechanism-discriminators--2026-11-28-utc)
+retains the exact support lemma, source limits and synthetic-only checks.

@@ -5525,3 +5525,66 @@ reassessed at00:30:45 while review continued; it was not used to stop the task.
 All mathematics and root audits were already complete. Final outcome-only docs
 and whitespace checks follow before commit/push; no Lean source changed after
 the accepted review. The elementary grid is formalized, while V/M4 remain open.
+
+
+Publication receipt, 2026-11-28 00:35:35 UTC: ordinary push dac9a6 and remote
+verification ba6af2 confirm `be618abf67b774a26dfedf84bfd162ace3f2c67a` on
+`origin/feature/m4-universal-visitation`. Final affected documentation373b73,
+working/staged whitespace4fa77b/d3e3fb and exact16-path staged validationf5dfc9
+passed. Commit67eeff and post-commit inspection824d29 verified the exact
+committed blobs/parent, empty index, clean owned files,16 protected and11
+unrelated identities. No repair or PR was needed. All Lean sources remained
+byte-identical to the reviewed, built and audited versions. The elementary
+actual-denominator grid formalization is complete and published; V/M4 remain
+open. Next active cadence check is due by00:50:35 UTC or at an earlier event.
+
+Parallel research resumed at00:29:16 with a20-minute bound to00:49:16, following
+the meta-plan and early source screen. The initial fixed-unit finite-log question
+was already covered by the archived prime-square-lift identities; the worker
+therefore narrowed the inquiry to special-cutoff evaluations versus the actual
+short-prefix range and precision costs. This is exploratory and unadopted,
+with no new theorem or visitation claim. The initialized numerator/early-hit
+obligation remains the target after the completed formalization checkpoint.
+
+At 00:47:34 UTC, remote check096d45 still matched published `be618ab`; no
+reviewed unpublished commit was ready. Next active cadence check is due by
+01:02:34 UTC or at an earlier result/direction event. The 00:39:03–00:49:03
+all-additive-grid discriminator froze at00:46:42, and the finite-log cutoff
+packet froze at00:41:04. Independent review began00:47:17 with midpoint00:54:47
+and deadline01:02:17. Both are unadopted paper arguments pending that review;
+neither claims an actual early visit or a new Lean result.
+
+A separate 00:38:37–00:58:37 discovery reset completed00:50:03. Its selected
+solenoid calculation retains the actual initialization but transfers it to
+the original pi phase, leaving a proposed rigidity bridge unsupported. This
+is unreviewed scratch evidence, not a visitation theorem. The next source
+comparison began00:49:44 with a20-minute bound: inspect a solved explicit
+normality mechanism for a genuinely different way of controlling the growing
+actual prefix. Separate normality of fixed truncations is insufficient.
+
+Independent paper review of the all-grid and finite-log packets completed
+00:55:41, before01:02:17. No defect remained; the sole finite-log domain
+clarification was applied and verified. The solenoid review completed01:01:03,
+before01:06:55, with no defect and two verified precision improvements: the
+affine map is the conjugated one, and a proposed additional scalar action must
+be multiplicatively independent of16. The
+[full review dispositions](agy-reports/m4-continuation-review.md#post-grid-mechanism-discriminators--2026-11-28-utc)
+retain all source/input limitations. These results exclude the specified
+transfers; they supply no new actual visit or Lean declaration.
+
+Remote checkcd296e at01:00:25 still matched `be618ab`; no reviewed unpublished
+commit was ready. Next active cadence check is due by01:15:25 or an earlier
+ready result. The seven-path documentation integration enters its separate
+changed-file review. Initial documentationd9ef99 (93 files), process testscceb39
+(38 tests), whitespace9ba592 and unchanged pin/definition diff4b2ab0 passed.
+Only later factual review receipts have changed since those checks; affected
+documentation and whitespace are checked again before publication. The exact
+protected-source and unrelated-file snapshot remains unchanged (09f2ff).
+
+
+The final seven-path changed-file review completed01:08:33 UTC, with no defect
+and three verified clarifications. The detailed dispositions are in the review
+record. The initial validation receipts remain valid for unchanged process and
+Lean sources; final affected documentation and working/staged whitespace checks
+now gate publication. The checkpoint records three limited paper findings;
+actual early visitation and V/M4 remain open.

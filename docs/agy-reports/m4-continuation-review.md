@@ -4411,3 +4411,113 @@ The full focused return is `fix-I1-review-full.txt` in the same packet. Final
 status edits describe these outcomes only; no Lean source changed after review.
 Final scope/validation/publication receipts are retained separately without
 altering the original manifest.
+
+
+## Post-grid mechanism discriminators — 2026-11-28 UTC
+
+These paper investigations follow the published elementary grid formalization.
+They do not add a Lean declaration, early actual visit, or V/M4 acceptance.
+The exact production scope is based on `be618ab`; changed-file review is complete as recorded below; final
+validation is recorded before publication. Both complete adversarial
+guides and the user-directed Codex replacement procedure apply.
+
+### All-grid timing and finite-log cutoff review
+
+`/root/finite_log_independent_review` independently reviewed packets A and B
+from00:47:17 to00:55:41 UTC, before01:02:17. The midpoint update and complete
+D/I/Q return were received. It reconstructed the squarefree-support lemma,
+same-grid return bound, even-denominator/transient case and uniform natural-K
+comparison. It also reconstructed the initialized finite-log root filter,
+short-to-full cutoff conversion, complement identity and formal truncation
+discriminator, and inspected the retained primary theorem pages.
+
+A has no defect or improvement. A-Q1 retains actual early selection outside the
+complete-grid traversal mechanism as open. B has no remaining defect. B-I1
+clarified the field: the root sum uses the eight distinct roots in an
+algebraically closed characteristic-p field, not all roots in an arbitrary
+product algebra. The reviewer verified the exact sole original-to-v2 delta
+and preserved originals. B-Q1 retains the selected short actual-phase sum
+estimate; neither a full-log identity nor the examined source theorem supplies it.
+
+Packet A: `/tmp/pi-m4-all-grid-timing-20261128T003903Z/`, report hash
+`c4fe7581e1c38d69363a6f16d504309f1a09a1f7ecff4a6073dd654edab88656`,
+8-entry manifest `43baefdabf358106c74280daf2f83007f593c796c5cbcd8f233e4bc82c13446a`.
+Packet B: `/tmp/pi-m4-fixed-unit-prefix-20261128T002916Z/`, original report
+`209fdb18dd94ad94164a54646261b1411548e87efba3d0a7d7f6f8eedcacd32e`,
+52-entry manifest `10371c9bf9ddb5f9ff6352f7c25f3cfa28a71cc4f470c8db5b05dca913e9546c`.
+B's accepted `report-v2.md` has hash
+`7648d9fe40371fbb239fb1c5b5907c721462b37e5c0e4f746d288f5d8c058f06`;
+the exact B-I1 diff is
+`1a58f858ed9a7f0e470558710097363895838a394c51cce1be033c15b4fa1803`.
+The full return is `AB-review-full.txt` in
+`/tmp/pi-m4-post-grid-research-integration-20261128T0052Z/`, hash
+`05583206d4fcf29b9f6d0089557f4eba9b183934eb8c75415afd44e4ca8381d1`.
+
+Parent manifest verification f738e0 and the review independently matched all
+original entries. The parent inspected both generic checkers; A's147,962 grid
+and505,558 return assertions passed bdaf7e, and B's85,703 structural assertions
+passed parent replay032b75. These finite checks compute no actual BBP data and
+do not replace the universal arguments. A reuses archived PNT and remainder
+inputs. B's source statements were assessed, not their complete proof chains.
+No originality or external Lean match is claimed. The reviewer executed no
+checker, build, probe, Git or network action. Both guide hashes match the
+elementary integration review above.
+
+### Exact initialized solenoid review
+
+The same independent reviewer assessed packet C from00:56:55 to01:01:03 UTC,
+before01:06:55, with early reassessment. It reconstructed the compactification,
+continuity, lattice/circle projection, coboundary signs and exact initial fiber.
+No defect was found. C-I1 clarified that the map is affine after conjugacy;
+the original nonlinear skew map is only fiber-affine. C-I2 strengthened the
+proposed next test from merely a non-power-of16 map to a non-virtually-cyclic
+joint action, with scalar multiplicative independence and separate selected-
+closure, measure and entropy obligations. Both exact repairs were independently
+verified. C-Q1 retains control of the actual initialized orbit as open. C-Q2
+retains the paper status of the reflected-zero input and absence of a new
+Lean proof; neither the external source proofs nor that full input proof were
+freshly audited.
+
+Packet C: `/tmp/pi-m4-solenoid-reset-20261128T004236Z/`, original report
+`3d0afcc11cf1bf86c2469a79c82a794e298cf89a6a7c4e2540bad3123f08ccde`,
+18-entry manifest `d59a7b1d73b455f8aed31eb961ee669f1e771a57f7d724666034dadab5b9701e`.
+Accepted `report-v3.md`:
+`a349b7ff99c53dd4e914a1dd049c7244c8d6889847e39b71c0e6297ab30bcb8f`.
+C-I1 and C-I2 exact diffs:
+`97b8e15dfae2edaeacf2d17140c2379b6b1d45a638bd3f43e4ba4cbdcb7bd624` and
+`79fcc17419b32f98b4e0b107191244d1ac8fff0ddd2ffc2ae52d6045816973ce`.
+All original identities remained unchanged in parent bf46c2 and reviewer checks.
+The full `C-review-full.txt` is retained in the integration packet, hash
+`1a54f940a2a930bff070a1cca75311667d2ac37774c4e3830678f84dd6ffaec5`.
+The reviewer read both complete guides and the retained publisher contracts;
+the source's higher-rank, factor and measure hypotheses remain unsupplied.
+No numerical check was needed for this symbolic discriminator. No actual
+orbit data, new Lean code, Git/network action or delegation entered the review.
+
+
+### Final seven-path integration review
+
+The independent reviewer completed the exact changed-file review from01:03:43
+to01:08:33 UTC, before01:13:43. No defect remained. I1 restored the positive
+integer cutoff b>=1; I2 explicitly named the forward orbit of a/Q; I3 replaced
+a universal-sounding precision phrase with the stated error-controlled
+exponential scale. All three exact clarifications were independently verified.
+Prior B-I1/C-I1/C-I2 remain resolved; every paper question retains its status.
+
+The reviewer checked all22 frozen integration entries,78 original source-packet
+entries,27 protected and11 unrelated identities, and the seven-file patch
+against its baseline/proposed images. Original integration diff:
+`9c417cc72ebc9bf3a85b864b17936bd86451d5f56e00fde371d11c3966f02100`;
+manifest `44e9cc96091fca056fe75d18c2a99eff322d29568290cb80f017df2a4a3d3767`;
+exact clarification diff `e12bd17985d5e06cab99c86ff4c1da73315d8139d5ca2171333fccf4a41bf77c`.
+Full `integration-review-full.txt` hash: `eaea05996d153cafc81d21e54ad88148fdb4d75061107ebec943c51600e72375`.
+The packet directory and seven owned paths are retained in scope.json.
+
+Integration Q1 is discharged only by the caller's final affected documentation
+and working/staged whitespace checks before publication; initial process tests
+passed and no process source changed. Q2 actual visitation and Q3 paper/source
+verification limits remain open as disclosed. No theorem, dependency, axiom,
+permission or unrelated file changed. Both full guides and all read-only review
+constraints were applied. This accepts the documented research findings only,
+not V/M4. Final scope and publication receipts are retained outside the original
+immutable manifest.

@@ -382,3 +382,48 @@ and requested the explicit offset/C_odd clarification retained above. Universal
 arguments and the reflected-graph input remain paper mathematics. Final
 production integration review completed with no defect or new recommendation;
 the continuation review record retains the exact scope and evidence limits.
+
+
+## The exact solenoid conjugacy retains the original real phase
+
+An explicit compactification tests the proposed passage from the local graph
+to dynamical rigidity. Write P_0=0, P_(m+1)=16P_m+A(m), C(z)=B(z-1),
+T_0=pi/16 and T_m=E_(m-1) for m>=1. Then C(0)=0, C(m)=P_m in Q_2,
+C(z+1)-16C(z)=A(z), T_(m+1)=16T_m-A(m), and T_m tends to zero.
+The odd denominator and uniformly convergent B series put C(Z_2) in Z_2.
+
+In Sigma=(R x Q_2)/Delta Z[1/2], the bare odometer forcing cannot continuously
+extend [A(m),A(m)]: m_0+2^j approaches m_0 locally but its forcing approaches
+[0,A(m_0)], which differs from [A(m_0),A(m_0)]. Instead use the compact space
+X consisting of x_m=(1/(m+1),m) and all boundary points x_infty(z)=(0,z).
+The continuous shift tau advances m or z by one. Set
+
+```text
+a(x_m)=[A(m),A(m)],       a(x_infty(z))=[0,A(z)],
+H(x_m)=[-T_m,C(m)],       H(x_infty(z))=[0,C(z)].
+```
+
+Both maps are continuous, and H(tau x)-16H(x)=a(x). Thus subtraction of H
+conjugates (x,u)->(tau x,16u+a(x)) to (x,v)->(tau x,16v). The actual
+initial point (x_0,0) becomes (x_0,[pi/16,0]); at index m its fiber is
+[16^m*pi/16,0]. Exact initialization is retained, and the remaining real
+coordinate is precisely the original pi orbit.
+
+For the circle projection use rho([r,z])=r-d(z) modulo Z, where d(z) is the
+finite negative-power dyadic part. It is well defined and intertwines
+multiplication by16. The boundary graph {(x_infty(z),[0,C(z)]):z in Z_2}
+is invariant, infinite and has circle projection zero, despite retaining
+the exact A and every index residue. It excludes a generic boundary-density
+inference. It does NOT show that the actual initialized orbit approaches
+this graph and is not a V counterexample.
+
+The inspected [Einsiedler–Lindenstrauss rigidity theorems](https://doi.org/10.1017/etds.2021.74)
+require higher-rank automorphism actions and invariant ergodic measures, with
+further factor/entropy conditions. The conjugated affine map supplies no second
+action generating a non-virtually-cyclic action on the selected orbit closure.
+A renewed rigidity proposal must exhibit one after this conjugacy (for scalar
+maps, multiplicative independence from16), with measure/entropy premises still
+separate; odometer changes or time
+shifts alone do not do so. The [review record](agy-reports/m4-continuation-review.md#post-grid-mechanism-discriminators--2026-11-28-utc)
+retains exact source/claim limits. This is a paper discriminator, not a Lean
+proof or a new actual-phase estimate; V/M4 remain open.

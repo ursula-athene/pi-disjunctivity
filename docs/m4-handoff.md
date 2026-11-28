@@ -1808,3 +1808,28 @@ the guaranteed complete-period traversal through the available shadowing window.
 Resume the meta-plan's search for an estimate retaining the actual initialized
 numerator/complementary component; do not repeat generic-unit or 17-only phase
 selection. This internal formalization checkpoint is not a stopping boundary.
+
+
+### Mechanism tests after the grid formalization — 2026-11-28 UTC
+
+The [all-grid timing lemma](m4-prime-compression.md#every-exact-additive-grid-retains-a-slow-return)
+extends the slow-traversal result to every complete exact additive grid inside
+the frozen rational orbit. It covers the natural corrections uniformly in
+their finite order and allows a dyadic transient. Its conclusion concerns
+positive returns to the same grid, leaving actual early visits in other cosets
+and other approximation methods open.
+
+The [finite-log cutoff test](m4-prime-square-lift.md#short-finite-logarithms-do-not-become-a-fixed-set-of-full-values)
+shows why the examined full-value identities do not evaluate the actual short
+prefix with a fixed set of arguments. The [solenoid computation](m4-two-adic-reflection.md#the-exact-solenoid-conjugacy-retains-the-original-real-phase)
+preserves exact initialization but carries it to the original pi phase after
+conjugacy. Its nondense boundary graph does not preserve that initial point.
+Neither calculation supplies an actual visit or a new Lean result. Their
+[review record](agy-reports/m4-continuation-review.md#post-grid-mechanism-discriminators--2026-11-28-utc)
+retains the precise source limits and clarification history.
+
+Continue with a mechanism controlling the actual initial orbit segment. The
+current source comparison tests bounded interval occupancy in known explicit
+normality constructions; separate normality of fixed truncations still cannot
+be transferred to the growing approximation. The log owns this cycle's bound
+and outcome. V/M4 remains open under the unchanged contract.

@@ -436,3 +436,41 @@ it exited 0 with a byte-identical receipt and unchanged original hashes:
 1,405 D lifts. These finite checks do not certify the universal arguments.
 Independent changed-file review found no D/I/Q items. It is paper
 mathematics, not a new Lean theorem or M4 acceptance.
+
+
+## Short finite logarithms do not become a fixed set of full values
+
+The existing initialized root filter already retains the actual endpoint:
+with ell_b(X)=sum_(k=1)^b X^k/k and P_A(Z)=4-2Z^3-Z^4-Z^5,
+
+```text
+16^(-n)*S_n=(1/8)*sum_(beta^8=16) beta*P_A(beta)*ell_(8(n+1))(beta^(-1)).
+```
+
+Here p>8(n+1), and the sum is over the eight distinct roots in an algebraically
+closed field of characteristic p. For 1<=m<p, a primitive mth root zeta and
+L_p=ell_(p-1), the elementary filter gives
+
+```text
+ell_(floor((p-1)/m))(X^m)=sum_(j=0)^(m-1) L_p(zeta^j*X).
+```
+
+Expansion keeps exactly k=m*l, with coefficient m/(m*l)=1/l. To reach a
+positive integer cutoff b>=1 with p-1>=b(b+1), choose m=floor((p-1)/b); then the displayed
+floor is b and m>=(p-1)/b-1. At the error-controlled exponential p scale and
+b<=8(T+1), this conversion uses exponentially many full-log arguments. It
+is not a lower bound for other representations or BBP-specific cancellations.
+
+[Mattarei–Tauraso, Theorem 9](https://arxiv.org/pdf/1703.02322) concerns full
+prime cutoffs, with an effective half cutoff from binomial divisibility. It
+does not permit an arbitrary short cutoff with the same right side: the
+omitted formal coefficient binom(2b+2,b+1)/(b+1) is nonzero when b<(p-1)/2.
+This does not exclude cancellation after a special substitution.
+[Shparlinski, Corollary 9](https://arxiv.org/pdf/1104.3909) requires length
+N>=P^epsilon and excludes exceptional primes; it does not estimate our selected
+logarithmic-length BBP prefix. These are statement/consumer checks, not proof
+audits. The first missing implication remains an estimate for the actual
+moving-endpoint phase, retaining its multiplier and selected-prime conditions.
+The [review record](agy-reports/m4-continuation-review.md#post-grid-mechanism-discriminators--2026-11-28-utc)
+retains the source pages, field clarification and synthetic-only checks.
+No new visitation or Lean result follows.

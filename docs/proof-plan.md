@@ -1158,6 +1158,21 @@ would still leave actual early selection and the exact unconditional V statement
 open. Continue the original milestone after this internal formalization checkpoint;
 do not mark V/M4 complete or begin M5.
 
+Post-formalization mechanism tests sharpen the next decision. The
+[squarefree-support lemma](m4-prime-compression.md#every-exact-additive-grid-retains-a-slow-return)
+extends the late-traversal obstruction to every exact complete additive grid,
+including natural corrections of arbitrary finite order. The
+[short finite-log conversion](m4-prime-square-lift.md#short-finite-logarithms-do-not-become-a-fixed-set-of-full-values)
+does not retain a fixed argument set at the stated error-controlled exponential
+scale, and the
+[exact solenoid conjugacy](m4-two-adic-reflection.md#the-exact-solenoid-conjugacy-retains-the-original-real-phase)
+retains the original pi phase as its selected fiber. These are paper
+discriminators with stated source dependencies, not new visitation declarations.
+Further work must obtain information about the actual early segment or change
+the transfer mechanism. A bounded comparison with explicit normality proofs
+tests whether their interval-occupancy estimates have an applicable analogue;
+no such estimate for the actual sequence is assumed.
+
 ## 6. Assemble the proof of the original conjecture
 
 Once Step 5 succeeds, use Step 4 to obtain visits of the actual pi orbit.
