@@ -5838,3 +5838,51 @@ The complete guides and procedure were reused after unchanged-hash verification.
 Read-only limits were preserved; all Git/index/remote and check execution is
 caller evidence. Caller 047635 reverified all frozen/source/protection entries
 before I2 and factual completion updates. Final affected checks gate publication.
+
+## Growing-prime projection comparison — 2026-11-28 UTC
+
+Scope: arithmetic-window owner and two evidence records against 11a9f8b.
+The paper result gives changing projected arrays for actual A and the positive
+avoiding F with the same primes, horizons and global multipliers. It supplies
+no unscaled target hit, mixed-character estimate, Lean proof or V/M4 acceptance.
+
+Reviewer `/root/anchor_source_integration_review_0822` inspected the entire
+324-line report, 126-line checker, receipts, four frozen owner excerpts,
+combined-resource argument and primary statement pages during 09:00:40–09:04:16,
+before its 09:07/09:13 bounds. Both full guides, procedure and critic skill
+were reused after unchanged-hash verification. All 14 packet entries and
+four recorded owner hashes matched.
+
+**Defects: none. Improvements: none. Questions blocking the paper claim: none.**
+The reviewer checked the fixed coefficient/nonzero-partial hypotheses, every
+admissible fixed-per-horizon multiplier, exact endpoint and initial atom,
+uniform growing-depth height, complete coset cycles and extra points. It
+verified the subgroup theorem's exact size/exponent and the fixed-modulus PNT
+prime-existence argument, A/D sign proofs, initialized coboundary and F's
+exception count. The countermodel's rational period and absence of an actual
+unscaled conclusion remain explicit; broader mixed statistics are not adopted.
+
+Full paper return in the 0902 packet has hash
+`6e3d28b7312850e1c16c9d68e3598bcf90402b95e5381cebad2ef7864ed94734`.
+Source inspection covers Bourgain–Konyagin printed p.78 and the fixed-progression
+PNT slide, not their proof chains. Parent replay dbec69 passed 10,818 synthetic
+and universal-identity checks; 94f090 verified the identical receipt and intact
+originals. Execution is caller evidence. Review used only reading and hashing,
+without writes, Git, network, builds, probes, checker execution, installation,
+delegation or actual-state census. No priority determination or exhaustive
+Lean search is claimed. Exact production review and affected checks remain due.
+
+Exact production review ran 09:08:51–09:09:54 UTC, before its 09:13/09:17
+bounds. All 254 diff lines, 11 packet entries, 16 source-file entries and
+four worker-input identities matched. The changed owner's baseline input was
+checked against its preserved before-file. All three postimages, 145 protected
+and 11 unrelated hashes matched; every hunk reconstructed its postimage.
+All D/I/Q categories remained empty. No mathematical repair was requested.
+
+Full production return `review-full.md` in the 0902 packet has hash
+`1e0052ce026e0fdc8f839740b501c0cf360a2e7e4d18334a8fc3cb4547e52c82`.
+The guides/procedure were reused with unchanged hashes; primary coverage and
+read-only limits remain those of the paper review. Git state and all execution
+remain caller evidence. Parent 9bb698 reverified all frozen/source/protection
+entries before factual completion updates. Final affected checks gate
+publication. The concurrent mixed-prime work and actual unscaled hits remain open.

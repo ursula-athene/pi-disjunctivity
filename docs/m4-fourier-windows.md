@@ -1,9 +1,10 @@
 # M4 continuation: arithmetic windows and rational corrections
 
 Research record, 2026-11-26. This tests one unconditional neighboring method
-against the actual BBP sequence. It does not supply V. All universal arguments
-below are paper proofs except the explicitly identified Dirichlet interface
-probe. The exact [M4 contract](proof-plan.md#m4-research-sequence--2026-11-26)
+against the actual BBP sequence. It does not supply V. Results are paper-level
+unless a section explicitly identifies a kernel-checked implementation; the
+[full comparison](#lean-formalization-of-the-full-comparison) is formalized.
+The exact [M4 contract](proof-plan.md#m4-research-sequence--2026-11-26)
 and the checked B1–B3/conditional B4/P3 frontier are unchanged.
 
 ## A finite-frequency consumer
@@ -1548,6 +1549,137 @@ finite-prime argument were read, but neither external Lean development was
 built, audited or imported. The source screen rejects these direct transfers;
 it does not reject all possible adaptations of their methods.
 
+
+## Growing-prime projections and the unscaled branch
+
+Changing the auxiliary prime removes the short-piece obstacle for a different,
+projected array of the actual prefixes. It still does not locate an unscaled
+hit: the same primes, horizons and global multipliers give the same distribution
+conclusion for the fixed positive avoiding F. This is an independently reviewed
+paper argument using an external subgroup estimate, not a new Lean theorem.
+
+Fix a nonempty set I contained in {1,...,8} and fixed nonzero rational c_r.
+Set g(n)=sum_(r in I)c_r/(8n+r), S^g_-1=0 and
+S^g_n=16*S^g_(n-1)+g(n). Assume every ordered partial
+
+    B_(j,r)=sum_(k<j,s in I)c_s/[16^k*(8k+s)]
+              +sum_(s in I,s<=r)c_s/[16^j*(8j+s)]
+
+is nonzero. This premise is proved below for A and the null D, rather than
+assumed for arbitrary forcing. Let p tend through primes with p=1 mod8 and
+ord_p(16)>=p^(1/4). Put
+
+    t=(p-1)/8, L=floor((log p)^(1/3)), r0=min I,
+    H=(8(L+1)+r0)*t+L+1.
+
+For every sufficiently large such p, choose any positive integer K_p prime
+to p with p*K_p*g(n) integral for every 0<=n<H. This is one multiplier
+for the entire horizon. Then, for every fixed nonzero integer h, eventually
+
+    abs((1/H)*sum_(n<H)e(h*K_p*S^g_n))
+      <= r0*t/H+p^(-gamma)+(L+1)/H.                  (1)
+
+Here gamma>0 is fixed. Therefore these changing projected arrays are
+equidistributed as p grows. No conclusion about the unscaled fixed orbit
+or its normality is asserted.
+
+### Source input, activation clocks and uniform nonvanishing
+
+[Bourgain–Konyagin, Theorem 2.1](https://www.numdam.org/item/10.1016/S1631-073X(03)00281-4.pdf),
+printed p.78, states that for a subgroup G of F_p^* of size at least p^delta,
+every nonzero additive character has sum of absolute value at most
+`|G|*p^(-gamma)`, with `gamma=exp(-C1/delta^C2)>0` for absolute positive
+constants. We use delta=1/4. The primary statement was inspected visually;
+its proof chain is not audited or formalized.
+
+The supplemental quadratic-residue law gives
+`16^t=2^((p-1)/2)=1 mod p`, so ord_p(16) divides t. A denominator 8n+r
+is a multiple of p at exactly
+
+    n=e_(j,r)=(8j+r)*t+j,  8n+r=(8j+r)*p.
+
+For large p, 8H+8<p^2, so all poles before H have j<=L and p-valuation
+one. In fact H=e_(L+1,r0). With Z_n=p*K_p*S^g_n integral, the exact
+initialized modular recurrence gives `16^(-n)*Z_n=K_p*B_(j,r) mod p`
+between each activation and the next. Before the first activation Z_n=0
+mod p. Congruences are computed in the p-local rationals.
+
+To ensure a unit seed uniformly through j<=L, choose an integer Q clearing
+the coefficients and C=(16/15)*sum_r abs(c_r). Every relevant B has
+abs(B)<=C, while Q*16^L*(8L+8)!*B is a nonzero integer. Its absolute
+value is at most Q*C*16^L*(8L+8)!<p eventually, since its logarithm is
+O(L*log(L+2))=o(log p). The clearing factors are also p-adic units.
+Thus all these B are nonzero modulo p. This is a uniform growing-depth
+bound, not a substitution into a fixed-depth survival assertion.
+
+Within a block, successive activations have gap (s-r)*t; across a boundary
+the gap is (8+r0-rmax)*t+1. Every homogeneous piece is a union of complete
+coset cycles of <16>, with at most one extra point per block. There are L+1
+such possible extras. The initial zero piece has length r0*t. Applying the
+source bound to complete cycles and bounding the remaining points trivially
+proves (1). The initial mass r0*t/H tends to zero; it was not discarded.
+Weyl's criterion for these finite arrays gives the stated interval counts.
+
+The primes required above exist without an order conjecture. Fixed-progression
+PNT, in the form [theta(X;8,1)~X/4](https://math.mit.edu/~drew/PrimeGapsOberwolfach1.pdf#page=3),
+gives logarithmic prime mass X/4+o(X) in [X,2X]. Every bad prime there
+divides the product of 16^k-1 for 1<=k<=floor((2X)^(1/4)). That product
+has logarithm O(sqrt(X)), too small to contain the progression's mass.
+This uses no primitive-root conjecture or varying-modulus PNT. The cited
+fixed-modulus statement was inspected; no external Lean implementation is used.
+
+### Actual A and one common positive avoiding comparison
+
+For A, the first term of each ordered block is positive and the remaining
+terms are negative. Its completed initialized state is positive, so every
+ordered partial is positive. Q=1 and C=128/15 suffice above. The activation
+gaps are 3t,t,t,3t+1 and H=(8L+9)*t+L+1.
+
+Use the existing [null forcing D=A+Ahat](m4-prime-compression.md#the-actual-null-state-has-denominator-exponent-eight),
+whose coefficients at offsets 1,...,7 are (4,-4,-2,-4,-1,-1,1/2), with
+prefix U_n. Its proved paper bounds give 0<U_n<1/(16n+18). The partial
+after offset 6 is U_n-1/[2*(8n+7)]<0. Adding 1/(8n+6) gives the positive
+partial after offset 5; all earlier nonempty partials are larger, and the
+completed state U_n is positive. Thus every partial is nonzero. Q=2 and
+C=88/5 suffice. The same theorem applies, even though unscaled U_n tends to 0.
+
+The [positive thirteen-pole F](m4-rational-forcing.md#residues-and-exact-avoidance)
+retains positivity as well. Define
+
+    t0(n)=1/[(8n+1)*(8n+5)], R(n)=t0(n)/2-D(n)/8,
+    F(n)=(15/8)*D(n)+16R(n)-R(n+1), R(0)=2/21.
+
+Its zero-initialized prefix W_n satisfies exactly
+`W_n=(15/8)*U_n+16^(n+1)*R(0)-R(n+1)`.
+Let J_p be the lcm of the reduced denominators of A(n), D(n), F(n),
+R(n+1) for n<H, together with R(0), and take
+`K_p=8*J_p/p^(v_p(J_p))`. This is a definition, not an evaluated denominator
+census. For large p, all possible p-poles are simple and 8H+15<p^2.
+The positive integer K_p is a p-adic unit admissible for A; the integer
+15*K_p/8 is admissible for D. Both inputs have r0=1, hence the same H.
+
+Except when R(n+1) has a p-denominator, the rational correction and its
+initialized homogeneous term become integers after multiplication by K_p.
+Thus `fract(K_p*W_n)=fract((15*K_p/8)*U_n)` outside at most
+`7*(floor(H/p)+1)` indices. Indeed all possible poles of R(n+1) are among
+8n+9,...,8n+15. Character replacement then gives
+
+    abs((1/H)*sum_(n<H)e(h*K_p*W_n))
+      <= t/H+p^(-gamma)+(L+1)/H+14/p+14/H.          (2)
+
+Consequently the same p,H,K_p give projected equidistribution for actual A
+and fixed positive F. Yet F's initialized unscaled phases always lie in
+(31/350,11/21), avoiding (3/4,7/8). It also retains the previously reviewed
+dyadic comparison blocks and complete-period grids. Its rational period
+32/21 remains a difference from pi; this does not refute a theorem exploiting
+actual irrationality and additional structure.
+
+The test resolves a short-piece obstruction for the projected quantity and
+rejects a projected-only visitation consumer. K_p grows with p, and dividing
+a fractional part by K_p does not recover its integer branch. No unscaled
+visit, mixed-character estimate, new Lean theorem or priority claim follows.
+The [review record](agy-reports/m4-continuation-review.md#growing-prime-projection-comparison--2026-11-28-utc)
+retains the source and check limits. V/M4 remains open.
 
 ## Signed cutoff tails and their full-prefix comparison
 

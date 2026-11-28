@@ -6915,3 +6915,65 @@ Full production return `review-full.md` in the 0853 packet has hash
 Caller 047635 reverified every frozen/source/protection entry at 08:58:44
 before that navigation/status repair. Early completion serves the 09:00
 integration reassessment; no mathematical proof changed after review.
+
+## 2026-11-28 — Growing-prime distribution preserves a positive avoiding model
+
+The restricted-centralizer record was published as
+`11a9f8b946d6036ef08d3045a3788863f4ee8680`, parent 94f4e8b. Commit c17392,
+post-commit fea82b, push d41454/887b0a and remote a76571 verified publication
+by 09:00:39. Docs 07c6f4, whitespace a0a907/fc1965 and exact-stage 1cd826
+passed. The owner differed from its reviewed postimage only by I2's exact
+navigation repair. The index was empty; three committed blobs, 145 protected
+and 11 unrelated files matched. No post-commit repair or PR.
+
+The fresh-context inquiry ran 08:42:57–08:59:34, with observed midpoint
+08:53:24 and endpoint 09:05. Its initial Pade/language idea matched archived
+failures. The [changed growing-prime test](m4-fourier-windows.md#growing-prime-projections-and-the-unscaled-branch)
+instead finds complete cycles between activations, uniform unit survival at
+growing depth and an applicable complete-subgroup source estimate. The same
+prime, horizon and global multiplier work for actual A and positive avoiding F.
+This closes a projected short-piece question but rejects the projected-only
+visitation consumer. No unscaled hit or new Lean theorem is supplied.
+
+The immutable packet `/tmp/pi-m4-variable-prime-projection-20261128T0843Z/`
+has report `657acff4f1c792af82609c9c16fc1f39c0b3aaf7add0b25f07e63d37dbab3286`
+and 14-entry manifest
+`fbcc558fcd247423d638c9c4c34743a47037f0b1da0c07720684d97ad0fa6da5`.
+Parent read the full report cd5d8d and checker e18420, verified the inventory
+3d3c16, and replayed the unchanged checker dbec69: 10,818 assertions, exit 0.
+Parent receipt `/tmp/pi-m4-variable-prime-parent-receipt-20261128T0901Z.json`
+is byte-identical to the worker receipt; 94f090 reverified all originals.
+These are synthetic/universal-identity checks, not actual-prefix computation
+or certification of the analytic inputs. Both source pages were inspected.
+
+Independent review ran 09:00:40–09:04:16, before its 09:07/09:13 bounds.
+All D/I/Q categories are empty for the scoped paper claim. Source inspection,
+exact clocks, factorial height, initial mass, common multiplier and positive F
+comparison all passed; mixed statistics and actual placement remain open.
+Full return in `/tmp/pi-m4-variable-prime-integration-20261128T0902Z/` has hash
+`6e3d28b7312850e1c16c9d68e3598bcf90402b95e5381cebad2ef7864ed94734`.
+
+Integration began 09:02:30, scope aa0a39, with 09:12 reassessment and 09:23
+endpoint. It protects 145 tracked and 11 unrelated files. The owner's obsolete
+opening exception for only one Lean probe was replaced by per-result status
+and a link to the checked full comparison. Exact production review is complete;
+final affected checks gate publication; no Lean changed.
+
+The next mixed-prime cycle has 09:12 midpoint and 09:22 endpoint. It must
+restore the complementary integer branch and full conductor, test exact
+source hypotheses and compare the same statistic with F. Separate marginal
+distribution or a repeated full-CRT reformulation does not meet that endpoint.
+Its findings are unadopted. V/M4 and all actual-hit premises remain open.
+
+Production review ran 09:08:51–09:09:54, before its 09:13/09:17 bounds.
+The 254-line diff has hash
+`338394d1fe84d6507fcdbd949082024618b9e4fe62105cf0a0dcfa39b690557d`;
+the 11-entry manifest is
+`7e481f602c772a336aef4312110ea3d0e004503b1fecf02459190fdfe02415d8`.
+All entries, 16 source files, four worker-input identities, three owned,
+145 protected and 11 unrelated hashes matched. D/I/Q remained empty.
+Full production return `review-full.md` in the 0902 packet has hash
+`1e0052ce026e0fdc8f839740b501c0cf360a2e7e4d18334a8fc3cb4547e52c82`.
+Caller 9bb698 reverified the complete inventory at 09:10:46 before factual
+completion updates. This early completion serves the 09:12 reassessment;
+only final affected checks and publication remain. No proof changed after review.
