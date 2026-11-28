@@ -5793,3 +5793,54 @@ material improvement. It retained both real-selection questions and verified
 the frozen/live scope and protected/unrelated identities. Initial affected
 documentation77a6a8 and whitespace922e77 passed. Final affected checks now
 gate publication; the fresh discovery pass continues under its original bound.
+
+Publication receipt, 2026-11-28 03:07:48 UTC: commit73baa0, post-commit1541ed,
+push e2dd1f and remote fa2543 confirm
+`c16b2c7fa3518ace0d32f77f3f1e3e929cbec694`. Final documentation fbf13a,
+working/staged whitespace90d5a1/eb2ba5, preservation be4e62 and exact staging
+801c5e passed. The five committed paths/blobs, parent, empty index and
+27 protected/11 unrelated identities matched; no repair was needed. No Lean
+source or PR changed. The next active remote check is due by03:22:48 or an
+earlier ready result/direction event.
+
+## 2026-11-28 — Test exponential integrality before using the prime defect
+
+The parent tested a different use of the known prime defect from03:05:27
+to03:12:32 UTC, resolving the endpoint before its03:12:57 midpoint and
+03:20:27 bound. The [first-pole argument](m4-generating-functions.md#prime-defect-regularity-is-not-exponential-integrality)
+rejects exponential integrality of three natural initialized-prefix series,
+including integer-subtracted versions. A separate classical bounded-Dold
+argument rejects global Euler-exponential integrality of every actual carry
+tail. These are limits on two proposed constructions, not on all integral
+objects and not a visitation advance. Neither argument evaluates actual
+prefixes or carries.
+
+Early prior-work checks identified the precise additive Dwork criterion and
+bounded-Dold theorem. The inspected public Lean catalogue exposed no proof
+body used here; narrow pinned-library searches found no matching statement.
+No verified external Lean proof, dependency audit or originality claim follows.
+The source and retrieval limits are retained in the
+[review record](agy-reports/m4-continuation-review.md#prime-defect-and-exponential-integrality--2026-11-28-utc).
+Independent paper review ran03:13:01–03:14:27, before its midpoint, with no
+defect or required improvement. Its sole question retains the need for a
+different integral object preserving the same selected carry path. Parent
+d9bd89 and the reviewer verified all16 packet entries. No numerical checker
+was needed. Three-path documentation integration began03:16:20, with
+reassessment03:25 and endpoint03:35; changed-file review and final affected
+checks gate publication. The separate continued-fraction discovery pass
+retains its original03:29:16 bound, with no new mechanism accepted. V/M4
+remain open.
+
+Integration review completed03:20:39 UTC with no defect or material improvement;
+its replacement-object question remains open. Final affected checks now gate
+publication. The fresh continued-fraction pass ended early with no surviving
+mechanism. Its unadopted packet is
+`/tmp/pi-m4-source-reset-20261128-025916/`, report
+`c986db45215bd564fd0536bad3237d3b5d01db98a3ff57e38911a299633a8d85`,
+manifest `c8ff952f84518cb214a6f45922e296598c3283c916727dc8b7416478e5d4f560`.
+Parent cc1287 verified its three entries; the symbolic checker was not replayed
+and none of that packet's mathematics is adopted. A12-minute source-fit
+follow-up began03:20:57, midpoint03:26:57, endpoint03:32:57, seeking one
+specified disjunctive constant from a rational polynomial-coefficient linear
+recurrence with an actual digit-transfer argument. Finding no matching source
+would not prove nonexistence. This discovery continues under the unchanged V.

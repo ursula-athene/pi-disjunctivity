@@ -1390,3 +1390,53 @@ retains the exact synthetic checks, domain clarification and independent
 criticism. A suitable infinite admissible edit with rational total change
 and fixed odd support remains unconstructed. No source dependency was newly
 audited, no Lean result was added, and V/M4 remain open.
+
+## Prime-defect regularity is not exponential integrality
+
+The actual analytic prime defect does not give the coefficientwise divisibility
+needed by the additive Dieudonne--Dwork criterion. Write P_0=0,
+P_(n+1)=16P_n+A(n). For every prime p=1 modulo8, put m=(p+7)/8<p.
+All forcing denominators before index m-1 are below p; at that index only
+the term4/p has a p-pole. Thus earlier P_n are p-integral and v_p(P_m)=-1.
+For each s in{-1,0,1}, define
+
+```text
+F_s(z)=sum_(n>=1) n^s*16^(-n)*P_n*z^n.
+```
+
+The coefficient of z^m in exp(F_s) has valuation-1. Its linear contribution
+has that valuation, and every other contribution uses lower integral
+coefficients and factorials of orders at most m<p. Also the coefficient
+of z^m in F_s(z^p)-pF_s(z) has valuation0, failing the required divisibility
+by p. Any integer subtractions from P_n preserve this argument, including
+the actual fractional-state coefficients. This is a universal first-pole
+test, not an actual-prefix census or a claim about all possible resummations.
+
+The source criterion is [Pomerat--Straub, Corollary4.2, p.8](https://arminstraub.com/downloads/pub/integrality-powerseries.pdf).
+Its proof was read on pp.8--9, including the missing `1+` in displayed
+Eq.(12); the direct coefficient argument above does not depend on that typo.
+The known defect concerns dilated indices, whereas this test fails at an
+index not divisible by p. For s=0, exact summation gives
+`F_0(z)=z*H(z/16)/(16*(1-z))`, H(t)=sum A(n)t^n; it adds no carry information.
+
+There is a separate obstruction to using the canonical carries as integral
+Euler-product data. The actual k_n=floor(16y_n+A(n)) satisfy 0<=k_n<=16
+for n>=1 and pi=sum k_n/16^n. For any L>=0, let d_n=k_(L+n), n>=1,
+and b_n=(1/n)*sum_(r|n)mu(r)*d_(n/r). Divisor pairing bounds
+`|b_n|<=32/sqrt(n)`. Eventual integrality would force eventual zero; Mobius
+inversion `d_n=sum_(r|n)r*b_r` would then make d periodic, contradicting
+irrationality of pi. Thus b_n is nonintegral arbitrarily late.
+
+This is the classical bounded-Dold mechanism: [Byszewski--Graff--Ward,
+Theorem2.5 and Lemmas2.6/2.8, pp.1268--1270](https://doi.org/10.1112/blms.12531).
+The Euler-product identity and coefficient induction also show that
+`exp(sum_(n>=1)d_n*z^n/n)` cannot have all coefficients in Z. No particular
+failing index or prime is identified. Periodic-word counts for an allowed
+language are different coefficients from its selected carry path.
+
+These tests suspend two direct integral constructions. A different object
+would need both an integrality proof and an explicit connection retaining
+that same path; no such bridge is supplied. Source/search limits and the
+independent paper review are in the [review record](agy-reports/m4-continuation-review.md#prime-defect-and-exponential-integrality--2026-11-28-utc).
+No new Lean or visitation theorem, full source audit, or originality claim
+is made. V/M4 remain open.

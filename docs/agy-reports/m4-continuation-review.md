@@ -4846,3 +4846,66 @@ documentation77a6a8, whitespace922e77 and preservation776efd passed;
 the final factual outcome edits require affected documentation and
 working/staged whitespace checks before commit. No Lean or process source
 changed, and no additional source-proof audit is claimed.
+
+## Prime-defect and exponential integrality — 2026-11-28 UTC
+
+Separate paper reviewer: `/root/finite_log_independent_review`,
+03:13:01–03:14:27 UTC, before its03:18:01 midpoint and03:23:01 endpoint.
+Both complete current guides were applied and their unchanged hashes verified:
+Lean adversarial `798c3cc974c5296453f510ea9264aa8b5d17c813c8dc217a430de9b68b7d667c`
+and strategy/tooling `c4a04d75a297c6ec361d31ab11e465e3c3e74a6c89eb590bddb03d95c243ad3b`.
+The read-only replacement procedure applied; Carbon remained stopped.
+
+Exact paper scope: `/tmp/pi-m4-dwork-prefix-test-20261128T0305Z/report-v1.md`,
+hash `1a3e065937279641143e4a458b05cb8f6ca6a555b6bba8fe04de1de4d6f1b583`;
+16-entry manifest `ccf460c7c06b1ef317afdefdd46d088889a92c4a8d2b1354a132ed7f3cf1a149`.
+No defect or required improvement was found. Q1 retains both missing
+requirements for a replacement integral object: integrality and an explicit
+map preserving the selected canonical carry path. It is an open research
+limit, not a discharged hypothesis or a claim that every replacement fails.
+
+The reviewer reconstructed the first-pole valuation, exponential coefficient
+and factorial argument, exact F_0 identity, integer-subtraction scope, carry
+telescoping identity and every tail quantifier. It checked the divisor-pairing
+bound, finite-support/periodicity implication and Euler-product equivalence.
+Parent d9bd89 and the reviewer independently verified all16 entries.
+
+The retained sources are Pomerat--Straub Corollary4.2 pp.8--9 and
+Byszewski--Graff--Ward Theorem2.5, Lemmas2.6/2.8 pp.1268--1270. Both readers
+visually checked the former pages and the latter pp.1269--1270. The missing
+`1+` in the first source's Eq.(12), and inconsistent summand index in the
+second source's Lemma2.8 proof, are visible in the PDFs. Direct correctly
+indexed arguments avoid dependence on those typographical defects. No full
+source-dependency audit is claimed. The public Lean catalogue is unverified
+formalization evidence; no proof body or build was inspected. The local
+library search is expressly narrow, not a nonexistence result.
+
+Python urllib failed on certificate verification; ordinary curl succeeded
+without disabling verification or changing permissions. Publisher HTML find
+timed out; the institutional publisher-PDF copy supplied the inspected Dold
+pages. No dependency or tool was installed. Reviewer retrieval/search history
+remains caller evidence; review used no network, writes, Git, builds, probes,
+checker executions, actual-sequence census or delegation.
+
+Full return: `paper-review-full.txt` in
+`/tmp/pi-m4-dwork-integration-20261128T0316Z/`, hash
+`9880626a6ea29bdc758d35a5395e72e4ae5e2d8a150fa17c4c93c08f330e925b`.
+This is paper/source review, not production acceptance or Lean certification.
+The separate three-path changed-file review and final checks gate publication.
+
+The same separate reviewer completed integration review03:19:53–03:20:39 UTC,
+before its midpoint. No defect or material improvement was found; Q1 retains
+the paper's replacement-object obligations. All10 integration entries, the
+three live postimages, baseline/diff hunks, 29 protected/11 unrelated hashes,
+16 paper entries and the full prior return matched independently.
+
+Integration packet baseline: `c16b2c7fa3518ace0d32f77f3f1e3e929cbec694`;
+diff `eabd9e6ff0a4c7a7dfe67b76764f881f8345a1f421f25e86da1326e4645de79d`;
+manifest `264ab77f2ac253808c951ce53d739aa892fc42aacc79bdb3959d9e4c9b0285a4`.
+The full integration return is retained in the same packet, hash
+`7244b17d50d1d36123d29999e9adc7437bf7b0b9345f26fc1780b639284bf201`.
+Both full guides and read-only constraints remained in force. Initial
+documentation3d097a, whitespace9b0d49 and preservationb174d3 passed.
+Final factual outcome edits still require affected documentation and
+working/staged whitespace checks. No additional mathematical claim or
+source audit follows from this integration review.
