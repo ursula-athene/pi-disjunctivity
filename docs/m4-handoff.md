@@ -63,9 +63,18 @@ For the immediate failure record, follow the relevant mathematical owner:
   interpolation limits, finite-word entry freedom, and the absence of a
   parity-to-continuation implication; full forward profiles do not select zero,
   and symbolic edits do not supply the required bounded seed family in a fixed
-  rationally scaled odd localization.
+  rationally scaled odd localization. The natural prefix exponentials and
+  actual bounded carry tails also fail the tested Dwork/Dold integrality
+  criteria; a different integral object would still need to retain the path.
 - [Two-adic reflection](m4-two-adic-reflection.md): the exact raw graph and
-  zero anchor have not supplied a real-cell visitation estimate.
+  zero anchor have not supplied a real-cell visitation estimate. Prime time
+  dilation does not supply the missing independent scalar action.
+- [Logarithmic constraints](m4-logarithmic-constraints.md): the original
+  pole-space uniqueness and p-adic period selectors give no real visit.
+  [Bernoulli-convolution dimension](m4-logarithmic-constraints.md#a-solved-dimension-problem-does-not-transfer-to-the-fixed-orbit)
+  at pi/4 does not control the orbit of pi; an explicit avoiding comparison
+  already separates those objects. [Finite-state languages do not make the
+  selected history automatic](m4-generating-functions.md#why-a-natural-boundary-does-not-supply-visits).
 - [Language auxiliaries](m4-language-auxiliaries.md) and
   [positive certificates](m4-positive-certificates.md): local selectors and
   generic capacity estimates lose actual-history information.
@@ -82,6 +91,10 @@ For the immediate failure record, follow the relevant mathematical owner:
 - [Approximation interfaces](m4-approximation-interfaces.md): AGM unit norms,
   improved degree/precision and exact sign identities still lack late visits;
   finite-window perturbations lose exact initialization and conjugate bounds.
+  The [arctangent comparison](m4-approximation-interfaces.md#arctangent-convergents-and-a-partial-period-obstruction)
+  proves superpolynomial full periods on a fixed index set meeting every
+  sufficiently large adjacent pair, exceeding the linear shadow window there.
+  It leaves early word locations and complementary indices unresolved.
 - [Logarithmic determinant source](#carry-density-and-source-bridges--2026-11-27-utc):
   the September 2026 exponent-two preprint was already screened; its selected
   mechanism needs exceptional approximations not supplied by word avoidance.

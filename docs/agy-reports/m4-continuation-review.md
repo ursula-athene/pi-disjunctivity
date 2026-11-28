@@ -5025,3 +5025,49 @@ Both complete guides and read-only constraints remained in force. Caller
 documentation5734d3, whitespacee4e60a and preservation194517 passed;
 final factual outcome edits require affected documentation and working/staged
 whitespace checks before commit. No Lean or process source changed.
+
+## Compact discovery-map repair — 2026-11-28 UTC
+
+Scope: the short current section of `docs/m4-handoff.md`, plus factual
+outcomes in the log and this review record. No mathematical owner, Lean,
+dependency, workflow rule or target changes. The demonstrated issue is the
+fresh reset's rediscovery of the already recorded Bernoulli counterexample
+while the compact map lacked its logarithmic-constraints pointer. The repair
+also points to the reviewed integrality, dilation and arctangent boundaries.
+This is navigation maintenance, not a claim of measured research improvement.
+
+The unadopted source-fit and reset reports support their factual outcomes
+only; their mathematics and source-status observations are not adopted.
+The separate review will check exact scope, fidelity to the existing owners,
+links, publication receipts and protected/unrelated preservation. Both full
+adversarial guides and the read-only replacement procedure apply.
+
+Separate reviewer `/root/finite_log_independent_review` ran04:18:45–04:21:22
+UTC (first clock04:19:01), before its midpoint and04:24:45 deadline. Both
+complete guides retained the hashes recorded in the preceding cycle.
+No defect was found. I1 requested a direct link to the generating-function
+automaticity counterexample; the pointer-only repair was verified. No new
+open question was introduced, and all existing V/early-visit limitations
+remain unchanged.
+
+Exact packet: `/tmp/pi-m4-discovery-map-20261128T0418Z/`, baseline
+`746fef9aa33e928322acf4da688422220e0b39fd`, nine-entry manifest
+`85ae8721a0d72b00e059f14f7ef67b394e6daa6dbbe7de3e791d35e6d90b38b4`,
+diff `5c20795f4d44d6a30ba36853dadd9fcf2aeb0973688e7c1df0cb6d25ac308407`.
+Repair diff `06d73c5917e55a1f7e87b1eaf09f643ef11fcc6efa9221ebefff0883307b1676`;
+repaired handoff
+`44ea49fffa109bea5fce0068d0594071d9111db7821b3ab60242ce1257104ced`.
+All nine original entries, three original postimages, exact hunks,
+30 protected/11 unrelated hashes, seven unadopted source-fit entries,
+reset-report identity and two repair entries matched independently.
+The first repair-hash reader assumed a list schema; a corrected read-only
+reader verified the actual dictionary. No artifact or mathematical check
+failed, and the original packet remained unchanged.
+
+The full return is `review-full.txt` in that packet, hash
+`22a0302412d53b4c753fcfe6a6fd18a9956d5da108082506e1c24bd19ac898a2`.
+The reviewer checked owner fidelity and exact links without Git, network,
+writes, builds, probes, checkers, rendering, installation, delegation or
+census. Caller documentationafca8f, whitespace0dab37 and preservationa47914
+passed; final affected documentation and working/staged whitespace checks
+still gate publication. No source proof or new mathematical claim was adopted.

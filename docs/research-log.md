@@ -5931,3 +5931,58 @@ failure record and early-phase obstruction, and must identify one changed
 mechanism or an honest no-new-mechanism outcome. It does not duplicate the
 ongoing prescribed-numerator source-fit inquiry or presume a breakthrough.
 Neither cycle boundary is an M4 stopping point.
+
+Publication receipt, 2026-11-28 04:03:24 UTC: commit7814e7, post-commit
+ba7b5c, push325df5 and remote4e53eb confirm
+`746fef9aa33e928322acf4da688422220e0b39fd`. Final documentation2a1c20,
+working/staged whitespacebd8d35/34d76f, preservationac3551 and exact
+stagingc8221c passed. The three committed paths/blobs, parent, empty index,
+30 protected/11 unrelated identities and unchanged mathematical postimage
+matched. No repair, Lean change or PR was needed. Synchronization0fdf2b
+at04:17:27 still matched, before the04:18:24 cadence deadline.
+
+## 2026-11-28 — Discovery reset outcomes and compact source-map repair
+
+The prescribed-numerator source-fit inquiry ended04:03:54 UTC, before
+04:08:45, with no applicable early-hit source. The parent read the complete
+unadopted report and0b6e5d verified its seven-entry final manifest:
+`/tmp/pi-m4-cf-early-sourcefit-20261128T035645Z/report-v2.md`, hash
+`999daaf1db0e9206c1873f5b389c96a4f42adfa6039a2aef5304c10e7513a9ff`;
+manifest-v3 `d6f18821111236ff750e760a739c9195a43d2aa98bb74364ab40bb3ff42f067d`.
+This remains a bounded no-match outcome. Its residue observation and
+finite-frequency consumer are not adopted as new mathematics. The parent
+also checked the primary Vandehey statement's notation; this added no
+matching theorem or new source mechanism.
+
+The fresh positive-mechanism reset ended early at04:14, before04:21, with
+**no new mechanism**. Finite-state histories, solenoid minimality and
+Bernoulli-convolution dimension were exact archive matches. Its short
+unadopted report is `/tmp/pi-m4-positive-reset-20261128T040100Z/report.md`,
+hash `5f199a1fcebb5f7e622bf4e5667160ec734ae8da83adfcaef356cd5dd59d6247`.
+Parent809968 verified that identity and read the whole report. No source-body
+manifest was supplied; its URLs are not newly certified source contracts.
+The automaticity remark is expressly a historical problem and no resolution
+found in that search, not a claim about current literature status.
+
+The compact handoff lacked a direct logarithmic-constraints pointer,
+including the exact Bernoulli comparison rediscovered by the reset. A small
+memory repair began04:17:53, reassessment04:23, endpoint04:28: add that
+pointer and the already reviewed Dwork/dilation/arctangent boundaries in
+the existing owner map. This adds no new theorem, workflow rule or second
+status ledger. Adoption requires accurate links and faithful summaries of
+the reviewed owners; it makes no measured search-efficiency claim. A
+separate changed-file review and affected checks gate publication.
+
+The changed model inquiry began04:16:10, with midpoint04:22:10 and endpoint
+04:28:10. It tests the zero-seeded one-pole log2 recurrence for a single
+late escape interval, against a rational coboundary comparator retaining
+the same leading forcing decay. This is a model-problem investigation,
+not a claimed easier theorem, a visitation advance or a weakening of V.
+No actual-sequence census is authorized by it. M4 research continues.
+
+The source-map review completed04:21:22 UTC, before its midpoint. It found
+no defect and one useful pointer correction: link automaticity directly to
+the explicit counterexample in the generating-functions owner. The repair
+was independently verified. No new open question or efficiency claim was
+introduced. The04:23 reassessment retains final checks/publication; the
+model inquiry continues under its separate04:28:10 bound.
