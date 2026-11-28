@@ -6125,3 +6125,37 @@ Prior complete guides and source-page inspection were reused after hash
 verification. Read-only limits held; Git and execution facts remain caller
 evidence. Parent c2b129 verified exact repaired owner and all inventories
 before factual updates only. Final affected checks gate publication.
+
+## Restricted-elementary counting source — 2026-11-28 UTC
+
+Scope: concise generating-function addendum and two evidence records against
+77aae52. Reviewer `/root/dyadic_grid_independent_review_0649` read the full
+211-line paper and inspected BN pp.237–238 and vdD–M pp.1370,1380 during
+10:39:29–10:42:09, before10:45/10:51. All20 artifacts matched. Both complete
+guides/procedure/critic reads were reused after unchanged-hash verification.
+
+No defects. I1 implemented: the recurrence proposal links to its archived
+assessment and is not presented as a new mechanism. Q1 applicable counting
+or additional same-set low-height witnesses and Q2 actual odd-carry count
+remain open. The source-fit, inverse definability, exact reciprocal height
+and sample-count comparison check out; these supply no new visitation step.
+
+Full paper return in `/tmp/pi-m4-counting-integration-20261128T1041Z/` has
+hash `8f521620afdc12e1bf2eeba304d95e541663fcaae1ff3f7d8a18b747d4bb2357`.
+Parent ab0a9e/ea0b3f read and verified the packet and inspected all four
+source images. No numerical checker was needed. Read-only reviewer limits
+held; download/render statuses are author evidence. Source proof chains,
+exhaustive literature and Lean were not audited. Exact production review
+and affected documentation checks remain due; no C_odd/V/M4 acceptance.
+
+Exact production review10:44:43–10:45:21 found no defects/new improvements;
+I1 closed and Q1/Q2 retained. All112 diff lines/three hunks reconstruct the
+postimages;11 packet entries,21 sources,145 protected and11 unrelated hashes
+matched. Manifest
+`ef9f08411179175ff5f60e075dd6307b0bb2919ecad84093fd6a0f91898555fe`;
+full return in the1041 packet
+`090df8781a3923484d33a70e68f6528b384ca98c2711477c7b0008884b380740`.
+Source-page and full-guide reads were reused after unchanged-hash checks.
+Read-only limits held; Git/check claims remain caller evidence. Parent00c5ad
+reverified all inventories before factual completion updates. No mathematical
+owner change followed review; final affected checks gate publication.

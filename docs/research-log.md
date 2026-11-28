@@ -7250,3 +7250,44 @@ repaired owner at10:35:41 before factual completion updates. The10:32
 reassessment was the completed integration freeze5c8e9f at10:32:09;
 final affected checks and publication remain. No mathematical owner change
 follows D1. This integration defect is distinct from the no-defect paper review.
+
+## 2026-11-28 — Stronger counting source, unchanged visitation gap
+
+The arithmetic-size record is published as
+`77aae52e12f54edf32960f2588d7d792552f356b`, parent5e09504: commit3b62c2,
+post-commit e441bf, push688df3, remote7057bc at10:36:39. Docs827ee4,
+whitespace67f1fa/aa8688 and exact stage a72809 passed; publication d908be
+retains the evidence. Three owned blobs and145 protected/11 unrelated files
+matched; D1 was resolved before commit.
+
+Fresh-context recovery10:23:38–10:38:08, checkpoint10:34:09, endpoint10:46,
+found a [stronger counting source with the same failed consumer](m4-generating-functions.md#restricted-elementary-counting-does-not-repair-the-source-fit).
+Its contribution is the exact source contract and reciprocal-height check;
+the exponential-growth/counting/floor obstructions were already known.
+Packet `/tmp/pi-m4-restricted-elementary-test-20261128T1032Z/`, report
+`564ccdf7d8be312b79722aa4f301ebb25a92e23ec730654ed9c5cdd9a4f19d5d`,
+has20-entry manifest
+`44965e7381778874b95e84bfe157822a7f7fbd818a73149c53b9824bd742fb39`.
+Parent ab0a9e read the full report; ea0b3f verified all artifacts and the
+four primary-page images were inspected. No numerical checker was needed.
+
+Paper review10:39:29–10:42:09 found no defects. I1 implemented by linking
+the already assessed recurrence instead of adopting it as new. Q1 applicable
+counting/witness construction and Q2 actual odd-carry count remain open.
+Full return in `/tmp/pi-m4-counting-integration-20261128T1041Z/` has hash
+`8f521620afdc12e1bf2eeba304d95e541663fcaae1ff3f7d8a18b747d4bb2357`.
+Three-document integration began10:39:40, scope bee716, midpoint10:49,
+endpoint11:00. Exact production review and affected checks remain required.
+Separately, the10:37–11:01 recurrence inquiry was narrowed after archive
+screening to the even-carry gap and one growing-order residual test; its
+results remain unadopted pending review. No Lean change or V/M4 advance.
+
+Production review10:44:43–10:45:21 passed with no defects/new improvements;
+I1 closed, Q1/Q2 retained. All112 diff lines,11 packet entries,21 sources,
+145 protected and11 unrelated files matched. Manifest
+`ef9f08411179175ff5f60e075dd6307b0bb2919ecad84093fd6a0f91898555fe`;
+full return in the1041 packet
+`090df8781a3923484d33a70e68f6528b384ca98c2711477c7b0008884b380740`.
+Parent00c5ad reverified all inventories at10:46:57 before factual updates
+only; the mathematical owner is unchanged. Early completion serves the10:49
+reassessment. Final affected checks and publication remain.

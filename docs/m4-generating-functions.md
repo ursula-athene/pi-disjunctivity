@@ -1390,6 +1390,38 @@ These are limits of direct applications, not a general impossibility result.
 A new history-dependent witness construction or a stronger applicable bound
 is still needed. V/M4 and actual odd-carry infinitude remain open.
 
+### Restricted-elementary counting does not repair the source fit
+
+A 2026-11-28 follow-up checked [Binyamini–Novikov, Theorem1, pp.237–238](https://annals.math.princeton.edu/wp-content/uploads/annals-v186-n1-p06-p.pdf).
+For a fixed set definable using restricted exp and sin, with real parameters,
+the number of fixed-number-field points of height at most H in its
+transcendental part is at most N(log H)^kappa. The exponent depends on the
+set; no kappa<1 bound or count of a specified orbit is supplied.
+
+These restricted generators belong to R_an, which is polynomially bounded
+([van den Dries–Miller, pp.1370,1380, Facts3.1(1),(4)](https://www.numdam.org/article/AIF_1994__44_5_1367_0.pdf)).
+For the actual G above, positivity gives
+`0<E(x)<=1/[(8x+9)(8x+10)]`, hence G(x)/16^x->pi. This excludes definability
+on a final ray in the required structure. The inverse compactification
+`v(u)=1/G(1/u)` does not fix it: the semialgebraic inverse would recover G.
+Equivalently v is positive and smaller than every positive power of u,
+contrary to the cited power-series preparation at zero.
+
+For n>=1, reciprocal reduced rational coordinates have exactly the same
+height: H(1/n,1/S_n)=H(n,S_n). The existing specified-sample counts therefore
+remain of order log H. Even granting a wider same-strength theorem, these
+counts are compatible with an unspecified exponent kappa>=1. The samples
+alone would require an applicable o(log H) bound, or a controlled linear-log
+coefficient smaller than their lower asymptotic coefficient. No additional
+avoidance-dependent low-height witnesses have been constructed.
+
+This adds a precise stronger-source check, not a new obstruction or advance
+toward V. The earlier exponential-growth, counting and floor limitations
+remain. Four primary pages were inspected, without a full source-proof audit,
+Lean change, actual-state census or priority claim. The exact recurrence and
+its integer rounding cost were [already assessed separately](m4-rational-forcing.md#exact-coefficient-recurrence-retains-integer-rounding-cost);
+re-proposing that recurrence alone would not be a new direction.
+
 ## Symbolic pumping produces the wrong arithmetic witnesses
 
 Assume V fails. An interior margin and E_n->0 give a missing ordinary
