@@ -7640,3 +7640,42 @@ b690739f94773e1de631c7fd4c57cc4ab661b1355ad3e88d245f293fa3538c0d.
 Parent 4ed43e reverified all inventories and live owners at 14:11:45 before
 these factual updates. The mathematical owner is unchanged. Final affected
 checks and publication remain due.
+
+
+## 2026-11-28 — Infinite fixed-support actual cores
+
+The actual-weight packet result is published as
+`040f49e6be7eb2f2e0b56470a739a783b60179ce`, parent ab4f96b. Docs 008a67,
+whitespace 219f4b/d87d11 and exact stage 0d28d8 passed; commit 9a3b21,
+post-commit d90876, push 0da33b/8945b6 and remote f2e021 verified publication.
+The 1403 packet holds `publication.json`, recorded at 14:13 UTC.
+
+The [infinite-core source test](m4-fourier-windows.md#infinite-actual-cores-with-fixed-prime-support)
+completed before its 14:20/14:35 checkpoints. Its 157-line report is
+`/tmp/pi-m4-infinite-smooth-core-20261128T1408Z-report-v1.md`, hash
+5eb4ed7377d8151116929ea7260f00486285df74a8fea667c78b8362a30eb5ec.
+Parent 5ad1c2/342ecf read it completely and checked the source declarations.
+The proof covers any fixed-support subset retaining all eight top cofactors,
+including infinite subsets, with a direct unscaled arithmetic certificate.
+
+Separate paper review 14:12:02–14:14:38 found no D/I. Q1 residual/time
+selection, Q2 growing support and Q3 V/M4 remain. Full return in
+`/tmp/pi-m4-infinite-smooth-core-integration-20261128T1416Z/paper-review-full.md`:
+51590925bf3dd04e93a29e7427d4828ca41a41403852f712667543fdaa887cb4.
+Parent 955082 reverified six sources before the three-document integration.
+Source inspection is not an external build, transitive axiom audit, project
+Lean proof or priority claim. Exact production review and affected checks remain.
+
+The next bounded investigation tests an arithmetic joining or conditional
+character estimate coupling this core to its actual complement on the same
+windows, with 14:25/14:40 checkpoints. Pure fixed-support estimates do not
+supply an arbitrary residual twist. The available source search has not
+provided that bridge. No actual-prefix census or new Lean change is involved.
+
+
+Exact production review 14:17:08–14:17:58 found no D/I; Q1–Q3 remain.
+All 169 diff lines, 10 frozen entries, eight sources, 146 protected and
+10 untracked files matched. Full return in the 1416 packet has hash
+dcaa1e6edee1df682fcdbe59aa6dd079441461773b43df9821f324af4aa0ef02.
+Parent verification of the inventories and live owners preceded these factual
+updates; the mathematical owner is unchanged. Final checks and publication remain.

@@ -1639,6 +1639,88 @@ The clearing denominators also vary between packets. The
 accepts the finite resource and restricted partition argument at paper level;
 no Lean, originality or actual selected-time visitation claim follows.
 
+### Infinite actual cores with fixed prime support
+
+The finite-column restriction can be relaxed while keeping the prime support
+fixed. Let P be a finite set of odd primes excluding 17 and containing
+{3,5,7,13}. Let S be any subset of eligible cofactors m whose prime divisors
+lie in {2} union P, and require
+
+```text
+H={1,4,5,6,9,12,13,14} subset S.
+```
+
+Then T_S=sum_(m in S) C_m is normal in base 16. The subset may be infinite
+or noncomputable. This is a reviewed paper specialization of Anderson's
+[arithmetic certificate, Theorems 1.1/1.2](https://github.com/eldernos/MathematicsResearch/blob/062e66cfa698de194f8276a67e43133c560ced4f/papers/04-arithmetic-certificates-v2/paper.pdf),
+not a project Lean theorem or an originality claim.
+
+Write r in {1,4,5,6}, c_r=(4,-2,-1,-1), and sf17(a)=a/17^v_17(a).
+The actual unscaled coefficients and zero-entry prefixes are
+
+```text
+B_S(j)=sum_(r, sf17(8j+r) in S) c_r/(8j+r),
+P_n=sum_(j=0..n) 16^(n-j)*B_S(j).
+```
+
+Absolute convergence follows by bounding the sum of absolute monomials at j
+by 8/(8j+1); it justifies the column regrouping for arbitrary S. In particular,
+
+```text
+T_S=sum_(j>=0) 16^(-j)*B_S(j),
+|16^n*T_S-P_n| <= 8/[15*(8n+9)] -> 0.
+```
+
+Put Q=P union {17}, t=|Q| and c=product_(p in Q) p. Every reduced prefix
+denominator has odd support in Q and 2-part dividing 2, since the even
+summands reduce to -1/[2*(2j+1)] and -1/[2*(4j+3)]. Therefore
+
+```text
+den(P_n) divides 2*product_(p in Q) p^floor(log_p(8n+6)).
+```
+
+For n>=2, K=floor(log_17(8n+6)). At the top 17-adic level, m<17, so only
+H can occur. The included cofactors form a nonempty initial segment of H.
+Lower levels vanish modulo 17 after multiplication by 17^K. As 17^K is
+1 modulo 16, the top-level sum is (-1)^n times the existing signed sum
+of c_r/m, whose cumulative residues are 4,12,5,2,11,14,1,12. None is zero.
+Thus v_17(P_n)=-K and den(P_n)>=17^K>(8n+6)/17, even for infinite S.
+
+Call n an insertion when some sf17(8n+r) lies in S, overcounting possible
+coefficient cancellations. The retained integers have support in {2} union Q
+and 2-adic exponent at most two. There are at most
+`3*product_(p in Q)(1+floor(log_p X))=O_P((log X)^t)`
+insertions with 8n+6<=X. This includes the infinitely many possible level-zero
+insertions. If n>=1 is not an insertion, P_n=16*P_(n-1), so den(P_n) is odd.
+
+Instantiate the source with b=16, L=B=2 and d=2t+1. At scale k put
+A=4^k, T=2^k and m=2^k. For u in {1,2,3}, the sample blocks start at
+n=u*A+l*T, 0<=l<m. Exclude the blocks [n,n+T) containing an insertion.
+Disjointness gives O_P(k^t)=o(m) excluded blocks. At every remaining start,
+y=P_n has odd denominator q, its support divides a power of c, and
+
+```text
+P_(n+i)=16^i*P_n for 0<=i<T,
+q>8A/17,
+q<(32A)^t=32^t*T^(2t)<=T^(2t+1) eventually.
+```
+
+Hence every prescribed denominator floor and positive exceptional tolerance
+is met eventually, with c,d fixed throughout. The exact model error is zero.
+The unscaled tail above and the source's fixed-support orbit estimate complete
+the certificate through all prefix lengths; no inverse-scaling branch is used.
+The exact [Lean certificate declaration](https://github.com/eldernos/MathematicsResearch/blob/062e66cfa698de194f8276a67e43133c560ced4f/NormalityChecker/ArithmeticCertificate.lean#L94)
+and [fixed-support estimate](https://github.com/eldernos/MathematicsResearch/blob/062e66cfa698de194f8276a67e43133c560ced4f/NormalityChecker/SmoothOrbit.lean#L207)
+were inspected as external source contracts. No external library was imported.
+
+The [separate paper review](agy-reports/m4-continuation-review.md#infinite-fixed-support-cores--2026-11-28-utc)
+retains the source results without a new external build or transitive axiom
+audit. Its PDF was hashed; primary TeX was inspected without a new PDF render.
+The inspected revision 062e66cf remains distinct from the source's reported
+replay revision e4809cf. The core's tail estimate is not an estimate for
+16^n*(pi-T_S). A residual estimate or actual time-selection mechanism is still
+missing; growing prime support is outside the proof. C_odd, V and M4 remain open.
+
 ### The zero branch and what the scaled projection loses
 
 Keep the definitions above and write D=D_M, u_n=fract(S_(M,n)),

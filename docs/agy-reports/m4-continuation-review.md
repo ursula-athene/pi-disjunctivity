@@ -6433,3 +6433,45 @@ unchanged-hash checks. Read-only limits held. External entropy proof chains
 were not newly audited; check executions and later remote observations remain
 caller evidence. Parent 4ed43e reverified integrity before factual updates.
 Final affected checks and publication remain due; C_odd/V/M4 stay open.
+
+
+## Infinite fixed-support cores — 2026-11-28 UTC
+
+Paper scope: the 157-line report
+`/tmp/pi-m4-infinite-smooth-core-20261128T1408Z-report-v1.md`, hash
+5eb4ed7377d8151116929ea7260f00486285df74a8fea667c78b8362a30eb5ec.
+Reviewer `/root/dyadic_grid_independent_review_0649` completed
+14:12:02–14:14:38. D/I: none. Q1 residual/time-selection estimate,
+Q2 growing support and Q3 V/M4 remain open. This is a paper specialization
+of retained external source results, not a project Lean or originality claim.
+
+The reviewer checked regrouping, unscaled tail, raw 2-part clearing, exact
+top-level 17 denominator, all insertion levels, fixed polynomial cap and every
+certificate quantifier. All six source entries matched inventory
+46a861a211bf5c69bc9c67e03de52c4d0cb934e7e2295fe33ba897aaff10da23.
+The TeX statements/proofs, all 112 certificate-source lines and all 232
+smooth-orbit-source lines were read. PDF extraction was unavailable; the PDF
+was hashed and primary TeX inspected, without a new visual render. No external
+build, transitive axiom audit or complete dependency audit was performed.
+The inspected and reported replay revisions remain distinct.
+
+Full return in `/tmp/pi-m4-infinite-smooth-core-integration-20261128T1416Z/paper-review-full.md`:
+51590925bf3dd04e93a29e7427d4828ca41a41403852f712667543fdaa887cb4.
+Both complete guides, replacement procedure and critic instructions were reused
+after unchanged-hash checks. Read-only restrictions held: no writes, Git,
+network, builds, probes, checker, census, installation or delegation.
+Parent 955082 reverified the sources. Exact production review against 040f49e
+and affected checks remain due.
+
+
+Exact production review 14:17:08–14:17:58 passed with no D/I; Q1–Q3 remain.
+All 169 diff lines reconstructed the three postimages; 10 manifest entries,
+eight sources, 146 protected and 10 untracked hashes matched. Manifest
+5bc946254c783eeff1c8142334e8d3acef874463445462acf961758d5bf003bc;
+full return in the 1416 packet
+dcaa1e6edee1df682fcdbe59aa6dd079441461773b43df9821f324af4aa0ef02.
+Both complete guides, procedure and critic instructions were reused after
+unchanged-hash checks. Read-only limits held; source and replay evidence limits
+remain explicit. Executed checks and remote verification remain caller evidence.
+The parent reverified all inventories and live owners before factual updates.
+Final affected checks and publication remain due; no M4 acceptance is claimed.
