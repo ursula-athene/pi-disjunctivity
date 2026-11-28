@@ -594,7 +594,71 @@ no verified match; no external Lean build or exhaustive search is claimed.
 
 The [avoiding thirteen-pole model](m4-language-auxiliaries.md#finite-algebraic-profiles-do-not-follow-from-a-restricted-language)
 has block weighted residue 16^(L-1)*(15/16), so it has the same obstruction.
-This result does not select the actual pi phase or imply a visit. A separate
-test of commuting rational maps is a research question, not a proved action
-on the orbit closure. The [review record](agy-reports/m4-continuation-review.md#actual-cocycle-representation-tests--2026-11-28-utc)
+This result does not select the actual pi phase or imply a visit. The
+[restricted commuting-map test below](#the-affine-rational-commuting-maps-supply-no-second-action)
+is complete and supplies no second action on the orbit closure.
+The [review record](agy-reports/m4-continuation-review.md#actual-cocycle-representation-tests--2026-11-28-utc)
 retains the source evidence and hypothesis clarification. V/M4 remain open.
+
+## The affine rational commuting maps supply no second action
+
+For H equal to actual A or the exact [avoiding F](m4-rational-forcing.md#residues-and-exact-avoidance),
+put `Psi_H(x,y)=(x+1,16y+H(x))`. In the class of birational rational maps
+
+    D(x,y)=(g(x),a(x)*y+R(x)),  g,a,R in Q(x), a!=0,
+
+commutation with Psi_H holds exactly for D=Psi_H^k, k in Z. Equality means
+rational-function equality on a common nonempty open domain, not evaluation
+at poles. Permuting fibers through g is allowed; g need not initially be
+affine and a need not initially be constant. This reviewed paper claim does
+not cover general fiber Möbius transformations, maps mixing the coordinates,
+or nonrational actions. The same proof works over C.
+
+Comparing coordinates gives g(x+1)=g(x)+1 and a(x+1)=a(x). A periodic
+rational function has no finite poles and must be a constant polynomial.
+Thus g=x+c, a is constant and nonzero, and
+
+    R(x+1)-16R(x)=H(x+c)-a*H(x).
+
+For a class beta+Z define the finite weighted residue
+`rho_H(beta)=sum_k 16^(-k)*Res_(beta+k)(H)`.
+Changing beta by an integer only multiplies this value by a nonzero factor.
+The left side of the equation has zero weighted residue: its simple-pole
+coefficients are t_(k+1)-16*t_k. Higher-order poles and polynomial parts do
+not affect this identity. Hence the support S_H of the nonzero weighted
+profiles satisfies S_H-c=S_H.
+
+At representatives beta=-r/8, r=0,...,7, the exact profiles are
+
+    A: (0, 1/2, 0, 0, -1/4, -1/8, -1/8, 0),
+    F: (0, 15/16, -15/16, -15/32, -15/16, -15/64, -15/64, 15/128).
+
+For example rho_F(-1/8)=(3/2+16*(3/8))/8. Nonempty eighth-class support
+first forces c modulo Z to be an eighth-class. The support {1,4,5,6} of A
+has trivial translation stabilizer: a nontrivial subgroup of Z/8Z would
+contain 4, but translating by 4 sends the present class 4 to the absent 0.
+For F the support is every class except 0, again with trivial stabilizer.
+Therefore c is an integer. Reindexing gives
+`rho_(H(.+c))(beta)=16^c*rho_H(beta)`, so a=16^c for either sign of c.
+
+The iterate Psi_H^c supplies a rational correction: for c>=1 it is
+`sum_(j=0)^(c-1)16^(c-1-j)*H(x+j)`, for c=0 it is zero, and for c=-m<0
+it is `-sum_(j=1)^m16^(j-m-1)*H(x-j)`.
+Any other correction differs by Q(x+1)=16Q(x). Finite pole support excludes
+all finite poles of Q; comparing polynomial leading coefficients then forces
+Q=0. This proves the full stated class, including negative and zero iterates.
+
+[Cerveau–Déserti, Proposition 5.5](https://arxiv.org/pdf/1105.6211v4), printed
+p.15, is a close prior one-pole result: the centralizer of
+`(u,v)->(alpha*u+1/v,v+1)` is cyclic when alpha!=0,1. Its conclusion for
+the full birational class is not directly imported for these multipole maps.
+[Zhao, Theorem 3.2](https://arxiv.org/pdf/1907.11203v3), pp.13–14, requires
+the base-wandering Jonquières-twist classification and addresses a broader
+fiber class. Those hypotheses and a global-centralizer upgrade are not
+claimed here. No originality or Lean result is asserted.
+
+The candidate second action is therefore absent in this restricted class,
+for both A and F. The theorem supplies no actual-phase distinction and no
+target hit. This representation route is suspended unless a different
+real-phase consumer justifies reopening it. The [review record](agy-reports/m4-continuation-review.md#restricted-affine-rational-centralizer--2026-11-28-utc)
+retains the exact scope, sources and evidence; V/M4 remains open.

@@ -5790,3 +5790,51 @@ with unchanged hashes verified. The same read-only limits applied; Git state
 and executed checks remain caller evidence. Parent 6bcb93 reverified all
 frozen/source/protection entries before factual completion updates. Final
 affected checks gate publication. No new mathematical repair was required.
+
+## Restricted affine rational centralizer — 2026-11-28 UTC
+
+Scope: three-document integration against 94f4e8b, with the exact affine-fiber
+centralizer for both A and F. It is a paper result with no independent action,
+actual-phase distinction, general birational classification or Lean/V claim.
+
+Reviewer `/root/dyadic_grid_independent_review_0649` read the full 199-line
+report, 69-line checker, self-criticism, manifests, receipts, both full guides,
+critic skill and replacement procedure during 08:48:50–08:51:24 UTC.
+All eight manifest entries, source PDFs and five page renders matched.
+Full return in the 0853 packet has hash
+`7443165fa483ee5a24b6c5a67da16bf354e3faef8314874a47d755d13bceabf8`.
+
+**Defects: none. Improvements: no new item.** Author I1's permission to permute
+fibers while restricting the fiber coordinate to affine form is implemented
+and verified. **Q1: broader classes remain outside scope; retained. Q2: no
+actual-phase consequence; retained.** The same theorem holds for avoiding F,
+so suspension of this route is appropriate without changing M4's contract.
+
+The reviewer checked rational periodicity, both weighted profiles, trivial
+support stabilizers, integer/scalar forcing, negative iterates, uniqueness and
+open-domain semantics. The primary one-pole Cerveau–Déserti precedent and
+Zhao's broader conditional classification are correctly limited. No full
+source-proof audit or originality determination is claimed.
+
+Only reading, hashing and preserved images were used. Two failed pdftotext
+reads had exit 127; the caller renders supplied all relevant source passages.
+No writes, Git, network, builds, probes, checker execution, installation,
+delegation or census. Author ef01b6 and parent replay 37ff25 remain caller
+execution evidence. Exact production review and final affected checks gate
+publication; no Lean implementation is included.
+
+Exact production review ran 08:56:21–08:57:43 UTC, before its 09:00/09:03
+bounds. All 157 diff lines, 11 packet entries, 14 source entries and live
+postimages matched. All 145 protected and 11 unrelated hashes matched as well.
+No defects; author I1 remains verified. **I2: implemented.** Parent replaced
+the preceding stale research-question sentence with a link to the completed
+restricted test, retaining the absence of a second orbit-closure action.
+This is status/navigation only; affected checks verify the resulting text.
+**Q1/Q2: retained**, with no stronger centralizer or actual-phase conclusion.
+
+Full return `review-full.md` in the 0853 packet has hash
+`dde4a34343a4e320790b99d1df2e16ba6a5db0da5660608cc6ed93b560c938e2`.
+The complete guides and procedure were reused after unchanged-hash verification.
+Read-only limits were preserved; all Git/index/remote and check execution is
+caller evidence. Caller 047635 reverified all frozen/source/protection entries
+before I2 and factual completion updates. Final affected checks gate publication.

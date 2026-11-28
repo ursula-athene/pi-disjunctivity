@@ -6862,3 +6862,56 @@ matched independently. No D/I/Q beyond verified prior I1. Full return
 Caller 6bcb93 verified the same inventory at 08:49:10, before factual status
 updates. This early completion serves the 08:52 integration reassessment;
 the remaining work is affected checks and publication, without math changes.
+
+## 2026-11-28 — The restricted commuting-action test closes without a visit
+
+The matrix record was committed as
+`94f4e8b19449a0f31caa2cf4d22d2f873033db84`, parent 0bd22d7, and pushed.
+Commit d05bd5, post-commit c8564c, push c809bb/ae5f82 and remote 2e9392
+verified publication by 08:51:30. Docs 645c06, whitespace 2903a2/f167f3 and
+exact staging 8de448 passed. Three owned blobs, 145 protected and 11 unrelated
+files matched, with an empty index and no post-commit repair or PR.
+
+The commuting-action inquiry ran 08:41:51–08:47:33, finishing before its
+08:50/09:00 bounds. The [restricted centralizer proof](m4-two-adic-reflection.md#the-affine-rational-commuting-maps-supply-no-second-action)
+finds only integer iterates, both for actual A and avoiding F. The comparison
+therefore gives no actual-phase distinction. This representation route is
+suspended; broader centralizers are outside the result and have no new
+visitation consumer. The separate growing-prime inquiry continues.
+
+Immutable packet `/tmp/pi-m4-affine-centralizer-20261128T084151Z/` has report
+`cf944362e504225cc10876eb5db70768befa8ab9d89d705bfe5b79d8f04e7e1f`
+and eight-entry manifest
+`2ab2c09006f5c53bc2c9ffed363ece1bb082f1c1a8b230ae50572ef6d6c698cb`.
+Parent read the full report/checker 1ebeff, verified hashes 9e0b9c and replayed
+the unchanged print-only certificate 37ff25, exit 0. It checks both weighted
+profiles and fourteen symbolic rational identities, not arbitrary maps.
+
+Independent review ran 08:48:50–08:51:24, before its 08:54/08:59 bounds.
+No defects or new improvements; author I1's fiber-domain clarification is
+verified. Q1 retains broader classes outside scope; Q2 retains no actual-phase
+consequence and the route suspension. Both primary PDFs and five caller-rendered
+pages were inspected. Full return in the 0853 integration packet has hash
+`7443165fa483ee5a24b6c5a67da16bf354e3faef8314874a47d755d13bceabf8`.
+Two unavailable pdftotext calls supplied no evidence; preserved renders did.
+
+Three-document integration began 08:53:44, scope 41632d, with 09:00 midpoint
+and 09:08 endpoint, protecting 145 tracked and 11 unrelated files. Exact
+production review is complete; final affected checks gate publication. No Lean or dependency
+changed. The growing-prime test has observed midpoint 08:53:24 and endpoint
+09:05; its findings remain unadopted. V/M4 and actual target placement are open.
+
+Production review ran 08:56:21–08:57:43, before its 09:00/09:03 bounds.
+The 157-line diff has hash
+`a83f22361fe84307004467d3b9884e9ee426282dfff317ef706264c238024f0e`;
+the 11-entry manifest is
+`20b82e0090b2647272ef9840e291807cafb9de9d092eec59893aa9d8f612c4e6`.
+All frozen, 14 source, three owned, 145 protected and 11 unrelated entries
+matched. No defects; author I1 preserved. New nonblocking I2 identified stale
+preceding research-question wording; parent replaced it with a cross-reference
+to the completed restricted test, retaining no second action. Q1/Q2 remain.
+Full production return `review-full.md` in the 0853 packet has hash
+`dde4a34343a4e320790b99d1df2e16ba6a5db0da5660608cc6ed93b560c938e2`.
+Caller 047635 reverified every frozen/source/protection entry at 08:58:44
+before that navigation/status repair. Early completion serves the 09:00
+integration reassessment; no mathematical proof changed after review.
