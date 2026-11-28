@@ -7357,3 +7357,45 @@ Parent c43315 reverified all inventories and owned postimages at11:03:59
 before factual updates only; the mathematical owner is unchanged. Early
 completion serves the11:05 reassessment. Final affected checks/publication
 remain; the fresh discovery pass continues independently.
+
+## 2026-11-28 — Discovery reassessment without a new proof step
+
+The even-stencil record is published as
+`7e9bf7f21144dd3169fc39d250cf283f36d410c9`, parent91dcf04: commit478d5c,
+post-commit cf6292, push ed5a11 and remote cd53c7 at11:05:18.
+Docs4b8c39, whitespace84ed04/0a9edc and exact stage95893a passed.
+The publication receipt is in the1053 integration packet. Remote checks
+at11:14:16,11:23:57 and11:29:50 still matched; no empty commit was needed.
+
+The10:56–11:26 discovery assignment completed early at11:17:28 without a
+new mechanism. Parent8fe9b3 read its compact report in
+`/tmp/pi-m4-cantor-tail-interface-20261128T1106Z/`, hash
+`ae10a7b00dd684758c8497f66300211a7cf3bdbb1000b3023f4c32783a46076f`.
+The source-fit calculation remains unadopted; its conclusion was overlap
+with the existing [fixed-localization gap](m4-generating-functions.md#fixed-odd-prime-support-limits-a-common-hole-family).
+The parent's11:08:20–11:09:35 congruence screen likewise found the proposed
+prime-power refinements already in [the lift assessment](m4-prime-square-lift.md).
+Neither screen warrants a new mathematical owner section.
+
+Fresh-context recovery11:14:13–11:27:24 ended before its11:29/11:44 bounds.
+Raw parity, generating-function divisibility, projective elimination and
+sine-zero proposals returned to the archived floor-selection gap; no new
+actual-history estimate survived. The complete worker return is retained
+in `/tmp/pi-m4-discovery-checkpoint-20261128T1131Z/`.
+These are inconclusive discovery outcomes, not new impossibility theorems.
+The meta-plan therefore shortens the record and changes the discovery question:
+the11:29–11:52 source inquiry, midpoint11:40, asks whether a fixed-number
+restricted-digit theorem gives more than ordinary approximation bounds for
+logarithms or arguments of algebraic numbers. Source applicability, including
+the particular π value, must be proved before adopting an estimate.
+No Lean change, actual-state census or C_odd/V/M4 acceptance. Research continues.
+
+Two-record review11:32:07–11:33:01 passed with no D/I; Q1 actual-history
+estimate, Q2 source applicability and Q3 milestone obligations remain open.
+All56 diff lines,9 frozen entries,4 sources,147 protected and10 untracked
+files matched. Manifest
+`e5c0296656551d3215cc574b0cb39ab5242771001792720a723311b660197902`;
+full return in the1131 packet
+`bcab9bdf93ff6c192b7de7edf397e6ef5f7005cb3fb53bc4fc290f478d27b200`.
+Parent83c0e7 reverified integrity at11:34:06 before factual completion
+updates. This review accepts the recording, not the unadopted calculations.

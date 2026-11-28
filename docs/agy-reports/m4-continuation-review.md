@@ -6205,3 +6205,26 @@ Complete guides were reused after hash checks. Read-only restrictions held;
 Git and execution claims remain caller evidence. Parent c43315 reverified
 all inventories before factual updates only. The mathematical owner is
 unchanged; final affected checks gate publication. No discovery claims adopted.
+
+## Inconclusive discovery checkpoint — 2026-11-28 UTC
+
+Scope is two evidence records against7e9bf7f, with no mathematical owner
+or Lean change. The compact record preserves the earlier publication,
+inconclusive discovery outcomes and changed source question; the unreviewed
+Cantor interface is not adopted as a theorem. Exact production review and
+affected documentation checks are pending. C_odd/V/M4 remain open.
+
+Reviewer `/root/dyadic_grid_independent_review_0649` completed exact review
+11:32:07–11:33:01. No D/I; Q1 selected-floor control, Q2 source applicability
+and Q3 C_odd/V/M4 remain open. All56 diff lines reconstructed the postimages;
+9 frozen entries,4 sources,147 protected and10 untracked files matched.
+Manifest `e5c0296656551d3215cc574b0cb39ab5242771001792720a723311b660197902`;
+full return in `/tmp/pi-m4-discovery-checkpoint-20261128T1131Z/` has hash
+`bcab9bdf93ff6c192b7de7edf397e6ef5f7005cb3fb53bc4fc290f478d27b200`.
+The additional Cantor completion receipt was read separately, hash
+`2dcaae1d4e49270fd2dcb6bb384d213dd3cdbed5093a62dbbdaea1e4efb8bf1a`.
+Both complete guides/procedure/critic reads were reused after unchanged-hash
+checks. Read-only limits held; remote and execution observations remain caller
+evidence. Parent83c0e7 reverified all inventories before factual updates.
+No old source theorem or mathematical proof was newly audited. Final affected
+checks remain due; this is not a new mathematical result or M4 acceptance.
