@@ -938,7 +938,9 @@ Its specialization to Q says that one series in Z[[z]], with positive complex
 convergence radius and a representation at one finite prime as a quotient of
 two p-adic entire series, is rational. The parent inspected the original
 pages, including the same-function and integral-coefficient requirements.
-No broader finite-S/radius-product or capacity criterion is applied here.
+No broader finite-S/radius-product or capacity criterion is applied in this
+earlier test; the later [global arithmetic-size assessment](#global-arithmetic-size-retains-an-actual-continuation-gap)
+checks two such source contracts separately.
 
 For each actual state c set
 
@@ -1665,3 +1667,128 @@ The [review record](agy-reports/m4-continuation-review.md) retains source scope,
 the immutable original and supplement, and1,700 plus1,057 exact algebraic
 checks. These are paper arguments; no actual-state census, Lean certification,
 originality determination, C_odd or V/M4 conclusion is supplied.
+
+## Global arithmetic size retains an actual continuation gap
+
+The 2026-11-28 follow-up keeps the actual zero-initialized states and integral
+canonical carries, including carry16. Write Y(z)=sum y_n z^n and
+K(z)=sum k_n z^n, with K(1/16)=pi. Two primary criteria have different
+arithmetic premises; local Taylor radii do not substitute for either one.
+
+[Bost–Chambert-Loir, *Analytic curves in algebraic varieties over number fields*](https://webusers.imj-prg.fr/~marco.maculan/java/2016/files/BostChambertLoir.pdf),
+v3 (2008), Theorem3.1, Proposition3.5 and Definition3.7, pp.10–14, give
+integral etale invariance and, for a graph phi=sum c_n z^n with c_0=0 and
+unit c_1, the arithmetic size
+
+```text
+S_p=min(1,exp(inf_(n>=2) [-log|c_n|_p/(n-1)])).
+```
+
+A-analyticity requires local analyticity everywhere and a positive product
+of sizes outside finitely many primes. Integral smooth formal graphs have
+size1. Theorem7.9 and Example7.10, pp.48–49, require the same graph to be
+A-analytic and the same formal function to be meromorphic on an adapted
+adelic tube of positive capacitary degree. For centered disks, radii almost
+all1 with product greater than1 suffice; the conclusion is rationality.
+
+[Chambert-Loir, Bourbaki expose886](https://www.numdam.org/item/SB_2000-2001__43__175_0.pdf),
+section6.1/Theorem6.2, printed p.196, instead defines
+
+```text
+h_(v,N)=max_(0<=m<=N)log^+|a_m|_v,
+rho=sum_v limsup_N h_(v,N)/N,
+sigma=limsup_N sum_v h_(v,N)/N,
+tau=inf_(S finite) limsup_N sum_(v outside S) h_(v,N)/N.
+```
+
+It requires tau=0, finite rho and normalized simultaneous meromorphic
+uniformizations phi_v(0)=0, phi_v'(0)=1 on disks whose radii have product>1.
+It concludes algebraicity, and rationality for identity uniformizations.
+These are cumulative maxima, not the height of one terminal coefficient.
+The source statements and listed pages were inspected, without a full audit
+of their external proof chains or any Lean formalization.
+
+Let D_N=lcm{den A(j):j<N} and C_N=lcm{den y_j:j<=N}, with both equal1
+at N=0. The exact recurrence gives C_N=D_N: forward induction proves
+C_N divides D_N, while A(j)=y_(j+1)-16y_j+k_j proves the reverse divisibility.
+At each fixed prime, cumulative negative valuations are O_p(log(N+2));
+the real states are bounded and all denominators are odd. Thus every local
+Taylor radius of Y is at least1 and rho(Y)=0.
+
+Nevertheless its arithmetic graph-size product vanishes. For primes p>=17,
+the first p-pole j_p of A has the following universal symbolic table:
+
+| Prime class | j_p | Original denominators at j_p | p*A(j_p) modulo p |
+| --- | --- | --- | --- |
+| 1 modulo8 | (p-1)/8 | p,p+3,p+4,p+5 | 4 |
+| 5 modulo8 | (p-5)/8 | p-4,p-1,p,p+1 | -1 |
+| 3 modulo4 | (p-3)/4 | 2p-5,2p-2,2p-1,2p | -1/2 |
+
+Prior forcing terms and states are p-integral, so subtraction of the integer
+carry cannot cancel this first pole: v_p(y_(j_p+1))=-1. The fixed rational
+shear Y(z)+(1-y_1)z gives linear coefficient1 and is integral etale outside
+finitely many primes. The size formula, with denominator m_p-1=j_p, gives
+
+```text
+S_p(Y)<=p^(-8/(p-1)) for p=1 mod8,
+S_p(Y)<=p^(-8/(p-5)) for p=5 mod8,
+S_p(Y)<=p^(-4/(p-3)) for p=3 mod4.
+```
+
+The [fixed-progression PNT](https://math.mit.edu/~drew/PrimeGapsOberwolfach1.pdf)
+(slide3) and partial summation yield sum -log S_p>=6log X+o(log X), hence
+product_(p<=X)S_p<=X^(-6+o(1))->0, even after deleting a fixed finite set.
+This is an upper bound on the product, not its exact decay exponent.
+Y is not A-analytic despite its fixed-place convergence.
+
+The same first-pole table gives the prime support of D_N, apart from fixed
+small primes: p=1 mod8 up to8N-7, p=5 mod8 up to8N-3, and p=3 mod4 up
+to4N-1. Higher prime powers contribute O(sqrt(N)log(N+2)); fixed small
+primes contribute O(log(N+2)). Consequently
+
+```text
+log C_N=log D_N=6N+o(N),
+rho(Y)=0, sigma(Y)=tau(Y)=6.
+```
+
+Indeed sum_p h_(p,N)=log C_N, and each fixed finite set contributes only
+O(log N). Finite prefix changes and fixed rational scalar or variable
+rescaling do not remove this tail cost; variable rescaling need not preserve
+every individual local invariant. These failures use only integral carries,
+so an eventual-even restriction cannot change them.
+
+For the recorded positive thirteen-pole F, the largest supported offsets
+in residue classes1,3,5,7 modulo8 are9,11,5,15, with coefficients
+3/8,-1/4,-15/8,1/16. Its first poles similarly give cumulative denominator
+logarithm8N+o(N), rho(Y_F)=0, sigma(Y_F)=tau(Y_F)=8, and a graph-size
+product at most X^(-8+o(1)). Thus neither arithmetic failure distinguishes
+actual visitation from the avoiding F model.
+
+The carry series K has a different obstruction. Its bounded integral
+coefficients give an integral smooth formal graph and rho=sigma=tau=0.
+Suppose the same germ K were meromorphic on a centered p-adic disk of
+radius R>1 at some prime. Choose1<R'<R in the divisible value group and
+unit disks at every other place, including infinity. The strict radius
+product R'>1 gives rationality by Bost–Chambert-Loir; Chambert-Loir also
+gives rationality because all uniformizations here are identities.
+But a rational function over Q finite at1/16 cannot have value pi.
+Therefore K admits no such centered p-adic meromorphic disk at any prime.
+This is stronger than the earlier meromorphic-entire obstruction.
+
+Under hypothetical eventual evenness, H_N=sum_(j>=0)(k_(N+j)/2)z^j is
+bounded, integral and nonrational, with K=P_N+2z^N H_N. It has the same
+obstruction; division by2 gives no analytic gain. This generic bounded
+integral-series argument gives no odd-carry conclusion. By contrast, F's
+rational weighted period32/21 has a finite orbit at distance at least1/21
+above integers. Its positive vanishing correction makes raw floors eventually
+agree, so its carries are eventually periodic and K_F is rational. This
+distinguishes rational from irrational period, not pi from an irrational
+nondense number.
+
+The first missing implication is still avoidance forcing suitable
+positive-capacity continuation of the same selected carry germ. Neither
+source supplies it. Only these two direct applications are suspended;
+nontrivial uniformizations, noncircular domains, nonlinear objects and other
+height-sensitive criteria remain unassessed. The [review record](agy-reports/m4-continuation-review.md#arithmetic-sizes-and-finite-radius-obstruction--2026-11-28-utc)
+retains source contracts, full criticism and796 finite symbolic/synthetic
+checks. No actual-state census, priority, Lean, C_odd or V/M4 claim follows.

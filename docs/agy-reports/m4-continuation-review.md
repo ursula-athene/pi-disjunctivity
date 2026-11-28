@@ -6060,3 +6060,68 @@ verification. Source images remained those of the accepted paper review.
 Read-only limits held; Git relationships and executed checks remain caller
 evidence. Caller3dc171 reverified the inventory before factual updates only;
 the mathematical owner is unchanged. Final affected checks gate publication.
+
+## Arithmetic sizes and finite-radius obstruction — 2026-11-28 UTC
+
+Scope: the generating-function owner and two evidence records against5e09504.
+The test separates local convergence from two global arithmetic premises,
+then strengthens the same-carry-series continuation obstruction. No C_odd,
+V/M4, originality or Lean acceptance is requested.
+
+Reviewer `/root/dyadic_grid_independent_review_0649` inspected the full
+334-line report,89-line checker, evidence and receipt during10:18:48–10:21:57,
+before10:27/10:35. All15 manifest entries matched, including at completion.
+The reviewer visually inspected BCL pages10,11,13,14,48,49, CL printed196
+and PNT slide3; full guides/procedure/critic reads were reused after unchanged
+hash checks. The parent also inspected those source pages and report.
+
+**Defects: none. Improvements: none required.** The checker writes its
+receipt beside itself; after the reviewer flagged that behavior, the parent
+replayed a byte-identical copy in separate scratch space. The reviewer
+verified both copied checker and resulting receipt against the unchanged
+originals. No replay-handling correction remains.
+
+**Q1 retained:** avoidance has not been shown to force positive-capacity
+continuation of the same carry germ. A centered p-adic disk of radius>1
+would suffice, but deriving it is substantive missing mathematics.
+**Q2 retained:** nontrivial simultaneous uniformizations, noncircular domains,
+nonlinear transformed objects and other height-sensitive criteria remain
+outside this test. Only the two direct applications are suspended.
+
+The review checked cumulative C_N=D_N indexing; all first-pole residues and
+prior integrality; the rational shear and exact m_p-1 size denominator;
+PNT weights6 and8; product upper bounds rather than exact decay exponents;
+the cumulative-max definitions of rho/sigma/tau; the largest supported F
+offsets; and rationality, not merely algebraicity, under identity
+uniformizations. Hypothetical evenness supplies no continuation gain, and
+F's eventual periodicity distinguishes only rational period.
+
+Full return in `/tmp/pi-m4-adelic-integration-20261128T1022Z/` has hash
+`6a19a3108faea8816e1aaa382f2a2c59be0ebce32bffc208f390da963d15a3b7`.
+Parent5f0328 supplies the separate796-assertion replay, exit0. The reviewer
+used only reads, hashes, preserved images and clocks; no writes, Git,
+network, builds, probes, checker execution, installation, delegation or
+actual-state census. Finite checks do not certify PNT or analytic limits.
+Full external source proof chains were not audited. Exact production review
+and affected checks remain required before publication.
+
+Exact production review completed10:32:27–10:34:13, before10:38/10:44.
+**D1 resolved:** the original wording "proves no odd carry occurs" could
+assert absence of odd carries. The sole owner repair says "gives no odd-carry
+conclusion"; the reviewer verified it against the intact original and a
+separate repair snapshot. No remaining/new defects or required improvements.
+Q1/Q2 remain open. This finding belongs to the integration review, not the
+earlier no-defect paper verdict.
+
+All251 diff lines/four hunks reconstructed the three postimages. All11
+original entries,18 source files,145 protected and11 unrelated hashes
+matched. Original manifest
+`ba9e94f338071dbcb0207a54f96e6ed7c2b1058721b38ca8a6284d1d168c5537`;
+repair manifest
+`0b2f3689c15aec323939290fd955ff24eae5a5ff41efd3b85a4964126862d4d8`.
+Full production/focused-repair return in the1022 packet has hash
+`8409da79667ab12fc55ec471b6ef03c0711ee35f769ab1d752ee62c36bddbd26`.
+Prior complete guides and source-page inspection were reused after hash
+verification. Read-only limits held; Git and execution facts remain caller
+evidence. Parent c2b129 verified exact repaired owner and all inventories
+before factual updates only. Final affected checks gate publication.

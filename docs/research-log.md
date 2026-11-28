@@ -7186,3 +7186,67 @@ Caller3dc171 reverified every frozen/source/protection entry at10:09:22
 before factual completion updates; the mathematical owner is unchanged.
 Early review completion serves the10:09 reassessment. Final affected checks
 and publication remain; the global adelic inquiry continues independently.
+
+## 2026-11-28 — Arithmetic sizes and the same-function continuation gap
+
+The Euler radial/natural-boundary record was committed and pushed as
+`5e0950474be3168f899a59fb748c0a41c4aaf042`, parent ecc01ae. Commit47989b,
+post-commit751236, push5c23ed/975f96 and remote e59601 verified publication
+at10:10:26. Final docs42c76e, whitespace3efe19/1fd3c4 and exact stage65e7c9
+passed. Publication receipt a34f24 preserves the three committed blobs and
+145 protected/11 unrelated files. Remote c216e5 reverified the same head
+after the next direction began; no reviewed commit was waiting to push.
+
+The [global arithmetic-size test](m4-generating-functions.md#global-arithmetic-size-retains-an-actual-continuation-gap)
+ran from the10:01:32 assignment through10:17:59, midpoint10:12:01,
+endpoint10:23. An earlier update used a premature10:07 label, corrected to
+the observed10:04:51. The actual state series has local radii at least1,
+yet a vanishing arithmetic-size product and exact rho=0, sigma=tau=6.
+The positive F comparison has tail cost8. Neither direct algebraization
+criterion applies to Y. For integral K, one centered p-adic meromorphy disk
+of radius>1 would force rationality, contradicting K(1/16)=pi; a hypothetical
+even half-tail has the same obstruction. Avoidance supplies no continuation.
+
+Frozen packet `/tmp/pi-m4-adelic-size-test-20261128T1003Z/` has report
+`a821400fe730f9f9eefd32e2bf2f6b5e399468c83413d07ce59e56d36cda3c61`
+and15-entry manifest
+`7773bab53a4416de9a4e2f82c5c0a9f08f70cef28cb16f65c5a09136b35b054b`.
+Parent read the full report/checker and inspected Bost–Chambert-Loir pages
+10,11,13,14,48,49 and Chambert-Loir printed196; the PNT slide3 was reused
+with unchanged hash. A byte-identical checker copy in separate scratch
+passed796 assertions, receipt5f0328, exit0, with a byte-identical receipt.
+All original files remained unchanged. These finite symbolic/synthetic
+checks certify neither the source theorems, PNT, infinite limits nor V.
+
+Independent paper review ran10:18:48–10:21:57, before10:27/10:35.
+No defects or required improvements. Q1 avoidance-to-continuation and Q2
+other specified adelic constructions remain open. Full return in
+`/tmp/pi-m4-adelic-integration-20261128T1022Z/` has hash
+`6a19a3108faea8816e1aaa382f2a2c59be0ebce32bffc208f390da963d15a3b7`.
+It was fully recovered and read after compaction, not inferred from a
+truncated tool result. Source proof chains, priority and Lean remain unaudited.
+
+Three-document integration began10:20:42, scope f74ca6, with10:32
+reassessment and10:47 endpoint, protecting145 tracked and11 unrelated files.
+Exact production review and affected documentation checks gate publication.
+No Lean or dependency changes. The meta-plan's fresh-context recovery began
+10:22:49, midpoint10:34 and endpoint10:46, testing for a materially changed
+actual four-pole argument. Its unreviewed ideas are not adopted here.
+C_odd/V/M4 remain open; this negative result does not end the milestone.
+
+Exact production review ran10:32:27–10:34:13, before10:38/10:44. It found
+D1, an ambiguous sentence that read as an assertion of no odd carries.
+The single replacement to "gives no odd-carry conclusion" was independently
+checked against a separately frozen repair; D1 is resolved, with no remaining
+or new defects and no required improvements. Q1/Q2 remain open. All251
+diff lines,11 frozen entries,18 sources,145 protected and11 unrelated files
+matched. Original manifest
+`ba9e94f338071dbcb0207a54f96e6ed7c2b1058721b38ca8a6284d1d168c5537`;
+diff `7b190efdf4d6d1bde8236ff225d2f7686b2c7689ec0d4405faa9ec313487a6b8`.
+Full return in the1022 packet has hash
+`8409da79667ab12fc55ec471b6ef03c0711ee35f769ab1d752ee62c36bddbd26`.
+Caller c2b129 reverified the frozen/source/protection inventory and exact
+repaired owner at10:35:41 before factual completion updates. The10:32
+reassessment was the completed integration freeze5c8e9f at10:32:09;
+final affected checks and publication remain. No mathematical owner change
+follows D1. This integration defect is distinct from the no-defect paper review.
