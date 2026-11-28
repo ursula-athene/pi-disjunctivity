@@ -6503,3 +6503,96 @@ and review. The next worker slice checks the same-anchor combined statement
 and exact finite target-transfer consumer, with07:43/07:55 bounds. It must
 retain actual selected-time target hits as an explicit missing input. This
 does not enlarge the accepted analytic-core scope or close V.
+
+## 2026-11-28 — Full dyadic comparison and the retained phase obligation
+
+The analytic core was committed and pushed as
+`ae02a7a2b012935bbccc8b14acf460d434dab34c`, parentcb4a184. Commitbf6f71,
+post-commitcb3d91, pushbe2fe6/180145 and remote1a3118 verified publication
+at07:33:14 UTC. All nine owned blobs,137 protected and11 unrelated identities
+matched; the index was empty. Final documentationc3a83d, whitespace8b58ba/da9d99
+and exact-stage607b02 passed. No repair or PR; publication receipt remains
+in the0718 analytic integration packet. Next cadence07:48:14 UTC.
+
+Three immutable successor packets close the reviewed paper shadow/consumer
+contracts in scratch. Parent read their full sources, reports and import probes:
+
+- `/tmp/pi-m4-shadow-cancellation-20261128T0718Z/`: v3 froze07:26:37,
+  seven-entry manifest3104f5c3fdcb8c03b0867e20a51d420480ed3536c743297ca88d869d4df8d7f9,
+  matchedef9661. It checks finite integer clearing, the sign, all original
+  floor/logarithm/real-power bounds, and the full v block.
+- `/tmp/pi-m4-shadow-nonvacuity-20261128T0726Z/`: v3a froze07:29:35,
+  six-entry manifestb964c7aa7b042a0971bb68f40da509393bbbc67961e7e7a9ebd4631e9c93fce8,
+  matched7e701d. It proves h=1 admissible at every s>=128 and the first-block
+  actual-tail consumer. Its proof uses elementary logarithm inequalities.
+- `/tmp/pi-m4-shadow-consumer-20261128T0730Z/`: v4 ran07:30:49–07:37:27,
+  before07:43/07:55 bounds. Seven-entry manifest
+  63963c793d3120673b5954acc8cb68b5c03fe862c141a3d4d902766013873df2 matched90990a.
+  It supplies one arbitrarily large common anchor and the exact finite target
+  transfer with the actual prefix-hit premise and N+j+1 retained.
+
+Parent integration began07:33 UTC in
+`/tmp/pi-m4-dyadic-comparison-integration-20261128T0733Z/`, with07:44
+reassessment and07:57 endpoint. Scope7e701d has ten owned,138 protected and11
+unrelated identities. Two modules retain eight public theorems, three private
+numerical helpers and one concrete error definition. Root/Test audits cover
+every type and exact allowed-three axiom set, nine explicit theorem consumers
+and the error body, including a conditional endpoint target(0,1).
+
+Early shadow build32c69f/530430 passed with three long-line warnings; wrapping
+those lines gave17efe2/c359ca clean7253 jobs. Shadow root probe01fe04/0bbb90
+passed. Comparison root build0e7810/12739a passed7255 jobs, and its root probe
+f2119d/a0ce12 passed. Both native diagnostic calls returned success,
+partial=false and no items. Full build3e461b/b3ce86, Test61d31f/1dfd96 and
+38 process tests4cc33d passed. No theorem or hypothesis changed in integration;
+production review subsequently completed as recorded below.
+
+The separate actual-coefficient inquiry ran07:12:31–07:24:49, with midpoint
+07:23:53 before its07:34 endpoint. Its [paper result](m4-fourier-windows.md#translated-tail-comparisons-before-the-blocks)
+proves exact pre-block residues and their fixed-t grid image, but does not
+control the actual prefix floor branch. Reportcb47ad179f9373c41c275819a59fdc6be17cfd43515d2da909f9cbcf2994d26d
+is in `/tmp/pi-m4-preblock-parity-20261128-0712/`; caller checker06f777 passed
+and all three inventory hashes matchedd28567. An initial checker representative
+assertion was repaired without changing the universal proof. Independent
+review07:26:07–07:29:23 found no defects or improvements and retained Q1:
+actual corrected-phase hits. Q1 remains unresolved and blocks V, not this
+residue result. An estimated progress time was explicitly corrected; the
+review's start/completion are actual observed clocks.
+
+A supplemental prior-work check found Anashin's2006 p-adic dynamics abstract
+and public Mathlib Mahler-basis documentation. Pinned source278262 confirms
+the basis definition and natural-binomial identity; neither gives the actual
+real floor-branch estimate. This is contextual source inspection, not an
+imported theorem, a novelty conclusion or a new Lean proof of the residue grid.
+The same elementary asymptotic source map still supplies the mathematical input.
+
+A fresh-context recovery inquiry began near07:36 with07:46/07:58 bounds.
+It is testing fixed-order rational tail approximations and exact radix clearing,
+while retaining the distinction between failed integer clearing and possible
+small nonzero modular residues. Its mathematics is unadopted. This changes
+the approximation mechanism rather than relabelling the missing beta-phase
+distribution. The full comparison formalization does not close that missing
+mathematics; selected-time hits and V/M4 remain open.
+
+Production review completed07:47:43 UTC after full inspection from07:45:20,
+before the assigned07:51/07:55 bounds. The30-entry manifest is
+255c382f9453d6855bd2a6e90f3a263d01fcb0fabdf8fc059b7cbfb70c88e99a;
+the905-line diff is feaa1954668048beb6ff449254de662aced6d441eca3d28a37feb5da86aeaa0f.
+Both guides and all original contracts were covered. No defects, improvements
+or new questions; inherited pre-block Q1 remains unresolved and blocks V/M4.
+The full return is captured outside the immutable inventory as
+`review-full.md`, hash89691379f9d11c7840ae9711d6f1baef3d87e0aacf624d002bbb4143cab8bcb0.
+All30 integration entries,20 worker entries and ten live postimages matched
+for the reviewer. Execution and preservation receipts remain caller evidence.
+Caller088d65 reverified138 protected and11 unrelated identities; remote1d3371
+reverified ae02a7a at07:46:34, with no ready reviewed commit withheld.
+Factual completion updates now prepare the accepted intermediate result for
+publication; no Lean proof or mathematical contract changed after review.
+
+The separate rational-tail inquiry completed its bounded test and froze at
+07:48:15, before07:58; its actual midpoint was07:46:46. The scratch report
+`/tmp/pi-m4-tail-rational-clearing-20261128-0736/report-v1.md` has hash
+e44140f50e4160ca2bbcad1d9dbf0693f7cb1dfa9540584ed2dfeb3eee2a673a.
+Parent read the complete report and receipt7c274b. Its proposed fixed-order
+clearing obstruction remains unadopted pending separate mathematical review;
+growing order, small nonzero modular residues and target placement remain open.

@@ -5506,3 +5506,67 @@ and11 unrelated files; caller checkpoint076124 reverified them. No writes,
 Git/network, builds/probes/checkers, installs, delegation or census occurred.
 The whole review cycle is complete. Only factual completion edits and final
 affected checks follow; proof source, root export and audits stay unchanged.
+
+## Full dyadic comparison and pre-block residue extension — 2026-11-28 UTC
+
+Scope: two new BBP modules, root export, exact Test audits and six owning/status
+documents against baselineae02a7a. Full shadow/nonvacuity and actual finite
+transfer follow the already reviewed paper argument; the separate residue
+extension has its own completed sketch review. No selected-time hit is proved.
+
+The v3/v3a/v4 immutable worker inventories and parent inspections are recorded
+in the research log. Early root builds/probes, native diagnostics, full build
+3e461b/b3ce86, Test61d31f/1dfd96 and38 process tests4cc33d passed. The only
+production proof-source repair was wrapping three long lines. Eight public
+types and axiom guards retain every numerical and hit premise; nine explicit
+theorem consumers and one definition check include nonempty blocks, a common
+anchor, and the conditional endpoint interval(0,1).
+
+Separate paper reviewer `/root/preblock_independent_review_0726` read both full
+guides, replacement procedure and pi-argument-critic, and inspected the entire
+pre-block report/checker/output/receipt and actual source contracts. Actual
+inspection07:26:07–07:29:23 found no defects or improvement recommendations.
+Its early07:29 progress label was an estimate and was corrected; it is not
+used as clock evidence. All reported packet/guide hashes matched independently.
+No writes, Git, network, builds, probes, checkers, installs, delegation or
+actual-state census occurred. Checker06f777 and inventoryd28567 are caller
+execution evidence, and the separate current Lean diff was outside that review.
+
+The full verbatim return is `preblock-review-full.md` in the0733 integration
+packet, hash `c9c2542fa6954fe0a21f67837d17702cb2bad6085dfaca43c5e71aa5ff5d67a9`.
+Disposition of its sole Q1: **unresolved, retained mathematical obligation**.
+Coverage of r_h does not imply corrected-phase hits because
+beta_h=(floor(16^J*S_N)+r_h) mod16^t retains the actual integer branch.
+Universal late interior corrected-phase hits would supply the missing premise;
+none is proved. This blocks V/M4 acceptance, not the stated residue theorem.
+
+Independent review of the complete production diff is complete as recorded
+below. Final affected checks gate publication. The prior sketch review and
+compiler results did not substitute for that gate. The supplemental p-adic/Mahler
+source search is contextual; no new source theorem or originality claim is used.
+
+The complete905-line production diff, hash
+`feaa1954668048beb6ff449254de662aced6d441eca3d28a37feb5da86aeaa0f`,
+was reviewed by `/root/dyadic_grid_independent_review_0649` during the actual
+07:45:20–07:47:43 UTC interval, before its07:55 endpoint. Both complete guides,
+the replacement procedure, AGENTS and argument-critic were reread at the
+unchanged hashes. All30 frozen integration entries,20 v3/v3a/v4 entries and
+ten owned postimages matched. Full verbatim return: `review-full.md` in the0733
+packet, SHA256 `89691379f9d11c7840ae9711d6f1baef3d87e0aacf624d002bbb4143cab8bcb0`.
+
+No defects or nonblocking improvements were found. No new open question was
+introduced. Inherited Q1 retains the disposition above: unresolved, blocking
+V/M4 but not acceptance of these stated intermediate results. The reviewer
+checked all eight public proofs, three private helpers, the numerical error,
+complete contracts/audits and every boundary consumer. It verified the single
+common witness, original floor/division/real-power bounds, signed error,
+interior margin and original recurrence index; `hvisit` remains unproved.
+The paper residue integration preserves the actual floor branch.
+
+Review used only file inspection, comparison and hashing, with no writes,
+Git, network, builds, probes, checker execution, installation or delegation.
+Execution receipts and preservation of protected/unrelated files remain caller
+evidence. Caller recheck088d65 matched all138 protected and11 unrelated files.
+Only factual completion records changed after the frozen review; Lean proof
+sources and mathematical contracts are unchanged. The scoped review cycle is
+complete; selected-time hits and V/M4 remain open.

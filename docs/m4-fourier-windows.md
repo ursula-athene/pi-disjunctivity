@@ -368,8 +368,9 @@ above remain paper mathematics. No production Lean declaration changed.
 
 The preceding absolute-error obstruction leaves room for cancellation modulo
 integers. The actual BBP tail has such cancellation at explicit dyadic anchors.
-This is an independently reviewed paper result, not a Lean theorem or a
-visitation assertion. Use the inclusive prefix S_N and tail E_N above, and the
+The paper argument was independently reviewed; its full Lean formalization
+and finite consumer are described below. It is not a visitation assertion.
+Use the inclusive prefix S_N and tail E_N above, and the
 [exact coefficient denominators](m4-transforms-and-periods.md#an-exact-transform-explains-the-dyadic-tail-coefficients).
 For integers s>=32 define
 
@@ -530,7 +531,7 @@ passed separate review with no D/I/Q items. Parent checker e79413 passed
 130,816 abstract cutoff pairs and288 rational identities using synthetic
 coefficients, with no actual prefix/denominator computation. The existing
 generic Lean theorems are checked; the new arithmetic bridge is formalized
-below. The analytic shadow bound remains a paper result.
+below. The full comparison formalization is described after the analytic core.
 
 ### Lean formalization of the nearby dyadic grid
 
@@ -564,8 +565,8 @@ passed. The worker packet is
 `8917e301b35c7d90e4a96367ce9a2f6c368365f3a059c2a7475ed51d31fc32cc`.
 Independent production review is complete. This formalization verifies
 the arithmetic/complete-period half of the compatible-anchor result. The
-analytic modular-shadow estimate remains paper mathematics and the selected
-target-time intersection remains unproved; V/M4 is open.
+full modular-shadow estimate is implemented in the comparison component below.
+The selected target-time intersection remains unproved; V/M4 is open.
 
 Early prior-work searches found a related radix-cancellation mechanism in
 Borwein--Borwein--Dilcher, [*Pi, Euler Numbers, and Asymptotic Expansions*](https://www.cecm.sfu.ca/~pborwein/PAPERS/P45.pdf).
@@ -630,9 +631,56 @@ rename its namespace, restrict helper visibility, move audits out of the
 library and satisfy enabled linters without changing the mathematics.
 
 Root-interface and full production checks passed; independent code review
-is complete with no D/I/Q items. This component does not yet check finite integer
-clearing or the logarithmic estimates proving (DS). Those are the next
-specific formalization consumers. Selected-time target hits and V remain open.
+is complete with no D/I/Q items. The following component consumes this core
+to check integer clearing and the logarithmic estimates proving (DS).
+Selected-time target hits and V remain open.
+
+### Lean formalization of the full comparison
+
+[DyadicTailShadow.lean](../PiDisjunctivity/BBP/DyadicTailShadow.lean) proves
+finite integer clearing, signed cancellation at every dyadic anchor, the
+stronger v=0 bound2^(-s/2), and the full original (DS) bound2^(-s/4).
+Its h limit is the natural floor of the real logarithmic expression; v<=s/16
+uses natural division. Negative error exponents are real powers. Three
+numerical helpers remain private. The general nonvacuity theorem proves
+that h=1 is admissible for every s>=128, and its first-block consumer applies
+the full shadow result at j=s+3+v. Six public theorems have exact root audits.
+
+[DyadicComparison.lean](../PiDisjunctivity/BBP/DyadicComparison.lean) imports
+this result and the checked grid component. Its theorem
+`arbitrarily_large_dyadic_grid_shadows` chooses one nearby anchor above
+max(B,127). That single s>B, s>=128 carries a positive actual rational period,
+every depth-d grid translate at a time below that period, strict complete-period
+discrepancy, and the original bound at every admissible h,v. It does not combine
+different existential anchors or identify a grid time with a shadow time.
+
+The exposed numerical definition `dyadicShadowError s` is exactly
+`2^(-s/4)+1/(64*(2^s)^2)`. The second theorem,
+`dyadic_frozen_prefix_hit_transfer`, retains s>=32, every h/v bound,
+j=h(s+3)+v,0<=a<b<=1, and the explicit hypothesis
+
+```text
+fract(16^j*(bbpPartialSumRat (2^s):real)) in (a+dyadicShadowError s,b).
+```
+
+It concludes membership of the original bbpRecurrence(2^s+j+1) in(a,b).
+The proof derives the signed prefix identity from the actual pi/prefix/tail
+split, bounds the later positive tail, and removes the integer only after
+the interior margin rules out wrap. It proves no instance of that hit premise.
+
+Both modules pass the full build, root probes and Test audits. Separate
+production review is complete and found no blocking defect. The eight public
+theorems have complete types and guarded allowed-three axiom lists in
+[Test.lean](../Test.lean).
+Nine explicit theorem consumers cover empty correction, smallest pre-log s,
+nonempty s=128/h=1 blocks including v=8, a common grid/discrepancy/shadow
+witness, and conditional target transfer including endpoint target(0,1).
+One additional check unfolds the numerical error. No actual state is evaluated.
+
+The immutable v3, v3a and v4 packets are in the0733 integration evidence.
+The full compatibility and finite transfer statements are now implemented;
+the missing selected-time visits are still missing mathematics. Neither
+complete periods nor modular error bounds imply V/M4 on their own.
 
 ### Both resources alone do not supply selected target hits
 
@@ -737,6 +785,102 @@ all-order integrality certificate and noncancelling pole coefficients.
 These checks are not actual-state observations or universal analytic proofs.
 No Lean theorem or originality claim is made for this comparison. The existing
 source map suffices for this extension of the same recorded model.
+
+### Translated tail comparisons before the blocks
+
+The actual odd coefficient numerators give a further paper result, separately
+reviewed. It supplies a fine grid of tail corrections, while retaining the
+dependence on the actual prefix's integer branch. It is not a target-hit or
+Lean result. Use the actual B_l from the exact coefficient formula above.
+For s>=32, N=2^s, 1<=h<=H_s, put K=4h-1, J=h(s+3), and
+
+```text
+I_(h,s)=(8N)^(4h)*R_(4h-1)(N)
+       =sum_(q=0)^(4h-2) B_(4h-2-q)*2^(q(s+3)).
+16^J*E_N=I_(h,s)-delta, 0<delta<2^(-s/2).
+```
+
+For fixed t>=1 with J>=t, let Q=16^t, j=J-t and r be the least residue
+of I_(h,s) modulo Q. Every lower term with q(s+3)<4t must be retained:
+
+```text
+r=[sum_(q=0)^min(4h-2,floor((4t-1)/(s+3)))
+     B_(4h-2-q)*2^(q(s+3))] mod Q.
+```
+
+Oddness makes r nonzero and `fract(16^j*E_N)=r/Q-delta/Q`, without wrap.
+If s+3>=4t, this simplifies to r=B_(4h-2) mod Q. For every fixed t and
+satisfying also H_s>=t+16^(t-1), its exact image over all admissible h is
+
+```text
+{415 mod16^t} union {r:0<=r<16^t and r=7 mod16}.         (PB)
+```
+
+The main set has mesh16^(-(t-1)); the h=1 extra point is disjoint. These
+conditions hold at every sufficiently large dyadic anchor, including along
+the compatible-anchor family. This is a grid of the tail corrections at
+different times, not a freely chosen translation of one prefix phase.
+
+Here is the all-order argument behind (PB). Write
+`H(1+y)=sum u_i*y^i`, where H=x^9(1-x)/D and D(1)=1; all u_i are integers.
+Let c(t) be the least positive integer with16^t dividing c(t)!, and set
+`w_j=sum_(j<=i<c(t))(-1)^(i-j)*choose(i,j)*u_i`. The Euler/Stirling identity
+gives `B_(4h-2)=-sum_(j<c(t))w_j*j^(4h-1) mod16^t`. This reduction is
+universal in h: derivatives above the factorial threshold vanish modulo16^t.
+For h>=t+1 the even j terms vanish. For odd j, expand
+`j^(4h-1)=j^(-1)*(1+16*((j^4-1)/16))^h` modulo16^t to obtain
+
+```text
+B_(4h-2)=P_t(h) mod16^t,
+P_t(h)=sum_(a=0)^(t-1)16^a*C_(a,t)*choose(h,a).
+```
+
+The finite Taylor certificates give B_2=415, every h>=2 giving7 modulo16,
+and `P_2(h)=39+80h mod256` for h>=3. Comparing at two consecutive large h
+proves C_(0,t)=39 modulo256 and C_(1,t)=5 modulo16 for every t>=2.
+Thus P_t(h)=7+16*f_t(h), with odd linear coefficient in f_t and higher terms
+`16^(a-1)*C_(a,t)*choose(h,a)`. Vandermonde and
+`j*choose(2^k,j)=2^k*choose(2^k-1,j-1)` bound each higher-term difference
+at h+2^k by valuation at least `4(a-1)+k-v_2(j)>=k+3`.
+Consequently `f_t(h+2^k)-f_t(h)=2^k mod2^(k+1)`. Binary lifting proves
+periodicity and bijectivity modulo every relevant power of2. The consecutive
+values h=t+1,...,t+16^(t-1) supply the main set in (PB); all earlier h>=2
+add no new mod16 class. The case t=1 is the constant7 calculation.
+
+The exact consumer uses `Z_h=fract(16^j*S_N+r/Q)` and
+`eta=2^(-s/2)/Q+1/(64*N^2)`. A hit Z_h in(a+eta,b), with0<=a<b<=1,
+gives bbpRecurrence(N+j+1) in(a,b). But writing
+`16^J*S_N=U_h+phi_h`, with U_h its floor and0<=phi_h<1, gives
+
+```text
+Z_h=(beta_h+phi_h)/Q,
+beta_h=(U_h+r_h) mod Q.
+```
+
+The proved permutation controls r_h, not beta_h. Changing h also changes
+U_h and phi_h along the same actual rational orbit. No estimate controlling
+that dependence was obtained. Arbitrarily late interior hits of these corrected
+phases for every target remain the explicit missing premise; the grid cannot
+replace it. Review Q1 is retained unresolved and blocks V/M4, not this result.
+
+Frozen report `/tmp/pi-m4-preblock-parity-20261128-0712/report-v1.md`, hash
+`cb47ad179f9373c41c275819a59fdc6be17cfd43515d2da909f9cbcf2994d26d`,
+was independently reviewed with no defects or improvement recommendations.
+The symbolic Taylor/Stirling checker passed in caller06f777; inventoryd28567
+matched. It checks finite certificates, not actual states or the universal
+lifting proof. An initial coefficient-representative checker assertion was
+corrected without changing that proof. This refines the existing asymptotic
+source map; no new source theorem, originality claim or formalization is added.
+
+A supplemental prior-work check found related p-adic dynamics in Anashin's
+[*Ergodic Transformations of the Space of p-adic Integers*](https://arxiv.org/abs/math/0602083)
+(2006; abstract inspected), and the pinned Mathlib
+[Mahler-basis development](https://leanprover-community.github.io/mathlib4_docs/Mathlib/NumberTheory/Padics/MahlerBasis.html).
+Local source inspection confirms `mahler`, `mahler_apply` and
+`mahler_natCast_eq`, extending binomial coefficients continuously to p-adic
+integers. These are contextual connections, not an imported proof of (PB)
+or a result controlling the real floor branch. No exhaustive novelty or Lean
+absence claim follows from this small search.
 
 <a id="normal-prime-power-columns-do-not-supply-a-sum-estimate"></a>
 

@@ -1247,9 +1247,11 @@ review is complete. Its arbitrary-dyadic-exponent and fixed-word consequences
 retain complete-period scope. The [actual tail expansion](m4-fourier-windows.md#lean-formalization-of-the-actual-tail-expansion)
 now has a checked Lean component for all-order coefficient integrality,
 strict factorial moments and the signed finite remainder at every N>0 and K.
-Production audits and independent review passed. Finite integer
-clearing and final logarithmic shadow estimates remain outside this component;
-the full shadow theorem is still paper level. The existing
+Production audits and independent review passed. The [full comparison](m4-fourier-windows.md#lean-formalization-of-the-full-comparison)
+now implements integer clearing, every original shadow bound, nonvacuity for
+s>=128, the single common-anchor theorem and exact conditional finite transfer.
+Its root/build/audit checks pass; separate production review is complete.
+The actual frozen-prefix hit remains an explicit unproved premise. The existing
 [comparison model](m4-fourier-windows.md#both-resources-alone-do-not-supply-selected-target-hits)
 retains both resources with a rational constant and misses all selected times
 in a fixed target. Additional actual-BBP input is therefore necessary.

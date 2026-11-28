@@ -18,6 +18,7 @@ public import PiDisjunctivity.BBP.Series
 public import PiDisjunctivity.BBP.Orbit
 public import PiDisjunctivity.BBP.Tail
 public import PiDisjunctivity.BBP.TailAsymptotics
+public import PiDisjunctivity.BBP.DyadicTailShadow
 public import PiDisjunctivity.BBP.RationalPrefix
 public import PiDisjunctivity.BBP.RationalEntry
 public import PiDisjunctivity.BBP.PrimeDenominator
@@ -27,6 +28,7 @@ public import PiDisjunctivity.ShiftedGrid
 public import PiDisjunctivity.RationalHexOrbit
 public import PiDisjunctivity.BBP.DenominatorGrid
 public import PiDisjunctivity.BBP.DyadicGrid
+public import PiDisjunctivity.BBP.DyadicComparison
 public import PiDisjunctivity.FiniteWordDiscrepancy
 public import PiDisjunctivity.RationalGridDiscrepancy
 import PiDisjunctivity.Examples

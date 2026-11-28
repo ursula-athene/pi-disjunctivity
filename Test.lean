@@ -2200,3 +2200,183 @@ example (k : ℕ) : coefficient k = (-1 : ℝ) ^ k * ((k : ℝ) + 1) * moment k 
 example (K N : ℕ) : correction K N = ∑ k ∈ Finset.range K, coefficient k / (N : ℝ) ^ (k + 2) := rfl
 
 end TailAsymptoticsAudit
+
+section DyadicTailShadowAudit
+
+open PiDisjunctivity PiDisjunctivity.BBPAsymptotics
+
+example : ∀ (N K : ℕ) (_hN : 0 < N),
+    ∃ z : ℤ, (8 * (N : ℝ)) ^ (K + 1) * correction K N = (z : ℝ) :=
+  @PiDisjunctivity.BBPAsymptotics.correction_integer
+
+example : ∀ (s h : ℕ) (_hh : 1 ≤ h),
+    ∃ (z : ℤ) (δ : ℝ),
+      (16 : ℝ) ^ (h * (s + 3)) * bbpTail (2 ^ s) = (z : ℝ) - δ ∧
+      0 < δ ∧ δ < (8 : ℝ) ^ (4 * h) * (Nat.factorial (4 * h) : ℝ) / (2 : ℝ) ^ s :=
+  @PiDisjunctivity.BBPAsymptotics.dyadic_tail_cancellation
+
+example : ∀ (s h : ℕ) (_hs : 32 ≤ s) (_hh : 1 ≤ h)
+    (_hsize : h ≤ ⌊(s : ℝ) / (16 * Real.logb 2 ((s : ℝ) + 2))⌋₊),
+    ∃ (z : ℤ) (δ : ℝ), (16 : ℝ) ^ (h * (s + 3)) * bbpTail (2 ^ s) = (z : ℝ) - δ ∧
+      0 < δ ∧ δ < (2 : ℝ) ^ (-(s : ℝ) / 2) :=
+  @PiDisjunctivity.BBPAsymptotics.dyadic_tail_shadow_base
+
+example : ∀ (s h v : ℕ) (_hs : 32 ≤ s) (_hh : 1 ≤ h)
+    (_hsize : h ≤ ⌊(s : ℝ) / (16 * Real.logb 2 ((s : ℝ) + 2))⌋₊) (_hv : v ≤ s / 16),
+    ∃ (z : ℤ) (ε : ℝ),
+      (16 : ℝ) ^ (h * (s + 3) + v) * bbpTail (2 ^ s) = (z : ℝ) - ε ∧
+      0 < ε ∧ ε < (2 : ℝ) ^ (-(s : ℝ) / 4) :=
+  @PiDisjunctivity.BBPAsymptotics.dyadic_tail_shadow
+
+example : ∀ (s : ℕ) (_hs : 128 ≤ s),
+    1 ≤ ⌊(s : ℝ) / (16 * Real.logb 2 ((s : ℝ) + 2))⌋₊ :=
+  @PiDisjunctivity.BBPAsymptotics.dyadic_shadow_h_one_admissible
+
+example : ∀ (s v : ℕ) (_hs : 128 ≤ s) (_hv : v ≤ s / 16),
+    ∃ (z : ℤ) (ε : ℝ),
+      (16 : ℝ) ^ (s + 3 + v) * bbpTail (2 ^ s) = (z : ℝ) - ε ∧
+      0 < ε ∧ ε < (2 : ℝ) ^ (-(s : ℝ) / 4) :=
+  @PiDisjunctivity.BBPAsymptotics.dyadic_tail_shadow_first_block
+
+/-- info: 'PiDisjunctivity.BBPAsymptotics.correction_integer' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms PiDisjunctivity.BBPAsymptotics.correction_integer
+
+/-- info: 'PiDisjunctivity.BBPAsymptotics.dyadic_tail_cancellation' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms PiDisjunctivity.BBPAsymptotics.dyadic_tail_cancellation
+
+/-- info: 'PiDisjunctivity.BBPAsymptotics.dyadic_tail_shadow_base' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms PiDisjunctivity.BBPAsymptotics.dyadic_tail_shadow_base
+
+/-- info: 'PiDisjunctivity.BBPAsymptotics.dyadic_tail_shadow' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms PiDisjunctivity.BBPAsymptotics.dyadic_tail_shadow
+
+/-- info: 'PiDisjunctivity.BBPAsymptotics.dyadic_shadow_h_one_admissible' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms PiDisjunctivity.BBPAsymptotics.dyadic_shadow_h_one_admissible
+
+/-- info: 'PiDisjunctivity.BBPAsymptotics.dyadic_tail_shadow_first_block' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms PiDisjunctivity.BBPAsymptotics.dyadic_tail_shadow_first_block
+
+-- Explicitly instantiate the clearing theorem at the empty-correction boundary.
+example : ∃ z : ℤ, (8 * (1 : ℝ)) ^ (0 + 1) * correction 0 1 = (z : ℝ) :=
+  by simpa only [Nat.cast_one] using correction_integer 1 0 (by decide)
+-- The pre-log result permits the smallest natural dyadic exponent and h=1.
+example : ∃ (z : ℤ) (δ : ℝ),
+    (16 : ℝ) ^ (1 * (0 + 3)) * bbpTail (2 ^ 0) = (z : ℝ) - δ ∧
+    0 < δ ∧ δ < (8 : ℝ) ^ (4 * 1) * (Nat.factorial (4 * 1) : ℝ) / (2 : ℝ) ^ 0 :=
+  dyadic_tail_cancellation 0 1 (by decide)
+
+private theorem shadow_h_one_admissible_128 :
+    1 ≤ ⌊(128 : ℝ) / (16 * Real.logb 2 ((128 : ℝ) + 2))⌋₊ :=
+  dyadic_shadow_h_one_admissible 128 (by decide)
+
+-- Nonvacuous h=1, and v=8 is exactly the allowed upper endpoint for s=128.
+-- No actual tail value is evaluated: this consumes the universal theorem.
+example : ∃ (z : ℤ) (ε : ℝ),
+    (16 : ℝ) ^ (1 * (128 + 3) + 8) * bbpTail (2 ^ 128) = (z : ℝ) - ε ∧
+    0 < ε ∧ ε < (2 : ℝ) ^ (-(128 : ℝ) / 4) :=
+  dyadic_tail_shadow 128 1 8 (by decide) (by decide) shadow_h_one_admissible_128 (by decide)
+example : ∃ (z : ℤ) (δ : ℝ),
+    (16 : ℝ) ^ (1 * (128 + 3)) * bbpTail (2 ^ 128) = (z : ℝ) - δ ∧
+    0 < δ ∧ δ < (2 : ℝ) ^ (-(128 : ℝ) / 2) :=
+  dyadic_tail_shadow_base 128 1 (by decide) (by decide) shadow_h_one_admissible_128
+
+example : 1 ≤ ⌊(128 : ℝ) / (16 * Real.logb 2 ((128 : ℝ) + 2))⌋₊ :=
+  dyadic_shadow_h_one_admissible 128 (by decide)
+example : ∃ (z : ℤ) (ε : ℝ),
+    (16 : ℝ) ^ (128 + 3 + 8) * bbpTail (2 ^ 128) = (z : ℝ) - ε ∧
+    0 < ε ∧ ε < (2 : ℝ) ^ (-(128 : ℝ) / 4) :=
+  dyadic_tail_shadow_first_block 128 8 (by decide) (by decide)
+
+
+end DyadicTailShadowAudit
+
+section DyadicComparisonAudit
+
+open PiDisjunctivity PiDisjunctivity.BBPAsymptotics
+
+example : ∀ (d B : ℕ) (_hd : 0 < d),
+    ∃ s : ℕ, B < s ∧ 128 ≤ s ∧
+      0 < orderOf (16 : ZMod (bbpPartialSumRat (2 ^ s)).den) ∧
+      (∀ m : ℕ, ∃ t < orderOf (16 : ZMod (bbpPartialSumRat (2 ^ s)).den),
+        Int.fract ((16 : ℝ) ^ t * (bbpPartialSumRat (2 ^ s) : ℝ)) =
+          Int.fract ((bbpPartialSumRat (2 ^ s) : ℝ) + m / (17 : ℝ) ^ d)) ∧
+      (∀ u v : ℝ, 0 ≤ u → u ≤ v → v ≤ 1 →
+        |(hexadecimalPrefixIcoCount (bbpPartialSumRat (2 ^ s) : ℝ)
+            (orderOf (16 : ZMod (bbpPartialSumRat (2 ^ s)).den)) u v : ℝ) /
+          (orderOf (16 : ZMod (bbpPartialSumRat (2 ^ s)).den) : ℝ) - (v - u)| <
+          1 / (17 : ℝ) ^ d) ∧
+      (∀ h v : ℕ, 1 ≤ h →
+        h ≤ ⌊(s : ℝ) / (16 * Real.logb 2 ((s : ℝ) + 2))⌋₊ → v ≤ s / 16 →
+        ∃ (z : ℤ) (ε : ℝ),
+          (16 : ℝ) ^ (h * (s + 3) + v) * bbpTail (2 ^ s) = (z : ℝ) - ε ∧
+          0 < ε ∧ ε < (2 : ℝ) ^ (-(s : ℝ) / 4)) :=
+  @PiDisjunctivity.BBPAsymptotics.arbitrarily_large_dyadic_grid_shadows
+
+example : ∀ (s h v j : ℕ)
+    (_hs : 32 ≤ s) (_hh : 1 ≤ h)
+    (_hsize : h ≤ ⌊(s : ℝ) / (16 * Real.logb 2 ((s : ℝ) + 2))⌋₊)
+    (_hv : v ≤ s / 16) (_hj : j = h * (s + 3) + v)
+    (a b : ℝ) (_ha : 0 ≤ a) (_hab : a < b) (_hb : b ≤ 1)
+    (_hvisit : Int.fract ((16 : ℝ) ^ j * (bbpPartialSumRat (2 ^ s) : ℝ)) ∈
+      Set.Ioo (a + dyadicShadowError s) b),
+    bbpRecurrence (2 ^ s + j + 1) ∈ Set.Ioo a b :=
+  @PiDisjunctivity.BBPAsymptotics.dyadic_frozen_prefix_hit_transfer
+
+/-- info: 'PiDisjunctivity.BBPAsymptotics.arbitrarily_large_dyadic_grid_shadows' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms PiDisjunctivity.BBPAsymptotics.arbitrarily_large_dyadic_grid_shadows
+
+/-- info: 'PiDisjunctivity.BBPAsymptotics.dyadic_frozen_prefix_hit_transfer' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms PiDisjunctivity.BBPAsymptotics.dyadic_frozen_prefix_hit_transfer
+
+-- The same existential witness supplies a grid translate, discrepancy, and a nonempty shadow block.
+-- This does not assert that the grid time t is a selected shadow time.
+example : ∃ s : ℕ, 127 < s ∧ 128 ≤ s ∧
+    (∃ t < orderOf (16 : ZMod (bbpPartialSumRat (2 ^ s)).den),
+      Int.fract ((16 : ℝ) ^ t * (bbpPartialSumRat (2 ^ s) : ℝ)) =
+        Int.fract ((bbpPartialSumRat (2 ^ s) : ℝ) + 1 / (17 : ℝ))) ∧
+    (|(hexadecimalPrefixIcoCount (bbpPartialSumRat (2 ^ s) : ℝ)
+        (orderOf (16 : ZMod (bbpPartialSumRat (2 ^ s)).den)) 0 (1 / 2) : ℝ) /
+      (orderOf (16 : ZMod (bbpPartialSumRat (2 ^ s)).den) : ℝ) - (1 / 2)| < 1 / (17 : ℝ)) ∧
+    (∃ (z : ℤ) (ε : ℝ), (16 : ℝ) ^ (s + 3) * bbpTail (2 ^ s) = (z : ℝ) - ε ∧
+      0 < ε ∧ ε < (2 : ℝ) ^ (-(s : ℝ) / 4)) := by
+  obtain ⟨s, hs, hs128, _hP, hgrid, hdisc, hshadow⟩ :=
+    arbitrarily_large_dyadic_grid_shadows 1 127 (by decide)
+  refine ⟨s, hs, hs128, ?_, ?_, ?_⟩
+  · simpa only [Nat.cast_one, pow_one] using hgrid 1
+  · simpa only [pow_one, sub_zero] using hdisc 0 (1 / 2) (by norm_num) (by norm_num) (by norm_num)
+  · simpa only [one_mul, add_zero] using
+      hshadow 1 0 (by decide) (dyadic_shadow_h_one_admissible s hs128) (by omega)
+
+-- Concrete selected endpoint, retaining the unproved hit premise and the n+1 recurrence offset.
+example
+    (hvisit : Int.fract ((16 : ℝ) ^ 139 * (bbpPartialSumRat (2 ^ 128) : ℝ)) ∈
+      Set.Ioo ((1 : ℝ) / 4 + dyadicShadowError 128) (1 / 2)) :
+    bbpRecurrence (2 ^ 128 + 139 + 1) ∈ Set.Ioo ((1 : ℝ) / 4) (1 / 2) := by
+  exact dyadic_frozen_prefix_hit_transfer 128 1 8 139 (by decide) (by decide)
+    (dyadic_shadow_h_one_admissible 128 (by decide)) (by decide) (by decide)
+    (1 / 4) (1 / 2) (by norm_num) (by norm_num) (by norm_num) hvisit
+
+example (s : ℕ) : dyadicShadowError s =
+    (2 : ℝ) ^ (-(s : ℝ) / 4) + 1 / (64 * ((2 : ℝ) ^ s) ^ 2) := by
+  simp only [dyadicShadowError, Nat.cast_pow, Nat.cast_ofNat]
+
+
+-- Endpoint target (0,1) still consumes the conditional transfer theorem.
+example
+    (hvisit : Int.fract ((16 : ℝ) ^ 139 * (bbpPartialSumRat (2 ^ 128) : ℝ)) ∈
+      Set.Ioo (dyadicShadowError 128) 1) :
+    bbpRecurrence (2 ^ 128 + 139 + 1) ∈ Set.Ioo (0 : ℝ) 1 := by
+  apply dyadic_frozen_prefix_hit_transfer 128 1 8 139 (by decide) (by decide)
+    (dyadic_shadow_h_one_admissible 128 (by decide)) (by decide) (by decide)
+    0 1 (by norm_num) (by norm_num) (by norm_num)
+  simpa only [zero_add] using hvisit
+
+end DyadicComparisonAudit

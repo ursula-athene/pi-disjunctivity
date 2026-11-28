@@ -71,12 +71,12 @@ gives arbitrarily large dyadic anchors with both fine complete grids and the
 shadow blocks. Complete-period covering still does not locate a hit within
 the blocks. The [arithmetic grid bridge](m4-fourier-windows.md#lean-formalization-of-the-nearby-dyadic-grid)
 now has a kernel-checked implementation with root export and exact audits;
-independent code review is complete. The analytic shadow bound remains a paper
-result, and neither component supplies selected-time visitation. The
+independent code review is complete. The
 [actual analytic core](m4-fourier-windows.md#lean-formalization-of-the-actual-tail-expansion)
-is kernel checked with integer coefficient numerators, strict factorial moments
-and the signed finite remainder. Production review is complete; integer
-clearing and final shadow estimates are the next concrete consumers.
+is kernel checked and reviewed. The [full comparison](m4-fourier-windows.md#lean-formalization-of-the-full-comparison)
+is kernel checked with all original shadow estimates, nonvacuity, one common
+grid anchor and the exact finite hit transfer; separate production review is
+complete. No component supplies the explicitly retained selected-time hit.
 The [existing rational comparison](m4-fourier-windows.md#both-resources-alone-do-not-supply-selected-target-hits)
 shows that the combined resources alone do not supply the missing target hits.
 The log owns bounds and outcomes;
