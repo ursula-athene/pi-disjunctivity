@@ -1610,9 +1610,56 @@ and entropy affinity, followed by rational-scaling invariance, therefore give
 Hup(X_M)<=17/[4(M+2)] -> 0.
 ```
 
-Only an entropy upper bound is used here; density of the individual packet
-orbits is not settled. The entropy source and its retained dependencies are
-the same as above. No orbit discrepancy estimate is needed here.
+The entropy source and its retained dependencies are the same as above.
+Since the displayed bound is less than one, every packet is nonnormal.
+Nevertheless, every fixed packet is disjunctive, as the following separate
+paper argument shows without an orbit discrepancy estimate.
+
+For k>=1 put A_k=e(a,k), B_k=e(d,k), P_k=2*17^(k-1) and
+W=sum_(u in {a,d,c,b}) D/u. The identity d-a=2*(M-2)^2 gives
+B_k-A_k=(M-2)^2*17^k>P_k. All lower depths are complete and integral
+before A_k. On A_k<=n<B_k only a has started at depth k, and no higher
+depth has started. Therefore, for an integer J_(k,n),
+
+```text
+16^n*Y_M=J_(k,n)-(D/a)*16^(n-A_k)/17^k+R_(k,n),
+|R_(k,n)|<=16^(n-B_k)*W*sum_(ell>=k)17^(-ell)
+          <=W*17^(1-k)/256=:epsilon_k -> 0.
+```
+
+Every unstarted term has insertion time at least B_k and depth at least k,
+which justifies the bound uniformly on the entire first active interval.
+Since 256=1+15*17, its order modulo 17^k is h_k=17^(k-1). Its powers
+exhaust the principal units. Thus, for the integer unit v=-D/a, the even
+powers at n=A_k+2j, 0<=j<h_k, give exactly the translated circular grid
+
+```text
+{fract(v/17^k+j/h_k): 0<=j<h_k}.
+```
+
+Given 0<=alpha<beta<=1 and a threshold N, choose k with A_k>=N and
+1/h_k+epsilon_k<(beta-alpha)/4. A grid point within 1/h_k of the interval
+midpoint, followed by the tail bound, gives a strict visit by Y_M. This also
+handles intervals adjacent to zero or one. These scaled visits occur in
+[A_k,A_k+P_k).
+
+The existing [rational-affine late-visitation theorem](../PiDisjunctivity/AffineOrbit.lean)
+transfers density from Y_M=2D*X_M to X_M. Its topological mechanism retains
+all branches: a proper closed forward-invariant orbit closure K has no
+interior; if qK were the whole circle, the finite union of translates of K
+by the kernel of multiplication by q would cover the circle, contradicting
+that each is nowhere dense. Every tail is then dense as well. Negative X_M
+causes no problem. This qualitative transfer does not locate X_M's visits
+inside the explicitly selected Y_M windows.
+
+These disjunctive packets themselves satisfy
+`|X_M|<=17/(8a)*16^(-(a-1)/2)->0`, since
+`U_(4u)<=(17/16)*16^(-(u-1)/2)`. Their limit has a nondense orbit.
+Thus ordinary real convergence does not transfer even this packet family's
+disjunctivity. For pi=X_M+(pi-X_M), the complementary phase is not R_(k,n)
+and remains uncontrolled at the same times. The
+[separate paper review](agy-reports/m4-continuation-review.md#actual-packet-disjunctivity--2026-11-28-utc)
+closes packet density, with no new Lean theorem, originality claim or pi visit.
 
 The whole-tail consumer remains missing. Among eligible residue-4 cofactors,
 a zero-charge packet containing 4p, p an odd prime other than 17, cannot

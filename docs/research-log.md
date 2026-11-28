@@ -7679,3 +7679,65 @@ All 169 diff lines, 10 frozen entries, eight sources, 146 protected and
 dcaa1e6edee1df682fcdbe59aa6dd079441461773b43df9821f324af4aa0ef02.
 Parent verification of the inventories and live owners preceded these factual
 updates; the mathematical owner is unchanged. Final checks and publication remain.
+
+
+## 2026-11-28 — Packet disjunctivity and consumer reassessment
+
+The infinite-core proof is published as
+`c92402ddad08c8b89bc888f753037e07391027a4`, parent 040f49e. Docs 47dea4,
+whitespace d2bda6/d1dd0b and exact stage a14763 passed; commit 3f64be,
+post-commit 706e60, push 6bca39/e7e75e and remote 62da5d verified publication.
+The 1416 packet retains `publication.json`.
+
+The [actual finite packets](m4-fourier-windows.md#actual-weight-packets-with-small-upper-entropy)
+are disjunctive despite being nonnormal. The 188-line report
+`/tmp/pi-m4-resonant-packet-disjunctivity-20261128-v1.md` has hash
+b6621bdcf968beabfb73d1f1f6928770d1eeaadf890d0802b36a9507e8937e64.
+Parent 9e89e3 read it completely. The first active interval supplies a
+complete grid with vanishing error; the existing rational-affine theorem
+unscales qualitatively, without preserving those explicit windows.
+
+Separate paper review 14:25:06–14:27:43 found no D/I and closed packet
+density at paper level. Residual/decomposition, infinite sums/common grids,
+quantitative unscaled windows and C_odd/V/M4 remain open. Full return in
+`/tmp/pi-m4-packet-density-integration-20261128T1430Z/paper-review-full.md`:
+8d4c1af0a8c129e471aa6e533b9127f0328856186298af62c9f70d2f06655dfe.
+Parent 9562e7 reverified six sources before integration. No new build, Lean
+theorem or priority claim. Exact production review and affected checks remain.
+
+The core/complement source screen completed early at 14:22 without an actual
+joining estimate. Its compact unadopted report is
+`/tmp/pi-m4-core-complement-consumer-20261128T1422Z-screen-v1.md`, hash
+40b1c58e25245a7cecc8789bd5125d11a9414d1e3ed19c8757bf5155fef5d195;
+parent a9846a read all 102 lines. The pure-core sources leave the actual
+residual character untouched, and the selected-residue formulas return to
+the archived real-phase gap. The static countertest is not an adopted theorem.
+
+Checkpoint: the new subseries results change our understanding of those
+subseries but do not resolve actual target-time selection. Suspend repeated
+support/CRT/limit transfers. A fresh backward discovery pass now seeks a
+mechanism using the actual zero entry and four coefficients, with 14:45/15:00
+checkpoints. A separate graded-logarithm source-fit check tests exact degree,
+argument and parameter-order conditions; it does not assume ordinary
+irrationality bounds imply visitation. No census or new Lean is involved.
+
+
+The graded-source screen also finished early at 14:29. The 118-line report
+`/tmp/pi-m4-chudnovsky-graded-source-fit-20261128T1429Z-v1.md`, hash
+4e4c3d68328f1eb05499d0284f2c20abc9cbb3b637213fe5357339e40572e974,
+was read completely by parent 06dde3. It records the direct evaluation,
+small-argument and growing-degree mismatches for the primary versioned
+[graded logarithmic source](https://arxiv.org/html/2610.28079v1), Sections 15–19.
+No theorem or formal interface is adopted, and adaptations remain unexcluded.
+The fresh discovery pass is testing the actual four-pole divided-difference
+kernel against the initialized carry constraint; rank alone is not assumed
+to constrain a finite-alphabet carry sequence.
+
+
+Exact production review 14:31:55–14:32:45 found no D/I. Packet density is
+closed at paper level; Q1–Q3 and the quantitative unscaling limit remain.
+All 162 diff lines, 10 frozen entries, 10 sources, 146 protected and
+10 untracked files matched. Full return in the 1430 packet:
+342878b8296523a450d93eb54c5117384ad5c6b1a31e459166f7402e2328b524.
+The two screens remain unadopted. Parent inventory/live verification preceded
+these factual updates; the owner is unchanged. Final checks/publication remain.

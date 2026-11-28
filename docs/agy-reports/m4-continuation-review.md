@@ -6475,3 +6475,47 @@ unchanged-hash checks. Read-only limits held; source and replay evidence limits
 remain explicit. Executed checks and remote verification remain caller evidence.
 The parent reverified all inventories and live owners before factual updates.
 Final affected checks and publication remain due; no M4 acceptance is claimed.
+
+
+## Actual packet disjunctivity — 2026-11-28 UTC
+
+Paper scope: the 188-line report
+`/tmp/pi-m4-resonant-packet-disjunctivity-20261128-v1.md`, hash
+b6621bdcf968beabfb73d1f1f6928770d1eeaadf890d0802b36a9507e8937e64.
+Reviewer `/root/dyadic_grid_independent_review_0649` completed
+14:25:06–14:27:43. D/I: none. Prior packet-density question is closed
+at paper level. Q1 complementary phase/decomposition, Q2 infinite sums,
+common grids and the restricted partition obstruction, and Q3 C_odd/V/M4
+remain. Explicit scaled windows are not transferred to unscaled X_M.
+
+The reviewer checked all 188 report lines, all 322 affine-source lines,
+relevant principal-order/LTE bodies and exact Test types/guards/consumers.
+Lower-depth integrality, the uniform tail constant, translated grid, strict
+endpoint margins, finite-kernel unscaling and X_M tending to zero were checked.
+All six source entries matched inventory
+5fd5507f19f7a8b00e8fe1d154d0cc60e2856eec2e19b2bfa7213a3ed09941fc.
+Full return in `/tmp/pi-m4-packet-density-integration-20261128T1430Z/paper-review-full.md`:
+8d4c1af0a8c129e471aa6e533b9127f0328856186298af62c9f70d2f06655dfe.
+
+Both complete guides, procedure and critic instructions were reused after
+unchanged-hash checks. Read-only limits held. Existing guards were inspected,
+not executed; no fresh build or transitive proof/axiom audit occurred. The
+bounded literature-search history remains reported evidence and supplies no
+originality claim. Parent 9e89e3/9562e7 read and reverified the report/sources.
+Exact three-document production review against c92402d and affected checks
+remain; the separately recorded consumer screen is unadopted.
+
+
+Exact production review 14:31:55–14:32:45 passed with no D/I. Packet density
+is closed at paper level; Q1–Q3 and the quantitative limit remain. All 162
+diff lines reconstructed the three postimages; 10 manifest entries, 10 sources,
+146 protected and 10 untracked hashes matched. Manifest
+b891165007720496cd2ac5190e07d8b68bdd500a9937cb4a36925af74ea22e8c;
+full return in the 1430 packet
+342878b8296523a450d93eb54c5117384ad5c6b1a31e459166f7402e2328b524.
+Both unadopted screens were read as records, without new independent
+certification of their calculations or source applications. Both full guides,
+procedure and critic instructions were reused after unchanged-hash checks.
+Read-only limits held; executed checks and remote state remain caller evidence.
+The parent reverified inventories and live owners before factual updates.
+Final affected checks/publication remain due; C_odd/V/M4 stay open.
