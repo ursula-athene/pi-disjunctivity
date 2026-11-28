@@ -6799,3 +6799,66 @@ midpoint was assessed at freeze 08:36:23: paper work was complete and exact
 production review was the remaining gate. Docs 61c71f, working whitespace
 15b92d and staged whitespace 819950 passed; final factual completion records
 receive affected checks. No mathematical repair followed production review.
+
+## 2026-11-28 — Exact cocycle source fit and a finite-matrix obstruction
+
+The filtered-tail record was published as
+`0bd22d755446b9a1f8491dd68c24d87e0b08fe4b`, parent e8cb577. Commit aa5019,
+post-commit cff136, push df95cc/6d4839 and remote 1e376c verified the exact
+three owned blobs and publication by 08:41:54 UTC. Docs c23007, working/staged
+whitespace c4ab91/de0cf6 and exact-stage 6a0d76 passed. The index was empty;
+145 protected and 11 unrelated files were preserved. No repair or PR.
+
+The fresh cocycle inquiry ran 08:24:18–08:36:58, with observed midpoint
+08:33:45 and endpoint 08:45. Its [two tests](m4-two-adic-reflection.md#two-precise-finite-dimensional-representation-tests)
+find a failed noncontraction hypothesis for natural matrix products and exclude
+an eventual rational observation of any fixed finite constant matrix orbit.
+The second exclusion also holds for F, so it supplies no actual-phase selection.
+The autonomous rational skew map remains available; general nonlinear or
+quotient observations are not excluded. The initial solenoid proposal was
+matched to the archive rather than counted as a new representation.
+
+Packet `/tmp/pi-m4-cocycle-sourcefit-20261128T082418Z/` has report
+`dfac0f319cbba4dc6b73b60516c2ec0c83375210b9e74f5bd67157416b0aa03c`
+and eight-entry manifest
+`79bc8745870680d08d09a82f476f2f5fda443b4df64066c4477d0a6ae55e2a2b`.
+Parent read the full argument ab701b and checker/self-criticism 4caca0,
+verified all eight entries f6b1e0, and replayed the unchanged certificate in
+a separate directory 1256ab, exit 0. The certificate tests symbolic poles
+and synthetic identities, not the universal paper arguments. The immutable
+vector-domain supplement has hash
+`1e1a0e5c6ecdc3139db41829f8279596993b30b705553f423238f8118d5bb109`.
+
+Independent review ran 08:37:50–08:41:09, before its 08:44/08:49 bounds.
+No defects or acceptance-blocking questions; I1 clarifies that polynomial
+boundedness belongs to the o-minimal structure. The owner implements that
+wording, now verified in production review. Full return in
+`/tmp/pi-m4-cocycle-integration-20261128T0843Z/paper-review-full.md` has hash
+`12af5056c6997c6dbfb2e51e0671b0912a2342bc0b310ebfcdd9fd6cf6d4c20c`.
+Local PDF extraction was unavailable; caller-rendered BSX pp.3–5 and Schneider
+pp.3–4 in 8c3d21/a67314 supplied the required primary pages. Both reviewer and
+parent inspected the decisive BSX hypotheses; no source gap was ignored.
+
+Three-document integration began 08:43:11, scope fef7a1, with 08:52 midpoint
+and 09:03 endpoint, protecting 145 tracked and 11 unrelated files. Exact
+production review is complete; final affected checks gate publication. No Lean changed.
+
+The next algebraic test classifies fiber-preserving affine rational commuting
+maps of Psi and compares the same class for F (08:50 midpoint, 09:00 endpoint).
+Its consumer is a possible independent scalar action; an iterate alone supplies
+none. A separate fresh-context inquiry excludes matrix/centralizer routes and
+seeks a changed actual-phase discriminator (08:54 midpoint, 09:05 endpoint).
+These research findings are not yet adopted. V/M4 remains open.
+
+Production review completed 08:46:01–08:46:49, before its 08:50/08:54 bounds.
+The 233-line diff has hash
+`38cae916c2e306712d3d7b6d2db0d57cbfe3e208d1829d9ea7351e5a4eda39a4`;
+the 11-entry manifest is
+`f51f1b0632fc0d91896cb3bf1e83e8191420edd75bce3b2b689381103a09f264`.
+All frozen entries, 15 source entries, owned postimages and protection hashes
+matched independently. No D/I/Q beyond verified prior I1. Full return
+`review-full.md` has hash
+`7da76ac299cb85222ad84a4959c6b802122773a81418a4b262da4848964f7ee4`.
+Caller 6bcb93 verified the same inventory at 08:49:10, before factual status
+updates. This early completion serves the 08:52 integration reassessment;
+the remaining work is affected checks and publication, without math changes.

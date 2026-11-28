@@ -5738,3 +5738,55 @@ frozen/source/protection entry at 08:39:35 before these factual completion
 updates. Git baseline/index/remote and executed checks remain caller evidence.
 Final affected checks gate publication; this review accepts the documentation
 of a conditional paper result, not Lean mathematics, target hits or V/M4.
+
+## Actual cocycle representation tests — 2026-11-28 UTC
+
+Scope: the two-adic reflection owner, research log and this record, against
+0bd22d7. The paper result tests exact source applicability and excludes rational
+observations of constant finite matrix powers; it preserves the autonomous
+rational skew map and all actual target-hit obligations. No Lean/V acceptance.
+
+Reviewer `/root/anchor_source_integration_review_0822` inspected the complete
+082418 report, supplement, certificate, self-criticism, source pages and local
+interfaces during 08:37:50–08:41:09 UTC, before its 08:44/08:49 bounds.
+Both complete adversarial guides, critic skill and replacement procedure applied.
+All eight manifest entries and the separate vector-domain supplement matched.
+Full return in the 0843 integration packet has hash
+`12af5056c6997c6dbfb2e51e0671b0912a2342bc0b310ebfcdd9fd6cf6d4c20c`.
+
+**Defects: none. I1: implemented and verified.** The interpolation
+test now explicitly requires f to be definable in a polynomially bounded
+o-minimal structure. A mere growth bound on f would not imply the power-germ
+property of alpha*t-f(t). The surrounding paper context already gave the
+intended hypothesis; the reviewer treated this as nonblocking clarification.
+**Questions: no acceptance-blocking question for the scoped results.** A further
+centralizer classification is still unproved; other embeddings, observations,
+sampling estimates, limiting support and actual target placement remain open.
+
+The reviewer checked all real-vector quantifiers in BSX, the contracting-vector
+and reparametrization argument, the exponential-clock obstruction and the
+continuous/discrete sampling counterexample. For the matrix claim it checked
+Jordan reduction, torsion removal, eventual exponential-polynomial injectivity,
+successive rational Laurent constant coefficients and the isolated weighted
+pole. F's identical obstruction is retained as a limitation. Schneider's
+difference-field results are context only, not imported hypotheses.
+
+PDF extraction was unavailable locally. Parent supplied preserved page renders;
+reviewer verified printed BSX pp.3–5 and Schneider pp.3–4 before completion.
+Review used only reading and hashing, without writes, Git, network, builds,
+probes, checker execution, installations, delegation or actual-state census.
+Certificate rerun 1256ab and rendering 8c3d21/a67314 remain caller evidence.
+Exact production review ran 08:46:01–08:46:49 UTC, before its 08:50/08:54
+bounds. All 233 diff lines, 11 manifest entries and 15 source entries matched,
+as did three owned postimages, 145 protected and 11 unrelated files. Every
+diff hunk reconstructed its exact postimage. Prior I1 is verified; no new
+defects, improvements or acceptance-blocking questions arose. Broader
+observation classes and actual target placement remain unresolved.
+
+Full production return `review-full.md` in the 0843 packet has hash
+`7da76ac299cb85222ad84a4959c6b802122773a81418a4b262da4848964f7ee4`.
+Both full guides and procedure were reused from the preceding complete read
+with unchanged hashes verified. The same read-only limits applied; Git state
+and executed checks remain caller evidence. Parent 6bcb93 reverified all
+frozen/source/protection entries before factual completion updates. Final
+affected checks gate publication. No new mathematical repair was required.

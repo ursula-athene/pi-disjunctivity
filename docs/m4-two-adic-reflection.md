@@ -478,3 +478,123 @@ proposal must construct a different actual-phase map or prove the missing
 real matching estimate before further rigidity infrastructure is useful.
 The [review record](agy-reports/m4-continuation-review.md#prime-dilation-action-test--2026-11-28-utc)
 retains source limits and frozen evidence. V/M4 remain open.
+
+## Two precise finite-dimensional representation tests
+
+The exact autonomous rational map
+`Psi(x,y)=(x+1,16y+A(x))` already realizes the initialized raw recurrence.
+Finite dimensionality alone therefore presents no obstruction. Two narrower
+tests explain why certain homogeneous-orbit and constant-matrix descriptions
+do not supply a visitation theorem. These are independently reviewed paper
+arguments, with no new Lean declarations or originality claim.
+
+Use P_0=0, P_(n+1)=16P_n+A(n), alpha=pi/16 and
+T_0=alpha, T_n=E_(n-1) for n>=1. The existing exact bridge gives
+
+    P_n=16^n*alpha-T_n,  T_n->0,
+    fract(P_n)=bbpRecurrence(n).
+
+The [actual tail expansion](m4-fourier-windows.md#lean-formalization-of-the-actual-tail-expansion)
+also gives T_n~1/(64n^2). V retains its original recurrence index n+1.
+
+### A noncontraction hypothesis fails for the natural products
+
+Bersudsky–Shah–Xing, *Equidistribution of polynomially bounded o-minimal
+curves in homogeneous spaces*, [author PDF](https://people.math.osu.edu/shah.595/Equidistribution_of_polynomially_bounded_o_minimal_curves.pdf),
+Theorem 1.7 on printed p.5, treats continuous noncontracting curves definable
+in a polynomially bounded o-minimal structure, in a connected Lie subgroup
+with a lattice. Its continuous averages approach a homogeneous probability,
+possibly with proper support and a limiting correction. Definitions 1.3–1.4
+and Proposition 1.6 on p.4 quantify all real representation vectors; the word
+"rational" describes the representation, not a restriction to rational vectors.
+The author copy was inspected; byte identity with the arXiv v2 copy is unverified.
+
+The actual products and determinant-one normalizations are
+
+    Q_n=[[16^n,P_n],[0,1]],  G_n=4^(-n)*Q_n.
+
+For the permitted fixed vector v=(-alpha,1),
+`G_n*v=4^(-n)*(-T_n,1)->0`. Thus the source's noncontraction assumption
+fails. If a continuous definable curve meets G_n at any times tending to
+infinity, monotonicity gives an eventual extended limit of the scalar norm
+of its action on v. This subsequence forces that limit to zero. Reparametrizing
+the samples or multiplying on the left by bounded matrices does not cure it.
+Using pi to exhibit this universally quantified test vector assumes no visit.
+
+The unipotent matrices `U_n=[[1,P_n],[0,1]]` avoid that contraction but
+do not resolve source fit. At times n their upper entries grow exponentially.
+Nor can a scalar f **definable in a polynomially bounded o-minimal structure**
+satisfy f(16^n)=P_n for all sufficiently large n. Otherwise
+h(t)=alpha*t-f(t) is definable and h(16^n)=T_n. Proposition 1.1 on p.3
+forces h to be eventually zero or asymptotic to c*t^r with c!=0.
+The positive samples T_n~1/(64n^2) exclude both alternatives. A polynomial
+growth bound on f alone is insufficient; the hypothesis concerns its structure.
+
+Finally, continuous averages do not imply integer-sample averages. The
+synthetic unipotent path `[[1,t],[0,1]]` on U(R)/U(Z) covers its circle
+uniformly in continuous time, while every integer sample is the identity.
+Different embeddings, discrete sampling estimates and target-positive support
+remain separate obligations; these tests exclude no general dynamics method.
+
+### No rational observation of a fixed finite matrix gives the raw recurrence
+
+For any finite complex matrix C, vector v and rational function F of its
+coordinates, F(C^n*v) cannot be defined and equal to P_n for **every n>=N**,
+for any fixed N. The same conclusion holds for any solution of the exact
+raw recurrence, regardless of initialization. This assertion excludes neither
+Psi above nor nonconstant matrix products, quotient/floor observations or
+arbitrary analytic observations.
+
+Here is an elementary proof retaining the eventual-equality quantifier.
+Jordan form expresses every coordinate of C^n*v eventually as a finite sum
+of polynomial(n)*lambda^n with lambda!=0; nilpotent terms eventually vanish.
+The generated subgroup of C* is finitely generated. Choose L>=1 annihilating
+its torsion. On n=Lm a proposed rational output becomes
+
+    P_(Lm)=R(m,eta_1^m,...,eta_r^m),
+
+with multiplicatively independent eta_i and rational R; r=0 is allowed.
+Iteration of the actual recurrence gives, for q=16^L,
+
+    P_(n+L)=q*P_n+B_L(n),
+    B_L(x)=sum_(j=0)^(L-1)16^(L-1-j)*A(x+j).
+
+Clear denominators of the proposed equality. Distinct exponential-polynomial
+sequences p_i(m)*rho_i^m are linearly independent under eventual identities:
+applying the products of `(shift-rho_j)^(deg(p_j)+1)` for j!=i kills the
+other summands and preserves a nonzero polynomial times rho_i^m. Its leading
+coefficient is multiplied by nonzero factors rho_i-rho_j. A nonzero polynomial
+cannot vanish at every sufficiently large integer. Multiplicative independence
+therefore turns the evaluated recurrence into the rational-function identity
+
+    R(x+1,eta_1*z_1,...,eta_r*z_r)-q*R(x,z)=B_L(L*x).
+
+Expand successively in Laurent series at z_r=0,...,z_1=0 and take each
+constant coefficient. Each such operation sends a rational function to the
+rational function field in the remaining variables and commutes with the
+displayed x shift and z scalings. Only linearity is used, not multiplicativity.
+The result r(x) is rational and satisfies r(x+1)-q*r(x)=B_L(L*x).
+Consequently S(x)=r(x/L) would satisfy
+
+    S(x+L)-q*S(x)=B_L(x).
+
+For any fixed-order principal parts of S at beta+kL, write their coefficients
+t_k. The difference has coefficients t_(k+1)-q*t_k. Their finite weighted
+sum with weights q^(-k) vanishes. But at beta=-1/8 the right side has exactly
+one pole in beta+LZ, with residue 16^(L-1)/2. The four actual poles
+`-1/8,-1/2,-5/8,-3/4` are distinct modulo Z; their shifts j=0,...,L-1
+are distinct modulo LZ. The nonzero weighted residue is a contradiction.
+No theorem about infinite sparse zero sets is needed.
+
+Schneider's [*Parameterized Telescoping Proves Algebraic Independence of Sums*](https://arxiv.org/pdf/0808.2596v1),
+Theorem 2.4 and Corollary 2.9, printed pp.3–4, are related difference-field
+work. They are methodological context, not a source theorem applied in place
+of the elementary argument above. The bounded local/public Lean search found
+no verified match; no external Lean build or exhaustive search is claimed.
+
+The [avoiding thirteen-pole model](m4-language-auxiliaries.md#finite-algebraic-profiles-do-not-follow-from-a-restricted-language)
+has block weighted residue 16^(L-1)*(15/16), so it has the same obstruction.
+This result does not select the actual pi phase or imply a visit. A separate
+test of commuting rational maps is a research question, not a proved action
+on the orbit closure. The [review record](agy-reports/m4-continuation-review.md#actual-cocycle-representation-tests--2026-11-28-utc)
+retains the source evidence and hypothesis clarification. V/M4 remain open.
