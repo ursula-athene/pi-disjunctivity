@@ -6638,3 +6638,40 @@ Both complete guides, procedure and critic instructions were reused after
 unchanged-hash checks. Read-only limits held; no fresh external-source proof
 audit or Lean certification is supplied. Parent 98893a verified inventories
 and live owners before I1/factual updates. Final checks/publication remain.
+
+## Direct-inverse series checkpoint — 2026-11-28 UTC
+
+Scope against3b1b1ee: the Catalan mathematical owner and two evidence records.
+The direct integer series for pi/4, valuation, complex continuation, eventual
+sign and exact-encoding exclusion require mathematical review. The analytic
+perturbation must preserve precisely its stated properties while changing the
+value; the exact hypergeometric identity is explicitly lost. The separate
+affine/source screen is recorded without adopting its calculations or sources.
+
+The frozen packet `/tmp/pi-m4-inverse-checkpoint-20261128T1555Z/` retains
+exact pre/postimages, diff, protected/source inventories, complete worker
+returns and preceding publication receipt. Root read all three reports,
+inspected official DLMF formulas and the three transfer-source page images,
+and replayed synthetic inverse/model checks (d21cac,76d57d), with zero actual
+coefficient samples. Review must assess universal arguments separately from
+those checks, including the Delta-domain and lost model hypotheses.
+Exact review and affected checks remain due. No Lean, priority or V/M4
+acceptance is asserted.
+
+Review by `/root/dyadic_grid_independent_review_0649` completed
+15:58:40–16:06:04 with no D/I. Q1 actual visits, Q2 approximate encoding and
+large-tail wrapping, and Q3 a consumer of the lost exact identity remain.
+The direct inverse and perturbation paper arguments passed; the affine/source
+screen remains unadopted. All 139 diff lines reconstructed three postimages;
+12 manifest entries, 11 direct sources, nested 17-file and 8-source inventories,
+146 protected and 10 untracked hashes matched. Manifest
+ddb3728939dc33ff0877de1cc0ebd220a4c3db602245fc2187bb8e6c75a5f526.
+Full return in the 1555 packet:
+376e5d52862cf9ac18658e7138b97b4396f2561c239c2ee1378203196eac9286.
+Both complete guides, procedure and critic instructions were reused after
+unchanged-hash checks. Preserved DLMF passages and all three transfer-page
+images were inspected. Read-only limits held. Synthetic executions and
+publication receipts remain caller evidence; no fresh proof of the retained
+Ramanujan identity or transitive source chain, Lean certification or novelty
+determination is supplied. Parent d5dedc reverified all inventories/live
+owners before factual completion updates. Final checks/publication remain.

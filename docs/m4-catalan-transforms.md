@@ -258,3 +258,68 @@ checked absolute majorant. Receipt:
 
 These are finite consistency checks. The source identity and universal paper
 proofs are not Lean theorems. No production build or new axiom audit is claimed.
+
+## Direct integer inverse series and the remaining exact-identity requirement
+
+The following paper argument passed separate review. It tests the exact
+dyadic-block encoding mechanism of the neighboring Erdős–Borwein method;
+it does not prove visitation or exclude approximate phase placement.
+
+Set h_n=(6n+1)C_n^3, H(z)=sum h_n*z^n, G(z)=1/H(z)=sum g_n*z^n.
+Since h_0=1, every g_n is an integer. The owned ratio h_(n+1)/h_n<64
+gives H(1/128)<2 and |H(z)-1|<1 on that disk. Hence
+`G(1/256)=pi/4` by the original Ramanujan identity. This is a direct series
+for pi/4: rational scaling and base256=16^2 suffice for any future visitation
+transfer; no invariance of visitation under inversion is assumed.
+
+Exactly `v_2(g_n)=3*s_2(n)`. In the inverse-coefficient recurrence, divide
+by 2^(3*s_2(n)). The proper carry-free splits contribute an even number
+2^(s_2(n))-2 of odd terms, while h_n contributes one odd term. Induction
+therefore gives the exact valuation, without a sign assumption.
+
+For a_n=h_n/64^n, the ratio and gamma asymptotic give a_n decreasing to0.
+Thus d_n=a_(n-1)-a_n>0, sum d_n=1, and
+`(1-x)H(x/64)=1-D(x)`, where D(x)=sum d_n*x^n. Strict triangle inequalities
+give nonvanishing of H inside the unit x disk and at its boundary except1.
+[Clausen's formula](https://dlmf.nist.gov/16.12.E2) writes
+H(x/64)=(1+6x*d/dx)F(1/4,1/4;1;x)^2. The
+[connection formula](https://dlmf.nist.gov/15.8.E4), converted from scaled F,
+gives, with t=1-x on the principal branch,
+`G(x/64)=(pi/6)*sqrt(t)+c*t+O(t^(3/2))`. Boundary nonvanishing and compactness
+supply an indented analytic neighborhood. Subtracting c*t and applying
+[Flajolet–Odlyzko](https://algo.inria.fr/flajolet/Publications/FlOd90b.pdf),
+Proposition1 and Corollary3 (pp.220,225), yields
+`g_n=-(sqrt(pi)/12)*64^n*n^(-3/2)*(1+O(1/n))`.
+
+For natural n,k>=1,R>=0, put m=n+k and split the shifted series into its
+integer preceding prefix, local block B=sum_(j<k)g_(n+j)/256^(j+1), and
+signed tail T=sum_(j>=k)g_(n+j)/256^(j+1). The last block term has uniquely
+least valuation. Thus B in2^(-R)Z implies 8k<=3log_2(m)+R. Eventual negativity
+justifies a first-omitted-term lower bound, giving, for some fixed c0>0 and
+all sufficiently large m,
+`|T|/2^(-R) >= (c0/256)*64^m/m^(9/2) -> infinity`, uniformly in R.
+Exact grid encoding and a tail smaller than its spacing are incompatible
+eventually. Large-tail wrapping and approximate encoding remain outside this test.
+
+Nor do these analytic/arithmetic properties alone force visitation. For any
+requested finite coefficient agreement and digit-prefix agreement, choose a
+sufficiently nearby irrational nondense alpha. Let w_n=2^(3*s_2(n)+1).
+A nearest-multiple construction gives Q=sum q_n*z^n, starting arbitrarily
+late, q_n in w_n*Z, |q_n|<=257(n+1)^3, and
+Q(1/256)=4(alpha-pi/4)/3. Set P=(1-64z)Q and Gtilde=G+P.
+Since w_n divides64w_(n-1), all coefficient valuations are preserved.
+Moreover P/G=Q(1-D(64z)); starting sufficiently late gives |P/G|<1/2
+on |z|<=1/64, using the continuous extension at1/64. Zero-freeness away
+from that boundary point is preserved. P vanishes there and is analytic on
+|z|<1, so every noninteger Puiseux term and every coefficient asymptotic
+order is unchanged, including eventual negativity. Yet Gtilde(1/256)=alpha.
+The exact global hypergeometric identity, its differential equation and its
+coefficient recurrence are not retained. Those losses, rather than stronger
+versions of the retained asymptotic estimates alone, identify the remaining
+research question. No actual coefficients or digits were sampled.
+
+Full arguments and source receipts are in the 1540 inverse-hypergeometric
+and 1555 inverse-analytic-perturbation scratch packets, inventoried by the
+[continuation review](agy-reports/m4-continuation-review.md#direct-inverse-series-checkpoint--2026-11-28-utc).
+These diagnostics supply neither a Lean theorem nor an originality claim.
+C_odd, V and M4 remain open.

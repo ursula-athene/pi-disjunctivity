@@ -7915,3 +7915,42 @@ not only scalar checks, and found no unsupported step within that scope.
 Parent 98893a verified all eight frozen entries, five sources, 147 protected
 and 10 untracked files before the clarification and factual updates.
 No mathematical-owner or Lean theorem is added; final checks/publication remain.
+
+## 2026-11-28 — Direct integer inverse series and a preserving countermodel
+
+The preceding checkpoint is published as
+`3b1b1eec920fb36258ba9c7d356acca2f2599572`, parent a03c155. The 1536 packet
+holds the check/commit/push receipt; remote 6602b9 verified it at15:43:32 UTC.
+All task-owned bytes and unrelated work matched. No Lean change occurred.
+
+The [direct inverse-series test](m4-catalan-transforms.md#direct-integer-inverse-series-and-the-remaining-exact-identity-requirement)
+removes nonlinear value transfer, but exact dyadic encoding still conflicts
+with a small tail. Parent 7e82df read the 114-line argument; DLMF formulas
+and Flajolet–Odlyzko pp.220,224,225 were inspected, including the page images.
+The 17-entry source packet matched and synthetic checker replay d21cac
+passed. Its paper analysis, not those finite checks, supplies eventual sign.
+
+The subsequent perturbation keeps integer coefficients, exact valuations,
+arbitrarily long agreement, zero-freeness and every coefficient asymptotic
+order while assigning a nearby irrational nondense value. Parent 17483b read
+the complete argument and 76d57d replayed synthetic checks. The exact global
+hypergeometric identity is lost; this is not a counterexample about pi.
+Reports: `/tmp/pi-m4-inverse-hypergeometric-20261128T1540Z/report.md`, hash
+5d2bd47621ffcda62848068abd8e3ac38360d777296d8f5cb6760b7be2e4a958;
+`/tmp/pi-m4-inverse-analytic-perturbation-20261128T1555Z/report-v1.md`, hash
+e449b152865b25b657af8b57888c6eeb11168b081cd57e3fcb3ec0447feb78ab.
+
+The separate affine-word/source comparison found no usable finite invertible
+recognizer or rational-base transfer. Its report, read fully by f819eb,
+remains an unadopted screen: `/tmp/pi-m4-affine-word-source-fit-20261128T1543Z/report-v1.md`,
+hash fb5469e6f3920591c658167760adc4e298d1f49cac0c1b2b5ec4376f88bc1707.
+The new inverse owner and record integration await exact separate review in
+the 1555 checkpoint packet. V/M4 remain open; no Lean or novelty claim follows.
+
+Separate mathematical and exact-scope review completed 15:58:40–16:06:04,
+with no D/I. Q1 actual phase placement, Q2 approximate encoding/large-tail
+wrap and Q3 the exact-identity consumer remain open. Full return in the
+1555 packet: 376e5d52862cf9ac18658e7138b97b4396f2561c239c2ee1378203196eac9286.
+Parent d5dedc reverified 12 frozen entries, 11 direct sources, nested 17/8
+inventories, three owners, 146 protected and 10 untracked files before factual
+updates. The affine screen remains unadopted. Final checks/publication remain.
