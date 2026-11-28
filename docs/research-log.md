@@ -5986,3 +5986,72 @@ the explicit counterexample in the generating-functions owner. The repair
 was independently verified. No new open question or efficiency claim was
 introduced. The04:23 reassessment retains final checks/publication; the
 model inquiry continues under its separate04:28:10 bound.
+
+## 2026-11-28 — Rational-affine visitation enters Lean
+
+Publication of the preceding navigation repair was verified at04:25:06 UTC:
+`b441c397ca9120cb760b852d332b121104d3bb9c`, push b12311, remote7fb7cc.
+Final documentation dc1315, whitespace286686, preservation4d1638, staged
+whitespace a79e04 and exact staging8d3e20 passed. Later remote263504,
+between the observed04:53:11 and04:53:53 clocks, still matched that head.
+No unpublished reviewed commit or PR was present.
+
+The one-pole model inquiry ended04:25:16, before04:28:10, without a late
+escape proof. Parent fca532/297a91 read and verified its unadopted report
+`/tmp/pi-m4-one-pole-20261128T041610Z/report.md`, hash
+`c4820c42907b41d90441a4262916efe1a7c28efd999ee7539dee9b8fd7c1313d`.
+The changed constructive-placement pass ended04:42:38, before04:53:30,
+without a surviving word-placement mechanism. Its report is
+`/tmp/pi-m4-constructive-placement-20261128T043330Z/report.md`, hash
+`4cc5cea35b5a4dba572b724ea83bf537bcf26e9ac3950200a12023cf45a67c5e`.
+The backward-selection pass ended04:51:56, before04:53, without a new
+constraint on the actual initialized orbit. Its report is
+`/tmp/pi-m4-backward-selection-20261128-0433/report.md`, hash
+`c43327045e466d8592f363738f2b75fec28e648b2123f311638b04ab5e7e3ca7`.
+Parent8d5e30 verified the latter two identities and read their reports.
+These are factual discovery outcomes only: no new mathematics, source proof,
+checker result or provisional countermodel refinement is adopted here.
+The original four-pole, zero-seeded visitation question remains open.
+
+A separate formalization inquiry changed the question to a reviewed component
+with a concrete consumer: rational-affine invariance of universal late
+visitation. Preparatory reads began04:38:33; the assigned window was04:39–04:59,
+with a04:49 midpoint. The worker completed04:54:29. All interval/threshold
+quantifiers and negative nonzero rational scales are retained. This is
+visitation invariance, not the stronger normality-preservation statement.
+Its explicit BBP consumer compares the phase e+bbpTail N with pi using the
+existing inclusive rational prefix. It does not supply visits of either phase
+or formalize the separate forced-recurrence error transfer.
+
+The frozen candidate is
+`/tmp/pi-m4-rational-affine-lean-20261128/FullAffine-v1.lean`, hash
+`44a0926f9c3c0e0f54151e05ea7365ba008b9b63fa8d855244d8e67dc47d85c5`.
+Parent e049eb verified all nine manifest entries; the manifest hash is
+`b4ad225c47594d78fd758fee5b0799e920212ae19520115d72654e1aa46bc2a7`.
+Independent parent scratch replay defe89/21b24f exited0 under verified
+Lean4.37.0-rc1. This replay is distinct from the required subagent review.
+
+Parent integration began04:53:11, with reassessment05:00 and endpoint05:14,
+using `/tmp/pi-m4-affine-integration-20261128T0453Z/`. Eight owned paths,
+135 other tracked paths and11 unrelated files are recorded. Production edits
+began after the worker's explicit completion signal. The new general module
+imports Mathlib directly, avoiding a library-root cycle. The early root-chain
+build874186/968e53 and root consumer/actual-axiom probe fc967a/b0cb5c passed.
+All14 new public theorems use exactly the three permitted axioms. The first
+full Test run passed with unused proposition-binder warnings in the new type
+audits; prefixing those binder names retained every premise and all linters.
+The repaired Test run c39343/779874 passed without warnings.
+
+At the05:00 reassessment the full consumer is feasible and integrated, so
+continue through full build, documentation/scope checks, independent exact-diff
+review and publication. V/M4 remain open; the integration checkpoint is not
+an acceptance of V or a stopping point for the authorized research.
+
+Independent exact-diff review completed before05:04:37 UTC, ahead of the
+05:11 bound, with no defects, requested improvements or blocking questions.
+All22 frozen entries, eight postimages,135 protected and11 unrelated
+identities matched. Full build864ff9/6f5010, documentation3388aa, staged
+whitespace580bdd and pin/formulation diff826f8b passed. Only factual review
+completion is added after that review; final affected checks gate publication.
+The supported equivalence is accepted mathematically and kernel checked;
+it supplies no visitation premise and leaves the original M4 task active.

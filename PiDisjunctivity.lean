@@ -13,6 +13,7 @@ public import PiDisjunctivity.Cylinders
 public import PiDisjunctivity.Conjectures
 public import PiDisjunctivity.OrbitEquivalence
 public import PiDisjunctivity.OrbitCriteria
+public import PiDisjunctivity.AffineOrbit
 public import PiDisjunctivity.BBP.Series
 public import PiDisjunctivity.BBP.Orbit
 public import PiDisjunctivity.BBP.Tail

@@ -741,7 +741,40 @@ its manifest has SHA-256
 The parent reconstructed the argument and replayed an unchanged checker copy:
 5,369 structural/parity checks passed, exit 0, identical receipt, originals
 preserved. These checks do not prove the universal topological statements.
-No Lean theorem, actual initialized digit search or V acceptance is claimed.
+That paper checkpoint claimed no Lean theorem, actual initialized digit search
+or V acceptance. The following formalization now checks its rational-affine
+visitation component.
+
+### Lean formalization of rational-affine late visitation
+
+`AffineOrbit.hitsOpenIntervals_late_rat_affine_iff` in
+[AffineOrbit.lean](../PiDisjunctivity/AffineOrbit.lean) proves, for every real x
+and rational r,s with r nonzero, that the orbit of r*x+s visits every open
+interval inside [0,1] arbitrarily late if and only if the orbit of x does.
+The statement spells out every interval bound and natural threshold. It
+includes negative scales, arbitrary real lifts and targets adjacent to either
+endpoint. Rational division is performed on real lifts, not on the circle.
+
+The proof uses ordinary orbit closures. A forward-invariant circle set with
+interior is the whole circle; a proper closed orbit closure is therefore
+nowhere dense. Finite torsion translates and the finite kernel of a nonzero
+integer multiplier preserve properness. Continuity and surjectivity transfer
+density to every tail. The exact real interval equivalence then gives the
+rational-affine theorem without an omega-limit or normality framework.
+
+The module is exported through the library root. [Test.lean](../Test.lean)
+checks every public theorem's full type and actual axiom list, and explicitly
+consumes the contracts at a nonempty invariant singleton, negative scaling,
+the first and last cell interiors, and an avoiding rational phase. Its BBP
+consumer uses r=16^N and s=e-bbpPartialSumRat N to prove late visitation of
+`fract(16^n*(e+bbpTail N))` equivalent to late visitation of
+`fract(16^n*pi)` for every fixed N and rational e.
+
+The Lean checks and independent changed-file review are complete. This
+formalizes the pure entry-phase equivalence, not the additional vanishing-error
+transfer for the forced entry recurrence. It supplies neither side's visitation
+premise, an early hit, nor rational-affine preservation of normality. The full
+fixed-column normality proof and V/M4 remain unformalized/open respectively.
 
 ## Quantitative hole transport and varying entry times
 

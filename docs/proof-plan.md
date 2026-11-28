@@ -1190,6 +1190,25 @@ map does not provide the scalar17 closure inclusion required by the separate
 circle-semigroup route. Continue discovery rather than formalize this failed
 source transfer; no visitation premise has been discharged.
 
+### Rational-affine visitation formalization — 2026-11-28
+
+The [reviewed paper bridge](m4-generating-functions.md#rational-entries-preserve-universal-late-visitation)
+has a concrete Lean consumer independent of the unresolved early-hit estimate.
+For every x in R and r,s in Q with r nonzero, universal arbitrarily late
+open-interval visitation by fract(16^n*(r*x+s)) is equivalent to the identical
+contract for x. Every interval inside [0,1], every natural threshold, negative
+r and arbitrary real lifts are retained. This is visitation invariance, not
+normality preservation or an assertion that either orbit visits.
+
+[AffineOrbit.lean](../PiDisjunctivity/AffineOrbit.lean) implements this contract
+using proper nowhere-dense orbit closures, finite torsion translations and
+finite-kernel integer multipliers. The library-root BBP audit specializes it
+at r=16^N and s=e-bbpPartialSumRat N, preserving the existing inclusive prefix.
+The [formalization record](m4-generating-functions.md#lean-formalization-of-rational-affine-late-visitation)
+owns its checks and limits. Kernel checks and independent review are complete.
+This support layer leaves V/M4
+open and calls for continued research on the actual early orbit.
+
 ## 6. Assemble the proof of the original conjecture
 
 Once Step 5 succeeds, use Step 4 to obtain visits of the actual pi orbit.

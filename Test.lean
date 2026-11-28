@@ -1397,3 +1397,258 @@ example (w r : ℕ) (hr : 1 < r) (hc : r ≡ 1 [MOD bbpCoverLcm (w + 1)]) :
   simpa only [Fin.val_zero] using bbpCover_prefix_words w r hr hc (fun _ => 0)
 
 end ElementaryGridChecks
+
+-- Rational-affine universal late visitation: exact types, actual axioms, and consumers.
+section RationalAffineAudit
+
+open Set Function PiDisjunctivity PiDisjunctivity.AffineOrbit
+
+example : ∀ (S : Set (AddCircle (1 : ℝ)))
+    (_hS : MapsTo (fun z : AddCircle (1 : ℝ) => (16 : ℕ) • z) S S)
+    (_hI : (interior S).Nonempty),
+    S = univ :=
+  PiDisjunctivity.AffineOrbit.eq_univ_of_mapsTo_sixteen_of_interior_nonempty
+
+example : ∀ (S : Set (AddCircle (1 : ℝ))) (_hclosed : IsClosed S)
+    (_hS : MapsTo (fun z : AddCircle (1 : ℝ) => (16 : ℕ) • z) S S)
+    (_hproper : S ≠ univ),
+    IsNowhereDense S :=
+  PiDisjunctivity.AffineOrbit.isNowhereDense_of_isClosed_mapsTo_sixteen_ne_univ
+
+example : ∀ (x : AddCircle (1 : ℝ))
+    (_hx : ¬ DenseRange (fun n : ℕ => (16 ^ n : ℕ) • x)),
+    IsNowhereDense (closure (range (fun n : ℕ => (16 ^ n : ℕ) • x))) :=
+  PiDisjunctivity.AffineOrbit.orbitClosure_isNowhereDense_of_not_denseRange
+
+example : ∀ (x : AddCircle (1 : ℝ))
+    (_hx : DenseRange (fun n : ℕ => (16 ^ n : ℕ) • x)) (N : ℕ),
+    DenseRange (fun n : ℕ => (16 ^ (n + N) : ℕ) • x) :=
+  PiDisjunctivity.AffineOrbit.denseRange_sixteen_tail
+
+example : ∀ (x : ℝ)
+    (_hx : DenseRange (fun n : ℕ => (16 ^ n : ℕ) • (x : AddCircle (1 : ℝ)))),
+    ∀ a b : ℝ, 0 ≤ a → a < b → b ≤ 1 →
+      ∀ N : ℕ, ∃ n ≥ N, Int.fract ((16 : ℝ) ^ n * x) ∈ Ioo a b :=
+  PiDisjunctivity.AffineOrbit.hitsOpenIntervals_late_of_denseRange_circle
+
+example : ∀ (x r : AddCircle (1 : ℝ)) (q : ℕ) (_hq : 0 < q) (_hr : q • r = 0)
+    (_hxr : DenseRange (fun n : ℕ => (16 ^ n : ℕ) • (x + r))),
+    DenseRange (fun n : ℕ => (16 ^ n : ℕ) • x) :=
+  PiDisjunctivity.AffineOrbit.denseRange_of_denseRange_add_torsion
+
+example : ∀ (x r : AddCircle (1 : ℝ)) (q : ℕ) (_hq : 0 < q) (_hr : q • r = 0),
+    DenseRange (fun n : ℕ => (16 ^ n : ℕ) • (x + r)) ↔
+      DenseRange (fun n : ℕ => (16 ^ n : ℕ) • x) :=
+  PiDisjunctivity.AffineOrbit.denseRange_add_torsion_iff
+
+example : ∀ (x : ℝ) (r : ℚ),
+    DenseRange (fun n : ℕ => (16 ^ n : ℕ) • ((x + (r : ℝ) : ℝ) : AddCircle (1 : ℝ))) ↔
+      DenseRange (fun n : ℕ => (16 ^ n : ℕ) • (x : AddCircle (1 : ℝ))) :=
+  PiDisjunctivity.AffineOrbit.denseRange_add_rat_iff
+
+example : ∀ (x : ℝ),
+    DenseRange (fun n : ℕ => (16 ^ n : ℕ) • (x : AddCircle (1 : ℝ))) ↔
+      ∀ a b : ℝ, 0 ≤ a → a < b → b ≤ 1 →
+        ∀ N : ℕ, ∃ n ≥ N, Int.fract ((16 : ℝ) ^ n * x) ∈ Ioo a b :=
+  PiDisjunctivity.AffineOrbit.denseRange_circle_iff_hitsOpenIntervals_late
+
+example : ∀ (x : ℝ) (r : ℚ),
+    (∀ a b : ℝ, 0 ≤ a → a < b → b ≤ 1 →
+      ∀ N : ℕ, ∃ n ≥ N, Int.fract ((16 : ℝ) ^ n * (x + (r : ℝ))) ∈ Ioo a b) ↔
+    (∀ a b : ℝ, 0 ≤ a → a < b → b ≤ 1 →
+      ∀ N : ℕ, ∃ n ≥ N, Int.fract ((16 : ℝ) ^ n * x) ∈ Ioo a b) :=
+  PiDisjunctivity.AffineOrbit.hitsOpenIntervals_late_add_rat_iff
+
+example : ∀ (x : AddCircle (1 : ℝ)) (m : ℤ) (_hm : m ≠ 0),
+    DenseRange (fun n : ℕ => (16 ^ n : ℕ) • (m • x)) ↔
+      DenseRange (fun n : ℕ => (16 ^ n : ℕ) • x) :=
+  PiDisjunctivity.AffineOrbit.denseRange_zsmul_iff
+
+example : ∀ (x : ℝ) (m : ℤ) (_hm : m ≠ 0),
+    DenseRange (fun n : ℕ => (16 ^ n : ℕ) • (((m : ℝ) * x : ℝ) : AddCircle (1 : ℝ))) ↔
+      DenseRange (fun n : ℕ => (16 ^ n : ℕ) • (x : AddCircle (1 : ℝ))) :=
+  PiDisjunctivity.AffineOrbit.denseRange_int_mul_iff
+
+example : ∀ (x : ℝ) (r : ℚ) (_hr : r ≠ 0),
+    DenseRange (fun n : ℕ => (16 ^ n : ℕ) • (((r : ℝ) * x : ℝ) : AddCircle (1 : ℝ))) ↔
+      DenseRange (fun n : ℕ => (16 ^ n : ℕ) • (x : AddCircle (1 : ℝ))) :=
+  PiDisjunctivity.AffineOrbit.denseRange_rat_mul_iff
+
+example : ∀ (x : ℝ) (r s : ℚ) (_hr : r ≠ 0),
+    (∀ a b : ℝ, 0 ≤ a → a < b → b ≤ 1 →
+      ∀ N : ℕ, ∃ n ≥ N, Int.fract ((16 : ℝ) ^ n * ((r : ℝ) * x + (s : ℝ))) ∈ Ioo a b) ↔
+    (∀ a b : ℝ, 0 ≤ a → a < b → b ≤ 1 →
+      ∀ N : ℕ, ∃ n ≥ N, Int.fract ((16 : ℝ) ^ n * x) ∈ Ioo a b) :=
+  PiDisjunctivity.AffineOrbit.hitsOpenIntervals_late_rat_affine_iff
+
+/--
+info: 'PiDisjunctivity.AffineOrbit.eq_univ_of_mapsTo_sixteen_of_interior_nonempty' depends on axioms:
+[propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms PiDisjunctivity.AffineOrbit.eq_univ_of_mapsTo_sixteen_of_interior_nonempty
+
+/--
+info: 'PiDisjunctivity.AffineOrbit.isNowhereDense_of_isClosed_mapsTo_sixteen_ne_univ' depends on axioms:
+[propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms PiDisjunctivity.AffineOrbit.isNowhereDense_of_isClosed_mapsTo_sixteen_ne_univ
+
+/--
+info: 'PiDisjunctivity.AffineOrbit.orbitClosure_isNowhereDense_of_not_denseRange' depends on axioms:
+[propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms PiDisjunctivity.AffineOrbit.orbitClosure_isNowhereDense_of_not_denseRange
+
+/--
+info: 'PiDisjunctivity.AffineOrbit.denseRange_sixteen_tail' depends on axioms:
+[propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms PiDisjunctivity.AffineOrbit.denseRange_sixteen_tail
+
+/--
+info: 'PiDisjunctivity.AffineOrbit.hitsOpenIntervals_late_of_denseRange_circle' depends on axioms:
+[propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms PiDisjunctivity.AffineOrbit.hitsOpenIntervals_late_of_denseRange_circle
+
+/--
+info: 'PiDisjunctivity.AffineOrbit.denseRange_of_denseRange_add_torsion' depends on axioms:
+[propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms PiDisjunctivity.AffineOrbit.denseRange_of_denseRange_add_torsion
+
+/--
+info: 'PiDisjunctivity.AffineOrbit.denseRange_add_torsion_iff' depends on axioms:
+[propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms PiDisjunctivity.AffineOrbit.denseRange_add_torsion_iff
+
+/--
+info: 'PiDisjunctivity.AffineOrbit.denseRange_add_rat_iff' depends on axioms:
+[propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms PiDisjunctivity.AffineOrbit.denseRange_add_rat_iff
+
+/--
+info: 'PiDisjunctivity.AffineOrbit.denseRange_circle_iff_hitsOpenIntervals_late' depends on axioms:
+[propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms PiDisjunctivity.AffineOrbit.denseRange_circle_iff_hitsOpenIntervals_late
+
+/--
+info: 'PiDisjunctivity.AffineOrbit.hitsOpenIntervals_late_add_rat_iff' depends on axioms:
+[propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms PiDisjunctivity.AffineOrbit.hitsOpenIntervals_late_add_rat_iff
+
+/--
+info: 'PiDisjunctivity.AffineOrbit.denseRange_zsmul_iff' depends on axioms:
+[propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms PiDisjunctivity.AffineOrbit.denseRange_zsmul_iff
+
+/--
+info: 'PiDisjunctivity.AffineOrbit.denseRange_int_mul_iff' depends on axioms:
+[propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms PiDisjunctivity.AffineOrbit.denseRange_int_mul_iff
+
+/--
+info: 'PiDisjunctivity.AffineOrbit.denseRange_rat_mul_iff' depends on axioms:
+[propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms PiDisjunctivity.AffineOrbit.denseRange_rat_mul_iff
+
+/--
+info: 'PiDisjunctivity.AffineOrbit.hitsOpenIntervals_late_rat_affine_iff' depends on axioms:
+[propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms PiDisjunctivity.AffineOrbit.hitsOpenIntervals_late_rat_affine_iff
+
+/-- A nonempty proper invariant set tests the exact set-level consumer. -/
+example : IsNowhereDense ({0} : Set (AddCircle (1 : ℝ))) := by
+  have hhalf : ((1 / 2 : ℝ) : AddCircle (1 : ℝ)) ≠ 0 := by
+    intro h
+    have heq : (1 / 2 : ℝ) = 0 :=
+      AddCircle.injOn_coe_Ico (1 : ℝ) 0 (by norm_num) (by norm_num)
+        (by simpa only [AddCircle.coe_zero] using h)
+    norm_num at heq
+  apply isNowhereDense_of_isClosed_mapsTo_sixteen_ne_univ {0} isClosed_singleton
+  · intro z hz
+    rw [mem_singleton_iff] at hz ⊢
+    change (16 : ℕ) • z = 0
+    rw [hz, smul_zero]
+  · intro hset
+    have hm : ((1 / 2 : ℝ) : AddCircle (1 : ℝ)) ∈ ({0} : Set (AddCircle (1 : ℝ))) := by
+      rw [hset]
+      exact mem_univ _
+    exact hhalf (mem_singleton_iff.mp hm)
+
+/-- Negative rational scaling and a nonintegral translation explicitly instantiate
+both directions of the full contract through the library root. -/
+example (x : ℝ) :
+    (∀ a b : ℝ, 0 ≤ a → a < b → b ≤ 1 →
+      ∀ N : ℕ, ∃ n ≥ N,
+        Int.fract ((16 : ℝ) ^ n * (((-3 / 2 : ℚ) : ℝ) * x + ((1 / 3 : ℚ) : ℝ))) ∈ Ioo a b) ↔
+    (∀ a b : ℝ, 0 ≤ a → a < b → b ≤ 1 →
+      ∀ N : ℕ, ∃ n ≥ N, Int.fract ((16 : ℝ) ^ n * x) ∈ Ioo a b) :=
+  hitsOpenIntervals_late_rat_affine_iff x (-3 / 2) (1 / 3) (by norm_num)
+
+
+/-- The existing inclusive rational BBP prefix is used at the actual entry-phase
+consumer. This transfers universal late visitation, not one specified visit. -/
+example (N : ℕ) (e : ℚ) :
+    (∀ a b : ℝ, 0 ≤ a → a < b → b ≤ 1 →
+      ∀ M : ℕ, ∃ n ≥ M,
+        Int.fract ((16 : ℝ) ^ n * ((e : ℝ) + bbpTail N)) ∈ Ioo a b) ↔
+    (∀ a b : ℝ, 0 ≤ a → a < b → b ≤ 1 →
+      ∀ M : ℕ, ∃ n ≥ M, Int.fract ((16 : ℝ) ^ n * Real.pi) ∈ Ioo a b) := by
+  have hphase : (((16 : ℚ) ^ N : ℚ) : ℝ) * Real.pi +
+      ((e - bbpPartialSumRat N : ℚ) : ℝ) = (e : ℝ) + bbpTail N := by
+    rw [Rat.cast_pow, Rat.cast_ofNat, Rat.cast_sub, cast_bbpPartialSumRat]
+    linarith only [pow_mul_pi_eq_bbpPartialSum_add_bbpTail N]
+  have h := hitsOpenIntervals_late_rat_affine_iff Real.pi ((16 : ℚ) ^ N)
+    (e - bbpPartialSumRat N) (pow_ne_zero _ (by norm_num))
+  simpa only [hphase] using h
+
+-- First-cell and last-cell interiors retain arbitrary thresholds and the zero boundary.
+example (x : ℝ)
+    (hx : ∀ a b : ℝ, 0 ≤ a → a < b → b ≤ 1 →
+      ∀ N : ℕ, ∃ n ≥ N, Int.fract ((16 : ℝ) ^ n * x) ∈ Ioo a b) (N : ℕ) :
+    ∃ n ≥ N, Int.fract ((16 : ℝ) ^ n * (((-3 / 2 : ℚ) : ℝ) * x +
+      ((1 / 3 : ℚ) : ℝ))) ∈ Ioo (0 : ℝ) (1 / 16) := by
+  exact ((hitsOpenIntervals_late_rat_affine_iff x (-3 / 2) (1 / 3)
+    (by norm_num)).mpr hx) 0 (1 / 16) (by norm_num) (by norm_num) (by norm_num) N
+
+example (x : ℝ)
+    (hx : ∀ a b : ℝ, 0 ≤ a → a < b → b ≤ 1 →
+      ∀ N : ℕ, ∃ n ≥ N, Int.fract ((16 : ℝ) ^ n * x) ∈ Ioo a b) :
+    ∃ n ≥ 0, Int.fract ((16 : ℝ) ^ n * (((-3 / 2 : ℚ) : ℝ) * x +
+      ((1 / 3 : ℚ) : ℝ))) ∈ Ioo (15 / 16 : ℝ) 1 := by
+  exact ((hitsOpenIntervals_late_rat_affine_iff x (-3 / 2) (1 / 3)
+    (by norm_num)).mpr hx) (15 / 16) 1 (by norm_num) (by norm_num) (by norm_num) 0
+
+-- A rational avoiding phase exercises the reverse direction without assuming density.
+example : ¬ (∀ a b : ℝ, 0 ≤ a → a < b → b ≤ 1 →
+    ∀ N : ℕ, ∃ n ≥ N, Int.fract ((16 : ℝ) ^ n * (1 / 3 : ℝ)) ∈ Ioo a b) := by
+  intro h
+  have hz := (hitsOpenIntervals_late_rat_affine_iff 0 1 (1 / 3) (by norm_num)).mp
+    (by simpa only [Rat.cast_one, one_mul, Rat.cast_div, Rat.cast_ofNat, zero_add] using h)
+  obtain ⟨n, _, hn⟩ := hz (1 / 4) (1 / 2) (by norm_num) (by norm_num) (by norm_num) 0
+  norm_num at hn
+
+end RationalAffineAudit

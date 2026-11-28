@@ -5071,3 +5071,54 @@ writes, builds, probes, checkers, rendering, installation, delegation or
 census. Caller documentationafca8f, whitespace0dab37 and preservationa47914
 passed; final affected documentation and working/staged whitespace checks
 still gate publication. No source proof or new mathematical claim was adopted.
+
+## Rational-affine late-visitation formalization — 2026-11-28 UTC
+
+Scope: new `PiDisjunctivity/AffineOrbit.lean`, its library-root export and
+`Test.lean` audits; the mathematical owner, proof-plan/blueprint support
+contract, log and this review record. Baseline
+`b441c397ca9120cb760b852d332b121104d3bb9c`. No existing definition, theorem,
+pin, dependency, permission, workflow rule or V contract is changed.
+
+The principal theorem preserves universal arbitrarily late interval visitation
+under x -> r*x+s for all real x and rational r,s with r nonzero. It does not
+assert normality preservation or visits of pi. The explicit BBP phase consumer
+uses the inclusive prefix and existing split; forced-entry vanishing-error
+transfer remains outside this formalization. Ordinary closures, finite torsion
+and finite-kernel images carry the mathematical argument. No project-specific
+axioms, new definitions or external Lean libraries are introduced.
+
+Parent scratch replay, production root-chain build, explicit root consumers
+and all14 actual axiom inspections passed. Every new theorem has the exact
+permitted three dependencies. Test.lean adds full type checks, guarded actual
+axioms, endpoint/negative-scale/rational-avoidance checks and the BBP consumer.
+An initial successful Test run warned about unused proof-binder names in the
+type audits; the names were corrected, and a warning-free rerun passed.
+The unadopted discovery packets support factual outcomes only, not mathematical
+adoption or newly verified source contracts.
+
+Separate reviewer `/root/affine_independent_review` completed the exact-diff
+review before the parent clock05:04:37 UTC, ahead of its05:06 progress and
+05:11 completion bounds. The assignment followed the parent05:00:58 clock;
+no more precise reviewer clock is asserted. Both guides were read in full
+and their recorded hashes verified. No defect, nonblocking improvement or
+blocking open question was found; there are no D/I/Q items requiring repair.
+The existing forced-recurrence transfer, normality and V limitations remain.
+
+Packet: `/tmp/pi-m4-affine-integration-20261128T0453Z/`. The frozen22-entry
+manifest is `347729b3dab98415f95ccfebfb401afa8173375ee2965bcc2d33f1fa0adebeb2`;
+diff `f13e1ee22c7eaf06e719a185cbd8c00839ba5daac125a87fd4bd96b387a4c9c1`.
+The full return is `review-full.txt`, hash
+`13c75ebb8bb2db58026784c515757159ce25beac2eaf2f0e43d2ddba02470148`.
+The reviewer independently matched all22 entries, eight live postimages,
+135 protected and11 unrelated identities, and the three unadopted report
+identities/outcomes. It inspected the BBP interfaces and central Mathlib
+statements, including finite nowhere-dense unions and integer-multiplier
+kernels. It performed no Git, network, writes, builds, probes, checker runs,
+installation, delegation or actual-orbit computations.
+
+Caller full build864ff9/6f5010, repaired Test c39343/779874, root consumer
+fc967a/b0cb5c, documentation3388aa, staged whitespace580bdd and empty
+pin/formulation diff826f8b passed. Review-completion edits change factual
+status only; Lean sources and audit contracts are unchanged. Affected final
+documentation, whitespace, scope and exact-stage checks still gate commit.
