@@ -4777,3 +4777,72 @@ separately checked the thirteen-pole non-coboundary archive distinction and
 the four-pole coboundary used here; they are not the same comparison. Final
 scope, checks and publication receipts are kept outside the original manifest.
 This accepts only the stated documentation findings, not V/M4.
+
+## Prime-dilation action test — 2026-11-28 UTC
+
+Separate paper reviewer: `/root/finite_log_independent_review`,
+02:57:21–03:00:21 UTC, deadline03:07:21. Both full current guides were read
+and their hashes verified: Lean adversarial
+`798c3cc974c5296453f510ea9264aa8b5d17c813c8dc217a430de9b68b7d667c`
+and strategy/tooling
+`c4a04d75a297c6ec361d31ab11e465e3c3e74a6c89eb590bddb03d95c243ad3b`.
+The read-only replacement constraints applied; Carbon remained stopped.
+
+Exact paper scope, against baseline
+`4f3108c58d49640879a797dae8d5e4ce982bd61f`:
+
+- `/tmp/pi-m4-dilation-action-20261128T024712Z/report.md`, hash
+  `d9ce408acaa6b8d6e855adf5a073eb1716e9be5b63863ecec33ace372b127fce`;
+  18-entry manifest
+  `27ca53ff9e16c74a1d2c0582c4c57c9935556c8835128bc94964f4033f820d40`.
+- `/tmp/pi-m4-prime-dilation-root-20261128T0251Z/report-v2.md`, hash
+  `5b6db048783e7e79623b966b0306389b8939d12d3a6d49806c540ce9df9db68e`;
+  original two-entry manifest
+  `910f8da7338e386d59ddf07eeedd0360aeca523e0d2fed60e2a6a3da3e6ce9a2`
+  and supplement
+  `1452bbaf0094be13c7464600699f9001f56a77b7d4c50d3f9b48acfab788fe84`.
+  Version2 corrects a receipt timestamp without changing mathematics or frozen
+  originals; the clock observation remains caller evidence.
+
+No defect or required improvement was found. Q1 retains the unproved uniform
+continuity of the selected time-dilation rule; even that alone would not supply
+the assessed commuting automorphism action. Q2 retains the distinct scalar17
+circle-closure inclusion. Both are accepted as open research limits, not
+discharged hypotheses. The ambient discontinuity example is synthetic and
+does not refute continuity on the actual closure. The nononto-clock argument
+does not refute scalar circle invariance.
+
+The reviewer reconstructed the centered algebra including k=0, the compact
+clock/CRT extension test, action law, nononto image and17-element solenoid
+kernel. It inspected the retained Einsiedler–Lindenstrauss definitions and
+Theorems1.2–1.3, Furstenberg pp.47–48 text and p.48 image, both reports and
+relevant archived selector/conjugacy passages. Parent cec362 and the reviewer
+independently verified all18+3 payloads. Full source proofs and the archived
+analytic-selector argument were not freshly audited. No actual-orbit samples,
+builds, probes, checker executions, network, writes or delegation occurred in
+review. This is paper review, not Lean or novelty certification.
+
+The full return is retained as `paper-review-full.txt` in
+`/tmp/pi-m4-dilation-integration-20261128T0259Z/`, hash
+`8f4569de0987a7b260335b02157b1857b5f45d492324b8c98e1c991565caed14`.
+The separate five-path changed-file review and final affected checks remain
+required before publication. No V/M4 result is accepted by this checkpoint.
+
+The same separate reviewer completed the five-path integration review at
+03:03:19–03:05:53 UTC, before03:13:19. No defect or material improvement
+was found. Integration Q1 and Q2 preserve the two paper questions above;
+neither is discharged. All14 frozen entries, live proposed postimages,
+baseline/diff hunks, 27 protected/11 unrelated identities and the four-entry
+unadopted backward-reset manifest were independently checked. The latter
+supports its factual outcome only; its mathematics was not adopted.
+
+Frozen integration diff:
+`91cf1cbcd8db22a161d5158295b3a29f59e1b9fd06b8de66c36770adc13efb25`;
+manifest `7a754f373d96df3cae1511317fed119b3ca248551c73629cf4eb9dcb87a913cd`.
+The full return is `integration-review-full.txt` in the same packet, hash
+`1db7a52b15985da0711761082667a12fb94a53fbab484beb61cc21589f7bf6e8`. Both
+complete guides and the read-only constraints remained in force. Initial
+documentation77a6a8, whitespace922e77 and preservation776efd passed;
+the final factual outcome edits require affected documentation and
+working/staged whitespace checks before commit. No Lean or process source
+changed, and no additional source-proof audit is claimed.

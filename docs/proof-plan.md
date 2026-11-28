@@ -1184,6 +1184,11 @@ correlations: the latter can cancel even for a nondense rational comparison.
 The inspected clock extensions do not supply the missing estimate. Continue
 discovery using the exact initialized four-pole structure; generic absence of
 a rational coboundary is already insufficient in the archived comparison family.
+The [prime-dilation test](m4-two-adic-reflection.md#prime-time-dilation-does-not-supply-a-second-scalar-action)
+likewise leaves the actual phase in the centered identity. Its time-dilation
+map does not provide the scalar17 closure inclusion required by the separate
+circle-semigroup route. Continue discovery rather than formalize this failed
+source transfer; no visitation premise has been discharged.
 
 ## 6. Assemble the proof of the original conjecture
 

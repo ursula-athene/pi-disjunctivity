@@ -1844,3 +1844,11 @@ A fresh backward investigation retains the actual four pole classes and
 initialized period; merely excluding rational telescoping is already defeated
 by an archived model. No consequence of actual avoidance is established. The
 log owns bounds and outcomes. V/M4 remains open under the unchanged contract.
+
+The backward pass found no new mechanism and remains unadopted. The
+[prime-dilation test](m4-two-adic-reflection.md#prime-time-dilation-does-not-supply-a-second-scalar-action)
+then separated time dilation from the unproved scalar action on the selected
+real closure. It adds no visit or Lean result. A fresh-context discovery pass
+is testing a changed mechanism against this accumulated failure map; the log
+owns its bound and outcome. Repeating the logarithmic/missing-digit source
+screen without changed hypotheses is suspended.

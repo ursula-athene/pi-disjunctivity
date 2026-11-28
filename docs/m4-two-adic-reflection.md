@@ -427,3 +427,54 @@ separate; odometer changes or time
 shifts alone do not do so. The [review record](agy-reports/m4-continuation-review.md#post-grid-mechanism-discriminators--2026-11-28-utc)
 retains exact source/claim limits. This is a paper discriminator, not a Lean
 proof or a new actual-phase estimate; V/M4 remain open.
+
+### Prime time dilation does not supply a second scalar action
+
+The [actual 17-adic defect](m4-logarithmic-constraints.md#one-p-adic-continuous-defect-selects-the-normalized-eight-pole-forcing)
+does not immediately fill that action gap. Put alpha=pi/16 and retain the
+preceding P_k and T_k. For every k>=0, including k=0, exact substitution gives
+
+```text
+G(k)=17P_(17k)-16^(16k)P_k
+    =16^(17k+1)*alpha+16^(16k)*T_k-17*T_(17k).
+```
+
+For u_k=[P_k,P_k], H_k=[-T_k,P_k] and v_k=u_k-H_k, the centered defect is
+`17v_(17k)-16^(16k)v_k=[16^(17k+1)*alpha,0]=16v_(17k)`.
+Thus it returns `v_(17k)=16^(16k)v_k`, the original orbit at a dilated time.
+The real leading term of G still contains the original phase. Its p-adic
+analyticity is not a small real correction.
+
+To retain the selector's argument, augment the compact clock to
+`x_k=(1/(k+1),k,k)` with boundary `(0,z_2,z_17)` in Z_2 x Z_17. Write
+o_k=(x_k,v_k), K=closure{o_k}, and K_infty for its omega-limit set.
+The base dilation extends as `(z_2,z_17)->(17z_2,17z_17)`. The selected rule
+`D(o_k)=o_(17k)` extends continuously to K exactly when it is uniformly
+continuous on these dense samples. The known analytic defect does not prove
+this joint real/solenoid criterion. Failure of an ambient extension would
+not establish failure on K.
+
+Even granting that extension, continuity gives `D T=T^17 D`, where T is
+the centered time shift. The two compositions D T and T D differ by16 in
+their boundary clocks, so they do not commute. CRT and compactness give
+every pair (z_2,z_17) as a clock projection of K_infty; D maps its 17-adic
+clock into17Z_17. Hence D is not onto K_infty. These are mismatches with
+the inspected commuting-automorphism source, not with all dynamics theorems.
+Also scalar17 on the current dyadic solenoid has a17-point kernel:
+`[j/17,j/17]`, 0<=j<17. The raw defect equation therefore does not define
+a unique division-by17 branch on that space. The actual recurrence already
+selects its branch; no continuous extension follows from that fact alone.
+
+The different [Furstenberg circle-semigroup consumer](m4-approximation-interfaces.md#a-second-radix-action-and-the-finite-blocking-test)
+does not require invertibility or an invariant measure. For
+`L=closure{16^n*pi mod1:n>=0}`, its missing premise is `17L subset L`.
+Scalar multiplication by17 already commutes with scalar16 on the circle,
+but index dilation does not establish that inclusion. The nononto clock
+argument is not a refutation of this separate circle premise.
+
+This test identifies the exact gap in one proposed use of the known defect;
+it supplies no actual visit, Lean result or new rigidity theorem. A renewed
+proposal must construct a different actual-phase map or prove the missing
+real matching estimate before further rigidity infrastructure is useful.
+The [review record](agy-reports/m4-continuation-review.md#prime-dilation-action-test--2026-11-28-utc)
+retains source limits and frozen evidence. V/M4 remain open.

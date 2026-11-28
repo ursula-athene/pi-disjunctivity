@@ -5736,3 +5736,60 @@ changed Obsidian layout at 02:15:14; its inspected current contents were kept
 outside the five owned paths. The exact paper/source limits and all review
 dispositions are retained. The backward proof investigation continues under
 its original bound, with no new mathematical result adopted.
+
+Publication receipt, 2026-11-28 02:23:41 UTC: commit c4ea10, post-commit
+02017e, push 6209de and remote 5688fa confirm
+`4f3108c58d49640879a797dae8d5e4ce982bd61f`. Final documentation aae556,
+working/staged whitespace ab08a6/876d51, integrity 4eb4d9 and exact staging
+b8daf9 passed. The five committed paths/blobs, parent, empty index, 27 protected
+and 11 currently recorded unrelated identities matched; no repair was needed.
+The Obsidian change described above was preserved, not restored. Remote
+768100 at 02:52:51 still matched this head; no reviewed unpublished commit
+was ready. No Lean source or PR changed.
+
+The fresh backward pass finished within its 30-minute bound with **no new
+mechanism**. Its forbidden-word polynomial did not put the actual carries in
+a finite algebraic profile; its symbolic lifts repeated the archived gap
+between the exact raw arithmetic and bounded canonical real states. The packet
+`/tmp/pi-m4-zero-seed-reset-20261128T021145Z/` remains unadopted: report-v2
+hash `87354fb9a68a93578ca9922f3e2abc31f6d35a8db683a8c2573cf89fbc4b645e`,
+manifest `7a550ac060ed35bf7ee1dc83808213a11d828b6a0d99165c7799a15007d0d954`.
+Parent 05bb59 verified all four entries; its synthetic checker was not replayed
+and no new mathematical claim or Lean work is adopted from that packet.
+
+## 2026-11-28 — Prime dilation and a fresh discovery reset
+
+The action test ran 02:47:12–02:56:39 UTC, reassessing early at 02:55:12
+before its 03:07:12 endpoint. The parent centered the exact defect from
+02:51:02 to the observed 02:53:23 clock, before its 03:03:02 bound.
+The [owning calculation](m4-two-adic-reflection.md#prime-time-dilation-does-not-supply-a-second-scalar-action)
+retains the original pi phase and distinguishes index dilation from scalar17
+preservation of the selected real closure. The latter remains unproved.
+Neither the inspected automorphism theorem nor the different circle-semigroup
+theorem supplies a visit from this identity. Parent cec362 verified all18+3
+packet payloads. No actual-sequence census or numerical checker was needed.
+
+Independent paper review by `/root/finite_log_independent_review` ran
+02:57:21–03:00:21, before its 03:07:21 bound. It found no defect or required
+improvement; both real-selection questions remain open. The
+[review record](agy-reports/m4-continuation-review.md#prime-dilation-action-test--2026-11-28-utc)
+retains full scope, source limits and dispositions. Five-path documentation
+integration began 02:59:16 with reassessment at03:10 and endpoint03:20;
+changed-file review and affected checks still gate publication.
+
+**Discovery bottleneck:** these attempts still do not select the initialized
+real orbit. The proposed logarithmic/missing-digit source search was matched
+to repeated archived screens before another campaign began; it is not a new
+direction. Under the meta-plan, fresh-context
+`/root/m4_new_mechanism_reset_0259` began at02:59:16, with midpoint03:14:16
+and endpoint03:29:16. Its task is one materially different mechanism and a
+minimal discriminator, or an honest no-new-mechanism outcome with a changed
+discovery question. It must retain the exact forcing/seed and compare the
+existing failures before development. No result is presumed, and V/M4 remain
+open. This is a reassessment cycle, not an M4 stopping boundary.
+
+The five-path integration review finished at03:05:53 UTC with no defect or
+material improvement. It retained both real-selection questions and verified
+the frozen/live scope and protected/unrelated identities. Initial affected
+documentation77a6a8 and whitespace922e77 passed. Final affected checks now
+gate publication; the fresh discovery pass continues under its original bound.
