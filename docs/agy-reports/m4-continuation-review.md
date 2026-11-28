@@ -5570,3 +5570,56 @@ evidence. Caller recheck088d65 matched all138 protected and11 unrelated files.
 Only factual completion records changed after the frozen review; Lean proof
 sources and mathematical contracts are unchanged. The scoped review cycle is
 complete; selected-time hits and V/M4 remain open.
+
+## Rational tail quadrature and exact clearing — 2026-11-28 UTC
+
+Scope: the actual-tail Gaussian construction, exact positive error, fixed-order
+odd-denominator obstruction and its limits, integrated into three documents
+against baseline db3baef. No Lean changes, sampled actual states or target-hit
+claim. Source report:
+`/tmp/pi-m4-tail-rational-clearing-20261128-0736/report-v1.md`, SHA256
+`e44140f50e4160ca2bbcad1d9dbf0693f7cb1dfa9540584ed2dfeb3eee2a673a`;
+checker `14c41dd52dcda140a798ccceef6b1d6683ae1f6f099c65caedfab86a29fe5664`;
+receipt `d2d04c45bd5aa91b1a4d970e230d2f2bbb4198b6dbd4d04cd47b0bb088f1d364`.
+
+Separate reviewer `/root/dyadic_grid_independent_review_0649` inspected the
+complete report, checker, receipt, source theorem pages 65–66 and related owner
+context during the actual 07:54:19–07:57:53 UTC interval. Both full adversarial
+guides, replacement procedure and critic skill were read at unchanged hashes.
+It verified all reported source/artifact hashes and distinguished caller
+checker rerun 37881c from its own read-only inspection. No Git, network, writes,
+builds, probes, checkers, installation or delegation occurred.
+
+Full return: `paper-review-full.md` in the 0800 integration packet, hash
+`fc8f674237e2a2dcc66be0952fe048ce65ae6ed75a7087c36486ebdefb287126`.
+No defects or acceptance-blocking questions. **I1: implemented and verified by
+production review.** Monicity and orthogonality imply
+`kappa_m<=mu_(2m)<(2m)!`; the positive-node bounds in the exact differentiated
+error yield `0<E(N)-R_m(N)<(2m+1)!/N^(2m+2)` for every finite m>=1,N>0.
+The owner now includes that proof, separating available uniform analytic
+control from unproved growing-order evaluated cancellation.
+
+The fixed-order obstruction retains the evaluated gcd, stabilized 2-adic
+valuation, Laurent-polynomial necessity and non-dyadic-coefficient caveat.
+It makes no denominator claim for the corrected prefix, no modular-distance
+estimate and no exclusion of growing order. Independent production review is
+complete as recorded below; paper review alone did not accept integration.
+
+The same independent reviewer examined the entire 202-line production diff
+during 08:04:25–08:05:39 UTC, before its 08:11 endpoint. Exact diff hash:
+`1a1b628d07006f59c6f28e16731621bc434a84b321f9f96a8e7ed652934a7b2d`;
+ten-entry manifest:
+`d53272e7badb246aedf5ed9d9c591ff2ba3141c1c7b98f31b964b4cdd3259a48`.
+All entries and all three live postimages matched, as did the original paper,
+checker, receipt and source pages. Full return `review-full.md` in the 0800
+packet has hash `f8cc4f5a0c29ad08fb6d4bbcafb3f3f5f4c74fb3bfb9f302d692ef8d8ba140ab`.
+
+No defects or new improvements/questions. **I1: implemented and verified.**
+All fixed-order and modular limits remain explicit. Both full guides and
+replacement/critic instructions were reread; truncated output was reread in
+smaller calls, leaving no coverage gap. The reviewer used only read-only file
+inspection and hashing. Documentation 9516a7, whitespace 29aa3c/7dc3c1,
+checker 37881c and preservation 60a950 remain caller execution evidence.
+Caller 9ef506 reverified all frozen entries, owned postimages, 145 protected
+and 11 unrelated files. Only factual completion records changed afterward.
+The required scoped review cycle is complete; V/M4 remains open.

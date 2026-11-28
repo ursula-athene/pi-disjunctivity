@@ -364,6 +364,104 @@ sampled monotonicity and 245 anchor/order denominator pairs. Those finite
 checks are sanity evidence; the infinite sums and universal inequalities
 above remain paper mathematics. No production Lean declaration changed.
 
+## Rational tail quadrature and exact radix clearing
+
+A separately reviewed paper test uses the same actual positive tail measure,
+with moments `mu_l`, to replace the inverse-power polynomial by a Gaussian
+rational rule. This gives a uniform analytic bound but fails exact radix
+clearing at every fixed order. It does not rule out growing order, small
+nonzero modular residues or a corrected-prefix argument.
+
+The source is Allen, Chui, Madych, Narcowich and Smith,
+[*Pade approximation and gaussian quadrature*](https://doi.org/10.1017/S0004972700043641),
+Theorem 1, printed pp.65–66. Its denominator-degree-first `[m,m-1]` approximant
+to the ordinary Stieltjes transform is the m-node Gaussian rule. The actual
+measure is positive, has infinite support in `[9/8,infinity)` and finite
+rational moments, so these hypotheses hold. The source permits formal moment
+series; no convergence of the inverse-power series is assumed. The present
+tail approximant comes from differentiating the finite ordinary rule, rather
+than applying the source theorem directly to the squared-denominator tail.
+
+Let `q_m` be the monic degree-m orthogonal polynomial, with distinct positive
+nodes `xi_i` and positive Gaussian weights `w_i`. The rational moment system
+is nonsingular because the integral of a nonzero polynomial's square is
+positive. Thus `q_m`, and the following `P_m,Q_m`, have rational coefficients;
+the individual nodes and weights need not be rational. For `m>=1`, put
+
+```text
+Q_m(X)=(-1)^m*q_m(-X)=product_i(X+xi_i),
+G_m(N)=sum_i w_i/(N+xi_i)=P_m(N)/Q_m(N),
+R_m(N)=-G_m'(N)=sum_i w_i/(N+xi_i)^2.
+```
+
+Here `deg(P_m)=m-1`, `deg(Q_m)=m` and `Q_m(0)>0`. Nonzero residues imply
+`P_m(-xi_i)!=0`, so the numerator `P_m*Q_m'-P_m'*Q_m` is nonzero at every
+root of `Q_m`. The reduced rational-function denominator of `R_m` therefore
+has degree exactly `2m` and nonzero constant term. This assertion does not
+preclude integer gcd cancellation after evaluation.
+
+Set `I_k(N)=integral q_m(u)^2/(N+u)^k dmu(u)` and
+`kappa_m=integral q_m(u)^2 dmu(u)>0`. Polynomial division and orthogonality
+give the ordinary transform error `I_1(N)/Q_m(N)^2`. Differentiation, justified
+locally for `N>0` by the finite moments and positive support, yields
+
+```text
+E(N)-R_m(N)=I_2(N)/Q_m(N)^2
+              +2*Q_m'(N)*I_1(N)/Q_m(N)^3 >0.
+```
+
+Orthogonality and monicity also give
+`mu_(2m)=kappa_m+integral(u^m-q_m(u))^2 dmu`, hence
+`kappa_m<=mu_(2m)<(2m)!`. Since `Q_m(N)>=N^m`,
+`Q_m'(N)/Q_m(N)<=m/N` and `I_k(N)<=kappa_m/N^k`, every finite `m>=1,N>0`
+satisfies the uniform bound
+
+```text
+0<E(N)-R_m(N)<(2m+1)!/N^(2m+2).
+```
+
+This incorporates review improvement I1. For fixed m, dominated convergence
+also gives `E(N)-R_m(N) ~ (2m+1)*kappa_m/N^(2m+2)`. The uniform inequality
+does not depend on substituting a growing m into that fixed-order asymptotic.
+The actual first three moments are `1/64,23/1024,415/12288`, so
+`R_1(N)=4/(16N+23)^2`, with `kappa_1=73/49152`. For every natural N its
+denominator is odd, greater than one and coprime to 4; no power of 16 clears it.
+
+The all-fixed-order obstruction is elementary. For integer polynomials p,q
+coprime over the rationals, with `deg(q)=d>=1` and `q(0)!=0`, a cleared Bezout
+identity gives `U*p+V*q=D!=0` with integer coefficients. Write `e=v_2(q(0))`.
+For `s>e`, `v_2(q(2^s))=e`, and the evaluated gcd divides D. Consequently
+
+```text
+oddDen(p(2^s)/q(2^s)) >= abs(q(2^s))/(2^e*abs(D))
+                     >= c*2^(d*s) eventually, for some c>0.
+```
+
+Apply this to a reduced integer polynomial representation of `R_m`: for every
+fixed m, its odd denominator is at least `c_m*2^(2*m*s)>1` for all sufficiently
+large s. Factoring a general reduced denominator as `X^k*q_0(X)` gives the
+same conclusion when `deg(q_0)>0`. Thus infinitely many exact dyadic clearings
+force a fixed rational correction to be a Laurent polynomial over Q. This
+necessary condition does not force dyadic coefficients: `(X+1)/(3X^2)` has
+dyadic values at `X=2^s` for every odd s.
+
+For growing m, write `R_m=A_m/B_m` as coprime integer polynomials, with a
+Bezout constant D_m and `e_m=v_2(B_m(0))`. If `s>e_m`, exact clearing requires
+`oddPart(B_m(2^s))` to divide D_m and `abs(B_m(2^s))<=2^e_m*abs(D_m)`.
+No uniform arithmetic bound for these order-dependent quantities is proved.
+The result bounds neither the odd denominator of `S_N+R_m(N)` nor distance
+to a nonzero modular residue. It supplies no actual target hit or V theorem.
+
+Frozen report `/tmp/pi-m4-tail-rational-clearing-20261128-0736/report-v1.md`,
+SHA256 `e44140f50e4160ca2bbcad1d9dbf0693f7cb1dfa9540584ed2dfeb3eee2a673a`,
+and its formal-coefficient checker were independently reviewed. The parent
+rerun passed; it verifies the first moments and one-node polynomial identity,
+not the universal analytic or Bezout arguments. Both source pages were visually
+inspected. The bounded public Lean search found related resultant machinery,
+not an exact Gaussian-tail implementation; no absence or originality claim
+follows. This is paper mathematics, without new Lean exports. The continuation
+review record owns I1's disposition and production-integration review.
+
 ## Dyadic anchors give later modular shadow blocks
 
 The preceding absolute-error obstruction leaves room for cancellation modulo

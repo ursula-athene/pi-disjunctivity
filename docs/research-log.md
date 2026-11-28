@@ -6596,3 +6596,60 @@ e44140f50e4160ca2bbcad1d9dbf0693f7cb1dfa9540584ed2dfeb3eee2a673a.
 Parent read the complete report and receipt7c274b. Its proposed fixed-order
 clearing obstruction remains unadopted pending separate mathematical review;
 growing order, small nonzero modular residues and target placement remain open.
+
+## 2026-11-28 — Rational tail clearing test and continued comparison search
+
+The full dyadic comparison was committed and pushed as
+`db3baef2ccd65dc437dcb3b1385813abacd5962a`, parent ae02a7a. Commit 9412b3,
+post-commit ef9664, push 30851e/7c8eb5 and remote 78a62e verified publication;
+receipt c43503 recorded it at 07:55:02 UTC. All ten committed blobs matched,
+the index was empty and 138 protected plus 11 unrelated files were preserved.
+Final documentation 9b3e4d, working/staged whitespace 07133d/f0792f and exact
+stage 22a4f0 passed. No repair or PR. The publication receipt is in the 0733
+integration packet. V/M4 remains open.
+
+The rational-tail paper review ran 07:54:19–07:57:53, before its 08:01/08:07
+bounds. It found no defects or blocking questions and one nonblocking I1:
+derive the uniform factorial error bound from the existing moments. Parent
+reconstructed that argument and included it in the
+[mathematical owner](m4-fourier-windows.md#rational-tail-quadrature-and-exact-radix-clearing).
+The first moments give a rational Gaussian correction, but every fixed-order
+correction retains an odd denominator at sufficiently large dyadic anchors.
+This excludes exact clearing only. Growing order, small nonzero residues and
+actual target placement remain open. No Lean infrastructure was added.
+
+Parent read the full report/receipt 7c274b and checker 59d7dd, reran the unchanged
+checker 37881c with exit 0 and matched all three hashes c43503. Both primary
+source pages 65–66 were visually inspected by parent as well as worker/reviewer.
+The checker covers only universal formal-coefficient and one-node polynomial
+identities; the all-order analytic and evaluated-gcd proofs remain paper work.
+
+The three-document integration began 07:59:37 UTC, with 08:07 reassessment
+and 08:13 endpoint, in `/tmp/pi-m4-tail-clearing-integration-20261128T0800Z/`.
+Scope 3982d1 has three owned, 145 protected and 11 unrelated files. The complete
+paper return is `paper-review-full.md`, hash
+fc8f674237e2a2dcc66be0952fe048ce65ae6ed75a7087c36486ebdefb287126.
+I1 is implemented and verified by the completed production review below;
+final affected checks gate publication.
+
+The next bounded comparison search has 08:08 midpoint and 08:18 endpoint.
+It tests exact transformations of the actual rational exponential tail kernel,
+asking whether a dual remainder can improve modular control or merely return
+the unknown original phase. At most two candidates are allowed in that cycle;
+new source connections require early primary/public-Lean checks. Symbolic
+identities are allowed, actual-state censuses are not. This changes the failed
+fixed-order clearing question without claiming a new visitation mechanism.
+
+Exact production review ran 08:04:25–08:05:39 UTC, before its 08:08/08:11
+bounds. The 202-line diff has hash
+1a1b628d07006f59c6f28e16731621bc434a84b321f9f96a8e7ed652934a7b2d;
+the ten-entry manifest is
+d53272e7badb246aedf5ed9d9c591ff2ba3141c1c7b98f31b964b4cdd3259a48.
+No defects, new improvements or blocking questions; I1 is implemented and
+verified. Full return `review-full.md` in the 0800 packet has hash
+f8cc4f5a0c29ad08fb6d4bbcafb3f3f5f4c74fb3bfb9f302d692ef8d8ba140ab.
+All frozen entries and owned postimages matched independently; execution and
+protected-file preservation remain caller evidence. Caller 9ef506 assessed
+the midpoint at 08:06:58, verifying all ten entries, three owned files,
+145 protected and 11 unrelated identities. Only factual completion records
+changed after review; no mathematical claim or proof changed.
