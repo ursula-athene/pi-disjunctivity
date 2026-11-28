@@ -6298,3 +6298,40 @@ Both full guides/procedure/critic reads were reused after unchanged-hash
 checks. Read-only limits held. This is a record review; the calculations
 and source proofs remain unadopted, and execution/remote observations are
 caller evidence. Final affected checks remain due.
+
+## Resonant-column entropy — 2026-11-28 UTC
+
+Scope: the90-line report `/tmp/pi-m4-resonant-entropy-20261128T1300Z-report-v1.md`,
+hash f2737f478e7b86c53daaeaf55418c591a4f42daa633cc964d3f9ba8be7f77371,
+with five-entry inventory8789a96a40c38a0af6188d6d3367e641f797a487da018604a1a960c00f74e65a
+in the1301 review packet. Separate reviewer
+`/root/dyadic_grid_independent_review_0649` completed13:00:33–13:02:38.
+Full return in `/tmp/pi-m4-entropy-integration-20261128T1302Z/paper-review-full.md`:
+315868ffbd0ae104fa7c649980fe1bb089e48b6b6389204806f551fa1e62e658.
+
+D: none. I1: implemented only in production, retaining the frozen report;
+zero-boundary uniqueness is under coefficient matching. Q1 sparse cutoffs,
+Q2 controlled infinite sums, Q3 individual V_l entropy/activity and auxiliary
+index scope, Q4 C_odd/V/M4 are retained. The reviewer reconstructed the
+cutoff limsup, exact2m-term telescoping and irrational alternating boundary,
+and inspected the cited entropy definitions/proofs and existing column inputs.
+Both full adversarial guides, procedure and critic instructions were reused
+after unchanged-hash checks. No full transitive source audit is claimed.
+Read-only limits held: no Git/network, writes, builds, probes, census,
+checker execution, installation or delegation. Parent834af8/0ca78a read and
+verified the report, full return, source inventory and original owner archive.
+This is paper review; exact production review of the three owned documents
+against6c77cce and affected checks remain due. No Lean or π visitation claim.
+
+Exact production review13:10:17–13:11:32 passed with no defects or new
+improvements. I1 is closed; Q1–Q4 remain. All151 diff lines reconstructed
+the three postimages;10 manifest entries,6 sources,146 protected and10
+untracked hashes matched. Manifest
+38bc49177681f9c3b59ae99ef2a49fa36d9d52958b011cb7c55bf874774f5ae2;
+full return in the1302 packet
+8fe6b4e575c67755ebf7a2b61dced634a36ed12920ff58b045c98c0f6ddc2f53.
+Original owner archival matches both the historical inventory and beforeimage.
+Both complete guides/procedure/critic were reused after unchanged-hash checks;
+read-only restrictions held. Parent893c20 reverified the inventories and
+owners before factual updates. Check executions and remote state remain
+caller evidence. Final affected checks and publication remain due.

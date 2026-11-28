@@ -7480,3 +7480,46 @@ return in the1240 packet:
 f51b6d0e15482a1bb78a2154a320528137e7f021225163f9d5d278f7ac762e7d.
 Parent714fed reverified all frozen/source/protected/live inventories before
 factual completion updates. Final affected checks remain due.
+
+## 2026-11-28 — Resonant-column entropy test
+
+The preceding checkpoint is published as
+`6c77cce00277d91abb1c564c404a08ed1a091e43`, parentdd161b2: commit59722a,
+post-commit774301, pusheb0402 and remote31549d. Docs6fbe59, whitespace
+e161c4/72ba3f and exact stagef062b0 passed. The1240 packet contains the
+publication receipt. Remote c57e6c still matched after13:07:23 UTC.
+The fresh-context recovery completed12:47, inconclusive: its three proposals
+returned to the archived selected-embedding, integer-branch and unproved
+dichotomy gaps. No new mathematical claim is adopted from that screen.
+
+The12:50 entropy cycle changed the question from time selection to a possible
+normal-core/remainder consumer. Its
+[paper diagnostics](m4-fourier-windows.md#column-resonance-does-not-supply-a-small-entropy-remainder)
+exclude low entropy along all cutoffs and identify the boundary term in one
+resonant regrouping. They leave sparse cutoffs and controlled grouped tails
+open. The90-line report is `/tmp/pi-m4-resonant-entropy-20261128T1300Z-report-v1.md`,
+hash f2737f478e7b86c53daaeaf55418c591a4f42daa633cc964d3f9ba8be7f77371.
+Parent834af8 read it and the full review;0ca78a reverified all five source
+entries,146 protected and10 untracked files. The original owner is archived
+as `owner-at-review.md` in the1301 paper-review packet before integration.
+
+Separate paper review13:00:33–13:02:38 found no defects. I1 is implemented:
+uniqueness of zero-boundary coefficients is only under the stated recurrence.
+Q1 sparse cutoffs, Q2 grouped/infinite-sum entropy, Q3 individual pair estimates
+and Q4 C_odd/V/M4 remain open. Full return in
+`/tmp/pi-m4-entropy-integration-20261128T1302Z/paper-review-full.md` has hash
+315868ffbd0ae104fa7c649980fe1bb089e48b6b6389204806f551fa1e62e658.
+Exact three-document review and affected checks remain due. No Lean change,
+actual-state census or novelty claim. The next bounded test asks whether
+normality of actual interval sums can decide the sparse-cutoff loophole;
+13:25/13:40 checkpoints reassess that question without assuming sums of
+normal numbers are normal. Research continues.
+
+Exact production review13:10:17–13:11:32 passed without defects or new
+improvements; I1 is closed and Q1–Q4 retained. All151 diff lines,10 manifest
+entries,6 sources,146 protected and10 untracked files matched. Full return
+in the1302 packet has hash
+8fe6b4e575c67755ebf7a2b61dced634a36ed12920ff58b045c98c0f6ddc2f53.
+Parent893c20 reverified inventories and live owners at13:13:08 before
+these factual completion updates. The owner remains unchanged; final
+affected checks and publication remain due.

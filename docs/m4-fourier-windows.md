@@ -1431,6 +1431,72 @@ eighth-grid argument. The [review record](agy-reports/m4-continuation-review.md#
 retains the exact sketch and review limits. No actual phase or digit census
 was used; the block count is symbolic for every K. V/M4 remains open.
 
+### Column resonance does not supply a small-entropy remainder
+
+For base16 dynamics, let Hlow/Hup be the infimum/supremum of entropy over
+all empirical limit measures, normalized by4 bits. They lie in[0,1].
+[Bergelson–Downarowicz](https://arxiv.org/html/2506.12929v1), Definitions3.2/4.4,
+Propositions4.7,4.9(a,d),4.25 and negation invariance give
+
+```text
+Hlow(x+y)>=Hlow(x)-Hup(y), Hup(x+y)<=Hup(x)+Hup(y),
+Hlow(q*x)=Hlow(x), Hup(q*x)=Hup(x) for nonzero rational q.
+```
+
+Normality means Hlow=Hup=1. Thus normal cores x_j with
+Hup(pi-x_j)->0 would prove pi normal. This source consumer retains an
+unproved remainder hypothesis; small absolute error does not imply it.
+The source proofs retain factor/joining entropy, finite-to-one preservation
+and the maximal-entropy characterization; no full transitive audit or Lean
+formalization is claimed.
+
+The actual cutoffs cannot satisfy that hypothesis at every M. Write
+beta_M=pi-T_M. For each eligible cofactor m>=7, individual-column normality
+and beta_(m-1)-beta_m=C_m imply
+
+```text
+1<=Hup(beta_(m-1))+Hup(beta_m),
+limsup_(M->infinity) Hup(beta_M)>=1/2.
+```
+
+This excludes convergence to zero along all cutoffs, not a sparse subsequence.
+It uses no entropy value or normality assertion for pi.
+
+Resonant pairs also require care. Fix r in{1,4,5,6}, and extend
+U_l=sum_(k>=0)17^(-k)*16^(-(l*17^k-r)/8) to all positive l congruent to r
+mod8, including17-divisible auxiliary indices. Put V_l=U_l+U_(l+8).
+For eligible m and rational q_m=16^(-(m-r)/8), exact reindexing gives
+U_(17m)=17*(U_m-q_m), whence
+
+```text
+sum_(i=0)^(2m-1) (-1)^i*V_(m+8i)=-16*U_m+17*q_m.
+```
+
+This finite aggregate is normal by individual-column normality and rational
+affine preservation. It is not the actual weighted tail. No individual V_l
+entropy/activity estimate is proved, and an aggregate's entropy cannot be
+bounded by the largest individual entropy without further hypotheses.
+
+For the actual weights, set m_j=r+8j and w_j=c_r/m_j when17 does not divide
+m_j, zero otherwise. The alternating sum alpha_r=sum_j(-1)^j*w_j equals
+(16/17)*L_r, where L_r=c_r*integral_0^1 t^(r-1)/(1+t^8)dt: the excluded
+indices are17j+2r, with the same parity as j. In particular alpha_4=-2*pi/17.
+With d_j=sum_(i>j)(-1)^(i-j-1)*w_i, the tails d_j tend to zero and
+
+```text
+sum_j w_j*U_(m_j)=alpha_r*U_r+sum_j d_j*V_(m_j).
+```
+
+The bound U_(r+8j)<=(17/16)*16^(-j) justifies the regrouping. For r=4 the
+boundary multiplier and every d_j are irrational, outside rational-affine
+preservation. Alternatively the zero-boundary coefficient-matching recurrence
+p_0=w_0, p_(j-1)+p_j=w_j uniquely gives rational
+p_j=(-1)^j*sum_(i<=j)(-1)^i*w_i, with nonzero parity limits +/-alpha_4.
+Neither representation supplies an infinite-sum entropy bound. Sparse cutoffs
+and a controlled grouped remainder remain open. The
+[separate review](agy-reports/m4-continuation-review.md#resonant-column-entropy--2026-11-28-utc)
+accepts these paper diagnostics only; V, C_odd and M4 remain incomplete.
+
 ### The zero branch and what the scaled projection loses
 
 Keep the definitions above and write D=D_M, u_n=fract(S_(M,n)),
