@@ -6519,3 +6519,29 @@ procedure and critic instructions were reused after unchanged-hash checks.
 Read-only limits held; executed checks and remote state remain caller evidence.
 The parent reverified inventories and live owners before factual updates.
 Final affected checks/publication remain due; C_odd/V/M4 stay open.
+
+
+## Actual-entry discovery checkpoint — 2026-11-28 UTC
+
+Scope: two evidence records against f88a742, with no mathematical-owner or
+Lean change. The exact-pole/carry screen supplied no seed-specific consumer;
+its countertest and source assessment remain unadopted. The complete report,
+worker final return and preceding publication receipt are inventoried in
+`/tmp/pi-m4-discovery-checkpoint-20261128T1447Z/`. Parent b7cd52 read the
+report. The separate fresh-context time-selection investigation continues,
+retaining the full phase, actual zero entry and common-window requirement.
+Exact record review and affected checks remain; no V/M4 acceptance is claimed.
+
+
+Exact record review 14:48:12–14:49:21 passed with no D. I1's precise
+failure wording is implemented verbatim; Q1–Q3 remain open. All 61 diff lines
+reconstructed both postimages; eight manifest entries, three sources,
+147 protected and 10 untracked hashes matched. Manifest
+8795cbc294801fb5194b5ac32feab88b43443876deafb0c32dadcf716b6ed364;
+full return in the 1447 packet
+463051627ebfe0160d0051dd37bd141bed8162ede89054105e9e203a68af4125.
+Both complete guides, procedure and critic instructions were reused after
+unchanged-hash checks. Read-only limits held. The screen's mathematics and
+external source applications remain unadopted; executed checks and remote
+state are caller evidence. Parent integrity verification preceded I1 and
+factual updates. Final affected checks/publication remain due.

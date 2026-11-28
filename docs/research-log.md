@@ -7741,3 +7741,46 @@ All 162 diff lines, 10 frozen entries, 10 sources, 146 protected and
 342878b8296523a450d93eb54c5117384ad5c6b1a31e459166f7402e2328b524.
 The two screens remain unadopted. Parent inventory/live verification preceded
 these factual updates; the owner is unchanged. Final checks/publication remain.
+
+
+## 2026-11-28 — Fresh actual time-selection investigation
+
+The packet-density result is published as
+`f88a74264097e0e4c507ef67337056eea4a24e0a`, parent c92402d. Docs 6fbe40,
+whitespace d84ad4/297673 and exact stage 3d0f09 passed; commit 494389,
+post-commit 6e811a, push e3bd20/eeb545 and remote ad2ed1 verified publication
+at 14:35:06 UTC. The 1430 packet contains `publication.json`.
+
+A fresh-context worker is now testing constructive time selection, distinct
+from the ongoing exact-pole/carry inquiry. Its 14:55/15:10 checkpoints ask
+whether a new mechanism retains the actual zero entry, complete real phase
+and one common coverage/accuracy window. The full failure map and exact
+owner/interface locations were supplied. No separate resources, changed
+initialization, inverse branch choice or real-limit transfer will count as
+that coupling. This is discovery work, with no new proof or V acceptance.
+
+
+At the 14:45 checkpoint the exact-pole/carry lane returned no seed-specific
+consumer. The immutable screen
+`/tmp/pi-m4-loewner-zero-entry-screen-20261128-v1.md`, hash
+bbdd212f88a052633cf155b8719a61955fc2e2c0f44051899b0f661ca78a6142,
+was read completely by parent b7cd52. The screen did not produce a seed-specific constraint
+on the coupled carry/state kernels. The countertest and
+source assessment remain unadopted; no owner expansion or Lean change follows.
+The worker's full final return is retained in
+`/tmp/pi-m4-discovery-checkpoint-20261128T1447Z/worker-return.md`.
+The separate fresh timing inquiry continues. Its total-charge test must not
+become another collection of subseries theorems: the next useful condition
+must control partial activation phases of the actual complement at common
+times. Remote 4ab206 matched f88a742 at the fresh cycle's 14:38:44 start.
+Exact record review and affected checks remain due; V/M4 stays open.
+
+
+Exact record review 14:48:12–14:49:21 found no D. I1's narrower wording
+is implemented verbatim; Q1 actual-entry constraint, Q2 common-time phase
+control and Q3 C_odd/V/M4 remain. All 61 diff lines, eight frozen entries,
+three sources, 147 protected and 10 untracked files matched. Full return
+in the 1447 packet:
+463051627ebfe0160d0051dd37bd141bed8162ede89054105e9e203a68af4125.
+Parent integrity verification preceded the I1 and factual updates. Final
+checks and publication remain due; no mathematical-owner change was made.
