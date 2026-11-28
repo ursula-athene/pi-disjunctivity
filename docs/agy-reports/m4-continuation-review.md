@@ -5942,3 +5942,69 @@ reused after unchanged-hash verification. Only reading, hashing and in-memory
 comparison occurred; Git provenance and executions remain caller evidence.
 461ab4 reverified the full inventory before the final updates. Affected checks
 gate publication; the review grants no V/M4 or actual-variation conclusion.
+
+## Variation diagnostic and moving-target source test — 2026-11-28 UTC
+
+Scope: CRT and language owners plus two evidence records against4951e00.
+These are paper diagnostics with no actual variation bound, canonical
+odd-carry theorem, selected target hit, Lean result or V/M4 acceptance.
+
+Reviewer `/root/dyadic_grid_independent_review_0649` inspected the complete
+309-line variation report,102-line checker, inputs, DLMF formulas and retained
+contracts during09:40:28–09:42:40. All11 entries and both prior14-entry packets
+matched. **Defects: none. I1: implemented.** The owner specifies canonical
+r_0, r=r_0+Pk_0, m|M and Q(S'_N-S_N)=P(M/m)(k-k_0), plus reduction of the
+inverse modulo m. **Q1/Q2: retained.** Actual Abel regularity and identification
+of the initialized entry remain unproved; the variation repair is suspended.
+
+The review checked telescoping, all positions of variation, sufficient versus
+necessary budgets, exact forcing and concentration, root-shadow constants,
+the full15P|h|16^N approximation denominator, greedy edge accounting, the
+Mobius grid with either sign of h, and the slow/fast forced paths. It retains
+loss of initialization and later denominator profiles. The F consequence
+depends on the separately reviewed projected estimate and exceptional set.
+Full return in `/tmp/pi-m4-variation-moving-integration-20261128T0941Z/`
+has hash `914ddf99882f35c5eaf1c4df60ca15a3a9bef1438bd64c143465256df26f1da1`.
+
+Reviewer `/root/anchor_source_integration_review_0822` inspected the complete
+moving-target report/checker/inputs and Vojta's printed pp.552–554 during
+09:35:01–09:39:13. All15 manifest entries matched. **Defects: none.
+Improvements: none. Q1/Q2: retained.** A strong admissible approximation
+from actual avoidance remains absent; other representations, nonlinear
+targets, variable dimensions or growing place sets are outside the test.
+
+The source requires independence on every infinite coherent subset, even
+when its maximum uses independent pairs. The forcing-centered family fails
+that condition. The constant family satisfies it but gives only O_S(log n)
+proximity versus linear height. The review verified carry16, fixed-S norms,
+the exact infinity-plus2 bound, fixed-block rank, F comparison and the separate
+synthetic even-carry fixture without assigning eventual even carries to F.
+Full return in the0941 packet has hash
+`2ccacbe8c9bcba85d8af95972c003373b229d41c42ad93fc8c5a6983d43b3850`.
+
+Both reviewers used only reads, hashes, preserved images and clocks, with
+complete guides/procedure/critic context read or reused after unchanged-hash
+verification. Neither ran checkers, Git, network, builds, probes, installations,
+delegation or actual-state census. Parent09747d supplies exit0 replays of501
+and786 synthetic/formal assertions with results matching the preserved receipts.
+The first parent comparison failure was a wrapped-result schema mismatch,
+resolved after inspection; no proof or checker repair occurred. The full
+source proof chains and analytic/asymptotic inputs are not certified by these
+finite checks. Exact production review and final affected checks remain due.
+
+Exact production review ran09:47:04–09:49:33, before09:52/10:00. All378 diff
+lines reconstructed the four postimages. All14 packet entries,60 sources,
+144 protected and11 unrelated hashes matched. No defects; variation I1 closed.
+**I2: implemented.** The common-Q projection claim now explicitly stays within
+the fixed horizon, in particular throughout the homogeneous piece. This
+scope clarification and factual status updates are the only post-review changes.
+All four Q obligations remain; neither actual regularity nor sufficiently
+strong approximation from avoidance has been established.
+
+Full production return in the0941 packet has hash
+`492b6410a3300e681279b48338a68000e7f8b34c3877822b9f168610f4f72fb2`.
+The reviewer also read the complete moving-target report/checker and inspected
+Vojta's preserved source pages. Full-guide/procedure/critic hashes were unchanged.
+Read-only limits held; recorded Git and execution facts remain caller evidence.
+Caller eda1bf reverified all frozen/source/protection entries before I2 and
+completion updates. Final affected checks gate publication; no V/M4 acceptance.

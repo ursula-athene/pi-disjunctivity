@@ -1716,3 +1716,116 @@ still support a different estimate, but finite-precision initialization and
 root minimality do not provide one here. The topology, congruences and
 denominator comparison are paper arguments; finite rational fixtures do not
 certify them in Lean. V/M4 and the checked frontier remain unchanged.
+
+## Moving-target approximation retains degeneracy or insufficient precision
+
+The 2026-11-28 source test asks whether low-height rational forcing and an
+eventual even-carry alphabet contradict a moving-target Subspace Theorem.
+It retains the exact recurrence and distinguishes two target families.
+Neither proves actual odd-carry infinitude or V.
+
+For g=A, let y_0=0, y_(n+1)=16y_n+g(n)-k_n and
+k_n=floor(16y_n+g(n)). For n>=1, 0<A(n)<1, so the full alphabet is
+C={0,...,16}; hypothetical eventual even carries use E={0,2,...,16}.
+Set X_n=[1:y_n:y_(n+1)] in P^2(Q). Integer subtraction preserves the reduced
+denominator, so the existing exponent6 result and
+den(y_(n+1)) dividing den(y_n)*den(A(n)) give
+
+```text
+h(X_n)=6n+o(n), h([1:y_n])=6n+o(n).
+```
+
+At each fixed prime p, the lcm bound gives
+`log max(1,|y_n|_p,|y_(n+1)|_p)=O_p(log(n+2))`.
+For the fixed positive F the same statements have exponent8; its fixed
+coefficient denominators only add bounded local factors.
+
+The primary source is Vojta, [*Nevanlinna Theory and Diophantine Approximation*](https://library.slmath.org/books/Book37/files/vojta.pdf),
+MSRI Publications37 (1999), Definition7.4 and Theorems7.6–7.7, pp.552–554,
+presenting Ru–Vojta's moving-target theorem. For a fixed finite place set S,
+the normalized proximity sum is bounded by `(3+epsilon)*h(X_n)+C0`, outside
+finitely many indices, for every epsilon>0 and additive C0. Hypotheses include
+negligible target height, general position and coordinate linear independence
+over the target coefficient field on **every infinite coherent subset**.
+Theorem7.7 allows a maximum over designated independent subsets, retaining
+the latter independence requirement. Rational-function coefficients are
+coherent on every infinite natural-index subset after deleting poles: a
+polynomial in them is either identically zero or has only finitely many roots.
+Only these definitions/statements and rendered pages were audited, not the
+external proof chain.
+
+First take the forcing-centered forms
+
+```text
+H_d(n)=(d-g(n))*X0-16*X1+X2, d in C,
+H_d(n)(X_n)=d-k_n.
+```
+
+Their heights are O(log n), but all contain [0:1:16], so any three fail
+general position. Independent pairs do not repair the other failure.
+Some carry c recurs on an infinite coherent subset J, and the coefficient
+field of any nonempty target family contains g(n). On J the exact relation
+`(c-g(n))*1-16*y_n+y_(n+1)=0` violates coordinate independence. This remains
+true if only forbidden odd labels are chosen under an eventual-even hypothesis:
+the recurring c need not label a target. Counting zero evaluations as source
+approximations is invalid. Recurrence of c does not mean eventual constancy.
+
+For d!=k_n, the actual normalized local proximities are particularly simple.
+At infinity the point norm is1 and target norm16. At2 both norms are1,
+because A and the actual states have odd denominators. Consequently
+
+```text
+lambda_infinity + lambda_2
+  =log(16/oddpart(|d-k_n|)) <=log16.
+```
+
+Here 1<=|d-k_n|<=16. Even labels do not create a growing approximation gain;
+an odd target against an even carry has zero 2-adic contribution. At any
+fixed finite S, all nonzero evaluations contribute only O_S(log(n+2)), using
+the local-norm bounds. F has that order bound, without asserting the same
+exact odd-denominator identity. A growing place set is outside the source.
+Fixed block lifts also retain degeneracy: on a recurring length-L carry word,
+the L equations `X_(j+2)-16X_(j+1)+(c_j-g(n+j))*X0=0` have a unit triangular
+minor in their last L state columns, leaving a moving projective line.
+
+Next remove the forcing from the target coefficients:
+
+```text
+L_d=d*X0-16*X1+X2, L_d(X_n)=d-k_n+g(n).
+```
+
+The coefficient field is now Q, the target heights are constant, and distinct
+pairs are independent. The required coordinate independence holds for A/F.
+A fixed rational relation alpha+beta*y_n+gamma*y_(n+1)=0 on an infinite
+subset, restricted to a recurring carry c, becomes
+`(beta+16gamma)*y_n+alpha-gamma*c+gamma*g(n)=0`.
+If beta+16gamma!=0, y_n is a fixed rational function of n with height
+O(log n), contradicting its linear logarithmic denominator height.
+Otherwise nonzero gamma would make nonconstant g constant at infinitely many
+integers, so all coefficients vanish. This works on every infinite subset.
+Theorem7.7 therefore applies using independent subsets of at most two labels.
+
+Its conclusion supplies no new restriction. Each evaluation is one of the
+finitely many nonzero rational functions g(n)+j, -16<=j<=16, with polynomial
+numerator/denominator sizes. Fixed-prime contributions are O(log n); at
+infinity the small case j=0 gives 2log n+O(1), since both A and F have leading
+term15/(64n^2). Nonzero j gives bounded real proximity. Thus the entire
+maximum-of-pairs sum is O_S(log(n+2)), already smaller than the source's
+linear-height budget. Eventual even carries do not change this comparison.
+F is used only as a same-mechanism comparison, not asserted to have eventually
+even carries. Its different rational period and denominator exponent remain.
+
+A separate synthetic boundary fixture has r(n)=2/[15(n+1)^2],
+g_syn(n)=16r(n)-r(n+1), and u_n=2/15-r(n). It starts at zero, lies in
+[0,2/15), and satisfies `16u_n+g_syn(n)=2+u_(n+1)`, so every canonical carry
+is2. It loses the actual forcing, irrational period and exponential
+denominator growth; it is not a counterexample to V.
+
+These two target families are suspended. An avoidance consequence must still
+give both an admissible representation and precision exceeding its source
+threshold. Other observables, nonlinear targets, growing dimension or growing
+place sets require new contracts; this test rules out no such general method.
+The [review record](agy-reports/m4-continuation-review.md) preserves the exact
+source scope and 786 formal/synthetic checks, which certify neither the
+asymptotics nor the source theorem. No actual-state census, Lean theorem,
+originality determination, odd-carry conclusion or V/M4 acceptance is claimed.

@@ -7042,3 +7042,80 @@ Full production return in the 0932 packet has hash
 Caller 461ab4 reverified every frozen/source/protection entry at 09:37:18
 before I3 and factual status updates. Early review completion serves the
 09:40 reassessment; final affected checks and publication remain.
+
+## 2026-11-28 — Complementary variation and moving-target source limits
+
+The joint-projection record was committed and pushed as
+`4951e0004727d9cb1bdeca595d7758374af7866f`, parent 88b9d48. Commit d96b78,
+post-commit 009b7f, push 980103/120acb and remote 362bf7 verified publication
+by 09:38:23. Docs 88ab55, whitespace df60d7/669874 and exact stage1f0820
+passed; the mathematical owner was unchanged after review and log I3 was
+verified. Receipt a44cb7 records publication. Three committed blobs,
+145 protected and 11 unrelated files matched; no post-commit repair or PR.
+
+The [variation diagnostic](m4-crt-phase.md#complementary-variation-requires-more-than-the-finite-arithmetic-data)
+ran 09:24:10–09:38:10, midpoint sent09:32, endpoint09:44. It quantifies the
+position-sensitive Abel cost and the coarse sufficient budget. Small actual
+variation forces a fifteenth-root shadow, but the restored pi approximation
+retains denominator15P|h|16^N and gives insufficient precision at J=o(N).
+Alternative entries preserve exact entry denominator, floor, projections and
+future A while permitting tiny or linear variation. They lose initialization.
+No actual regularity follows; the ordinary-variation repair is suspended.
+
+Packet `/tmp/pi-m4-complement-variation-20261128T0924Z/` has report
+`a290c8c05b197932c4050c3556a194777e199a5345c952030a8315c1d734591d`
+and 11-entry manifest
+`907fdf686850709a108e455b23782f9de1daa9f016793ebd2f2d39bb7d1153d4`.
+Parent read all report/checker text in 6857b9/91bc3f/1c4faf and the DLMF
+formulas0cb8e0. Initial receipt comparison f50c38 failed because the author
+receipt wraps the result, not because the checker failed. Inspection044d72
+identified that schema; 09747d replayed and compared its `result` exactly:
+501 synthetic assertions, exit0. No analytic or actual-state certification.
+
+Independent variation review ran 09:40:28–09:42:40, before09:46/09:55.
+No defects; I1's canonical r_0, m|M and explicit CRT difference are implemented.
+Q1 actual Abel regularity and Q2 actual entry selection remain open.
+Full return in `/tmp/pi-m4-variation-moving-integration-20261128T0941Z/`
+has hash `914ddf99882f35c5eaf1c4df60ca15a3a9bef1438bd64c143465256df26f1da1`.
+All11 packet entries and both preceding14-entry packets remained intact.
+
+The independent recovery's [moving-target test](m4-language-auxiliaries.md#moving-target-approximation-retains-degeneracy-or-insufficient-precision)
+ran 09:17:22–09:33:58, midpoint09:27:02, endpoint09:38. Ru–Vojta's
+forcing-centered forms violate coordinate independence on a recurring-carry
+subset. Constant forms repair applicability but their fixed-place proximity
+is only O(log n), below the linear-height budget. Even labels supply no gain;
+the same mechanism works for F. No actual odd-carry or visitation result.
+
+Packet `/tmp/pi-m4-moving-target-test-20261128T0923Z/` has report
+`6a32d645216d044f97ca1ca7077a26c0b7dccefcd55c425045c353688f767dc4`
+and 15-entry manifest
+`172ab97d0bbf28a8e337b3d0206fbc5b215140ba3aff41e2023e52e49882baa2`.
+Parent read report c5855e/daadf8 and checker b4f239; eff6cb verified all15
+entries, e70810 replayed786 formal/synthetic assertions with exit0, and
+09747d saved an exactly matching result. Parent visually inspected Vojta's
+printed pp.552–554; no external proof-chain or Lean audit is claimed.
+Independent review ran09:35:01–09:39:13, before09:43/09:50. No D/I;
+Q1 admissible strong approximation and Q2 other representations remain open.
+Full return in the0941 packet has hash
+`2ccacbe8c9bcba85d8af95972c003373b229d41c42ad93fc8c5a6983d43b3850`.
+
+Four-document integration began09:40:23, scope f50c38, with09:51 reassessment
+and10:07 endpoint, protecting144 tracked and11 unrelated files. Both paper
+reviews and exact production review are complete; affected checks gate publication.
+No Lean, dependency or theorem-contract change. A fresh recovery began with
+remote equality at09:38:23, midpoint09:49 and endpoint10:01. Its candidate
+Euler-product/parity mechanism is exploratory and must distinguish archived
+Dwork and bounded-Dold failures before adoption. V/M4 remain open.
+
+Production review ran09:47:04–09:49:33, before09:52/10:00. All378 diff lines,
+14 packet entries,60 source entries, four postimages,144 protected and11
+unrelated files matched. Manifest
+`a14c1a07c7424bb87f9e0703ed60ec3c292c534a4f4cfdf63da55b0c8a3ddc0b`;
+diff `9db7f5f8f37cbd16b523c7d494f49c28a6cf03e299e369bc80d2c7557c4b1075`.
+No defects. I1 verified; I2's projection time range is now expressly within
+the fixed horizon. All four open obligations remain. Full production return
+in the0941 packet has hash
+`492b6410a3300e681279b48338a68000e7f8b34c3877822b9f168610f4f72fb2`.
+Caller eda1bf reverified every frozen/source/protection entry at09:50:42
+before the exact I2 clarification and factual status updates. This early
+review completion serves the09:51 reassessment; final checks/publication remain.

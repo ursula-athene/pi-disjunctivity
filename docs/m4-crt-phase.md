@@ -731,3 +731,124 @@ The [review record](agy-reports/m4-continuation-review.md) retains I1/I2's scope
 clarifications, the immutable packet, and limits of the synthetic identity
 checks. No actual prefix, denominator, digit, carry or orbit census, originality
 claim, Lean result, selected-time hit or V/M4 conclusion follows.
+
+## Complementary variation requires more than the finite arithmetic data
+
+The next 2026-11-28 diagnostic suspends the ordinary-variation repair.
+It proves an exact cost, a small-variation implication for the actual orbit,
+and opposite finite replacement-entry examples. It supplies no useful actual
+variation bound. Keep the preceding Q=P*M, fixed h!=0 and exact G,C. On a
+homogeneous piece n=N,...,N+J-1, the recurrence is
+`C_(n+1)=C_n^16*e(h*A(n+1))`. The long pieces selected from the O(L) partition
+have J comparable to X and N comparable to XL, so J=o(N). This is not asserted
+of every piece.
+
+Write g_j=G_(N+j), c_j=C_(N+j), U_j=sum_(i<j)g_i. Telescoping gives
+
+```text
+sum_(j<J) g_j*c_j
+ =U_J*c_(J-1)+sum_(1<=j<J)U_j*(c_(j-1)-c_j).
+```
+
+If |U_j|<=B(j), the exact available upper bound is
+`B(J)+sum_(1<=j<J)B(j)*|c_j-c_(j-1)|`. The preceding finite-period source
+contract supplies `B(j)=min(j,j*T^(-epsilon)+T)`, with 0<epsilon<=1.
+For V=sum_(j<J-1)|c_(j+1)-c_j|, the coarse normalized bound is
+`(T^(-epsilon)+T/J)*(1+V)`. A sufficient budget is V=o(X^(epsilon/8));
+V=o(J) alone does not ensure it. The position-sensitive bound may be better,
+and neither small variation nor this certificate is necessary for actual
+cancellation. No upper bound is reversed into a lower bound for the sum.
+The finite identity is proved here; [DLMF2.10(ii)](https://dlmf.nist.gov/2.10#ii),
+equations2.10.9–10, is a checked formula reference, not an imported analytic theorem.
+
+Put d_j=|c_(j+1)-c_j|. The actual recurrence gives
+
+```text
+d_j^2=2-2 Re(c_j^15*e(h*A(N+j+1))),
+Evar=sum d_j^2, Rvar=sum |c_j^15-1|^2,
+|Evar-Rvar| <= 4*pi*|h|*(J-1)/(N+1)^2,
+Evar<=2V, V^2<=(J-1)*Evar.
+```
+
+For n>=1, the numerator of A over (t+1)(t+4)(t+5)(t+6), t=8n, is
+15t^2+151t+376. This bounds 0<A(n)<=n^-2. Its integral kernel
+`x^(8n)*(4-2x^3-x^4-x^5)` is positive on (0,1), giving monotonicity and
+`0<E_n<=1/[15(n+1)^2]`. Thus for J,N tending to infinity,
+`V=o(J) iff Evar=o(J) iff Rvar=o(J)`. Sublinear variation would require
+concentration near the fifteen roots of unity; this equivalence does not
+prove that concentration.
+
+There is a rigid implication when J>=2, V<=1/100 and
+|h|A(N+j+1)<=1/100 throughout. Some fifteenth root zeta admits unique lifts
+
+```text
+c_j=zeta*e(theta_j), |theta_j|<1/250,
+theta_(j+1)=16theta_j+h*A(N+j+1),
+theta_j=-h*E_(N+j)+16^j*delta_0,
+|delta_0|<=16^(-(J-1))*(1/250+|h|E_(N+J-1)).
+```
+
+Indeed the first edge puts |c_0^15-1|<9/100, so its angular distance to a
+fifteenth root is <3/2000. The total chord variation adds at most1/400 to
+the angular distance, yielding <1/250 for all vertices. The possible integer
+in the lift recurrence has magnitude <=17/250+1/100<1 and is zero.
+The exact tail recurrence then supplies delta_0=theta_0+hE_N.
+Restoring G_N=e_P(r) gives some integer k with
+
+```text
+|h*16^N*pi-k/(15P)|
+ <=16^(-(J-1))*(1/250+|h|E_(N+J-1)).
+```
+
+As an approximation to pi, the unreduced denominator is **15P|h|16^N**.
+At J=o(N) the supplied precision has exponent1+o(1) relative to it, too weak
+even to contradict an irrationality-exponent-two bound. No reduction of this
+denominator is proved. Greedy partition into variation-at-most1/100 blocks
+uses at most1+100V blocks, giving one length at least J/(1+100V); this cannot
+enlarge the available window or improve the approximation contradiction.
+
+The finite entry test preserves more arithmetic data than arbitrary weights.
+Write S_N=K+r/(P*m) reduced, 0<r<P*m, m|M and log m=6N+o(N). Choose the
+canonical 0<r_0<P with r=r_0+P*k_0. The entries
+
+```text
+S'_N=K+(r_0+P*k)/(P*m), 0<=k<m, gcd(r_0+P*k,m)=1
+```
+
+have exactly the same reduced entry denominator and integer floor. Moreover
+`Q(S'_N-S_N)=P*(M/m)*(k-k_0)`, preserving both prime projections at subsequent
+indices within the fixed horizon, in particular throughout the homogeneous
+piece, under the actual A forcing. Reducing v modulo m gives v_m=P^(-1) mod m and
+`C'_N=e_m(h*v_m*r_0+h*k)`.
+
+Let eta=8|h|4^omega(m)/m. Every target angle has at least two such choices
+within eta for large N: an arc preimage contains a k-interval of length at
+least eta*m/|h|=8*4^omega(m), including a longer half at a boundary.
+Mobius inversion bounds the admissible count in an interval of length W
+below by `W*phi(m)/m-2^omega(m)`. Since phi(m)/m>=2^(-omega(m)), there are
+enough entries to exclude the actual one. Also m>=(omega(m)+1)! gives
+omega(m)=o(N), hence eta=exp(-6N+o(N)). No actual numerator is evaluated.
+
+Choose target entry phases from the two exact forced paths
+`c_j^slow=e(-hE_(N+j))` and `c_j^fast=e(16^j/17-hE_(N+j))`.
+The ratio of an approximating entry path to its target is e(16^j*delta),
+|delta|<=eta, so variation changes by O(eta*16^J). Tail monotonicity and
+16=-1 modulo17 therefore give
+
+```text
+V_slow=O_h(N^-2)+exp(-6N+o(N)),
+V_fast=2*sin(2*pi/17)*(J-1)+O_h(J/N^2)+O(eta*16^J).
+```
+
+These entries retain exact future A, entry denominator, floor and projections,
+but lose zero initialization, actual prior history and any claim of equal
+later reduced denominators. Neither selects the actual variation regime or
+constructs an infinite avoiding orbit. The preceding F example separately
+retains initialization while changing the forcing and total constant.
+
+The useful actual Abel cost remains unproved. Its concentration reformulation
+is not proposed as a new proof step; the variation route is suspended.
+Independent review and 501 exact synthetic checks are recorded in the
+[review record](agy-reports/m4-continuation-review.md). Those checks do not
+certify trigonometric bounds, asymptotics, source theorems or actual states.
+No Lean or V/M4 conclusion, actual-state census or originality claim follows.
