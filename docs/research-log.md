@@ -6977,3 +6977,68 @@ Full production return `review-full.md` in the 0902 packet has hash
 Caller 9bb698 reverified the complete inventory at 09:10:46 before factual
 completion updates. This early completion serves the 09:12 reassessment;
 only final affected checks and publication remain. No proof changed after review.
+
+## 2026-11-28 — Joint two-prime cancellation and a correlated complement
+
+The growing-prime record was committed and pushed as
+`88b9d48c6c2a7a0c845bc19e3c63dae7b64d5c90`, parent 11a9f8b. Commit c38b82,
+post-commit 82dabe, push 56f258/39145d and remote 71b7fc verified publication
+by 09:13:47. Docs b16f6a, whitespace 454e4b/c8b1af and exact stage 306968
+passed. Publication receipt e301a5 records the unchanged committed blobs,
+145 protected and 11 unrelated files. Remote equality was checked again at
+the subsequent directions, including 84409b at 09:29. No empty commit or PR.
+
+The [joint two-prime test](m4-crt-phase.md#joint-two-prime-cancellation-still-leaves-the-complementary-phase)
+ran 09:01:47–09:19:48, with midpoint 09:11:18 and endpoint 09:22.
+Bourgain–Chang's few-prime-factor source applies to the joint projected
+factor after an explicit split into periods and a remainder. Restoring the
+actual complementary factor retains both the forcing and exponential
+conductor. The fixed positive F has normalized projected and restored means
+tending to zero and one at frequency21, with complementary squared variation 2N+o(N).
+This rejects the proposed joint-projection-only consumer; it supplies no
+actual A correlation, variation or selected hit.
+
+Immutable packet `/tmp/pi-m4-mixed-prime-restoration-20261128T0901Z/` has
+report `0b3b4de076b994f54fa0800ac3e3b56ce843d48041c0ad2751083bfaf75baa17`
+and 14-entry manifest
+`3b31636aac44d41c2ff5e52d1e5e4561d8c944bc70ad217de3181fc6d54e65e9`.
+Parent read the full report e9b2c4/19667d and checker 8e6aee. After the
+09:24 replay output was lost to context truncation, 82e3a4 explicitly replayed
+to a fresh receipt and returned exit0. It passed 60,791 synthetic/universal
+checks, of which 55,582 are elementary division/remainder bookkeeping.
+Neither the source theorem nor asymptotics follow from those finite checks.
+20d2f3 verified the identical receipt and both 14-entry original inventories.
+No actual A/D/F prefix, denominator, digit, carry or orbit was computed.
+Parent and reviewer inspected the preserved printed source pages38,42,43.
+
+Independent review ran 09:22:36–09:28:26, before the 09:35 endpoint.
+No blocking defects. I1 requires transitions to stay below H; I2 restricts
+the ordered-partial lemma to offsets1,...,8. Both are implemented in the
+production draft. Q1 actual correlation and Q2 actual variation remain open.
+Full return in `/tmp/pi-m4-mixed-prime-integration-20261128T0932Z/` has hash
+`28581d4c5bf289cfecf74c36b5bbcd9e2a9fa1c02fca4e16d2cafddfbaf3c2e5`.
+
+Integration began 09:30:49, scope 20d2f3 with disjoint protection corrected
+in a1c873, midpoint09:40 and endpoint09:49. Three documents are owned;
+145 tracked and 11 unrelated files are protected. Exact production review
+is complete; final affected checks gate publication. No Lean or dependency changes.
+
+The next diagnostic tests the variation budget needed by summation by parts
+against the exact actual complementary recurrence, midpoint09:33 and
+endpoint09:44. A separate recovery tests moving-target Subspace Theorem
+hypotheses against the four-pole recurrence, midpoint09:27 and endpoint09:38.
+Neither inquiry's findings are adopted here. M4/V and the target-time
+intersection remain open; a reviewed obstruction does not end the research.
+
+Production review ran 09:34:21–09:35:45, before its 09:40/09:44 bounds.
+All 295 diff lines, 11 packet entries, 31 source entries, three postimages,
+145 protected and 11 unrelated files matched. Manifest hash
+`112b9d06f1d69c82f685dad603151696ef0b417126d54911c88d6c28f9713821`;
+diff `dc88c8a362be3656d5192b0d51f4fc246deabbfe1d5ecbaead60829c19b20892`.
+No defects; I1/I2 verified. I3's limit wording is implemented in the log;
+Q1/Q2 remain open. The mathematical owner is unchanged after review.
+Full production return in the 0932 packet has hash
+`a2b8c4667ee76bdd04b074a17762feb517d3f1b775dbab3bafe091c2b86a919b`.
+Caller 461ab4 reverified every frozen/source/protection entry at 09:37:18
+before I3 and factual status updates. Early review completion serves the
+09:40 reassessment; final affected checks and publication remain.

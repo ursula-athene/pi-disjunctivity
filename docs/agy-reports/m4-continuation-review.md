@@ -5886,3 +5886,59 @@ read-only limits remain those of the paper review. Git state and all execution
 remain caller evidence. Parent 9bb698 reverified all frozen/source/protection
 entries before factual completion updates. Final affected checks gate
 publication. The concurrent mixed-prime work and actual unscaled hits remain open.
+
+## Joint two-prime projection and complementary correlation — 2026-11-28 UTC
+
+Scope: the CRT owner and two evidence records against 88b9d48. The paper
+claim gives a joint projected estimate, exact restoration and a positive F
+comparison. It supplies no actual restored cancellation, variation bound,
+Lean theorem, unscaled hit or V/M4 acceptance.
+
+Reviewer `/root/dyadic_grid_independent_review_0649` inspected the full
+331-line report, checker, receipts, five frozen input excerpts and primary
+printed pages38,42,43 during 09:22:36–09:28:26. Both full adversarial guides,
+replacement procedure and critic instructions were checked or reused after
+unchanged-hash verification. Both the mixed and preceding projection packets
+have all14 manifest entries intact; preserving the latter is not accepting it.
+
+**Defects: none in the A/D/F applications. I1: implemented.** All transitions
+are expressly restricted to 0<=n+1<H; Q need not clear A(H).
+**I2: implemented.** The uniform ordered-partial argument explicitly assumes
+offsets1,...,8, as used for A/D. F uses the separate coboundary transfer.
+**Q1: retained.** The actual complementary correlation remains uncontrolled.
+**Q2: retained.** F's variation theorem supplies no actual A variation bound;
+the proposed diagnostic is a question, not an adopted result or promised route.
+
+The reviewer checked both CRT formulas, integer branches and simultaneous
+activations; growing-depth unit survival; local orders and fixed total prime
+multiplicity; the period-length repair; pointwise versus ambient conductors;
+log Q=6H+o(H); F's O(L) exceptional set and mean-one restored correlation;
+and its squared variation 2N+o(N), hence total variation at least N+o(N).
+The source is used only up to one period before splitting longer sums.
+No unrestricted repeated-period reading or full classical proof audit is claimed.
+
+Full return in `/tmp/pi-m4-mixed-prime-integration-20261128T0932Z/` has hash
+`28581d4c5bf289cfecf74c36b5bbcd9e2a9fa1c02fca4e16d2cafddfbaf3c2e5`.
+Review used only reading, hashing and preserved images: no writes, Git,
+network, build, probe, checker execution, installation, delegation or census.
+The later explicit parent replay 82e3a4 returned exit0; 20d2f3 verified its
+receipt matched and originals remained intact. Those are caller execution
+evidence. Its 60,791 assertions include 55,582 repeated elementary division
+cases and do not certify the analytic or universal results. Exact production
+review and final affected checks remain due; no originality claim is made.
+
+Exact production review ran 09:34:21–09:35:45, before its 09:40/09:44 bounds.
+All295 diff lines reconstructed their postimages. All11 frozen entries,
+31 source entries, three live postimages, 145 protected and 11 unrelated
+hashes matched. No defects; I1/I2 verified and Q1/Q2 retained.
+**I3: implemented.** The log now expressly states normalized means tending
+to zero and one, matching the unchanged mathematical owner. This summary
+clarification and factual completion updates are the only post-review changes.
+
+Full production return `review-full.md` in the 0932 packet has hash
+`a2b8c4667ee76bdd04b074a17762feb517d3f1b775dbab3bafe091c2b86a919b`.
+Both full guides, procedure, repository instructions and critic context were
+reused after unchanged-hash verification. Only reading, hashing and in-memory
+comparison occurred; Git provenance and executions remain caller evidence.
+461ab4 reverified the full inventory before the final updates. Affected checks
+gate publication; the review grants no V/M4 or actual-variation conclusion.

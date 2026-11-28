@@ -552,3 +552,182 @@ Primary statements and selected theorem pages were inspected; no full source
 proof, hidden-constant, external Lean or axiom audit is claimed. No theorem from
 either source is adopted. The [review record](agy-reports/m4-continuation-review.md)
 retains the scope, immutable sources and parent assessment. V/M4 remain open.
+
+## Joint two-prime cancellation still leaves the complementary phase
+
+The 2026-11-28 test builds on the
+[growing-prime projection](m4-fourier-windows.md#growing-prime-projections-and-the-unscaled-branch).
+It proves cancellation for a genuinely joint two-prime factor, then restores
+the exact remaining phase. This is a paper result. No actual unscaled estimate,
+Lean theorem or visitation premise is obtained.
+
+Let X tend to infinity, choose distinct p,q in [X,2X], both 1 modulo8, with
+`ord_p(16)>=p^(1/4)` and `ord_q(16)>=q^(1/4)`, and put
+
+```text
+L=floor((log X)^(1/3)), H=floor(X*L),
+I={ceil(H/2),...,H-1}, N=|I|~X*L/2, P=p*q.
+Q=lcm{den A(k):0<=k<H}, M=Q/P,
+S_-1=0, S_n=16*S_(n-1)+A(n), Z_n=Q*S_n.
+```
+
+Such pairs exist eventually: fixed-progression PNT supplies logarithmic prime
+mass X/4+o(X), whereas primes with small order divide the product of
+`16^j-1` for j<=(2X)^(1/4), of logarithmic size O(sqrt X). No prime census
+is involved. Both p,q divide Q exactly once for large X. Hence gcd(P,M)=1.
+Fix `u=M^(-1) mod P`, `v=P^(-1) mod M` for the entire horizon and define
+
+```text
+G_n(h)=e_P(h*u*Z_n), C_n(h)=e_M(h*v*Z_n), e_m(t)=exp(2*pi*i*t/m).
+e(h*S_n)=G_n(h)*C_n(h),
+G_n(h)=e_p(h*Z_n*(qM)^(-1))*e_q(h*Z_n*(pM)^(-1)).
+```
+
+The same time exponent appears in both prime factors; no independence of
+their averages is asserted. The real expression for G is `e(h*u*M*S_n)`,
+an integer multiple of the actual phase. For the unreduced branch put
+`a_n=Z_n mod P` in [0,P) and `b_n=(Z_n-a_n)/P`. Then
+
+```text
+e(h*S_n)=e(h*a_n/(P*M))*e(h*b_n/M),
+a_(n+1)=(16a_n+J_(n+1)) mod P,
+b_(n+1)=16b_n+floor((16a_n+J_(n+1))/P), J_(n+1)=Q*A(n+1).
+```
+
+All transitions here and below require **0<=n+1<H**. Q need not clear A(H).
+The exact integer branch and zero initialization have been retained.
+
+For ell=p or q, let t_ell=(ell-1)/8. The original pole r activates at
+`e_(ell,j,r)=(8j+r)*t_ell+j`, since `8e+r=(8j+r)*ell`.
+Quadratic reciprocity gives `16^t_ell=1 mod ell`. Each A clock, with offsets
+1,4,5,6, has gaps 3t,t,t,3t+1. Their union partitions I into O(L) pieces,
+without aligning those pieces to the joint period. Simultaneous activations
+satisfy `mp-m'q=r-s`; every contribution enters J. On activation-free edges,
+
+```text
+G_(n+1)(h)=G_n(h)^16,
+C_(n+1)(h)=C_n(h)^16*e(h*A(n+1)),
+b_(n+1)=16b_n+M*A(n+1)+floor(16a_n/P).
+```
+
+Thus the complementary factor retains the original forcing at every step.
+For fixed nonzero h its innovation is nontrivial eventually, since
+0<|h|A(n+1)<1. Unit modulus does not supply independence or regularity.
+
+### The joint estimate and its precise source use
+
+For a fixed rational coefficient vector supported on **1<=r<=8**, let B be
+any nonzero ordered partial
+
+```text
+B_(j,r)=sum_(k<j,s) c_s/[16^k(8k+s)]
+          +sum_(s<=r) c_s/[16^j(8j+s)], j<=L.
+```
+
+An integer Q0 clearing the fixed coefficients makes
+`Q0*16^L*(8L+8)!*B` a nonzero integer of absolute value less than X eventually:
+its logarithmic size is O(L log(L+2))=o(log X). All clearing factors are
+ell-units. Hence B is nonzero modulo either selected prime, uniformly at the
+growing depths. For A every partial is positive: the first term of each
+coefficient is positive and its remaining terms are negative, with positive
+completed coefficients. The exact recurrence gives
+`16^(-n)*Z_n=(Q/ell)*B_(j,r) mod ell`. Both primes have activated on I, so
+every homogeneous projected piece has a unit coefficient for fixed h!=0.
+
+[Bourgain–Chang, *Exponential sum estimates over subgroups and almost subgroups
+of Z_q*, where q is composite with few prime factors](https://math.ucr.edu/~mcc/paper/122%20NewExp.pdf),
+Corollary4.5 on printed p.42, bounds a unit-coefficient sum of powers by
+`t^(1-epsilon)` when local orders and length exceed `q^delta`.
+The definition on p.38 bounds total prime-factor multiplicity, not merely
+the number of distinct primes. P=pq meets it, and its local orders exceed
+P^(1/16). Printed p.43 retains the local-order condition for incomplete sums.
+
+The printed corollary omits an upper length bound. We use only lengths at
+most the period, consistently with its set-of-powers argument; an unrestricted
+repeated-period reading is not adopted. Put `d=ord_P(16)` and
+`T=ceil(P^(1/16))+1<d`. Split any piece of length J into full d-periods and
+a remainder r<d. Apply the corollary at d and at r>=T; bound r<T trivially.
+For a uniform fixed epsilon>0 this gives
+
+```text
+|sum over a piece G_n(h)| <= J*T^(-epsilon)+T,
+|(1/N)*sum_(n in I) G_n(h)| <= T^(-epsilon)+O(L*T/N) ->0.
+```
+
+This is joint cancellation modulo pq. It neither multiplies marginal means
+nor completes the actual short window to the full denominator's period.
+The primary statements and these pages were inspected; their full classical
+proof chain was not audited or formalized here.
+
+### Restoring the phase retains exponential conductor and correlation
+
+For n in I the reduced actual denominator is q_n=P*m_n, gcd(P,m_n)=1.
+The [denominator result](m4-prime-compression.md#the-evaluated-denominator-exponent) gives
+`log m_n=6n+o(n)` uniformly on I. The value C_n(h) has exact root-of-unity
+order `m_n/gcd(m_n,|h|)`: write S_n=A_n/(P*m_n) reduced and substitute
+Z_n=(M/m_n)*A_n, using that v is a unit. The full value's order is
+q_n/gcd(q_n,|h|). Ambient characters on Z/M and Z/Q instead have conductors
+M/gcd(M,|h|) and Q/gcd(Q,|h|), respectively.
+
+The common denominator satisfies `log Q=6H+o(H)`. Apart from finitely many
+small primes, its support is primes 1 modulo4 up to 8H+O(1), and primes
+3 modulo4 up to 4H+O(1). The unique first pole gives a nonzero residue;
+higher powers contribute o(H). PNT gives the upper bound 4H+2H+o(H), matching
+the reduced denominator at H-1. Even the weaker bounds 6H+o(H)<=log Q<=8H+o(H)
+suffice to reject the restored source application. Its prime factors are at
+most 8H+O(1), so their orders are below Q^delta for every fixed delta>0;
+the available length H is also too short, and total factor multiplicity
+is at least log Q/log(8H+O(1)), tending to infinity. Fixed h removes at most
+log|h|. The complement also remains forced rather than a pure power sequence.
+The preceding Chang and Wu–Xi contracts do not license this dependent weight.
+These are failures of the specified transfers, not all exponential-sum methods.
+
+The positive [comparison forcing F](m4-rational-forcing.md) exhibits the
+missing correlation explicitly. For the null forcing D, with coefficients
+`(4,-4,-2,-4,-1,-1,1/2)` at offsets1,...,7 and initialized state U_n, use
+
+```text
+R(n)=1/[2(8n+1)(8n+5)]-D(n)/8, R(0)=2/21,
+F(n)=(15/8)D(n)+16R(n)-R(n+1),
+W_n=(15/8)U_n+16^(n+1)*R(0)-R(n+1).
+```
+
+Every D partial is nonzero: 0<U_n<1/(16n+18) makes the penultimate partial
+negative, the preceding one positive, and all earlier nonempty partials
+larger. The unit argument therefore applies to D. Its residue transfers to F
+except at O(L) indices where R(n+1) has p or q in its denominator. F's thirteen
+fixed poles likewise yield O(L) pieces. Deleting the exceptional points and
+using the same period split proves joint projected cancellation for F.
+
+Define Q_F,M_F,Z_F,u_F,v_F,G_F,C_F by the same formulas. These moduli and
+actual numerators may differ from A's; the primes, horizon, frequency and
+restored statistic are the same. F has denominator exponent8 rather than6.
+Since `W_n=16^n*(32/21)-E_F(n)` and E_F(n)=O(n^-2), at h=21,
+
+```text
+C_n^F(21)=conj(G_n^F(21))*e(-21E_F(n)),
+(1/N)*sum_I G_n^F(21) ->0,
+(1/N)*sum_I G_n^F(21)*C_n^F(21) ->1.
+```
+
+This is the fixed initialized positive, completely monotone F, whose phases
+stay below11/21. Its rational constant remains a difference from pi. Moreover,
+on ordinary edges the squared projected increment is
+`2-2 Re G_n^F(315)`. Applying the joint bound at315, discarding O(L) exceptional
+edges and using the O(H^-2) pointwise error gives
+
+```text
+sum_(consecutive n in I) |C_(n+1)^F(21)-C_n^F(21)|^2 = 2N+o(N).
+```
+
+Each increment has modulus at most2, so ordinary total variation is at least
+N+o(N). Thus projected cancellation and unit modulus alone supply neither the
+restored cancellation nor small variation. Actual A's correlation and
+variation remain unproved. Further projection-only refinements are suspended;
+the next bounded diagnostic tests the variation required by summation by parts
+against the exact complementary recurrence. No useful bound is assumed.
+
+The [review record](agy-reports/m4-continuation-review.md) retains I1/I2's scope
+clarifications, the immutable packet, and limits of the synthetic identity
+checks. No actual prefix, denominator, digit, carry or orbit census, originality
+claim, Lean result, selected-time hit or V/M4 conclusion follows.
