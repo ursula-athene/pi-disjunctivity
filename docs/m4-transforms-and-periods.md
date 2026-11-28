@@ -1,10 +1,11 @@
 # M4 continuation: exact tail transforms and Wallis periods
 
-Research record, 2026-11-26, after local checkpoint `b102ab3`.
-These are paper arguments and source-application tests, not Lean exports.
-They test more specific arithmetic and analytic structure after the earlier
-approximation-cost failures. Independent review of this new material is pending;
-V and the M4 acceptance boundary remain open.
+This owner records exact transforms and source-application tests. Formalized
+actual-tail bounds and grid comparisons are tracked in the
+[comparison owner](m4-fourier-windows.md); further arguments below remain paper
+mathematics unless explicitly identified. The
+[continuation review record](agy-reports/m4-continuation-review.md) owns their
+review evidence. V and the M4 acceptance boundary remain open.
 
 ## An exact transform explains the dyadic tail coefficients
 
@@ -123,6 +124,138 @@ SHA-256 `2d257c4ad5140dcbed200dee6ad8f626e299102e666c1552965024c8767eea68`:
 exit 0. Forty coefficient orders, exact kernel cancellations and all residues
 are finite algebra checks; the universal parity, integrals and contour argument
 remain paper mathematics.
+
+## A fractional-shift filter gives a known alternative pi representation
+
+Extend the actual tail by
+`E(z)=integral_0^1 x^(8z+8)*(1-x)/D(x) dx`, for `z>-9/8`.
+It agrees with E_N at natural N and satisfies `E(-1)=pi/16`.
+Put `q(x)=x^2-2x+2` and `C(z)=2E(z)-E(z+1/4)`. Under the integral,
+the multiplier `2-x^2` cancels the real quadratic factor. Thus
+
+```text
+C(z)=integral_0^1 x^(8z+8)*(1-x)/q(x) dx,
+B_C(t)=x^9*(1-x)/(8*q(x)), x=exp(-t/8),
+E(z)<=C(z)<=2E(z).
+```
+
+The nearest remaining Borel poles are `-log16 +/- 2*pi*i`; the radius at
+zero is `sqrt(log(16)^2+4*pi^2)>4`. Finite reconstruction retains a residual:
+
+```text
+E(z)=sum_(k<M)2^(-k-1)*C(z+k/4)+2^(-M)*E(z+M/4).
+```
+
+For z>0, the residual is positive and at most
+`2^(-M)/(64*(z+M/4)^2)`. Its Borel multiplier equals one at `t=-log16`,
+so it retains the original residue -2 for every finite M. Four filtered
+shifts give exactly `A(z+1)/16`; discarding the residual after radix scaling
+is not justified.
+
+There is nevertheless an actual pi period in a single shifted filter:
+`x^2*(1-x)/q(x)=-x-1+2/q(x)` gives `2C(-3/4)=pi-3`. Define
+
+```text
+A_alt(n)=1/(8n+3)-1/(2*(8n+5))-1/(2*(8n+6))
+         -1/(4*(8n+7))+1/(8*(8n+9))+1/(8*(8n+10)),
+T_N=sum_(n<=N)16^(N-n)*A_alt(n).
+sum_(n>=0)16^(-n)*A_alt(n)=pi-3,
+E_alt(N)=16^N*(pi-3)-T_N=C(N+1/4)/8.
+```
+
+The last factor is **1/8**, not 2; an intermediate message's factor-16 error
+was corrected before the frozen reviewed argument. The geometric identity
+uses `W=x^2*(1-x)*(16-x^8)/(8*q)` with coefficients
+`x^2-x^4/2-x^5/2-x^6/4+x^8/8+x^9/8`.
+Moving columns 9 and 10 back into 1 and 2 yields exactly
+`pi=(1/4)*P(1,16,8,(8,8,4,0,-2,-2,-1,0))`, Formula 17 in
+[Bailey's Compendium, April 8, 2023, p.9](https://www.davidhbailey.com/dhbpapers/bbp-formulas.pdf).
+The catalog attributes this formula to Ferguson. This is not a new pi series.
+
+### The filtered kernel loses the positive moment measure
+
+The new Laplace kernel is `B_alt(t)=x^11*(1-x)/(64*q(x))`, positive for
+real t>0. Write `1/q(x)=sum h_n*x^n`; then `h_0=h_1=1/2` and
+`h_n=h_(n-1)-h_(n-2)/2`, giving `h_4=-1/8`. Its inverse-square density is
+
+```text
+rho(u)=0 for 0<=u<11/8,
+rho(u)=h_n/64 on [(11+n)/8,(12+n)/8),
+B_alt(t)/t=integral_0^infinity exp(-u*t)*rho(u) du.
+```
+
+Geometric coefficient decay gives a finite signed measure and justifies the
+interchanges. It has density `-1/512` on `(15/8,2)`. Uniqueness of Laplace
+transforms of finite measures excludes a positive replacement. A hypothetical
+positive order-two Stieltjes measure would have finite mass from the finite
+limit of `B_alt(t)/t` at zero. The original signed remainder theorem therefore
+does not transfer, despite positivity of the filtered Laplace kernel.
+
+### Absolute finite remainders and their modular consumer
+
+On every complex radius-4 disk centered at real t>=0, `|x|<=exp(1/2)<2`
+and `|arg(x)|<=1/2`. The distance from each root `1+i,1-i` is at least
+`sqrt2/8`: the angular separation is at least `pi/4-1/2>1/4`, and the
+elementary sine bound applies. Thus `|q(x)|>=1/32` and `|B_alt|<=3072`.
+There are no poles in a neighborhood of these closed disks. Cauchy's estimate
+gives `|B_alt^(r)(t)|<=3072*r!/4^r`, uniformly for t>=0. Taylor's finite
+remainder and Laplace integration then give, for every K>=0,N>0,
+
+```text
+a_alt_l=B_alt^(l+1)(0), R_K(N)=sum_(l<K)a_alt_l/N^(l+2),
+abs(E_alt(N)-R_K(N))<=3072*(K+1)!/(4^(K+1)*N^(K+2)).
+```
+
+For `F=x^11*(1-x)/q` and `L=x*d/dx`, the coefficient is
+`a_alt_l=(-1)^(l+1)*(L^(l+1)F)(1)/8^(l+3)`. Integer derivatives follow
+from q(1)=1. Modulo 2, `F=x^9+x^10`, so every positive Euler derivative
+at 1 is odd. This is parity, not a real-sign assertion.
+For N=2^s and K>=1, `D=8*(8N)^(K+1)` clears R_K. Set
+
+```text
+j=ceil((3+(s+3)*(K+1))/4),
+eta=196608*2^(K+1)*(K+1)!/2^s.
+```
+
+Then `16^j/D` is an integer at most 8, and some integer z satisfies
+`abs(16^j*E_alt(N)-z)<=eta`. Smallness guaranteed by this bound still has
+factorial scale `K*log(K)=O(s)`; this is not an exclusion of extra modular
+cancellation outside the guarantee.
+
+Writing `delta=16^j*E_alt(N)-z`, the exact original-prefix identity is
+`S_(N+j)=16^j*T_N+z+delta+3*16^(N+j)-E_(N+j)`. For N>0,
+**0<=a<b<=1**, and `epsilon=1/(64*N^2)`, the explicit premise
+
+```text
+fract(16^j*T_N) in (a+eta+epsilon,b-eta)
+```
+
+implies `bbpRecurrence(N+j+1)` in `(a,b)`. The domain restriction and both
+margins prevent wrap. The premise remains unproved. Original-prefix complete
+grids cannot simply be transferred to T_N; a complete-period theorem for T_N
+would still leave selected-time placement. No V conclusion or new Lean
+framework is supplied.
+
+### Reciprocal continuation and review limits
+
+A separately screened reciprocal-Lerch identity returns the original phase.
+With the upper boundary `w=16+i0`, finite parameter shifts give a dual term
+`D_N*=-(2+2i)*pi*16^N-S_N`; the inversion adds `(3+2i)*pi*16^N`, recovering
+exactly E_N. The source is Olde Daalhuis,
+[*Lerch Phi Asymptotics*, final v4](https://arxiv.org/html/2311.11886v4),
+equation (1.6) and section 2. Its positive-real-part, bounded-parameter
+large-argument estimates do not apply uniformly at `a=-N-r/8`. No small
+independent dual remainder was obtained.
+
+Frozen v2 report `/tmp/pi-m4-tail-duality-filter-20261128-0756/report-v2.md`,
+hash `f2a96a71cd585553d06accd4cc88bb69b763c4f1fcfa7cf2676885fdc9932cf0`,
+passed independent paper criticism after D1 restored the target-domain
+premise. I1's explicit zero-density support is included above; Q1 remains
+unresolved actual placement. The parent read and reran the unchanged symbolic
+checker successfully, and supplied preserved primary source captures for
+review. The checker certifies finite rational identities, not the complex
+analysis, measure uniqueness or universal estimates. This is paper mathematics
+for a known representation, without an originality or Lean certification claim.
 
 ## A rational-period theorem does apply to Wallis approximations
 

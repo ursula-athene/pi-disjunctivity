@@ -6724,3 +6724,78 @@ Remote d6ec76 reverified 657bd34 near 08:24 UTC during the required review;
 no ready reviewed commit was withheld. Only navigation and factual completion
 records changed after review. Originality, natural-time Lean formalization
 for this new family and actual selected-time hits remain unresolved.
+
+## 2026-11-28 — Filtered actual tails and a changed dynamics inquiry
+
+The second-anchor and originality record was committed and pushed as
+`e8cb5777f4571b5dac4aa8e8526f57d8249f2804`, parent 657bd34. Commit d14f0b,
+post-commit ed415a, push 40c5cc/7a7f1c and remote b057f5 verified publication
+by 08:28:26 UTC. All three committed blobs matched, the index was empty,
+and 145 protected plus 11 unrelated files were preserved. Docs 751746,
+whitespace 83be19/1265b8 and exact stage 0fe948 passed; a61a69 verified the
+navigation repair without mathematical changes. No further repair or PR.
+
+The tail-transformation inquiry ran 07:56:36–08:13:28, before its 08:18
+endpoint; the scheduled 08:08 midpoint was observed at 08:09:03. The
+[selected filter](m4-transforms-and-periods.md#a-fractional-shift-filter-gives-a-known-alternative-pi-representation)
+removes the nearest real Borel pole and retains a pi period, but its series
+is the known Ferguson formula. Its moment density is signed. A separate
+absolute Cauchy remainder and exact dyadic clearing change constants while
+retaining the factorial-order scale and explicit actual target-placement gap.
+The other screened reciprocal-Lerch candidate returns the original identity.
+
+The immutable 0756 packet has v1 report
+`389d5270b4ad5da4da31c6918c89fb6354ba0dc0160b7848041a3ce8d0442e26`, checker
+`2941ef7f59842b2565a03c293cdbafe02d0f4374f9c96cbf7d6ef80cb20b9203` and receipt
+`f6a4ce0985b0d83539254d10c86f51d5b8040fd1e019f09fc27f4e27e2e22ff9`.
+Parent read the full report ebe083 and checker/receipt 61ac62, reran the
+unchanged checker 54f755 successfully and reverified hashes 4ca824. An earlier
+checker trailing-zero comparison was normalized before freeze. An intermediate
+factor-16 normalization error was corrected before the frozen paper argument.
+Neither check evaluated actual states or certified the analytic proof.
+
+Independent criticism ran 08:15:33–08:22:27. D1 found an omitted target-domain
+premise; parent wrote v2 with only `0<=a<b<=1` added, retaining v1 untouched.
+V2 hash `f2a96a71cd585553d06accd4cc88bb69b763c4f1fcfa7cf2676885fdc9932cf0`
+and revision receipt `ef59417c2e47dbb92ea77acca68f37c399d1aaa0e58a8b30f0491e3b0119556b`
+were verified in focused review. D1 is resolved. I1 requests explicit zero
+density below 11/8; the owner implements it. Q1 retains unproved actual T_N
+placement. Full verbatim review is in the 0827 integration packet, hash
+`ca02c879153339b11b7d30d5c6913c6c51544dd509cadd234363befee7a8a414`.
+
+The reviewer initially lacked local source captures. Parent retrieved the
+primary Lerch v4 HTML and Bailey PDF in a8b911/264445, extracted math-preserving
+text cd3c1c and rendered Bailey p.9 in 371d2f. Both parent and reviewer inspected
+the formula/attribution; Lerch branch conditions were retained. Source captures
+are in `/tmp/pi-m4-tail-duality-sources-20261128T0816Z/`; no source limitation
+was silently treated as checked before the captures arrived.
+
+Three-document integration began 08:28:26, with 08:36 reassessment and 08:45
+endpoint, in `/tmp/pi-m4-filter-integration-20261128T0827Z/`. Scope 528f24
+protects 145 tracked and 11 unrelated files. The transform owner's obsolete
+opening review-pending status was replaced by per-result evidence links.
+Separate production review is complete as recorded below; final affected
+checks gate publication.
+
+The changed dynamics inquiry has 08:34 midpoint and 08:45 endpoint. Its fresh
+context first found the proposed solenoid representation already recorded;
+it did not count that as new work. It is now testing exact applicability of
+homogeneous-orbit and finite-matrix descriptions, retaining the actual initial
+point and excluding circular insertion of the unknown phase. Its mathematical
+findings remain unadopted. V/M4 and actual selected-time placement remain open.
+
+Production review ran 08:36:40–08:38:16, before its 08:40/08:43 bounds.
+The 275-line frozen diff is
+`8f395c21fdba29ce82b8550c66f137d0c47b8454c4b8a80c69456defb0842f86`;
+the 11-entry manifest is
+`668fe17cc036dfaab9b55209a75abb7aff1b22463921bdad8d5327f2d1c10220`.
+All entries, nine source entries, three owned postimages, 145 protected and
+11 unrelated files matched independently. D1's domain repair and I1's zero
+density interval are verified; Q1 remains open, with no new D/I/Q. Full return
+`review-full.md` in the 0827 packet has hash
+`d7a76d5e72e0af4d4c4563001fbdd74bcfcd646e486f76521078c7e4ea95bd9f`.
+Caller 4f8603 reverified the same inventory at 08:39:35. The scheduled 08:36
+midpoint was assessed at freeze 08:36:23: paper work was complete and exact
+production review was the remaining gate. Docs 61c71f, working whitespace
+15b92d and staged whitespace 819950 passed; final factual completion records
+receive affected checks. No mathematical repair followed production review.

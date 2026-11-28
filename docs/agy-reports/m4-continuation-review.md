@@ -5680,3 +5680,61 @@ checker execution, installations, delegation or actual-state census occurred.
 Caller 67e01b reverified all frozen/source entries and protected/unrelated
 files before the navigation repair. Final affected checks verify that repair
 and factual completion records; no substantive mathematical repair was needed.
+
+## Fractional-shift filter and actual alternative tail — 2026-11-28 UTC
+
+Scope: transform owner and two evidence documents against e8cb577. The known
+Ferguson representation, loss of positive moment measure, absolute Cauchy
+remainder, dyadic clearing and conditional actual recurrence consumer are paper
+results. No new pi series, target placement, Lean proof or V/M4 acceptance.
+
+Reviewer `/root/dyadic_grid_independent_review_0649` inspected the complete
+194-line report, checker, receipt, relevant interfaces and source passages
+during 08:15:33–08:22:27 UTC, before the 08:27 endpoint. Both full guides,
+replacement procedure and critic context were read at unchanged hashes.
+It required local primary evidence for the Lerch identity and Bailey formula;
+the caller supplied preserved HTML/text/PDF and page render before completion.
+No unsupported source attribution was accepted in place of those captures.
+
+**D1: resolved and verified.** V1 omitted `0<=a<b<=1` in the no-wrap consumer.
+V2 adds exactly that premise, with no other report changes. V1 remains intact.
+The original recurrence index N+j+1 and both error margins are retained.
+**I1: implemented and verified in production review.** The signed density is explicitly
+zero for `0<=u<11/8`. **Q1: unresolved, retained mathematical obligation.**
+The actual auxiliary prefix T_N has no proved selected-time interior hits.
+Neither kernel positivity nor original-prefix complete grids discharge Q1.
+
+The reviewer verified the corrected factor-16 normalization, exact known
+catalog vector, signed density, absolute finite remainder including K=0,
+odd coefficient numerators, rounded radix exponent, factor at most 8 and
+constant 196608. It accepted v2 as a paper argument after focused D1 checking.
+The finite reconstruction and reciprocal continuation retain the old phase;
+no enlarged visitation claim is made.
+
+Full return `paper-review-full.md` in the 0827 integration packet has hash
+`ca02c879153339b11b7d30d5c6913c6c51544dd509cadd234363befee7a8a414`.
+V2 report `f2a96a71cd585553d06accd4cc88bb69b763c4f1fcfa7cf2676885fdc9932cf0`,
+checker `2941ef7f59842b2565a03c293cdbafe02d0f4374f9c96cbf7d6ef80cb20b9203`
+and all source/receipt hashes matched independently. Caller checker 54f755
+is execution evidence; it establishes symbolic identities, not the analytic
+proofs. Review involved only reading, hashing, comparison and preserved images;
+no writes, Git, network, builds, probes, checker execution, installation,
+delegation or actual-state census occurred.
+
+Exact production review ran 08:36:40–08:38:16 UTC, completing before its
+08:40 midpoint and 08:43 endpoint. The reviewer accepted the entire 275-line
+diff, manifest `668fe17cc036dfaab9b55209a75abb7aff1b22463921bdad8d5327f2d1c10220`,
+and all 11 entries plus nine source entries. All three owned postimages,
+145 protected and 11 unrelated hashes matched. Direct hunk reconstruction
+resolved a harmless diff-algorithm blank-line alignment discrepancy without
+file edits. D1's exact domain/index/margins and I1's zero support were verified;
+Q1 remains unproved. No new defects, improvements or questions were raised.
+
+Full production return `review-full.md` has hash
+`d7a76d5e72e0af4d4c4563001fbdd74bcfcd646e486f76521078c7e4ea95bd9f`.
+Both full guides and the procedure were reread. Reading, hashing and in-memory
+comparison were the only review operations. Caller 4f8603 reverified every
+frozen/source/protection entry at 08:39:35 before these factual completion
+updates. Git baseline/index/remote and executed checks remain caller evidence.
+Final affected checks gate publication; this review accepts the documentation
+of a conditional paper result, not Lean mathematics, target hits or V/M4.
