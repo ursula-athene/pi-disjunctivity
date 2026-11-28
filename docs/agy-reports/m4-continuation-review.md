@@ -5202,3 +5202,52 @@ No Git, network, builds, probes, checkers, writes, installations, delegation or
 actual-orbit census was performed by the reviewer. The whole review cycle
 had no D/I/Q items. Post-review edits record factual completion only; the
 reviewed Lean sources and audits are unchanged. Final affected checks gate commit.
+
+## Actual column resonance — 2026-11-28 UTC
+
+The exact sketch asserts nonnormality of X=C_1+9*C_9 for the actual r=1
+columns with cofactors1 and9, hence failure of their joint equidistribution.
+It asserts no nondensity, no failure of disjunctivity, no pi digit conclusion,
+and no contradiction with normality of the complete fixed T_M. The proof is
+elementary symbolic divisibility and a positive tail bound, independent of the
+earlier individual/fixed-sum normality source inputs. Nearby cyclotomic work
+is acknowledged without an originality claim or direct eighth-grid application.
+
+Separate reviewer `/root/affine_independent_review` read the supplied sketch
+05:56:25–05:58:12, before its06:00/06:05 bounds. It applied the argument-critic
+skill, replacement procedure and both complete adversarial guides at the
+previously recorded hashes. The reviewer reconstructed every exponent and
+sign, the all-k binomial divisibility, integer prefix, strictly positive tail,
+block count and first-cell frequency, and the integer torus-map consequence.
+Defects, nonblocking improvements and open questions are all empty; no D/I/Q
+disposition is outstanding. Paper review is not kernel certification.
+
+Sketch packet `/tmp/pi-m4-column-resonance-20261128T0549Z/`:
+report `63368b09b2983be53ce4bab804a4425febb09818b999d6ebf51b21ad4d50fcd2`;
+manifest `7066241f58beb260af04080d4796fa924d5dfdab3d027d4a3bb09741119d6107`.
+The reviewer matched both and all three recorded source-text hashes. Full
+return `review-verbatim.md`, hash
+`ed0f1e6a604b22145a57b0326fec049c56964bcd386be40f8673b645c1c9f114`.
+An additional plain-text transcription is retained separately; the displayed
+hash identifies the complete Markdown return. No Git, network, builds, probes,
+checkers, writes, installations, delegation or actual census was performed.
+
+Production scope: the new subsection in `docs/m4-fourier-windows.md`, factual
+research-log outcomes and this review record, baseline4fa0f76. All Lean sources,
+theorem contracts, pins and earlier accepted arguments are unchanged. Packet
+`/tmp/pi-m4-column-resonance-integration-20261128T0600Z/` retains the exact
+three-file diff, before/after files and protection hashes. The separate integration
+review ran06:03:32–06:04:27 UTC, before its06:06/06:10 bounds, with no D/I/Q
+items. Both complete guides were reread at their recorded hashes. All nine
+frozen entries, three live postimages,141 protected and11 unrelated identities
+matched independently, as did the sketch, full sketch review and publication facts.
+Diff `ff723edaa25eb8cd51e88e94accee1e30ec32212027f7d58efc3d13449c8d22e`;
+manifest `6e252de804fbba29baad542c51edd98dee6dd52b96d620bcad1088d97ac9d5c2`.
+Full integration return is `review-full.md`, hash
+`6113a3ed1708fe640a5ed3197f3bd956d57a0b80d92af7e3d2c5a75c73e8b077`.
+Caller documentation
+e33795, working/staged whitespace7c1c85/d15eac and preservation eb06a4 passed.
+The reviewer performed only read-only file/hash inspection, not the caller's
+execution checks, Git or remote verification. Both review stages had no defects,
+improvements or open questions. Only factual review completion follows this
+frozen diff; final affected checks gate publication.

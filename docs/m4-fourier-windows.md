@@ -658,6 +658,54 @@ retains source identities and bounded-search limits. No formalization date is
 assigned to the exact T_M result; the missing early-visit consumer remains the
 next mathematical obligation before substantial downstream formalization.
 
+### An actual column pair is not jointly equidistributed
+
+The actual columns need not be jointly equidistributed, even though every
+complete fixed truncation T_M above is normal. This is an elementary paper
+argument, independently reviewed; no Lean theorem or originality claim follows.
+Use the r=1 columns with cofactors1 and9, including their k=0 terms:
+
+```text
+a_k=(17^k-1)/8, b_k=(9*17^k-1)/8=a_k+17^k,
+C_1=4*sum_(k>=0)17^(-k)*16^(-a_k),
+C_9=(4/9)*sum_(k>=0)17^(-k)*16^(-b_k),
+X=C_1+9*C_9.
+```
+
+For every k>=0, 17^(k+1) divides 16^(17^k)+1. Starting from16+1=17,
+raise -1+17^(k+1)u to its seventeenth power: the linear term has factor
+17^(k+2), and higher terms have at least17^(2k+2). Thus for
+b_K<=n<a_(K+1), the complete paired prefix
+
+```text
+P_(K,n)=4*sum_(k=0)^K 16^(n-b_k)*(16^(17^k)+1)/17^k
+```
+
+is an integer. The omitted positive tail satisfies
+
+```text
+0 < 16^n*X-P_(K,n)
+  <=8*16^(n-a_(K+1))*sum_(k>K)17^(-k)
+  <=17^(-K)/32 < 1.
+```
+
+Consequently all17^K indices in this block have fractional parts in[0,1/16).
+At prefix length a_(K+1), their proportion alone tends to8/17, exceeding1/16.
+So X is not16-normal. A jointly equidistributed pair (C_1,C_9) would instead
+make X equidistributed under the integer map (x,y)->x+9y modulo1: its first-cell
+preimage has Haar measure1/16 and boundary of measure zero. That is impossible.
+
+This does not assert nondensity or failure of disjunctivity for X, and it
+does not concern the frequencies of pi. The weighted pair differs from T_M;
+its proof needs neither individual-column nor fixed-truncation normality.
+It rules out full joint equidistribution as a shortcut for these actual
+columns. A weaker useful correlation estimate would still need an actual
+infinite-sum consumer. The nearby signed cyclotomic criterion cited above is
+related prior work; its integer-base statement is not used in this direct
+eighth-grid argument. The [review record](agy-reports/m4-continuation-review.md#actual-column-resonance--2026-11-28-utc)
+retains the exact sketch and review limits. No actual phase or digit census
+was used; the block count is symbolic for every K. V/M4 remains open.
+
 ### The zero branch and what the scaled projection loses
 
 Keep the definitions above and write D=D_M, u_n=fract(S_(M,n)),

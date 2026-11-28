@@ -6183,3 +6183,48 @@ parent reassessment, after the planned05:52 checkpoint, retain final affected
 checks and publication within the06:02 bound. Post-review edits change factual
 completion status only. The accepted equivalence remains support for an open V,
 and the authorized research continues.
+
+## 2026-11-28 — Actual column dependence
+
+The forced-entry support commit is
+`4fa0f76c19d40f40ce6fc9f0b384777f3466f9a5`, parent278e355. Commit8c558d,
+post-commit bd552a, push860385/0da57a and remote35346f verified publication
+at05:55:27 UTC. All ten blobs matched exact staged scope, the index was empty,
+and134 protected plus11 unrelated identities were preserved. Final
+documentation e78f94, working/staged whitespace be7c2f/451480 and scope3af08c
+passed. No repair or PR. Publication receipt:
+`/tmp/pi-m4-forced-entry-integration-20261128T0542Z/publication.json`.
+
+A changed inquiry tested joint equidistribution of the actual columns as a
+possible resource for the infinite sum. The bounded discriminator was one exact
+pair, cofactors1 and9; archive/source searches began by05:49:49, reassessment
+was05:55, and the report froze05:55:26. It found an exact dependence:
+C_1+9*C_9 is not16-normal, with proved long blocks near integers and first-cell
+upper frequency at least8/17. This refutes joint equidistribution of that pair,
+not visitation of pi or normality of the complete fixed T_M. The
+[owner](m4-fourier-windows.md#an-actual-column-pair-is-not-jointly-equidistributed)
+contains the symbolic argument; no actual digit or orbit census was used.
+
+Report `/tmp/pi-m4-column-resonance-20261128T0549Z/report-v1.md`, hash
+`63368b09b2983be53ce4bab804a4425febb09818b999d6ebf51b21ad4d50fcd2`,
+was independently reviewed05:56:25–05:58:12 with no D/I/Q items. The early
+source comparison reused the nearby finite cyclotomic criterion, without
+claiming a direct source application or originality. This is a reviewed
+paper obstruction, not a Lean result or a positive M4 step.
+
+Production integration began06:00:57 with06:06 reassessment and06:12 endpoint,
+using `/tmp/pi-m4-column-resonance-integration-20261128T0600Z/`: three owned,
+141 protected and11 unrelated identities. Exact-diff review and affected
+checks still gate publication. A separate weaker-correlation inquiry began
+near05:59, with06:05 midpoint and06:10 endpoint. It tests whether the exact
+dependence can help while retaining integer parts modulo each cofactor;
+dropping them or assuming a small real tail is small in orbit average would
+repeat the archived gap. V/M4 remains open and research continues.
+
+The separate production integration review completed06:04:27 with no D/I/Q
+items. It independently matched all nine frozen entries, three live postimages,
+141 protected and11 unrelated identities, the accepted sketch/capture and
+publication facts. At06:05 reassessment, before the planned06:06 checkpoint,
+retain final affected checks and publication. The mathematical owner is unchanged
+after review; only factual completion status follows. The weaker-correlation
+inquiry retained its separate06:10 bound; no result from it is adopted here.
