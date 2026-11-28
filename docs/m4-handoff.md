@@ -1837,6 +1837,10 @@ unscaled subset. Separate normality of fixed truncations still does not transfer
 The [functional-structure test](m4-fourier-windows.md#exact-rescaling-equations-require-growing-polynomial-degree)
 now gives an exact finite-column rescaling system and an elementary linear
 lower bound on relation degree at fixed order, using the actual coefficient's
-poles. It gives no visit-time bound. A fresh-context pass seeks a different
-actual-initialization mechanism; no positive conclusion is assumed. The log
-owns its bound and outcome. V/M4 remains open under the unchanged contract.
+poles. It gives no visit-time bound. The
+[accumulated-prefix comparison](m4-transform-phases.md#accumulated-prefix-estimates-retain-a-frequency-mismatch)
+finds a fixed-frequency gap and tests the invalid unequal-frequency replacement.
+A fresh backward investigation retains the actual four pole classes and
+initialized period; merely excluding rational telescoping is already defeated
+by an archived model. No consequence of actual avoidance is established. The
+log owns bounds and outcomes. V/M4 remains open under the unchanged contract.

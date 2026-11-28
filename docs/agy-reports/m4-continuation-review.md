@@ -4680,3 +4680,100 @@ entries, the five live postimages, and 27 protected/11 unrelated identities.
 Both complete adversarial guides and the read-only replacement constraints
 were applied. Final checks and publication receipts are retained outside the
 immutable manifest. This accepts research documentation only; V/M4 remain open.
+
+## Accumulated-prefix and skew-correlation tests — 2026-11-28 UTC
+
+Independent reviewer `/root/finite_log_independent_review` assessed the parent's
+unequal-frequency discriminator from 02:06:49 to 02:08:42 UTC, before 02:16:49,
+with substantive progress before completion. No defect or required improvement
+was found. Q1 retains the unproved actual fixed-frequency consumer; the generic
+correlation substitution fails, but this is not a necessary obstruction for
+every possible proof of V.
+
+The reviewer reconstructed the inclusive-prefix identity, exact Cauchy form,
+K*(K+1) endpoint cost, coefficient bound and uniform transport regime. It also
+checked the archived rational comparison's zero seed, odd denominators, positive
+forcing and leading decay, the uniformly growing shift range, monotone first
+derivative, both summation-by-parts endpoints and negative frequencies by
+conjugation. The losses of actual pole support, irrational period and denominator
+growth are explicit. No actual data or numerical checker was used.
+
+Packet: `/tmp/pi-m4-skew-correlation-20261128T0203Z/`; report
+`47d0c7b95bf64a53d006da70a9c8263bcd780ba30d36bce7588771885ac68ebb`;
+seven-entry manifest `370f852e9e961762898b92e09a2bc874fb38d82546c86d17dfd571d8ca293092`.
+The full `review-full.txt`, outside that original manifest, has hash
+`d5253b020184368b969c5030b6d8e598924fee0a5c7c0acb9122d1c2df3ef576`.
+All seven entries were verified. Parent and reviewer visually inspected the
+retained complete printed p.7 Kusmin–Landau statement/proof; its distance from
+the integers hypothesis is discharged by the phase derivative lying between
+-1/2 and a negative multiple of 16^k/N^3. The text extraction contained only
+publisher metadata. Parent rendering used the existing Swift/PDFKit script
+after unavailable pdftoppm and a failed image open; no installation occurred.
+
+Both complete adversarial guides, AGENTS, replacement procedure and critic
+constraints were applied, with unchanged guide hashes. The reviewer used only
+read-only inspection, with no writes, Git/network, checker, build, experiment
+or rendering. This is paper review, not production acceptance, a Lean proof,
+an originality determination or completion of M4. The separate accumulated-
+prefix source/bridge assessment and exact integration review follow below.
+
+The separate prescribed-prefix source review ran 02:13:09–02:15:18 UTC, before
+02:25:09. No defect or required improvement was found. Source Q1 preserves
+the actual initialized fixed-frequency estimate and, for the specified prime
+encoding, its O(log p) time range. Neither is supplied by the canonical graph
+or the inspected bounds; another encoding or method is not excluded.
+
+The reviewer checked harmonic and weighted-prefix statements and common-factor
+proof steps, the constant-multiplier clock exclusion and complete-state cost,
+the canonical graph's exact period p, the rational/clock theorem hypotheses,
+and degree multiplicativity for rational identities. The source's bound being
+at least one normalized is not a lower bound on the actual character sum.
+Finite-field function equality, equality only on the selected orbit, additional
+coordinates and unbounded-degree encodings remain outside the coordinate test.
+
+Source packet: `/tmp/pi-m4-prescribed-prefix-source-20261128T015612Z/`, report
+`7988254b8faebf2a9907a8a7b5f92355cfd5948b40b50d16fa8d3446a037a7fd`;
+69-entry manifest `8db5c3f3c104e96991f55db9c9fcdee56d78703a96ec35bf4425fa8ace66816a`.
+Parent 989b40 and the reviewer verified every entry. Full source review:
+`/tmp/pi-m4-skew-source-integration-20261128T0212Z/source-review-full.txt`, hash
+`9c7b7029e1cdacfc57e1ca131b05a5d230f1552463fe05c513251674f9f56311`.
+Retained harmonic author text and Ostafe proceedings text supply those contracts;
+no visual inspection of their unavailable PDFs is claimed. Other source pages
+were read and selected pages visually inspected. The single-author preprint
+and rational-source version distinctions are retained. The frozen transform
+owner differed from its evolving live copy; this paper review excluded the live
+changes, which require the separate integration review. Other frozen inputs
+and the archived finite-log dependency remained intact.
+
+Both full guides and all read-only replacement constraints were applied. No
+full external proof audit, Lean theorem or originality claim is made. Initial
+integration documentation e25da6 (93 files), process tests 771dca (38 tests)
+and whitespace 601b06 passed. Only factual outcome records have changed since;
+final affected checks follow the changed-file review before publication.
+
+The full five-path integration review completed 02:18:20–02:20:28 UTC,
+before 02:30:20. No defect remained. Integration I1 explicitly restored
+"least period tau" in the triangular source contract, preserving the
+distinct-state premise; the reviewer verified the exact sole repair. Q1
+requires the caller's final affected documentation and working/staged whitespace
+checks. Q2 retains both paper/source consumer questions and the stated encoding
+scope. No review question discharges actual visitation.
+
+Integration packet: `/tmp/pi-m4-skew-source-integration-20261128T0212Z/`,
+baseline `fac00f2d16844ce7bdc7bd5c68d60175d7faa534`; exact frozen diff
+`44308f4b7fa92aebc64dba55913950460a1960d17393f9959d1f4507f63df3d7`;
+15-entry manifest `4e03b60eda47040a64817b65e9dfc24381da2059dee22f9f7202bb21e6792c40`.
+I1 diff `04a962b0138ee79b5638eadd6af1ff0cc82790eb773e12425004a512332febdd`;
+full integration return hash `b8f1c1f2db29724b2bef5cb74e039e5f5e74bd3741f3dadf8fafb2b69d89d195`.
+The reviewer checked every changed hunk, original entry, repaired live postimage,
+both full review captures and all 7+69 paper/source entries. All 27 protected
+and 11 currently recorded unrelated hashes matched. An earlier preservation
+check 128cae detected an unrelated Obsidian layout change; parent a313e5 inspected
+it, and the current bytes were preserved in the scope snapshot and excluded
+from the owned diff. No restoration or task edit of that file occurred.
+
+Both complete guides and read-only constraints remained in force. The reviewer
+separately checked the thirteen-pole non-coboundary archive distinction and
+the four-pole coboundary used here; they are not the same comparison. Final
+scope, checks and publication receipts are kept outside the original manifest.
+This accepts only the stated documentation findings, not V/M4.

@@ -653,3 +653,128 @@ time-sum estimate. Any continuation of this route must control collective
 modular cancellation, rather than infer it from pole distance, interpolation
 or the vanished constant. The paper report, replay and separate criticism
 are recorded in the continuation review; no new Lean result is asserted.
+
+## Accumulated-prefix estimates retain a frequency mismatch
+
+There is relevant deterministic prior work for the exponential of an entire
+prefix. [Garaev–Luca–Shparlinski, Theorem 1, pp.857–859](https://doi.org/10.1007/s00209-006-0939-5)
+bounds the nonzero-frequency sum of H_s(n)=sum_(i<=n)i^(-s) modulo a prime
+p, for fixed integer s>=1 and 0<=M<M+N<p, by
+O_s(N^(3/4)*p^(1/8)*(log p)^(1/4)). Its normalized bound tends to zero when
+N/(sqrt(p)*log p) tends to infinity. The proof removes the common factor
+e_p(a*H_s(n)) from the shift average before Cauchy. The author-uploaded paper
+text was inspected; the PDF download was unavailable.
+[Shparlinski, Theorem 1, p.348](https://research-management.mq.edu.au/ws/portalfiles/portal/62381174/Publisher%20version%20%28open%20access%29.pdf)
+uses the same factorization for quadratic-character-weighted inverse powers,
+with N>=p^(1/2+epsilon) for fixed epsilon>0. Neither is an extracted theorem
+for arbitrary rational forcing.
+
+For the actual prefix, however,
+
+```text
+S_(n+k)=16^k*S_n+B_k(n),
+B_k(n)=sum_(i=1)^k16^(k-i)*A(n+i),
+e(h*S_(n+k))*conj(e(h*16^k*S_n))=e(h*B_k(n)).
+```
+
+The last expression is an unequal-frequency correlation. Ordinary shift
+correlations retain (16^k-1)*S_n. Normalizing by 16^(-n) moves the multiplier
+into the target frequency instead of removing it. The proved C(0)=0 does not
+change this distinction. This is a failed transfer before the source length
+conditions, which also exceed the O(log p) prefix in the stated auxiliary-prime
+comparison regime. That regime is a cost of this encoding, not every method.
+
+An exact Cauchy calculation makes the missing step explicit. For integers
+N>=1, K>=0 and fixed integer h!=0 put W_N(u)=sum_(N<=n<2N)e(u*S_n),
+v_k(n)=h*16^(K-k)*B_k(n) and z_k(n)=e(h*16^(K-k)*S_(n+k)). Then
+
+```text
+|sum_n sum_(k=0)^K z_k(n)|^2
+  <=N*sum_(k,l=0)^K sum_n e(v_k(n)-v_l(n)).
+```
+
+All n sums here run over [N,2N). The double sum on the left differs from
+sum_(k=0)^K W_N(h*16^(K-k)) by at most K*(K+1), from the shifted endpoints;
+it is not (K+1)*W_N(h). Since 0<A(m)<=m^(-2) for m>=1,
+
+```text
+|W_N(h*16^k)-W_N(h)|/N
+  <=2k/N+(2*pi*|h|/15)*(16^k-1)/N^2.
+```
+
+This transports frequencies when 16^K=o(N^2). In precisely that regime,
+|v_k(n)|<=|h|*16^K/(15N^2)=o(1) uniformly, so the Cauchy certificate divided
+by N^2*(K+1)^2 tends to 1. Outside it, this transport estimate is insufficient.
+Neither statement excludes a different estimate retaining the actual numerator.
+
+### Cancellation of the wrong correlation can coexist with avoidance
+
+The [archived rational coboundary](m4-generating-functions.md#quantitative-hole-transport-and-varying-entry-times)
+also provides a direct discriminator. With t(x)=1/((8x+9)(8x+13)) and
+g(n)=16t(n-1)-t(n), its zero-initialized prefix is
+U_n=16^(n+1)/5-t(n). The forcing is positive, has four simple eighth-grid
+poles and odd denominators, and n^2*g(n) tends to 15/64. Yet
+fract(U_n)=1/5-t(n), and for every fixed nonzero integer h,
+
+```text
+sum_(N<=n<2N)e(h*U_n)=N*e(h/5)+O_h(1/N).
+```
+
+For fixed 0<delta<1/2, uniformly over integer shifts satisfying
+N^(2+delta)<=16^k<=N^(3-delta), the unequal-frequency sum instead satisfies
+
+```text
+sum_(N<=n<2N)e(h*(U_(n+k)-16^k*U_n))=O_(h,delta)(N^(1-delta)).
+```
+
+There are (1-2delta)*log_16 N+O(1) such shifts. For h>0 the phase
+f(x)=h*(16^k*t(x)-t(x+k)) has f'<0<f'', with -f' comparable to
+16^k/N^3 on [N,2N]. Its upper bound tends to zero uniformly in this range.
+The [Kusmin–Landau estimate, Graham–Kolesnik Theorem 2.1, p.7](https://assets.cambridge.org/97805213/39278/excerpt/9780521339278_excerpt.pdf)
+therefore gives O_h(N^3/16^k); conjugation handles h<0. The retained proof
+also derives the estimate directly by summation by parts with monotone phase
+increments and both endpoint terms. This refutes the generic correlation
+substitution. It loses the actual pole support, irrational period and exponential
+denominator growth, so supplies neither a counterexample to V nor a BBP estimate.
+
+### Clock extensions and rational coordinate changes
+
+[Ostafe, Theorem 1, printed p.66](https://doi.org/10.1007/978-3-642-13797-6_5)
+handles triangular polynomial maps with constant multipliers g_i outside
+{0,1}. For a purely periodic orbit of least period tau, N<=tau and nonzero character
+vector a, its bound is O_m(sqrt(N)*p^(m/2)/sqrt(ord_p(g_s))), where s is
+the first nonzero coordinate. The source uses complete-state orthogonality;
+it does not require bounded degree of the additive coordinate polynomials.
+The actual additive clock has multiplier 1. Even granting that missing
+hypothesis, the dimension-two normalized cost for the state coordinate is
+p/sqrt(N*ord_p(16))>=sqrt(p/N), not a short-prefix saving.
+
+Retain the canonical total forcing B and finite part C defined above. The
+initialized map (x,z)->(16x+B(z),z+1) stays on (C(z),z) because C(0)=0.
+Its pair period is exactly p, so the displayed hypothetical bound is at least
+1 normalized throughout N<=p. This uses the specified finite-part extension;
+it does not evaluate the original rational forcing at a pole.
+
+[Ostafe–Shparlinski, equations (13)–(14) and Theorems 2–3](https://arxiv.org/pdf/1109.0575v1)
+require nonzero leading degrees in the multiplicative branch; the constant
+16 fails them. The inverse-state branch changes the dynamics. The
+[El-Mahassni counter-dependent preprint, Theorem 9, pp.8–9](https://personales.unican.es/gomezd/Articles/ElMahassni/CounterGen-Poly.pdf)
+requires local degree at least 2 in the state variable modulo every prime
+divisor of the modulus. The actual affine state map has degree 1 even after
+interpolating the clock. Neither inspected extension repairs the transfer.
+
+A bounded-degree rational identity cannot create the missing state degree.
+If L_n(X)=16X+a_n over a field of characteristic not 2 and nonconstant
+rational maps obey Q_(n+1) composed with L_n = F_n composed with Q_n, degree
+multiplication gives deg Q_(n+1)=(deg F_n)*(deg Q_n). Fixed Q forces
+deg F_n=1; sustained deg F_n>=2 forces exponential growth of deg Q_n.
+The same argument applies to a fixed rational clock-dependent Q(z,X) over
+F_p(z), using degree in X. Equality only on finite-field points or the selected
+orbit, additional coordinates and unbounded-degree encodings are not covered.
+
+The primary statements and selected proof steps were inspected, with retained
+web text for the harmonic and constant-multiplier papers and PDFs/images for
+the other sources. Their full proof chains were not audited. The
+[review record](agy-reports/m4-continuation-review.md#accumulated-prefix-and-skew-correlation-tests--2026-11-28-utc)
+retains exact evidence and limits. No source theorem is adopted as a visitation
+result; no Lean declaration or originality claim follows. V/M4 remain open.

@@ -1177,8 +1177,13 @@ unscaled subset; no such estimate is assumed. The [exact functional-structure te
 retains scalar order at most5 for finite columns but proves that relation degree
 must grow at least linearly with the cutoff. The elementary base17 obstruction
 uses the actual rational coefficient's poles. It does not locate a word or
-exclude estimates with growing-complexity constants. Continue discovery of a
-mechanism selecting the actual early orbit, retaining this source distinction.
+exclude estimates with growing-complexity constants. The
+[accumulated-prefix test](m4-transform-phases.md#accumulated-prefix-estimates-retain-a-frequency-mismatch)
+also distinguishes the fixed-frequency consumer from unequal-frequency
+correlations: the latter can cancel even for a nondense rational comparison.
+The inspected clock extensions do not supply the missing estimate. Continue
+discovery using the exact initialized four-pole structure; generic absence of
+a rational coboundary is already insufficient in the archived comparison family.
 
 ## 6. Assemble the proof of the original conjecture
 

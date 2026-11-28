@@ -5686,3 +5686,53 @@ The earliest gap is still deterministic selection of the actual initialized
 orbit. Secondary generic curvature calculations are not promoted as new pi
 progress. The next inquiry will examine the actual finite-sum numerator rather
 than extend that metric argument. V/M4 remain open.
+
+Publication receipt, 2026-11-28 01:55:01 UTC: commit 67d881, push f8dfb3
+and remote 5a2ffd confirm `fac00f2d16844ce7bdc7bd5c68d60175d7faa534`.
+Final documentation 0f6d73, working/staged whitespace 88b392/2bb717 and exact
+staging d208e8 passed. Post-commit 102287 matched the five paths/blobs, parent,
+empty index and 27 protected/11 unrelated identities; no repair was necessary.
+The preceding review's final-check question is discharged. Parent b8473f also
+verified all three entries in the unadopted fresh-discovery packet. No Lean
+source or PR changed. Remote e3c6b2 at 02:10:19 still matched this head, with
+no ready unpublished commit; that cadence check was 18 seconds late. Next
+active check is due by 02:25:19 or an earlier ready result/direction event.
+
+The prescribed-numerator source screen ran 01:56:12–02:12:14, reassessing
+02:07:50 before its midpoint and ending before 02:21:12. It identified a
+deterministic accumulated-harmonic-prefix method whose common-frequency factor
+does not survive the BBP affine skew. Its rational/clock source contracts and
+bounded-degree coordinate test are in separate independent review. Parent
+989b40 verified all 69 frozen entries. No source theorem supplies V.
+
+The parent separately tested the unequal-frequency repair from 02:02:47 to
+02:06:25, before the 02:18 bound. The exact Cauchy statistic and an archived
+zero-seed rational comparison separate those correlations from ordinary Weyl
+cancellation. Independent paper review ran 02:06:49–02:08:42, with no defect
+or required improvement; its sole question retains the actual fixed-frequency
+consumer. No numerical actual-sequence check or Lean work was needed. The
+five-path documentation integration began 02:12:06 with reassessment at 02:35;
+source review and final changed-file review/checks gate publication.
+
+A fresh-context backward proof attempt began 02:11:45, with midpoint 02:26:45
+and endpoint 02:41:45. Its first archive check rejected generic non-coboundarity
+as a distinguishing premise: an existing positive rational comparison already
+has it and a nondense rational period. The narrowed inquiry retains the actual
+four distinct pole classes and initialized period, and asks for a justified
+consequence of permanent word avoidance. That consequence is not assumed.
+
+The prescribed-prefix source review completed 02:15:18 UTC with no defect or
+required improvement. Its fixed-frequency/short-window question remains open;
+the detailed source, version and evidence limits are retained in the review
+record. The combined five-path integration now enters its changed-file review.
+Initial documentation e25da6, 38 process tests 771dca and whitespace 601b06
+passed. No Lean source changed; final affected documentation and whitespace
+checks follow the factual outcome edits before any commit.
+
+The final integration review completed 02:20:28 UTC with no defect and one
+verified precision clarification, retaining the source orbit's least period.
+Final affected checks now gate publication. The preservation check noticed a
+changed Obsidian layout at 02:15:14; its inspected current contents were kept
+outside the five owned paths. The exact paper/source limits and all review
+dispositions are retained. The backward proof investigation continues under
+its original bound, with no new mathematical result adopted.
